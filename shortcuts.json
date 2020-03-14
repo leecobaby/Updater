@@ -1,0 +1,9 @@
+{
+  "version": "1.4",
+  "public": {
+    "api_tbk_url": "https"
+  },
+  "private": {
+    "api_tbk_url": "https"
+  }
+}
