@@ -1,9 +1,13 @@
 {
-  "version": "1.4",
-  "public": {
-    "api_tbk_url": "https"
-  },
-  "private": {
-    "api_tbk_url": "https"
-  }
+    "Snap_up": {
+        "version": "1.4",
+        "tb": {
+            "param": "tkl",
+            "api_tkl_url": "https://vpnadmin.top:447/api",
+            "api_tkl_url_personal": "https://vpnadmin.top:447/test",
+            "json_tkl_path": "tbk_privilege_get_response.result.data.tkl",
+            "json_coupon_path": "tbk_privilege_get_response.result.data.coupon_info"
+        },
+        "update": ""
+    }
 }
