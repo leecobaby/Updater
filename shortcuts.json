@@ -5,8 +5,9 @@
       "tkl": {
         "api_url": "https://vpnadmin.top:447/api",
         "api_url_personal": "https://vpnadmin.top:447/test",
-        "json_tkl_path": "tbk_privilege_get_response.result.data.tkl",
-        "json_coupon_path": "tbk_privilege_get_response.result.data.coupon_info"
+        "json_tkl": "tbk_privilege_get_response.result.data.tkl",
+        "json_coupon_info": "tbk_privilege_get_response.result.data.coupon_info",
+        "json_coupon_type":"tbk_privilege_get_response.result.data.coupon_type"
       }
     },
     "update": ""
