@@ -7,7 +7,9 @@
         "api_url_personal": "https://vpnadmin.top:447/test",
         "json_tkl": "tbk_privilege_get_response.result.data.tkl",
         "json_coupon_info": "tbk_privilege_get_response.result.data.coupon_info",
-        "json_coupon_type":"tbk_privilege_get_response.result.data.coupon_type"
+        "json_coupon_type":"tbk_privilege_get_response.result.data.coupon_type",
+        "json_max_commission_rate": "tbk_privilege_get_response.result.data.max_commission_rate"
+
       }
     },
     "update": ""
