@@ -1,17 +1,27 @@
 {
   "Snap_up": {
     "version": "1.4",
+    "update": "",
     "tb": {
+      "url_scheme": "",
       "tkl": {
+        "regular_expression": "([\\p{Sc}\\(])\\w{8,12}([\\p{Sc}\\)])",
         "api_url": "https://vpnadmin.top:447/api",
         "api_url_personal": "https://vpnadmin.top:447/test",
         "json_tkl": "tbk_privilege_get_response.result.data.tkl",
         "json_coupon_info": "tbk_privilege_get_response.result.data.coupon_info",
-        "json_coupon_type":"tbk_privilege_get_response.result.data.coupon_type",
+        "json_coupon_type": "tbk_privilege_get_response.result.data.coupon_type",
         "json_max_commission_rate": "tbk_privilege_get_response.result.data.max_commission_rate"
-
       }
     },
-    "update": ""
+    "jd": {
+      "url_scheme": "openapp.jdmobile://virtual?params={\"des\":\"m\",\"category\":\"jump\",\"url\":\"URL\"}"
+    },
+    "pdd": {
+      "url_scheme": "pinduoduo://com.xunmeng.pinduoduo/URL"
+    },
+    "sn": {
+      "url_scheme": "suning://m.suning.com/index?adTypeCode=1002&adId=URL"
+    }
   }
 }
