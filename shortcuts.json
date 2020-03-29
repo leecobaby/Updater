@@ -3,7 +3,7 @@
     "version": "1.4",
     "update": "",
     "tb": {
-      "url_scheme": "",
+      "url_scheme": "taobao://",
       "tkl": {
         "regular_expression": "([\\p{Sc}\\(])\\w{8,12}([\\p{Sc}\\)])",
         "api_url": "https://vpnadmin.top:447/api",
@@ -24,5 +24,9 @@
     "sn": {
       "url_scheme": "suning://m.suning.com/index?adTypeCode=1002&adId=URL"
     }
+  },
+  "Google_drive_copy": {
+    "version": "1.0",
+    "update": ""
   }
 }
