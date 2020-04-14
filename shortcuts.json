@@ -16,7 +16,11 @@
       }
     },
     "jd": {
-      "url_scheme": "openapp.jdmobile://virtual?params={\"des\":\"m\",\"category\":\"jump\",\"url\":\"URL\"}"
+      "url_scheme": "openapp.jdmobile://virtual?params={\"des\":\"m\",\"category\":\"jump\",\"url\":\"URL\"}",
+      "api_url": "https://vpnadmin.top:447/api",
+      "json": {
+        "content": "content"
+      }
     },
     "pdd": {
       "url_scheme": "pinduoduo://com.xunmeng.pinduoduo/URL"
