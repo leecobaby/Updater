@@ -27,6 +27,11 @@
     },
     "sn": {
       "url_scheme": "suning://m.suning.com/index?adTypeCode=1002&adId=URL"
+    },
+    "more": {
+      "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
+      "加入QQ线报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
+      "加入WX综合群": "https://gitee.com/leecogit/Updater/raw/master/wechatcode.jpg"
     }
   },
   "Google_drive_copy": {
