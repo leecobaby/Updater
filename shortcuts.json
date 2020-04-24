@@ -27,7 +27,11 @@
       "url_scheme": "pinduoduo://com.xunmeng.pinduoduo/URL"
     },
     "sn": {
-      "url_scheme": "suning://m.suning.com/index?adTypeCode=1002&adId=URL"
+      "url_scheme": "suning://m.suning.com/index?adTypeCode=1002&adId=URL",
+      "api_url": "https://vpnadmin.top:447/api",
+      "json": {
+        "content": "sn_responseContent.sn_body.queryBacthcustomlink.shortLink"
+      }
     },
     "more": {
       "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
