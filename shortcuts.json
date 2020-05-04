@@ -47,5 +47,17 @@
       "加入TG群|https://t.me/helptag",
       "加入QQ群|https://jq.qq.com/?_wv=1027&k=5FenhoJ"
     ]
+  },
+  "Sign_in": {
+    "version": "1.1",
+    "update": "",
+    "data": {
+      "【京东】京东会员签到":"openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"m\",\"url\":\"https://vip.m.jd.com/?&utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share&ShareTm=sbQQcUMkZ4AZ4dzVzEWiwuvB%2BSRLNefWg3OxfaKnTdb8I9fVRndWFjw2wynEdJbNYQeN1N8y4HgFy8p3e%2BemJguCDq%2B9dNOW0Ke1zCMW2Tkfy4yJCOdEnAqD9z3NKYq8VHAFLpmVrUvxYyUyM/AFrxdMuwCm0PEl0NvaSsG%2BMrA=\"}",
+      "【京东】京豆签到":"openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"m\",\"url\":\"https://bean.m.jd.com/share/index.action?&utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share&ShareTm=sPR%2BfxCcrAMyBuYZ%2BoZ2JcO2J5tl6T0CDcQ82VrzBQUgz8uQrvH26WuEyq23dLCx9NiW6H6MKbGLyEyFcqSRKQv1oegppTMXuN3qypHbeqRVv%2BZK4KmyTxyezhvEa1vYe0tL1EUJnPiSR76G76iuhCxozrl9gG0tPMMPTmWJObc=\"}",
+      "【京东】京东大转盘":"openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"m\",\"url\":\"https://turntable.m.jd.com/?actId=jgpqtzjhvaoym&appSource=jdmx\"}",
+      "【京东】领券页面签到":"openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"m\",\"url\":\"https://coupon.m.jd.com/center/getCouponCenter.action?categoryId=0&batchStr=00000\"}",
+      "【支付宝】砸金蛋":"alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://jupage.taobao.com/wow/tqg/act/zajindan",
+      "【支付宝】会员领积分":"alipays://platformapi/startapp?appId=20000160&url=%2Fwww%2FmyPoints.html"
+    }
   }
 }
