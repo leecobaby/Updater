@@ -50,7 +50,7 @@
   },
   "Sign_in": {
     "version": "1.1",
-    "update": "",
+    "update": "https://www.icloud.com/shortcuts/91af4b2564134654ad2dbc7bce54bbdf",
     "data": {
       "【京东】京东会员签到":"openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"m\",\"url\":\"https://vip.m.jd.com/?&utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share&ShareTm=sbQQcUMkZ4AZ4dzVzEWiwuvB%2BSRLNefWg3OxfaKnTdb8I9fVRndWFjw2wynEdJbNYQeN1N8y4HgFy8p3e%2BemJguCDq%2B9dNOW0Ke1zCMW2Tkfy4yJCOdEnAqD9z3NKYq8VHAFLpmVrUvxYyUyM/AFrxdMuwCm0PEl0NvaSsG%2BMrA=\"}",
       "【京东】京豆签到":"openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"m\",\"url\":\"https://bean.m.jd.com/share/index.action?&utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share&ShareTm=sPR%2BfxCcrAMyBuYZ%2BoZ2JcO2J5tl6T0CDcQ82VrzBQUgz8uQrvH26WuEyq23dLCx9NiW6H6MKbGLyEyFcqSRKQv1oegppTMXuN3qypHbeqRVv%2BZK4KmyTxyezhvEa1vYe0tL1EUJnPiSR76G76iuhCxozrl9gG0tPMMPTmWJObc=\"}",
@@ -63,5 +63,10 @@
       "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
       "加入QQ线报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp"
     }
+  },
+  "More": {
+    "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
+    "加入QQ线报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
+    "其他捷径作品": "https://shimo.im/docs/DHcYv8xjcYxvHvQg/"
   }
 }
