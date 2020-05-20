@@ -70,9 +70,15 @@
       "加入QQ线报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp"
     }
   },
+  "Chigua": {
+    "version": "1.0",
+    "update": "",
+    "news": "https://sourl.cn/MJZNSm",
+    "contribution": "http://keeplearning.mikecrm.com/7vRUPWv"
+  },
   "More": {
     "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
-    "加入QQ线报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
+    "加入QQ情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
     "其他捷径作品": "https://shimo.im/docs/DHcYv8xjcYxvHvQg/"
   }
 }
