@@ -66,8 +66,8 @@
       "【京东】领券页面签到":"openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"m\",\"url\":\"https://coupon.m.jd.com/center/getCouponCenter.action?categoryId=0&batchStr=00000\"}",
       "【支付宝】砸金蛋":"alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://jupage.taobao.com/wow/tqg/act/zajindan",
       "【支付宝】会员领积分":"alipays://platformapi/startapp?appId=20000160&url=%2Fwww%2FmyPoints.html",
-      "一分惊喜":"alipays:\/\/platformapi\/startapp?appId=20000067&url=https:\/\/render.alipay.com\/p\/c\/onemorething\/home.html",
-      "天天抽奖":"alipays:\/\/platformapi\/startapp?appId=2018103161898599"
+      "【支付宝】一分惊喜":"alipays:\/\/platformapi\/startapp?appId=20000067&url=https:\/\/render.alipay.com\/p\/c\/onemorething\/home.html",
+      "【支付宝】天天抽奖":"alipays:\/\/platformapi\/startapp?appId=2018103161898599"
     },
     "more": {
       "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
