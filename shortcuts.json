@@ -95,7 +95,7 @@
     "饿了么现金红包": "taobao://m.tb.cn/h.VkynPqK"
   },
   "jjh": {
-    "ok": "no",
+    "ok": "yes",
     "tishi": "📋剪贴板为空，请检查一下哦~\n---------------------------------\n※猜测到你可能需要以下功能※\n\n(此为纯净版，请加群获取完整版)",
     "hongbao": "alipays:\/\/platformapi\/startapp?appId=88886666&appClearTop=false&target=groupPre&bizType=CROWD_CODE_CASH&crowdNo=202006200206302127940823700055790860&universalDetail=true&clientVersion=10.0.0-5&prevBiz=code&sign=52e3fa8195d4210bd1e7ecc8ba907b25c428533179eff3f91421b22ee04907a2&schemeMode=reInside&source=passcode"
   }
