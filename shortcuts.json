@@ -31,7 +31,8 @@
       "api_url": "https://home.vpnadmin.top:447/api",
       "url_change": "https://api.66mz8.com/api/source.php?url=URL",
       "json": {
-        "content": "sn_responseContent.sn_body.queryBacthcustomlink.shortLink"
+        "content": "sn_responseContent.sn_body.queryBacthcustomlink.shortLink",
+        "url_change": "url_long"
       }
     },
     "more": {
