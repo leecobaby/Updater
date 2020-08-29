@@ -27,8 +27,9 @@
       "url_scheme": "pinduoduo://com.xunmeng.pinduoduo/URL"
     },
     "sn": {
-      "url_scheme": "suning://m.suning.com/index?adTypeCode=1002&adId=URL&utm_campaign=8cd3d599-7b8a-4b15-9b73-d92c357ec467",
+      "url_scheme": "suning://m.suning.com/index?adTypeCode=1013&adId=URL",
       "api_url": "https://home.vpnadmin.top:447/api",
+      "url_change": "https://api.66mz8.com/api/source.php?url=URL",
       "json": {
         "content": "sn_responseContent.sn_body.queryBacthcustomlink.shortLink"
       }
