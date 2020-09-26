@@ -29,10 +29,8 @@
     "sn": {
       "url_scheme": "suning://m.suning.com/index?adTypeCode=1002&adId=URL",
       "api_url": "https://home.vpnadmin.top:447/api",
-      "url_change": "https://api.66mz8.com/api/source.php?url=URL",
       "json": {
-        "content": "sn_responseContent.sn_body.queryBacthcustomlink.shortLink",
-        "url_change": "url_long"
+        "content": "sn_responseContent.sn_body.queryBacthcustomlink.shortLink"
       }
     },
     "more": {
@@ -48,7 +46,7 @@
         "💰返利APP💰": "https://www.zhetaoke.com/app_24031.html"
       }
     },
-    "more_little":{
+    "more_little": {
       "视频教程": "https://video.cdnvue.com/uploads/-2216775553683075363/video/b9PwmDl"
     },
     "jjh": {
@@ -69,14 +67,14 @@
     "version": "1.1",
     "update": "https://www.icloud.com/shortcuts/91af4b2564134654ad2dbc7bce54bbdf",
     "data": {
-      "【京东】京东会员签到":"openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"m\",\"url\":\"https://vip.m.jd.com/?&utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share&ShareTm=sbQQcUMkZ4AZ4dzVzEWiwuvB%2BSRLNefWg3OxfaKnTdb8I9fVRndWFjw2wynEdJbNYQeN1N8y4HgFy8p3e%2BemJguCDq%2B9dNOW0Ke1zCMW2Tkfy4yJCOdEnAqD9z3NKYq8VHAFLpmVrUvxYyUyM/AFrxdMuwCm0PEl0NvaSsG%2BMrA=\"}",
-      "【京东】京豆签到":"openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"m\",\"url\":\"https://bean.m.jd.com/share/index.action?&utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share&ShareTm=sPR%2BfxCcrAMyBuYZ%2BoZ2JcO2J5tl6T0CDcQ82VrzBQUgz8uQrvH26WuEyq23dLCx9NiW6H6MKbGLyEyFcqSRKQv1oegppTMXuN3qypHbeqRVv%2BZK4KmyTxyezhvEa1vYe0tL1EUJnPiSR76G76iuhCxozrl9gG0tPMMPTmWJObc=\"}",
-      "【京东】京东大转盘":"openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"m\",\"url\":\"https://turntable.m.jd.com/?actId=jgpqtzjhvaoym&appSource=jdmx\"}",
-      "【京东】领券页面签到":"openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"m\",\"url\":\"https://coupon.m.jd.com/center/getCouponCenter.action?categoryId=0&batchStr=00000\"}",
-      "【支付宝】砸金蛋":"alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://jupage.taobao.com/wow/tqg/act/zajindan",
-      "【支付宝】会员领积分":"alipays://platformapi/startapp?appId=20000160&url=%2Fwww%2FmyPoints.html",
-      "【支付宝】一分惊喜":"alipays:\/\/platformapi\/startapp?appId=20000067&url=https:\/\/render.alipay.com\/p\/c\/onemorething\/home.html",
-      "【支付宝】天天抽奖":"alipays:\/\/platformapi\/startapp?appId=2018103161898599"
+      "【京东】京东会员签到": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"m\",\"url\":\"https://vip.m.jd.com/?&utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share&ShareTm=sbQQcUMkZ4AZ4dzVzEWiwuvB%2BSRLNefWg3OxfaKnTdb8I9fVRndWFjw2wynEdJbNYQeN1N8y4HgFy8p3e%2BemJguCDq%2B9dNOW0Ke1zCMW2Tkfy4yJCOdEnAqD9z3NKYq8VHAFLpmVrUvxYyUyM/AFrxdMuwCm0PEl0NvaSsG%2BMrA=\"}",
+      "【京东】京豆签到": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"m\",\"url\":\"https://bean.m.jd.com/share/index.action?&utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share&ShareTm=sPR%2BfxCcrAMyBuYZ%2BoZ2JcO2J5tl6T0CDcQ82VrzBQUgz8uQrvH26WuEyq23dLCx9NiW6H6MKbGLyEyFcqSRKQv1oegppTMXuN3qypHbeqRVv%2BZK4KmyTxyezhvEa1vYe0tL1EUJnPiSR76G76iuhCxozrl9gG0tPMMPTmWJObc=\"}",
+      "【京东】京东大转盘": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"m\",\"url\":\"https://turntable.m.jd.com/?actId=jgpqtzjhvaoym&appSource=jdmx\"}",
+      "【京东】领券页面签到": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"m\",\"url\":\"https://coupon.m.jd.com/center/getCouponCenter.action?categoryId=0&batchStr=00000\"}",
+      "【支付宝】砸金蛋": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://jupage.taobao.com/wow/tqg/act/zajindan",
+      "【支付宝】会员领积分": "alipays://platformapi/startapp?appId=20000160&url=%2Fwww%2FmyPoints.html",
+      "【支付宝】一分惊喜": "alipays://platformapi/startapp?appId=20000067&url=https://render.alipay.com/p/c/onemorething/home.html",
+      "【支付宝】天天抽奖": "alipays://platformapi/startapp?appId=2018103161898599"
     },
     "more": {
       "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
@@ -99,6 +97,29 @@
   "jjh": {
     "ok": "yes",
     "tishi": "📋剪贴板为空，请检查一下哦~\n---------------------------------\n※猜测到你可能需要以下功能※\n\n(此为纯净版，请加群获取完整版)",
-    "hongbao": "alipays:\/\/platformapi\/startapp?appId=88886666&appClearTop=false&target=groupPre&bizType=CROWD_CODE_CASH&crowdNo=202006200206302127940823700055790860&universalDetail=true&clientVersion=10.0.0-5&prevBiz=code&sign=52e3fa8195d4210bd1e7ecc8ba907b25c428533179eff3f91421b22ee04907a2&schemeMode=reInside&source=passcode"
+    "hongbao": "alipays://platformapi/startapp?appId=88886666&appClearTop=false&target=groupPre&bizType=CROWD_CODE_CASH&crowdNo=202006200206302127940823700055790860&universalDetail=true&clientVersion=10.0.0-5&prevBiz=code&sign=52e3fa8195d4210bd1e7ecc8ba907b25c428533179eff3f91421b22ee04907a2&schemeMode=reInside&source=passcode"
+  },
+  "more": {
+    "mode": "more2",
+    "more0": {
+      "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ"
+    },
+    "more1": {
+      "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
+      "加入QQ情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
+      "其他捷径作品": "https://shimo.im/docs/DHcYv8xjcYxvHvQg/",
+      "🧧现金红包🧧(第3期)": "taobao://m.tb.cn/h.VO7tl8o",
+      "饿了么现金红包": "taobao://m.tb.cn/h.VkynPqK"
+    },
+    "more2": {
+      "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
+      "加入QQ情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
+      "其他捷径作品": "https://shimo.im/docs/DHcYv8xjcYxvHvQg/",
+      "🧧现金红包🧧(第3期)": "taobao://m.tb.cn/h.VO7tl8o",
+      "平台红包": {
+        "饿了么现金红包": "taobao://m.tb.cn/h.VkynPqK",
+        "支付宝现金红包": "taobao://m.tb.cn/h.VkynPqK"
+      }
+    }
   }
 }
