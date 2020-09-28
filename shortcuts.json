@@ -93,7 +93,8 @@
       "get_ring": "http://home.80008800.xyz:90/gitee/?client_key=605346047&app=ring&action=get_ring",
       "post_ring": "http://home.80008800.xyz:90/gitee/?client_key=605346047&app=ring&action=post_ring"
     },
-    "menu_tips": "☁️共享音效盒子☁️\n好咖啡要和朋友一起品尝，好铃音也要和朋友一起分享",
+    "update_tip": "发现新版本！请到社区或群获取更新~",
+    "menu_tip": "☁️共享音效盒子☁️\n好咖啡要和朋友一起品尝，好铃音也要和朋友一起分享",
     "share_title_tip": "请输入标题\n*以下为参考模板可删除\n*尽量精悍别脱离内容\n*不要换行！！！",
     "share_title_default": "【充电】数码宝贝音效 part 1",
     "share_body_tip": "请输入已编码的音效文本内容"
