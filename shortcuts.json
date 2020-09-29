@@ -92,7 +92,7 @@
     "api": {
       "get_ring": "http://home.80008800.xyz:90/gitee/",
       "post_ring": "http://home.80008800.xyz:90/gitee/",
-      "download": "https://gitee.com/leecogit/Updater/raw/master/shortcuts/ring/Num"
+      "download": "https://gitee.com/leecogit/Updater/raw/master/shortcuts/ring/"
     },
     "update_tip": "发现新版本！请到社区或群获取更新~",
     "menu_tip": "☁️共享音效盒子☁️\n- 好咖啡要和朋友一起品尝\n- 好铃音也要和朋友一起分享",
