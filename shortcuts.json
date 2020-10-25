@@ -101,6 +101,10 @@
     "share_body_tip": "请输入你想说的话，不输入也没关系哦~",
     "share_content_tip": "请输入已编码的音效文本内容\n我已经自动输入你剪贴板的内容拉\n─=≡Σ(((つ•̀ω•́)つ\n温馨提醒:请尽量分享10秒以内的音效"
   },
+  "Cat": {
+    "version": "1.0",
+    "url": "https://gitee.com/leecogit/Updater/raw/master/1111.json"
+  },
   "More": {
     "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
     "加入QQ情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
