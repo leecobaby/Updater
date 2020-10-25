@@ -3,20 +3,30 @@
     "gd": "taobao://m.tb.cn/h.4cgL2j2",
     "cat": {
       "home": "taobao://pages.tmall.com/wow/z/hdwk/act-20201111/index?disableNav=YES&qd_from=dccjy",
-      "task": {
-        "gdp": "taobao://shop.m.taobao.com/shop/shop_index.htm?shop_id=62941831&ffs=https%3A%2F%2Fifsk2.tanx.com%2Fffsback%3Fname%3Dminteract%26pid%3Dmm_12852562_1778064_110326650220%26pvid%3D8e4c1c0b84ff97005f93f70b074f67b1%26biz%3DZvBlCgMKATESIgiL7s.8BTIaanNcdTg0RERcdTgyNzJcdTU5MjdcdTU3MzAaOwo5CiQ1NTE0NTUwMTM2MDAwMV8xNTAyMDc4NTAzXzE1MDE2NzI1MzEYge.mlgUqAUkyAVaQAYHv5pYF&adScene=202011-ad-card-wall-1&hd_from_id=100074&sceneId=722&deliveryId=5213&implId=",
-        "11main": "taobao://pages.tmall.com/wow/a/act/tmall/tmc/28098/3334/wupr?disableNav=YES&wh_pid=main-220977&fromSource=hudong",
-        "11top": "taobao://pages.tmall.com/wow/a/act/tmall/tmc/28098/3334/wupr?disableNav=YES&wh_pid=main-220657",
-        "gozfb": "taobao://render.alipay.com/p/opx/normal-kg6j9hly?scheme=alipays%3A%2F%2Fplatformapi%2Fstartapp%3FappId%3D68687502%26thd_con%3DYES%26pikshemo%3DYES%26async_uc%3DYES%26mainConnectDelayPush%3DYES%26delayPipeline%3DYES%26initCustomService%3DYES%26flashTinyApp%3DYES%26enableHotBoot%3DYES%26nbupdate%3Dsyncforce%26nbversion%3D0.5.2010171427.31%26clientVersion%3D10.1.85.6000%26chInfo%3Dtaobaobanner%26url%3D%252Fp%252Fc%252F17so2aeuo8ak%252Fpages%252Findex%252Findex.html%253Fsource%253DTAOBAO_TASK"
-      }
+      "task": [
+        {
+          "gdp": "taobao://shop.m.taobao.com/shop/shop_index.htm?shop_id=62941831&ffs=https%3A%2F%2Fifsk2.tanx.com%2Fffsback%3Fname%3Dminteract%26pid%3Dmm_12852562_1778064_110326650220%26pvid%3D8e4c1c0b84ff97005f93f70b074f67b1%26biz%3DZvBlCgMKATESIgiL7s.8BTIaanNcdTg0RERcdTgyNzJcdTU5MjdcdTU3MzAaOwo5CiQ1NTE0NTUwMTM2MDAwMV8xNTAyMDc4NTAzXzE1MDE2NzI1MzEYge.mlgUqAUkyAVaQAYHv5pYF&adScene=202011-ad-card-wall-1&hd_from_id=100074&sceneId=722&deliveryId=5213&implId="
+        },
+        {
+          "11main": "taobao://pages.tmall.com/wow/a/act/tmall/tmc/28098/3334/wupr?disableNav=YES&wh_pid=main-220977&fromSource=hudong"
+        },
+        {
+          "11top": "taobao://pages.tmall.com/wow/a/act/tmall/tmc/28098/3334/wupr?disableNav=YES&wh_pid=main-220657"
+        },
+        {
+          "gozfb": "taobao://render.alipay.com/p/opx/normal-kg6j9hly?scheme=alipays%3A%2F%2Fplatformapi%2Fstartapp%3FappId%3D68687502%26thd_con%3DYES%26pikshemo%3DYES%26async_uc%3DYES%26mainConnectDelayPush%3DYES%26delayPipeline%3DYES%26initCustomService%3DYES%26flashTinyApp%3DYES%26enableHotBoot%3DYES%26nbupdate%3Dsyncforce%26nbversion%3D0.5.2010171427.31%26clientVersion%3D10.1.85.6000%26chInfo%3Dtaobaobanner%26url%3D%252Fp%252Fc%252F17so2aeuo8ak%252Fpages%252Findex%252Findex.html%253Fsource%253DTAOBAO_TASK"
+        }
+      ]
     }
   },
   "zfb": {
     "cat": {
       "home": "alipays://platformapi/startapp?appId=68687502",
-      "task": {
-        "gotb": "alipays://platformapi/startapp?appId=20000067&url=https://pages.tmall.com/wow/a/act/tmall/dailygroup/1090/wupr?wh_pid=daily-218527&bc_fl_src=zfb_zfbbanner&targetUrl=https%3a%2f%2fpages.tmall.com%2fwow%2fz%2fhdwk%2fact-20201111%2findex%3fdisableNav%3dYES%26qd_from%3dzfbbanner%26prismFrom%3dzfb%26hd_from_id%3d100074%26sceneId%3d623%26deliveryId%3d5283%26implId%3dother_0_9001_5283_0%26isLost%3dfalse%26scene%3dsingle"
-      }
+      "task": [
+        {
+          "gotb": "alipays://platformapi/startapp?appId=20000067&url=https://pages.tmall.com/wow/a/act/tmall/dailygroup/1090/wupr?wh_pid=daily-218527&bc_fl_src=zfb_zfbbanner&targetUrl=https%3a%2f%2fpages.tmall.com%2fwow%2fz%2fhdwk%2fact-20201111%2findex%3fdisableNav%3dYES%26qd_from%3dzfbbanner%26prismFrom%3dzfb%26hd_from_id%3d100074%26sceneId%3d623%26deliveryId%3d5283%26implId%3dother_0_9001_5283_0%26isLost%3dfalse%26scene%3dsingle"
+        }
+      ]
     }
   }
 }
