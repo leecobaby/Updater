@@ -119,7 +119,7 @@
     "hongbao": "alipays://platformapi/startapp?appId=88886666&appClearTop=false&target=groupPre&bizType=CROWD_CODE_CASH&crowdNo=202006200206302127940823700055790860&universalDetail=true&clientVersion=10.0.0-5&prevBiz=code&sign=52e3fa8195d4210bd1e7ecc8ba907b25c428533179eff3f91421b22ee04907a2&schemeMode=reInside&source=passcode"
   },
   "more": {
-    "mode": "more1",
+    "mode": "more0",
     "more0": {
       "养猫助力": "taobao://m.tb.cn/h.4YLr7DN?sm=e23c50"
     },
