@@ -103,7 +103,9 @@
   },
   "Cat": {
     "version": "1.1",
-    "update": "https://www.icloud.com/shortcuts/44abd8d945ed4d5cb0791291ecd96d25",
+    "update": "https://www.icloud.com/shortcuts/672c3d353cb1448fadb8203505de3599",
+    "faq": "https://docs.qq.com/doc/DWnVlUXlQU01DZ0NJ",
+    "notice": "",
     "url": "https://gitee.com/leecogit/Updater/raw/master/1111.json"
   },
   "More": {
@@ -121,7 +123,7 @@
   "more": {
     "mode": "more1",
     "more0": {
-      "养猫助力": "taobao://m.tb.cn/h.4YLr7DN?sm=e23c50"
+      "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ"
     },
     "more1": {
       "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
