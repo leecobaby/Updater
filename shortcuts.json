@@ -101,10 +101,13 @@
     "share_content_tip": "请输入已编码的音效文本内容\n我已经自动输入你剪贴板的内容拉\n─=≡Σ(((つ•̀ω•́)つ\n温馨提醒:请尽量分享10秒以内的音效"
   },
   "Cat": {
-    "version": "1.3",
-    "update": "https://www.icloud.com/shortcuts/30b8fa36545346b59fa7a6c99b9a2e91",
+    "version": "1.4",
+    "update_log": "* 修复逻辑错误带来的死机问题\n* 增加任务提示\n* 优化通知权重\n* 优化更新引导\n* 优化任务数据架构",
+    "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
+    "github": "https://github.com/LeecoGit/shortcuts/tree/master/1111",
+    "update": "https://www.icloud.com/shortcuts/fe64a83ede424a959c2755464593de4c",
     "faq": "https://docs.qq.com/doc/DWnVlUXlQU01DZ0NJ",
-    "notice": "1.3版本有巨大BUG，推荐暂时不使用，等待下一个版本，预计今天下午出新版！",
+    "notice": "不要在0点运行指令，迟一点运行有效防止账号被活动限制！",
     "url": "https://gitee.com/leecogit/Updater/raw/master/1111.json"
   },
   "More": {
