@@ -1,7 +1,7 @@
 {
   "tb": {
     "gd": "taobao://m.tb.cn/h.4cgL2j2",
-    "hongbao": "taobao://m.tb.cn/h.4X93J98",
+    "hongbao": "taobao://m.tb.cn/h.4c4qXiQ",
     "main": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
     "cat": {
       "home": "taobao://pages.tmall.com/wow/z/hdwk/act-20201111/index?disableNav=YES&qd_from=dccjy",
@@ -152,7 +152,13 @@
         {
           "gozfb": {
             "title": "去支付宝领喵币",
-            "urlScheme": "taobao://render.alipay.com/p/opx/normal-kg6j9hly?scheme=alipays%3A%2F%2Fplatformapi%2Fstartapp%3FappId%3D68687502%26thd_con%3DYES%26pikshemo%3DYES%26async_uc%3DYES%26mainConnectDelayPush%3DYES%26delayPipeline%3DYES%26initCustomService%3DYES%26flashTinyApp%3DYES%26enableHotBoot%3DYES%26nbupdate%3Dsyncforce%26nbversion%3D0.5.2010171427.31%26clientVersion%3D10.1.85.6000%26chInfo%3Dtaobaobanner%26url%3D%252Fp%252Fc%252F17so2aeuo8ak%252Fpages%252Findex%252Findex.html%253Fsource%253DTAOBAO_TASK"
+            "urlScheme": "alipays://platformapi/startapp?appId=68687502&thd_con=YES&pikshemo=YES&async_uc=YES&mainConnectDelayPush=YES&delayPipeline=YES&initCustomService=YES&flashTinyApp=YES&enableHotBoot=YES&nbupdate=syncforce&nbversion=0.5.2010171427.31&clientVersion=10.1.85.6000&chInfo=taobaobanner&url=/p/c/17so2aeuo8ak/pages/index/index.html?source=TAOBAO_TASK"
+          }
+        },
+        {
+          "gotb": {
+            "title": "去淘宝领喵币",
+            "urlScheme": "taobao://pages.tmall.com/wow/z/hdwk/act-20201111/index?disableNav=YES&qd_from=zfbbanner&prismFrom=zfb&hd_from_id=100074&sceneId=623&isLost=false&scene=single&deliveryId=5283&implId=other_0_9001_5283_0"
           }
         }
       ],
@@ -161,7 +167,8 @@
         "用户优质队伍1": "5👈fu植文本🎵dmKuc80m8HM📲咑.閞👉t洮宝👈或点几连结 https://m.tb.cn/h.4Yw09QC?sm=dbe03a 至浏.览览.器【就差你了！快加入我的战队一起瓜分20亿红 鉋！】",
         "用户优质队伍2": "2.0fu植文本🎵YNsdc8356Iy📲打K开👉木/兆宝👈或點ji炼接 https://m.tb.cn/h.4Yznb8s?sm=b5feb8 至流览器【就差你了！快加入我的战队一起瓜分20亿红 鉋！】",
         "用户优质队伍3": "4.0fu置该句🎵MWQVc87tHrL📲回👉τa0寶👈或點ji炼接 https://m.tb.cn/h.41EXGdh?sm=40b0be 至瀏lan嘂..【裘裘妳幫我點下，壹起搶20億紅包～】",
-        "用户优质队伍4": "6.0fu致此段🎵AtgHc8DLrie📲👉T裪宝👈或点几炼接 https://m.tb.cn/h.4XJLOAn?sm=e41f0b 至流览器【(_邀妳加入我的隊伍領大紅包，分20億】"
+        "用户优质队伍4": "6.0fu致此段🎵AtgHc8DLrie📲👉T裪宝👈或点几炼接 https://m.tb.cn/h.4XJLOAn?sm=e41f0b 至流览器【(_邀妳加入我的隊伍領大紅包，分20億】",
+        "养猫助力群": "https://jq.qq.com/?_wv=1027&k=ViywNb9G"
       }
     }
   },
