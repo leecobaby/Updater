@@ -1,5 +1,6 @@
 {
   "tb": {
+    "version": "0.7",
     "gd": "taobao://m.tb.cn/h.4cgL2j2",
     "hongbao": "taobao://m.tb.cn/h.4c4qXiQ",
     "main": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -41,7 +42,7 @@
         },
         {
           "repeat_gyg": {
-            "title": "逛一逛",
+            "title": "逛会场",
             "implId": [
               {
                 "6051": ["expo_0_217918001_6051_0", "expo_0_217918002_6051_0"]
@@ -63,12 +64,12 @@
               }
             ],
             "type": "expo",
-            "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/tmc/28098/3334/wupr?wh_pid=industry-217918&disableNav=YES&status_bar_transparent=true&itemId=627531573858&item_id=627531573858&dczt_module_id=18042&expo_id=217918002&srcinfo=mainexpo_2&scm=1007.23000.197039.11831584_0_0&utparam=%7B%22hc_object_id%22%3A%2221164690003019%22%2C%22x_object_type%22%3A%22expo%22%2C%22x_mix_flow%22%3A11831584%2C%22x_pos%22%3A2%2C%22x_hestia_flow%22%3A11831584%2C%22tpp_buckets%22%3A%2210000%230%23193986%230%22%2C%22scene%22%3A%22ali_sea%22%2C%22x_scm%22%3A%221007.23000.197039.11831584_0_0%22%2C%22x_sub_score%22%3A4.0220563%2C%22x_user_id%22%3A2559274466%2C%22x_src%22%3A%2218042%22%2C%22x_object_type_id%22%3A4%2C%22x_hestia_source%22%3A%22hudong%22%2C%22x_price%22%3A0.0%2C%22x_hestia_subsource%22%3A%22tasklist%22%2C%22hc_object_type%22%3A%22zhc_b%22%2C%22wh_pid%22%3A%22%22%2C%22x_sub_rank%22%3A1%2C%22x_item_ids%22%3A627531573858%2C%22x_mt%22%3A0%2C%22x_algo_paras%22%3A%22%22%2C%22x_pvid%22%3A%22b8f860cf-8ca1-48fd-885a-afe8bc8348c7%22%2C%22x_tpp_buckets%22%3A%22%22%2C%22x_object_id%22%3A%2215332134505%22%7D&pvid=b8f860cf-8ca1-48fd-885a-afe8bc8348c7&sceneId=722&fromToken=R9R0B1rSvAAeBWOwfzZfBRlIXUOUw&hd_from_id=100074&spm=202011hudong.20245757.tasklist.0&deliveryId="
+            "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/tmc/28098/3333/wupr?wh_pid=industry-219261&disableNav=YES&status_bar_transparent=true&itemId=611198319958&item_id=611198319958&dczt_module_id=18502&expo_id=2027788002&srcinfo=mainexpo_1&scm=1007.23000.197039.11831584_0_0&utparam=%7B%22hc_object_id%22%3A%2214560273031%22%2C%22x_object_type%22%3A%22expo%22%2C%22x_mix_flow%22%3A11831584%2C%22x_pos%22%3A1%2C%22x_hestia_flow%22%3A11831584%2C%22tpp_buckets%22%3A%2210000%230%23175420%230%22%2C%22scene%22%3A%22ali_sea%22%2C%22x_scm%22%3A%221007.23000.197039.11831584_0_0%22%2C%22x_sub_score%22%3A4.0115485%2C%22x_user_id%22%3A2559274466%2C%22x_src%22%3A%2218502%22%2C%22x_object_type_id%22%3A4%2C%22x_hestia_source%22%3A%22hudong%22%2C%22x_price%22%3A0.0%2C%22x_hestia_subsource%22%3A%22tasklist%22%2C%22hc_object_type%22%3A%22zhc_b%22%2C%22wh_pid%22%3A%22%22%2C%22x_sub_rank%22%3A0%2C%22x_item_ids%22%3A611198319958%2C%22x_mt%22%3A0%2C%22x_algo_paras%22%3A%22%22%2C%22x_pvid%22%3A%2269a85605-808e-4792-bdfc-2992f6b077ff%22%2C%22x_tpp_buckets%22%3A%22%22%2C%22x_object_id%22%3A%22616171907676%22%7D&pvid=69a85605-808e-4792-bdfc-2992f6b077ff&sceneId=722&fromToken=gQNa5Agi1kOLxRWnFV8f2GbFKUQUl&hd_from_id=100074&spm=202011hudong.20245757.tasklist.0&deliveryId="
           }
         },
         {
           "repeat_yun": {
-            "title": "云推送",
+            "title": "逛推送",
             "implId": [
               {
                 "6801": [
@@ -94,35 +95,27 @@
           }
         },
         {
-          "11mian": {
-            "title": "浏览双十一预售主会场",
-            "implId": [{ "6063": "other_0_30002_6063_0" }],
+          "repeat_other": {
+            "title": "逛其他",
+            "implId": [{ "6752": "other_0_55025_6752_0" }],
             "type": "other",
-            "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/tmc/28098/3334/wupr?disableNav=YES&wh_pid=main-220977&fromSource=hudong&sceneId=722&fromToken=ZZYJ8bvHBl57PWwdHaBhV2MCdUwUx&hd_from_id=100074&deliveryId="
+            "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/tmc/28098/3333/wupr?wh_pid=industry-219001&disableNav=YES&status_bar_transparent=true&sceneId=722&fromToken=AEwQBo8IKdJvgo2OT2OfdQEhYU1Ua&hd_from_id=100074&spm=202011hudong.20245757.tasklist.0&deliveryId="
           }
         },
         {
-          "11mian": {
-            "title": "浏览双十一榜单会场",
-            "implId": [{ "6052": "other_0_1_6052_0" }],
-            "type": "other",
-            "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/tmc/28098/3334/wupr?disableNav=YES&wh_pid=main-220657&sceneId=722&fromToken=NdbKM5OTRB9LdBGehZpsYBoSrU0Uz&hd_from_id=100074&deliveryId="
-          }
-        },
-        {
-          "11mz": {
-            "title": "浏览美妆尖货会场",
-            "implId": [{ "6752": "other_0_53012_6752_0" }],
-            "type": "other",
-            "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/tmc/28098/3334/wupr?wh_pid=industry-217684&disableNav=YES&status_bar_transparent=true&sceneId=722&fromToken=XvL6xbRHdeeNkQrvURJs7nJtZUPUg&hd_from_id=100074&spm=202011hudong.20245757.tasklist.0&deliveryId="
-          }
-        },
-        {
-          "11gh": {
-            "title": "浏览个护尖货会场",
-            "implId": [{ "6752": "expo_0_57011_6752_0" }],
-            "type": "expo",
-            "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/tmc/28098/3333/wupr?wh_pid=industry-219210&disableNav=YES&status_bar_transparent=true&sceneId=722&fromToken=M7xKovLhExxOY2vrsLQIxzgcbU6UP&hd_from_id=100074&spm=202011hudong.20245757.tasklist.0&deliveryId="
+          "repeat_search": {
+            "title": "逛搜索",
+            "implId": [
+              {
+                "6883": [
+                  "interactionSearch_0_100157965_6883_0",
+                  "interactionSearch_0_100157961_6883_0",
+                  "interactionSearch_0_100157962_6883_0"
+                ]
+              }
+            ],
+            "type": "interactionSearch",
+            "urlScheme": "taobao://s.taobao.com?q=如何让你爱的人爱上你&spm=202011hudong.20245757.c1.d1&sourceType=other&fromToken=AEwQBo8IKdJqBJlOi2OfdnvhYU1Ua&scm=1007.23000.197039.11831584_0_0&sceneId=722&hd_from_id=100074&g_channelSrp=hudongcheng_20201111&needTabs=true&deliveryId="
           }
         },
         {
@@ -134,31 +127,17 @@
           }
         },
         {
-          "11jhs": {
-            "title": "逛双11聚划算预售好货",
-            "implId": [{ "6738": "other_0_55001_6738_0" }],
-            "type": "other",
-            "urlScheme": "taobao://pages.tmall.com/wow/a/act/ju/tmc/28098/3622/wupr?status_bar_transparent=true&spm=202011hudong.20245757.c1.d1&disableNav=YES&wh_pid=main-222690&sourceType=other&suid=11E3DCE9-AD0D-4C63-938F-EEDE28BB18F1&fromToken=aQkgE5xi0nn7doG8sQ5SPvqhkUzUN&sceneId=722&hd_from_id=100074&deliveryId="
-          }
-        },
-        {
-          "11jq": {
-            "title": "浏览家清尖货会场",
-            "implId": [{ "6752": "other_0_55005_6752_0" }],
-            "type": "other",
-            "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/tmc/28098/3333/wupr?wh_pid=industry-219212&disableNav=YES&status_bar_transparent=true&spm=202011hudong.20245757.tasklist.0&sourceType=otherfromToken=9Yn8X9zsLBl2Ag5lcqWfwrKUoU7UB&sceneId=722&hd_from_id=100074&deliveryId="
-          }
-        },
-        {
           "gozfb": {
+            "implId": [{ "": "" }],
             "title": "去支付宝领喵币",
             "urlScheme": "alipays://platformapi/startapp?appId=68687502&thd_con=YES&pikshemo=YES&async_uc=YES&mainConnectDelayPush=YES&delayPipeline=YES&initCustomService=YES&flashTinyApp=YES&enableHotBoot=YES&nbupdate=syncforce&nbversion=0.5.2010171427.31&clientVersion=10.1.85.6000&chInfo=taobaobanner&url=/p/c/17so2aeuo8ak/pages/index/index.html?source=TAOBAO_TASK"
           }
         },
         {
           "gotb": {
+            "implId": [{ "5283": "other_0_9001_5283_0" }],
             "title": "去淘宝领喵币",
-            "urlScheme": "taobao://pages.tmall.com/wow/z/hdwk/act-20201111/index?disableNav=YES&qd_from=zfbbanner&prismFrom=zfb&hd_from_id=100074&sceneId=623&isLost=false&scene=single&deliveryId=5283&implId=other_0_9001_5283_0"
+            "urlScheme": "taobao://pages.tmall.com/wow/z/hdwk/act-20201111/index?disableNav=YES&qd_from=zfbbanner&prismFrom=zfb&hd_from_id=100074&sceneId=623&isLost=false&scene=single&deliveryId="
           }
         }
       ],
@@ -168,7 +147,7 @@
         "用户优质队伍2": "2.0fu植文本🎵YNsdc8356Iy📲打K开👉木/兆宝👈或點ji炼接 https://m.tb.cn/h.4Yznb8s?sm=b5feb8 至流览器【就差你了！快加入我的战队一起瓜分20亿红 鉋！】",
         "用户优质队伍3": "4.0fu置该句🎵MWQVc87tHrL📲回👉τa0寶👈或點ji炼接 https://m.tb.cn/h.41EXGdh?sm=40b0be 至瀏lan嘂..【裘裘妳幫我點下，壹起搶20億紅包～】",
         "用户优质队伍4": "6.0fu致此段🎵AtgHc8DLrie📲👉T裪宝👈或点几炼接 https://m.tb.cn/h.4XJLOAn?sm=e41f0b 至流览器【(_邀妳加入我的隊伍領大紅包，分20億】",
-        "养猫助力群:830385420": "5👈負zhi呅本🎵d22ncjw2PK3📲👉τa0寶👈或点凢炼接 https://m.tb.cn/h.4XI02fu?sm=5dc9a7 至流览器【新一天的打工喵开工了，拜托拜托点下～一起赚1OOO!】"
+        "养猫助力群": "taobao://m.tb.cn/h.42bfoY3?sm=5a14e5"
       }
     }
   },
