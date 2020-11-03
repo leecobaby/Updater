@@ -1,6 +1,6 @@
 {
   "tb": {
-    "version": "0.7",
+    "version": "0.11.3",
     "gd": "taobao://m.tb.cn/h.4XO0l1P",
     "end": "taobao://m.tb.cn/h.4cLIyXr",
     "hongbao": "taobao://m.tb.cn/h.4c4qXiQ",
@@ -47,13 +47,11 @@
             "title": "逛会场",
             "implId": [
               {
-                "6051": ["expo_0_217918001_6051_0", "expo_0_217918002_6051_0"]
-              },
-              {
-                "6440": ["expo_0_217918001_6440_0", "expo_0_217918002_6440_0"]
-              },
-              {
-                "6797": ["expo_0_217918001_6797_0", "expo_0_217918002_6797_0"]
+                "7075": [
+                  "expo_0_217918001_7075_0",
+                  "expo_0_217918002_7075_0",
+                  "expo_0_217918003_7075_0"
+                ]
               },
               {
                 "6946": [
@@ -74,21 +72,12 @@
             "title": "逛推送",
             "implId": [
               {
-                "6801": [
-                  "cloudSailAd_0_1191_6801_0",
-                  "cloudSailAd_0_1192_6801_0",
-                  "cloudSailAd_0_1193_6801_0",
-                  "cloudSailAd_0_1194_6801_0",
-                  "cloudSailAd_0_1195_6801_0"
-                ]
-              },
-              {
-                "6910": [
-                  "cloudSailAd_0_1191_6910_0",
-                  "cloudSailAd_0_1192_6910_0",
-                  "cloudSailAd_0_1193_6910_0",
-                  "cloudSailAd_0_1194_6910_0",
-                  "cloudSailAd_0_1195_6910_0"
+                "7080": [
+                  "cloudSailAd_0_1191_7080_0",
+                  "cloudSailAd_0_1192_7080_0",
+                  "cloudSailAd_0_1193_7080_0",
+                  "cloudSailAd_0_1194_7080_0",
+                  "cloudSailAd_0_1195_7080_0"
                 ]
               }
             ],
@@ -123,16 +112,12 @@
         {
           "11vip": {
             "title": "双11品牌会员俱乐部",
-            "implId": [{ "6752": "expo_0_49013_6752_0" }],
+            "implId": [
+              { "7077": "expo_0_49013_7077_0" },
+              { "6913": "expo_0_53018_6913_0" }
+            ],
             "type": "expo",
             "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/dailygroup/2001/wupr?wh_pid=daily-216265&wx_navbar_hidden=true&disableNav=YES&pageName=venue&_xsearchRedirect=YES&channel=hudong&sceneId=722&fromToken=M7xKovLhExxOY2vrsLQIxzgcbU6UP&hd_from_id=100074&spm=202011hudong.20245757.tasklist.0&deliveryId="
-          }
-        },
-        {
-          "gozfb": {
-            "implId": [{ "": "" }],
-            "title": "去支付宝领喵币",
-            "urlScheme": "alipays://platformapi/startapp?appId=68687502&thd_con=YES&pikshemo=YES&async_uc=YES&mainConnectDelayPush=YES&delayPipeline=YES&initCustomService=YES&flashTinyApp=YES&enableHotBoot=YES&nbupdate=syncforce&nbversion=0.5.2010171427.31&clientVersion=10.1.85.6000&chInfo=taobaobanner&url=/p/c/17so2aeuo8ak/pages/index/index.html?source=TAOBAO_TASK"
           }
         },
         {
@@ -140,6 +125,13 @@
             "implId": [{ "5283": "other_0_9001_5283_0" }],
             "title": "去淘宝领喵币",
             "urlScheme": "taobao://pages.tmall.com/wow/z/hdwk/act-20201111/index?disableNav=YES&qd_from=zfbbanner&prismFrom=zfb&hd_from_id=100074&sceneId=623&isLost=false&scene=single&deliveryId="
+          }
+        },
+        {
+          "gozfb": {
+            "implId": [{ "": "" }],
+            "title": "去支付宝领喵币",
+            "urlScheme": "alipays://platformapi/startapp?appId=68687502&thd_con=YES&pikshemo=YES&async_uc=YES&mainConnectDelayPush=YES&delayPipeline=YES&initCustomService=YES&flashTinyApp=YES&enableHotBoot=YES&nbupdate=syncforce&nbversion=0.5.2010171427.31&clientVersion=10.1.85.6000&chInfo=taobaobanner&url=/p/c/17so2aeuo8ak/pages/index/index.html?source=TAOBAO_TASK"
           }
         }
       ],
