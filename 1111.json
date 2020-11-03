@@ -1,8 +1,8 @@
 {
   "tb": {
-    "version": "0.11.3",
+    "version": "0.11.4",
     "gd": "taobao://m.tb.cn/h.4XO0l1P",
-    "end": "taobao://m.tb.cn/h.4cLIyXr",
+    "end": "taobao://m.tb.cn/h.4X0T2tD",
     "hongbao": "taobao://m.tb.cn/h.4c4qXiQ",
     "main": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
     "cat": {
@@ -79,6 +79,15 @@
                   "cloudSailAd_0_1194_7080_0",
                   "cloudSailAd_0_1195_7080_0"
                 ]
+              },
+              {
+                "7099": [
+                  "cloudSailAd_0_1191_7099_0",
+                  "cloudSailAd_0_1192_7099_0",
+                  "cloudSailAd_0_1193_7099_0",
+                  "cloudSailAd_0_1194_7099_0",
+                  "cloudSailAd_0_1195_7099_0"
+                ]
               }
             ],
             "type": "cloudSailAd",
@@ -88,7 +97,10 @@
         {
           "repeat_other": {
             "title": "逛其他",
-            "implId": [{ "6752": "other_0_55025_6752_0" }],
+            "implId": [
+              { "6752": ["other_0_55025_6752_0", "other_0_57038_6752_0"] },
+              { "6913": "expo_0_53018_6913_0" }
+            ],
             "type": "other",
             "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/tmc/28098/3333/wupr?wh_pid=industry-219001&disableNav=YES&status_bar_transparent=true&sceneId=722&fromToken=AEwQBo8IKdJvgo2OT2OfdQEhYU1Ua&hd_from_id=100074&spm=202011hudong.20245757.tasklist.0&deliveryId="
           }
