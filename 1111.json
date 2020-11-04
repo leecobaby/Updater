@@ -1,6 +1,6 @@
 {
   "tb": {
-    "version": "0.11.4",
+    "version": "11.4.3",
     "gd": "taobao://m.tb.cn/h.4XO0l1P",
     "end": "taobao://m.tb.cn/h.4X0T2tD",
     "hongbao": "taobao://m.tb.cn/h.4c4qXiQ",
@@ -64,7 +64,7 @@
               }
             ],
             "type": "expo",
-            "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/tmc/28098/3640/wupr?wh_pid=industry-221311&disableNav=YES&status_bar_transparent=true&itemId=629804482930&item_id=629804482930&dczt_module_id=18551&expo_id=2029234002&srcinfo=mainexpo_2&scm=1007.23000.197039.11831584_0_0&utparam=%7B%22hc_object_id%22%3A%2226994689611019%22%2C%22x_object_type%22%3A%22expo%22%2C%22x_mix_flow%22%3A11831584%2C%22x_pos%22%3A1%2C%22x_hestia_flow%22%3A11831584%2C%22tpp_buckets%22%3A%2210000%230%23193986%230%22%2C%22scene%22%3A%22ali_sea%22%2C%22x_scm%22%3A%221007.23000.197039.11831584_0_0%22%2C%22x_sub_score%22%3A4.0139315%2C%22x_user_id%22%3A2559274466%2C%22x_src%22%3A%2218551%22%2C%22x_object_type_id%22%3A4%2C%22x_hestia_source%22%3A%22hudong%22%2C%22x_price%22%3A0.0%2C%22x_hestia_subsource%22%3A%22tasklist%22%2C%22hc_object_type%22%3A%22zhc_b%22%2C%22wh_pid%22%3A%22%22%2C%22x_sub_rank%22%3A1%2C%22x_item_ids%22%3A629804482930%2C%22x_mt%22%3A0%2C%22x_algo_paras%22%3A%22%22%2C%22x_pvid%22%3A%22872dd176-6ca9-401a-b082-4d73fb6d17b8%22%2C%22x_tpp_buckets%22%3A%22%22%2C%22x_object_id%22%3A%22594017758266%22%7D&pvid=872dd176-6ca9-401a-b082-4d73fb6d17b8&sceneId=722&fromToken=R9R0B1rSvArDZMe0izZfBE2fXUOUw&hd_from_id=100074&spm=202011hudong.20245757.tasklist.0&deliveryId="
+            "urlScheme": "https://pages.tmall.com/wow/a/act/tmall/tmc/28098/3640/wupr?wh_pid=industry-221311&disableNav=YES&status_bar_transparent=true&itemId=629804482930&item_id=629804482930&dczt_module_id=18551&expo_id=2029234002&srcinfo=mainexpo_2&scm=1007.23000.197039.11831584_0_0&utparam=%7B%22hc_object_id%22%3A%2226994689611019%22%2C%22x_object_type%22%3A%22expo%22%2C%22x_mix_flow%22%3A11831584%2C%22x_pos%22%3A1%2C%22x_hestia_flow%22%3A11831584%2C%22tpp_buckets%22%3A%2210000%230%23193986%230%22%2C%22scene%22%3A%22ali_sea%22%2C%22x_scm%22%3A%221007.23000.197039.11831584_0_0%22%2C%22x_sub_score%22%3A4.0139315%2C%22x_user_id%22%3A2559274466%2C%22x_src%22%3A%2218551%22%2C%22x_object_type_id%22%3A4%2C%22x_hestia_source%22%3A%22hudong%22%2C%22x_price%22%3A0.0%2C%22x_hestia_subsource%22%3A%22tasklist%22%2C%22hc_object_type%22%3A%22zhc_b%22%2C%22wh_pid%22%3A%22%22%2C%22x_sub_rank%22%3A1%2C%22x_item_ids%22%3A629804482930%2C%22x_mt%22%3A0%2C%22x_algo_paras%22%3A%22%22%2C%22x_pvid%22%3A%22872dd176-6ca9-401a-b082-4d73fb6d17b8%22%2C%22x_tpp_buckets%22%3A%22%22%2C%22x_object_id%22%3A%22594017758266%22%7D&pvid=872dd176-6ca9-401a-b082-4d73fb6d17b8&sceneId=722&fromToken=R9R0B1rSvArDZMe0izZfBE2fXUOUw&hd_from_id=100074&spm=202011hudong.20245757.tasklist.0&deliveryId="
           }
         },
         {
@@ -98,9 +98,16 @@
           "repeat_other": {
             "title": "逛其他",
             "implId": [
-              { "6752": ["other_0_55025_6752_0", "other_0_57038_6752_0"] },
+              {
+                "6752": [
+                  "other_0_55025_6752_0",
+                  "other_0_57038_6752_0",
+                  "other_0_55044_6752_0"
+                ]
+              },
               { "6913": "expo_0_53018_6913_0" },
-              { "7077": "expo_0_55033_7077_0" }
+              { "7077": "expo_0_55033_7077_0" },
+              { "7090": "other_0_30002_7090_0" }
             ],
             "type": "other",
             "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/dailygroup/2001/wupr?disableNav=YES&wh_pid=daily-223176&wx_navbar_hidden=true&pageName=venue&sceneId=722&fromToken=jQVloDei0O15Vl5ktpBt1wBiDUoUb&hd_from_id=100074&spm=202011hudong.20245757.tasklist.0&deliveryId="
