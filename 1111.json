@@ -1,8 +1,8 @@
 {
   "tb": {
-    "version": "11.5.1",
-    "gd": "taobao://m.tb.cn/h.4XO0l1P",
-    "end": "taobao://m.tb.cn/h.4dRR4yS",
+    "version": "11.5.2",
+    "gd": "taobao://m.tb.cn/h.4dRR4yS",
+    "end": "taobao://m.tb.cn/h.4X7e64s",
     "hongbao": "taobao://m.tb.cn/h.4c4qXiQ",
     "main": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
     "cat": {
@@ -89,13 +89,12 @@
           "repeat_other": {
             "title": "逛其他",
             "implId": [
-              {
-                "6752": ["other_0_55048_6752_0"]
-              },
+              { "6752": ["other_0_55048_6752_0"] },
               { "6913": "expo_0_53018_6913_0" },
               { "7077": ["expo_0_55033_7077_0", "expo_0_49013_7077_0"] },
               { "7145": "other_0_57047_7145_0" },
-              { "7180": "other_0_57050_7180_0" }
+              { "7180": ["other_0_57049_7180_0", "other_0_57050_7180_0"] },
+              { "7090": "other_0_30002_7090_0" }
             ],
             "type": "other",
             "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/dailygroup/2001/wupr?disableNav=YES&wh_pid=daily-223176&wx_navbar_hidden=true&pageName=venue&sceneId=722&fromToken=jQVloDei0O15Vl5ktpBt1wBiDUoUb&hd_from_id=100074&spm=202011hudong.20245757.tasklist.0&deliveryId="
