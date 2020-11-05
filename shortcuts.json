@@ -121,6 +121,7 @@
     "faq": "",
     "notice": "全民营业很早做了，但因为签名问题出来的很晚，目前也未解决，就当做半成品学习交流用吧，有问题自己摸索或手动！",
     "hot": "",
+    "tip": { "hongbao": "" },
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/1111_qmyy.jpeg",
     "url": "https://gitee.com/leecogit/Updater/raw/master/1111.json"
   },
