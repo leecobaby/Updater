@@ -219,5 +219,37 @@
         }
       ]
     }
+  },
+  "jd": {
+    "main": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"HomePage\"}",
+    "version": "云数据版本:11.5.3",
+    "hongbao": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"action\":\"to\",\"des\":\"m\",\"url\":\"https://u.jd.com/tkn4gjT\"}",
+    "gd": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"action\":\"to\",\"des\":\"m\",\"url\":\"https://u.jd.com/tVOdDlL\"}",
+    "end": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"action\":\"to\",\"des\":\"m\",\"url\":\"https://u.jd.com/tkn4gjT\"}",
+    "qmyy": {
+      "home": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"action\":\"to\",\"des\":\"m\",\"url\":\"https://wbbny.m.jd.com/babelDiy/Zeus/4SJUHwGdUQYgg94PFzjZZbGZRjDd/index.html\"}",
+      "team": {
+        "作者队伍": "",
+        "赞助作者撸猫助力": "taobao://m.tb.cn/h.4dLCl0m?sm=353a2d",
+        "👥 养猫助力群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=830385420&card_type=group&source=qrcode&jump_from=&auth=&authSig=CtFeH1TafXW5JK0ALJh4EbaUkBHKJ6ykRB6+ejGS3fvjGPae8Am9sPg+s"
+      },
+      "data": {
+        "getHomeData": {
+          "url": "https://api.m.jd.com/client.action?functionId=stall_getHomeData",
+          "body": "{}",
+          "api": ""
+        },
+        "getTaskDetail": {
+          "url": "https://api.m.jd.com/client.action?functionId=stall_getTaskDetail",
+          "body": "{\"shopSign\":\"\"}",
+          "api": ""
+        },
+        "collectScore": {
+          "url": "https://api.m.jd.com/client.action?functionId=stall_collectScore",
+          "body": "{\"shopSign\":\"\"}",
+          "api": ""
+        }
+      }
+    }
   }
 }
