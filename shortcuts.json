@@ -112,6 +112,18 @@
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/1111_cat.jpeg",
     "url": "https://gitee.com/leecogit/Updater/raw/master/1111.json"
   },
+  "Business": {
+    "version": "1.0",
+    "update_log": "",
+    "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
+    "github": "https://github.com/LeecoGit/shortcuts/tree/master/1111",
+    "update": "",
+    "faq": "",
+    "notice": "全民营业很早做了，但因为签名问题出来的很晚，目前也未解决，就当做半成品学习交流用吧，有问题自己摸索或手动！",
+    "hot": "",
+    "image": "https://gitee.com/leecogit/Updater/raw/master/image/1111_qmyy.jpeg",
+    "url": "https://gitee.com/leecogit/Updater/raw/master/1111.json"
+  },
   "More": {
     "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
     "加入QQ情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
