@@ -1,161 +1,254 @@
 {
-  "Snap_up": {
-    "version": "2.1",
-    "update": "https://www.icloud.com/shortcuts/dca53a0ff3704f22badb7009b828b495",
-    "tb": {
-      "url_scheme": "taobao://",
-      "tkl": {
-        "regular_expression": "([\\p{Sc}\\(])\\w{8,12}([\\p{Sc}\\)])",
-        "api_url": "https://home.vpnadmin.top:447/api",
-        "api_url_personal": "https://home.vpnadmin.top:447/test",
-        "json_tkl": "tbk_privilege_get_response.result.data.tkl",
-        "json_coupon_click_url": "tbk_privilege_get_response.result.data.coupon_click_url",
-        "json_item_url": "tbk_privilege_get_response.result.data.item_url",
-        "json_coupon_info": "tbk_privilege_get_response.result.data.coupon_info",
-        "json_coupon_type": "tbk_privilege_get_response.result.data.coupon_type",
-        "json_max_commission_rate": "tbk_privilege_get_response.result.data.max_commission_rate"
+  "tb": {
+    "version": "11.5.3",
+    "gd": "taobao://",
+    "end": "taobao://m.tb.cn/h.4X7e64s",
+    "hongbao": "taobao://m.tb.cn/h.4c4qXiQ",
+    "main": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
+    "cat": {
+      "image": "https://gitee.com/leecogit/Updater/raw/master/image/1111_cat.jpeg",
+      "home": "taobao://pages.tmall.com/wow/z/hdwk/act-20201111/index?disableNav=YES&qd_from=dccjy",
+      "task": [
+        {
+          "repeat_gdp": {
+            "title": "逛店铺",
+            "implId": [
+              {
+                "5213": [
+                  "icpmAd_0_3345851_5213_0",
+                  "icpmAd_0_3345852_5213_0",
+                  "icpmAd_0_3345853_5213_0",
+                  "icpmAd_0_3345854_5213_0",
+                  "icpmAd_0_3345855_5213_0",
+                  "icpmAd_0_3345856_5213_0",
+                  "icpmAd_0_3345857_5213_0",
+                  "icpmAd_0_3345858_5213_0",
+                  "icpmAd_0_3345859_5213_0",
+                  "icpmAd_0_3345860_5213_0",
+                  "icpmAd_0_3345861_5213_0",
+                  "icpmAd_0_3345862_5213_0",
+                  "icpmAd_0_3345863_5213_0",
+                  "icpmAd_0_3345864_5213_0",
+                  "icpmAd_0_3345865_5213_0",
+                  "icpmAd_0_3345866_5213_0",
+                  "icpmAd_0_3345867_5213_0",
+                  "icpmAd_0_3345868_5213_0",
+                  "icpmAd_0_3345869_5213_0",
+                  "icpmAd_0_3345870_5213_0"
+                ]
+              }
+            ],
+            "type": "icpmAd",
+            "urlScheme": "taobao://shop.m.taobao.com/shop/shop_index.htm?shop_id=62941831&ffs=https%3A%2F%2Fifsk2.tanx.com%2Fffsback%3Fname%3Dminteract%26pid%3Dmm_12852562_1778064_110326650220%26pvid%3D8e4c1c0b84ff97005f93f70b074f67b1%26biz%3DZvBlCgMKATESIgiL7s.8BTIaanNcdTg0RERcdTgyNzJcdTU5MjdcdTU3MzAaOwo5CiQ1NTE0NTUwMTM2MDAwMV8xNTAyMDc4NTAzXzE1MDE2NzI1MzEYge.mlgUqAUkyAVaQAYHv5pYF&adScene=202011-ad-card-wall-1&hd_from_id=100074&sceneId=722&deliveryId="
+          }
+        },
+        {
+          "repeat_gyg": {
+            "title": "逛会场",
+            "implId": [
+              {
+                "6946": [
+                  "expo_0_217918001_6946_0",
+                  "expo_0_217918002_6946_0",
+                  "expo_0_217918003_6946_0"
+                ]
+              }
+            ],
+            "type": "expo",
+            "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/tmc/28098/3640/wupr?wh_pid=industry-221311&disableNav=YES&status_bar_transparent=true&itemId=629804482930&item_id=629804482930&dczt_module_id=18551&expo_id=2029234002&srcinfo=mainexpo_2&scm=1007.23000.197039.11831584_0_0&utparam=%7B%22hc_object_id%22%3A%2226994689611019%22%2C%22x_object_type%22%3A%22expo%22%2C%22x_mix_flow%22%3A11831584%2C%22x_pos%22%3A1%2C%22x_hestia_flow%22%3A11831584%2C%22tpp_buckets%22%3A%2210000%230%23193986%230%22%2C%22scene%22%3A%22ali_sea%22%2C%22x_scm%22%3A%221007.23000.197039.11831584_0_0%22%2C%22x_sub_score%22%3A4.0139315%2C%22x_user_id%22%3A2559274466%2C%22x_src%22%3A%2218551%22%2C%22x_object_type_id%22%3A4%2C%22x_hestia_source%22%3A%22hudong%22%2C%22x_price%22%3A0.0%2C%22x_hestia_subsource%22%3A%22tasklist%22%2C%22hc_object_type%22%3A%22zhc_b%22%2C%22wh_pid%22%3A%22%22%2C%22x_sub_rank%22%3A1%2C%22x_item_ids%22%3A629804482930%2C%22x_mt%22%3A0%2C%22x_algo_paras%22%3A%22%22%2C%22x_pvid%22%3A%22872dd176-6ca9-401a-b082-4d73fb6d17b8%22%2C%22x_tpp_buckets%22%3A%22%22%2C%22x_object_id%22%3A%22594017758266%22%7D&pvid=872dd176-6ca9-401a-b082-4d73fb6d17b8&sceneId=722&fromToken=R9R0B1rSvArDZMe0izZfBE2fXUOUw&hd_from_id=100074&spm=202011hudong.20245757.tasklist.0&deliveryId="
+          }
+        },
+        {
+          "repeat_yun": {
+            "title": "逛推送",
+            "implId": [
+              {
+                "7080": [
+                  "cloudSailAd_0_1191_7080_0",
+                  "cloudSailAd_0_1192_7080_0",
+                  "cloudSailAd_0_1193_7080_0",
+                  "cloudSailAd_0_1194_7080_0",
+                  "cloudSailAd_0_1195_7080_0"
+                ]
+              },
+              {
+                "7099": [
+                  "cloudSailAd_0_1191_7099_0",
+                  "cloudSailAd_0_1192_7099_0",
+                  "cloudSailAd_0_1193_7099_0",
+                  "cloudSailAd_0_1194_7099_0",
+                  "cloudSailAd_0_1195_7099_0"
+                ]
+              }
+            ],
+            "type": "cloudSailAd",
+            "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/dailygroup/1368/wupr?wh_pid=daily-220136&wh_ttid=%40phone&eurl=http%3A%2F%2Fclick.mz.simba.taobao.com%2Fecpm%3Feadt%3D97%26e%3DGhWSEZeZ%252FjASXnZCiezO6hsQmLP5zomMlXqg937UIKyyfVYSfilARC0AiEwrLfXyXdi%252FB0ViEPGY3GaqeeMO5MuilgsMug3OLkfU0NcJTpP9y7Sm02hzhgSU8MhsQ28qXqjNWwNlYH4krVheagebTOf50b%252FQfiXFCSM%252Fo1l0STO3MWmDg6LOFRoVUVdbiTVeoTEdU%252BsvBQnHet53HvA%252BMtf2DklXYPwIaWFXxONqIUD4d3HsZc3S9xEqY7kOh9YlZO5En2LyZcNUZP2hx5XoB6YCwjMmssDgE6fPH%252Fs35ZoeHisXnzo0qDQh1REMV2ElrQ9q3wOjBhgHz%252B8uYllHxEP%252BmeWvcGh6n9aykWwLN4BYncd8OmWOdfqVKUNmyd3yKA5%252FxVUW8hZ9m1eQ95TGv%252FNnMnvO1Z%252BRkkFmu5FCVZWw%252BnXXrIjEteQ6SxxiLolvG99biWioduJC69jyFxpW8%252F4k5EJL5dyksTlsyqip%252FW0HNXaZrJ2vPqkg9160l5yhXPHimXladJCcLRJR4%252F8Fr95mhz6UirKpckycvnk0QSaLBCaB0X0l8g7vBZy%252FUjfxJsK8ac%252FRXvO8IQgui8cmmOMSi6gf9TjoesiI8Gy%252Fms0mfPPJ%252BUO15mgMLv9Qq8tm3ztOwTdliRnSxpDorAq46xq0xr36ECWHG2gj7yn6Y1V0kZRWbvUff0Z5MArnbbsp%26u%3Dhttps%253A%252F%252Fpages.tmall.com%252Fwow%252Fa%252Fact%252Ftmall%252Fdailygroup%252F1368%252Fwupr%253Fwh_pid%253Ddaily-220136%2526wh_ttid%253D%2540phone%26k%3D705&etype=3&epid=mm_12852562_1778064_110324700256&adTrace=55171500190001__user_define__67bd1c0b7effd7005f9afcba120a23f8&settleType=afterTime&settleTime=0&shortTfs=3cdfe2a8e2e710cab26fac7698857835&ffs=https%3A%2F%2Fifsk2.tanx.com%2Fffsback%3Fname%3Dminteract%26pid%3Dmm_12852562_1778064_110329400248%26pvid%3D67bd1c0b7effd7005f9afcba120a23f8%26biz%3DZPBjCgMKATESIgi6-ev8BTIaanNcdTg0RERcdTgyNzJcdTU5MjdcdTU3MzAaOQo3CiQ1NTE3MTUwMDE5MDAwMV8xNDI2OTUwNzEzXzE0Mjc2MzA2MTYY-anfNioBSTIBVpAB-anfNg__&adScene=202011-task-list&sceneId=722&fromToken=KBJkqdaU8g0JXqMgSXESjXbheUWUn&hd_from_id=100074&spm=202011hudong.20245757.c1.d1&deliveryId="
+          }
+        },
+        {
+          "repeat_other": {
+            "title": "逛其他",
+            "implId": [
+              { "6752": ["other_0_55048_6752_0"] },
+              { "6913": "expo_0_53018_6913_0" },
+              { "7077": ["expo_0_55033_7077_0", "expo_0_49013_7077_0"] },
+              { "7145": "other_0_57047_7145_0" },
+              { "7180": ["other_0_57049_7180_0", "other_0_57050_7180_0"] },
+              { "7090": "other_0_30002_7090_0" }
+            ],
+            "type": "other",
+            "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/dailygroup/2001/wupr?disableNav=YES&wh_pid=daily-223176&wx_navbar_hidden=true&pageName=venue&sceneId=722&fromToken=jQVloDei0O15Vl5ktpBt1wBiDUoUb&hd_from_id=100074&spm=202011hudong.20245757.tasklist.0&deliveryId="
+          }
+        },
+        {
+          "repeat_search": {
+            "title": "逛搜索",
+            "implId": [
+              {
+                "6883": [
+                  "interactionSearch_0_100157965_6883_0",
+                  "interactionSearch_0_100157961_6883_0",
+                  "interactionSearch_0_100157962_6883_0"
+                ]
+              }
+            ],
+            "type": "interactionSearch",
+            "urlScheme": "taobao://s.taobao.com?q=如何让你爱的人爱上你&spm=202011hudong.20245757.c1.d1&sourceType=other&fromToken=AEwQBo8IKdJqBJlOi2OfdnvhYU1Ua&scm=1007.23000.197039.11831584_0_0&sceneId=722&hd_from_id=100074&g_channelSrp=hudongcheng_20201111&needTabs=true&deliveryId="
+          }
+        },
+        {
+          "yc": {
+            "title": "逛隐藏任务",
+            "implId": [
+              {
+                "6303": ["cloudSailAd_0_3344850_6303_0"]
+              }
+            ],
+            "type": "cloudSailAd",
+            "urlScheme": "taobao://mo.m.tmall.com/s/page/3344850?shopId=68491548&sellerId=749391658&weexShopTabId=1.0.2&weexShopToken=68491548&inMiniappShop=true&inWeexShop=true&weexShopTransparentBG=true&inMiniappShopVersion=2.5&frame-url=202011hudong.20245757.box.pentaprism_commerce__&isShop=1&bizType=6&eurl=http%3A%2F%2Fclick.mz.simba.taobao.com%2Fecpm%3Feadt%3D97%26e%3DcSRU3eCMuiYSXnZCiezO6hsQmLP5zomMcFqvky%252F0M3f0N%252FECklJbQMbVRC%252B5tSeULxyQaqBnYqNJOuUxIpcyHfoUSTkZLBlxLkfU0NcJTpP9y7Sm02hzhmDk6ODTG66JTsHbMHKVNEF4io6D%252FSUNRW6pbrKTD9Z%252B8Z72igIoJ5sC%252F4VnJli1CSSisbLMhHkH0MorbSX9B%252BMysxVb%252B8e32Qmasy%252F6%252BSasN3%252F4ukUFg0FgcMxd2g%252BnPfmho4%252B6j4QX%252BwWte%252FfvpI%252FnhL6HfimFzrpV9FyqsTP5KvBRSRxlqEgpgHpr3%252BqYp0EC8OEIv26xz%252BYW2KviQbCuiucAEXDvDEL8p3yQIUE1Kb0C%252BDbpuR15aMt840SX8POb15agwps%252BxmvxAwAv8kceRJ3D%252BfcVTV7Qn%252BWrdTHEUhgeXZG4ZcrV7nN%252FwYJQ0X95JcmHOe5Pffsu7sGPREGLC3rkld5Y1JvBXe7v2L4DmdIlTNN2GzayZeWGtBVsxsOYHt6dTJuMOq5Ov2ZOO9GoNcRzj4FkOnV6X8ogStbw%252F5J%252Bu3N1DYTqFly%252FS6B0zExqqwzgzpUlJqdv3J8EjOdEGNIdZ7qErYtoNVZUu1N894m%252BPQRqfRxsfiiST8u%252B0P2OC25EbQNNYm%252BaER8p3mbdiSRZoXooNOJP6Wky4j4c%26u%3Dhttps%253A%252F%252Fshop.m.taobao.com%252Fshop%252Fshop_index.htm%253FshopId%253D68491548%2526shopSourceChannel%253Dtao_ji_mu%25253A2780003%2526weexShopTab%253Dshopindexbar%2526weexShopSubTab%253Dextend_tab%2526shop_navi%253Dextend_tab%26k%3D673&adScene=202011-fondle-cat-box-pop&shopFetchTimeout=200&templateId=3000000002110464&activityId=100074&adTrace=55370004870001__smart_teemo__0d52180b14ff97005fa2def9012aee6f&shop_navi=extend_tab&sceneId=872&etype=3&shopSourceChannel=tao_ji_mu%3A2780003&fromToken=OK8w5poublbJqopXsaWtzWWCVUJUr&weexShopSubTab=extend_tab&settleTime=0&epid=mm_12852562_1778064_110802500405&clickid=I17_97_12979929316045094349396401&shortTfs=4cf1777035d9c70455731a3bc348862a&spm=202011hudong.20245757.box.pentaprism_commerce&ffs=https%3A%2F%2Fifsk2.tanx.com%2Fffsback%3Fname%3Dminteract%26pid%3Dmm_12852562_1778064_110802800417%26pvid%3D0d52180b14ff97005fa2def9012aee6f%26biz%3DZPBjCgMKATESIgj5vYv9BTIaanNcdTg0RERcdTgyNzJcdTU5MjdcdTU3MzAaOQo3CiQ1NTM3MDAwNDg3MDAwMV8xNDQwOTY3ODQ2XzE0Mjc1MTAzNzMY0vXjDSoBSTIBVpAB0vXjDQ__&eRedirect=1&hd_from_id=100074&weexShopTab=shopindexbar&settleType=afterTime&shopTestGroup=mini3_center&shopFetchVersion=4.0&tbShopContainer=1&origin_shop_navi=extend_tab&paddingTopAndBottom=0%2C0&shop_id=68491548&deliveryId="
+          }
+        },
+        {
+          "gotb": {
+            "implId": [{ "5283": "other_0_9001_5283_0" }],
+            "title": "去淘宝领喵币",
+            "urlScheme": "taobao://pages.tmall.com/wow/z/hdwk/act-20201111/index?disableNav=YES&qd_from=zfbbanner&prismFrom=zfb&hd_from_id=100074&sceneId=623&isLost=false&scene=single&deliveryId="
+          }
+        },
+        {
+          "gozfb": {
+            "implId": [{ "": "" }],
+            "title": "去支付宝领喵币",
+            "urlScheme": "alipays://platformapi/startapp?appId=68687502&thd_con=YES&pikshemo=YES&async_uc=YES&mainConnectDelayPush=YES&delayPipeline=YES&initCustomService=YES&flashTinyApp=YES&enableHotBoot=YES&nbupdate=syncforce&nbversion=0.5.2010171427.31&clientVersion=10.1.85.6000&chInfo=taobaobanner&url=/p/c/17so2aeuo8ak/pages/index/index.html?source=TAOBAO_TASK"
+          }
+        }
+      ],
+      "team": {
+        "作者队伍": "taobao://m.tb.cn/h.41M0U9g?sm=b1542b",
+        "赞助作者撸猫助力": "taobao://m.tb.cn/h.4dLCl0m?sm=353a2d",
+        "赞助幸运星队伍人气": "taobao://m.tb.cn/h.4cvzsAz?sm=2396a4",
+        "用户优质队伍1": "taobao://m.tb.cn/h.4Yw09QC?sm=dbe03a",
+        "用户优质队伍2": "taobao://m.tb.cn/h.4Yznb8s?sm=b5feb8",
+        "用户优质队伍3": "taobao://m.tb.cn/h.41EXGdh?sm=40b0be",
+        "用户优质队伍4": "taobao://m.tb.cn/h.4XJLOAn?sm=e41f0b",
+        "👥 养猫助力群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=830385420&card_type=group&source=qrcode&jump_from=&auth=&authSig=CtFeH1TafXW5JK0ALJh4EbaUkBHKJ6ykRB6+ejGS3fvjGPae8Am9sPg+sm0xsTNX&source_id=2_40001"
       }
     },
-    "jd": {
-      "url_scheme": "openapp.jdmobile://virtual?params={\"des\":\"m\",\"category\":\"jump\",\"url\":\"URL\"}",
-      "api_url": "https://home.vpnadmin.top:447/api",
-      "json": {
-        "content": "content"
+    "share": {
+      "分享大厅": {
+        "消灭小红包": {
+          "6.9元佳龙辣条50包": "taobao://m.tb.cn/h.4XJUE33",
+          "5.8元苹果钢化膜三片": "taobao://m.tb.cn/h.429bC7P",
+          "1.9元医用口罩10个": "taobao://m.tb.cn/h.4czEAjT",
+          "9.9元白象方便面5袋": "taobao://m.tb.cn/h.429WDSV",
+          "3.9元全系可爱硅胶手机壳": "taobao://m.tb.cn/h.4czylnm"
+        },
+        "好物精选": {
+          "我想变得漂亮": {
+            "兰蔻-小黑瓶": "taobao://s.click.taobao.com/K6ERduu",
+            "雅诗兰黛-小棕瓶": "taobao://m.tb.cn/h.42wCyfE?sm=0aa424",
+            "SK2-神仙水": "taobao://s.click.taobao.com/gNtAduu",
+            "娇兰-幻彩流星粉": "taobao://m.tb.cn/h.4dM1OdB",
+            "MAC-子弹头": "taobao://s.click.taobao.com/BSz4duu",
+            "DoggyQin-穿搭": "taobao://m.tb.cn/h.42DAs2D",
+            "一忘皆空-穿搭": "taobao://m.tb.cn/h.4X8W7Xt?sm=807b7e",
+            "ddza小个子-穿搭": "taobao://m.tb.cn/h.42x55gJ",
+            "岛上定制-女鞋": "taobao://m.tb.cn/h.422u4AO"
+          },
+          "我想变得帅气": {
+            "文艺男女-穿搭": "taobao://m.tb.cn/h.4dof5HQ",
+            "嘿马七作-穿搭": "taobao://m.tb.cn/h.4X8JW8X",
+            "GBOY-穿搭": "taobao://m.tb.cn/h.42xIODd",
+            "JackBlack-男士洗面奶": "taobao://m.tb.cn/h.4dopOD8",
+            "爱马仕-大地香水": "taobao://m.tb.cn/h.4X8AzVq"
+          },
+          "我想努力学习": {
+            "MUJI-中性笔": "taobao://m.tb.cn/h.4XjX8tv?sm=d4bff7"
+          },
+          "我想要来点格调": {
+            "P.F. CANDLE-香薰蜡烛": "taobao://m.tb.cn/h.4XjdXnY",
+            "饰范-欧式台灯": "taobao://m.tb.cn/h.4XjUfQW",
+            "思家园-美式弧形沙发": "taobao://m.tb.cn/h.42C4j6t",
+            "马歇尔-2代蓝牙音箱": "taobao://m.tb.cn/h.4dLcYoz"
+          },
+          "我只想省钱": {
+            "有没有车": {
+              "拼丽思卡尔顿？": { "层级内容测试": { "内容建立中": "" } }
+            },
+            "聚划算-全网最低价": "taobao://m.tb.cn/h.4dLWq9h"
+          }
+        },
+        "内容精选": {
+          "我想脱单": { "内容建立中...": "" },
+          "我想看点电影": { "内容建立中...": "" },
+          "双十一该如何度过": { "内容建立中...": "" },
+          "工作好忙": { "内容建立中...": "" },
+          "学习压力大": { "内容建立中...": "" },
+          "有开黑的吗？": { "内容建立中...": "" }
+        },
+        "员工内购清单": "taobao://m.tb.cn/h.4X741Eq"
       }
-    },
-    "pdd": {
-      "url_scheme": "pinduoduo://com.xunmeng.pinduoduo/URL"
-    },
-    "sn": {
-      "url_scheme": "suning://m.suning.com/index?adTypeCode=1002&adId=URL",
-      "api_url": "https://home.vpnadmin.top:447/api",
-      "json": {
-        "content": "sn_responseContent.sn_body.queryBacthcustomlink.shortLink"
-      }
-    },
-    "more": {
-      "🧧现金红包🧧(11.2)": "taobao://m.tb.cn/h.42dFJAb",
-      "加入QQ免单群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
-      "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
-      "视频教程": "https://video.cdnvue.com/uploads/-2216775553683075363/video/b9PwmDl",
-      "精选福利": {
-        "饿了么现金红包": "taobao://m.tb.cn/h.VzY0yti",
-        "饿了么年会40元": "pinduoduo://com.xunmeng.pinduoduo/duo_coupon_landing.html?goods_id=71423084709&pid=8223747_44765400&cpsSign=CC_200516_8223747_44765400_dd9e99458a65a871c3f3c3ef6b3f5f68&duoduo_type=2",
-        "淘划算-找券网": "https://home.vpnadmin.top:446/",
-        "💰返利APP💰": "https://www.zhetaoke.com/app_24031.html"
-      }
-    },
-    "more_little": {
-      "视频教程": "https://video.cdnvue.com/uploads/-2216775553683075363/video/b9PwmDl"
-    },
-    "jjh": {
-      "ok": "no",
-      "tishi": "📋剪贴板为空，请检查一下哦~\n---------------------------------\n※猜测到你可能需要以下功能※\n\n(此为纯净版，请加群获取完整版)"
     }
   },
-  "Google_drive_copy": {
-    "version": "2.1",
-    "update": "https://www.icloud.com/shortcuts/a581221316754223afe66fc3c6ca8e32",
-    "more": [
-      "搭建教程|http://blog.jialezi.net/?post=153",
-      "加入TG群|https://t.me/helptag",
-      "加入QQ群|https://jq.qq.com/?_wv=1027&k=5FenhoJ"
-    ]
-  },
-  "Sign_in": {
-    "version": "1.1",
-    "update": "https://www.icloud.com/shortcuts/91af4b2564134654ad2dbc7bce54bbdf",
-    "data": {
-      "【京东】京东会员签到": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"m\",\"url\":\"https://vip.m.jd.com/?&utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share&ShareTm=sbQQcUMkZ4AZ4dzVzEWiwuvB%2BSRLNefWg3OxfaKnTdb8I9fVRndWFjw2wynEdJbNYQeN1N8y4HgFy8p3e%2BemJguCDq%2B9dNOW0Ke1zCMW2Tkfy4yJCOdEnAqD9z3NKYq8VHAFLpmVrUvxYyUyM/AFrxdMuwCm0PEl0NvaSsG%2BMrA=\"}",
-      "【京东】京豆签到": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"m\",\"url\":\"https://bean.m.jd.com/share/index.action?&utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share&ShareTm=sPR%2BfxCcrAMyBuYZ%2BoZ2JcO2J5tl6T0CDcQ82VrzBQUgz8uQrvH26WuEyq23dLCx9NiW6H6MKbGLyEyFcqSRKQv1oegppTMXuN3qypHbeqRVv%2BZK4KmyTxyezhvEa1vYe0tL1EUJnPiSR76G76iuhCxozrl9gG0tPMMPTmWJObc=\"}",
-      "【京东】京东大转盘": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"m\",\"url\":\"https://turntable.m.jd.com/?actId=jgpqtzjhvaoym&appSource=jdmx\"}",
-      "【京东】领券页面签到": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"m\",\"url\":\"https://coupon.m.jd.com/center/getCouponCenter.action?categoryId=0&batchStr=00000\"}",
-      "【支付宝】砸金蛋": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://jupage.taobao.com/wow/tqg/act/zajindan",
-      "【支付宝】会员领积分": "alipays://platformapi/startapp?appId=20000160&url=%2Fwww%2FmyPoints.html",
-      "【支付宝】一分惊喜": "alipays://platformapi/startapp?appId=20000067&url=https://render.alipay.com/p/c/onemorething/home.html",
-      "【支付宝】天天抽奖": "alipays://platformapi/startapp?appId=2018103161898599"
-    },
-    "more": {
-      "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
-      "加入QQ线报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp"
+  "zfb": {
+    "cat": {
+      "home": "alipays://platformapi/startapp?appId=68687502",
+      "task": [
+        {
+          "gotb": "alipays://platformapi/startapp?appId=20000067&url=https://pages.tmall.com/wow/a/act/tmall/dailygroup/1090/wupr?wh_pid=daily-218527&bc_fl_src=zfb_zfbbanner&targetUrl=https%3a%2f%2fpages.tmall.com%2fwow%2fz%2fhdwk%2fact-20201111%2findex%3fdisableNav%3dYES%26qd_from%3dzfbbanner%26prismFrom%3dzfb%26hd_from_id%3d100074%26sceneId%3d623%26deliveryId%3d5283%26implId%3dother_0_9001_5283_0%26isLost%3dfalse%26scene%3dsingle"
+        }
+      ]
     }
   },
-  "Chigua": {
-    "version": "1.1",
-    "update": "https://www.icloud.com/shortcuts/e28b4b92252d4caa8cf130e1d5f8d7b1",
-    "news": "https://sourl.cn/MJZNSm",
-    "contribution": "http://keeplearning.mikecrm.com/7vRUPWv"
-  },
-  "Ring": {
-    "version": "1.3",
-    "api": {
-      "get_ring": "http://home.80008800.xyz:90/gitee/",
-      "post_ring": "http://home.80008800.xyz:90/gitee/",
-      "download": "https://gitee.com/leecogit/Updater/raw/master/shortcuts/ring/"
-    },
-    "update_tip": "发现新版本！请到社区或群获取更新~",
-    "menu_tip": "☁️共享音效盒子☁️\n- 好咖啡要和朋友一起品尝\n- 好铃音也要和朋友一起分享",
-    "share_title_tip": "请输入标题\n* 以下为参考模板可删除\n* 尽量精悍别脱离内容\n* 不要换行！！！",
-    "share_title_default": "【充电】通用音效 part 1",
-    "share_body_tip": "请输入你想说的话，不输入也没关系哦~",
-    "share_content_tip": "请输入已编码的音效文本内容\n我已经自动输入你剪贴板的内容拉\n─=≡Σ(((つ•̀ω•́)つ\n温馨提醒:请尽量分享10秒以内的音效"
-  },
-  "Cat": {
-    "version": "1.5",
-    "update_log": "* 解决动态时间导致的部分机型假死问题\n* 优化养猫设置和版本提示\n* 增加活动大厅生态板块\n* 优化助力大厅板块\n* 增加任务扫尾提醒",
-    "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
-    "github": "https://github.com/LeecoGit/shortcuts/tree/master/1111",
-    "update": "https://www.icloud.com/shortcuts/69d6203fc9db470d9b12437f93586c33",
-    "faq": "https://docs.qq.com/doc/DWnVlUXlQU01DZ0NJ",
-    "notice": "1.5版本已发布及时更新吧，新一期现金红包已发送，可以配合超级红包使用，快去「更多」抢红包吧！",
-    "hot": "    🔥 \"好物精选\"已上线",
-    "image": "https://gitee.com/leecogit/Updater/raw/master/image/1111_cat.jpeg",
-    "url": "https://gitee.com/leecogit/Updater/raw/master/1111.json"
-  },
-  "Business": {
-    "version": "1.0",
-    "update_log": "",
-    "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
-    "github": "https://github.com/LeecoGit/shortcuts/tree/master/1111",
-    "update": "",
-    "faq": "",
-    "notice": "全民营业很早做了，但因为签名问题出来的很晚，目前也未解决，就当做半成品学习交流用吧，有问题自己摸索或手动！",
-    "hot": "",
-    "image": "https://gitee.com/leecogit/Updater/raw/master/image/1111_qmyy.jpeg",
-    "url": "https://gitee.com/leecogit/Updater/raw/master/1111.json"
-  },
-  "More": {
-    "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
-    "加入QQ情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
-    "其他捷径作品": "https://shimo.im/docs/DHcYv8xjcYxvHvQg/",
-    "🧧现金红包🧧(11.2)": "taobao://m.tb.cn/h.42dFJAb",
-    "饿了么现金红包": "taobao://m.tb.cn/h.VzY0yti"
-  },
-  "jjh": {
-    "ok": "yes",
-    "tishi": "📋剪贴板为空，请检查一下哦~\n---------------------------------\n※猜测到你可能需要以下功能※\n\n(此为纯净版，请加群获取完整版)",
-    "hongbao": "alipays://platformapi/startapp?appId=88886666&appClearTop=false&target=groupPre&bizType=CROWD_CODE_CASH&crowdNo=202006200206302127940823700055790860&universalDetail=true&clientVersion=10.0.0-5&prevBiz=code&sign=52e3fa8195d4210bd1e7ecc8ba907b25c428533179eff3f91421b22ee04907a2&schemeMode=reInside&source=passcode"
-  },
-  "more": {
-    "mode": "more1",
-    "more0": {
-      "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ"
-    },
-    "more1": {
-      "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
-      "加入QQ情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
-      "其他捷径作品": "https://shimo.im/docs/DHcYv8xjcYxvHvQg/",
-      "🧧现金红包🧧(11.2)": "taobao://m.tb.cn/h.42dFJAb",
-      "饿了么现金红包": "taobao://m.tb.cn/h.VzY0yti"
-    },
-    "more2": {
-      "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
-      "加入QQ情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
-      "其他捷径作品": "https://shimo.im/docs/DHcYv8xjcYxvHvQg/",
-      "🧧现金红包🧧(11.2)": "taobao://m.tb.cn/h.42dFJAb",
-      "平台红包": {
-        "饿了么现金红包": "taobao://m.tb.cn/h.VzY0yti",
-        "支付宝现金红包": "taobao://m.tb.cn/h.VzY0yti"
+  "jd": {
+    "main": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"HomePage\"}",
+    "version": "云数据版本:11.5.3",
+    "hongbao": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"action\":\"to\",\"des\":\"m\",\"url\":\"https://u.jd.com/tkn4gjT\"}",
+    "gd": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"action\":\"to\",\"des\":\"m\",\"url\":\"https://u.jd.com/tVOdDlL\"}",
+    "end": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"action\":\"to\",\"des\":\"m\",\"url\":\"https://u.jd.com/tkn4gjT\"}",
+    "qmyy": {
+      "home": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"action\":\"to\",\"des\":\"m\",\"url\":\"https://wbbny.m.jd.com/babelDiy/Zeus/4SJUHwGdUQYgg94PFzjZZbGZRjDd/index.html\"}",
+      "team": {
+        "作者队伍": "",
+        "赞助作者撸猫助力": "taobao://m.tb.cn/h.4dLCl0m?sm=353a2d",
+        "👥 养猫助力群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=830385420&card_type=group&source=qrcode&jump_from=&auth=&authSig=CtFeH1TafXW5JK0ALJh4EbaUkBHKJ6ykRB6+ejGS3fvjGPae8Am9sPg+s"
+      },
+      "data": {
+        "getHomeData": {
+          "url": "https://api.m.jd.com/client.action?functionId=stall_getHomeData",
+          "body": "{}",
+          "api": ""
+        },
+        "getTaskDetail": {
+          "url": "https://api.m.jd.com/client.action?functionId=stall_getTaskDetail",
+          "body": "{\"shopSign\":\"\"}",
+          "api": ""
+        },
+        "collectScore": {
+          "url": "https://api.m.jd.com/client.action?functionId=stall_collectScore",
+          "body": "{\"shopSign\":\"\"}",
+          "api": ""
+        }
       }
     }
   }
