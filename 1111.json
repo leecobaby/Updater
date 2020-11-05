@@ -1,6 +1,6 @@
 {
   "tb": {
-    "version": "11.5.2",
+    "version": "11.5.3",
     "gd": "taobao://m.tb.cn/h.4dRR4yS",
     "end": "taobao://m.tb.cn/h.4X7e64s",
     "hongbao": "taobao://m.tb.cn/h.4c4qXiQ",
@@ -164,14 +164,38 @@
           "3.9元全系可爱硅胶手机壳": "taobao://m.tb.cn/h.4czylnm"
         },
         "好物精选": {
-          "我想变得漂亮": { "内容建立中...": "" },
-          "我想变得帅气": { "内容建立中...": "" },
-          "我想努力学习": { "内容建立中...": "" },
-          "我想要来点格调": { "内容建立中...": "" },
+          "我想变得漂亮": {
+            "兰蔻-小黑瓶": "taobao://s.click.taobao.com/K6ERduu",
+            "雅诗兰黛-小棕瓶": "taobao://m.tb.cn/h.42wCyfE?sm=0aa424",
+            "SK2-神仙水": "taobao://s.click.taobao.com/gNtAduu",
+            "娇兰-幻彩流星粉": "taobao://m.tb.cn/h.4dM1OdB",
+            "MAC-子弹头": "taobao://s.click.taobao.com/BSz4duu",
+            "DoggyQin-穿搭": "taobao://m.tb.cn/h.42DAs2D",
+            "一忘皆空-穿搭": "taobao://m.tb.cn/h.4X8W7Xt?sm=807b7e",
+            "ddza小个子-穿搭": "taobao://m.tb.cn/h.42x55gJ",
+            "岛上定制-女鞋": "taobao://m.tb.cn/h.422u4AO"
+          },
+          "我想变得帅气": {
+            "文艺男女-穿搭": "taobao://m.tb.cn/h.4dof5HQ",
+            "嘿马七作-穿搭": "taobao://m.tb.cn/h.4X8JW8X",
+            "GBOY-穿搭": "taobao://m.tb.cn/h.42xIODd",
+            "JackBlack-男士洗面奶": "taobao://m.tb.cn/h.4dopOD8",
+            "爱马仕-大地香水": "taobao://m.tb.cn/h.4X8AzVq"
+          },
+          "我想努力学习": {
+            "MUJI-中性笔": "taobao://m.tb.cn/h.4XjX8tv?sm=d4bff7"
+          },
+          "我想要来点格调": {
+            "P.F. CANDLE-香薰蜡烛": "taobao://m.tb.cn/h.4XjdXnY",
+            "饰范-欧式台灯": "taobao://m.tb.cn/h.4XjUfQW",
+            "思家园-美式弧形沙发": "taobao://m.tb.cn/h.42C4j6t",
+            "马歇尔-2代蓝牙音箱": "taobao://m.tb.cn/h.4dLcYoz"
+          },
           "我只想省钱": {
             "有没有车": {
-              "拼丽思卡尔顿": { "层级内容测试": { "内容建立中": "" } }
-            }
+              "拼丽思卡尔顿？": { "层级内容测试": { "内容建立中": "" } }
+            },
+            "聚划算-全网最低价": "taobao://m.tb.cn/h.4dLWq9h"
           }
         },
         "内容精选": {
@@ -181,7 +205,8 @@
           "工作好忙": { "内容建立中...": "" },
           "学习压力大": { "内容建立中...": "" },
           "有开黑的吗？": { "内容建立中...": "" }
-        }
+        },
+        "员工内购清单": "taobao://m.tb.cn/h.4X741Eq"
       }
     }
   },
