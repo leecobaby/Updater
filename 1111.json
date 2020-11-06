@@ -1,6 +1,6 @@
 {
   "tb": {
-    "version": "11.5.3",
+    "version": "11.6.1",
     "gd": "taobao://",
     "end": "taobao://m.tb.cn/h.4X7e64s",
     "hongbao": "taobao://m.tb.cn/h.4c4qXiQ",
@@ -50,7 +50,18 @@
                 "6946": [
                   "expo_0_217918001_6946_0",
                   "expo_0_217918002_6946_0",
-                  "expo_0_217918003_6946_0"
+                  "expo_0_217918003_6946_0",
+                  "expo_0_217918004_6946_0",
+                  "expo_0_217918005_6946_0"
+                ]
+              },
+              {
+                "7219": [
+                  "expo_0_217918001_7219_0",
+                  "expo_0_217918002_7219_0",
+                  "expo_0_217918003_7219_0",
+                  "expo_0_217918004_7219_0",
+                  "expo_0_217918005_7219_0"
                 ]
               }
             ],
@@ -72,12 +83,12 @@
                 ]
               },
               {
-                "7099": [
-                  "cloudSailAd_0_1191_7099_0",
-                  "cloudSailAd_0_1192_7099_0",
-                  "cloudSailAd_0_1193_7099_0",
-                  "cloudSailAd_0_1194_7099_0",
-                  "cloudSailAd_0_1195_7099_0"
+                "7237": [
+                  "cloudSailAd_0_1191_7237_0",
+                  "cloudSailAd_0_1192_7237_0",
+                  "cloudSailAd_0_1193_7237_0",
+                  "cloudSailAd_0_1194_7237_0",
+                  "cloudSailAd_0_1195_7237_0"
                 ]
               }
             ],
@@ -89,12 +100,13 @@
           "repeat_other": {
             "title": "逛其他",
             "implId": [
-              { "6752": ["other_0_55048_6752_0"] },
-              { "6913": "expo_0_53018_6913_0" },
-              { "7077": ["expo_0_55033_7077_0", "expo_0_49013_7077_0"] },
+              { "6752": ["other_0_55048_6752_0", "other_0_55053_6752_0"] },
+              { "7248": "expo_0_55059_7248_0" },
+              { "7246": "expo_0_45012_7246_0" },
+              { "7247": "expo_0_45012_7247_0" },
               { "7145": "other_0_57047_7145_0" },
-              { "7180": ["other_0_57049_7180_0", "other_0_57050_7180_0"] },
-              { "7090": "other_0_30002_7090_0" }
+              { "7180": "other_0_55054_7180_0" },
+              { "7280": "other_0_30002_7280_0" }
             ],
             "type": "other",
             "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/dailygroup/2001/wupr?disableNav=YES&wh_pid=daily-223176&wx_navbar_hidden=true&pageName=venue&sceneId=722&fromToken=jQVloDei0O15Vl5ktpBt1wBiDUoUb&hd_from_id=100074&spm=202011hudong.20245757.tasklist.0&deliveryId="
