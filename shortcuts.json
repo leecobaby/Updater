@@ -34,7 +34,7 @@
       }
     },
     "more": {
-      "🧧现金红包🧧(11.2)": "taobao://m.tb.cn/h.42dFJAb",
+      "🧧现金红包🧧(11.6)": "taobao://m.tb.cn/h.4dwFXUJ",
       "加入QQ免单群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
       "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
       "视频教程": "https://video.cdnvue.com/uploads/-2216775553683075363/video/b9PwmDl",
@@ -102,16 +102,18 @@
   },
   "Cat": {
     "version": "1.5",
-    "update_log": "* 解决动态时间导致的部分机型假死问题\n* 优化养猫设置和版本提示\n* 增加活动大厅生态板块\n* 优化助力大厅板块\n* 增加任务扫尾提醒",
+    "update_log": "* 解决完成任务不黑屏问题\n* 增加检测流程\n* 优化显示提醒\n* 优化生态\n* 增加双十一冲刺架构",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/LeecoGit/shortcuts/tree/master/1111",
-    "update": "https://www.icloud.com/shortcuts/69d6203fc9db470d9b12437f93586c33",
+    "update": "https://www.icloud.com/shortcuts/eb37c4b58c044f518f4d6d8f6aea34d7",
     "faq": "https://docs.qq.com/doc/DWnVlUXlQU01DZ0NJ",
     "notice": "1.5版本已发布及时更新吧，新一期现金红包已发送，可以配合超级红包使用，快去「更多」抢红包吧！",
     "tip": {
       "hongbao": "🔥 今日8点惊喜红包，抢到最低2元",
       "hot": "🔥 \"好物精选\"已上线",
       "faq": "遇到问题必看",
+      "set": "",
+      "group": "",
       "more": ""
     },
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/1111_cat.jpeg",
@@ -134,7 +136,7 @@
     "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
     "加入QQ情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
     "其他捷径作品": "https://shimo.im/docs/DHcYv8xjcYxvHvQg/",
-    "🧧现金红包🧧(11.2)": "taobao://m.tb.cn/h.42dFJAb",
+    "🧧现金红包🧧(11.6)": "taobao://m.tb.cn/h.4dwFXUJ",
     "饿了么现金红包": "taobao://m.tb.cn/h.VzY0yti"
   },
   "jjh": {
@@ -151,14 +153,14 @@
       "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
       "加入QQ情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
       "其他捷径作品": "https://shimo.im/docs/DHcYv8xjcYxvHvQg/",
-      "🧧现金红包🧧(11.2)": "taobao://m.tb.cn/h.42dFJAb",
+      "🧧现金红包🧧(11.6)": "taobao://m.tb.cn/h.4dwFXUJ",
       "饿了么现金红包": "taobao://m.tb.cn/h.VzY0yti"
     },
     "more2": {
       "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
       "加入QQ情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
       "其他捷径作品": "https://shimo.im/docs/DHcYv8xjcYxvHvQg/",
-      "🧧现金红包🧧(11.2)": "taobao://m.tb.cn/h.42dFJAb",
+      "🧧现金红包🧧(11.6)": "taobao://m.tb.cn/h.4dwFXUJ",
       "平台红包": {
         "饿了么现金红包": "taobao://m.tb.cn/h.VzY0yti",
         "支付宝现金红包": "taobao://m.tb.cn/h.VzY0yti"
