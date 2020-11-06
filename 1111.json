@@ -1,6 +1,6 @@
 {
   "tb": {
-    "version": "11.6.1",
+    "version": "云数据库：11.6.2",
     "gd": "taobao://",
     "end": "taobao://m.tb.cn/h.4X7e64s",
     "hongbao": "taobao://m.tb.cn/h.4c4qXiQ",
@@ -133,7 +133,10 @@
             "title": "逛隐藏任务",
             "implId": [
               {
-                "6303": ["cloudSailAd_0_3344850_6303_0"]
+                "6303": [
+                  "cloudSailAd_0_3344850_6303_0",
+                  "cloudSailAd_0_3372678_6303_0"
+                ]
               }
             ],
             "type": "cloudSailAd",
@@ -234,7 +237,7 @@
   },
   "jd": {
     "main": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"HomePage\"}",
-    "version": "云数据版本:11.5.3",
+    "version": "云数据版本：11.5.3",
     "hongbao": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"action\":\"to\",\"des\":\"m\",\"url\":\"https://u.jd.com/tkn4gjT\"}",
     "gd": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"action\":\"to\",\"des\":\"m\",\"url\":\"https://u.jd.com/tVOdDlL\"}",
     "end": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"action\":\"to\",\"des\":\"m\",\"url\":\"https://u.jd.com/tkn4gjT\"}",
