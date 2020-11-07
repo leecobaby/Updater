@@ -1,7 +1,7 @@
 {
   "tb": {
-    "version": "云数据库：11.7.1",
-    "gd": "taobao://m.tb.cn/h.4dDj9VK",
+    "version": "云数据库：11.7.2",
+    "gd": "taobao://",
     "end": "taobao://m.tb.cn/h.4X7e64s",
     "hongbao": "taobao://m.tb.cn/h.42MWAHc",
     "main": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -118,12 +118,8 @@
           "repeat_other": {
             "title": "逛其他",
             "implId": [
-              { "6752": ["other_0_55048_6752_0", "other_0_55053_6752_0"] },
-              { "7248": "expo_0_55059_7248_0" },
               { "7246": "expo_0_45012_7246_0" },
               { "7247": "expo_0_45012_7247_0" },
-              { "7145": "other_0_57047_7145_0" },
-              { "7180": "other_0_55054_7180_0" },
               { "7280": "other_0_30002_7280_0" }
             ],
             "type": "other",
