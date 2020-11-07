@@ -1,9 +1,9 @@
 {
   "tb": {
-    "version": "云数据库：11.6.2",
+    "version": "云数据库：11.7.1",
     "gd": "taobao://m.tb.cn/h.4dDj9VK",
     "end": "taobao://m.tb.cn/h.4X7e64s",
-    "hongbao": "taobao://m.tb.cn/h.4dVuXCm",
+    "hongbao": "taobao://m.tb.cn/h.42MWAHc",
     "main": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
     "cat": {
       "image": "https://gitee.com/leecogit/Updater/raw/master/image/1111_cat.jpeg",
@@ -63,6 +63,15 @@
                   "expo_0_217918004_7219_0",
                   "expo_0_217918005_7219_0"
                 ]
+              },
+              {
+                "7339": [
+                  "expo_0_217918001_7339_0",
+                  "expo_0_217918002_7339_0",
+                  "expo_0_217918003_7339_0",
+                  "expo_0_217918004_7339_0",
+                  "expo_0_217918005_7339_0"
+                ]
               }
             ],
             "type": "expo",
@@ -89,6 +98,15 @@
                   "cloudSailAd_0_1193_7237_0",
                   "cloudSailAd_0_1194_7237_0",
                   "cloudSailAd_0_1195_7237_0"
+                ]
+              },
+              {
+                "7099": [
+                  "cloudSailAd_0_1191_7099_0",
+                  "cloudSailAd_0_1192_7099_0",
+                  "cloudSailAd_0_1193_7099_0",
+                  "cloudSailAd_0_1194_7099_0",
+                  "cloudSailAd_0_1195_7099_0"
                 ]
               }
             ],
