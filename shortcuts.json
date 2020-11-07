@@ -102,16 +102,16 @@
   },
   "Cat": {
     "version": "1.7",
-    "update_log": "* 解决完成任务不黑屏问题\n* 增加检测流程\n* 优化显示提醒\n* 优化生态\n* 增加双十一冲刺架构",
+    "update_log": "* 暴力解决顽固性不黑屏问题\n* 新增可选择性做任务\n* 新增停止后下次运行继续上次后面任务",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/LeecoGit/shortcuts/tree/master/1111",
-    "update": "https://www.icloud.com/shortcuts/48fbb1616c3f4bc4b477f00313882483",
+    "update": "https://www.icloud.com/shortcuts/9eb74654a76c49b0be7f12e033da72f6",
     "faq": "https://docs.qq.com/doc/DWnVlUXlQU01DZ0NJ",
     "notice": "更新遇到闪退打不开问题的，请看终极自救！",
     "tip": {
       "hongbao": "",
       "hot": "🔥 \"好物精选\"已上线",
-      "faq": "遇到问题必看",
+      "faq": "对欧莱雅有问题的请看",
       "set": "",
       "group": "",
       "more": ""
