@@ -1,6 +1,6 @@
 {
   "tb": {
-    "version": "云数据库：11.7.2",
+    "version": "云数据库：11.7.3",
     "gd": "taobao://m.tb.cn/h.4dDj9VK",
     "end": "taobao://m.tb.cn/h.4X7e64s",
     "hongbao": "taobao://m.tb.cn/h.42MWAHc",
@@ -120,7 +120,10 @@
             "implId": [
               { "7246": "expo_0_45012_7246_0" },
               { "7247": "expo_0_45012_7247_0" },
-              { "7280": "other_0_30002_7280_0" }
+              { "7280": "other_0_30002_7280_0" },
+              { "7077": "expo_0_55033_7077_0" },
+              { "7180": "other_0_53044_7180_0" },
+              { "7145": "other_0_53038_7145_0" }
             ],
             "type": "other",
             "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/dailygroup/2001/wupr?disableNav=YES&wh_pid=daily-223176&wx_navbar_hidden=true&pageName=venue&sceneId=722&fromToken=jQVloDei0O15Vl5ktpBt1wBiDUoUb&hd_from_id=100074&spm=202011hudong.20245757.tasklist.0&deliveryId="
