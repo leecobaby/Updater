@@ -101,15 +101,15 @@
     "share_content_tip": "请输入已编码的音效文本内容\n我已经自动输入你剪贴板的内容拉\n─=≡Σ(((つ•̀ω•́)つ\n温馨提醒:请尽量分享10秒以内的音效"
   },
   "Cat": {
-    "version": "1.6",
+    "version": "1.7",
     "update_log": "* 解决完成任务不黑屏问题\n* 增加检测流程\n* 优化显示提醒\n* 优化生态\n* 增加双十一冲刺架构",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/LeecoGit/shortcuts/tree/master/1111",
     "update": "https://www.icloud.com/shortcuts/48fbb1616c3f4bc4b477f00313882483",
     "faq": "https://docs.qq.com/doc/DWnVlUXlQU01DZ0NJ",
-    "notice": "1.7版本已发布及时更新吧，新一期现金红包已发送，可以配合超级红包使用，快去「更多」抢红包吧！",
+    "notice": "更新遇到闪退打不开问题的，请看终极自救！",
     "tip": {
-      "hongbao": "🔥 今日8点惊喜红包，抢到最低2元",
+      "hongbao": "",
       "hot": "🔥 \"好物精选\"已上线",
       "faq": "遇到问题必看",
       "set": "",
