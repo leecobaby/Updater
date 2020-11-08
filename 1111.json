@@ -1,7 +1,7 @@
 {
   "tb": {
-    "version": "云数据库：11.7.3",
-    "gd": "taobao://",
+    "version": "云数据库：11.8.1",
+    "gd": "taobao://m.tb.cn/h.4dDj9VK",
     "end": "taobao://m.tb.cn/h.4X7e64s",
     "hongbao": "taobao://m.tb.cn/h.42MWAHc",
     "main": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -72,6 +72,15 @@
                   "expo_0_217918004_7339_0",
                   "expo_0_217918005_7339_0"
                 ]
+              },
+              {
+                "7338": [
+                  "expo_0_217918001_7338_0",
+                  "expo_0_217918002_7338_0",
+                  "expo_0_217918003_7338_0",
+                  "expo_0_217918004_7338_0",
+                  "expo_0_217918005_7338_0"
+                ]
               }
             ],
             "type": "expo",
@@ -123,7 +132,9 @@
               { "7280": "other_0_30002_7280_0" },
               { "7077": "expo_0_55033_7077_0" },
               { "7180": "other_0_53044_7180_0" },
-              { "7145": "other_0_53038_7145_0" }
+              { "7145": "other_0_53038_7145_0" },
+              { "6752": "other_0_55070_6752_0" },
+              { "7180": "other_0_55074_7180_0" }
             ],
             "type": "other",
             "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/dailygroup/2001/wupr?disableNav=YES&wh_pid=daily-223176&wx_navbar_hidden=true&pageName=venue&sceneId=722&fromToken=jQVloDei0O15Vl5ktpBt1wBiDUoUb&hd_from_id=100074&spm=202011hudong.20245757.tasklist.0&deliveryId="
