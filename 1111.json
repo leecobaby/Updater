@@ -1,6 +1,6 @@
 {
   "tb": {
-    "version": "云数据库：11.8.1",
+    "version": "云数据库：11.9.1",
     "gd": "taobao://m.tb.cn/h.4dDj9VK",
     "end": "taobao://m.tb.cn/h.4X7e64s",
     "hongbao": "taobao://m.tb.cn/h.42MWAHc",
@@ -198,6 +198,7 @@
       }
     },
     "share": {
+      "超级抢购助手": "https://www.icloud.com/shortcuts/f89fdd6d411841819ef747541283866b",
       "分享大厅": {
         "消灭小红包": {
           "6.9元佳龙辣条50包": "taobao://m.tb.cn/h.4XJUE33",
