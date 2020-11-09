@@ -65,15 +65,6 @@
                 ]
               },
               {
-                "7339": [
-                  "expo_0_217918001_7339_0",
-                  "expo_0_217918002_7339_0",
-                  "expo_0_217918003_7339_0",
-                  "expo_0_217918004_7339_0",
-                  "expo_0_217918005_7339_0"
-                ]
-              },
-              {
                 "7338": [
                   "expo_0_217918001_7338_0",
                   "expo_0_217918002_7338_0",
@@ -99,24 +90,6 @@
                   "cloudSailAd_0_1194_7080_0",
                   "cloudSailAd_0_1195_7080_0"
                 ]
-              },
-              {
-                "7237": [
-                  "cloudSailAd_0_1191_7237_0",
-                  "cloudSailAd_0_1192_7237_0",
-                  "cloudSailAd_0_1193_7237_0",
-                  "cloudSailAd_0_1194_7237_0",
-                  "cloudSailAd_0_1195_7237_0"
-                ]
-              },
-              {
-                "7099": [
-                  "cloudSailAd_0_1191_7099_0",
-                  "cloudSailAd_0_1192_7099_0",
-                  "cloudSailAd_0_1193_7099_0",
-                  "cloudSailAd_0_1194_7099_0",
-                  "cloudSailAd_0_1195_7099_0"
-                ]
               }
             ],
             "type": "cloudSailAd",
@@ -129,12 +102,7 @@
             "implId": [
               { "7246": "expo_0_45012_7246_0" },
               { "7247": "expo_0_45012_7247_0" },
-              { "7280": "other_0_30002_7280_0" },
-              { "7077": "expo_0_55033_7077_0" },
-              { "7180": "other_0_53044_7180_0" },
-              { "7145": "other_0_53038_7145_0" },
-              { "6752": "other_0_55070_6752_0" },
-              { "7180": "other_0_55074_7180_0" }
+              { "7280": "other_0_30002_7280_0" }
             ],
             "type": "other",
             "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/dailygroup/2001/wupr?disableNav=YES&wh_pid=daily-223176&wx_navbar_hidden=true&pageName=venue&sceneId=722&fromToken=jQVloDei0O15Vl5ktpBt1wBiDUoUb&hd_from_id=100074&spm=202011hudong.20245757.tasklist.0&deliveryId="
@@ -161,10 +129,7 @@
             "title": "逛隐藏任务",
             "implId": [
               {
-                "6303": [
-                  "cloudSailAd_0_3344850_6303_0",
-                  "cloudSailAd_0_3372678_6303_0"
-                ]
+                "6303": ["cloudSailAd_0_3344850_6303_0"]
               }
             ],
             "type": "cloudSailAd",
@@ -199,6 +164,7 @@
     },
     "share": {
       "超级抢购助手": "https://www.icloud.com/shortcuts/f89fdd6d411841819ef747541283866b",
+      "11.11元抢超市卡1111元": "taobao://m.tb.cn/h.4WcUrER?sm=bf24b0",
       "分享大厅": {
         "消灭小红包": {
           "6.9元佳龙辣条50包": "taobao://m.tb.cn/h.4XJUE33",
