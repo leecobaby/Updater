@@ -1,7 +1,7 @@
 {
   "tb": {
-    "version": "云数据库：11.9.1",
-    "gd": "taobao://m.tb.cn/h.4dDj9VK",
+    "version": "云数据库：11.10.1",
+    "gd": "taobao://m.tb.cn/h.42q2ew8",
     "end": "taobao://m.tb.cn/h.4X7e64s",
     "hongbao": "taobao://m.tb.cn/h.4dBJwcC",
     "main": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -72,6 +72,15 @@
                   "expo_0_217918004_7338_0",
                   "expo_0_217918005_7338_0"
                 ]
+              },
+              {
+                "7375": [
+                  "expo_0_217918001_7375_0",
+                  "expo_0_217918002_7375_0",
+                  "expo_0_217918003_7375_0",
+                  "expo_0_217918004_7375_0",
+                  "expo_0_217918005_7375_0"
+                ]
               }
             ],
             "type": "expo",
@@ -102,7 +111,13 @@
             "implId": [
               { "7246": "expo_0_45012_7246_0" },
               { "7247": "expo_0_45012_7247_0" },
-              { "7280": "other_0_30002_7280_0" }
+              { "7280": "other_0_30002_7280_0" },
+              { "6752": "other_0_57065_6752_0" },
+              { "7180": "other_0_42049_7180_0" },
+              { "7248": "expo_0_55065_7248_0" },
+              { "7346": "other_0_55073_7346_0" },
+              { "7145": "other_0_53038_7145_0" },
+              { "7077": "expo_0_53017_7077_0" }
             ],
             "type": "other",
             "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/dailygroup/2001/wupr?disableNav=YES&wh_pid=daily-223176&wx_navbar_hidden=true&pageName=venue&sceneId=722&fromToken=jQVloDei0O15Vl5ktpBt1wBiDUoUb&hd_from_id=100074&spm=202011hudong.20245757.tasklist.0&deliveryId="
@@ -153,7 +168,7 @@
       ],
       "team": {
         "作者队伍": "taobao://m.tb.cn/h.41M0U9g?sm=b1542b",
-        "赞助作者撸猫助力": "taobao://m.tb.cn/h.4dLCl0m?sm=353a2d",
+        "猫猫领红包啦": "taobao:/m.tb.cn/h.42qdQBq?sm=95391d",
         "赞助幸运星队伍人气": "taobao://m.tb.cn/h.4cvzsAz?sm=2396a4",
         "用户优质队伍1": "taobao://m.tb.cn/h.4Yw09QC?sm=dbe03a",
         "用户优质队伍2": "taobao://m.tb.cn/h.4Yznb8s?sm=b5feb8",
