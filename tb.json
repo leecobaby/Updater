@@ -5,8 +5,8 @@
     "end": "taobao://m.tb.cn/h.4X7e64s",
     "hongbao": "taobao://m.tb.cn/h.4WKRaaT",
     "main": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
-    "image": "https://gitee.com/leecogit/Updater/raw/master/image/1111_cat.jpeg",
-    "home": "taobao://pages.tmall.com/wow/z/hdwk/act-20201111/index?disableNav=YES&qd_from=dccjy",
+    "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
+    "home": "taobao://market.m.taobao.com/app/tmall-wireless/tjb-2018/index/index.html?disableNav=YES",
     "task": [
       {
         "repeat_other": {
@@ -42,7 +42,7 @@
             { "2558": "other_0_0_2558_0" }
           ],
           "type": "other",
-          "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/dailygroup/2001/wupr?disableNav=YES&wh_pid=daily-223176&wx_navbar_hidden=true&pageName=venue&sceneId=722&fromToken=jQVloDei0O15Vl5ktpBt1wBiDUoUb&hd_from_id=100074&spm=202011hudong.20245757.tasklist.0&deliveryId="
+          "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/dailygroup/1824/wupr?wh_pid=daily-223362&fromToken=OvWE0J6HblK0W9YQc6MFznLsVUJUr&spm=a217e.xzrwy.1.1&sceneId=367&sourceType=other&hd_from_id=100005&deliveryId="
         }
       }
     ]
