@@ -33,7 +33,9 @@
           ],
           "type": "other",
           "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&fromToken=bXNvd52Iv9Jp0n5QS9NuPoNiYh6UV&spm=a217e.xzrwy.1.1&sceneId=367&sourceType=other&hd_from_id=100005&deliveryId="
-        },
+        }
+      },
+      {
         "repeat_yun": {
           "title": "逛推送",
           "implId": [{ "4436": "cloudSailAd_0_3386383_4436_0" }],
