@@ -1,0 +1,50 @@
+{
+  "tjb": {
+    "version": "数据库版本:11.12.1",
+    "gd": "taobao://m.tb.cn/h.42q2ew8",
+    "end": "taobao://m.tb.cn/h.4X7e64s",
+    "hongbao": "taobao://m.tb.cn/h.4WKRaaT",
+    "main": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
+    "image": "https://gitee.com/leecogit/Updater/raw/master/image/1111_cat.jpeg",
+    "home": "taobao://pages.tmall.com/wow/z/hdwk/act-20201111/index?disableNav=YES&qd_from=dccjy",
+    "task": [
+      {
+        "repeat_other": {
+          "title": "做任务",
+          "implId": [
+            { "2675": "other_0_0_2675_0" },
+            { "7370": "expo_0_50016_7370_0" },
+            { "6446": "other_0_93221540_6446_0" },
+            { "6446": "expo_0_202011001_6446_1" },
+            { "7041": "expo_0_20201111009_7041_0" },
+            { "7041": "expo_0_20201111025_7041_1" },
+            { "7041": "expo_0_20201111016_7041_2" },
+            { "5995": "other_0_0_5995_0" },
+            { "5997": "other_0_0_5997_0" },
+            { "5984": "other_0_91209094_5984_0" },
+            { "5984": "other_0_50008_5984_1" },
+            { "2771": "other_0_0_2771_0" },
+            { "6737": "expo_0_1200000013_6737_0" },
+            { "6216": "other_0_1000000012_6216_0" },
+            { "6216": "expo_0_1000000015_6216_1" },
+            { "6216": "expo_0_1000000015_6216_2" },
+            { "6016": "expo_0_45001_6016_0" },
+            { "6016": "expo_0_45001_6016_1" },
+            { "6022": "other_0_0_6022_0" },
+            { "6004": "other_0_92209598_6004_0" },
+            { "6004": "other_0_92209598_6004_1" },
+            { "6004": "other_0_3809_6004_1" },
+            { "3511": "other_0_0_3511_0" },
+            { "6023": "other_0_3000002_6023_0" },
+            { "6023": "other_0_3000003_6023_1" },
+            { "6007": "other_0_92911037_6007_0" },
+            { "3073": "other_0_0_3073_0" },
+            { "2558": "other_0_0_2558_0" }
+          ],
+          "type": "other",
+          "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/dailygroup/2001/wupr?disableNav=YES&wh_pid=daily-223176&wx_navbar_hidden=true&pageName=venue&sceneId=722&fromToken=jQVloDei0O15Vl5ktpBt1wBiDUoUb&hd_from_id=100074&spm=202011hudong.20245757.tasklist.0&deliveryId="
+        }
+      }
+    ]
+  }
+}
