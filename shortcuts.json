@@ -47,14 +47,6 @@
       "视频教程": "https://video.cdnvue.com/uploads/-2216775553683075363/video/b9PwmDl",
       "精选福利": {
         "饿了么现金红包": "taobao://m.tb.cn/h.42QI6tb"
-      },
-      "🔥 双十一专栏": {
-        "苏宁Super会员免费10/14/18/22点抢": "https://sugs.suning.com/IIePp2K6",
-        "11.11元抢超市卡1111元": "taobao://m.tb.cn/h.4WcUrER?sm=bf24b0",
-        "京东补贴会场，每天限一单": "https://u.jd.com/tHl59ZN",
-        "淘宝超级红包": "taobao://m.tb.cn/h.4dBJwcC",
-        "京东京享红包": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"action\":\"to\",\"des\":\"m\",\"url\":\"https://u.jd.com/tkn4gjT\"}",
-        "苏宁0.5无敌券": "https://sugs.suning.com/IIC1cYJR"
       }
     },
     "more_little": {
@@ -121,14 +113,33 @@
     "faq": "https://docs.qq.com/doc/DWnVlUXlQU01DZ0NJ",
     "notice": "淘金币自动任务正在抓紧制作中。。。\n关注公众号：Leeco爱分享",
     "tip": {
-      "hongbao": "🔥 今天13/16/19点抢红包最低2元",
+      "hongbao": "",
       "hot": "🔥 抢购助手能找隐藏优惠券和淘礼金哦~",
       "faq": "对欧莱雅有问题的请看",
       "set": "",
-      "group": "🔥 邀请好友抽清空购物车",
-      "more": "🔥 新一期现金红包已空降"
+      "group": "",
+      "more": ""
     },
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/1111_cat.jpeg",
+    "url": "https://gitee.com/leecogit/Updater/raw/master/tb.json"
+  },
+  "Taojb": {
+    "version": "1.0",
+    "update_log": "",
+    "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
+    "github": "https://github.com/LeecoGit/shortcuts",
+    "update": "",
+    "faq": "",
+    "notice": "持续更新中。。。\n关注公众号：Leeco爱分享",
+    "tip": {
+      "hongbao": "",
+      "hot": "",
+      "faq": "",
+      "set": "",
+      "group": "",
+      "more": ""
+    },
+    "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
     "url": "https://gitee.com/leecogit/Updater/raw/master/1111.json"
   },
   "Business": {
@@ -166,15 +177,7 @@
       "加入QQ情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
       "其他捷径作品": "https://shimo.im/docs/DHcYv8xjcYxvHvQg/",
       "🧧现金红包🧧(11.10)": "taobao://m.tb.cn/h.42sFA2p",
-      "饿了么现金红包": "taobao://m.tb.cn/h.42QI6tb",
-      "🔥 双十一专栏": {
-        "苏宁Super会员免费10/14/18/22点抢": "https://sugs.suning.com/IIePp2K6",
-        "11.11元抢超市卡1111元": "taobao://m.tb.cn/h.4WcUrER?sm=bf24b0",
-        "京东补贴会场，每天限一单": "https://u.jd.com/tHl59ZN",
-        "淘宝超级红包": "taobao://m.tb.cn/h.4dBJwcC",
-        "京东京享红包": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"action\":\"to\",\"des\":\"m\",\"url\":\"https://u.jd.com/tkn4gjT\"}",
-        "苏宁0.5无敌券": "https://sugs.suning.com/IIC1cYJR"
-      }
+      "饿了么现金红包": "taobao://m.tb.cn/h.42QI6tb"
     },
     "more2": {
       "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
