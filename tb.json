@@ -1,6 +1,6 @@
 {
   "tjb": {
-    "version": "数据库版本:11.15.2",
+    "version": "数据库版本:11.15.3",
     "gd": "taobao://m.tb.cn/h.4326Yas",
     "end": "taobao://m.tb.cn/h.43d0QNp",
     "hongbao": "taobao://m.tb.cn/h.4WKRaaT",
@@ -26,24 +26,27 @@
             { "3134": "other_0_0_3134_0" },
             { "2706": "other_0_0_2706_0" },
             { "2675": "other_0_0_2675_0" },
-            { "6004": "other_0_92209598_6004_0" },
-            { "5984": "other_0_91209094_5984_0" },
-            { "5984": "other_0_50008_5984_1" },
-            { "6023": "other_0_3000002_6023_0" }
+            { "6953": "other_0_318900_6953_0" },
+            { "6023": "other_0_3000002_6023_0" },
+            { "5984": "other_0_50008_5984_0" },
+            { "3510": "other_0_0_3510_0" },
+            { "3073": "other_0_0_3073_0" },
+            { "6016": "expo_0_45001_6016_0" },
+            { "7436": "tjbLive_0_287418506761_7436_0" },
+            { "5252": "other_0_91204278_5252_0" },
+            { "6007": "other_0_92911037_6007_0" },
+            { "4441": "cloudSailAd_0_394249587_4441_0" },
+            { "7486": "tjbShop_0_2219509495_7486_0" },
+            { "6737": "expo_0_1200000013_6737_0" },
+            { "6216": "expo_0_1000000021_6216_0" },
+            { "3782": "daily_0_91215489_3782_0" },
+            { "4436": "cloudSailAd_0_3386383_4436_0" }
           ],
           "type": "other",
           "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&fromToken=bXNvd52Iv9Jp0n5QS9NuPoNiYh6UV&spm=a217e.xzrwy.1.1&sceneId=367&sourceType=other&hd_from_id=100005&deliveryId="
         }
-      },
-      {
-        "repeat_yun": {
-          "title": "逛推送",
-          "implId": [{ "4436": "cloudSailAd_0_3386383_4436_0" }],
-          "type": "cloudSailAd",
-          "urlScheme": "taobao://mo.m.tmall.com/s/page/3386383?settleType=afterTime&fromToken=6pn7NK0U7OLPYgERtBXuPvRTQUbUO&settleTime=0&sceneId=367&adScene=coin-farm-task-list&spm=a217e.xzrwy.1.1&sourceType=other&eRedirect=1&disableNav=YES&hd_from_id=100005&shop_id=110584484&deliveryId="
-        }
       }
     ],
-    "share": { "建设中。。。": "" }
+    "share": { "建设中。。。": { "建设中。。。": "" } }
   }
 }
