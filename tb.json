@@ -1,6 +1,6 @@
 {
   "tjb": {
-    "version": "数据库版本:11.19.1",
+    "version": "数据库版本:11.20.2",
     "gd": "taobao://m.tb.cn/h.4326Yas",
     "end": "taobao://m.tb.cn/h.43d0QNp",
     "hongbao": "taobao://m.tb.cn/h.4WKRaaT",
@@ -10,7 +10,9 @@
     "task": [
       {
         "repeat_other": {
-          "title": "逛其他",
+          "title": "攒能量",
+          "type": "energy",
+          "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&fromToken=bXNvd52Iv9Jp0n5QS9NuPoNiYh6UV&spm=a217e.xzrwy.1.1&sceneId=367&sourceType=other&hd_from_id=100005&deliveryId=",
           "implId": [
             { "6022": "other_0_0_6022_0" },
             { "3074": "other_0_0_3074_0" },
@@ -40,10 +42,28 @@
             { "6737": "expo_0_1200000013_6737_0" },
             { "3782": "daily_0_91215489_3782_0" },
             { "4436": "cloudSailAd_0_3386383_4436_0" },
-            { "6216": "other_0_1000000019_6216_0" }
-          ],
-          "type": "other",
-          "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&fromToken=bXNvd52Iv9Jp0n5QS9NuPoNiYh6UV&spm=a217e.xzrwy.1.1&sceneId=367&sourceType=other&hd_from_id=100005&deliveryId="
+            { "6216": "other_0_1000000019_6216_0" },
+            { "3810": "other_0_210010_3810_0" },
+            { "5252": "other_0_45901_5252_0" },
+            { "7665": "other_0_0_7665_0" }
+          ]
+        }
+      },
+      {
+        "repeat_shop": {
+          "title": "逛店铺",
+          "type": "shop",
+          "urlScheme": "taobao://pages.tmall.com/wow/z/tmtjb/tjbshop/coin_shops_task?wh_biz=tm&disableNav=YES&shopId=316875470&wh_dataservice=false&topIds=627271339615,606672835326,625829607411&spm=a217e.17632374&sourceId=",
+          "implId": [
+            { "2027551265": "2027551265" },
+            { "3173651031": "3173651031" },
+            { "767303689": "767303689" },
+            { "439649406": "439649406" },
+            { "3081047815": "3081047815" },
+            { "1803764140": "1803764140" },
+            { "3055672510": "3055672510" },
+            { "304639978": "304639978" }
+          ]
         }
       }
     ],
