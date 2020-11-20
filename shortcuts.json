@@ -124,17 +124,17 @@
     "url": "https://gitee.com/leecogit/Updater/raw/master/tb.json"
   },
   "Taojb": {
-    "version": "1.1",
-    "update_log": "* 完善淘金币自动任务数据\n* 完善部分功能",
+    "version": "1.2",
+    "update_log": "* 增加逛店铺领金币功能\n* 结束任务引导领取能量",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/LeecoGit/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/af26740ccc1845ecb745bb98e1366458",
+    "update": "https://www.icloud.com/shortcuts/ddb798dcd665413190560b2088a2ecf6",
     "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
-    "notice": "持续更新中。。。\n关注公众号：Leeco爱分享",
+    "notice": "1.2版本已更新，旧版本将无法使用哦~\n关注公众号：Leeco爱分享",
     "tip": {
       "hongbao": "",
       "hot": "",
-      "faq": "",
+      "faq": "有疑问的请查看",
       "set": "",
       "group": "",
       "more": ""
