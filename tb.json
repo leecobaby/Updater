@@ -1,8 +1,8 @@
 {
   "tjb": {
-    "version": "数据库版本:11.20.2",
-    "gd": "taobao://m.tb.cn/h.4326Yas",
-    "end": "taobao://m.tb.cn/h.43d0QNp",
+    "version": "数据库版本:11.21.1",
+    "gd": "taobao://m.tb.cn/h.4eVNhti",
+    "end": "taobao://pages.tmall.com/wow/z/tmtjb/town/task?wh_biz=tm&disableNav=YES",
     "hongbao": "taobao://m.tb.cn/h.4WKRaaT",
     "main": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
@@ -45,7 +45,8 @@
             { "6216": "other_0_1000000019_6216_0" },
             { "3810": "other_0_210010_3810_0" },
             { "5252": "other_0_45901_5252_0" },
-            { "7665": "other_0_0_7665_0" }
+            { "7665": "other_0_0_7665_0" },
+            { "3958": "other_0_0_3958_0" }
           ]
         }
       },
