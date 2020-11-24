@@ -1,10 +1,10 @@
 {
   "Snap_up": {
-    "version": "2.3",
-    "update": "https://www.icloud.com/shortcuts/7f8363766e774f8caf92db430d1152f9",
+    "version": "2.4",
+    "update": "https://www.icloud.com/shortcuts/3a499f9269a440739d20c9793183b5f0",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
-    "github": "https://github.com/LeecoGit/shortcuts/tree/master/1111",
-    "update_log": "* 修复识别出错问题\n* 增加对emoji口令的识别",
+    "github": "https://github.com/LeecoGit/shortcuts/tree/master/Snap_up",
+    "update_log": "* 增强内容识别和跳转准确性\n* 修复苏宁部分链接跳转空白页问题",
     "notice": "购买前可以帮你看看有没有隐藏优惠券哦~",
     "tip": {
       "rondom": ["复制整段文案都可以识别，不用刻意复制链接哦！"]
@@ -130,7 +130,7 @@
     "github": "https://github.com/LeecoGit/shortcuts",
     "update": "https://www.icloud.com/shortcuts/df60a474f6cb413da6566270c2f2c09e",
     "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
-    "notice": "1.2版本已更新，旧版本将无法使用哦~\n⚠️如果出现URL错误，请删掉重新下载！！！",
+    "notice": "每天0点1万淘金币兑换天猫精灵，开启黑五活动预热，相关引导页请点击活动大厅查看~",
     "tip": {
       "hongbao": "",
       "hot": "",
