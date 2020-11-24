@@ -124,11 +124,11 @@
     "url": "https://gitee.com/leecogit/Updater/raw/master/tb.json"
   },
   "Taojb": {
-    "version": "1.2",
+    "version": "1.3",
     "update_log": "* 增加逛店铺领金币功能\n* 结束任务引导领取能量",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/LeecoGit/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/df60a474f6cb413da6566270c2f2c09e",
+    "update": "https://www.icloud.com/shortcuts/8d33f01fcf0545cc84f515c406b22027",
     "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
     "notice": "每天0点1万淘金币兑换天猫精灵，开启黑五活动预热，相关引导页请点击活动大厅查看~",
     "tip": {
