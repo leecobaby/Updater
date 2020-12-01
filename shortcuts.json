@@ -125,22 +125,43 @@
     "url": "https://gitee.com/leecogit/Updater/raw/master/tb.json"
   },
   "Taojb": {
-    "version": "1.3",
-    "update_log": "* 修复活动大厅错误\n* 增加黑五生态内容",
+    "version": "1.4",
+    "update_log": "* 增加任务扫尾功能\n* 增加老手模式\n* 重建云端数据架构\n* 重建指令架构",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/LeecoGit/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/8d33f01fcf0545cc84f515c406b22027",
+    "update": "https://www.icloud.com/shortcuts/00688a056b61407baa342c3b6b25c4c5",
     "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
-    "notice": "每天10点1万淘金币兑换天猫精灵，开启黑五活动预热，相关引导页请点击活动大厅查看~",
+    "notice": "每天10点1万淘金币兑换天猫精灵，开启双12活动预热，相关引导页请点击活动大厅查看~",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 黑五预热中...",
+      "hot": "🔥 双12预热中...",
+      "taskEnd": "剩余没完成的任务请运行",
       "faq": "有疑问的请查看",
       "set": "",
-      "group": "",
+      "team": "",
       "more": ""
     },
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
+    "url": "https://gitee.com/leecogit/Updater/raw/master/tb.json"
+  },
+  "1212hlz": {
+    "version": "1.0",
+    "update_log": "* 初步实现自动任务\n* 采用自动淘金币框架",
+    "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
+    "github": "https://github.com/LeecoGit/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/fefbb2e70cd04c73854fdf4478c498c9",
+    "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
+    "notice": "相关功能正在完善中...\n关注公众号：Leeco爱分享",
+    "tip": {
+      "hongbao": "",
+      "hot": "🔥 双12预热中...",
+      "tjb": "请配合食用",
+      "faq": "有疑问的请查看",
+      "set": "",
+      "team": "",
+      "more": ""
+    },
+    "image": "https://gitee.com/leecogit/Updater/raw/master/image/1212_hlz.png",
     "url": "https://gitee.com/leecogit/Updater/raw/master/tb.json"
   },
   "Business": {
@@ -167,6 +188,11 @@
     "ok": "yes",
     "tishi": "📋剪贴板为空，请检查一下哦~\n---------------------------------\n※猜测到你可能需要以下功能※\n\n(此为纯净版，请加群获取完整版)",
     "hongbao": "alipays://platformapi/startapp?appId=88886666&appClearTop=false&target=groupPre&bizType=CROWD_CODE_CASH&crowdNo=202006200206302127940823700055790860&universalDetail=true&clientVersion=10.0.0-5&prevBiz=code&sign=52e3fa8195d4210bd1e7ecc8ba907b25c428533179eff3f91421b22ee04907a2&schemeMode=reInside&source=passcode"
+  },
+  "Contact": {
+    "qq": "mqq://card/show_pslcard?src_type=internal&version=1&uin=1917019372&card_type=person&source=sharecard",
+    "qqGroup": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=605346047&card_type=group&source=qrcode&jump_from=&auth=&authSig=tFaEzF1AcIK130YGfSHWJ15xFQh6kzpeUL3KIkWmoaCCsN7AAATFaWqFUiXeNM4W&source_id=2_40001",
+    "tgGroup": ""
   },
   "more": {
     "mode": "more1",
