@@ -1,7 +1,7 @@
 {
   "tjb": {
-    "version": "数据库版本:11.24.1",
-    "gd": "taobao://m.tb.cn/h.4eVNhti",
+    "version": "数据库版本:11.30.1",
+    "gd": "taobao://m.tb.cn/h.4f4eTck",
     "end": "taobao://pages.tmall.com/wow/z/tmtjb/town/task?wh_biz=tm&disableNav=YES",
     "hongbao": "taobao://m.tb.cn/h.4WKRaaT",
     "main": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -9,61 +9,110 @@
     "home": "taobao://market.m.taobao.com/app/tmall-wireless/tjb-2018/index/index.html?disableNav=YES",
     "task": [
       {
-        "repeat_other": {
+        "energy": {
           "title": "攒能量",
           "type": "energy",
           "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&fromToken=bXNvd52Iv9Jp0n5QS9NuPoNiYh6UV&spm=a217e.xzrwy.1.1&sceneId=367&sourceType=other&hd_from_id=100005&deliveryId=",
-          "implId": [
-            { "6022": "other_0_0_6022_0" },
-            { "3074": "other_0_0_3074_0" },
-            { "3147": "other_0_0_3147_0" },
-            { "2643": "other_0_0_2643_0" },
-            { "3505": "other_0_0_3505_0" },
-            { "2771": "other_0_0_2771_0" },
-            { "3511": "other_0_0_3511_0" },
-            { "5138": "other_0_61120_5138_0" },
-            { "6004": "other_0_3809_6004_0" },
-            { "5997": "other_0_0_5997_0" },
-            { "5995": "other_0_0_5995_0" },
-            { "3134": "other_0_0_3134_0" },
-            { "2706": "other_0_0_2706_0" },
-            { "2675": "other_0_0_2675_0" },
-            { "6953": "other_0_318900_6953_0" },
-            { "6023": "other_0_3000002_6023_0" },
-            { "5984": "other_0_50008_5984_0" },
-            { "3510": "other_0_0_3510_0" },
-            { "3073": "other_0_0_3073_0" },
-            { "6016": "expo_0_45001_6016_0" },
-            { "7436": "tjbLive_0_287418506761_7436_0" },
-            { "6007": "other_0_92911037_6007_0" },
-            { "4441": "cloudSailAd_0_394249587_4441_0" },
-            { "2558": "other_0_0_2558_0" },
-            { "7486": "tjbShop_0_2219509495_7486_0" },
-            { "6737": "expo_0_1200000013_6737_0" },
-            { "3782": "daily_0_91215489_3782_0" },
-            { "4436": "cloudSailAd_0_3386383_4436_0" },
-            { "6216": "other_0_1000000019_6216_0" },
-            { "3810": "other_0_210010_3810_0" },
-            { "5252": "other_0_45901_5252_0" },
-            { "7665": "other_0_0_7665_0" },
-            { "3958": "other_0_0_3958_0" }
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "6022 other_0_0_6022_0",
+            "3074 other_0_0_3074_0",
+            "3147 other_0_0_3147_0",
+            "2643 other_0_0_2643_0",
+            "3505 other_0_0_3505_0",
+            "2771 other_0_0_2771_0",
+            "3511 other_0_0_3511_0",
+            "5138 other_0_61120_5138_0",
+            "6004 other_0_3809_6004_0",
+            "5997 other_0_0_5997_0",
+            "5995 other_0_0_5995_0",
+            "3134 other_0_0_3134_0",
+            "2706 other_0_0_2706_0",
+            "2675 other_0_0_2675_0",
+            "6953 other_0_318900_6953_0",
+            "6023 other_0_3000002_6023_0",
+            "5984 other_0_50008_5984_0",
+            "3510 other_0_0_3510_0",
+            "3073 other_0_0_3073_0",
+            "6016 expo_0_45001_6016_0",
+            "7436 tjbLive_0_287418506761_7436_0",
+            "6007 other_0_92911037_6007_0",
+            "4441 cloudSailAd_0_394249587_4441_0",
+            "7486 tjbShop_0_2219509495_7486_0",
+            "6737 expo_0_1200000013_6737_0",
+            "3782 daily_0_91215489_3782_0",
+            "4436 cloudSailAd_0_3386383_4436_0",
+            "6216 other_0_1000000019_6216_0",
+            "3810 other_0_210010_3810_0",
+            "5252 other_0_45901_5252_0",
+            "7665 other_0_0_7665_0",
+            "3958 other_0_0_3958_0",
+            "4853 other_0_210005_4853_0",
+            "6809 expo_0_45007_6809_0"
           ]
         }
       },
       {
-        "repeat_shop": {
+        "shop": {
           "title": "逛店铺",
           "type": "shop",
           "urlScheme": "taobao://pages.tmall.com/wow/z/tmtjb/tjbshop/coin_shops_task?wh_biz=tm&disableNav=YES&shopId=316875470&wh_dataservice=false&topIds=627271339615,606672835326,625829607411&spm=a217e.17632374&sourceId=",
-          "implId": [
-            { "2027551265": "2027551265" },
-            { "3173651031": "3173651031" },
-            { "767303689": "767303689" },
-            { "439649406": "439649406" },
-            { "3081047815": "3081047815" },
-            { "1803764140": "1803764140" },
-            { "3055672510": "3055672510" },
-            { "304639978": "304639978" }
+          "textEnd": "str1",
+          "item": [
+            "2027551265 0",
+            "3173651031 0",
+            "767303689 0",
+            "439649406 0",
+            "3081047815 0",
+            "1803764140 0",
+            "3055672510 0",
+            "304639978 0"
+          ]
+        }
+      }
+    ],
+    "taskEndEnergy": [
+      {
+        "energy": {
+          "title": "攒剩余能量",
+          "type": "energy",
+          "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&fromToken=bXNvd52Iv9Jp0n5QS9NuPoNiYh6UV&spm=a217e.xzrwy.1.1&sceneId=367&sourceType=other&hd_from_id=100005&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "5984 other_0_91209094_5984_1",
+            "6004 other_0_92209598_6004_1",
+            "6023 other_0_3000003_6023_1",
+            "6016 expo_0_45001_6016_1",
+            "5252 other_0_91204278_5252_1"
+          ]
+        }
+      }
+    ],
+    "taskAchievement": [
+      {
+        "achievement": {
+          "title": "做金币成就",
+          "type": "achievement",
+          "urlScheme": "taobao://market.m.taobao.com/apps/market/tjb/achievement-commodity.html?wh_weex=true&wx_navbar_transparent=true&achievementType=1&spm=a217e.achievement.btn1&achievementSetId=",
+          "textEnd": "str1",
+          "item": [
+            "301000060 0",
+            "301000061 0",
+            "301000063 0",
+            "301000064 0",
+            "301000065 0",
+            "301000067 0",
+            "301000068 0",
+            "301000069 0",
+            "301000070 0",
+            "301000071 0",
+            "301000072 0",
+            "301000078 0",
+            "301000079 0",
+            "301000080 0",
+            "301000082 0",
+            "301000084 0",
+            "301000095 0"
           ]
         }
       }
@@ -71,10 +120,110 @@
     "share": {
       "🔥 淘金币兑换天猫精灵": "taobao://market.m.taobao.com/app/GoldManor/benefit-center/pages/index/index.html?disableNav=YES&tjbfrom=icon&disableNav=YES",
       "🔥 找优惠券助手": "https://www.icloud.com/shortcuts/3a499f9269a440739d20c9793183b5f0",
-      "📺 黑五频道": {
-        "淘宝黑五爆款": "taobao://m.tb.cn/h.4e4nHfs",
-        "亚马逊黑五车": "https://www.amazon.com/-/zh/dp/B07X4V2M3B/ref=sr_1_1?__mk_zh_CN=%E4%BA%9A%E9%A9%AC%E9%80%8A%E7%BD%91%E7%AB%99&dchild=1&keywords=wd+12t&qid=1606219451&s=specialty-aps&sr=1-1"
+      "🧧 超级红包5号0点开始。。。": "",
+      "📺 双十二频道": {
+        "建设中。。。": "taobao://m.tb.cn/h.4e4nHfs"
       }
+    }
+  },
+  "1212hlz": {
+    "version": "数据库版本:12.1.0",
+    "gd": "taobao://m.tb.cn/h.4f4eTck",
+    "end": "taobao://pages.tmall.com/wow/z/tmtjb/town/1212-home?wh_biz=tm&disableNav=YES",
+    "hongbao": "taobao://m.tb.cn/h.4WKRaaT",
+    "main": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
+    "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
+    "home": "taobao://pages.tmall.com/wow/z/tmtjb/town/1212-home?wh_biz=tm&disableNav=YES",
+    "task": [
+      {
+        "shop": {
+          "title": "逛店铺",
+          "type": "shop",
+          "urlScheme": "taobao://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&hd_from_id=100079&sceneId=885&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "7841 cloudSailAd_0_404595571_7841_0",
+            "7841 cloudSailAd_0_404595572_7841_0",
+            "7841 cloudSailAd_0_404595573_7841_0",
+            "7841 cloudSailAd_0_404595574_7841_0",
+            "7841 cloudSailAd_0_404595575_7841_0",
+            "7841 cloudSailAd_0_404595576_7841_0",
+            "7841 cloudSailAd_0_404595577_7841_0",
+            "7841 cloudSailAd_0_404595578_7841_0",
+            "7841 cloudSailAd_0_404595579_7841_0",
+            "7841 cloudSailAd_0_404595580_7841_0",
+            "7841 cloudSailAd_0_404595581_7841_0",
+            "7841 cloudSailAd_0_404595582_7841_0",
+            "7841 cloudSailAd_0_404595583_7841_0",
+            "7841 cloudSailAd_0_404595584_7841_0",
+            "7841 cloudSailAd_0_404595585_7841_0"
+          ]
+        }
+      },
+      {
+        "hall": {
+          "title": "逛会场",
+          "type": "hall",
+          "urlScheme": "taobao://pages.tmall.com/wow/z/phone/han-template/features-home?fromToken=Ld2gwvjT9pA8rJwPSGJT051CzUQUX&sceneId=885&itemId=624977962923&dczt_module_id=19173&expo_id=2031208027&spm=a217e.1212.c1.d1&sourceType=other&showCustomNav=true&wh_biz=tm&hd_from_env=han12&item_id=624977962923&spma=a21biw&a=1&hd_from_id=100079&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "7842 expo_0_2031256021_7842_0",
+            "7842 expo_0_2031256022_7842_0",
+            "7842 expo_0_2031256023_7842_0",
+            "7842 expo_0_2031256024_7842_0",
+            "7842 expo_0_2031256025_7842_0",
+            "7842 expo_0_2031256026_7842_0",
+            "7842 expo_0_2031256027_7842_0",
+            "7842 expo_0_2031256028_7842_0",
+            "7842 expo_0_2031256029_7842_0",
+            "7842 expo_0_2031256030_7842_0",
+            "7842 expo_0_2031256031_7842_0",
+            "7842 expo_0_2031256032_7842_0",
+            "7842 expo_0_2031256033_7842_0",
+            "7842 expo_0_2031256034_7842_0",
+            "7842 expo_0_2031256035_7842_0"
+          ]
+        }
+      },
+      {
+        "other": {
+          "title": "逛其他",
+          "type": "other",
+          "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=885&sourceType=other&hd_from_id=100079&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "7521 other_0_1_7521_0",
+            "7448 other_0_53051_7448_0",
+            "7469 other_0_65001_7469_0",
+            "7438 other_0_52005_7438_0",
+            "7449 other_0_57068_7449_0",
+            "7459 other_0_42053_7459_0",
+            "7442 other_0_55079_7442_0",
+            "7441 other_0_53050_7441_0"
+          ]
+        }
+      },
+      {
+        "farm": {
+          "title": "逛亲亲农场",
+          "type": "farm",
+          "urlScheme": "taobao://pages.tmall.com/wow/z/tmtjb/town/quanmin?wh_biz=tm&wh_showError=true&sceneId=892&hd_from_id=100079&disableNav=YES&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": ["7593 expo_0_59001_7593_0"]
+        }
+      }
+    ]
+  },
+  "team": {
+    "👤 为作者助力": "taobao://m.tb.cn/h.4VJwEL3?sm=201b3e",
+    "👥 相互助力群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=830385420&card_type=group&source=qrcode&jump_from=&auth=&authSig=CtFeH1TafXW5JK0ALJh4EbaUkBHKJ6ykRB6+ejGS3fvjGPae8Am9sPg+sm0xsTNX&source_id=2_40001"
+  },
+  "share": {
+    "🔥 淘金币兑换天猫精灵": "taobao://market.m.taobao.com/app/GoldManor/benefit-center/pages/index/index.html?disableNav=YES&tjbfrom=icon&disableNav=YES",
+    "🔥 找优惠券助手": "https://www.icloud.com/shortcuts/3a499f9269a440739d20c9793183b5f0",
+    "🧧 超级红包5号0点开始。。。": "",
+    "📺 双十二频道": {
+      "建设中。。。": "taobao://m.tb.cn/h.4e4nHfs"
     }
   }
 }
