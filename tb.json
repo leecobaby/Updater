@@ -1,6 +1,6 @@
 {
   "tjb": {
-    "version": "数据库版本:11.30.1",
+    "version": "数据库版本:12.2.1",
     "gd": "taobao://m.tb.cn/h.4f4eTck",
     "end": "taobao://pages.tmall.com/wow/z/tmtjb/town/task?wh_biz=tm&disableNav=YES",
     "hongbao": "taobao://m.tb.cn/h.4WKRaaT",
@@ -48,7 +48,9 @@
             "7665 other_0_0_7665_0",
             "3958 other_0_0_3958_0",
             "4853 other_0_210005_4853_0",
-            "6809 expo_0_45007_6809_0"
+            "6809 expo_0_45007_6809_0",
+            "7739 other_0_0_7739_0",
+            "6096 expo_0_100207234511_6096_0"
           ]
         }
       },
@@ -83,7 +85,8 @@
             "6004 other_0_92209598_6004_1",
             "6023 other_0_3000003_6023_1",
             "6016 expo_0_45001_6016_1",
-            "5252 other_0_91204278_5252_1"
+            "5252 other_0_91204278_5252_1",
+            "6216 other_0_1000000019_6216_1"
           ]
         }
       }
@@ -127,7 +130,7 @@
     }
   },
   "1212hlz": {
-    "version": "数据库版本:12.1.0",
+    "version": "数据库版本:12.2.1",
     "gd": "taobao://m.tb.cn/h.4f4eTck",
     "end": "taobao://pages.tmall.com/wow/z/tmtjb/town/1212-home?wh_biz=tm&disableNav=YES",
     "hongbao": "taobao://m.tb.cn/h.4WKRaaT",
@@ -137,7 +140,7 @@
     "task": [
       {
         "shop": {
-          "title": "逛店铺",
+          "title": "逛店铺 15次",
           "type": "shop",
           "urlScheme": "taobao://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&hd_from_id=100079&sceneId=885&deliveryId=",
           "textEnd": "str1&implId=str2",
@@ -162,7 +165,7 @@
       },
       {
         "hall": {
-          "title": "逛会场",
+          "title": "逛会场 7次",
           "type": "hall",
           "urlScheme": "taobao://pages.tmall.com/wow/z/phone/han-template/features-home?fromToken=Ld2gwvjT9pA8rJwPSGJT051CzUQUX&sceneId=885&itemId=624977962923&dczt_module_id=19173&expo_id=2031208027&spm=a217e.1212.c1.d1&sourceType=other&showCustomNav=true&wh_biz=tm&hd_from_env=han12&item_id=624977962923&spma=a21biw&a=1&hd_from_id=100079&deliveryId=",
           "textEnd": "str1&implId=str2",
@@ -174,20 +177,28 @@
             "7842 expo_0_2031256025_7842_0",
             "7842 expo_0_2031256026_7842_0",
             "7842 expo_0_2031256027_7842_0",
-            "7842 expo_0_2031256028_7842_0",
-            "7842 expo_0_2031256029_7842_0",
-            "7842 expo_0_2031256030_7842_0",
-            "7842 expo_0_2031256031_7842_0",
-            "7842 expo_0_2031256032_7842_0",
-            "7842 expo_0_2031256033_7842_0",
-            "7842 expo_0_2031256034_7842_0",
-            "7842 expo_0_2031256035_7842_0"
+            "7842 expo_0_2031256028_7842_0"
+          ]
+        }
+      },
+      {
+        "search": {
+          "title": "逛搜索 5次",
+          "type": "search",
+          "urlScheme": "taobao://s.m.taobao.com/h5?spm=a217e.1212.c1.d1&q=一直逛兰蔻正常,任务异常的话也正常&sourceType=other&fromToken=7pnxLEPU6lQvXYWJuWpUooAsRU1UY&scm=1007.23000.186462.13355645_0_0&sceneId=885&hd_from_id=100079&g_channelSrp=hudongcheng_20201212&needTabs=true&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "7944 interactionSearch_0_1205429531_7944_0",
+            "7944 interactionSearch_0_1205429532_7944_0",
+            "7944 interactionSearch_0_1205429533_7944_0",
+            "7944 interactionSearch_0_1205429534_7944_0",
+            "7944 interactionSearch_0_1205429535_7944_0"
           ]
         }
       },
       {
         "other": {
-          "title": "逛其他",
+          "title": "逛其他 N次",
           "type": "other",
           "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=885&sourceType=other&hd_from_id=100079&deliveryId=",
           "textEnd": "str1&implId=str2",
@@ -199,7 +210,8 @@
             "7449 other_0_57068_7449_0",
             "7459 other_0_42053_7459_0",
             "7442 other_0_55079_7442_0",
-            "7441 other_0_53050_7441_0"
+            "7441 other_0_53050_7441_0",
+            "7568 other_0_53054_7568_0"
           ]
         }
       },
