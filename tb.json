@@ -130,7 +130,7 @@
     }
   },
   "1212hlz": {
-    "version": "数据库版本:12.3.1",
+    "version": "数据库版本:12.4.1",
     "gd": "taobao://m.tb.cn/h.443HPo4",
     "end": "taobao://pages.tmall.com/wow/z/tmtjb/town/1212-home?wh_biz=tm&disableNav=YES",
     "hongbao": "taobao://m.tb.cn/h.4WKRaaT",
@@ -140,7 +140,7 @@
     "task": [
       {
         "shop": {
-          "title": "逛店铺 ⑦次",
+          "title": "逛店铺1 ⑤次 部分人其中一个会异常，推荐全选",
           "type": "shop",
           "urlScheme": "taobao://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&hd_from_id=100079&sceneId=885&deliveryId=",
           "textEnd": "str1&implId=str2",
@@ -149,9 +149,22 @@
             "7939 cloudSailAd_0_404595572_7939_0",
             "7939 cloudSailAd_0_404595573_7939_0",
             "7939 cloudSailAd_0_404595574_7939_0",
-            "7939 cloudSailAd_0_404595575_7939_0",
-            "7939 cloudSailAd_0_404595576_7939_0",
-            "7939 cloudSailAd_0_404595577_7939_0"
+            "7939 cloudSailAd_0_404595575_7939_0"
+          ]
+        }
+      },
+      {
+        "shop2": {
+          "title": "逛店铺2 ⑤次 部分人其中一个会异常，推荐全选",
+          "type": "shop",
+          "urlScheme": "taobao://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&hd_from_id=100079&sceneId=885&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "7991 cloudSailAd_0_404595571_7991_0",
+            "7991 cloudSailAd_0_404595572_7991_0",
+            "7991 cloudSailAd_0_404595573_7991_0",
+            "7991 cloudSailAd_0_404595574_7991_0",
+            "7991 cloudSailAd_0_404595575_7991_0"
           ]
         }
       },
