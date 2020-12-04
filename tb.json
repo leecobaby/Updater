@@ -138,7 +138,7 @@
     }
   },
   "1212hlz": {
-    "version": "数据库版本:12.4.1",
+    "version": "数据库版本:12.5.1",
     "gd": "taobao://m.tb.cn/h.443HPo4",
     "end": "taobao://pages.tmall.com/wow/z/tmtjb/town/1212-home?wh_biz=tm&disableNav=YES",
     "hongbao": "taobao://m.tb.cn/h.44CiYjQ",
@@ -148,7 +148,7 @@
     "task": [
       {
         "shop": {
-          "title": "逛店铺1 ⑤次 部分人其中一个会异常，推荐全选",
+          "title": "逛店铺1 ⑤次",
           "type": "shop",
           "urlScheme": "taobao://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&hd_from_id=100079&sceneId=885&deliveryId=",
           "textEnd": "str1&implId=str2",
@@ -162,42 +162,27 @@
         }
       },
       {
-        "shop2": {
-          "title": "逛店铺2 ⑤次 部分人其中一个会异常，推荐全选",
-          "type": "shop",
-          "urlScheme": "taobao://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&hd_from_id=100079&sceneId=885&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "7991 cloudSailAd_0_404595571_7991_0",
-            "7991 cloudSailAd_0_404595572_7991_0",
-            "7991 cloudSailAd_0_404595573_7991_0",
-            "7991 cloudSailAd_0_404595574_7991_0",
-            "7991 cloudSailAd_0_404595575_7991_0"
-          ]
-        }
-      },
-      {
         "hall": {
           "title": "逛会场 ⑮次",
           "type": "hall",
           "urlScheme": "taobao://pages.tmall.com/wow/z/phone/han-template/features-home?fromToken=Ld2gwvjT9pA8rJwPSGJT051CzUQUX&sceneId=885&itemId=624977962923&dczt_module_id=19173&expo_id=2031208027&spm=a217e.1212.c1.d1&sourceType=other&showCustomNav=true&wh_biz=tm&hd_from_env=han12&item_id=624977962923&spma=a21biw&a=1&hd_from_id=100079&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
-            "7842 expo_0_2031256021_7842_0",
-            "7842 expo_0_2031256022_7842_0",
-            "7842 expo_0_2031256023_7842_0",
-            "7842 expo_0_2031256024_7842_0",
-            "7842 expo_0_2031256025_7842_0",
-            "7842 expo_0_2031256026_7842_0",
-            "7842 expo_0_2031256027_7842_0",
-            "7842 expo_0_2031256028_7842_0",
-            "7842 expo_0_2031256029_7842_0",
-            "7842 expo_0_2031256030_7842_0",
-            "7842 expo_0_2031256031_7842_0",
-            "7842 expo_0_2031256032_7842_0",
-            "7842 expo_0_2031256033_7842_0",
-            "7842 expo_0_2031256034_7842_0",
-            "7842 expo_0_2031256035_7842_0"
+            "8021 expo_0_2031256021_8021_0",
+            "8021 expo_0_2031256022_8021_0",
+            "8021 expo_0_2031256023_8021_0",
+            "8021 expo_0_2031256024_8021_0",
+            "8021 expo_0_2031256025_8021_0",
+            "8021 expo_0_2031256026_8021_0",
+            "8021 expo_0_2031256027_8021_0",
+            "8021 expo_0_2031256028_8021_0",
+            "8021 expo_0_2031256029_8021_0",
+            "8021 expo_0_2031256030_8021_0",
+            "8021 expo_0_2031256031_8021_0",
+            "8021 expo_0_2031256032_8021_0",
+            "8021 expo_0_2031256033_8021_0",
+            "8021 expo_0_2031256034_8021_0",
+            "8021 expo_0_2031256035_8021_0"
           ]
         }
       },
@@ -231,6 +216,7 @@
             "7459 other_0_42053_7459_0",
             "7442 other_0_55079_7442_0",
             "7441 other_0_53050_7441_0",
+            "7817 other_0_54002_7817_0",
             "7568 other_0_53054_7568_0"
           ]
         }
