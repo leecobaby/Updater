@@ -138,7 +138,7 @@
     }
   },
   "1212hlz": {
-    "version": "数据库版本:12.5.1",
+    "version": "数据库版本:12.5.2",
     "gd": "taobao://m.tb.cn/h.443HPo4",
     "end": "taobao://pages.tmall.com/wow/z/tmtjb/town/1212-home?wh_biz=tm&disableNav=YES",
     "hongbao": "taobao://m.tb.cn/h.44CiYjQ",
@@ -158,6 +158,21 @@
             "7939 cloudSailAd_0_404595573_7939_0",
             "7939 cloudSailAd_0_404595574_7939_0",
             "7939 cloudSailAd_0_404595575_7939_0"
+          ]
+        }
+      },
+      {
+        "hall": {
+          "title": "逛榜单 ⑤次",
+          "type": "hall",
+          "urlScheme": "taobao://pages.tmall.com/wow/z/phone/han-template/features-home?fromToken=Ld2gwvjT9pA8rJwPSGJT051CzUQUX&sceneId=885&itemId=624977962923&dczt_module_id=19173&expo_id=2031208027&spm=a217e.1212.c1.d1&sourceType=other&showCustomNav=true&wh_biz=tm&hd_from_env=han12&item_id=624977962923&spma=a21biw&a=1&hd_from_id=100079&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "7827 expo_0_2031256021_7827_0",
+            "7827 expo_0_2031256022_7827_0",
+            "7827 expo_0_2031256023_7827_0",
+            "7827 expo_0_2031256024_7827_0",
+            "7827 expo_0_2031256025_7827_0"
           ]
         }
       },
@@ -193,11 +208,11 @@
           "urlScheme": "taobao://s.m.taobao.com/h5?spm=a217e.1212.c1.d1&q=一直逛兰蔻正常,任务异常的话也正常&sourceType=other&fromToken=7pnxLEPU6lQvXYWJuWpUooAsRU1UY&scm=1007.23000.186462.13355645_0_0&sceneId=885&hd_from_id=100079&g_channelSrp=hudongcheng_20201212&needTabs=true&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
-            "7944 interactionSearch_0_1205429531_7944_0",
-            "7944 interactionSearch_0_1205429532_7944_0",
-            "7944 interactionSearch_0_1205429533_7944_0",
-            "7944 interactionSearch_0_1205429534_7944_0",
-            "7944 interactionSearch_0_1205429535_7944_0"
+            "7824 interactionSearch_0_1205429531_7824_0",
+            "7824 interactionSearch_0_1205429532_7824_0",
+            "7824 interactionSearch_0_1205429533_7824_0",
+            "7824 interactionSearch_0_1205429534_7824_0",
+            "7824 interactionSearch_0_1205429535_7824_0"
           ]
         }
       },
@@ -217,7 +232,8 @@
             "7442 other_0_55079_7442_0",
             "7441 other_0_53050_7441_0",
             "7817 other_0_54002_7817_0",
-            "7568 other_0_53054_7568_0"
+            "7568 other_0_53054_7568_0",
+            "7825 other_0_63001_7825_0"
           ]
         }
       },
