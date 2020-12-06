@@ -145,11 +145,11 @@
     "url": "https://gitee.com/leecogit/Updater/raw/master/tb.json"
   },
   "1212hlz": {
-    "version": "1.1",
-    "update_log": "* 增加淘宝特价版任务设置\n* 增加自动化运行功能\n* 修复任务次数显示",
+    "version": "1.2",
+    "update_log": "* 增加淘宝特价版任务设置\n* 增加自动化运行功能\n* 修复任务次数显示\n\n* 紧急修复时间错误",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/LeecoGit/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/8b799f495f4244b0bda89b70180ca73f",
+    "update": "https://www.icloud.com/shortcuts/ef108bd4a7e64a62810fda9ee7805f65",
     "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
     "notice": "自动化运行已支持~\n关注公众号：Leeco爱分享",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
