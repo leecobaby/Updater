@@ -162,9 +162,9 @@
         }
       },
       {
-        "hall": {
+        "top": {
           "title": "逛榜单 ⑤次",
-          "type": "hall",
+          "type": "top",
           "urlScheme": "taobao://pages.tmall.com/wow/z/phone/han-template/features-home?fromToken=Ld2gwvjT9pA8rJwPSGJT051CzUQUX&sceneId=885&itemId=624977962923&dczt_module_id=19173&expo_id=2031208027&spm=a217e.1212.c1.d1&sourceType=other&showCustomNav=true&wh_biz=tm&hd_from_env=han12&item_id=624977962923&spma=a21biw&a=1&hd_from_id=100079&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
@@ -233,7 +233,8 @@
             "7441 other_0_53050_7441_0",
             "7817 other_0_54002_7817_0",
             "7568 other_0_53054_7568_0",
-            "7825 other_0_63001_7825_0"
+            "7825 other_0_63001_7825_0",
+            "7454 other_0_67001_7454_0"
           ]
         }
       },
@@ -246,7 +247,22 @@
           "item": ["7593 expo_0_59001_7593_0"]
         }
       }
-    ]
+    ],
+    "taskSpecial": {
+      "taskKey": {
+        "tblite": 1
+      },
+      "task": [
+        {
+          "tblite": {
+            "title": "淘宝特价版",
+            "type": "tblite",
+            "urlScheme": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&module=h5&bootImage=0&source=ltao_detail_h5&packageName=com.taobao.litetao&bc_fl_src=taobaolite_dld_&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F",
+            "item": ["1 0"]
+          }
+        }
+      ]
+    }
   },
   "team": {
     "👤 为作者助力-5": "taobao://m.tb.cn/h.4VJwEL3?sm=201b3e",
