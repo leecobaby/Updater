@@ -146,12 +146,12 @@
   },
   "1212hlz": {
     "version": "1.5",
-    "update_log": "* 增加淘宝特价版任务设置\n* 增加自动化运行功能\n* 修复任务次数显示\n\n* 紧急修复时间错误\n* 紧急修复不读取配置文件问题",
+    "update_log": "* 已修复全部问题",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/LeecoGit/shortcuts",
-    "update": "",
+    "update": "https://www.icloud.com/shortcuts/fcdfb97d50dd4151a84737be5ac3060a",
     "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
-    "notice": "目前存在重大逻辑BUG，新版本21:30开放下载\n关注公众号：Leeco爱分享",
+    "notice": "已修复全部问题，支持自动化请看任务设置~\n关注公众号：Leeco爱分享",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=双12自动欢乐造&input=text&text=1",
     "tip": {
