@@ -149,9 +149,9 @@
     "update_log": "* 增加淘宝特价版任务设置\n* 增加自动化运行功能\n* 修复任务次数显示",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/LeecoGit/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/d584417b55be4f4eb685693df85c2ff6",
+    "update": "https://www.icloud.com/shortcuts/8718e0d20973469d8657d8e999cc90ba",
     "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
-    "notice": "0点淘宝有超级红包，第一波基本是大额，点击活动大厅查看~\n关注公众号：Leeco爱分享",
+    "notice": "自动化运行已支持~\n关注公众号：Leeco爱分享",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=双12自动欢乐造&input=text&text=1",
     "tip": {
