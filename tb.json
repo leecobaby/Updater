@@ -138,7 +138,7 @@
     }
   },
   "1212hlz": {
-    "version": "数据库版本:12.5.2",
+    "version": "数据库版本:12.7.1",
     "gd": "taobao://m.tb.cn/h.443HPo4",
     "end": "taobao://pages.tmall.com/wow/z/tmtjb/town/1212-home?wh_biz=tm&disableNav=YES",
     "hongbao": "taobao://m.tb.cn/h.44CiYjQ",
@@ -148,7 +148,7 @@
     "task": [
       {
         "shop": {
-          "title": "逛店铺1 ⑤次",
+          "title": "逛店铺 ⑥次  -  一直兰蔻才正常",
           "type": "shop",
           "urlScheme": "taobao://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&hd_from_id=100079&sceneId=885&deliveryId=",
           "textEnd": "str1&implId=str2",
@@ -157,7 +157,8 @@
             "7939 cloudSailAd_0_404595572_7939_0",
             "7939 cloudSailAd_0_404595573_7939_0",
             "7939 cloudSailAd_0_404595574_7939_0",
-            "7939 cloudSailAd_0_404595575_7939_0"
+            "7939 cloudSailAd_0_404595575_7939_0",
+            "7939 cloudSailAd_0_404595576_7939_0"
           ]
         }
       },
@@ -202,6 +203,22 @@
         }
       },
       {
+        "hall": {
+          "title": "逛会场2 ⑤次",
+          "type": "hall",
+          "urlScheme": "taobao://pages.tmall.com/wow/z/phone/han-template/features-home?fromToken=Ld2gwvjT9pA8rJwPSGJT051CzUQUX&sceneId=885&itemId=624977962923&dczt_module_id=19173&expo_id=2031208027&spm=a217e.1212.c1.d1&sourceType=other&showCustomNav=true&wh_biz=tm&hd_from_env=han12&item_id=624977962923&spma=a21biw&a=1&hd_from_id=100079&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "7821 expoExtra_0_225971001_7821_0",
+            "7821 expoExtra_0_225971002_7821_0",
+            "7821 expoExtra_0_225971003_7821_0",
+            "7821 expoExtra_0_225971004_7821_0",
+            "7821 expoExtra_0_225971005_7821_0",
+            "7821 expoExtra_0_225971006_7821_0"
+          ]
+        }
+      },
+      {
         "search": {
           "title": "逛搜索 ⑤次",
           "type": "search",
@@ -234,7 +251,8 @@
             "7817 other_0_54002_7817_0",
             "7568 other_0_53054_7568_0",
             "7825 other_0_63001_7825_0",
-            "7454 other_0_67001_7454_0"
+            "7454 other_0_67001_7454_0",
+            "7818 expo_0_56001_7818_0"
           ]
         }
       },
