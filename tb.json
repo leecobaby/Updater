@@ -139,18 +139,28 @@
   },
   "1212hlz": {
     "version": "数据库版本:12.7.1",
-    "gd": "taobao://m.tb.cn/h.443HPo4",
-    "end": "taobao://pages.tmall.com/wow/z/tmtjb/town/1212-home?wh_biz=tm&disableNav=YES",
+    "gd": "HTTPS://m.tb.cn/h.443HPo4",
+    "end": "HTTPS://pages.tmall.com/wow/z/tmtjb/town/1212-home?wh_biz=tm&disableNav=YES",
     "hongbao": "taobao://m.tb.cn/h.44CiYjQ",
-    "main": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
+    "main": "HTTPS://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
-    "home": "taobao://pages.tmall.com/wow/z/tmtjb/town/1212-home?wh_biz=tm&disableNav=YES",
+    "home": "HTTPS://pages.tmall.com/wow/z/tmtjb/town/1212-home?wh_biz=tm&disableNav=YES",
+    "appmain": {
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fwww.tmall.com%2F",
+      "taobaolite": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F"
+    },
+    "app": {
+      "淘宝": "taobao",
+      "天猫": "tmall",
+      "淘宝特价版": "taobaolite"
+    },
     "task": [
       {
         "shop": {
           "title": "逛店铺 ⑥次  -  一直兰蔻才正常",
           "type": "shop",
-          "urlScheme": "taobao://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&hd_from_id=100079&sceneId=885&deliveryId=",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&hd_from_id=100079&sceneId=885&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "7939 cloudSailAd_0_404595571_7939_0",
@@ -166,7 +176,7 @@
         "top": {
           "title": "逛榜单 ⑤次",
           "type": "top",
-          "urlScheme": "taobao://pages.tmall.com/wow/z/phone/han-template/features-home?fromToken=Ld2gwvjT9pA8rJwPSGJT051CzUQUX&sceneId=885&itemId=624977962923&dczt_module_id=19173&expo_id=2031208027&spm=a217e.1212.c1.d1&sourceType=other&showCustomNav=true&wh_biz=tm&hd_from_env=han12&item_id=624977962923&spma=a21biw&a=1&hd_from_id=100079&deliveryId=",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/z/phone/han-template/features-home?fromToken=Ld2gwvjT9pA8rJwPSGJT051CzUQUX&sceneId=885&itemId=624977962923&dczt_module_id=19173&expo_id=2031208027&spm=a217e.1212.c1.d1&sourceType=other&showCustomNav=true&wh_biz=tm&hd_from_env=han12&item_id=624977962923&spma=a21biw&a=1&hd_from_id=100079&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "7827 expo_0_2031256021_7827_0",
@@ -181,7 +191,7 @@
         "hall": {
           "title": "逛会场 ⑮次",
           "type": "hall",
-          "urlScheme": "taobao://pages.tmall.com/wow/z/phone/han-template/features-home?fromToken=Ld2gwvjT9pA8rJwPSGJT051CzUQUX&sceneId=885&itemId=624977962923&dczt_module_id=19173&expo_id=2031208027&spm=a217e.1212.c1.d1&sourceType=other&showCustomNav=true&wh_biz=tm&hd_from_env=han12&item_id=624977962923&spma=a21biw&a=1&hd_from_id=100079&deliveryId=",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/z/phone/han-template/features-home?fromToken=Ld2gwvjT9pA8rJwPSGJT051CzUQUX&sceneId=885&itemId=624977962923&dczt_module_id=19173&expo_id=2031208027&spm=a217e.1212.c1.d1&sourceType=other&showCustomNav=true&wh_biz=tm&hd_from_env=han12&item_id=624977962923&spma=a21biw&a=1&hd_from_id=100079&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "8021 expo_0_2031256021_8021_0",
@@ -206,7 +216,7 @@
         "hall": {
           "title": "逛会场2 ⑤次",
           "type": "hall",
-          "urlScheme": "taobao://pages.tmall.com/wow/z/phone/han-template/features-home?fromToken=Ld2gwvjT9pA8rJwPSGJT051CzUQUX&sceneId=885&itemId=624977962923&dczt_module_id=19173&expo_id=2031208027&spm=a217e.1212.c1.d1&sourceType=other&showCustomNav=true&wh_biz=tm&hd_from_env=han12&item_id=624977962923&spma=a21biw&a=1&hd_from_id=100079&deliveryId=",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/z/phone/han-template/features-home?fromToken=Ld2gwvjT9pA8rJwPSGJT051CzUQUX&sceneId=885&itemId=624977962923&dczt_module_id=19173&expo_id=2031208027&spm=a217e.1212.c1.d1&sourceType=other&showCustomNav=true&wh_biz=tm&hd_from_env=han12&item_id=624977962923&spma=a21biw&a=1&hd_from_id=100079&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "7821 expoExtra_0_225971001_7821_0",
@@ -222,7 +232,7 @@
         "search": {
           "title": "逛搜索 ⑤次",
           "type": "search",
-          "urlScheme": "taobao://s.m.taobao.com/h5?spm=a217e.1212.c1.d1&q=一直逛兰蔻正常,任务异常的话也正常&sourceType=other&fromToken=7pnxLEPU6lQvXYWJuWpUooAsRU1UY&scm=1007.23000.186462.13355645_0_0&sceneId=885&hd_from_id=100079&g_channelSrp=hudongcheng_20201212&needTabs=true&deliveryId=",
+          "urlScheme": "HTTPS://s.m.taobao.com/h5?spm=a217e.1212.c1.d1&q=一直逛兰蔻正常,任务异常的话也正常&sourceType=other&fromToken=7pnxLEPU6lQvXYWJuWpUooAsRU1UY&scm=1007.23000.186462.13355645_0_0&sceneId=885&hd_from_id=100079&g_channelSrp=hudongcheng_20201212&needTabs=true&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "7824 interactionSearch_0_1205429531_7824_0",
@@ -237,7 +247,7 @@
         "other": {
           "title": "逛其他 N次",
           "type": "other",
-          "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=885&sourceType=other&hd_from_id=100079&deliveryId=",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=885&sourceType=other&hd_from_id=100079&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "7521 other_0_1_7521_0",
@@ -260,7 +270,7 @@
         "farm": {
           "title": "逛亲亲农场",
           "type": "farm",
-          "urlScheme": "taobao://pages.tmall.com/wow/z/tmtjb/town/quanmin?wh_biz=tm&wh_showError=true&sceneId=892&hd_from_id=100079&disableNav=YES&deliveryId=",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/z/tmtjb/town/quanmin?wh_biz=tm&wh_showError=true&sceneId=892&hd_from_id=100079&disableNav=YES&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": ["7593 expo_0_59001_7593_0"]
         }
