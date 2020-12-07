@@ -151,7 +151,7 @@
     "github": "https://github.com/LeecoGit/shortcuts",
     "update": "https://www.icloud.com/shortcuts/ae55bdfdbd194bc09cbf960cd2483fc2",
     "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
-    "notice": "最新支持多账号模式,自动模式,解放双手~\n活动大厅20点抢惊喜红包,最低5元气~",
+    "notice": "最新支持多账号模式,自动模式,解放双手~\n多账号目前存在小问题，请设置单账号任务先。",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=双12自动欢乐造&input=text&text=1",
     "tip": {
