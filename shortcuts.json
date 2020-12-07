@@ -1,317 +1,227 @@
 {
-  "tjb": {
-    "version": "数据库版本:12.2.1",
-    "gd": "taobao://m.tb.cn/h.4f4eTck",
-    "end": "taobao://pages.tmall.com/wow/z/tmtjb/town/task?wh_biz=tm&disableNav=YES",
-    "hongbao": "taobao://m.tb.cn/h.44CiYjQ",
-    "main": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
-    "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
-    "home": "taobao://market.m.taobao.com/app/tmall-wireless/tjb-2018/index/index.html?disableNav=YES",
-    "task": [
-      {
-        "energy": {
-          "title": "攒能量",
-          "type": "energy",
-          "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&fromToken=bXNvd52Iv9Jp0n5QS9NuPoNiYh6UV&spm=a217e.xzrwy.1.1&sceneId=367&sourceType=other&hd_from_id=100005&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "6022 other_0_0_6022_0",
-            "3074 other_0_0_3074_0",
-            "3147 other_0_0_3147_0",
-            "2643 other_0_0_2643_0",
-            "3505 other_0_0_3505_0",
-            "2771 other_0_0_2771_0",
-            "3511 other_0_0_3511_0",
-            "5138 other_0_61120_5138_0",
-            "6004 other_0_3809_6004_0",
-            "5997 other_0_0_5997_0",
-            "5995 other_0_0_5995_0",
-            "3134 other_0_0_3134_0",
-            "2706 other_0_0_2706_0",
-            "2675 other_0_0_2675_0",
-            "6953 other_0_318900_6953_0",
-            "6023 other_0_3000002_6023_0",
-            "5984 other_0_50008_5984_0",
-            "3510 other_0_0_3510_0",
-            "3073 other_0_0_3073_0",
-            "6016 expo_0_45001_6016_0",
-            "7436 tjbLive_0_287418506761_7436_0",
-            "6007 other_0_92911037_6007_0",
-            "4441 cloudSailAd_0_394249587_4441_0",
-            "7486 tjbShop_0_2219509495_7486_0",
-            "6737 expo_0_1200000013_6737_0",
-            "3782 daily_0_91215489_3782_0",
-            "4436 cloudSailAd_0_3386383_4436_0",
-            "6216 other_0_1000000019_6216_0",
-            "3810 other_0_210010_3810_0",
-            "5252 other_0_45901_5252_0",
-            "7665 other_0_0_7665_0",
-            "3958 other_0_0_3958_0",
-            "4853 other_0_210005_4853_0",
-            "6809 expo_0_45007_6809_0",
-            "7739 other_0_0_7739_0",
-            "6096 expo_0_100207234511_6096_0"
-          ]
-        }
-      },
-      {
-        "shop": {
-          "title": "逛店铺",
-          "type": "shop",
-          "urlScheme": "taobao://pages.tmall.com/wow/z/tmtjb/tjbshop/coin_shops_task?wh_biz=tm&disableNav=YES&shopId=316875470&wh_dataservice=false&topIds=627271339615,606672835326,625829607411&spm=a217e.17632374&sourceId=",
-          "textEnd": "str1",
-          "item": [
-            "2027551265 0",
-            "3173651031 0",
-            "767303689 0",
-            "439649406 0",
-            "3081047815 0",
-            "1803764140 0",
-            "3055672510 0",
-            "304639978 0"
-          ]
-        }
+  "Snap_up": {
+    "version": "2.4",
+    "update": "https://www.icloud.com/shortcuts/3a499f9269a440739d20c9793183b5f0",
+    "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
+    "github": "https://github.com/LeecoGit/shortcuts/tree/master/Snap_up",
+    "update_log": "* 增强内容识别和跳转准确性\n* 修复苏宁部分链接跳转空白页问题",
+    "notice": "购买前可以帮你看看有没有隐藏优惠券哦~",
+    "tip": {
+      "rondom": ["复制整段文案都可以识别，不用刻意复制链接哦！"]
+    },
+    "tb": {
+      "url_scheme": "taobao://",
+      "tkl": {
+        "regular_expression": "([\\p{Sc}\\(])\\w{8,12}([\\p{Sc}\\)])",
+        "api_url": "https://home.vpnadmin.top:447/api",
+        "api_url_personal": "https://home.vpnadmin.top:447/test",
+        "json_tkl": "tbk_privilege_get_response.result.data.tkl",
+        "json_coupon_click_url": "tbk_privilege_get_response.result.data.coupon_click_url",
+        "json_item_url": "tbk_privilege_get_response.result.data.item_url",
+        "json_coupon_info": "tbk_privilege_get_response.result.data.coupon_info",
+        "json_coupon_type": "tbk_privilege_get_response.result.data.coupon_type",
+        "json_max_commission_rate": "tbk_privilege_get_response.result.data.max_commission_rate"
       }
-    ],
-    "taskEndEnergy": [
-      {
-        "energy": {
-          "title": "攒剩余能量",
-          "type": "energy",
-          "urlScheme": "taobao://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&fromToken=bXNvd52Iv9Jp0n5QS9NuPoNiYh6UV&spm=a217e.xzrwy.1.1&sceneId=367&sourceType=other&hd_from_id=100005&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "5984 other_0_91209094_5984_1",
-            "6004 other_0_92209598_6004_1",
-            "6023 other_0_3000003_6023_1",
-            "6016 expo_0_45001_6016_1",
-            "5252 other_0_91204278_5252_1",
-            "6216 other_0_1000000019_6216_1"
-          ]
-        }
+    },
+    "jd": {
+      "url_scheme": "openapp.jdmobile://virtual?params={\"des\":\"m\",\"category\":\"jump\",\"url\":\"URL\"}",
+      "api_url": "https://home.vpnadmin.top:447/api",
+      "json": {
+        "content": "content"
       }
-    ],
-    "taskAchievement": [
-      {
-        "achievement": {
-          "title": "做金币成就",
-          "type": "achievement",
-          "urlScheme": "taobao://market.m.taobao.com/apps/market/tjb/achievement-commodity.html?wh_weex=true&wx_navbar_transparent=true&achievementType=1&spm=a217e.achievement.btn1&achievementSetId=",
-          "textEnd": "str1",
-          "item": [
-            "301000060 0",
-            "301000061 0",
-            "301000063 0",
-            "301000064 0",
-            "301000065 0",
-            "301000067 0",
-            "301000068 0",
-            "301000069 0",
-            "301000070 0",
-            "301000071 0",
-            "301000072 0",
-            "301000078 0",
-            "301000079 0",
-            "301000080 0",
-            "301000082 0",
-            "301000084 0",
-            "301000095 0"
-          ]
-        }
+    },
+    "pdd": {
+      "url_scheme": "pinduoduo://com.xunmeng.pinduoduo/URL"
+    },
+    "sn": {
+      "url_scheme": "suning://m.suning.com/index?adTypeCode=1002&adId=URL",
+      "api_url": "https://home.vpnadmin.top:447/api",
+      "json": {
+        "content": "sn_responseContent.sn_body.queryBacthcustomlink.shortLink"
       }
-    ],
-    "share": {
-      "🔥 找优惠券抢购助手": "https://www.icloud.com/shortcuts/3a499f9269a440739d20c9793183b5f0",
-      "🧧 超级红包每天领": "taobao://m.tb.cn/h.4fW63zS",
-      "📺 双十二频道": {
-        "主会场-满200减25": "taobao://m.tb.cn/h.4fXtcSO",
-        "分会场-大牌3折": "taobao://m.tb.cn/h.4fXvXEd",
-        "分会场-预售尖货": "taobao://m.tb.cn/h.44RRse0",
-        "品牌女装": "taobao://m.tb.cn/h.4fCnLpS",
-        "爆款好书1折起": "taobao://m.tb.cn/h.4ULvaFY"
-      },
-      "📺 网红直播": {
-        "📺 薇娅 & 天王刘德华": "taobao://m.tb.cn/h.4Up7KVe",
-        "📺 雪梨_Cherie": "taobao://m.tb.cn/h.4UpI9CO",
-        "📺 李佳琦Austin": "taobao://m.tb.cn/h.4UpHPM2"
+    },
+    "more": {
+      "🧧现金红包🧧(12.3)": "taobao://m.tb.cn/h.44CiYjQ",
+      "加入QQ京东情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
+      "加入QQ淘宝情报群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=622340333&card_type=group&source=qrcode&jump_from=&auth=&authSig=RPqW9VSePIx4jWxGhYLvMvfdLkFPydHzo50qyVwmb9zhPjv7lF3HnSRF5WuJfjaX&source_id=2_40001",
+      "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
+      "视频教程": "https://video.cdnvue.com/uploads/-2216775553683075363/video/b9PwmDl",
+      "精选福利": {
+        "饿了么现金红包": "taobao://m.tb.cn/h.42QI6tb"
       }
+    },
+    "more_little": {
+      "视频教程": "https://video.cdnvue.com/uploads/-2216775553683075363/video/b9PwmDl"
+    },
+    "jjh": {
+      "ok": "no",
+      "tishi": "📋剪贴板为空，请检查一下哦~\n---------------------------------\n※猜测到你可能需要以下功能※\n\n(此为纯净版，请加群获取完整版)"
     }
+  },
+  "Google_drive_copy": {
+    "version": "2.1",
+    "update": "https://www.icloud.com/shortcuts/a581221316754223afe66fc3c6ca8e32",
+    "more": [
+      "搭建教程|http://blog.jialezi.net/?post=153",
+      "加入TG群|https://t.me/helptag",
+      "加入QQ群|https://jq.qq.com/?_wv=1027&k=5FenhoJ"
+    ]
+  },
+  "Sign_in": {
+    "version": "1.1",
+    "update": "https://www.icloud.com/shortcuts/91af4b2564134654ad2dbc7bce54bbdf",
+    "data": {
+      "【京东】京东会员签到": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"m\",\"url\":\"https://vip.m.jd.com/?&utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share&ShareTm=sbQQcUMkZ4AZ4dzVzEWiwuvB%2BSRLNefWg3OxfaKnTdb8I9fVRndWFjw2wynEdJbNYQeN1N8y4HgFy8p3e%2BemJguCDq%2B9dNOW0Ke1zCMW2Tkfy4yJCOdEnAqD9z3NKYq8VHAFLpmVrUvxYyUyM/AFrxdMuwCm0PEl0NvaSsG%2BMrA=\"}",
+      "【京东】京豆签到": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"m\",\"url\":\"https://bean.m.jd.com/share/index.action?&utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share&ShareTm=sPR%2BfxCcrAMyBuYZ%2BoZ2JcO2J5tl6T0CDcQ82VrzBQUgz8uQrvH26WuEyq23dLCx9NiW6H6MKbGLyEyFcqSRKQv1oegppTMXuN3qypHbeqRVv%2BZK4KmyTxyezhvEa1vYe0tL1EUJnPiSR76G76iuhCxozrl9gG0tPMMPTmWJObc=\"}",
+      "【京东】京东大转盘": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"m\",\"url\":\"https://turntable.m.jd.com/?actId=jgpqtzjhvaoym&appSource=jdmx\"}",
+      "【京东】领券页面签到": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"m\",\"url\":\"https://coupon.m.jd.com/center/getCouponCenter.action?categoryId=0&batchStr=00000\"}",
+      "【支付宝】砸金蛋": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://jupage.taobao.com/wow/tqg/act/zajindan",
+      "【支付宝】会员领积分": "alipays://platformapi/startapp?appId=20000160&url=%2Fwww%2FmyPoints.html",
+      "【支付宝】一分惊喜": "alipays://platformapi/startapp?appId=20000067&url=https://render.alipay.com/p/c/onemorething/home.html",
+      "【支付宝】天天抽奖": "alipays://platformapi/startapp?appId=2018103161898599"
+    },
+    "more": {
+      "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
+      "加入QQ线报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp"
+    }
+  },
+  "Chigua": {
+    "version": "1.1",
+    "update": "https://www.icloud.com/shortcuts/e28b4b92252d4caa8cf130e1d5f8d7b1",
+    "news": "https://sourl.cn/MJZNSm",
+    "contribution": "http://keeplearning.mikecrm.com/7vRUPWv"
+  },
+  "Ring": {
+    "version": "1.3",
+    "api": {
+      "get_ring": "http://home.80008800.xyz:90/gitee/",
+      "post_ring": "http://home.80008800.xyz:90/gitee/",
+      "download": "https://gitee.com/leecogit/Updater/raw/master/shortcuts/ring/"
+    },
+    "update_tip": "发现新版本！请到社区或群获取更新~",
+    "menu_tip": "☁️共享音效盒子☁️\n- 好咖啡要和朋友一起品尝\n- 好铃音也要和朋友一起分享",
+    "share_title_tip": "请输入标题\n* 以下为参考模板可删除\n* 尽量精悍别脱离内容\n* 不要换行！！！",
+    "share_title_default": "【充电】通用音效 part 1",
+    "share_body_tip": "请输入你想说的话，不输入也没关系哦~",
+    "share_content_tip": "请输入已编码的音效文本内容\n我已经自动输入你剪贴板的内容拉\n─=≡Σ(((つ•̀ω•́)つ\n温馨提醒:请尽量分享10秒以内的音效"
+  },
+  "Cat": {
+    "version": "1.7",
+    "update_log": "* 暴力解决顽固性不黑屏问题\n* 新增可选择性做任务\n* 新增停止后下次运行继续上次后面任务",
+    "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
+    "github": "https://github.com/LeecoGit/shortcuts/tree/master/1111",
+    "update": "https://www.icloud.com/shortcuts/bad13c54618343f8b32bc5698d70ec37",
+    "faq": "https://docs.qq.com/doc/DWnVlUXlQU01DZ0NJ",
+    "notice": "双12欢乐造自动任务已发布~\n关注公众号：Leeco爱分享",
+    "tip": {
+      "hongbao": "",
+      "hot": "🔥 抢购助手能找隐藏优惠券和淘礼金哦~",
+      "faq": "对欧莱雅有问题的请看",
+      "set": "",
+      "group": "",
+      "more": ""
+    },
+    "image": "https://gitee.com/leecogit/Updater/raw/master/image/1111_cat.jpeg",
+    "url": "https://gitee.com/leecogit/Updater/raw/master/1111.json"
+  },
+  "Taojb": {
+    "version": "1.4",
+    "update_log": "* 增加任务扫尾功能\n* 增加老手模式\n* 重建云端数据架构\n* 重建指令架构",
+    "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
+    "github": "https://github.com/LeecoGit/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/00688a056b61407baa342c3b6b25c4c5",
+    "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
+    "notice": "淘金币小镇此次参与双12活动，具体活动规则留意官网~\n公众号：Leeco爱分享",
+    "tip": {
+      "hongbao": "",
+      "hot": "🔥 超级红包每天领",
+      "taskEnd": "剩余没完成的任务请运行",
+      "faq": "有疑问的请查看",
+      "set": "",
+      "team": "",
+      "more": ""
+    },
+    "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
+    "url": "https://gitee.com/leecogit/Updater/raw/master/tb.json"
   },
   "1212hlz": {
-    "version": "数据库版本:12.7.1",
-    "gd": "HTTPS://m.tb.cn/h.443HPo4",
-    "end": "HTTPS://pages.tmall.com/wow/z/tmtjb/town/1212-home?wh_biz=tm&disableNav=YES",
-    "hongbao": "taobao://m.tb.cn/h.44CiYjQ",
-    "main": "HTTPS://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
-    "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
-    "home": "HTTPS://pages.tmall.com/wow/z/tmtjb/town/1212-home?wh_biz=tm&disableNav=YES",
-    "appmain": {
-      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fwww.tmall.com%2F",
-      "taobaolite": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F"
+    "version": "1.7",
+    "update_log": "* 增加多账号，多app模式\n* 修复部分机型无限修复问题\n* 优化一些通知说明",
+    "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
+    "github": "https://github.com/LeecoGit/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/ae55bdfdbd194bc09cbf960cd2483fc2",
+    "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
+    "notice": "最新支持多账号模式,自动模式,解放双手~\n活动大厅20点抢惊喜红包,最低5元气~",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
+    "automation_url": "shortcuts://run-shortcut?name=双12自动欢乐造&input=text&text=1",
+    "tip": {
+      "hongbao": "",
+      "hot": "🔥 20点抢惊喜红包",
+      "tjb": "请配合食用",
+      "faq": "有疑问的请查看",
+      "set": "点击查看自动化操作",
+      "team": "",
+      "more": ""
     },
-    "app": {
-      "淘宝": "taobao",
-      "天猫": "tmall",
-      "淘宝特价版": "taobaolite"
+    "image": "https://gitee.com/leecogit/Updater/raw/master/image/1212_hlz.png",
+    "url": "https://gitee.com/leecogit/Updater/raw/master/tb.json"
+  },
+  "Business": {
+    "version": "1.0",
+    "update_log": "",
+    "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
+    "github": "https://github.com/LeecoGit/shortcuts/tree/master/1111",
+    "update": "",
+    "faq": "",
+    "notice": "全民营业很早做了，但因为签名问题出来的很晚，目前也未解决，就当做半成品学习交流用吧，有问题自己摸索或手动！",
+    "hot": "",
+    "tip": { "hongbao": "" },
+    "image": "https://gitee.com/leecogit/Updater/raw/master/image/1111_qmyy.jpeg",
+    "url": "https://gitee.com/leecogit/Updater/raw/master/1111.json"
+  },
+  "More": {
+    "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
+    "加入QQ情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
+    "其他捷径作品": "https://shimo.im/docs/DHcYv8xjcYxvHvQg/",
+    "🧧现金红包(12.3)": "taobao://m.tb.cn/h.44CiYjQ",
+    "🧧超级红包": "taobao://m.tb.cn/h.4fXJuYd",
+    "饿了么现金红包": "taobao://m.tb.cn/h.42QI6tb"
+  },
+  "jjh": {
+    "ok": "yes",
+    "tishi": "📋剪贴板为空，请检查一下哦~\n---------------------------------\n※猜测到你可能需要以下功能※\n\n(此为纯净版，请加群获取完整版)",
+    "hongbao": "alipays://platformapi/startapp?appId=88886666&appClearTop=false&target=groupPre&bizType=CROWD_CODE_CASH&crowdNo=202006200206302127940823700055790860&universalDetail=true&clientVersion=10.0.0-5&prevBiz=code&sign=52e3fa8195d4210bd1e7ecc8ba907b25c428533179eff3f91421b22ee04907a2&schemeMode=reInside&source=passcode"
+  },
+  "Contact": {
+    "qq": "mqq://card/show_pslcard?src_type=internal&version=1&uin=1917019372&card_type=person&source=sharecard",
+    "qqGroup": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=605346047&card_type=group&source=qrcode&jump_from=&auth=&authSig=tFaEzF1AcIK130YGfSHWJ15xFQh6kzpeUL3KIkWmoaCCsN7AAATFaWqFUiXeNM4W&source_id=2_40001",
+    "tgGroup": ""
+  },
+  "more": {
+    "mode": "more1",
+    "tip": "新一期现金红包已发放",
+    "more0": {
+      "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ"
     },
-    "task": [
-      {
-        "shop": {
-          "title": "逛店铺 ⑥次  -  一直兰蔻才正常",
-          "type": "shop",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&hd_from_id=100079&sceneId=885&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "7939 cloudSailAd_0_404595571_7939_0",
-            "7939 cloudSailAd_0_404595572_7939_0",
-            "7939 cloudSailAd_0_404595573_7939_0",
-            "7939 cloudSailAd_0_404595574_7939_0",
-            "7939 cloudSailAd_0_404595575_7939_0",
-            "7939 cloudSailAd_0_404595576_7939_0"
-          ]
-        }
-      },
-      {
-        "top": {
-          "title": "逛榜单 ⑤次",
-          "type": "top",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/z/phone/han-template/features-home?fromToken=Ld2gwvjT9pA8rJwPSGJT051CzUQUX&sceneId=885&itemId=624977962923&dczt_module_id=19173&expo_id=2031208027&spm=a217e.1212.c1.d1&sourceType=other&showCustomNav=true&wh_biz=tm&hd_from_env=han12&item_id=624977962923&spma=a21biw&a=1&hd_from_id=100079&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "7827 expo_0_2031256021_7827_0",
-            "7827 expo_0_2031256022_7827_0",
-            "7827 expo_0_2031256023_7827_0",
-            "7827 expo_0_2031256024_7827_0",
-            "7827 expo_0_2031256025_7827_0"
-          ]
-        }
-      },
-      {
-        "hall": {
-          "title": "逛会场 ⑮次",
-          "type": "hall",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/z/phone/han-template/features-home?fromToken=Ld2gwvjT9pA8rJwPSGJT051CzUQUX&sceneId=885&itemId=624977962923&dczt_module_id=19173&expo_id=2031208027&spm=a217e.1212.c1.d1&sourceType=other&showCustomNav=true&wh_biz=tm&hd_from_env=han12&item_id=624977962923&spma=a21biw&a=1&hd_from_id=100079&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "8021 expo_0_2031256021_8021_0",
-            "8021 expo_0_2031256022_8021_0",
-            "8021 expo_0_2031256023_8021_0",
-            "8021 expo_0_2031256024_8021_0",
-            "8021 expo_0_2031256025_8021_0",
-            "8021 expo_0_2031256026_8021_0",
-            "8021 expo_0_2031256027_8021_0",
-            "8021 expo_0_2031256028_8021_0",
-            "8021 expo_0_2031256029_8021_0",
-            "8021 expo_0_2031256030_8021_0",
-            "8021 expo_0_2031256031_8021_0",
-            "8021 expo_0_2031256032_8021_0",
-            "8021 expo_0_2031256033_8021_0",
-            "8021 expo_0_2031256034_8021_0",
-            "8021 expo_0_2031256035_8021_0"
-          ]
-        }
-      },
-      {
-        "hall": {
-          "title": "逛会场2 ⑤次",
-          "type": "hall",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/z/phone/han-template/features-home?fromToken=Ld2gwvjT9pA8rJwPSGJT051CzUQUX&sceneId=885&itemId=624977962923&dczt_module_id=19173&expo_id=2031208027&spm=a217e.1212.c1.d1&sourceType=other&showCustomNav=true&wh_biz=tm&hd_from_env=han12&item_id=624977962923&spma=a21biw&a=1&hd_from_id=100079&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "7821 expoExtra_0_225971001_7821_0",
-            "7821 expoExtra_0_225971002_7821_0",
-            "7821 expoExtra_0_225971003_7821_0",
-            "7821 expoExtra_0_225971004_7821_0",
-            "7821 expoExtra_0_225971005_7821_0",
-            "7821 expoExtra_0_225971006_7821_0"
-          ]
-        }
-      },
-      {
-        "search": {
-          "title": "逛搜索 ⑤次",
-          "type": "search",
-          "urlScheme": "HTTPS://s.m.taobao.com/h5?spm=a217e.1212.c1.d1&q=一直逛兰蔻正常,任务异常的话也正常&sourceType=other&fromToken=7pnxLEPU6lQvXYWJuWpUooAsRU1UY&scm=1007.23000.186462.13355645_0_0&sceneId=885&hd_from_id=100079&g_channelSrp=hudongcheng_20201212&needTabs=true&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "7824 interactionSearch_0_1205429531_7824_0",
-            "7824 interactionSearch_0_1205429532_7824_0",
-            "7824 interactionSearch_0_1205429533_7824_0",
-            "7824 interactionSearch_0_1205429534_7824_0",
-            "7824 interactionSearch_0_1205429535_7824_0"
-          ]
-        }
-      },
-      {
-        "other": {
-          "title": "逛其他 N次",
-          "type": "other",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=885&sourceType=other&hd_from_id=100079&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "7521 other_0_1_7521_0",
-            "7448 other_0_53051_7448_0",
-            "7469 other_0_65001_7469_0",
-            "7438 other_0_52005_7438_0",
-            "7449 other_0_57068_7449_0",
-            "7459 other_0_42053_7459_0",
-            "7442 other_0_55079_7442_0",
-            "7441 other_0_53050_7441_0",
-            "7817 other_0_54002_7817_0",
-            "7568 other_0_53054_7568_0",
-            "7825 other_0_63001_7825_0",
-            "7454 other_0_67001_7454_0",
-            "7818 expo_0_56001_7818_0"
-          ]
-        }
-      },
-      {
-        "farm": {
-          "title": "逛亲亲农场",
-          "type": "farm",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/z/tmtjb/town/quanmin?wh_biz=tm&wh_showError=true&sceneId=892&hd_from_id=100079&disableNav=YES&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": ["7593 expo_0_59001_7593_0"]
-        }
+    "more1": {
+      "加入QQ讨论群(已满)": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
+      "加入TG讨论群": "https://t.me/xuehaushe_chat",
+      "加入QQ情报群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=622340333&card_type=group&source=qrcode&jump_from=&auth=&authSig=RPqW9VSePIx4jWxGhYLvMvfdLkFPydHzo50qyVwmb9zhPjv7lF3HnSRF5WuJfjaX&source_id=2_40001",
+      "其他捷径作品": "https://shimo.im/docs/DHcYv8xjcYxvHvQg/",
+      "🧧 现金红包(12.3)": "taobao://m.tb.cn/h.44CiYjQ",
+      "🧧 超级红包每天领": "taobao://m.tb.cn/h.4fW63zS",
+      "饿了么现金红包   部分老用户有12无门槛补贴": "taobao://m.tb.cn/h.42QI6tb"
+    },
+    "more2": {
+      "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
+      "加入QQ京东情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
+      "加入QQ淘宝情报群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=622340333&card_type=group&source=qrcode&jump_from=&auth=&authSig=RPqW9VSePIx4jWxGhYLvMvfdLkFPydHzo50qyVwmb9zhPjv7lF3HnSRF5WuJfjaX&source_id=2_40001",
+      "其他捷径作品": "https://shimo.im/docs/DHcYv8xjcYxvHvQg/",
+      "🧧现金红包🧧(12.3)": "taobao://m.tb.cn/h.44CiYjQ",
+      "平台红包": {
+        "饿了么现金红包": "taobao://m.tb.cn/h.42QI6tb",
+        "支付宝现金红包": "taobao://m.tb.cn/h.VzY0yti"
       }
-    ],
-    "taskSpecial": {
-      "taskKey": {
-        "tblite": 1
-      },
-      "task": [
-        {
-          "tblite": {
-            "title": "淘宝特价版",
-            "type": "tblite",
-            "urlScheme": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&module=h5&bootImage=0&source=ltao_detail_h5&packageName=com.taobao.litetao&bc_fl_src=taobaolite_dld_&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F",
-            "item": ["1 0"]
-          }
-        }
-      ]
-    }
-  },
-  "team": {
-    "👤 为作者助力-5": "taobao://m.tb.cn/h.4VJwEL3?sm=201b3e",
-    "👤 为作者助力-10": "taobao://m.tb.cn/h.44l6CRs?sm=44851d",
-    "👥 相互助力群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=830385420&card_type=group&source=qrcode&jump_from=&auth=&authSig=CtFeH1TafXW5JK0ALJh4EbaUkBHKJ6ykRB6+ejGS3fvjGPae8Am9sPg+sm0xsTNX&source_id=2_40001"
-  },
-  "share": {
-    "🔥 找优惠券抢购助手": "https://www.icloud.com/shortcuts/3a499f9269a440739d20c9793183b5f0",
-    "🧧 超级红包每天领": "taobao://m.tb.cn/h.4fW63zS",
-    "🧧 20点惊喜红包抢到最低5元": "taobao://m.tb.cn/h.45fonhd",
-    "📺 双十二频道": {
-      "主会场-满200减25": "taobao://m.tb.cn/h.4fXtcSO",
-      "分会场-大牌3折": "taobao://m.tb.cn/h.4fXvXEd",
-      "分会场-预售尖货": "taobao://m.tb.cn/h.44RRse0",
-      "品牌女装": "taobao://m.tb.cn/h.4fCnLpS",
-      "爆款好书1折起": "taobao://m.tb.cn/h.4ULvaFY"
-    },
-    "📺 网红直播": {
-      "📺 薇娅 & 天王刘德华": "taobao://m.tb.cn/h.4Up7KVe",
-      "📺 雪梨_Cherie": "taobao://m.tb.cn/h.4UpI9CO",
-      "📺 李佳琦Austin": "taobao://m.tb.cn/h.4UpHPM2"
     }
   }
 }
