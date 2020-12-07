@@ -138,7 +138,7 @@
     }
   },
   "1212hlz": {
-    "version": "数据库版本:12.7.1",
+    "version": "数据库版本:12.7.2",
     "gd": "HTTPS://m.tb.cn/h.443HPo4",
     "end": "HTTPS://pages.tmall.com/wow/z/tmtjb/town/1212-home?wh_biz=tm&disableNav=YES",
     "hongbao": "taobao://m.tb.cn/h.44CiYjQ",
@@ -262,7 +262,8 @@
             "7568 other_0_53054_7568_0",
             "7825 other_0_63001_7825_0",
             "7454 other_0_67001_7454_0",
-            "7818 expo_0_56001_7818_0"
+            "7818 expo_0_56001_7818_0",
+            "8066 other_0_60002_8066_0"
           ]
         }
       },
