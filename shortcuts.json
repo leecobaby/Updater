@@ -41,7 +41,7 @@
       }
     },
     "more": {
-      "🧧现金红包🧧(12.3)": "taobao://m.tb.cn/h.44CiYjQ",
+      "🧧 现金红包(12.8)": "taobao://m.tb.cn/h.4ffABfW",
       "加入QQ京东情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
       "加入QQ淘宝情报群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=622340333&card_type=group&source=qrcode&jump_from=&auth=&authSig=RPqW9VSePIx4jWxGhYLvMvfdLkFPydHzo50qyVwmb9zhPjv7lF3HnSRF5WuJfjaX&source_id=2_40001",
       "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
@@ -145,13 +145,13 @@
     "url": "https://gitee.com/leecogit/Updater/raw/master/tb.json"
   },
   "1212hlz": {
-    "version": "1.7",
-    "update_log": "* 增加多账号，多app模式\n* 修复部分机型无限修复问题\n* 优化一些通知说明",
+    "version": "1.8",
+    "update_log": "* 修复天猫和特价版任务异常\n* 支持ipad用户正常任务\n* 优化多账号任务",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/LeecoGit/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/ae55bdfdbd194bc09cbf960cd2483fc2",
+    "update": "https://www.icloud.com/shortcuts/eee14ba511354078b435294e8ba2b8f1",
     "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
-    "notice": "最新支持多账号模式,自动模式,解放双手~\n19点 20点惊喜红包,最低5元~",
+    "notice": "最新支持多账号模式,自动模式,解放双手~\n每天19点 20点惊喜红包,最低5元~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=双12自动欢乐造&input=text&text=1",
     "tip": {
@@ -161,7 +161,7 @@
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
-      "more": ""
+      "more": "新一期现金红包已发放"
     },
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/1212_hlz.png",
     "url": "https://gitee.com/leecogit/Updater/raw/master/tb.json"
@@ -183,7 +183,7 @@
     "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
     "加入QQ情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
     "其他捷径作品": "https://shimo.im/docs/DHcYv8xjcYxvHvQg/",
-    "🧧现金红包(12.3)": "taobao://m.tb.cn/h.44CiYjQ",
+    "🧧 现金红包(12.8)": "taobao://m.tb.cn/h.4ffABfW",
     "🧧超级红包": "taobao://m.tb.cn/h.4fXJuYd",
     "饿了么现金红包": "taobao://m.tb.cn/h.42QI6tb"
   },
@@ -208,7 +208,7 @@
       "加入TG讨论群": "https://t.me/xuehaushe_chat",
       "加入QQ情报群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=622340333&card_type=group&source=qrcode&jump_from=&auth=&authSig=RPqW9VSePIx4jWxGhYLvMvfdLkFPydHzo50qyVwmb9zhPjv7lF3HnSRF5WuJfjaX&source_id=2_40001",
       "其他捷径作品": "https://shimo.im/docs/DHcYv8xjcYxvHvQg/",
-      "🧧 现金红包(12.3)": "taobao://m.tb.cn/h.44CiYjQ",
+      "🧧 现金红包(12.8)": "taobao://m.tb.cn/h.4ffABfW",
       "🧧 超级红包每天领": "taobao://m.tb.cn/h.4fW63zS",
       "饿了么现金红包   部分老用户有12无门槛补贴": "taobao://m.tb.cn/h.42QI6tb"
     },
@@ -217,7 +217,7 @@
       "加入QQ京东情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
       "加入QQ淘宝情报群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=622340333&card_type=group&source=qrcode&jump_from=&auth=&authSig=RPqW9VSePIx4jWxGhYLvMvfdLkFPydHzo50qyVwmb9zhPjv7lF3HnSRF5WuJfjaX&source_id=2_40001",
       "其他捷径作品": "https://shimo.im/docs/DHcYv8xjcYxvHvQg/",
-      "🧧现金红包🧧(12.3)": "taobao://m.tb.cn/h.44CiYjQ",
+      "🧧 现金红包(12.8)": "taobao://m.tb.cn/h.4ffABfW",
       "平台红包": {
         "饿了么现金红包": "taobao://m.tb.cn/h.42QI6tb",
         "支付宝现金红包": "taobao://m.tb.cn/h.VzY0yti"
