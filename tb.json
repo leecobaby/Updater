@@ -138,17 +138,23 @@
     }
   },
   "1212hlz": {
-    "version": "数据库版本:12.7.2",
+    "version": "数据库版本:12.8.1",
     "gd": "HTTPS://m.tb.cn/h.443HPo4",
     "end": "HTTPS://pages.tmall.com/wow/z/tmtjb/town/1212-home?wh_biz=tm&disableNav=YES",
     "hongbao": "taobao://m.tb.cn/h.44CiYjQ",
     "main": "HTTPS://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
     "home": "HTTPS://pages.tmall.com/wow/z/tmtjb/town/1212-home?wh_biz=tm&disableNav=YES",
-    "appmain": {
-      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fwww.tmall.com%2F",
-      "taobaolite": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F"
+    "appurl": {
+      "main": {
+        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
+        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fwww.tmall.com%2F",
+        "taobaolite": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F"
+      },
+      "urlScheme": {
+        "tmall": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=885&sourceType=other&hd_from_id=100079&deliveryId=",
+        "taobaolite": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=885&sourceType=other&hd_from_id=100079&deliveryId="
+      }
     },
     "app": {
       "淘宝": "taobao",
@@ -176,7 +182,7 @@
         "top": {
           "title": "逛榜单 ⑤次",
           "type": "top",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/z/phone/han-template/features-home?fromToken=Ld2gwvjT9pA8rJwPSGJT051CzUQUX&sceneId=885&itemId=624977962923&dczt_module_id=19173&expo_id=2031208027&spm=a217e.1212.c1.d1&sourceType=other&showCustomNav=true&wh_biz=tm&hd_from_env=han12&item_id=624977962923&spma=a21biw&a=1&hd_from_id=100079&deliveryId=",
+          "urlScheme": "HTTPS://huodong.taobao.com/wow/a/act/tao/tmc/28758/3705/wupr?disableNav=YES&fromToken=Jw7xKO0IJ90dYL5ehndF9wbukUPUR&sceneId=885&itemId=613643090033&dczt_module_id=19173&expo_id=224280025&srcinfo=mainexpo_1&wh_pid=industry-224280&showCustomNav=true&wh_biz=tm&sourceType=other&hd_from_id=100079&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "7827 expo_0_2031256021_7827_0",
@@ -189,9 +195,9 @@
       },
       {
         "hall": {
-          "title": "逛会场 ⑮次",
+          "title": "逛会场Ⅰ ⑮次",
           "type": "hall",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/z/phone/han-template/features-home?fromToken=Ld2gwvjT9pA8rJwPSGJT051CzUQUX&sceneId=885&itemId=624977962923&dczt_module_id=19173&expo_id=2031208027&spm=a217e.1212.c1.d1&sourceType=other&showCustomNav=true&wh_biz=tm&hd_from_env=han12&item_id=624977962923&spma=a21biw&a=1&hd_from_id=100079&deliveryId=",
+          "urlScheme": "HTTPS://huodong.taobao.com/wow/a/act/tao/tmc/28758/3705/wupr?disableNav=YES&fromToken=Jw7xKO0IJ90dYL5ehndF9wbukUPUR&sceneId=885&itemId=613643090033&dczt_module_id=19173&expo_id=224280025&srcinfo=mainexpo_1&wh_pid=industry-224280&showCustomNav=true&wh_biz=tm&sourceType=other&hd_from_id=100079&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "8021 expo_0_2031256021_8021_0",
@@ -213,18 +219,32 @@
         }
       },
       {
-        "hall": {
-          "title": "逛会场2 ⑤次",
+        "hall2": {
+          "title": "逛会场Ⅱ ⑤次",
           "type": "hall",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/z/phone/han-template/features-home?fromToken=Ld2gwvjT9pA8rJwPSGJT051CzUQUX&sceneId=885&itemId=624977962923&dczt_module_id=19173&expo_id=2031208027&spm=a217e.1212.c1.d1&sourceType=other&showCustomNav=true&wh_biz=tm&hd_from_env=han12&item_id=624977962923&spma=a21biw&a=1&hd_from_id=100079&deliveryId=",
+          "urlScheme": "HTTPS://huodong.taobao.com/wow/a/act/tao/tmc/28758/3705/wupr?disableNav=YES&fromToken=Jw7xKO0IJ90dYL5ehndF9wbukUPUR&sceneId=885&itemId=613643090033&dczt_module_id=19173&expo_id=224280025&srcinfo=mainexpo_1&wh_pid=industry-224280&showCustomNav=true&wh_biz=tm&sourceType=other&hd_from_id=100079&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "7821 expoExtra_0_225971001_7821_0",
             "7821 expoExtra_0_225971002_7821_0",
             "7821 expoExtra_0_225971003_7821_0",
             "7821 expoExtra_0_225971004_7821_0",
-            "7821 expoExtra_0_225971005_7821_0",
-            "7821 expoExtra_0_225971006_7821_0"
+            "7821 expoExtra_0_225971005_7821_0"
+          ]
+        }
+      },
+      {
+        "hall3": {
+          "title": "逛会场Ⅲ ⑤次",
+          "type": "hall",
+          "urlScheme": "HTTPS://huodong.taobao.com/wow/a/act/tao/tmc/28758/3705/wupr?disableNav=YES&fromToken=Jw7xKO0IJ90dYL5ehndF9wbukUPUR&sceneId=885&itemId=613643090033&dczt_module_id=19173&expo_id=224280025&srcinfo=mainexpo_1&wh_pid=industry-224280&showCustomNav=true&wh_biz=tm&sourceType=other&hd_from_id=100079&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "8079 expo_0_2031260021_8079_0",
+            "8079 expo_0_2031260022_8079_0",
+            "8079 expo_0_2031260023_8079_0",
+            "8079 expo_0_2031260024_8079_0",
+            "8079 expo_0_2031260025_8079_0"
           ]
         }
       },
@@ -232,7 +252,7 @@
         "search": {
           "title": "逛搜索 ⑤次",
           "type": "search",
-          "urlScheme": "HTTPS://s.m.taobao.com/h5?spm=a217e.1212.c1.d1&q=一直逛兰蔻正常,任务异常的话也正常&sourceType=other&fromToken=7pnxLEPU6lQvXYWJuWpUooAsRU1UY&scm=1007.23000.186462.13355645_0_0&sceneId=885&hd_from_id=100079&g_channelSrp=hudongcheng_20201212&needTabs=true&deliveryId=",
+          "urlScheme": "HTTPS://huodong.taobao.com/wow/a/act/tao/tmc/28758/3705/wupr?disableNav=YES&fromToken=Jw7xKO0IJ90dYL5ehndF9wbukUPUR&sceneId=885&itemId=613643090033&dczt_module_id=19173&expo_id=224280025&srcinfo=mainexpo_1&wh_pid=industry-224280&showCustomNav=true&wh_biz=tm&sourceType=other&hd_from_id=100079&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "7824 interactionSearch_0_1205429531_7824_0",
@@ -247,7 +267,7 @@
         "other": {
           "title": "逛其他 N次",
           "type": "other",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=885&sourceType=other&hd_from_id=100079&deliveryId=",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?disableNav=YES&wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=885&sourceType=other&hd_from_id=100079&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "7521 other_0_1_7521_0",
@@ -263,7 +283,8 @@
             "7825 other_0_63001_7825_0",
             "7454 other_0_67001_7454_0",
             "7818 expo_0_56001_7818_0",
-            "8066 other_0_60002_8066_0"
+            "8066 other_0_60002_8066_0",
+            "8072 other_0_54002_8072_0"
           ]
         }
       },
