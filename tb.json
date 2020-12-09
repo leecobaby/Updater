@@ -139,7 +139,7 @@
     }
   },
   "1212hlz": {
-    "version": "数据库版本:12.9.1",
+    "version": "数据库版本:12.9.2",
     "gd": "HTTPS://m.tb.cn/h.443HPo4",
     "end": "HTTPS://pages.tmall.com/wow/z/tmtjb/town/1212-home?wh_biz=tm&disableNav=YES",
     "hongbao": "taobao://m.tb.cn/h.44CiYjQ",
@@ -165,7 +165,7 @@
     "task": [
       {
         "shop": {
-          "title": "逛店铺 ⑥次  -  一直兰蔻才正常",
+          "title": "逛店铺Ⅰ ⑥次",
           "type": "shop",
           "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&hd_from_id=100079&sceneId=885&deliveryId=",
           "textEnd": "str1&implId=str2",
@@ -176,6 +176,22 @@
             "7939 cloudSailAd_0_404595574_7939_0",
             "7939 cloudSailAd_0_404595575_7939_0",
             "7939 cloudSailAd_0_404595576_7939_0"
+          ]
+        }
+      },
+      {
+        "shop": {
+          "title": "逛店铺Ⅱ ⑤次",
+          "type": "shop",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&hd_from_id=100079&sceneId=885&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "7516 cloudSailAd_0_404595571_7516_0",
+            "7516 cloudSailAd_0_404595572_7516_0",
+            "7516 cloudSailAd_0_404595573_7516_0",
+            "7516 cloudSailAd_0_404595574_7516_0",
+            "7516 cloudSailAd_0_404595575_7516_0",
+            "7516 cloudSailAd_0_404595576_7516_0"
           ]
         }
       },
