@@ -148,7 +148,7 @@
     ]
   },
   "1212hlz": {
-    "version": "数据库版本:12.9.2",
+    "version": "数据库版本:12.10.1",
     "gd": "HTTPS://m.tb.cn/h.443HPo4",
     "end": "HTTPS://pages.tmall.com/wow/z/tmtjb/town/1212-home?wh_biz=tm&disableNav=YES",
     "hongbao": "taobao://m.tb.cn/h.44CiYjQ",
@@ -201,6 +201,22 @@
             "7516 cloudSailAd_0_404595574_7516_0",
             "7516 cloudSailAd_0_404595575_7516_0",
             "7516 cloudSailAd_0_404595576_7516_0"
+          ]
+        }
+      },
+      {
+        "shop": {
+          "title": "逛店铺Ⅲ ⑤次",
+          "type": "shop",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&hd_from_id=100079&sceneId=885&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "7517 cloudSailAd_0_404595571_7517_0",
+            "7517 cloudSailAd_0_404595572_7517_0",
+            "7517 cloudSailAd_0_404595573_7517_0",
+            "7517 cloudSailAd_0_404595574_7517_0",
+            "7517 cloudSailAd_0_404595575_7517_0",
+            "7517 cloudSailAd_0_404595576_7517_0"
           ]
         }
       },
@@ -360,7 +376,10 @@
     "📺 网红直播": {
       "📺 薇娅 & 天王刘德华": "taobao://m.tb.cn/h.4Up7KVe",
       "📺 雪梨_Cherie": "taobao://m.tb.cn/h.4UpI9CO",
-      "📺 李佳琦Austin": "taobao://m.tb.cn/h.4UpHPM2"
+      "📺 李佳琦Austin": "taobao://m.tb.cn/h.4UpHPM2",
+      "📺 吉杰": "taobao://m.tb.cn/h.45g8UPb",
+      "📺 苏宁官方直播": "taobao://m.tb.cn/h.4UPmARX",
+      "📺 聚划算百亿补贴直播": "taobao://m.tb.cn/h.4fHEgIl"
     }
   }
 }
