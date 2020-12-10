@@ -125,13 +125,13 @@
     "url": "https://gitee.com/leecogit/Updater/raw/master/1111.json"
   },
   "Taojb": {
-    "version": "1.5",
-    "update_log": "* 新增多账号、自动化功能\n* 支持ipad用户使用\n* 优化指令架构",
+    "version": "1.6",
+    "update_log": "* 增加修复功能来解决一些问题\n* 修复自动化出错bug,感谢微信粉丝@Q反馈",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/LeecoGit/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/7bb1bb8f50c248289712640bbb0341c4",
+    "update": "https://www.icloud.com/shortcuts/821b1198003d4ac58fd64f3576bb681d",
     "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
-    "notice": "已支持自动化,多账号,ipad终端\n每天20点惊喜红包,最低5元~",
+    "notice": "已支持自动化,多账号,ipad终端\n遇到无法运行问题的请尝试使用修复功能！",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=淘金币自动任务&input=text&text=1",
     "tip": {
