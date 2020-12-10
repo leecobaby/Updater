@@ -13,8 +13,8 @@
       "url_scheme": "taobao://",
       "tkl": {
         "regular_expression": "([\\p{Sc}\\(])\\w{8,12}([\\p{Sc}\\)])",
-        "api_url": "https://home.cdn.80008800.xyz:84/api",
-        "api_url_personal": "https://home.cdn.80008800.xyz:84/test",
+        "api_url": "http://home.cdn.80008800.xyz/api",
+        "api_url_personal": "http://home.cdn.80008800.xyz/test",
         "json_tkl": "tbk_privilege_get_response.result.data.tkl",
         "json_coupon_click_url": "tbk_privilege_get_response.result.data.coupon_click_url",
         "json_item_url": "tbk_privilege_get_response.result.data.item_url",
@@ -25,7 +25,7 @@
     },
     "jd": {
       "url_scheme": "openapp.jdmobile://virtual?params={\"des\":\"m\",\"category\":\"jump\",\"url\":\"URL\"}",
-      "api_url": "https://home.cdn.80008800.xyz:84/api",
+      "api_url": "http://home.cdn.80008800.xyz/api",
       "json": {
         "content": "content"
       }
@@ -35,7 +35,7 @@
     },
     "sn": {
       "url_scheme": "suning://m.suning.com/index?adTypeCode=1002&adId=URL",
-      "api_url": "https://home.cdn.80008800.xyz:84/api",
+      "api_url": "http://home.cdn.80008800.xyz/api",
       "json": {
         "content": "sn_responseContent.sn_body.queryBacthcustomlink.shortLink"
       }
