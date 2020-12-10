@@ -132,6 +132,7 @@
     "update": "https://www.icloud.com/shortcuts/7bb1bb8f50c248289712640bbb0341c4",
     "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
     "notice": "已支持自动化,多账号,ipad终端\n每天20点惊喜红包,最低5元~",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=淘金币自动任务&input=text&text=1",
     "tip": {
       "hongbao": "",
