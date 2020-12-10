@@ -125,13 +125,14 @@
     "url": "https://gitee.com/leecogit/Updater/raw/master/1111.json"
   },
   "Taojb": {
-    "version": "1.4",
-    "update_log": "* 增加任务扫尾功能\n* 增加老手模式\n* 重建云端数据架构\n* 重建指令架构",
+    "version": "1.5",
+    "update_log": "* 新增多账号、自动化功能\n* 支持ipad用户使用\n* 优化指令架构",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/LeecoGit/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/00688a056b61407baa342c3b6b25c4c5",
+    "update": "https://www.icloud.com/shortcuts/7bb1bb8f50c248289712640bbb0341c4",
     "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
-    "notice": "红包可以使用拉~\n每天20点惊喜红包,最低5元~",
+    "notice": "已支持自动化,多账号,ipad终端\n每天20点惊喜红包,最低5元~",
+    "automation_url": "shortcuts://run-shortcut?name=淘金币自动任务&input=text&text=1",
     "tip": {
       "hongbao": "",
       "hot": "🔥 超级红包每天领",
