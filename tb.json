@@ -365,6 +365,52 @@
       }
     ]
   },
+  "jhs": {
+    "version": "数据库版本:12.12.1",
+    "gd": "HTTPS://m.tb.cn/h.4f4eTck",
+    "end": "HTTPS://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?wh_pid=daily-192654&disableNav=YES",
+    "hongbao": "taobao://m.tb.cn/h.44CiYjQ",
+    "main": "HTTPS://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
+    "image": "https://gitee.com/leecogit/Updater/raw/master/image/tb_ttlhb.png",
+    "home": "HTTPS://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?wh_pid=daily-192654&disableNav=YES",
+    "appurl": {
+      "main": {
+        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
+        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fwww.tmall.com%2F",
+        "taobaolite": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F"
+      }
+    },
+    "app": {
+      "淘宝": "taobao",
+      "天猫": "tmall",
+      "淘宝特价版": "taobaolite"
+    },
+    "task": [
+      {
+        "stars": {
+          "title": "攒星星",
+          "type": "stars",
+          "urlScheme": "HTTPS://huodong.m.taobao.com/act/snipcode.html?zhangyu_from_env=jhstop&spm=608.14381380.tasklist-pentaprism.782&_wml_code=9XZq%2Bt%2FxdGk2vxtkbZvNtxIRr1Fl5o%2F4JYkxzjiABZCkN0X4ug9ejN%2FEA0XumFdlCJmui3oZzrfxu2OjRTO%2FUldTSbERTDFnNVuaq4bGXYarnsLycd1U6o4btoe8H%2FSSeBk5iibFKlpytcA4vdUvH%2BU%2BttvWBrsoV0Txewchwr8%3D&sourceType=other&fromToken=xBVj6P9UvoVobWAQTnvT7EUqUZUJ&sceneId=107&hd_from_id=100027&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "2284 other_0_0_2284_0",
+            "8250 shop_0_73008_8250_0",
+            "7869 other_0_69028_7869_0",
+            "7868 other_0_54004_7868_0",
+            "8051 shop_0_73009_8051_0",
+            "4736 other_0_0_4736_0",
+            "4040 other_0_0_4040_0",
+            "4773 other_0_77002_4773_0",
+            "8244 other_0_79024_8244_0",
+            "2740 other_0_0_2740_0",
+            "782 other_0_0_782_0",
+            "3584 other_0_0_3584_0",
+            "4502 other_0_0_4502_0"
+          ]
+        }
+      }
+    ]
+  },
   "team": {
     "👤 为作者助力-5": "taobao://m.tb.cn/h.4VJwEL3?sm=201b3e",
     "👤 为作者助力-10": "taobao://m.tb.cn/h.44l6CRs?sm=44851d",
