@@ -188,6 +188,30 @@
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
+      "other": "",
+      "more": "新一期现金红包已发放"
+    }
+  },
+  "Jhs": {
+    "version": "1.0",
+    "update_log": "* 初步实现自动任务\n* 支持自动化、多账号、ipad终端\n* 采用自动淘宝任务框架",
+    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Jhs",
+    "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/9f74cfa4c2544ca08a9e4112f310f4b4",
+    "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
+    "notice": "初代版本任务数据很少,后期逐步完善\n公众号：Leeco爱分享",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
+    "automation_url": "shortcuts://run-shortcut?name=聚划算章鱼自动任务&input=text&text=1",
+    "image": "https://gitee.com/leecogit/Updater/raw/master/image/tb_jhs.png",
+    "url": "https://gitee.com/leecogit/Updater/raw/master/tb.json",
+    "tip": {
+      "hongbao": "",
+      "hot": "",
+      "faq": "有疑问的请查看",
+      "set": "点击查看自动化操作",
+      "team": "",
+      "other": "",
       "more": "新一期现金红包已发放"
     }
   },
@@ -233,9 +257,14 @@
       "加入TG讨论群": "https://t.me/xuehaushe_chat",
       "加入QQ情报群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=622340333&card_type=group&source=qrcode&jump_from=&auth=&authSig=RPqW9VSePIx4jWxGhYLvMvfdLkFPydHzo50qyVwmb9zhPjv7lF3HnSRF5WuJfjaX&source_id=2_40001",
       "其他捷径作品": "https://shimo.im/docs/DHcYv8xjcYxvHvQg/",
-      "🧧 现金红包(12.8)": "taobao://m.tb.cn/h.4ffABfW",
-      "🧧 超级红包每天领": "taobao://m.tb.cn/h.4fW63zS",
-      "饿了么现金红包   部分老用户有12无门槛补贴": "taobao://m.tb.cn/h.42QI6tb"
+      "外卖红包": {
+        "美团红包   新用户最高领56元礼包": {
+          "已安装app": "imeituan://www.meituan.com/web?lch=cps:waimai:3:a144a9fa40a42c55af00214bb4bb3993971:6232dingdanxialeeco&url=https%3A%2F%2Frunion.meituan.com%2Furl%3Fkey%3Da144a9fa40a42c55af00214bb4bb3993971%26url%3Dhttps%253A%252F%252Fi.meituan.com%252Fawp%252Fhfe%252Fblock%252Fa945391288b790d558b7%252F78716%252Findex.html%253Fappkey%253Da144a9fa40a42c55af00214bb4bb3993971%253A6232dingdanxialeeco%26sid%3D6232dingdanxialeeco",
+          "未安装app": "https://w.dianping.com/cube/evoke/growcps/meituan.html?lch=cps:waimai:1:a144a9fa40a42c55af00214bb4bb3993971:6232dingdanxialeeco&url=https%3A%2F%2Frunion.meituan.com%2Furl%3Fkey%3Da144a9fa40a42c55af00214bb4bb3993971%26url%3Dhttps%253A%252F%252Fi.meituan.com%252Fawp%252Fhfe%252Fblock%252Fa945391288b790d558b7%252F78716%252Findex.html%253Fappkey%253Da144a9fa40a42c55af00214bb4bb3993971%253A6232dingdanxialeeco%26sid%3D6232dingdanxialeeco"
+        },
+        "饿了么现金红包   部分老用户有12无门槛补贴": "taobao://m.tb.cn/h.42QI6tb"
+      },
+      "🧧 现金红包(12.12)": "taobao://m.tb.cn/h.4ffABfW"
     },
     "more2": {
       "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
