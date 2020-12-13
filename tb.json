@@ -419,6 +419,49 @@
       }
     ]
   },
+  "hlzx": {
+    "version": "数据库版本:12.13.2",
+    "gd": "HTTPS://m.tb.cn/h.4f4eTck",
+    "end": "HTTPS://pages.tmall.com/wow/z/hdwk/hdsolution2/game2020?wh_biz=tm&disableNav=YES&disableProgress=YES",
+    "hongbao": "taobao://m.tb.cn/h.44CiYjQ",
+    "main": "HTTPS://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
+    "image": "https://gitee.com/leecogit/Updater/raw/master/image/tb_ttlhb.png",
+    "home": "HTTPS://pages.tmall.com/wow/z/hdwk/hdsolution2/game2020?wh_biz=tm&disableNav=YES&disableProgress=YES",
+    "appurl": {
+      "main": {
+        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
+        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fwww.tmall.com%2F",
+        "taobaolite": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F"
+      }
+    },
+    "app": {
+      "淘宝": "taobao",
+      "天猫": "tmall",
+      "淘宝特价版": "taobaolite"
+    },
+    "task": [
+      {
+        "steps": {
+          "title": "攒步数",
+          "type": "steps",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=581&sourceType=other&hd_from_id=100008&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "4184 other_0_0_4184_0",
+            "7966 other_0_0_7966_0",
+            "8109 other_0_0_8109_0",
+            "4400 other_0_0_4400_0",
+            "3986 other_0_0_3986_0",
+            "4499 other_0_0_4499_0",
+            "5974 other_0_0_5974_0",
+            "4139 other_0_1_4139_0",
+            "4139 other_0_2_4139_0",
+            "4139 other_0_3_4139_0"
+          ]
+        }
+      }
+    ]
+  },
   "team": {
     "👤 为作者助力-5": "taobao://m.tb.cn/h.4VJwEL3?sm=201b3e",
     "👤 为作者助力-10": "taobao://m.tb.cn/h.44l6CRs?sm=44851d",
