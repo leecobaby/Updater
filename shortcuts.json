@@ -9,12 +9,14 @@
     "tip": {
       "rondom": ["复制整段文案都可以识别，不用刻意复制链接哦！"]
     },
+    "api_url": "http://home.cdn.80008800.xyz/api",
+    "api_url2": "http://api.cdn.80008800.xyz/api",
     "tb": {
       "url_scheme": "taobao://",
       "tkl": {
         "regular_expression": "([\\p{Sc}\\(])\\w{8,12}([\\p{Sc}\\)])",
         "api_url": "http://home.cdn.80008800.xyz/api",
-        "api_url_personal": "http://home.cdn.80008800.xyz/test",
+        "api_url_personal": "http://api.cdn.80008800.xyz/api",
         "json_tkl": "tbk_privilege_get_response.result.data.tkl",
         "json_coupon_click_url": "tbk_privilege_get_response.result.data.coupon_click_url",
         "json_item_url": "tbk_privilege_get_response.result.data.item_url",
