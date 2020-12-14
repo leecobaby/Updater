@@ -366,7 +366,7 @@
     ]
   },
   "jhs": {
-    "version": "数据库版本:12.12.2",
+    "version": "数据库版本:12.15.1",
     "gd": "HTTPS://m.tb.cn/h.4f4eTck",
     "end": "HTTPS://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?wh_pid=daily-192654&disableNav=YES",
     "hongbao": "taobao://m.tb.cn/h.44CiYjQ",
@@ -413,14 +413,16 @@
             "8052 shop_0_73034_8052_1",
             "8052 shop_0_73023_8052_2",
             "4127 other_0_0_4127_0",
-            "782 other_0_0_782_0"
+            "782 other_0_0_782_0",
+            "8263 other_0_79038_8263_0",
+            "7712 other_0_54003_7712_0"
           ]
         }
       }
     ]
   },
   "hlzx": {
-    "version": "数据库版本:12.13.2",
+    "version": "数据库版本:12.15.1",
     "gd": "HTTPS://m.tb.cn/h.4f4eTck",
     "end": "HTTPS://pages.tmall.com/wow/z/hdwk/hdsolution2/game2020?wh_biz=tm&disableNav=YES&disableProgress=YES",
     "hongbao": "taobao://m.tb.cn/h.44CiYjQ",
@@ -457,7 +459,10 @@
             "4139 other_0_1_4139_0",
             "4896 other_0_0_4896_0",
             "3987 other_0_0_3987_0",
-            "4568 other_0_0_4568_0"
+            "4568 other_0_0_4568_0",
+            "4522 other_0_0_4522_0",
+            "8104 other_0_0_8104_0",
+            "4490 other_0_0_4490_0"
           ]
         }
       }
