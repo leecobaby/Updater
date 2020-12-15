@@ -468,7 +468,7 @@
       }
     ]
   },
-  "farm-single": {
+  "FarmSingle": {
     "version": "数据库版本:12.15.1",
     "gd": "HTTPS://m.tb.cn/h.4f4eTck",
     "end": "HTTPS://pages.tmall.com/wow/hdwk/act/2020nhj-single?wh_biz=tm&disableNav=YES",
