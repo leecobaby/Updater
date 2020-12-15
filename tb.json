@@ -468,6 +468,47 @@
       }
     ]
   },
+  "farm-single": {
+    "version": "数据库版本:12.15.1",
+    "gd": "HTTPS://m.tb.cn/h.4f4eTck",
+    "end": "HTTPS://pages.tmall.com/wow/hdwk/act/2020nhj-single?wh_biz=tm&disableNav=YES",
+    "hongbao": "taobao://m.tb.cn/h.44CiYjQ",
+    "main": "HTTPS://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
+    "image": "https://gitee.com/leecogit/Updater/raw/master/image/tb_ttlhb.png",
+    "home": "HTTPS://pages.tmall.com/wow/hdwk/act/2020nhj-single?wh_biz=tm&disableNav=YES",
+    "appurl": {
+      "main": {
+        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
+        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fwww.tmall.com%2F",
+        "taobaolite": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F"
+      }
+    },
+    "app": {
+      "淘宝": "taobao",
+      "天猫": "tmall",
+      "淘宝特价版": "taobaolite"
+    },
+    "task": [
+      {
+        "fertilizer": {
+          "title": "集肥料",
+          "type": "other",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/tmallfarm/act/jxhh?disableNav=YES&wh_biz=tm&sourceType=other&fromToken=lrVqDJXSZDKgxlaZc56tdPeCWUdUM&sceneId=120&hd_from_id=1025&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "1868 cloudSailAd_0_291619763787_1868_0",
+            "7867 other_0_0_7867_0",
+            "6613 other_0_0_6613_0",
+            "2079 other_0_0_2079_0",
+            "3274 other_0_0_3274_0",
+            "4550 other_0_0_4550_0",
+            "3205 other_0_0_3205_0",
+            "830 sign_0_1_830_1"
+          ]
+        }
+      }
+    ]
+  },
   "team": {
     "👤 为作者助力-5": "taobao://m.tb.cn/h.4VJwEL3?sm=201b3e",
     "👤 为作者助力-10": "taobao://m.tb.cn/h.44l6CRs?sm=44851d",
