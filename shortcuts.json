@@ -246,11 +246,11 @@
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/FarmSingle",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/e5de5e61b1e342c5961b5678f92559d2",
+    "update": "https://www.icloud.com/shortcuts/ce679c1830dd43f9ba902fb573eae91a",
     "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
     "notice": "初代版本任务数据很少,后期逐步完善\n公众号：Leeco爱分享",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
-    "automation_url": "shortcuts://run-shortcut?name=活力中心自动任务&input=text&text=1",
+    "automation_url": "shortcuts://run-shortcut?name=芭芭农场自动集肥料&input=text&text=1",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tb_farm.png",
     "url": "https://gitee.com/leecogit/Updater/raw/master/tb.json",
     "tip": {
