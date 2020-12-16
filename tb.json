@@ -470,18 +470,25 @@
   },
   "FarmSingle": {
     "version": "数据库版本:12.16.1",
-    "gd": "HTTPS://m.tb.cn/h.4f4eTck",
-    "end": "HTTPS://pages.tmall.com/wow/hdwk/act/2020nhj-single?wh_biz=tm&disableNav=YES",
-    "hongbao": "taobao://m.tb.cn/h.44CiYjQ",
-    "main": "HTTPS://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
-    "image": "https://gitee.com/leecogit/Updater/raw/master/image/tb_ttlhb.png",
-    "home": "HTTPS://pages.tmall.com/wow/hdwk/act/2020nhj-single?wh_biz=tm&disableNav=YES",
-    "appurl": {
-      "main": {
-        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
-        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fwww.tmall.com%2F",
-        "taobaolite": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F"
-      }
+    "gd": {
+      "taobao": "taobao://m.tb.cn/h.4f4eTck",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4f4eTck",
+      "taobaolite": "taobaolite://m.tb.cn/h.4f4eTck"
+    },
+    "main": {
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fwww.tmall.com%2F",
+      "taobaolite": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F"
+    },
+    "home": {
+      "taobao": "taobao://pages.tmall.com/wow/hdwk/act/2020nhj-single?wh_biz=tm&disableNav=YES",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fhdwk%2Fact%2F2020nhj-single%3Fwh_biz%3Dtm%26disableNav%3DYES",
+      "taobaolite": "taobaolite://pages.tmall.com/wow/hdwk/act/2020nhj-single?wh_biz=tm&disableNav=YES"
+    },
+    "end": {
+      "taobao": "taobao://pages.tmall.com/wow/hdwk/act/2020nhj-single?wh_biz=tm&disableNav=YES",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fhdwk%2Fact%2F2020nhj-single%3Fwh_biz%3Dtm%26disableNav%3DYES",
+      "taobaolite": "taobaolite://pages.tmall.com/wow/hdwk/act/2020nhj-single?wh_biz=tm&disableNav=YES"
     },
     "app": {
       "淘宝": "taobao",
