@@ -469,7 +469,7 @@
     ]
   },
   "FarmSingle": {
-    "version": "数据库版本:12.15.1",
+    "version": "数据库版本:12.16.1",
     "gd": "HTTPS://m.tb.cn/h.4f4eTck",
     "end": "HTTPS://pages.tmall.com/wow/hdwk/act/2020nhj-single?wh_biz=tm&disableNav=YES",
     "hongbao": "taobao://m.tb.cn/h.44CiYjQ",
@@ -496,13 +496,19 @@
           "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?disableNav=YES&wh_pid=daily-216010&subSource=catsmoney&fromToken=lrVqDJXSZDKgxlaZc56tdPeCWUdUM&spm=a217e.1212.tasklist.0&sceneId=120&sourceType=other&hd_from_id=1025&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
+            "6613 other_0_0_6613_0",
+            "1867 cloudSailAd_0_291738327077_1867_0",
             "1868 cloudSailAd_0_291619763787_1868_0",
             "7867 other_0_0_7867_0",
-            "6613 other_0_0_6613_0",
+            "1914 other_0_0_1914_0",
+            "1914 other_0_0_1914_1",
+            "1914 other_0_0_1914_2",
             "2079 other_0_0_2079_0",
+            "2079 other_0_0_2079_1",
             "3274 other_0_0_3274_0",
             "4550 other_0_0_4550_0",
             "3205 other_0_0_3205_0",
+            "4394 other_0_0_4394_0",
             "830 sign_0_1_830_1"
           ]
         }
