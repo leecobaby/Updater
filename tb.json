@@ -422,7 +422,7 @@
     ]
   },
   "hlzx": {
-    "version": "数据库版本:12.15.1",
+    "version": "数据库版本:12.17.1",
     "gd": "HTTPS://m.tb.cn/h.4f4eTck",
     "end": "HTTPS://pages.tmall.com/wow/z/hdwk/hdsolution2/game2020?wh_biz=tm&disableNav=YES&disableProgress=YES",
     "hongbao": "taobao://m.tb.cn/h.44CiYjQ",
@@ -462,7 +462,23 @@
             "4568 other_0_0_4568_0",
             "4522 other_0_0_4522_0",
             "8104 other_0_0_8104_0",
-            "4490 other_0_0_4490_0"
+            "4490 other_0_0_4490_0",
+            "4772 shop_0_2_4772_0",
+            "4772 shop_0_1_4772_1",
+            "8299 expo_0_1_8299_0",
+            "8299 expo_0_2_8299_0",
+            "8299 expo_0_3_8299_0",
+            "8299 expo_0_4_8299_0",
+            "8299 expo_0_5_8299_0",
+            "8299 expo_0_6_8299_0",
+            "8299 expo_0_7_8299_0",
+            "6893 other_0_0_6893_0",
+            "4533 shop_0_1_4533_0",
+            "4533 shop_0_2_4533_0",
+            "4533 shop_0_3_4533_0",
+            "4533 shop_0_4_4533_0",
+            "4533 shop_0_5_4533_0",
+            "4533 shop_0_6_4533_0"
           ]
         }
       }
