@@ -129,6 +129,7 @@
   "Taojb": {
     "version": "1.7",
     "update_log": "- 优化重构指令框架减少冗余\n- 优化省点模式的逻辑,在运行之后在省电\n- 优化版本日志显示功能\n- 优化云端架构\n- 优化减少跳转主页次数,加快任务的完成\n- 增加打开活动页面便于其他操作\n- 增加模块化接口\n- 自动化直接默认继续上次任务",
+    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Taojb",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/41cf977e7c0040bb8e973eff86b0cffb",
@@ -218,12 +219,12 @@
     }
   },
   "Hlzx": {
-    "version": "1.0",
-    "update_log": "* 初步实现自动任务\n* 支持自动化、多账号、ipad终端\n* 采用自动淘宝任务框架",
+    "version": "1.1",
+    "update_log": "- 优化重构指令框架减少冗余\n- 优化省点模式的逻辑,在运行之后在省电\n- 优化版本日志显示功能\n- 优化云端架构\n- 优化减少跳转主页次数,加快任务的完成\n- 增加打开活动页面便于其他操作\n- 增加模块化接口\n- 自动化直接默认继续上次任务\n- 自动化直接默认继续上次任务",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Hlzx",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/e5de5e61b1e342c5961b5678f92559d2",
+    "update": "https://www.icloud.com/shortcuts/59865b44ce974fbb88c24334d1d6b0ad",
     "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
     "notice": "初代版本任务数据很少,后期逐步完善\n公众号：Leeco爱分享",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
