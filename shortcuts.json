@@ -219,16 +219,16 @@
     }
   },
   "Hlzx": {
-    "version": "1.1",
-    "update_log": "- 优化重构指令框架减少冗余\n- 优化省点模式的逻辑,在运行之后在省电\n- 优化版本日志显示功能\n- 优化云端架构\n- 优化减少跳转主页次数,加快任务的完成\n- 增加打开活动页面便于其他操作\n- 增加模块化接口\n- 自动化直接默认继续上次任务\n- 自动化直接默认继续上次任务",
+    "version": "1.2",
+    "update_log": "- 优化重构指令框架减少冗余\n- 优化省点模式的逻辑,在运行之后在省电\n- 优化版本日志显示功能\n- 优化云端架构\n- 优化减少跳转主页次数,加快任务的完成\n- 增加打开活动页面便于其他操作\n- 增加模块化接口\n- 自动化直接默认继续上次任务\n- 自动化直接默认不继续上次任务",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Hlzx",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/59865b44ce974fbb88c24334d1d6b0ad",
+    "update": "https://www.icloud.com/shortcuts/0bbe174f7764451b9413547b981785fa",
     "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
     "notice": "初代版本任务数据很少,后期逐步完善\n公众号：Leeco爱分享",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
-    "automation_url": "shortcuts://run-shortcut?name=活力中心自动任务&input=text&text=1",
+    "automation_url": "shortcuts://run-shortcut?name=活力中心自动任务&input=text&text=task",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tb_hlzx.png",
     "url": "https://gitee.com/leecogit/Updater/raw/master/tb.json",
     "tip": {
