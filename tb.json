@@ -368,20 +368,27 @@
       }
     ]
   },
-  "jhs": {
+  "Jhs": {
     "version": "数据库版本:12.15.1",
-    "gd": "HTTPS://m.tb.cn/h.4f4eTck",
-    "end": "HTTPS://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?wh_pid=daily-192654&disableNav=YES",
-    "hongbao": "taobao://m.tb.cn/h.44CiYjQ",
-    "main": "HTTPS://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
-    "image": "https://gitee.com/leecogit/Updater/raw/master/image/tb_ttlhb.png",
-    "home": "HTTPS://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?wh_pid=daily-192654&disableNav=YES",
-    "appurl": {
-      "main": {
-        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
-        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fwww.tmall.com%2F",
-        "taobaolite": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F"
-      }
+    "gd": {
+      "taobao": "taobao://m.tb.cn/h.4f4eTck",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4f4eTck",
+      "taobaolite": "taobaolite://m.tb.cn/h.4f4eTck"
+    },
+    "main": {
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fwww.tmall.com%2F",
+      "taobaolite": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F"
+    },
+    "home": {
+      "taobao": "taobao://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?wh_pid=daily-192654&disableNav=YES",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fppages.tmall.com%2Fwow%2Fa%2Fact%2Fju%2Fdailygroup%2F1583%2Fwupr%3Fwh_pid%3Ddaily-192654%26disableNav%3DYES",
+      "taobaolite": "taobaolite://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?wh_pid=daily-192654&disableNav=YES"
+    },
+    "end": {
+      "taobao": "taobao://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?wh_pid=daily-192654&disableNav=YES",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fa%2Fact%2Fju%2Fdailygroup%2F1583%2Fwupr%3Fwh_pid%3Ddaily-192654%26disableNav%3DYES",
+      "taobaolite": "taobaolite://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?wh_pid=daily-192654&disableNav=YES"
     },
     "app": {
       "淘宝": "taobao",
@@ -425,7 +432,7 @@
     ]
   },
   "Hlzx": {
-    "version": "数据库版本:12.17.1",
+    "version": "数据库版本:12.21.1",
     "gd": {
       "taobao": "taobao://m.tb.cn/h.4f4eTck",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4f4eTck",
@@ -473,22 +480,8 @@
             "4522 other_0_0_4522_0",
             "8104 other_0_0_8104_0",
             "4490 other_0_0_4490_0",
-            "4772 shop_0_2_4772_0",
-            "4772 shop_0_1_4772_1",
-            "8299 expo_0_1_8299_0",
-            "8299 expo_0_2_8299_0",
-            "8299 expo_0_3_8299_0",
-            "8299 expo_0_4_8299_0",
-            "8299 expo_0_5_8299_0",
-            "8299 expo_0_6_8299_0",
-            "8299 expo_0_7_8299_0",
             "6893 other_0_0_6893_0",
-            "4533 shop_0_1_4533_0",
-            "4533 shop_0_2_4533_0",
-            "4533 shop_0_3_4533_0",
-            "4533 shop_0_4_4533_0",
-            "4533 shop_0_5_4533_0",
-            "4533 shop_0_6_4533_0"
+            "7222 other_0_0_7222_0"
           ]
         }
       }
