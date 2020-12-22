@@ -488,7 +488,7 @@
     ]
   },
   "FarmSingle": {
-    "version": "数据库版本:12.22.1",
+    "version": "数据库版本:12.22.2",
     "gd": {
       "taobao": "taobao://m.tb.cn/h.4f4eTck",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4f4eTck",
@@ -549,6 +549,23 @@
           "item": [
             "3736 cloudSailAd_0_116717142_3736_0",
             "8526 cloudSailAd_0_106763467_8526_0"
+          ]
+        }
+      },
+      {
+        "tmall": {
+          "title": "天猫app专属任务",
+          "type": "other",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?disableNav=YES&wh_pid=daily-216010&subSource=catsmoney&fromToken=lrVqDJXSZDKgxlaZc56tdPeCWUdUM&spm=a217e.1212.tasklist.0&sceneId=971&sourceType=other&hd_from_id=100085&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "7932 linked_0_0_7932_0",
+            "8271 other_0_72011_8271_0",
+            "8272 other_0_79046_8272_0",
+            "8273 other_0_62009_8273_0",
+            "8273 other_0_62008_8273_0",
+            "8274 other_0_62010_8274_0",
+            "8351 other_0_0_8351_0"
           ]
         }
       }
