@@ -264,18 +264,28 @@
       "more": ""
     }
   },
-  "Business": {
+  "AutoBox": {
     "version": "1.0",
-    "update_log": "",
+    "update_log": "- 自动化直接从头开始任务\n- 修复自动化的一个bug\n- 增加模块化接口",
+    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
-    "github": "https://github.com/LeecoGit/shortcuts/tree/master/1111",
-    "update": "",
-    "faq": "",
-    "notice": "全民营业很早做了，但因为签名问题出来的很晚，目前也未解决，就当做半成品学习交流用吧，有问题自己摸索或手动！",
-    "hot": "",
-    "tip": { "hongbao": "" },
-    "image": "https://gitee.com/leecogit/Updater/raw/master/image/1111_qmyy.jpeg",
-    "url": "https://gitee.com/leecogit/Updater/raw/master/1111.json"
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/70f12aaf7fe446c2aa9e2971e78a6f90",
+    "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
+    "notice": "欢迎各位作者来提交模块~\n公众号：Leeco爱分享",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
+    "automation_url": "shortcuts://run-shortcut?name=AutoBox&input=text&text=",
+    "image": "https://gitee.com/leecogit/Updater/raw/master/image/icon-bot.png",
+    "url": "",
+    "tip": {
+      "hongbao": "",
+      "hot": "",
+      "faq": "有疑问的请查看",
+      "set": "点击查看自动化操作",
+      "team": "",
+      "other": "",
+      "more": ""
+    }
   },
   "More": {
     "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
