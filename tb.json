@@ -369,7 +369,7 @@
     ]
   },
   "Jhs": {
-    "version": "数据库版本:12.24.1",
+    "version": "数据库版本:12.26.1",
     "gd": {
       "taobao": "taobao://m.tb.cn/h.4f4eTck",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4f4eTck",
@@ -400,7 +400,7 @@
         "stars": {
           "title": "攒星星",
           "type": "stars",
-          "urlScheme": "HTTPS://huodong.m.taobao.com/act/snipcode.html?zhangyu_from_env=jhstop&spm=608.14381380.tasklist-pentaprism.782&_wml_code=9XZq%2Bt%2FxdGk2vxtkbZvNtxIRr1Fl5o%2F4JYkxzjiABZCkN0X4ug9ejN%2FEA0XumFdlCJmui3oZzrfxu2OjRTO%2FUldTSbERTDFnNVuaq4bGXYarnsLycd1U6o4btoe8H%2FSSeBk5iibFKlpytcA4vdUvH%2BU%2BttvWBrsoV0Txewchwr8%3D&sourceType=other&fromToken=xBVj6P9UvoVobWAQTnvT7EUqUZUJ&sceneId=107&hd_from_id=100027&deliveryId=",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&sourceType=other&fromToken=xBVj6P9UvoVobWAQTnvT7EUqUZUJ&sceneId=107&hd_from_id=100027&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "2284 other_0_0_2284_0",
@@ -419,7 +419,10 @@
             "6645 other_0_0_6645_0",
             "4127 other_0_0_4127_0",
             "8263 other_0_79038_8263_0",
-            "7712 other_0_54003_7712_0"
+            "7712 other_0_54003_7712_0",
+            "8456 other_0_91008_8456_0",
+            "8456 other_0_91008_8456_1",
+            "781 other_0_0_781_0"
           ]
         }
       }
