@@ -485,7 +485,7 @@
     ]
   },
   "FarmSingle": {
-    "version": "数据库版本:12.23.1",
+    "version": "数据库版本:12.26.2",
     "gd": {
       "taobao": "taobao://m.tb.cn/h.4f4eTck",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4f4eTck",
@@ -532,7 +532,8 @@
             "3274 other_0_0_3274_0",
             "3205 other_0_0_3205_0",
             "4394 other_0_0_4394_0",
-            "830 sign_0_1_830_1"
+            "830 sign_0_1_830_1",
+            "2969 other_0_0_2969_0"
           ]
         }
       },
@@ -544,7 +545,8 @@
           "textEnd": "str1&implId=str2",
           "item": [
             "3736 cloudSailAd_0_116717142_3736_0",
-            "8526 cloudSailAd_0_106763467_8526_0"
+            "8526 cloudSailAd_0_106763467_8526_0",
+            "8953 cloudSailAd_0_106763467_8953_0"
           ]
         }
       },
