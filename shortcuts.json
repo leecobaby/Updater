@@ -264,6 +264,29 @@
       "more": ""
     }
   },
+  "Qmxb": {
+    "version": "1.0",
+    "update_log": "- 自动化直接从头开始任务\n- 修复自动化的一个bug\n- 增加模块化接口",
+    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Qmxb",
+    "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/70f12aaf7fe446c2aa9e2971e78a6f90",
+    "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
+    "notice": "初代版本任务数据很少,后期逐步完善\n公众号：Leeco爱分享",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
+    "automation_url": "shortcuts://run-shortcut?name=全民寻宝自动任务&input=text&text=task",
+    "image": "https://gitee.com/leecobaby/Updater/raw/master/image/tb_qmxb.png",
+    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json",
+    "tip": {
+      "hongbao": "",
+      "hot": "",
+      "faq": "有疑问的请查看",
+      "set": "点击查看自动化操作",
+      "team": "",
+      "other": "",
+      "more": ""
+    }
+  },
   "AutoBox": {
     "version": "1.0",
     "update_log": "- 自动化直接从头开始任务\n- 修复自动化的一个bug\n- 增加模块化接口",

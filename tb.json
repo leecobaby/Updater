@@ -382,7 +382,7 @@
     },
     "home": {
       "taobao": "taobao://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?wh_pid=daily-192654&disableNav=YES",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fppages.tmall.com%2Fwow%2Fa%2Fact%2Fju%2Fdailygroup%2F1583%2Fwupr%3Fwh_pid%3Ddaily-192654%26disableNav%3DYES",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fa%2Fact%2Fju%2Fdailygroup%2F1583%2Fwupr%3Fwh_pid%3Ddaily-192654%26disableNav%3DYES",
       "taobaolite": "taobaolite://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?wh_pid=daily-192654&disableNav=YES"
     },
     "end": {
@@ -571,6 +571,64 @@
             "8350 other_0_0_8350_0",
             "8351 other_0_0_8351_0",
             "4550 other_0_0_4550_0"
+          ]
+        }
+      }
+    ]
+  },
+  "Qmxb": {
+    "version": "数据库版本:12.27.1",
+    "gd": {
+      "taobao": "taobao://m.tb.cn/h.4f4eTck",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4f4eTck",
+      "taobaolite": "taobaolite://m.tb.cn/h.4f4eTck"
+    },
+    "main": {
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fwww.tmall.com%2F",
+      "taobaolite": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F"
+    },
+    "home": {
+      "taobao": "taobao://market.m.taobao.com/app/ctm/lucky-sudoku-pro/pages/index?disableNav=YES",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fmarket.m.taobao.com%2Fapp%2Fctm%2Flucky-sudoku-pro%2Fpages%2Findex%3FdisableNav%3DYES",
+      "taobaolite": "taobaolite://market.m.taobao.com/app/ctm/lucky-sudoku-pro/pages/index?disableNav=YES"
+    },
+    "end": {
+      "taobao": "taobao://market.m.taobao.com/app/ctm/lucky-sudoku-pro/pages/index?disableNav=YES",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fmarket.m.taobao.com%2Fapp%2Fctm%2Flucky-sudoku-pro%2Fpages%2Findex%3FdisableNav%3DYES",
+      "taobaolite": "taobaolite://market.m.taobao.com/app/ctm/lucky-sudoku-pro/pages/index?disableNav=YES"
+    },
+    "app": {
+      "淘宝": "taobao",
+      "天猫": "tmall",
+      "淘宝特价版": "taobaolite"
+    },
+    "task": [
+      {
+        "stars": {
+          "title": "得次数",
+          "type": "stars",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=957&sourceType=other&hd_from_id=100070&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "7778 other_0_0_7778_0",
+            "8679 other_0_0_8679_0",
+            "8723 other_0_0_8723_0",
+            "8969 other_0_0_8969_0",
+            "8964 other_0_0_8964_0",
+            "8966 other_0_0_8966_0",
+            "8967 other_0_0_8967_0",
+            "8971 other_0_0_8971_0",
+            "8972 other_0_0_8972_0",
+            "7928 other_0_0_7928_0",
+            "7784 other_0_0_7784_0",
+            "7741 other_0_0_7741_0",
+            "7919 other_0_0_7919_0",
+            "8191 other_0_0_8191_0",
+            "7776 other_0_0_7776_0",
+            "7775 other_0_0_7775_0",
+            "7921 other_0_0_7921_0",
+            "7925 other_0_0_7925_0"
           ]
         }
       }
