@@ -577,7 +577,7 @@
     ]
   },
   "Qmxb": {
-    "version": "数据库版本:12.27.1",
+    "version": "数据库版本:12.27.2",
     "gd": {
       "taobao": "taobao://m.tb.cn/h.4f4eTck",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4f4eTck",
@@ -628,7 +628,14 @@
             "7776 other_0_0_7776_0",
             "7775 other_0_0_7775_0",
             "7921 other_0_0_7921_0",
-            "7925 other_0_0_7925_0"
+            "7925 other_0_0_7925_0",
+            "7777 other_0_0_7777_0",
+            "7922 other_0_0_7922_0",
+            "7923 other_0_0_7923_0",
+            "7924 other_0_0_7924_0",
+            "8252 other_0_0_8252_0",
+            "7926 other_0_0_7926_0",
+            "7927 other_0_0_7927_0"
           ]
         }
       }
