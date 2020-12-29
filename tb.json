@@ -440,7 +440,7 @@
     ]
   },
   "Hlzx": {
-    "version": "数据库版本:12.21.1",
+    "version": "数据库版本:12.29.1",
     "gd": {
       "taobao": "taobao://m.tb.cn/h.4f4eTck",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4f4eTck",
@@ -489,7 +489,10 @@
             "8104 other_0_0_8104_0",
             "4490 other_0_0_4490_0",
             "6893 other_0_0_6893_0",
-            "7222 other_0_0_7222_0"
+            "7222 other_0_0_7222_0",
+            "6916 other_0_0_6916_0",
+            "4772 shop_0_2_4772_0",
+            "4772 shop_0_2_4772_1"
           ]
         }
       }
