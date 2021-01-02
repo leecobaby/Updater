@@ -499,7 +499,7 @@
     ]
   },
   "FarmSingle": {
-    "version": "数据库版本:12.26.2",
+    "version": "数据库版本:1.2.1",
     "gd": {
       "taobao": "taobao://m.tb.cn/h.4hZxAiK",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4hZxAiK",
@@ -551,19 +551,6 @@
         }
       },
       {
-        "car": {
-          "title": "浏览轿车",
-          "type": "other",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?disableNav=YES&wh_pid=daily-216010&subSource=catsmoney&fromToken=lrVqDJXSZDKgxlaZc56tdPeCWUdUM&spm=a217e.1212.tasklist.0&sceneId=512&sourceType=other&hd_from_id=1025&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "3736 cloudSailAd_0_116717142_3736_0",
-            "8526 cloudSailAd_0_106763467_8526_0",
-            "8953 cloudSailAd_0_106763467_8953_0"
-          ]
-        }
-      },
-      {
         "tmall": {
           "title": "云推送",
           "type": "other",
@@ -586,7 +573,8 @@
             "4550 other_0_0_4550_0",
             "8444 other_0_68007_8444_0",
             "2969 other_0_0_2969_0",
-            "3205 other_0_0_3205_0"
+            "3205 other_0_0_3205_0",
+            "8276 other_0_79050_8276_0"
           ]
         }
       }
