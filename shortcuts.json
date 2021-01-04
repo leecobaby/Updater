@@ -127,12 +127,12 @@
     "url": "https://gitee.com/leecogit/Updater/raw/master/1111.json"
   },
   "Taojb": {
-    "version": "1.7",
-    "update_log": "- 优化重构指令框架减少冗余\n- 优化省点模式的逻辑,在运行之后在省电\n- 优化版本日志显示功能\n- 优化云端架构\n- 优化减少跳转主页次数,加快任务的完成\n- 增加打开活动页面便于其他操作\n- 增加模块化接口\n- 自动化直接默认继续上次任务",
+    "version": "1.9",
+    "update_log": "- 优化自动化通知声音\n- 优化架构\n- 优化自动化链接的选项",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Taojb",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/41cf977e7c0040bb8e973eff86b0cffb",
+    "update": "https://www.icloud.com/shortcuts/f890e57c37744519928db4dbd9432b79",
     "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
     "notice": "最近的淘金币到明年12.31才过期~\n遇到无法运行问题的请尝试使用修复功能！",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
