@@ -290,7 +290,7 @@
   "AutoBox": {
     "version": "1.1",
     "update_log": "- 增加 使用教程、常见问题、先关内容\n- 修复 ios13 无法使用问题\n- 修复 单个订阅模块导致配置时出错问题\n- 优化 商城 API 访问逻辑",
-    "update": "https://www.icloud.com/shortcuts/25997d0ad93b4f7298b9057583cd44e0",
+    "update": "https://www.icloud.com/shortcuts/56b8b66dca6043e1ae364ffae170aa53",
     "about": {
       "tutorials": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox#使用教程",
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox#常见问题",
