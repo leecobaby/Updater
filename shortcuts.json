@@ -288,12 +288,16 @@
     }
   },
   "AutoBox": {
-    "version": "1.0",
-    "update_log": "- 自动化直接从头开始任务\n- 修复自动化的一个bug\n- 增加模块化接口",
-    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
+    "version": "1.1",
+    "update_log": "- 增加 使用教程、常见问题、先关内容\n- 修复 ios13 无法使用问题\n- 修复 单个订阅模块导致配置时出错问题\n- 优化 商城 API 访问逻辑",
+    "update": "https://www.icloud.com/shortcuts/25997d0ad93b4f7298b9057583cd44e0",
+    "about": {
+      "tutorials": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox#使用教程",
+      "faq": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox#常见问题",
+      "version_log": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox#版本日志"
+    },
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/413c9627d1c24007bf0f9bc24a006da3",
     "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
     "notice": "欢迎各位作者来提交模块~\n初代版本有很多问题,如果不会用请等待教程和新版~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
