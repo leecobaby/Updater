@@ -2,6 +2,7 @@
   "JD_sign": {
     "version": "1.0",
     "pv": "",
+    "end": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"jdreactcommon\",\"appname\":\"JDReactMyJdSubModule\",\"modulename\":\"JDReactMyJdSubModule\",\"ishidden\":true,\"needLogin\":true}",
     "task": [
       {
         "name": "京东京豆",
