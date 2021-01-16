@@ -314,6 +314,29 @@
       "more": ""
     }
   },
+  "JD_sign": {
+    "version": "1.0",
+    "update_log": "",
+    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_sign",
+    "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "",
+    "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
+    "notice": "初步实现京东11种签到功能~\n公众号：Leeco爱分享",
+    "video": "",
+    "automation_url": "shortcuts://run-shortcut?name=京东-多合一签到&input=text&text=task",
+    "image": "https://gitee.com/leecogit/Updater/raw/master/image/jd_jd.png",
+    "url": "https://gitee.com/leecogit/Updater/raw/master/jd.json",
+    "tip": {
+      "hongbao": "",
+      "hot": "",
+      "faq": "有疑问的请查看",
+      "set": "",
+      "team": "",
+      "other": "",
+      "more": ""
+    }
+  },
   "More": {
     "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
     "加入QQ情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
