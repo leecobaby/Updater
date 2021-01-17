@@ -243,16 +243,17 @@
     }
   },
   "FarmSingle": {
-    "version": "1.2",
-    "update_log": "- 优化自动化通知声音\n- 优化架构",
+    "version": "1.3",
+    "update_log": "- 增加 对集福气活动的支持\n- 增加 助力大厅\n- 优化 自动化引导\n- 优化 常见问题",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/FarmSingle",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/c4bccafe0e74452bb09e0d97ac02f776",
-    "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
+    "update": "https://www.icloud.com/shortcuts/2f866bce7778429f85f030b52ddbdf92",
+    "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
     "notice": "1.17有年货节超级红包\n最近年货年活动很多请关注活动大厅~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=芭芭农场自动集肥料&input=text&text=task",
+    "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tb_jfq.png",
     "url": "https://gitee.com/leecogit/Updater/raw/master/tb.json",
     "tip": {
