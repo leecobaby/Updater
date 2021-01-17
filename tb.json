@@ -501,7 +501,7 @@
     ]
   },
   "FarmSingle": {
-    "version": "数据库版本:1.2.1",
+    "version": "数据库版本:1.17.1",
     "gd": {
       "taobao": "taobao://m.tb.cn/h.4hGjyCh",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4hGjyCh",
@@ -554,7 +554,7 @@
       },
       {
         "tmall": {
-          "title": "云推送",
+          "title": "集肥料云推送",
           "type": "other",
           "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?disableNav=YES&wh_pid=daily-216010&subSource=catsmoney&fromToken=lrVqDJXSZDKgxlaZc56tdPeCWUdUM&spm=a217e.1212.tasklist.0&sceneId=971&sourceType=other&hd_from_id=100085&deliveryId=",
           "textEnd": "str1&implId=str2",
@@ -577,6 +577,30 @@
             "2969 other_0_0_2969_0",
             "3205 other_0_0_3205_0",
             "8276 other_0_79050_8276_0"
+          ]
+        }
+      },
+      {
+        "tmall": {
+          "title": "集福气",
+          "type": "other",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?disableNav=YES&wh_pid=daily-216010&subSource=catsmoney&fromToken=lrVqDJXSZDKgxlaZc56tdPeCWUdUM&spm=a217e.1212.tasklist.0&sceneId=1131&sourceType=other&hd_from_id=100085&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "9464 other_0_0_9464_0",
+            "9852 cloudSailAd_0_104635021_9852_0",
+            "9852 cloudSailAd_0_104635022_9852_0",
+            "9852 cloudSailAd_0_104635023_9852_0",
+            "9852 cloudSailAd_0_104635024_9852_0",
+            "9852 cloudSailAd_0_104635025_9852_0",
+            "9852 cloudSailAd_0_104635026_9852_0",
+            "9682 expo_0_229916001_9682_0",
+            "9682 expo_0_229916002_9682_0",
+            "9153 other_0_62010_9153_0",
+            "9404 other_0_1_9404_0",
+            "9613 linked_0_0_9613_0",
+            "9613 linked_0_1_9613_0",
+            "9613 linked_0_2_9613_0"
           ]
         }
       }
