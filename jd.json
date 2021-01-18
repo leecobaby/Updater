@@ -1,6 +1,6 @@
 {
   "JD_sign": {
-    "version": "1.0",
+    "version": "1.18.1",
     "pv": "",
     "end": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"jdreactcommon\",\"appname\":\"JDReactMyJdSubModule\",\"modulename\":\"JDReactMyJdSubModule\",\"ishidden\":true,\"needLogin\":true}",
     "task": [
@@ -63,5 +63,28 @@
         "body": "reqData=%7B%22activityNo%22%3A%22e2d1b240d5674def8178be6b4faac5b6%22%2C%22signType%22%3A%221%22%2C%22encryptSign%22%3A%22%22%7D"
       }
     ]
+  },
+  "JD_nian": {
+    "version": "1.18.1",
+    "pv": "",
+    "endJump": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"jdreactcommon\",\"appname\":\"JDReactMyJdSubModule\",\"modulename\":\"JDReactMyJdSubModule\",\"ishidden\":true,\"needLogin\":true}",
+    "api": {
+      "nian_getHomeData": {
+        "url": "https://api.m.jd.com/client.action?functionId=nian_getHomeData",
+        "body": "functionId=nian_getHomeData&body={}&client=wh5&clientVersion=1.0.0"
+      },
+      "nian_getTaskDetail": {
+        "url": "https://api.m.jd.com/client.action?functionId=nian_getTaskDetail",
+        "body": "functionId=nian_getHomeData&body={}&client=wh5&clientVersion=1.0.0"
+      },
+      "nian_collectScore": {
+        "url": "https://api.m.jd.com/client.action?functionId=nian_collectScore",
+        "body": "functionId=nian_getHomeData&body={}&client=wh5&clientVersion=1.0.0"
+      },
+      "qryViewkitCallbackResult": {
+        "url": "https://api.m.jd.com/client.action?functionId=qryViewkitCallbackResult",
+        "body": "functionId=qryViewkitCallbackResult&body={\"dataSource\":\"newshortAward\",\"method\":\"getTaskAward\",\"reqParams\":\"{\\\"taskToken\\\":\\\"XXX\\\"}\"}&client=wh5&clientVersion=1.0.0"
+      }
+    }
   }
 }
