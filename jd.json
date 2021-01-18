@@ -71,11 +71,11 @@
     "api": {
       "nian_getHomeData": {
         "url": "https://api.m.jd.com/client.action?functionId=nian_getHomeData",
-        "body": "functionId=nian_getHomeData&body={}&client=wh5&clientVersion=1.0.0"
+        "body": "functionId=nian_getHomeData&body=%7B%7D&client=wh5&clientVersion=1.0.0"
       },
       "nian_getTaskDetail": {
         "url": "https://api.m.jd.com/client.action?functionId=nian_getTaskDetail",
-        "body": "functionId=nian_getTaskDetail&body={}&client=wh5&clientVersion=1.0.0"
+        "body": "functionId=nian_getTaskDetail&body=%7B%7D&client=wh5&clientVersion=1.0.0"
       },
       "nian_collectScore": {
         "url": "https://api.m.jd.com/client.action?functionId=nian_collectScore",
@@ -83,7 +83,7 @@
       },
       "qryViewkitCallbackResult": {
         "url": "https://api.m.jd.com/client.action?functionId=qryViewkitCallbackResult",
-        "body": "functionId=qryViewkitCallbackResult&body={\"dataSource\":\"newshortAward\",\"method\":\"getTaskAward\",\"reqParams\":\"{\\\"taskToken\\\":\\\"XXX\\\"}\"}&client=wh5&clientVersion=1.0.0"
+        "body": "functionId=qryViewkitCallbackResult&body={}&client=wh5&clientVersion=1.0.0"
       }
     }
   }
