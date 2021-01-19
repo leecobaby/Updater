@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nian_collectScore</title>
+</head>
+
+<body>
+  <script>
+    /**
+     * idea by @LXK9301
+     * author bt @leecobaby
+     * 2021-01-19
+     */
+    const result = {}
+    result.body = collectScore('123', '456', '789', '0')
+    document.write(JSON.stringify(result.body))
+
+    function collectScore(secretp, taskId, itemId, actionType, inviteId) {
+      let temp = {
+        "taskId": taskId,
+        "rnd": getRnd(),
+        "inviteId": "-1",
+        "stealId": "-1"
+      }
+      if (itemId) temp['itemId'] = itemId
+      if (actionType) temp['actionType'] = actionType
+      if (inviteId) temp['inviteId'] = inviteId
+      const extraData = {
+        "jj": 6,
+        "buttonid": "jmdd-react-smash_0",
+        "sceneid": "homePageh5",
+        "appid": '50073'
+      }
+      let body = {
+        ...encode(temp, secretp, extraData),
+        taskId: taskId,
+        itemId: itemId
+      }
+      if (actionType) body['actionType'] = actionType
+      if (inviteId) body['inviteId'] = inviteId
+      return body
+    }
+
+    function encode(data, secretp, extraData) {
+      const temp = {
+        "extraData": extraData,
+        "businessData": data,
+        "secretp": secretp,
+      }
+      return { "ss": (JSON.stringify(temp)) };
+    }
+
+    function getRnd() {
+      return Math.floor(1e6 * Math.random()).toString();
+    }
+  </script>
+</body>
+
+</html>
