@@ -67,7 +67,7 @@
   "JD_nian": {
     "version": "1.19.1",
     "pv": "openapp.jdmobile://virtual?params={\"des\":\"m\",\"category\":\"jump\",\"url\":\"https://u.jd.com/thCBSZW\"}",
-    "endJump": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"jdreactcommon\",\"appname\":\"JDReactMyJdSubModule\",\"modulename\":\"JDReactMyJdSubModule\",\"ishidden\":true,\"needLogin\":true}",
+    "endJump": "openapp.jdmobile://virtual?params={\"des\":\"m\",\"category\":\"jump\",\"url\":\"https://wbbny.m.jd.com/babelDiy/Zeus/2cKMj86srRdhgWcKonfExzK4ZMBy/index.html\"}",
     "api": {
       "nian_getHomeData": {
         "url": "https://api.m.jd.com/client.action?functionId=nian_getHomeData",
