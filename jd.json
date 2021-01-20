@@ -77,6 +77,10 @@
         "url": "https://api.m.jd.com/client.action?functionId=nian_getTaskDetail",
         "body": "functionId=nian_getTaskDetail&body=%7B%7D&client=wh5&clientVersion=1.0.0"
       },
+      "nian_collectProduceScore": {
+        "url": "https://api.m.jd.com/client.action?functionId=nian_collectProduceScore",
+        "body": "functionId=nian_collectProduceScore&body={}&client=wh5&clientVersion=1.0.0"
+      },
       "nian_collectScore": {
         "url": "https://api.m.jd.com/client.action?functionId=nian_collectScore",
         "body": "functionId=nian_collectScore&body={}&client=wh5&clientVersion=1.0.0"
@@ -88,9 +92,17 @@
       "qryViewkitCallbackResult": {
         "url": "https://api.m.jd.com/client.action?functionId=qryViewkitCallbackResult",
         "body": "functionId=qryViewkitCallbackResult&body={}&client=wh5&clientVersion=1.0.0"
+      },
+      "nian_killCoupon": {
+        "url": "https://api.m.jd.com/client.action?functionId=nian_killCoupon",
+        "body": "functionId=nian_killCoupon&body={}&client=wh5&clientVersion=1.0.0"
       }
     },
     "task": [
+      {
+        "api": "nian_collectProduceScore",
+        "item": ["收爆竹 1 collectProducedCoin 0 0"]
+      },
       {
         "api": "nian_collectScore",
         "item": [

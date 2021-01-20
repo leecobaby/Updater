@@ -10,13 +10,50 @@
 <body>
   <script>
     /**
-     * idea by @LXK9301
-     * author bt @leecobaby
-     * 2021-01-19
+     * modify by @LXK9301
+     * author by @leecobaby
+     * 2021-01-20
      */
-    const result = {}
-    result.body = collectScore('123', '456', '789', '0')
-    document.write(JSON.stringify(result.body))
+
+    !(() => {
+      let api = ''
+      let secretp = ''
+      let taskId = ''
+      let itemId = ''
+      let actionType = ''
+      let inviteId = ''
+      let body
+
+      switch (api) {
+        case "collectScore":
+          body = collectScore(secretp, taskId, itemId, actionType, inviteId)
+          break
+        case "nian_collectProduceScore":
+          body = collectProduceScore(secretp, taskId)
+          break
+        case "nian_killCoupon":
+          body = killCoupon(secretp, taskId)
+          break
+      }
+      document.write(JSON.stringify(body))
+    })()
+
+    function collectProduceScore(secretp, taskId) {
+      let temp = {
+        "taskId": taskId,
+        "rnd": getRnd(),
+        "inviteId": "-1",
+        "stealId": "-1"
+      }
+      const extraData = {
+        "jj": 6,
+        "buttonid": "jmdd-react-smash_0",
+        "sceneid": "homePageh5",
+        "appid": '50073'
+      }
+      const body = encode(temp, secretp, extraData)
+      return body
+    }
 
     function collectScore(secretp, taskId, itemId, actionType, inviteId) {
       let temp = {
@@ -41,6 +78,24 @@
       }
       if (actionType) body['actionType'] = actionType
       if (inviteId) body['inviteId'] = inviteId
+      return body
+    }
+
+    function killCoupon(secretp, skuId) {
+      let temp = {
+        "skuId": skuId,
+        "rnd": getRnd(),
+        "inviteId": "-1",
+        "stealId": "-1"
+      }
+      const extraData = {
+        "jj": 6,
+        "buttonid": "jmdd-react-smash_0",
+        "sceneid": "homePageh5",
+        "appid": '50073'
+      }
+      let body = encode(temp, secretp, extraData);
+      body['skuId'] = skuId
       return body
     }
 
