@@ -353,6 +353,8 @@
     "video": "",
     "automation_url": "shortcuts://run-shortcut?name=京东-炸年兽&input=text&text=task",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/jd_nian.png",
+    "jsbox": "jsbox://import?url=https://gitee.com/leecogit/Updater/raw/master/jsbox-jdCookie.js&name=获取京东Cookie&icon=icon_188",
+    "jsbox-run": "jsbox://run?name=获取京东Cookie",
     "url": "https://gitee.com/leecogit/Updater/raw/master/jd.json",
     "tip": {
       "hongbao": "",
