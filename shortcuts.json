@@ -349,7 +349,7 @@
     "help": "",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/237b45cab76b4efb8cf62712b9c89ae4",
-    "notice": "初步实现京东炸年兽浏览任务,其他任务尽力更新中...\n不会用的有问题的可等待新版本~",
+    "notice": "输入内容请把这个去掉👉🏻'Cookie:'\n不会用的有问题的可等待新版本~",
     "video": "",
     "automation_url": "shortcuts://run-shortcut?name=京东-炸年兽&input=text&text=task",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/jd_nian.png",
