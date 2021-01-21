@@ -340,7 +340,7 @@
     }
   },
   "JD_nian": {
-    "version": "1.1",
+    "version": "1.2",
     "update_log": "- 重新设计架构，采用云端任务数据\n- 增加 JSBox获取Cookie方式\n- 增加 任务完成量，可做大部分任务\n- 增加 收取爆竹功能",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
@@ -348,7 +348,7 @@
     },
     "help": "",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/37241a05e0f74c63b29cf484b3463ec7",
+    "update": "https://www.icloud.com/shortcuts/ab18976c29b34b299ae10234fd7b6927",
     "notice": "🧧 红包加码日可前往活动中心查看~\n不懂怎么使用的建议多看常见问题",
     "video": "",
     "automation_url": "shortcuts://run-shortcut?name=京东-炸年兽&input=text&text=task",
