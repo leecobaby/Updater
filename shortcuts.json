@@ -341,7 +341,7 @@
   },
   "JD_nian": {
     "version": "1.2",
-    "update_log": "- 重新设计架构，采用云端任务数据\n- 增加 JSBox获取Cookie方式\n- 增加 任务完成量，可做大部分任务\n- 增加 收取爆竹功能",
+    "update_log": "- 增加 逛小镇、领券、抽奖任务\n- 优化架构，增加云端数据版本信息",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_nian#版本日志"
