@@ -349,7 +349,7 @@
     "help": "",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/b5c7fa087d014870b018c7fd7b3a5dfc",
-    "notice": "统一为优雅简易的授权登录方式~\n第一次装scriptable的同学可能需要重装下快将诶指令~",
+    "notice": "统一为优雅简易的授权登录方式~\n第一次装scriptable的同学可能需要重装下快捷指令~",
     "video": "",
     "automation_url": "shortcuts://run-shortcut?name=京东-炸年兽&input=text&text=task",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/jd_nian.png",
