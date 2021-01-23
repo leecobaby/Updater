@@ -340,7 +340,7 @@
     }
   },
   "JD_nian": {
-    "version": "1.2",
+    "version": "1.3",
     "update_log": "- 增加 授权登录极大简化获取cookie难题\n- 增加 账号会话验证提示\n- 优化 架构内容\n- 修复 data 键值弹出错误\n- 去除 旧的获取cookie方式",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
@@ -348,7 +348,7 @@
     },
     "help": "",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/f5a5be261fcd47a38a3d63ce04913836",
+    "update": "https://www.icloud.com/shortcuts/b5c7fa087d014870b018c7fd7b3a5dfc",
     "notice": "统一为优雅简易的授权登录方式~\n如果发现任务有很多没有做的，请早晚各运行一次~",
     "video": "",
     "automation_url": "shortcuts://run-shortcut?name=京东-炸年兽&input=text&text=task",
