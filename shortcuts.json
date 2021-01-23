@@ -340,7 +340,7 @@
     }
   },
   "JD_nian": {
-    "version": "1.3",
+    "version": "1.2",
     "update_log": "- 增加 授权登录极大简化获取cookie难题\n- 增加 账号会话验证提示\n- 优化 架构内容\n- 修复 data 键值弹出错误\n- 去除 旧的获取cookie方式",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
