@@ -121,6 +121,14 @@
       "nian_doShopLottery": {
         "url": "https://api.m.jd.com/client.action?functionId=nian_doShopLottery",
         "body": "functionId=nian_doShopLottery&body={}&client=wh5&clientVersion=1.0.0"
+      },
+      "arNianGetUser": {
+        "url": "https://arvractivity.jd.com/nian/arNianGetUser.do",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://h5.m.jd.com/babelDiy/Zeus/2ZUbtdUfe8ZTyCQrVecyjdNehHpL/index.html"
+        },
+        "body": "functionId=nian_getHomeData&body={}&client=wh5&clientVersion=1.0.0"
       }
     },
     "task": [

@@ -381,7 +381,8 @@
   "Contact": {
     "qq": "mqq://card/show_pslcard?src_type=internal&version=1&uin=1917019372&card_type=person&source=sharecard",
     "qqGroup": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=605346047&card_type=group&source=qrcode&jump_from=&auth=&authSig=tFaEzF1AcIK130YGfSHWJ15xFQh6kzpeUL3KIkWmoaCCsN7AAATFaWqFUiXeNM4W&source_id=2_40001",
-    "tgGroup": ""
+    "tgGroup": "",
+    "email": "leeco@vip.qq.com"
   },
   "more": {
     "mode": "more1",
@@ -402,7 +403,7 @@
         },
         "饿了么现金红包   部分老用户有12无门槛补贴": "taobao://m.tb.cn/h.4hbqRud"
       },
-      "🧧 百元红包1.25日瓜分": ""
+      "🧧 现金红包-1.25": "taobao://m.tb.cn/h.48rSYTG"
     },
     "more2": {
       "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
