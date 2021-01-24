@@ -82,7 +82,8 @@
       },
       "nian_getHomeData": {
         "url": "https://api.m.jd.com/client.action?functionId=nian_getHomeData",
-        "body": "functionId=nian_getHomeData&body=%7B%7D&client=wh5&clientVersion=1.0.0"
+        "method": "POST",
+        "body": "functionId=nian_getHomeData&body={}client=wh5&clientVersion=1.0.0"
       },
       "nian_getTaskDetail": {
         "url": "https://api.m.jd.com/client.action?functionId=nian_getTaskDetail",
@@ -133,6 +134,13 @@
       {
         "api": "nian_collectScore",
         "item": [
+          "逛小程序1 8 21 9701427464 1 0",
+          "逛小程序1 8 21 9701427465 1 0",
+          "逛小程序1 8 21 9701427466 1 0",
+          "逛小程序2 8 22 9701427466 1 0",
+          "逛小程序2 8 22 9701427466 1 0",
+          "逛小程序2 8 22 9701427466 1 0",
+          "关注公众号 8 23 6901428988 1 0",
           "逛其他 8 16 6101434008 1 0",
           "逛其他 8 16 6101434009 1 0",
           "逛其他 8 16 6101434010 1 0",
