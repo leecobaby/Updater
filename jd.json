@@ -83,7 +83,7 @@
       "nian_getHomeData": {
         "url": "https://api.m.jd.com/client.action?functionId=nian_getHomeData",
         "method": "POST",
-        "body": "functionId=nian_getHomeData&body=%7B%7Dclient=wh5&clientVersion=1.0.0"
+        "body": "functionId=nian_getHomeData&body=%7B%7D&client=wh5&clientVersion=1.0.0"
       },
       "nian_getHomeData1": {
         "url": "https://api.m.jd.com/client.action?functionId=nian_getHomeData",
