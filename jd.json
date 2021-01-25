@@ -127,8 +127,21 @@
         "method": "GET",
         "headers": {
           "Referer": "https://h5.m.jd.com/babelDiy/Zeus/2ZUbtdUfe8ZTyCQrVecyjdNehHpL/index.html"
-        },
-        "body": "functionId=nian_getHomeData&body={}&client=wh5&clientVersion=1.0.0"
+        }
+      },
+      "arNianStartGame": {
+        "url": "https://arvractivity.jd.com/nian/arNianStartGame.do",
+        "method": "POST",
+        "headers": {
+          "Referer": "https://h5.m.jd.com/babelDiy/Zeus/2ZUbtdUfe8ZTyCQrVecyjdNehHpL/index.html"
+        }
+      },
+      "arNianEndGame": {
+        "url": "https://arvractivity.jd.com/nian/arNianEndGame.do",
+        "method": "POST",
+        "headers": {
+          "Referer": "https://h5.m.jd.com/babelDiy/Zeus/2ZUbtdUfe8ZTyCQrVecyjdNehHpL/index.html"
+        }
       }
     },
     "task": [
