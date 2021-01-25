@@ -340,16 +340,16 @@
     }
   },
   "JD_nian": {
-    "version": "1.3",
-    "update_log": "- 增加 授权登录极大简化获取cookie难题\n- 增加 账号会话验证提示\n- 优化 架构内容\n- 修复 data 键值弹出错误\n- 去除 旧的获取cookie方式",
+    "version": "1.4",
+    "update_log": "- 增加 助力功能，可自行配置助力码\n- 增加 年兽AR游戏任务\n- 优化 data 键值弹出错误\n- 恢复 ios13 手动输入cookie方式",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_nian#版本日志"
     },
     "help": "",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/b5c7fa087d014870b018c7fd7b3a5dfc",
-    "notice": "统一为优雅简易的授权登录方式~\n第一次装scriptable的同学可能需要重装下快捷指令~",
+    "update": "https://www.icloud.com/shortcuts/fea3b376345542fc8e214e2fcc781e4f",
+    "notice": "恢复ios13手动获取cookie方式\n关于如何助力和如何后台运行抢看常见问题",
     "video": "",
     "automation_url": "shortcuts://run-shortcut?name=京东-炸年兽&input=text&text=task",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/jd_nian.png",
