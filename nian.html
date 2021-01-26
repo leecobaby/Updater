@@ -39,7 +39,7 @@
           body = doShopLottery(shopSign)
           break
         case "nian_shopSignInWrite":
-          body = signInWrite(shopSign)
+          body = signInWrite(secretp, shopSign)
           break
       }
       document.write(JSON.stringify(body))
