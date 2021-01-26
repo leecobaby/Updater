@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>handleTaskList</title>
+</head>
+
+<body>
+  <script>
+    /**
+     * modify by @LXK9301
+     * author by @leecobaby
+     * 2021-01-21
+     */
+
+    const json = {
+      api: 'nian_collectScore',
+      item: []
+    }
+
+    !(() => {
+      let result = ``
+      result = JSON.parse(result)
+      let taskVos = result['taskVos']
+      handleTaskList(taskVos)
+      console.log(json);
+      document.write(JSON.stringify(json))
+    })()
+
+    function handleTaskList(taskVos) {
+      for (let item of taskVos) {
+        // if (item.taskType === 2) {
+        //   if (item.status === 1) {
+        //     console.log(`准备做此任务：${item.taskName}`)
+        //     await getFeedDetail({ "taskId": item.taskId }, item.taskId)
+
+        //   } else if (item.status === 2) {
+        //     console.log(`${item.taskName}已做完`)
+        //   }
+        // }
+        if (item.taskType === 3 || item.taskType === 26) {
+          if (item.shoppingActivityVos) {
+            if (item.status === 1) {
+              console.log(`准备做此任务：${item.taskName}`)
+              for (let task of item.shoppingActivityVos) {
+                if (task.status === 1) {
+                  handleItem(item.taskName, item.taskId, task.itemId);
+                }
+              }
+            } else if (item.status === 2) {
+              console.log(`${item.taskName}已做完`)
+            }
+          }
+        }
+        else if (item.taskType === 9) {
+          if (item.status === 1) {
+            console.log(`准备做此任务：${item.taskName}`)
+            for (let task of item.shoppingActivityVos) {
+              if (task.status === 1) {
+                handleItem(item.taskName, item.taskId, task.itemId, 1);
+              }
+            }
+          } else if (item.status === 2) {
+            console.log(`${item.taskName}已做完`)
+          }
+        }
+        else if (item.taskType === 7) {
+          if (item.status === 1) {
+            console.log(`准备做此任务：${item.taskName}`)
+            for (let task of item.browseShopVo) {
+              if (task.status === 1) {
+                handleItem(item.taskName, item.taskId, task.itemId, 1);
+              }
+            }
+          } else if (item.status === 2) {
+            console.log(`${item.taskName}已做完`)
+          }
+        }
+        else if (item.taskType === 13) {
+          if (item.status === 1) {
+            console.log(`准备做此任务：${item.taskName}`)
+            handleItem(item.taskName, item.taskId, "1");
+          } else if (item.status === 2) {
+            console.log(`${item.taskName}已做完`)
+          }
+        }
+        else if (item.taskType === 21) {
+          if (item.status === 1) {
+            console.log(`准备做此任务：${item.taskName}`)
+            for (let task of item.brandMemberVos) {
+              if (task.status === 1) {
+                handleItem(item.taskName, item.taskId, task.itemId);
+              }
+            }
+          } else if (item.status === 2) {
+            console.log(`${item.taskName}已做完`)
+          }
+        }
+      }
+    }
+
+    function handleItem(taskName, taskId, itemId, actionType = null) {
+      let time = actionType ? 8 : 1
+      actionType = actionType || 0
+      let item = `${taskName} ${time} ${taskId} ${itemId} ${actionType} 0`
+      json.item.push(item)
+    }
+  </script>
+</body>
+
+</html>

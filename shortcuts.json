@@ -340,15 +340,15 @@
     }
   },
   "JD_nian": {
-    "version": "1.4",
-    "update_log": "- 增加 助力功能，可自行配置助力码\n- 增加 年兽AR游戏任务\n- 优化 data 键值弹出错误\n- 恢复 ios13 手动输入cookie方式",
+    "version": "1.5",
+    "update_log": "- 增加 检查剩余未做任务补做大幅增加任务完成度\n- 增加 店铺签到任务，加入会员任务\n- 优化 整体指令框架\n- 修复 指令部分Bug",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_nian#版本日志"
     },
     "help": "",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/fea3b376345542fc8e214e2fcc781e4f",
+    "update": "https://www.icloud.com/shortcuts/dcd63ec896d74acead25343ecdde82fb",
     "notice": "恢复ios13手动获取cookie方式\n关于如何助力和如何后台运行请看常见问题\n快去指令-更多去抢现金红包~",
     "video": "",
     "automation_url": "shortcuts://run-shortcut?name=京东-炸年兽&input=text&text=task",
