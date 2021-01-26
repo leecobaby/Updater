@@ -38,6 +38,9 @@
         case "nian_doShopLottery":
           body = doShopLottery(shopSign)
           break
+        case "nian_shopSignInWrite":
+          body = signInWrite(shopSign)
+          break
       }
       document.write(JSON.stringify(body))
     })()
@@ -107,6 +110,23 @@
       }
       let body = encode(temp, secretp, extraData);
       body['skuId'] = skuId
+      return body
+    }
+
+    function signInWrite(secretp, shopSign) {
+      let temp = {
+        "shopSign": shopSign,
+      }
+      const extraData = {
+        "jj": 6,
+        "buttonid": "jmdd-react-smash_0",
+        "sceneid": "homePageh5",
+        "appid": '50073'
+      }
+      let body = {
+        ...encode(temp, secretp, extraData),
+        shopSign: shopSign
+      }
       return body
     }
 

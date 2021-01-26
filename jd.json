@@ -114,6 +114,11 @@
         "url": "https://api.m.jd.com/client.action?functionId=qryCompositeMaterials",
         "body": "functionId=qryCompositeMaterials&body={\"qryParam\":\"[{\\\"type\\\":\\\"advertGroup\\\",\\\"mapTo\\\":\\\"viewLogo\\\",\\\"id\\\":\\\"05149412\\\"},{\\\"type\\\":\\\"advertGroup\\\",\\\"mapTo\\\":\\\"bottomLogo\\\",\\\"id\\\":\\\"05149413\\\"}]\",\"activityId\":\"2cKMj86srRdhgWcKonfExzK4ZMBy\",\"pageId\":\"\",\"reqSrc\":\"\",\"applyKey\":\"21beast\"}&client=wh5&clientVersion=1.0.0"
       },
+      "qryCompositeMaterials2": {
+        "url": "https://api.m.jd.com/client.action?functionId=qryCompositeMaterials",
+        "method": "POST",
+        "body": "functionId=qryCompositeMaterials&body={\"qryParam\":\"[{\\\"type\\\":\\\"advertGroup\\\",\\\"mapTo\\\":\\\"homeFeedBannerT\\\",\\\"id\\\":\\\"05143017\\\"},{\\\"type\\\":\\\"advertGroup\\\",\\\"mapTo\\\":\\\"homeFeedBannerS\\\",\\\"id\\\":\\\"05144045\\\"},{\\\"type\\\":\\\"advertGroup\\\",\\\"mapTo\\\":\\\"homeFeedBannerA\\\",\\\"id\\\":\\\"05144046\\\"},{\\\"type\\\":\\\"advertGroup\\\",\\\"mapTo\\\":\\\"homeFeedBannerB\\\",\\\"id\\\":\\\"05144047\\\"},{\\\"type\\\":\\\"advertGroup\\\",\\\"mapTo\\\":\\\"domainShopData\\\",\\\"id\\\":\\\"05139136\\\"},{\\\"type\\\":\\\"advertGroup\\\",\\\"mapTo\\\":\\\"domainShopData2\\\",\\\"id\\\":\\\"05144271\\\"},{\\\"type\\\":\\\"advertGroup\\\",\\\"mapTo\\\":\\\"domainShopToT\\\",\\\"id\\\":\\\"05152048\\\"}]\",\"activityId\":\"2cKMj86srRdhgWcKonfExzK4ZMBy\",\"pageId\":\"\",\"reqSrc\":\"\",\"applyKey\":\"21beast\"}&client=wh5&clientVersion=1.0.0"
+      },
       "nian_killCoupon": {
         "url": "https://api.m.jd.com/client.action?functionId=nian_killCoupon",
         "body": "functionId=nian_killCoupon&body={}&client=wh5&clientVersion=1.0.0"
@@ -142,6 +147,11 @@
         "headers": {
           "Referer": "https://h5.m.jd.com/babelDiy/Zeus/2ZUbtdUfe8ZTyCQrVecyjdNehHpL/index.html"
         }
+      },
+      "nian_shopSignInWrite": {
+        "url": "https://api.m.jd.com/client.action?functionId=nian_shopSignInWrite",
+        "method": "POST",
+        "body": "functionId=nian_shopSignInWrite&body={}&client=wh5&clientVersion=1.0.0"
       }
     },
     "task": [
