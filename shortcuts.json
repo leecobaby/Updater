@@ -340,15 +340,15 @@
     }
   },
   "JD_nian": {
-    "version": "1.6",
-    "update_log": "- 增加 PK部分任务，8-20点做任务\n- 优化 剩余任务完成度",
+    "version": "1.7",
+    "update_log": "- 增加 PK部分任务，8-20点做任务\n- 优化 剩余任务完成度\n- 修复 组队助力任务错误",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_nian#版本日志"
     },
     "help": "",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/b2c6db9b4c614838a5e75a360ac43a76",
+    "update": "https://www.icloud.com/shortcuts/e4d6027f5fa443c6a70ca2140eceed01",
     "notice": "恢复ios13手动获取cookie方式\n关于如何助力和如何后台运行请看常见问题\n快去指令-更多去抢现金红包~",
     "video": "",
     "automation_url": "shortcuts://run-shortcut?name=京东-炸年兽&input=text&text=task",
