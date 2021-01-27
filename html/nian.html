@@ -41,6 +41,12 @@
         case "nian_shopSignInWrite":
           body = signInWrite(secretp, shopSign)
           break
+        case "nian_pk_assistGroup":
+          body = pkAssignGroup(secretp, shopSign)
+          break
+        case "nian_pk_collectScore":
+          body = pkCollectScore(secretp, taskId, itemId)
+          break
       }
       document.write(JSON.stringify(body))
     })()
@@ -127,6 +133,52 @@
         ...encode(temp, secretp, extraData),
         shopSign: shopSign
       }
+      return body
+    }
+
+    function pkAssignGroup(secretp, inviteId) {
+      let temp = {
+        "confirmFlag": 1,
+        "inviteId": inviteId,
+      }
+      const extraData = {
+        "jj": 6,
+        "buttonid": "jmdd-react-smash_0",
+        "sceneid": "homePageh5",
+        "appid": '50073'
+      }
+      let body = {
+        ...encode(temp, secretp, extraData),
+        inviteId: inviteId
+      }
+      return body
+    }
+
+    function pkCollectScore(secretp, taskId, itemId, actionType = null, inviteId = null, shopSign = null) {
+      let temp = {
+        "taskId": taskId,
+        "rnd": getRnd(),
+        "inviteId": "-1",
+        "stealId": "-1"
+      }
+      if (itemId) temp['itemId'] = itemId
+      if (actionType) temp['actionType'] = actionType
+      if (inviteId) temp['inviteId'] = inviteId
+      if (shopSign) temp['shopSign'] = shopSign
+      const extraData = {
+        "jj": 6,
+        "buttonid": "jmdd-react-smash_0",
+        "sceneid": "homePageh5",
+        "appid": '50073'
+      }
+      let body = {
+        ...encode(temp, secretp, extraData),
+        taskId: taskId,
+        itemId: itemId
+      }
+      if (actionType) body['actionType'] = actionType
+      if (inviteId) body['inviteId'] = inviteId
+      if (shopSign) body['shopSign'] = shopSign
       return body
     }
 

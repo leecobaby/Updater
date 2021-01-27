@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>handleTaskList</title>
+</head>
+
+<body>
+  <script>
+    /**
+     * modify by @LXK9301
+     * author by @leecobaby
+     * 2021-01-26
+     */
+
+    const json = {
+      api: 'nian_pk_collectScore',
+      item: []
+    }
+
+    !(() => {
+      let data = ``
+      data = JSON.parse(data)
+      handleTaskList(data)
+      console.log(json);
+      document.write(JSON.stringify(json))
+    })()
+
+    function handleTaskList(data) {
+      if (data.code === 0 && data.data && data.data.bizCode === 0) {
+        json.hasGroup = true
+        for (let item of data.data.result.taskVos) {
+          if (item.taskType === 3 || item.taskType === 26) {
+            if (item.shoppingActivityVos) {
+              if (item.status === 1) {
+                console.log(`准备做此任务：${item.taskName}`)
+                for (let task of item.shoppingActivityVos) {
+                  if (task.status === 1) {
+                    handleItem(item.taskName, item.taskId, task.itemId);
+                  }
+                }
+              } else if (item.status === 2) {
+                console.log(`${item.taskName}已做完`)
+              }
+            }
+          }
+        }
+      }
+      else {
+        console.log(`组队尚未开启，请先去开启组队或是加入队伍！`)
+      }
+    }
+
+    function handleItem(taskName, taskId, itemId) {
+      let item = `${taskName} 1 ${taskId} ${itemId} 0 0`
+      json.item.push(item)
+    }
+  </script>
+</body>
+
+</html>

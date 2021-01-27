@@ -157,6 +157,26 @@
         "url": "https://api.m.jd.com/client.action?functionId=nian_shopSignInWrite",
         "method": "POST",
         "body": "functionId=nian_shopSignInWrite&body={}&client=wh5&clientVersion=1.0.0"
+      },
+      "nian_pk_getHomeData": {
+        "url": "https://api.m.jd.com/client.action?functionId=nian_pk_getHomeData",
+        "method": "POST",
+        "body": "functionId=nian_pk_getHomeData&body={}&client=wh5&clientVersion=1.0.0"
+      },
+      "nian_pk_getTaskDetail": {
+        "url": "https://api.m.jd.com/client.action?functionId=nian_pk_getTaskDetail",
+        "method": "POST",
+        "body": "functionId=nian_pk_getTaskDetail&body={}&client=wh5&clientVersion=1.0.0"
+      },
+      "nian_pk_collectScore": {
+        "url": "https://api.m.jd.com/client.action?functionId=nian_pk_collectScore",
+        "method": "POST",
+        "body": "functionId=nian_pk_collectScore&body={}&client=wh5&clientVersion=1.0.0"
+      },
+      "nian_pk_assistGroup": {
+        "url": "https://api.m.jd.com/client.action?functionId=nian_pk_assistGroup",
+        "method": "POST",
+        "body": "functionId=nian_pk_assistGroup&body={}&client=wh5&clientVersion=1.0.0"
       }
     },
     "task": [
