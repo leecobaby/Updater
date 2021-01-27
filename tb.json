@@ -501,7 +501,7 @@
     ]
   },
   "FarmSingle": {
-    "version": "数据库版本:1.21.1",
+    "version": "数据库版本:1.27.1",
     "gd": {
       "taobao": "taobao://m.tb.cn/h.4hGjyCh",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4hGjyCh",
@@ -617,7 +617,10 @@
             "9048 other_0_68022_9048_0",
             "9998 expo_0_229911001_9998_0",
             "9998 expo_0_229911002_9998_0",
-            "9998 expo_0_229911003_9998_0"
+            "9998 expo_0_229911003_9998_0",
+            "9734 expo_0_98007_9734_0",
+            "10038 other_0_84029_10038_0",
+            "10333 expo_0_42264465031_10333_0"
           ]
         }
       }
