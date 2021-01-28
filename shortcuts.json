@@ -349,7 +349,7 @@
     "help": "",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/e4d6027f5fa443c6a70ca2140eceed01",
-    "notice": "反映没做任务的是没有正常跑完指令,跑完会生成日志~\n关于如何助力和如何后台运行请看常见问题~",
+    "notice": "任务一堆火爆的有网友返回重新授权就好了~\n关于如何助力和如何后台运行请看常见问题~",
     "video": "",
     "automation_url": "shortcuts://run-shortcut?name=京东-炸年兽&input=text&text=task",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/jd_nian.png",
