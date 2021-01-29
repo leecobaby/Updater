@@ -340,15 +340,15 @@
     }
   },
   "JD_nian": {
-    "version": "1.9",
-    "update_log": "- 增加 多账号任务功能，最多支持三个账号\n- 增加 可选择性做任务\n- 优化 更新快捷指令保留助力码\n- 优化 ipad 兼容性",
+    "version": "2.0",
+    "update_log": "- 增加 多账号任务功能，最多支持三个账号\n- 增加 可选择性做任务\n- 优化 更新快捷指令保留助力码\n- 优化 ipad 兼容性\n修复 多账号授权登录错误",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_nian#版本日志"
     },
     "help": "",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/93896809d21743faa255e9ba4e5791dc",
+    "update": "https://www.icloud.com/shortcuts/56b89dda74fd45d9b15b38fbb1a0bcfe",
     "notice": "任务一堆火爆的有网友反馈重新授权就好了~\n关于如何助力和如何后台运行请看常见问题~",
     "video": "",
     "automation_url": "shortcuts://run-shortcut?name=京东-炸年兽&input=text&text=task",
