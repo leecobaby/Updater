@@ -340,16 +340,16 @@
     }
   },
   "JD_nian": {
-    "version": "2.0",
-    "update_log": "- 增加 多账号任务功能，最多支持三个账号\n- 增加 可选择性做任务\n- 优化 更新快捷指令保留助力码\n- 优化 ipad 兼容性\n修复 多账号授权登录错误",
+    "version": "2.1",
+    "update_log": "- 增加 对自动化的支持\n- 增加 对 AutoBox 的支持\n- 增加 任务详情是否通知设置\n- 修复 多账号再次弹出任务列表问题",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_nian#版本日志"
     },
     "help": "",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/085694d22a8f4be49d2c4ac8a9eac1de",
-    "notice": "任务一堆火爆的有网友反馈重新授权就好了~\n关于如何助力和如何后台运行请看常见问题~",
+    "update": "https://www.icloud.com/shortcuts/afa6898b2a5b4fa58ea3ae6e3d4ff76f",
+    "notice": "组队助力码好像每天都在变自己注意下~\n关于如何助力和如何后台运行请看常见问题~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-炸年兽&input=text&text=task",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/jd_nian.png",
