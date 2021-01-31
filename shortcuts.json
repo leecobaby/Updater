@@ -340,16 +340,16 @@
     }
   },
   "JD_nian": {
-    "version": "2.2",
-    "update_log": "- 增加 对自动化的支持\n- 增加 对 AutoBox 的支持\n- 增加 任务详情是否通知设置\n- 修复 多账号再次弹出任务列表问题\n去掉调试弹窗",
+    "version": "2.3",
+    "update_log": "- 优化 提前集中授权防止因未授权而导致的运行出错\n- 增加 自动识别 20-22 点的组队抢红包功能",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_nian#版本日志"
     },
     "help": "",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/8826f8d3337d47f69bd257805b9e69b8",
-    "notice": "每次更新需要重新授权访问网络7-8次,否则出错~\n关于如何助力和如何后台运行请看常见问题~",
+    "update": "https://www.icloud.com/shortcuts/90dac6d73da64a43bcd0ecce47fd9c52",
+    "notice": "没有显示详细任务通知是指令设置里关闭了提示~\n关于如何助力和如何后台运行请看常见问题~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-炸年兽&input=text&text=task",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/jd_nian.png",
