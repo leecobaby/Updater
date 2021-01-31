@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>handle nian_pk_getStealForms</title>
+</head>
+
+<body>
+  <script>
+    /**
+     * modify by @LXK9301
+     * author by @leecobaby
+     * 2021-01-31
+     */
+
+    const json = {
+      api: 'nian_pk_doSteal',
+      item: []
+    }
+
+    !(() => {
+      let data = ``
+      data = JSON.parse(data)
+      handleTaskList(data)
+      console.log(json);
+      document.write(JSON.stringify(json))
+    })()
+
+    function handleTaskList(data) {
+      if (data.code === 0 && data.data && data.data.bizCode === 0) {
+        json.hasGroup = true
+        for (let i = 1; i < data.data.result.stealGroups.length; ++i) {
+          let item = data.data.result.stealGroups[i]
+          if (item.stolen === 0) {
+            console.log(`去偷${item.name}的红包`)
+            handleItem(item.id)
+          }
+        }
+      } else {
+        console.log(`组队尚未开启，请先去开启组队或是加入队伍！`)
+      }
+
+    }
+
+    function handleItem(stealId) {
+      let item = `偷红包 1 0 0 0 ${stealId}`
+      json.item.push(item)
+    }
+  </script>
+</body>
+
+</html>

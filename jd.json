@@ -178,6 +178,16 @@
         "url": "https://api.m.jd.com/client.action?functionId=nian_pk_assistGroup",
         "method": "POST",
         "body": "functionId=nian_pk_assistGroup&body={}&client=wh5&clientVersion=1.0.0"
+      },
+      "nian_pk_getStealForms": {
+        "url": "https://api.m.jd.com/client.action?functionId=nian_pk_getStealForms",
+        "method": "POST",
+        "body": "functionId=nian_pk_getStealForms&body={}&client=wh5&clientVersion=1.0.0"
+      },
+      "nian_pk_doSteal": {
+        "url": "https://api.m.jd.com/client.action?functionId=nian_pk_doSteal",
+        "method": "POST",
+        "body": "functionId=nian_pk_doSteal&body={}&client=wh5&clientVersion=1.0.0"
       }
     },
     "task": [
