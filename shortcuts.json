@@ -365,6 +365,25 @@
       "more": ""
     }
   },
+  "Alipay_wufu": {
+    "version": "1.0",
+    "update_log": "",
+    "help": "",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "",
+    "notice": "没有显示详细任务通知是指令设置里关闭了提示~\n关于如何助力和如何后台运行请看常见问题~",
+    "image": "https://gitee.com/leecogit/Updater/raw/master/image/alipay_wufu.png",
+    "url": "https://gitee.com/leecogit/Updater/raw/master/alipay.json",
+    "tip": {
+      "hongbao": "",
+      "hot": "🔥 集五福活动中...",
+      "faq": "",
+      "set": "",
+      "team": "",
+      "other": "",
+      "more": ""
+    }
+  },
   "More": {
     "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
     "加入QQ情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",

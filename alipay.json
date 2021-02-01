@@ -2,70 +2,76 @@
   "Alipay_wufu": {
     "version": "",
     "pv": "",
-    "end": ""
+    "end": "",
+    "search": [
+      "薇娅",
+      "滴滴",
+      "蒙牛",
+      "一汽大众",
+      "银泰百货",
+      "肯德基",
+      "麦当劳",
+      "大悦城",
+      "爱琴海",
+      "星河",
+      "砂之船奥莱",
+      "消费券"
+    ]
   },
   "share": {
-    "🔥 京享红包每天三次": "openapp.jdmobile://virtual?params={\"des\":\"m\",\"category\":\"jump\",\"url\":\"https://u.jd.com/tiMZxrB\"}",
-    "品牌联合额外送福": { 
-      "活动正在更新中...": "活动正在更新中..." 
-      alipays://platformapi/startapp?appId=20000067&url=https://render.alipay.com/p/c/17yq18lq3slc?source=JING_LING
-"第1个":https://render.alipay.com/p/c/17yq18lq3slc?source=JING_LING
-第2个：https://render.alipay.com/p/c/17yq18lq3slc?source=FEI_ZHU
-第3个：https://render.alipay.com/p/c/17yq18lq3slc?source=YOUKU_TV
-第4个：https://render.alipay.com/p/c/17yq18lq3slc?source=PIAO_PIAO
-第5个：https://render.alipay.com/p/c/17yq18lq3slc?source=TIAN_MAO
-第6个：https://render.alipay.com/p/c/17yq18lq3slc?source=KAO_LA
-第7个：https://render.alipay.com/p/c/17yq18lq3slc?source=CAI_NIAO
-第8个：https://render.alipay.com/p/c/17yq18lq3slc?source=XINHUA_SHE
-第9个：https://render.alipay.com/p/c/17yq18lq3slc?source=BAI_JINGTU
-第10个：https://render.alipay.com/p/c/17yq18lq3slc?source=KE_CHUANG
-第11个：https://render.alipay.com/p/c/17yq18lq3slc?source=KEJI_ZHIJIA
-第12个：https://render.alipay.com/p/c/17yq18lq3slc?source=JIEFANG_RIBAO
-第13个：https://render.alipay.com/p/c/17yq18lq3slc?source=DA_WAN
-第14个：https://render.alipay.com/p/c/17yq18lq3slc?source=ZIJIN_SHAN
-第15个：https://render.alipay.com/p/c/17yq18lq3slc?source=ZHONGGUO_LAN
-第16个：https://render.alipay.com/p/c/17yq18lq3slc?source=CAI_LIFANG
-第17个：https://render.alipay.com/p/c/17yq18lq3slc?source=ZHENG_GUAN
-第18个：https://render.alipay.com/p/c/17yq18lq3slc?source=JIANGXI_XINWEN
-第19个：https://render.alipay.com/p/c/17yq18lq3slc?source=YANG_CHENG
-第20个：https://render.alipay.com/p/c/17yq18lq3slc?source=NAN_DU
-第21个：https://render.alipay.com/p/c/17yq18lq3slc?source=SANYA_RIBAO
-第22个：https://render.alipay.com/p/c/17yq18lq3slc?source=CHUNCHENG_WANBAO
-第23个：https://render.alipay.com/p/c/17yq18lq3slc?source=GUIZHOU_DUSHIBAO
-第24个：https://render.alipay.com/p/c/17yq18lq3slc?source=HUANG_HE
-第25个：https://render.alipay.com/p/c/17yq18lq3slc?source=SHANXI_TOUTIAO
-第26个：https://render.alipay.com/p/c/17yq18lq3slc?source=XINJING_BAO
-第27个：https://render.alipay.com/p/c/17yq18lq3slc?source=JIN_YUN
-第28个：https://render.alipay.com/p/c/17yq18lq3slc?source=CHONG_QING
-第29个：https://render.alipay.com/p/c/17yq18lq3slc?source=LONGTOU_XINWEN
-第30个：https://render.alipay.com/p/c/17yq18lq3slc?source=FENGKOU_CAIJING
-第31个：https://render.alipay.com/p/c/17yq18lq3slc?source=QILU_WANBAO
-第32个：https://render.alipay.com/p/c/17yq18lq3slc?source=GUOWU_YUAN
-第33个：https://render.alipay.com/p/c/17yq18lq3slc?source=REN_SHE
-第34个：https://render.alipay.com/p/c/17yq18lq3slc?source=YI_BAO
-第35个：https://render.alipay.com/p/c/17yq18lq3slc?source=YUSHI_BAN
-第36个：https://render.alipay.com/p/c/17yq18lq3slc?source=EHUI_BAN
-第37个：https://render.alipay.com/p/c/17yq18lq3slc?source=SUISHEN_BAN
-第38个：https://render.alipay.com/p/c/17yq18lq3slc?source=SHENZHEN_JIAOJING
-第39个：https://render.alipay.com/p/c/17yq18lq3slc?source=GANFU_TONG
-第40个：https://render.alipay.com/p/c/17yq18lq3slc?source=ANHUI_SHUIWU
-第41个：https://render.alipay.com/p/c/17yq18lq3slc?source=WUXI_GONGJIJIN
-第42个：https://render.alipay.com/p/c/17yq18lq3slc?source=SHANGHAI_GONGJIJIN
-第43个：https://render.alipay.com/p/c/17yq18lq3slc?source=TIANFU_TONG
-第44个：https://render.alipay.com/p/c/17yq18lq3slc?source=QINGDAN_DASHUJU
-第45个：https://render.alipay.com/p/c/17yq18lq3slc?source=WANSHI_TONG
-第46个：https://render.alipay.com/p/c/17yq18lq3slc?source=MINZHENG_TONG
-第47个：https://render.alipay.com/p/c/17yq18lq3slc?source=MEI_TU
-第48个：https://render.alipay.com/p/c/17yq18lq3slc?source=MEI_YAN
-第49个：https://render.alipay.com/p/c/17yq18lq3slc?source=MANG_GUO
-第50个：https://render.alipay.com/p/c/17yq18lq3slc?source=KUAI_SHOU
-第51个：https://render.alipay.com/p/c/17yq18lq3slc?source=WANGYI_YUN
-第52个：https://render.alipay.com/p/c/17yq18lq3slc?source=SHU_QI
-
-支付宝APP顶部分别搜：薇娅、滴滴、蒙牛、一汽大众、银泰百货、肯德基、麦当劳、大悦城、爱琴海、星河、砂之船奥莱、消费券
-
-闲鱼APP：首页--热门活动
-支付宝商家服务：支付宝APP我的--商家服务--新年福气满满（没有领过收款码的，这个参加不了）
+    "品牌联合额外送福": {
+      "第10个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=KE_CHUANG",
+      "第8个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=XINHUA_SHE",
+      "第12个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=JIEFANG_RIBAO",
+      "第21个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=SANYA_RIBAO",
+      "第30个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=FENGKOU_CAIJING",
+      "第3个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=YOUKU_TV",
+      "第14个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=ZIJIN_SHAN",
+      "第23个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=GUIZHOU_DUSHIBAO",
+      "第32个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=GUOWU_YUAN",
+      "第41个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=WUXI_GONGJIJIN",
+      "第50个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=KUAI_SHOU",
+      "第16个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=CAI_LIFANG",
+      "第25个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=SHANXI_TOUTIAO",
+      "第34个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=YI_BAO",
+      "第43个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=TIANFU_TONG",
+      "第5个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=TIAN_MAO",
+      "第18个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=JIANGXI_XINWEN",
+      "第27个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=JIN_YUN",
+      "第36个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=EHUI_BAN",
+      "第45个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=WANSHI_TONG",
+      "第52个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=SHU_QI",
+      "第29个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=LONGTOU_XINWEN",
+      "第38个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=SHENZHEN_JIAOJING",
+      "第47个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=MEI_TU",
+      "第7个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=CAI_NIAO",
+      "第49个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=MANG_GUO",
+      "第11个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=KEJI_ZHIJIA",
+      "第2个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=FEI_ZHU",
+      "第20个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=NAN_DU",
+      "第9个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=BAI_JINGTU",
+      "第13个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=DA_WAN",
+      "第22个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=CHUNCHENG_WANBAO",
+      "第31个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=QILU_WANBAO",
+      "第40个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=ANHUI_SHUIWU",
+      "第15个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=ZHONGGUO_LAN",
+      "第24个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=HUANG_HE",
+      "第4个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=PIAO_PIAO",
+      "第33个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=REN_SHE",
+      "第42个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=SHANGHAI_GONGJIJIN",
+      "第17个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=ZHENG_GUAN",
+      "第26个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=XINJING_BAO",
+      "第35个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=YUSHI_BAN",
+      "第44个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=QINGDAN_DASHUJU",
+      "第51个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=WANGYI_YUN",
+      "第19个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=YANG_CHENG",
+      "第28个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=CHONG_QING",
+      "第6个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=KAO_LA",
+      "第37个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=SUISHEN_BAN",
+      "第46个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=MINZHENG_TONG",
+      "第39个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=GANFU_TONG",
+      "第48个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=MEI_YAN",
+      "第1个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=JING_LING"
     }
   }
 }
