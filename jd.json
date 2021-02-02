@@ -1,64 +1,77 @@
 {
   "JD_sign": {
-    "version": "1.18.1",
-    "pv": "",
+    "version": "2.2.1",
+    "pv": "openapp.jdmobile://virtual?params={\"des\":\"m\",\"category\":\"jump\",\"url\":\"https://u.jd.com/thCBSZW\"}",
     "end": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"jdreactcommon\",\"appname\":\"JDReactMyJdSubModule\",\"modulename\":\"JDReactMyJdSubModule\",\"ishidden\":true,\"needLogin\":true}",
+    "api": {
+      "isLogin": {
+        "url": "https://wq.jd.com/user/info/QueryJDUserInfo?sceneval=2",
+        "method": "POST",
+        "headers": {
+          "Accept": "application/json,text/plain, */*",
+          "Accept-Encoding": "gzip, deflate, br",
+          "Accept-Language": "zh-cn",
+          "Connection": "keep-alive",
+          "Referer": "https://wqs.jd.com/my/jingdou/my.shtml?sceneval=2"
+        }
+      }
+    },
     "task": [
       {
         "name": "京东京豆",
-        "type": "post",
+        "method": "post",
         "url": "https://api.m.jd.com/client.action",
         "body": "functionId=signBeanIndex&appid=ld"
       },
       {
         "name": "京东超市",
-        "type": "get",
+        "method": "get",
         "url": "https://api.m.jd.com/api?appid=jdsupermarket&functionId=smtg_sign&clientVersion=8.0.0&client=m&body=%7B%7D",
         "Origin": "https://jdsupermarket.jd.com"
       },
       {
         "name": "金融简单赚钱",
-        "type": "post",
+        "method": "post",
         "url": "https://ms.jr.jd.com/gw/generic/zc/h5/m/queryOpenScreenReward",
         "body": "reqData=%7B%22channelCode%22%3A%22ZHUANQIAN%22%2C%22clientType%22%3A%22sms%22%2C%22clientVersion%22%3A%2211.0%22%7D"
       },
       {
         "name": "金融钢镚",
-        "type": "post",
+        "method": "post",
         "url": "https://ms.jr.jd.com/gw/generic/hy/h5/m/signIn1",
         "body": "reqData=%7B%22channelSource%22%3A%22JRAPP6.0%22%2C%22riskDeviceParam%22%3A%22%7B%7D%22%7D"
       },
       {
         "name": "京东转盘",
-        "type": "get",
+        "method": "get",
         "url": "https://api.m.jd.com/client.action?functionId=wheelSurfIndex&body=%7B%22actId%22%3A%22jgpqtzjhvaoym%22%2C%22appSource%22%3A%22jdhome%22%7D&appid=ld"
       },
       {
         "name": "京东闪购",
-        "type": "post",
+        "method": "post",
         "url": "https://api.m.jd.com/client.action?functionId=partitionJdSgin",
         "body": "body=%7B%22version%22%3A%22v2%22%7D&client=apple&clientVersion=9.0.8&openudid=1fce88cd05c42fe2b054e846f11bdf33f016d676&sign=6768e2cf625427615dd89649dd367d41&st=1597248593305&sv=121"
       },
       {
         "name": "京东现金红包",
-        "type": "post",
+        "method": "post",
         "url": "https://api.m.jd.com/client.action?functionId=ccSignInNew",
         "body": "body=%7B%22pageClickKey%22%3A%22CouponCenter%22%2C%22eid%22%3A%22O5X6JYMZTXIEX4VBCBWEM5PTIZV6HXH7M3AI75EABM5GBZYVQKRGQJ5A2PPO5PSELSRMI72SYF4KTCB4NIU6AZQ3O6C3J7ZVEP3RVDFEBKVN2RER2GTQ%22%2C%22shshshfpb%22%3A%22v1%5C%2FzMYRjEWKgYe%2BUiNwEvaVlrHBQGVwqLx4CsS9PH1s0s0Vs9AWk%2B7vr9KSHh3BQd5NTukznDTZnd75xHzonHnw%3D%3D%22%2C%22childActivityUrl%22%3A%22openapp.jdmobile%253a%252f%252fvirtual%253fparams%253d%257b%255c%2522category%255c%2522%253a%255c%2522jump%255c%2522%252c%255c%2522des%255c%2522%253a%255c%2522couponCenter%255c%2522%257d%22%2C%22monitorSource%22%3A%22cc_sign_ios_index_config%22%7D&client=apple&clientVersion=8.5.0&d_brand=apple&d_model=iPhone8%2C2&openudid=1fce88cd05c42fe2b054e846f11bdf33f016d676&scope=11&screen=1242%2A2208&sign=1cce8f76d53fc6093b45a466e93044da&st=1581084035269&sv=102"
       },
       {
         "name": "京东领现金",
-        "type": "get",
+        "method": "get",
         "url": "https://api.m.jd.com/client.action?functionId=cash_sign&body=%7B%22remind%22%3A0%2C%22inviteCode%22%3A%22%22%2C%22type%22%3A0%2C%22breakReward%22%3A0%7D&client=apple&clientVersion=9.0.8&openudid=1fce88cd05c42fe2b054e846f11bdf33f016d676&sign=7e2f8bcec13978a691567257af4fdce9&st=1596954745073&sv=111"
       },
       {
         "name": "京东金贴",
-        "type": "get",
+        "method": "get",
         "url": "https://ms.jr.jd.com/gw/generic/uc/h5/m/signIn7",
         "Referer": "https://active.jd.com/forever/cashback/index"
       },
       {
-        "name": "金融抽奖顶部签到",
-        "type": "post",
+        "name": "京东金融-抽奖",
+        "method": "post",
         "url": "https://ms.jr.jd.com/gw/generic/syh_yxmx/h5/m/handleSign",
         "body": "reqData=%7B%22activityNo%22%3A%22e2d1b240d5674def8178be6b4faac5b6%22%2C%22signType%22%3A%221%22%2C%22encryptSign%22%3A%22%22%7D"
       }
