@@ -289,6 +289,30 @@
       "more": ""
     }
   },
+  "ltao_duck": {
+    "version": "1.0",
+    "update_log": "",
+    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/ltao_duck",
+    "help": "",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "",
+    "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
+    "notice": "",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
+    "automation_url": "shortcuts://run-shortcut?name=淘特-发财鸭&input=text&text=task",
+    "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
+    "image": "https://gitee.com/leecogit/Updater/raw/master/image/tb_jfq.png",
+    "url": "https://gitee.com/leecogit/Updater/raw/master/tb.json",
+    "tip": {
+      "hongbao": "",
+      "hot": "🔥 特价版新人活动中...",
+      "faq": "有疑问的请查看",
+      "set": "点击查看自动化操作",
+      "team": "",
+      "other": "",
+      "more": ""
+    }
+  },
   "AutoBox": {
     "version": "1.1",
     "update_log": "- 增加 使用教程、常见问题、先关内容\n- 修复 ios13 无法使用问题\n- 修复 单个订阅模块导致配置时出错问题\n- 优化 商城 API 访问逻辑",

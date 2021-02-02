@@ -623,7 +623,8 @@
             "10333 expo_0_42264465031_10333_0",
             "10387 other_0_105010_10387_0",
             "9801 cloudSailAdExtra_0_296692181133_9801_0",
-            "9586 other_0_70019_9586_0"
+            "9586 other_0_70019_9586_0",
+            "10577 other_0_105010_10577_0"
           ]
         }
       }
@@ -694,15 +695,65 @@
       }
     ]
   },
+  "ltao_duck": {
+    "version": "数据库版本:2.2.1",
+    "pv": {
+      "taobao": "taobao://m.tb.cn/h.4hGjyCh",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4hGjyCh",
+      "taobaolite": "taobaolite://m.tb.cn/h.4hGjyCh"
+    },
+    "main": {
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fwww.tmall.com%2F",
+      "taobaolite": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F"
+    },
+    "home": {
+      "taobao": "taobao://pages.tmall.com/wow/z/sale/nsrSolution/ltao-duck-home?disableNav=YES",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fsale%2FnsrSolution%2Fltao-duck-home%3FdisableNav%3DYES",
+      "taobaolite": "taobaolite://pages.tmall.com/wow/z/sale/nsrSolution/ltao-duck-home?disableNav=YES"
+    },
+    "end": {
+      "taobao": "taobao://pages.tmall.com/wow/z/sale/nsrSolution/ltao-duck-home?disableNav=YES",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fsale%2FnsrSolution%2Fltao-duck-home%3FdisableNav%3DYES",
+      "taobaolite": "taobaolite://pages.tmall.com/wow/z/sale/nsrSolution/ltao-duck-home?disableNav=YES"
+    },
+    "app": {
+      "淘宝": "taobao",
+      "天猫": "tmall",
+      "淘宝特价版": "taobaolite"
+    },
+    "task": [
+      {
+        "tmall": {
+          "title": "攒金币",
+          "type": "other",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?disableNav=YES&wh_pid=daily-216010&subSource=catsmoney&fromToken=lrVqDJXSZDKgxlaZc56tdPeCWUdUM&spm=a217e.1212.tasklist.0&sceneId=1145&sourceType=other&hd_from_id=100094&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "9187 other_0_0_9187_0",
+            "9182 other_0_98015_9182_0",
+            "9182 other_0_98015_9182_1",
+            "9182 other_0_98015_9182_2",
+            "10010 other_0_1_10010_0",
+            "10010 other_0_1_10010_1",
+            "10010 other_0_1_10010_2",
+            "10158 other_0_98006_10158_0",
+            "10108 other_0_98001_10108_0",
+            "9189 other_0_86053_9189_0",
+            "9192 other_0_0_9192_0"
+          ]
+        }
+      }
+    ]
+  },
   "team": {
     "👤 为作者助力": "taobao://m.tb.cn/h.4i7XpWg?sm=f09c1a",
     "👥 相互助力群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=830385420&card_type=group&source=qrcode&jump_from=&auth=&authSig=CtFeH1TafXW5JK0ALJh4EbaUkBHKJ6ykRB6+ejGS3fvjGPae8Am9sPg+sm0xsTNX&source_id=2_40001"
   },
   "share": {
     "🔥 找优惠券抢购助手": "https://www.icloud.com/shortcuts/3a499f9269a440739d20c9793183b5f0",
-    "🧧 年货节超级红包": "taobao://m.tb.cn/h.4RaMYQr",
-    "🧧 种草抽红包": "taobao://m.tb.cn/h.487TsJd?sm=deaecc",
+    "🧧 淘宝特价版新人0.1元购": "taobao://m.tb.cn/h.49cUbFT",
     "🔥 每天10点限量1元购": "taobao://m.tb.cn/h.4ii1Nhf",
-    "🔥 淘宝1月首购有礼红包": "taobao://m.tb.cn/h.4ii1FHM"
+    "🔥 淘宝2月首购有礼红包": "taobao://m.tb.cn/h.49cfixF"
   }
 }

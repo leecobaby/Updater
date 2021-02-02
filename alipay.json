@@ -15,7 +15,8 @@
       "爱琴海",
       "星河",
       "砂之船奥莱",
-      "消费券"
+      "消费券",
+      "压岁钱"
     ]
   },
   "share": {
@@ -72,6 +73,7 @@
       "第39个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=GANFU_TONG",
       "第48个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=MEI_YAN",
       "第1个": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/c/17yq18lq3slc?source=JING_LING"
-    }
+    },
+    "商家-剪纸得福卡": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://render.alipay.com/p/yuyan/180020010000835052/index.html"
   }
 }
