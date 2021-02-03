@@ -705,7 +705,7 @@
     "main": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fwww.tmall.com%2F",
-      "taobaolite": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F"
+      "taobaolite": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%23mallPage"
     },
     "home": {
       "taobao": "taobao://pages.tmall.com/wow/z/sale/nsrSolution/ltao-duck-home?disableNav=YES",
@@ -740,7 +740,9 @@
             "10158 other_0_98006_10158_0",
             "10108 other_0_98001_10108_0",
             "9189 other_0_86053_9189_0",
-            "9192 other_0_0_9192_0"
+            "9192 other_0_0_9192_0",
+            "9192 other_0_0_9192_1",
+            "9192 other_0_0_9192_2"
           ]
         }
       }
