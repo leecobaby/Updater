@@ -348,11 +348,12 @@
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "",
     "faq": "",
-    "notice": "初步实现京东10种签到功能~\n初代版本暂不支持显示奖励明细~",
+    "notice": "初步实现京东10种签到功能~\n初代版本暂不支持显示奖励明细~\n暂不支持授权方式登录",
     "video": "",
     "automation_url": "shortcuts://run-shortcut?name=京东-多合一签到&input=text&text=task",
     "image": "https://gitee.com/leecobaby/Updater/raw/master/image/jd_jd.png",
     "url": "https://gitee.com/leecobaby/Updater/raw/master/jd.json",
+    "scritable": "https://gitee.com/leecogit/Updater/raw/master/getJDCookie.js",
     "tip": {
       "hongbao": "",
       "hot": "",
