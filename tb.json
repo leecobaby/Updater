@@ -696,7 +696,7 @@
     ]
   },
   "ltao_duck": {
-    "version": "数据库版本:2.2.1",
+    "version": "数据库版本:2.3.1",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.4hGjyCh",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4hGjyCh",
@@ -727,7 +727,7 @@
         "tmall": {
           "title": "攒金币",
           "type": "other",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?disableNav=YES&wh_pid=daily-216010&subSource=catsmoney&fromToken=lrVqDJXSZDKgxlaZc56tdPeCWUdUM&spm=a217e.1212.tasklist.0&sceneId=1145&sourceType=other&hd_from_id=100094&deliveryId=",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/z/sale/nsrSolution/signincash-home?disableNav=YES&sourceType=other&wh_kangarooprefetch=true&needLogin=true&bizType=ltaoDuck&fromToken=lrVqDJXSZDKgxlaZc56tdPeCWUdUM&sceneId=1145&hd_from_id=100094&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "9187 other_0_0_9187_0",
