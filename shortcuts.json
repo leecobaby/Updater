@@ -290,14 +290,14 @@
     }
   },
   "ltao_duck": {
-    "version": "1.0",
+    "version": "1.1",
     "update_log": "",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/ltao_duck",
     "help": "",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "",
+    "update": "https://www.icloud.com/shortcuts/96fd4ffff90840f5a65d10f0fe1d5f5e",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "合成鸭可提现,目前暂不支持淘宝天猫端~\n尽量在合成完鸭之后再做任务可得更多金币~\n没有使用过特价版的新用户可能无法参加任务,可以先去活动中心参与特价版新人活动~",
+    "notice": "如果打开淘宝客户端请手动去设置成特价版客户端~\n尽量在合成完鸭之后再做任务可得更多金币~\n没有使用过特价版的新用户可能无法参加任务,可以先去活动中心参与特价版新人活动~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=淘特-发财鸭&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
@@ -341,14 +341,16 @@
     }
   },
   "JD_sign": {
-    "version": "1.1",
-    "update_log": "",
-    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_sign",
+    "version": "1.2",
+    "update_log": "- 修复 授权登录方式\n- 修复 一些问题\n- 优化 架构",
+    "about": {
+      "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
+      "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_sign#版本日志"
+    },
     "help": "",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "",
-    "faq": "",
-    "notice": "暂不支持授权方式登录~\n初步实现京东10种签到功能~\n初代版本暂不支持显示奖励明细~\n",
+    "update": "https://www.icloud.com/shortcuts/7700808a249a480895b03f3c5a64ea40",
+    "notice": "暂不支持授权方式登录~\n初步实现京东10种签到功能~\n初代版本暂不支持显示奖励明细~",
     "video": "",
     "automation_url": "shortcuts://run-shortcut?name=京东-多合一签到&input=text&text=task",
     "image": "https://gitee.com/leecobaby/Updater/raw/master/image/jd_jd.png",
