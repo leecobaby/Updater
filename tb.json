@@ -1,6 +1,6 @@
 {
   "Taojb": {
-    "version": "数据库版本:1.12.1",
+    "version": "数据库版本:2.5.1",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
     "gd": {
       "taobao": "taobao://m.tb.cn/h.49SUzMg",
@@ -78,7 +78,12 @@
             "8394 other_0_1000000019_8394_1",
             "9111 other_0_9138430_9111_0",
             "8455 video_0_9098311_8455_0",
-            "8943 other_0_210111_8943_0"
+            "8943 other_0_210111_8943_0",
+            "2681 other_0_0_2681_0",
+            "8155 expo_0_1000000030_8155_0",
+            "10684 expo_0_1200000013_10684_0",
+            "10647 other_0_0_10647_0",
+            "9735 other_0_0_9735_0"
           ]
         }
       },
@@ -776,6 +781,7 @@
     "🔥 找优惠券抢购助手": "https://www.icloud.com/shortcuts/3a499f9269a440739d20c9793183b5f0",
     "🧧 淘宝特价版新人0.1元购": "taobao://m.tb.cn/h.49cUbFT",
     "🧧 拆盲盒得猫超卡": "taobao://m.tb.cn/h.49n6I5I?sm=800452",
+    "🔥 淘金币签到0.1元购": "taobao://pages.tmall.com/wow/z/hdwk/hdsolution2/tjb-spring?disableNav=YES&hd_from=sy",
     "🔥 每天10点限量1元购": "taobao://m.tb.cn/h.4ii1Nhf",
     "🔥 淘宝2月首购有礼红包": "taobao://m.tb.cn/h.49cfixF"
   }
