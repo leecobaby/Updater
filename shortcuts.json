@@ -376,7 +376,7 @@
     "help": "",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/25e31c00c44041aeba2aa1fc62f0c969",
-    "notice": "考虑到部分未满级用户需求在更新个版本\n东东农场制作中,see you later~",
+    "notice": "考虑到部分未满级用户需求在更新个版本\n如果会报错,只选择做剩余任务\n东东农场制作中,see you later~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-炸年兽&input=text&text=task",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/jd_nian.png",
