@@ -55,41 +55,28 @@
     })()
 
     function collectProduceScore(secretp, taskId) {
-      let temp = {
-        "taskId": taskId,
-        "rnd": getRnd(),
-        "inviteId": "-1",
-        "stealId": "-1"
-      }
       const extraData = {
         "jj": 6,
-        "buttonid": "jmdd-react-smash_0",
-        "sceneid": "homePageh5",
-        "appid": '50073'
+        "encrypt": 6,
+        "buttonid": "jmdd-react-smash_70",
+        "sceneid": "homePageh5"
       }
-      const body = encode(temp, secretp, extraData)
+      let body = {
+        ...encode(secretp, extraData),
+        taskId: taskId
+      }
       return body
     }
 
     function collectScore(secretp, taskId, itemId, actionType = null, inviteId = null, shopSign = null) {
-      let temp = {
-        "taskId": taskId,
-        "rnd": getRnd(),
-        "inviteId": "-1",
-        "stealId": "-1"
-      }
-      if (itemId) temp['itemId'] = itemId
-      if (actionType) temp['actionType'] = actionType
-      if (inviteId) temp['inviteId'] = inviteId
-      if (shopSign) temp['shopSign'] = shopSign
       const extraData = {
         "jj": 6,
-        "buttonid": "jmdd-react-smash_0",
-        "sceneid": "homePageh5",
-        "appid": '50073'
+        "encrypt": 6,
+        "buttonid": "jmdd-react-smash_70",
+        "sceneid": "homePageh5"
       }
       let body = {
-        ...encode(temp, secretp, extraData),
+        ...encode(secretp, extraData),
         taskId: taskId,
         itemId: itemId
       }
@@ -105,77 +92,54 @@
     }
 
     function killCoupon(secretp, skuId) {
-      let temp = {
-        "skuId": skuId,
-        "rnd": getRnd(),
-        "inviteId": "-1",
-        "stealId": "-1"
-      }
       const extraData = {
         "jj": 6,
-        "buttonid": "jmdd-react-smash_0",
-        "sceneid": "homePageh5",
-        "appid": '50073'
+        "encrypt": 6,
+        "buttonid": "jmdd-react-smash_70",
+        "sceneid": "homePageh5"
       }
-      let body = encode(temp, secretp, extraData);
+      let body = encode(secretp, extraData);
       body['skuId'] = skuId
       return body
     }
 
     function signInWrite(secretp, shopSign) {
-      let temp = {
-        "shopSign": shopSign,
-      }
       const extraData = {
         "jj": 6,
-        "buttonid": "jmdd-react-smash_0",
-        "sceneid": "homePageh5",
-        "appid": '50073'
+        "encrypt": 6,
+        "buttonid": "jmdd-react-smash_70",
+        "sceneid": "homePageh5"
       }
       let body = {
-        ...encode(temp, secretp, extraData),
+        ...encode(secretp, extraData),
         shopSign: shopSign
       }
       return body
     }
 
     function pkAssignGroup(secretp, inviteId) {
-      let temp = {
-        "confirmFlag": 1,
-        "inviteId": inviteId,
-      }
       const extraData = {
         "jj": 6,
-        "buttonid": "jmdd-react-smash_0",
-        "sceneid": "homePageh5",
-        "appid": '50073'
+        "encrypt": 6,
+        "buttonid": "jmdd-react-smash_70",
+        "sceneid": "homePageh5"
       }
       let body = {
-        ...encode(temp, secretp, extraData),
+        ...encode(secretp, extraData),
         inviteId: inviteId
       }
       return body
     }
 
     function pkCollectScore(secretp, taskId, itemId, actionType = null, inviteId = null, shopSign = null) {
-      let temp = {
-        "taskId": taskId,
-        "rnd": getRnd(),
-        "inviteId": "-1",
-        "stealId": "-1"
-      }
-      if (itemId) temp['itemId'] = itemId
-      if (actionType) temp['actionType'] = actionType
-      if (inviteId) temp['inviteId'] = inviteId
-      if (shopSign) temp['shopSign'] = shopSign
       const extraData = {
         "jj": 6,
-        "buttonid": "jmdd-react-smash_0",
-        "sceneid": "homePageh5",
-        "appid": '50073'
+        "encrypt": 6,
+        "buttonid": "jmdd-react-smash_70",
+        "sceneid": "homePageh5"
       }
       let body = {
-        ...encode(temp, secretp, extraData),
+        ...encode(secretp, extraData),
         taskId: taskId,
         itemId: itemId
       }
@@ -186,33 +150,30 @@
     }
 
     function pkStealGroup(secretp, stealId) {
-      let temp = {
-        "stealId": stealId,
-      }
       const extraData = {
         "jj": 6,
-        "buttonid": "jmdd-react-smash_0",
-        "sceneid": "homePageh5",
-        "appid": '50073'
+        "encrypt": 6,
+        "buttonid": "jmdd-react-smash_70",
+        "sceneid": "homePageh5"
       }
       let body = {
-        ...encode(temp, secretp, extraData),
+        ...encode(secretp, extraData),
         stealId: stealId
       }
       return body
     }
 
-    function encode(data, secretp, extraData) {
+    function encode(secretp, extraData) {
       const temp = {
         "extraData": extraData,
-        "businessData": data,
+        "random": getRnd(),
         "secretp": secretp,
       }
       return { "ss": (JSON.stringify(temp)) };
     }
 
     function getRnd() {
-      return Math.floor(1e6 * Math.random()).toString();
+      return Math.floor(1e7 * Math.random()).toString();
     }
   </script>
 </body>

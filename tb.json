@@ -2,7 +2,7 @@
   "Taojb": {
     "version": "数据库版本:2.5.1",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
-    "gd": {
+    "pv": {
       "taobao": "taobao://m.tb.cn/h.49SUzMg",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.49SUzMg",
       "taobaolite": "taobaolite://m.tb.cn/h.49SUzMg"
@@ -376,8 +376,8 @@
     ]
   },
   "Jhs": {
-    "version": "数据库版本:12.28.1",
-    "gd": {
+    "version": "数据库版本:2.6.1",
+    "pv": {
       "taobao": "taobao://m.tb.cn/h.49SUzMg",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.49SUzMg",
       "taobaolite": "taobaolite://m.tb.cn/h.49SUzMg"
@@ -440,7 +440,14 @@
             "9013 shop_0_91055_9013_0",
             "9013 shop_0_91055_9013_1",
             "9013 shop_0_91055_9013_2",
-            "9013 shop_0_91055_9013_3"
+            "9013 shop_0_91055_9013_3",
+            "9600 expo_0_100029_9600_0",
+            "10686 other_0_111001_10686_0",
+            "10417 other_0_1_10417_0",
+            "10417 other_0_1_10417_1",
+            "10649 other_0_109001_10649_0",
+            "9509 other_0_1_9509_0",
+            "9086 other_0_72017_9086_0"
           ]
         }
       }
@@ -781,9 +788,10 @@
     "🔥 找优惠券抢购助手": "https://www.icloud.com/shortcuts/3a499f9269a440739d20c9793183b5f0",
     "🧧 淘宝特价版新人0.1元购": "taobao://m.tb.cn/h.49cUbFT",
     "🧧 拆盲盒得猫超卡": "taobao://m.tb.cn/h.49n6I5I?sm=800452",
-    "🔥 淘金币签到0.1元购": "taobao://pages.tmall.com/wow/z/hdwk/hdsolution2/tjb-spring?disableNav=YES&hd_from=sy",
-    "🐙 聚划算星星换广西券": "taobao://m.tb.cn/h.4jU2zgr",
+    "🔥 淘金币签到0.01元购": "taobao://pages.tmall.com/wow/z/hdwk/hdsolution2/tjb-spring?disableNav=YES&hd_from=sy",
+    "🐙 聚划算星星10,13点换广西券": "taobao://m.tb.cn/h.4jU2zgr",
     "🔥 每天10点限量1元购": "taobao://m.tb.cn/h.4ii1Nhf",
-    "🔥 淘宝2月首购有礼红包": "taobao://m.tb.cn/h.49cfixF"
+    "🔥 淘宝2月首购有礼红包": "taobao://m.tb.cn/h.49cfixF",
+    "📜 好物方案": { "": "" }
   }
 }
