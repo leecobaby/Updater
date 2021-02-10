@@ -516,7 +516,7 @@
     ]
   },
   "FarmSingle": {
-    "version": "数据库版本:1.29.1",
+    "version": "数据库版本:2.10.1",
     "gd": {
       "taobao": "taobao://m.tb.cn/h.49SUzMg",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.49SUzMg",
@@ -639,7 +639,10 @@
             "10387 other_0_105010_10387_0",
             "9801 cloudSailAdExtra_0_296692181133_9801_0",
             "9586 other_0_70019_9586_0",
-            "10577 other_0_105010_10577_0"
+            "10577 other_0_105010_10577_0",
+            "10475 other_0_100017_10475_0",
+            "10756 cloudSailAdExtra_0_142_10756_0",
+            "9586 other_0_113001_9586_0"
           ]
         }
       }
