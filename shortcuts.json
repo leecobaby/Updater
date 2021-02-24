@@ -348,7 +348,7 @@
     "automation_url": "shortcuts://run-shortcut?name=京东-多合一签到&input=text&text=task",
     "image": "https://gitee.com/leecobaby/Updater/raw/master/image/jd_jd.png",
     "url": "https://gitee.com/leecobaby/Updater/raw/master/jd.json",
-    "scritable": "https://gitee.com/leecogit/Updater/raw/master/getJDCookie.js",
+    "scritable": "https://gitee.com/leecobaby/Updater/raw/master/getJDCookie.js",
     "tip": {
       "hongbao": "",
       "hot": "",
@@ -374,7 +374,7 @@
     "automation_url": "shortcuts://run-shortcut?name=京东-炸年兽&input=text&text=task",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/jd_nian.png",
     "scritable": "https://gitee.com/leecogit/Updater/raw/master/getJDCookie.js",
-    "url": "https://gitee.com/leecogit/Updater/raw/master/jd.json",
+    "url": "https://gitee.com/leecobaby/Updater/raw/master/jd.json",
     "tip": {
       "hongbao": "",
       "hot": "🔥 年货节活动中...",
@@ -393,7 +393,7 @@
     "update": "",
     "notice": "汇总一些集五福的渠道资源,祝你早日集满~",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/alipay_wufu.png",
-    "url": "https://gitee.com/leecogit/Updater/raw/master/alipay.json",
+    "url": "https://gitee.com/leecobaby/Updater/raw/master/alipay.json",
     "tip": {
       "hongbao": "",
       "hot": "🔥 集五福活动中...",
