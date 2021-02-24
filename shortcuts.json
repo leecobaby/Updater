@@ -141,7 +141,7 @@
       "more": ""
     },
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
-    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb1.json"
+    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json"
   },
   "1212hlz": {
     "version": "1.8",
@@ -163,11 +163,11 @@
       "more": "新一期现金红包已发放"
     },
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/1212_hlz.png",
-    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb1.json"
+    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json"
   },
   "Ttlhb": {
     "version": "1.0",
-    "update_log": "* 初步实现自动任务\n* 支持自动化、多账号、ipad终端\n* 采用自动淘宝任务框架",
+    "update_log": "* 初步自动任务\n* 支持自动化、多账号、ipad终端\n* 采用自动淘宝任务框架",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Ttlhb",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/leecobaby/shortcuts",
@@ -177,7 +177,7 @@
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=双12自动欢乐造&input=text&text=1",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tb_ttlhb.png",
-    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb1.json",
+    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json",
     "tip": {
       "hongbao": "",
       "hot": "🔥 年货节活动中...",
@@ -201,7 +201,7 @@
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=聚划算章鱼自动任务&input=text&text=task",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tb_jhs.png",
-    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb1.json",
+    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json",
     "tip": {
       "hongbao": "",
       "hot": "🔥 年货节活动中...",
@@ -224,7 +224,7 @@
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=活力中心自动任务&input=text&text=task",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tb_hlzx.png",
-    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb1.json",
+    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json",
     "tip": {
       "hongbao": "",
       "hot": "🔥 年货节活动中...",
@@ -248,7 +248,7 @@
     "automation_url": "shortcuts://run-shortcut?name=芭芭农场自动集肥料&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tb_jfq.png",
-    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb1.json",
+    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json",
     "tip": {
       "hongbao": "",
       "hot": "🔥 21号红包加码...",
@@ -271,7 +271,7 @@
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=全民寻宝自动任务&input=text&text=task",
     "image": "https://gitee.com/leecobaby/Updater/raw/master/image/tb_qmxb.png",
-    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb1.json",
+    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json",
     "tip": {
       "hongbao": "",
       "hot": "",
@@ -295,7 +295,7 @@
     "automation_url": "shortcuts://run-shortcut?name=淘特-发财鸭&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/ltao.png",
-    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb1.json",
+    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json",
     "tip": {
       "hongbao": "",
       "hot": "🔥 特价版新人活动中...",
