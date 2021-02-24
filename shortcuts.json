@@ -61,6 +61,68 @@
       "tishi": "📋剪贴板为空，请检查一下哦~\n---------------------------------\n※猜测到你可能需要以下功能※\n\n(此为纯净版，请加群获取完整版)"
     }
   },
+  "Snap_up2": {
+    "version": "2.5",
+    "update": "https://www.icloud.com/shortcuts/f8b5038fbdab4532aaa2c795775457ca",
+    "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
+    "github": "https://github.com/LeecoGit/shortcuts/tree/master/Snap_up",
+    "update_log": "* 8增加内容识别特征\n* 优化全国访问速度",
+    "notice": "购买前可以帮你看看有没有隐藏优惠券哦~\n历史价格查询接口维护中...",
+    "tip": {
+      "rondom": ["复制整段文案都可以识别，不用刻意复制链接哦！"]
+    },
+    "api_url": "http://home.cdn.80008800.xyz/api",
+    "api_url2": "http://api.cdn.80008800.xyz/api.php",
+    "tb": {
+      "url_scheme": "taobao://",
+      "tkl": {
+        "regular_expression": "([\\p{Sc}\\(])\\w{8,12}([\\p{Sc}\\)])",
+        "api_url": "http://home.cdn.80008800.xyz/api",
+        "api_url_personal": "http://api.cdn.80008800.xyz/api",
+        "json_tkl": "tbk_privilege_get_response.result.data.tkl",
+        "json_coupon_click_url": "tbk_privilege_get_response.result.data.coupon_click_url",
+        "json_item_url": "tbk_privilege_get_response.result.data.item_url",
+        "json_coupon_info": "tbk_privilege_get_response.result.data.coupon_info",
+        "json_coupon_type": "tbk_privilege_get_response.result.data.coupon_type",
+        "json_max_commission_rate": "tbk_privilege_get_response.result.data.max_commission_rate"
+      }
+    },
+    "jd": {
+      "url_scheme": "openapp.jdmobile://virtual?params={\"des\":\"m\",\"category\":\"jump\",\"url\":\"URL\"}",
+      "api_url": "http://home.cdn.80008800.xyz/api",
+      "json": {
+        "content": "content"
+      }
+    },
+    "pdd": {
+      "url_scheme": "pinduoduo://com.xunmeng.pinduoduo/URL"
+    },
+    "sn": {
+      "url_scheme": "suning://m.suning.com/index?adTypeCode=1002&adId=URL",
+      "api_url": "http://home.cdn.80008800.xyz/api",
+      "json": {
+        "content": "sn_responseContent.sn_body.queryBacthcustomlink.shortLink"
+      }
+    },
+    "more": {
+      "🧧 现金红包(12.8)": "taobao://m.tb.cn/h.4ffABfW",
+      "🔥 年货节超级红包": "taobao://m.tb.cn/h.4RaMYQr",
+      "加入QQ京东情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
+      "加入QQ淘宝情报群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=622340333&card_type=group&source=qrcode&jump_from=&auth=&authSig=RPqW9VSePIx4jWxGhYLvMvfdLkFPydHzo50qyVwmb9zhPjv7lF3HnSRF5WuJfjaX&source_id=2_40001",
+      "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
+      "视频教程": "https://video.cdnvue.com/uploads/-2216775553683075363/video/b9PwmDl",
+      "精选福利": {
+        "饿了么现金红包": "taobao://m.tb.cn/h.4hbqRud"
+      }
+    },
+    "more_little": {
+      "视频教程": "https://video.cdnvue.com/uploads/-2216775553683075363/video/b9PwmDl"
+    },
+    "jjh": {
+      "ok": "no",
+      "tishi": "📋剪贴板为空，请检查一下哦~\n---------------------------------\n※猜测到你可能需要以下功能※\n\n(此为纯净版，请加群获取完整版)"
+    }
+  },
   "Google_drive_copy": {
     "version": "2.1",
     "update": "https://www.icloud.com/shortcuts/a581221316754223afe66fc3c6ca8e32",
