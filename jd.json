@@ -78,7 +78,7 @@
     ]
   },
   "JD_nian": {
-    "version": "数据库版本:1.29.1",
+    "version": "数据库版本:1.29.2",
     "pv": "openapp.jdmobile://virtual?params={\"des\":\"m\",\"category\":\"jump\",\"url\":\"https://u.jd.com/thCBSZW\"}",
     "endJump": "openapp.jdmobile://virtual?params={\"des\":\"m\",\"category\":\"jump\",\"url\":\"https://wbbny.m.jd.com/babelDiy/Zeus/2cKMj86srRdhgWcKonfExzK4ZMBy/index.html\"}",
     "pkHelpCode": "IgNWdiLGaPaAqdZqpd0QbcXZFPwE1VfQ9VPl2cARI1KWYjbV1EXeRSxZojc",
