@@ -1,6 +1,6 @@
 {
   "Taojb": {
-    "version": "数据库版本:2.10.53",
+    "version": "数据库版本:2.11.1",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.49SUzMg",
@@ -341,7 +341,7 @@
     }
   },
   "ttlhb": {
-    "version": "数据库版本:12.9.3",
+    "version": "数据库版本:12.10.2",
     "gd": "HTTPS://m.tb.cn/h.49SUzMg",
     "end": "HTTPS://pages.tmall.com/wow/an/tmall/user-growth/play-tmall?disableNav=YES",
     "hongbao": "taobao://m.tb.cn/h.44CiYjQ",
@@ -709,6 +709,45 @@
             "7926 other_0_0_7926_0",
             "7927 other_0_0_7927_0"
           ]
+        }
+      }
+    ]
+  },
+  "TaoSign": {
+    "version": "数据库版本:2.26.1",
+    "pv": {
+      "taobao": "taobao://m.tb.cn/h.49SUzMg",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.49SUzMg",
+      "taobaolite": "taobaolite://m.tb.cn/h.49SUzMg"
+    },
+    "main": {
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fwww.tmall.com%2F",
+      "taobaolite": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F"
+    },
+    "home": {
+      "taobao": "taobao://pages.tmall.com/wow/z/mit/hbqd/welfare4",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fmit%2Fhbqd%2Fwelfare4",
+      "taobaolite": "taobaolite://pages.tmall.com/wow/z/mit/hbqd/welfare4"
+    },
+    "end": {
+      "taobao": "taobao://pages.tmall.com/wow/z/mit/hbqd/welfare4",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fmit%2Fhbqd%2Fwelfare4",
+      "taobaolite": "taobaolite://pages.tmall.com/wow/z/mit/hbqd/welfare4"
+    },
+    "app": {
+      "淘宝": "taobao",
+      "天猫": "tmall",
+      "淘宝特价版": "taobaolite"
+    },
+    "task": [
+      {
+        "stars": {
+          "title": "红包签到",
+          "type": "hongbaosign",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/z/mit/hbqd/welfare4",
+          "textEnd": "",
+          "item": ["0 0"]
         }
       }
     ]
