@@ -4,69 +4,7 @@
     "update": "https://www.icloud.com/shortcuts/f8b5038fbdab4532aaa2c795775457ca",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/LeecoGit/shortcuts/tree/master/Snap_up",
-    "update_log": "* 8增加内容识别特征\n* 优化全国访问速度",
-    "notice": "购买前可以帮你看看有没有隐藏优惠券哦~\n历史价格查询接口维护中...",
-    "tip": {
-      "rondom": ["复制整段文案都可以识别，不用刻意复制链接哦！"]
-    },
-    "api_url": "http://home.cdn.80008800.xyz/api",
-    "api_url2": "http://api.cdn.80008800.xyz/api.php",
-    "tb": {
-      "url_scheme": "taobao://",
-      "tkl": {
-        "regular_expression": "([\\p{Sc}\\(])\\w{8,12}([\\p{Sc}\\)])",
-        "api_url": "http://home.cdn.80008800.xyz/api",
-        "api_url_personal": "http://api.cdn.80008800.xyz/api",
-        "json_tkl": "tbk_privilege_get_response.result.data.tkl",
-        "json_coupon_click_url": "tbk_privilege_get_response.result.data.coupon_click_url",
-        "json_item_url": "tbk_privilege_get_response.result.data.item_url",
-        "json_coupon_info": "tbk_privilege_get_response.result.data.coupon_info",
-        "json_coupon_type": "tbk_privilege_get_response.result.data.coupon_type",
-        "json_max_commission_rate": "tbk_privilege_get_response.result.data.max_commission_rate"
-      }
-    },
-    "jd": {
-      "url_scheme": "openapp.jdmobile://virtual?params={\"des\":\"m\",\"category\":\"jump\",\"url\":\"URL\"}",
-      "api_url": "http://home.cdn.80008800.xyz/api",
-      "json": {
-        "content": "content"
-      }
-    },
-    "pdd": {
-      "url_scheme": "pinduoduo://com.xunmeng.pinduoduo/URL"
-    },
-    "sn": {
-      "url_scheme": "suning://m.suning.com/index?adTypeCode=1002&adId=URL",
-      "api_url": "http://home.cdn.80008800.xyz/api",
-      "json": {
-        "content": "sn_responseContent.sn_body.queryBacthcustomlink.shortLink"
-      }
-    },
-    "more": {
-      "🧧 现金红包(12.8)": "taobao://m.tb.cn/h.4ffABfW",
-      "🔥 年货节超级红包": "taobao://m.tb.cn/h.4RaMYQr",
-      "加入QQ京东情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
-      "加入QQ淘宝情报群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=622340333&card_type=group&source=qrcode&jump_from=&auth=&authSig=RPqW9VSePIx4jWxGhYLvMvfdLkFPydHzo50qyVwmb9zhPjv7lF3HnSRF5WuJfjaX&source_id=2_40001",
-      "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
-      "视频教程": "https://video.cdnvue.com/uploads/-2216775553683075363/video/b9PwmDl",
-      "精选福利": {
-        "饿了么现金红包": "taobao://m.tb.cn/h.4hbqRud"
-      }
-    },
-    "more_little": {
-      "视频教程": "https://video.cdnvue.com/uploads/-2216775553683075363/video/b9PwmDl"
-    },
-    "jjh": {
-      "ok": "no",
-      "tishi": "📋剪贴板为空，请检查一下哦~\n---------------------------------\n※猜测到你可能需要以下功能※\n\n(此为纯净版，请加群获取完整版)"
-    }
-  },
-  "Snap_up2": {
-    "version": "2.5",
-    "update": "https://www.icloud.com/shortcuts/f8b5038fbdab4532aaa2c795775457ca",
-    "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
-    "github": "https://github.com/LeecoGit/shortcuts/tree/master/Snap_up",
-    "update_log": "* 8增加内容识别特征\n* 优化全国访问速度",
+    "update_log": "* 速度增加内容识别特征\n* 优化全国访问速度",
     "notice": "购买前可以帮你看看有没有隐藏优惠券哦~\n历史价格查询接口维护中...",
     "tip": {
       "rondom": ["复制整段文案都可以识别，不用刻意复制链接哦！"]
@@ -127,8 +65,8 @@
     "version": "2.1",
     "update": "https://www.icloud.com/shortcuts/a581221316754223afe66fc3c6ca8e32",
     "more": [
-      "搭建教程|http://blog.jialezi.net/?post=153",
-      "加入QQ群|https://jq.qq.com/?_wv=1027&k=5FenhoJ"
+      "搭建教程   |http://blog.jialezi.net/?post=153",
+      "加入QQ群  |https://jq.qq.com/?_wv=1027&k=5FenhoJ"
     ]
   },
   "Sign_in": {
@@ -148,12 +86,6 @@
       "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
       "加入QQ线报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp"
     }
-  },
-  "Chigua": {
-    "version": "1.1",
-    "update": "https://www.icloud.com/shortcuts/e28b4b92252d4caa8cf130e1d5f8d7b1",
-    "news": "https://sourl.cn/MJZNSm",
-    "contribution": "http://keeplearning.mikecrm.com/7vRUPWv"
   },
   "Ring": {
     "version": "1.3",
@@ -209,7 +141,7 @@
       "more": ""
     },
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
-    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb2.json"
+    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json"
   },
   "1212hlz": {
     "version": "1.8",
@@ -231,11 +163,11 @@
       "more": "新一期现金红包已发放"
     },
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/1212_hlz.png",
-    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb2.json"
+    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json"
   },
   "Ttlhb": {
     "version": "1.0",
-    "update_log": "* 初步实现自动任务\n* 支持自动化、多账号、ipad终端\n* 采用自动淘宝任务框架",
+    "update_log": "* 初步自动任务\n* 支持自动化、多账号、ipad终端\n* 采用自动淘宝任务框架",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Ttlhb",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/leecobaby/shortcuts",
@@ -245,10 +177,10 @@
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=双12自动欢乐造&input=text&text=1",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tb_ttlhb.png",
-    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb2.json",
+    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 年货节活动中...",
+      "hot": "🔥 年货节活动中....",
       "tjb": "请配合食用",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
@@ -269,7 +201,7 @@
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=聚划算章鱼自动任务&input=text&text=task",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tb_jhs.png",
-    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb2.json",
+    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json",
     "tip": {
       "hongbao": "",
       "hot": "🔥 年货节活动中...",
@@ -292,7 +224,7 @@
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=活力中心自动任务&input=text&text=task",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tb_hlzx.png",
-    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb2.json",
+    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json",
     "tip": {
       "hongbao": "",
       "hot": "🔥 年货节活动中...",
@@ -316,7 +248,7 @@
     "automation_url": "shortcuts://run-shortcut?name=芭芭农场自动集肥料&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tb_jfq.png",
-    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb2.json",
+    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json",
     "tip": {
       "hongbao": "",
       "hot": "🔥 21号红包加码...",
@@ -350,9 +282,33 @@
       "more": ""
     }
   },
+  "TaoSign": {
+    "version": "1.0",
+    "update_log": "",
+    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/TaoSign",
+    "help": "",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/96fd4ffff90840f5a65d10f0fe1d5f5e",
+    "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
+    "notice": "",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
+    "automation_url": "shortcuts://run-shortcut?name=淘宝签到&input=text&text=task",
+    "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
+    "image": "https://gitee.com/leecobaby/Updater/raw/master/image/tb.png",
+    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json",
+    "tip": {
+      "hongbao": "",
+      "hot": "🔥 一元购活动中...",
+      "faq": "有疑问的请查看",
+      "set": "点击查看自动化操作",
+      "team": "",
+      "other": "",
+      "more": ""
+    }
+  },
   "ltao_duck": {
     "version": "1.1",
-    "update_log": "",
+    "update_log": "测试一下",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/ltao_duck",
     "help": "",
     "github": "https://github.com/leecobaby/shortcuts",
@@ -363,7 +319,7 @@
     "automation_url": "shortcuts://run-shortcut?name=淘特-发财鸭&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/ltao.png",
-    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb2.json",
+    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json",
     "tip": {
       "hongbao": "",
       "hot": "🔥 特价版新人活动中...",
@@ -416,7 +372,7 @@
     "automation_url": "shortcuts://run-shortcut?name=京东-多合一签到&input=text&text=task",
     "image": "https://gitee.com/leecobaby/Updater/raw/master/image/jd_jd.png",
     "url": "https://gitee.com/leecobaby/Updater/raw/master/jd.json",
-    "scritable": "https://gitee.com/leecogit/Updater/raw/master/getJDCookie.js",
+    "scritable": "https://gitee.com/leecobaby/Updater/raw/master/getJDCookie.js",
     "tip": {
       "hongbao": "",
       "hot": "",
@@ -442,7 +398,7 @@
     "automation_url": "shortcuts://run-shortcut?name=京东-炸年兽&input=text&text=task",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/jd_nian.png",
     "scritable": "https://gitee.com/leecogit/Updater/raw/master/getJDCookie.js",
-    "url": "https://gitee.com/leecogit/Updater/raw/master/jd.json",
+    "url": "https://gitee.com/leecobaby/Updater/raw/master/jd.json",
     "tip": {
       "hongbao": "",
       "hot": "🔥 年货节活动中...",
@@ -454,14 +410,14 @@
     }
   },
   "Alipay_wufu": {
-    "version": "1.1",
+    "version": "1.2",
     "update_log": "",
     "help": "",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "",
     "notice": "汇总一些集五福的渠道资源,祝你早日集满~",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/alipay_wufu.png",
-    "url": "https://gitee.com/leecogit/Updater/raw/master/alipay.json",
+    "url": "https://gitee.com/leecobaby/Updater/raw/master/alipay.json",
     "tip": {
       "hongbao": "",
       "hot": "🔥 集五福活动中...",

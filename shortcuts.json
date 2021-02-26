@@ -65,7 +65,7 @@
     "version": "2.1",
     "update": "https://www.icloud.com/shortcuts/a581221316754223afe66fc3c6ca8e32",
     "more": [
-      "搭建教程   |http://blog.jialezi.net/?post=153",
+      "搭建教程  |http://blog.jialezi.net/?post=153",
       "加入QQ群  |https://jq.qq.com/?_wv=1027&k=5FenhoJ"
     ]
   },
@@ -275,6 +275,30 @@
     "tip": {
       "hongbao": "",
       "hot": "",
+      "faq": "有疑问的请查看",
+      "set": "点击查看自动化操作",
+      "team": "",
+      "other": "",
+      "more": ""
+    }
+  },
+  "TaoSign": {
+    "version": "1.0",
+    "update_log": "",
+    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/TaoSign",
+    "help": "",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/96fd4ffff90840f5a65d10f0fe1d5f5e",
+    "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
+    "notice": "",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
+    "automation_url": "shortcuts://run-shortcut?name=淘宝签到&input=text&text=task",
+    "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
+    "image": "https://gitee.com/leecobaby/Updater/raw/master/image/tb.png",
+    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json",
+    "tip": {
+      "hongbao": "",
+      "hot": "🔥 一元购活动中...",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
