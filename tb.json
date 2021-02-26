@@ -516,7 +516,7 @@
     ]
   },
   "FarmSingle": {
-    "version": "数据库版本:2.10.1",
+    "version": "数据库版本:2.26.1",
     "gd": {
       "taobao": "taobao://m.tb.cn/h.49SUzMg",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.49SUzMg",
@@ -541,10 +541,6 @@
       "淘宝": "taobao",
       "天猫": "tmall",
       "淘宝特价版": "taobaolite"
-    },
-    "team": {
-      "👤 为作者助力": "taobao://m.tb.cn/h.4RdHS9V?sm=9ade48",
-      "👥 相互助力群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=830385420&card_type=group&source=qrcode&jump_from=&auth=&authSig=CtFeH1TafXW5JK0ALJh4EbaUkBHKJ6ykRB6+ejGS3fvjGPae8Am9sPg+sm0xsTNX&source_id=2_40001"
     },
     "task": [
       {
@@ -596,53 +592,6 @@
             "2969 other_0_0_2969_0",
             "3205 other_0_0_3205_0",
             "8276 other_0_79050_8276_0"
-          ]
-        }
-      },
-      {
-        "tmall": {
-          "title": "集福气",
-          "type": "other",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?disableNav=YES&wh_pid=daily-216010&subSource=catsmoney&fromToken=lrVqDJXSZDKgxlaZc56tdPeCWUdUM&spm=a217e.1212.tasklist.0&sceneId=1131&sourceType=other&hd_from_id=100085&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "9464 other_0_0_9464_0",
-            "9852 cloudSailAd_0_104635021_9852_0",
-            "9852 cloudSailAd_0_104635022_9852_0",
-            "9852 cloudSailAd_0_104635023_9852_0",
-            "9852 cloudSailAd_0_104635024_9852_0",
-            "9852 cloudSailAd_0_104635025_9852_0",
-            "9852 cloudSailAd_0_104635026_9852_0",
-            "9682 expo_0_229916001_9682_0",
-            "9682 expo_0_229916002_9682_0",
-            "9153 other_0_62010_9153_0",
-            "9404 other_0_1_9404_0",
-            "9734 expo_0_84011_9734_0",
-            "9799 cloudSailAdExtra_0_294860248835_9799_0",
-            "9143 expo_0_86002_9143_0",
-            "9706 interactionSearch_0_105234815_9706_0",
-            "9793 other_0_68006_9793_0",
-            "9736 expo_0_70055_9736_0",
-            "9683 expo_0_42203063040_9683_0",
-            "9586 other_0_70019_9586_0",
-            "9736 other_0_82005_9736_0",
-            "9857 expo_0_30378031_9857_0",
-            "9893 expo_0_41836690040_9893_0",
-            "9997 expo_0_42216401040_9997_0",
-            "9048 other_0_68022_9048_0",
-            "9998 expo_0_229911001_9998_0",
-            "9998 expo_0_229911002_9998_0",
-            "9998 expo_0_229911003_9998_0",
-            "9734 expo_0_98007_9734_0",
-            "10038 other_0_84029_10038_0",
-            "10333 expo_0_42264465031_10333_0",
-            "10387 other_0_105010_10387_0",
-            "9801 cloudSailAdExtra_0_296692181133_9801_0",
-            "9586 other_0_70019_9586_0",
-            "10577 other_0_105010_10577_0",
-            "10475 other_0_100017_10475_0",
-            "10756 cloudSailAdExtra_0_142_10756_0",
-            "9586 other_0_113001_9586_0"
           ]
         }
       }
