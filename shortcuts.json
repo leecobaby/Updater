@@ -61,14 +61,6 @@
       "tishi": "📋剪贴板为空，请检查一下哦~\n---------------------------------\n※猜测到你可能需要以下功能※\n\n(此为纯净版，请加群获取完整版)"
     }
   },
-  "Google_drive_copy": {
-    "version": "2.1",
-    "update": "https://www.icloud.com/shortcuts/a581221316754223afe66fc3c6ca8e32",
-    "more": [
-      "搭建教程  |http://blog.jialezi.net/?post=153",
-      "加入QQ群  |https://jq.qq.com/?_wv=1027&k=5FenhoJ"
-    ]
-  },
   "Sign_in": {
     "version": "1.1",
     "update": "https://www.icloud.com/shortcuts/91af4b2564134654ad2dbc7bce54bbdf",
@@ -101,25 +93,6 @@
     "share_body_tip": "请输入你想说的话，不输入也没关系哦~",
     "share_content_tip": "请输入已编码的音效文本内容\n我已经自动输入你剪贴板的内容拉\n─=≡Σ(((つ•̀ω•́)つ\n温馨提醒:请尽量分享10秒以内的音效"
   },
-  "Cat": {
-    "version": "1.7",
-    "update_log": "* 暴力解决顽固性不黑屏问题\n* 新增可选择性做任务\n* 新增停止后下次运行继续上次后面任务",
-    "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
-    "github": "https://github.com/leecobaby/shortcuts/tree/master/1111",
-    "update": "https://www.icloud.com/shortcuts/bad13c54618343f8b32bc5698d70ec37",
-    "faq": "https://docs.qq.com/doc/DWnVlUXlQU01DZ0NJ",
-    "notice": "双12欢乐造自动任务已发布~\n关注公众号：Leeco爱分享",
-    "tip": {
-      "hongbao": "",
-      "hot": "🔥 抢购助手能找隐藏优惠券和淘礼金哦~",
-      "faq": "对欧莱雅有问题的请看",
-      "set": "",
-      "group": "",
-      "more": ""
-    },
-    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/image/1111_cat.jpeg",
-    "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/1111.json"
-  },
   "Taojb": {
     "version": "2.1",
     "update_log": "- 优化 指令兼容性\n- 优化 指令架构",
@@ -141,28 +114,6 @@
       "more": ""
     },
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/image/tjb.png",
-    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json"
-  },
-  "1212hlz": {
-    "version": "1.8",
-    "update_log": "* 修复天猫和特价版任务异常\n* 支持ipad用户正常任务\n* 优化多账号任务",
-    "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
-    "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/9f74cfa4c2544ca08a9e4112f310f4b4",
-    "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
-    "notice": "1.17有年货节超级红包\n最近年货年活动很多请关注活动大厅~",
-    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
-    "automation_url": "shortcuts://run-shortcut?name=双12自动欢乐造&input=text&text=1",
-    "tip": {
-      "hongbao": "",
-      "hot": "🔥 年货节活动中...",
-      "tjb": "请配合食用",
-      "faq": "有疑问的请查看",
-      "set": "点击查看自动化操作",
-      "team": "",
-      "more": "新一期现金红包已发放"
-    },
-    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/image/1212_hlz.png",
     "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json"
   },
   "Ttlhb": {
@@ -377,51 +328,6 @@
       "hongbao": "",
       "hot": "",
       "faq": "有疑问的请查看",
-      "set": "",
-      "team": "",
-      "other": "",
-      "more": ""
-    }
-  },
-  "JD_nian": {
-    "version": "2.4",
-    "update_log": "- 满足 部分未满级用户需求\n- 修复 活动接口失效问题",
-    "about": {
-      "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
-      "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_nian#版本日志"
-    },
-    "help": "",
-    "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/25e31c00c44041aeba2aa1fc62f0c969",
-    "notice": "考虑到部分未满级用户需求在更新个版本\n如果会报错,只选择做剩余任务\n东东农场制作中,see you later~",
-    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
-    "automation_url": "shortcuts://run-shortcut?name=京东-炸年兽&input=text&text=task",
-    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/image/jd_nian.png",
-    "scritable": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/getJDCookie.js",
-    "url": "https://gitee.com/leecobaby/Updater/raw/master/jd.json",
-    "tip": {
-      "hongbao": "",
-      "hot": "🔥 年货节活动中...",
-      "faq": "有疑问的请查看",
-      "set": "",
-      "team": "",
-      "other": "",
-      "more": ""
-    }
-  },
-  "Alipay_wufu": {
-    "version": "1.2",
-    "update_log": "",
-    "help": "",
-    "github": "https://github.com/leecobaby/shortcuts",
-    "update": "",
-    "notice": "汇总一些集五福的渠道资源,祝你早日集满~",
-    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/image/alipay_wufu.png",
-    "url": "https://gitee.com/leecobaby/Updater/raw/master/alipay.json",
-    "tip": {
-      "hongbao": "",
-      "hot": "🔥 集五福活动中...",
-      "faq": "",
       "set": "",
       "team": "",
       "other": "",
