@@ -160,44 +160,6 @@
       }
     ]
   },
-  "ttlhb": {
-    "version": "数据库版本:12.10.2",
-    "gd": "HTTPS://m.tb.cn/h.49SUzMg",
-    "end": "HTTPS://pages.tmall.com/wow/an/tmall/user-growth/play-tmall?disableNav=YES",
-    "hongbao": "taobao://m.tb.cn/h.44CiYjQ",
-    "main": "HTTPS://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
-    "image": "https://gitee.com/leecogit/Updater/raw/master/image/tb_ttlhb.png",
-    "home": "HTTPS://pages.tmall.com/wow/an/tmall/user-growth/play-tmall?disableNav=YES",
-    "appurl": {
-      "main": {
-        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
-        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fwww.tmall.com%2F",
-        "taobaolite": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F"
-      }
-    },
-    "app": {
-      "淘宝": "taobao",
-      "天猫": "tmall",
-      "淘宝特价版": "taobaolite"
-    },
-    "task": [
-      {
-        "energy": {
-          "title": "攒能量",
-          "type": "energy",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/an/tmall/default-rax/175f4129baa?wh_biz=tm&disableNav=YES&sceneId=699&hd_from_id=100071&fromToken=ERDx5MKCxdoJ6PvwSwJtbwrCkUZU5&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "7771 other_0_0_7771_0",
-            "5030 other_0_0_5030_0",
-            "7381 other_0_0_7381_0",
-            "8007 other_0_0_8007_0",
-            "6780 other_0_0_6780_0"
-          ]
-        }
-      }
-    ]
-  },
   "Jhs": {
     "version": "数据库版本:2.6.1",
     "pv": {
@@ -644,10 +606,6 @@
         }
       }
     ]
-  },
-  "team": {
-    "👤 为作者助力": "taobao://m.tb.cn/h.4i7XpWg?sm=f09c1a",
-    "👥 相互助力群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=830385420&card_type=group&source=qrcode&jump_from=&auth=&authSig=CtFeH1TafXW5JK0ALJh4EbaUkBHKJ6ykRB6+ejGS3fvjGPae8Am9sPg+sm0xsTNX&source_id=2_40001"
   },
   "share": {
     "🔥 找优惠券抢购助手": "https://www.icloud.com/shortcuts/3a499f9269a440739d20c9793183b5f0",
