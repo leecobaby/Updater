@@ -188,7 +188,7 @@
   },
   "FarmSingle": {
     "version": "1.3",
-    "update_log": "- 增加 对集福气活动的支持\n- 增加 助力大厅\n- 优化 自动化引导\n- 优化 常见问题",
+    "update_log": "- 增加 多线路模式\n- 更新 活动数据",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/FarmSingle",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/leecobaby/shortcuts",
@@ -199,7 +199,7 @@
     "automation_url": "shortcuts://run-shortcut?name=芭芭农场自动集肥料&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/image/tb_jfq.png",
-    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json",
+    "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
       "hot": "🔥 21号红包加码...",
