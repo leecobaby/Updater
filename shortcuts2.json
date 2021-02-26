@@ -65,7 +65,7 @@
     "version": "2.1",
     "update": "https://www.icloud.com/shortcuts/a581221316754223afe66fc3c6ca8e32",
     "more": [
-      "搭建教程   |http://blog.jialezi.net/?post=153",
+      "搭建教程  |http://blog.jialezi.net/?post=153",
       "加入QQ群  |https://jq.qq.com/?_wv=1027&k=5FenhoJ"
     ]
   },
@@ -92,7 +92,7 @@
     "api": {
       "get_ring": "http://home.80008800.xyz:90/gitee/",
       "post_ring": "http://home.80008800.xyz:90/gitee/",
-      "download": "https://gitee.com/leecogit/Updater/raw/master/shortcuts/ring/"
+      "download": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/shortcuts/ring/"
     },
     "update_tip": "发现新版本！请到社区或群获取更新~",
     "menu_tip": "☁️共享音效盒子☁️\n- 好咖啡要和朋友一起品尝\n- 好铃音也要和朋友一起分享",
@@ -117,8 +117,8 @@
       "group": "",
       "more": ""
     },
-    "image": "https://gitee.com/leecogit/Updater/raw/master/image/1111_cat.jpeg",
-    "url": "https://gitee.com/leecogit/Updater/raw/master/1111.json"
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/image/1111_cat.jpeg",
+    "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/1111.json"
   },
   "Taojb": {
     "version": "2.1",
@@ -140,7 +140,7 @@
       "team": "",
       "more": ""
     },
-    "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/image/tjb.png",
     "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json"
   },
   "1212hlz": {
@@ -162,7 +162,7 @@
       "team": "",
       "more": "新一期现金红包已发放"
     },
-    "image": "https://gitee.com/leecogit/Updater/raw/master/image/1212_hlz.png",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/image/1212_hlz.png",
     "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json"
   },
   "Ttlhb": {
@@ -176,7 +176,7 @@
     "notice": "1.17有年货节超级红包\n最近年货年活动很多请关注活动大厅~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=双12自动欢乐造&input=text&text=1",
-    "image": "https://gitee.com/leecogit/Updater/raw/master/image/tb_ttlhb.png",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/image/tb_ttlhb.png",
     "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json",
     "tip": {
       "hongbao": "",
@@ -200,7 +200,7 @@
     "notice": "最近星星能换广西券请关注活动大厅~\n出错的请去下最新版~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=聚划算章鱼自动任务&input=text&text=task",
-    "image": "https://gitee.com/leecogit/Updater/raw/master/image/tb_jhs.png",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/image/tb_jhs.png",
     "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json",
     "tip": {
       "hongbao": "",
@@ -223,7 +223,7 @@
     "notice": "1.17有年货节超级红包\n最近年货年活动很多请关注活动大厅~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=活力中心自动任务&input=text&text=task",
-    "image": "https://gitee.com/leecogit/Updater/raw/master/image/tb_hlzx.png",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/image/tb_hlzx.png",
     "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json",
     "tip": {
       "hongbao": "",
@@ -247,7 +247,7 @@
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=芭芭农场自动集肥料&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
-    "image": "https://gitee.com/leecogit/Updater/raw/master/image/tb_jfq.png",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/image/tb_jfq.png",
     "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json",
     "tip": {
       "hongbao": "",
@@ -318,7 +318,7 @@
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=淘特-发财鸭&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
-    "image": "https://gitee.com/leecogit/Updater/raw/master/image/ltao.png",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/image/ltao.png",
     "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json",
     "tip": {
       "hongbao": "",
@@ -345,7 +345,7 @@
     "notice": "欢迎各位作者来提交模块~\n初代版本有很多问题,如果不会用请等待教程和新版~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=AutoBox&input=text&text=",
-    "image": "https://gitee.com/leecogit/Updater/raw/master/image/icon-bot.png",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/image/icon-bot.png",
     "submit": "https://gitee.com/leecogit/auto-box/issues/new",
     "tip": {
       "hongbao": "",
@@ -396,8 +396,8 @@
     "notice": "考虑到部分未满级用户需求在更新个版本\n如果会报错,只选择做剩余任务\n东东农场制作中,see you later~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-炸年兽&input=text&text=task",
-    "image": "https://gitee.com/leecogit/Updater/raw/master/image/jd_nian.png",
-    "scritable": "https://gitee.com/leecogit/Updater/raw/master/getJDCookie.js",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/image/jd_nian.png",
+    "scritable": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/getJDCookie.js",
     "url": "https://gitee.com/leecobaby/Updater/raw/master/jd.json",
     "tip": {
       "hongbao": "",
@@ -416,7 +416,7 @@
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "",
     "notice": "汇总一些集五福的渠道资源,祝你早日集满~",
-    "image": "https://gitee.com/leecogit/Updater/raw/master/image/alipay_wufu.png",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/image/alipay_wufu.png",
     "url": "https://gitee.com/leecobaby/Updater/raw/master/alipay.json",
     "tip": {
       "hongbao": "",
