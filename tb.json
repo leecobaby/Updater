@@ -522,6 +522,11 @@
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.49SUzMg",
       "taobaolite": "taobaolite://m.tb.cn/h.49SUzMg"
     },
+    "gd": {
+      "taobao": "taobao://m.tb.cn/h.49SUzMg",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.49SUzMg",
+      "taobaolite": "taobaolite://m.tb.cn/h.49SUzMg"
+    },
     "main": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fwww.tmall.com%2F",
