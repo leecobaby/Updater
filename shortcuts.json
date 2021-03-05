@@ -198,7 +198,7 @@
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/e5924372b0724dc4aa8e2c57fe063b1e",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "3.8女神节每天领超级红包,不要忘记使用~",
+    "notice": "3.8女神节每天领超级红包,不要忘记使用~\n官方有修复购买任务奖励机制,近期肥料减少属于正常情况~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=芭芭农场自动集肥料&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
