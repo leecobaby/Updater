@@ -516,7 +516,7 @@
     ]
   },
   "FarmSingle": {
-    "version": "数据库版本:3.6.2",
+    "version": "数据库版本:3.6.3",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.4Oz44Cb",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4Oz44Cb",
@@ -550,7 +550,7 @@
     "task": [
       {
         "tmall": {
-          "title": "集肥料云推送",
+          "title": "淘宝集肥料",
           "type": "other",
           "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?disableNav=YES&wh_pid=daily-216010&subSource=catsmoney&fromToken=lrVqDJXSZDKgxlaZc56tdPeCWUdUM&spm=a217e.1212.tasklist.0&sceneId=971&sourceType=other&hd_from_id=100085&deliveryId=",
           "textEnd": "str1&implId=str2",
@@ -578,6 +578,22 @@
             "7936 cloudSailAd_0_3498179_7936_0",
             "7937 cloudSailAd_0_148_7937_0",
             "11171 expo_0_106010_11171_0"
+          ]
+        }
+      },
+      {
+        "tmall": {
+          "title": "微博集肥料",
+          "type": "other",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?disableNav=YES&wh_pid=daily-216010&subSource=catsmoney&fromToken=lrVqDJXSZDKgxlaZc56tdPeCWUdUM&spm=a217e.1212.tasklist.0&sceneId=971&sourceType=other&hd_from_id=100085&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "9046 other_0_0_9046_0",
+            "8016 other_0_105008_8016_0",
+            "8950 other_0_98013_8950_0",
+            "10386 other_0_100016_10386_0",
+            "10385 other_0_100015_10385_0",
+            "8855 other_0_68018_8855_0"
           ]
         }
       }
