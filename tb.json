@@ -1,6 +1,6 @@
 {
   "Taojb": {
-    "version": "数据库版本:3.7.2",
+    "version": "数据库版本:3.7.3",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.4m3elqo",
@@ -43,7 +43,6 @@
             "2771 other_0_0_2771_0",
             "3511 other_0_0_3511_0",
             "5138 other_0_61120_5138_0",
-            "6004 other_0_3809_6004_0",
             "5997 other_0_0_5997_0",
             "5995 other_0_0_5995_0",
             "3134 other_0_0_3134_0",
@@ -51,7 +50,6 @@
             "2675 other_0_0_2675_0",
             "6953 other_0_318900_6953_0",
             "6023 other_0_3000002_6023_0",
-            "5984 other_0_50008_5984_0",
             "3510 other_0_0_3510_0",
             "3073 other_0_0_3073_0",
             "6016 expo_0_45001_6016_0",
@@ -110,8 +108,6 @@
           "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&fromToken=bXNvd52Iv9Jp0n5QS9NuPoNiYh6UV&spm=a217e.xzrwy.1.1&sceneId=367&sourceType=other&hd_from_id=100005&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
-            "5984 other_0_91209094_5984_1",
-            "6004 other_0_92209598_6004_1",
             "6023 other_0_3000003_6023_1",
             "6016 expo_0_45001_6016_1",
             "6216 other_0_1000000019_6216_1",
