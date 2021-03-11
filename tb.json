@@ -238,6 +238,57 @@
       }
     ]
   },
+  "Ttlhb": {
+    "version": "数据库版本:3.11.1",
+    "pv": {
+      "taobao": "taobao://m.tb.cn/h.4m3elqo",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4m3elqo",
+      "taobaolite": "taobaolite://m.tb.cn/h.4m3elqo"
+    },
+    "main": {
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fwww.tmall.com%2F",
+      "taobaolite": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F"
+    },
+    "home": {
+      "taobao": "taobao://pages.tmall.com/wow/an/tmall/user-growth/play-tmall?disableNav=YES",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fan%2Ftmall%2Fuser-growth%2Fplay-tmall%3FdisableNav%3DYES",
+      "taobaolite": "taobaolite://pages.tmall.com/wow/an/tmall/user-growth/play-tmall?disableNav=YES"
+    },
+    "end": {
+      "taobao": "taobao://pages.tmall.com/wow/an/tmall/user-growth/play-tmall?disableNav=YES",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fan%2Ftmall%2Fuser-growth%2Fplay-tmall%3FdisableNav%3DYES",
+      "taobaolite": "taobaolite://pages.tmall.com/wow/an/tmall/user-growth/play-tmall?disableNav=YES"
+    },
+    "app": {
+      "淘宝": "taobao",
+      "天猫": "tmall",
+      "淘宝特价版": "taobaolite"
+    },
+    "task": [
+      {
+        "energy": {
+          "title": "攒能量",
+          "type": "energy",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/an/tmall/default-rax/175f4129baa?wh_biz=tm&disableNav=YES&sceneId=699&hd_from_id=100071&fromToken=ERDx5MKCxdoJ6PvwSwJtbwrCkUZU5&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "7771 other_0_0_7771_0",
+            "5030 other_0_0_5030_0",
+            "7381 other_0_0_7381_0",
+            "8007 other_0_0_8007_0",
+            "6780 other_0_0_6780_0",
+            "9456 other_0_0_9456_0",
+            "5773 other_0_0_5773_0",
+            "10977 other_0_0_10977_0",
+            "7836 other_0_0_7836_0",
+            "9088 other_0_0_9088_0",
+            "5030 other_0_0_5030_0"
+          ]
+        }
+      }
+    ]
+  },
   "FarmSingle": {
     "version": "数据库版本:2.10.2",
     "gd": {
