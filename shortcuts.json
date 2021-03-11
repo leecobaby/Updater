@@ -166,27 +166,27 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json"
   },
   "Ttlhb": {
-    "version": "1.0",
+    "version": "1.1",
     "update_log": "* 初步自动任务\n* 支持自动化、多账号、ipad终端\n* 采用自动淘宝任务框架",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Ttlhb",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/9f74cfa4c2544ca08a9e4112f310f4b4",
-    "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
-    "notice": "1.17有年货节超级红包\n最近年货年活动很多请关注活动大厅~",
+    "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
+    "notice": "天天领红包最新版一支持autobox~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
-    "automation_url": "shortcuts://run-shortcut?name=双12自动欢乐造&input=text&text=1",
+    "automation_url": "shortcuts://run-shortcut?name=天天领红包自动任务&input=text&text=1",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tb_ttlhb.png",
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 年货节活动中....",
+      "hot": "🔥 一元购活动中...",
       "tjb": "请配合食用",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "新一期现金红包已发放"
+      "more": ""
     }
   },
   "Jhs": {
