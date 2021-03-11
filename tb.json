@@ -329,7 +329,7 @@
     }
   },
   "Ttlhb": {
-    "version": "数据库版本:3.11.1",
+    "version": "数据库版本:3.11.2",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.4m3elqo",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4m3elqo",
@@ -358,14 +358,13 @@
     "task": [
       {
         "energy": {
-          "title": "攒能量",
+          "title": "攒福气",
           "type": "energy",
           "urlScheme": "HTTPS://pages.tmall.com/wow/an/tmall/default-rax/175f4129baa?wh_biz=tm&disableNav=YES&sceneId=699&hd_from_id=100071&fromToken=ERDx5MKCxdoJ6PvwSwJtbwrCkUZU5&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "7771 other_0_0_7771_0",
             "5030 other_0_0_5030_0",
-            "7381 other_0_0_7381_0",
             "8007 other_0_0_8007_0",
             "6780 other_0_0_6780_0",
             "9456 other_0_0_9456_0",
@@ -373,7 +372,10 @@
             "10977 other_0_0_10977_0",
             "7836 other_0_0_7836_0",
             "9088 other_0_0_9088_0",
-            "5030 other_0_0_5030_0"
+            "5030 other_0_0_5030_0",
+            "8009 other_0_0_8009_0",
+            "9731 other_0_0_9731_0",
+            "9476 other_0_0_9476_0"
           ]
         }
       }
