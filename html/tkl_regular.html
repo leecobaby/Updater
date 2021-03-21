@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tkl</title>
+</head>
+
+<body>
+  <script>
+    /**
+     * author by @leecobaby
+     * 2021-03-13
+     */
+
+    !(() => {
+      let str = `1234567890s-000000ccccc`
+      regular(str)
+    })()
+
+    function regular(str) {
+      let reg = /\b[A-Za-z0-9]{11}\b/g
+      let tklArr = str.match(reg)
+      if (tklArr) {
+        for (const i of tklArr) {
+          document.write(i + '<br/>')
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
