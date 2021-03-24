@@ -461,8 +461,8 @@
     ]
   },
   "Hlzx": {
-    "version": "数据库版本:12.29.1",
-    "gd": {
+    "version": "数据库版本:3.24.1",
+    "pv": {
       "taobao": "taobao://m.tb.cn/h.4m3elqo",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4m3elqo",
       "taobaolite": "taobaolite://m.tb.cn/h.4m3elqo"
@@ -513,8 +513,53 @@
             "7222 other_0_0_7222_0",
             "6916 other_0_0_6916_0",
             "4772 shop_0_2_4772_0",
-            "4772 shop_0_2_4772_1"
+            "4772 shop_0_2_4772_1",
+            "4186 other_363_0_4186_0",
+            "6678 shop_363_1_6678_0",
+            "6678 shop_363_2_6678_0",
+            "6678 shop_363_3_6678_0",
+            "6678 shop_363_4_6678_0",
+            "11645 other_363_0_11645_0",
+            "9522 other_0_0_9522_0"
           ]
+        }
+      },
+      {
+        "steps": {
+          "title": "活力玩咖",
+          "type": "steps",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=1546&sourceType=other&hd_from_id=100095&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "12045 shop_0_124021_12045_0",
+            "12046 shop_0_124022_12046_0",
+            "12049 item_0_122015_12049_0",
+            "12050 item_0_122016_12050_0",
+            "12051 item_0_120013_12051_0"
+          ]
+        }
+      },
+      {
+        "steps": {
+          "title": "养生主义",
+          "type": "steps",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=1547&sourceType=other&hd_from_id=100095&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "12047 shop_0_122013_12047_0",
+            "12048 shop_0_122014_12048_0",
+            "12053 item_0_123055_12053_0",
+            "12054 item_0_123056_12054_0"
+          ]
+        }
+      },
+      {
+        "steps": {
+          "title": "活力美学",
+          "type": "steps",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=1545&sourceType=other&hd_from_id=100095&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": ["12044 shop_0_120012_12044_0", "12052 item_0_124023_12052_0"]
         }
       }
     ]
