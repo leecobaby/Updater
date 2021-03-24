@@ -168,7 +168,7 @@
     }
   },
   "Hlzx": {
-    "version": "1.3",
+    "version": "1.5",
     "update_log": "- 修复一个自动化的bug\n- 修复iPad无法运行问题\n- 优化刷步的逻辑,解决无法刷上问题",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Hlzx",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
