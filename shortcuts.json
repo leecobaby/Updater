@@ -117,7 +117,7 @@
       "team": "",
       "more": ""
     },
-    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/image/tjb.png",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tjb.png",
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json"
   },
   "Ttlhb": {
@@ -155,7 +155,7 @@
     "notice": "3.8女神节每天领超级红包,不要忘记使用~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=聚划算章鱼自动任务&input=text&text=task",
-    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/image/tb_jhs.png",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tb_jhs.png",
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
@@ -168,17 +168,17 @@
     }
   },
   "Hlzx": {
-    "version": "1.5",
-    "update_log": "- 修复一个自动化的bug\n- 修复iPad无法运行问题\n- 优化刷步的逻辑,解决无法刷上问题",
+    "version": "1.4",
+    "update_log": "- 增加 多线路模式\n- 更新 任务数据",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Hlzx",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/5eb344e14d164e11b861a962a0c9f55d",
+    "update": "https://www.icloud.com/shortcuts/5b8067a64f374251b4bf0afea45ff840",
     "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
-    "notice": "3.8女神节每天领超级红包,不要忘记使用~",
+    "notice": "活力值可更换红包、腾讯视频年费会员、等物品~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=活力中心自动任务&input=text&text=task",
-    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/image/tb_hlzx.png",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tb_hlzx.png",
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
@@ -273,7 +273,7 @@
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=淘特-发财鸭&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
-    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/image/ltao.png",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/ltao.png",
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
@@ -300,7 +300,7 @@
     "notice": "欢迎各位作者来提交模块~\n初代版本有很多问题,如果不会用请等待教程和新版~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=AutoBox&input=text&text=",
-    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/image/icon-bot.png",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-bot.png",
     "submit": "https://gitee.com/leecogit/auto-box/issues/new",
     "tip": {
       "hongbao": "",
