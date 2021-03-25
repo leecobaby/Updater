@@ -98,12 +98,12 @@
     "share_content_tip": "请输入已编码的音效文本内容\n我已经自动输入你剪贴板的内容拉\n─=≡Σ(((つ•̀ω•́)つ\n温馨提醒:请尽量分享10秒以内的音效"
   },
   "Taojb": {
-    "version": "2.1",
-    "update_log": "- 优化 指令兼容性\n- 优化 指令架构",
+    "version": "2.2",
+    "update_log": "- 增加 多线路模式\n- 更新 任务数据",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Taojb",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/1636796e5e674127a3835e92a6416526",
+    "update": "https://www.icloud.com/shortcuts/158fb6ecb85d4a5b8f3b6a8f052cd4f2",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
     "notice": "3.8女神节每天领超级红包,不要忘记使用~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
