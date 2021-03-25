@@ -461,7 +461,7 @@
     ]
   },
   "Hlzx": {
-    "version": "数据库版本:3.24.2",
+    "version": "数据库版本:3.25.1",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.4m3elqo",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4m3elqo",
@@ -533,7 +533,11 @@
             "12038 expo_363_2_12038_0",
             "12038 expo_363_3_12038_0",
             "12038 expo_363_4_12038_0",
-            "12038 expo_363_5_12038_0"
+            "12038 expo_363_5_12038_0",
+            "12103 other_364_0_12103_0",
+            "9524 other_363_0_9524_0",
+            "10722 other_364_0_10722_0",
+            "11933 other_364_0_11933_0"
           ]
         }
       },
