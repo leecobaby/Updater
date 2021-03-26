@@ -572,7 +572,7 @@
     ]
   },
   "FarmSingle": {
-    "version": "数据库版本:3.26.1",
+    "version": "数据库版本:3.26.2",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.4m3elqo",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4m3elqo",
@@ -676,7 +676,10 @@
           "type": "other",
           "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?disableNav=YES&wh_pid=daily-216010&subSource=catsmoney&fromToken=lrVqDJXSZDKgxlaZc56tdPeCWUdUM&spm=a217e.1212.tasklist.0&sceneId=1118&sourceType=other&hd_from_id=100004&deliveryId=",
           "textEnd": "str1&implId=str2",
-          "item": ["8952 cloudSailAd_0_301724132464_8952_0"]
+          "item": [
+            "8952 cloudSailAd_0_301724132464_8952_0",
+            "8952 shop_0_302114260713_8952_0"
+          ]
         }
       }
     ]
@@ -874,7 +877,7 @@
       "0.1元包邮 - 螺丝": "taobao://pages.tmall.com/wow/tmallfarm/act/new-order?wh_biz=tm&disableNav=YES&bizCode=new_browse_task&searchKey=螺丝",
       "0.1元包邮 - 螺钉": "taobao://pages.tmall.com/wow/tmallfarm/act/new-order?wh_biz=tm&disableNav=YES&bizCode=new_browse_task&searchKey=螺钉",
       "0.1元包邮 - 六角螺丝": "taobao://pages.tmall.com/wow/tmallfarm/act/new-order?wh_biz=tm&disableNav=YES&bizCode=new_browse_task&searchKey=六角螺丝",
-      "0.1元包邮 - 卡箍": "taobao://pages.tmall.com/wow/tmallfarm/act/new-order?wh_biz=tm&disableNav=YES&bizCode=new_browse_task&searchKey=卡扣"
+      "0.1元包邮 - 卡箍": "taobao://pages.tmall.com/wow/tmallfarm/act/new-order?wh_biz=tm&disableNav=YES&bizCode=new_browse_task&searchKey=卡箍"
     }
   }
 }
