@@ -832,7 +832,7 @@
         "tmall": {
           "title": "攒金币",
           "type": "other",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&disableNav=YES&sourceType=other&wh_kangarooprefetch=true&needLogin=true&umpChannel=&subType=default&bizType=ltaoDuck&fromToken=lrVqDJXSZDKgxlaZc56tdPeCWUdUM&sceneId=1145&hd_from_id=100094&deliveryId=",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/sale/act/miaoorder?subType=default&bizType=ltaoDuck&sourceType=common&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "9187 other_0_0_9187_0",
