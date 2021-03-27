@@ -451,7 +451,7 @@
     ]
   },
   "Hlzx": {
-    "version": "数据库版本:3.25.1",
+    "version": "数据库版本:3.27.1",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.4m3elqo",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4m3elqo",
@@ -527,13 +527,19 @@
             "12103 other_364_0_12103_0",
             "9524 other_363_0_9524_0",
             "10722 other_364_0_10722_0",
-            "11933 other_364_0_11933_0"
+            "11933 other_364_0_11933_0",
+            "4533 shop_365_1_4533_0",
+            "4533 shop_365_2_4533_0",
+            "4533 shop_365_3_4533_0",
+            "4533 shop_365_4_4533_0",
+            "4533 shop_365_5_4533_0",
+            "4533 shop_365_6_4533_0"
           ]
         }
       },
       {
         "steps": {
-          "title": "活力玩咖",
+          "title": "动力玩咖",
           "type": "steps",
           "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=1546&sourceType=other&hd_from_id=100095&deliveryId=",
           "textEnd": "str1&implId=str2",
@@ -542,7 +548,8 @@
             "12046 shop_0_124022_12046_0",
             "12049 item_0_122015_12049_0",
             "12050 item_0_122016_12050_0",
-            "12051 item_0_120013_12051_0"
+            "12051 item_0_120013_12051_0",
+            "12051 item_3_123061_12051_0"
           ]
         }
       },
@@ -566,7 +573,12 @@
           "type": "steps",
           "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=1545&sourceType=other&hd_from_id=100095&deliveryId=",
           "textEnd": "str1&implId=str2",
-          "item": ["12044 shop_0_120012_12044_0", "12052 item_0_124023_12052_0"]
+          "item": [
+            "12044 shop_0_120012_12044_0",
+            "12052 item_0_124023_12052_0",
+            "12145 item_3_124031_12145_0",
+            "12146 item_3_124032_12146_0"
+          ]
         }
       }
     ]
