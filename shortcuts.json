@@ -262,14 +262,14 @@
     }
   },
   "ltao_duck": {
-    "version": "1.1",
-    "update_log": "测试一下",
+    "version": "1.2",
+    "update_log": "- 增加 多线路模式\n- 更新 任务数据",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/ltao_duck",
     "help": "",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/96fd4ffff90840f5a65d10f0fe1d5f5e",
+    "update": "https://www.icloud.com/shortcuts/a123d58e2fb0494990a1743499fd1ae6",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "3.8女神节每天领超级红包,不要忘记使用~\n尽量在合成完鸭之后再做任务可得更多金币~\n",
+    "notice": "特价版任务因官方做出限制，目前只能前往直播间完成任务，暂无其他办法~\n运行任务将会自动静音，运行完毕恢复，可以去设置里手动更改设置~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=淘特-发财鸭&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
@@ -277,7 +277,7 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 特价版新人活动中...",
+      "hot": "🔥 特价版1元购...",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
