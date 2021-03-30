@@ -577,7 +577,7 @@
     ]
   },
   "FarmSingle": {
-    "version": "数据库版本:3.26.2",
+    "version": "数据库版本:3.31.1",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.4ok4EQH",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4ok4EQH",
@@ -646,7 +646,9 @@
             "7937 cloudSailAd_0_82817000440001_7937_0",
             "7938 cloudSailAd_0_82824001410001_7938_0",
             "7940 cloudSailAd_0_82824001410001_7940_0",
-            "11640 other_112_123001_11640_0"
+            "11640 other_112_123001_11640_0",
+            "8271 other_106_72011_8271_0",
+            "8588 other_106_70008_8588_0"
           ]
         }
       },
@@ -679,11 +681,23 @@
         "tmall": {
           "title": "娇诗韵",
           "type": "other",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?disableNav=YES&wh_pid=daily-216010&subSource=catsmoney&fromToken=lrVqDJXSZDKgxlaZc56tdPeCWUdUM&spm=a217e.1212.tasklist.0&sceneId=1118&sourceType=other&hd_from_id=100004&deliveryId=",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?disableNav=YES&wh_pid=daily-216010&subSource=catsmoney&fromToken=lrVqDJXSZDKgxlaZc56tdPeCWUdUM&spm=a217e.1212.tasklist.0&sceneId=1118&sourceType=other&hd_from_id=100085&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "8952 cloudSailAd_0_301724132464_8952_0",
             "8952 shop_0_302114260713_8952_0"
+          ]
+        }
+      },
+      {
+        "tmall": {
+          "title": "天猫樱花季",
+          "type": "other",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?disableNav=YES&wh_pid=daily-216010&subSource=catsmoney&fromToken=lrVqDJXSZDKgxlaZc56tdPeCWUdUM&spm=a217e.1212.tasklist.0&sceneId=1118&sourceType=other&hd_from_id=100085&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "12143 wlj.assets.tpp_5_115034508_12143_0",
+            "12143 wlj.assets.tpp_5_115034509_12143_0"
           ]
         }
       }
