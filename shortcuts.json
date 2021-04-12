@@ -173,7 +173,7 @@
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/9f74cfa4c2544ca08a9e4112f310f4b4",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "天天领红包最新版一支持autobox~",
+    "notice": "天天领红包需要手动领取任务奖励，别忘记哦~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=天天领红包自动任务&input=text&text=1",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tb_ttlhb.png",
