@@ -448,7 +448,7 @@
     ]
   },
   "Hlzx": {
-    "version": "数据库版本:4.11.2",
+    "version": "数据库版本:4.17.1",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.4ok4EQH",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4ok4EQH",
@@ -506,45 +506,71 @@
       },
       {
         "steps": {
-          "title": "动力玩咖",
+          "title": "海尔",
           "type": "steps",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=1546&sourceType=other&hd_from_id=100095&deliveryId=",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=1691&sourceType=other&hd_from_id=100095&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
-            "12045 shop_0_124021_12045_0",
-            "12046 shop_0_124022_12046_0",
-            "12049 item_0_122015_12049_0",
-            "12050 item_0_122016_12050_0",
-            "12051 item_0_120013_12051_0",
-            "12051 item_3_123061_12051_0"
+            "12949 shop_3_178004_12949_0",
+            "12950 item_3_187005_12950_0",
+            "12951 item_3_185009_12951_0",
+            "12952 item_3_176004_12952_0"
           ]
         }
       },
       {
         "steps": {
-          "title": "养生主义",
+          "title": "vivo",
           "type": "steps",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=1547&sourceType=other&hd_from_id=100095&deliveryId=",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=1689&sourceType=other&hd_from_id=100095&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
-            "12047 shop_0_122013_12047_0",
-            "12048 shop_0_122014_12048_0",
-            "12053 item_0_123055_12053_0",
-            "12054 item_0_123056_12054_0"
+            "12938 shop_4_185007_12938_0",
+            "12939 item_4_178003_12939_0",
+            "12940 item_4_180004_12940_0",
+            "12941 item_4_186001_12941_0"
           ]
         }
       },
       {
         "steps": {
-          "title": "活力美学",
+          "title": "西门子",
           "type": "steps",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=1545&sourceType=other&hd_from_id=100095&deliveryId=",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=1685&sourceType=other&hd_from_id=100095&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
-            "12044 shop_0_120012_12044_0",
-            "12052 item_0_124023_12052_0",
-            "12145 item_3_124031_12145_0",
-            "12146 item_3_124032_12146_0"
+            "12924 shop_4_180002_12924_0",
+            "12927 item_4_187003_12927_0",
+            "12930 item_4_178002_12930_0",
+            "12931 item_4_181002_12931_0"
+          ]
+        }
+      },
+      {
+        "steps": {
+          "title": "方太",
+          "type": "steps",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=1690&sourceType=other&hd_from_id=100095&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "12945 shop_4_176002_12945_0",
+            "12946 item_4_176003_12946_0",
+            "12947 item_4_188001_12947_0",
+            "12948 item_4_188002_12948_0"
+          ]
+        }
+      },
+      {
+        "steps": {
+          "title": "OPPO",
+          "type": "steps",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=1688&sourceType=other&hd_from_id=100095&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "12934 shop_4_185006_12934_0",
+            "12935 item_4_184001_12935_0",
+            "12936 item_4_180003_12936_0",
+            "12937 item_4_187004_12937_0"
           ]
         }
       }
