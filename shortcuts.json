@@ -198,7 +198,7 @@
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/e5924372b0724dc4aa8e2c57fe063b1e",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "部分账号芭芭农场能种第二棵树,测试浇200多次就能满级,可获得通用红包~\n活动大厅新添加芭芭农场0.1元完成下单任务的引导,可前往查看~",
+    "notice": "活动大厅新添加芭芭农场0.1元完成下单任务的引导,可前往查看~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=芭芭农场自动集肥料&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
