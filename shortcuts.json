@@ -145,12 +145,12 @@
     }
   },
   "Jhs": {
-    "version": "1.4",
-    "update_log": "- 优化 部分逻辑",
+    "version": "1.5",
+    "update_log": "- 新增 云端时间功能\n- 新增 等待长时间防假死功能\n- 弃用 动态时间功能",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Jhs",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/3c17dc4392f44171bdc7d71d681a3903",
+    "update": "https://www.icloud.com/shortcuts/e462233a2d124622959412550b1e7d8e",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
     "notice": "已支持最新的55盛典~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
