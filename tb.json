@@ -380,7 +380,7 @@
     ]
   },
   "Jhs": {
-    "version": "数据库版本:5.21.1",
+    "version": "数据库版本:5.22.1",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.4Jt9cFX",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4Jt9cFX",
@@ -446,7 +446,10 @@
             "13763 other_106_239008_13763_0",
             "13762 shop_106_244006_13762_0",
             "13770 other_106_239009_13770_0",
-            "13666 other_7_1_13666_0"
+            "13666 other_7_1_13666_0",
+            "14382 other_17_256001_14382_0",
+            "13759 other_140_1_13759_0",
+            "14397 expo_123_269002_14397_0"
           ]
         }
       }
