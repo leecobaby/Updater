@@ -1,6 +1,6 @@
 {
   "Taojb": {
-    "version": "数据库版本:3.25.2",
+    "version": "数据库版本:5.23.1",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.4Jt9cFX",
@@ -76,7 +76,10 @@
             "11986 other_14_0_11986_0",
             "7486 tjbShop_0_570013073_7486_0",
             "9111 other_449_0_9111_0",
-            "11592 other_449_0_11592_0"
+            "11592 other_449_0_11592_0",
+            "8148 tpp_508_311101799045_8148_0",
+            "11908 expo_508_48737847_11908_0",
+            "11771 other_508_11771001_11771_0"
           ]
         }
       },
