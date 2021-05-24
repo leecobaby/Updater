@@ -98,12 +98,12 @@
     "share_content_tip": "请输入已编码的音效文本内容\n我已经自动输入你剪贴板的内容拉\n─=≡Σ(((つ•̀ω•́)つ\n温馨提醒:请尽量分享10秒以内的音效"
   },
   "Taojb": {
-    "version": "2.2",
-    "update_log": "- 增加 多线路模式\n- 更新 任务数据",
+    "version": "2.3",
+    "update_log": "- 新增 云端时间功能\n- 新增 等待长时间防假死功能\n- 弃用 动态时间功能",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Taojb",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/158fb6ecb85d4a5b8f3b6a8f052cd4f2",
+    "update": "https://www.icloud.com/shortcuts/ad5d41d7f29244debd2c7e28b7d498b5",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
     "notice": "淘金币目前没啥可换的可积攒到活动来的时候~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
