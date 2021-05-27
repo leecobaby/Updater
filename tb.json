@@ -460,7 +460,7 @@
     ]
   },
   "Hlzx": {
-    "version": "数据库版本:5.27.1",
+    "version": "数据库版本:5.28.1",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.4tjP7bh",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4tjP7bh",
@@ -512,7 +512,32 @@
             "9516 other_90_95040_9516_0",
             "12511 expo_3_155001_12511_0",
             "12511 expo_3_155002_12511_0",
-            "12511 expo_3_155003_12511_0"
+            "12511 expo_3_155003_12511_0",
+            "14477 shop_9_308001_14477_0",
+            "14477 shop_9_308002_14477_0",
+            "14477 shop_9_308008_14477_0",
+            "13953 other_133_145003_13953_0",
+            "14811 expo_3_305007_14811_0",
+            "9519 other_0_1_9519_0",
+            "9516 other_133_232004_9516_0",
+            "13011 other_40_191007_13011_0"
+          ]
+        }
+      },
+      {
+        "steps": {
+          "title": "小黄人趣跑限时赛",
+          "type": "steps",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=1955&sourceType=other&hd_from_id=100095&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "14716 shop_4_304005_14716_0",
+            "14712 shop_4_308008_14712_0",
+            "14695 shop_4_308007_14695_0",
+            "14717 shop_4_297005_14717_0",
+            "14842 shop_4_303005_14842_0",
+            "14842 shop_4_303006_14842_0",
+            "14842 shop_4_303007_14842_0"
           ]
         }
       }
