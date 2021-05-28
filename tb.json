@@ -1,11 +1,11 @@
 {
   "Taojb": {
-    "version": "数据库版本:3.25.2",
+    "version": "数据库版本:5.27.1",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
     "pv": {
-      "taobao": "taobao://m.tb.cn/h.4Jt9cFX",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4Jt9cFX",
-      "taobaolite": "taobaolite://m.tb.cn/h.4Jt9cFX"
+      "taobao": "taobao://m.tb.cn/h.4tjP7bh",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4tjP7bh",
+      "taobaolite": "taobaolite://m.tb.cn/h.4tjP7bh"
     },
     "main": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -32,7 +32,7 @@
         "energy": {
           "title": "攒能量",
           "type": "energy",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&fromToken=bXNvd52Iv9Jp0n5QS9NuPoNiYh6UV&spm=a217e.xzrwy.1.1&sceneId=367&sourceType=other&hd_from_id=100005&deliveryId=",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=bXNvd52Iv9Jp0n5QS9NuPoNiYh6UV&spm=a217e.xzrwy.1.1&sceneId=367&sourceType=other&hd_from_id=100005&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "6022 other_0_0_6022_0",
@@ -76,7 +76,10 @@
             "11986 other_14_0_11986_0",
             "7486 tjbShop_0_570013073_7486_0",
             "9111 other_449_0_9111_0",
-            "11592 other_449_0_11592_0"
+            "11592 other_449_0_11592_0",
+            "8148 tpp_508_311101799045_8148_0",
+            "11908 expo_508_48737847_11908_0",
+            "11771 other_508_11771001_11771_0"
           ]
         }
       },
@@ -104,7 +107,7 @@
         "energy": {
           "title": "攒剩余能量",
           "type": "energy",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&fromToken=bXNvd52Iv9Jp0n5QS9NuPoNiYh6UV&spm=a217e.xzrwy.1.1&sceneId=367&sourceType=other&hd_from_id=100005&deliveryId=",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=bXNvd52Iv9Jp0n5QS9NuPoNiYh6UV&spm=a217e.xzrwy.1.1&sceneId=367&sourceType=other&hd_from_id=100005&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "6016 expo_0_45001_6016_1",
@@ -331,9 +334,9 @@
   "Ttlhb": {
     "version": "数据库版本:4.12.1",
     "pv": {
-      "taobao": "taobao://m.tb.cn/h.4Jt9cFX",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4Jt9cFX",
-      "taobaolite": "taobaolite://m.tb.cn/h.4Jt9cFX"
+      "taobao": "taobao://m.tb.cn/h.4tjP7bh",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4tjP7bh",
+      "taobaolite": "taobaolite://m.tb.cn/h.4tjP7bh"
     },
     "main": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -380,11 +383,11 @@
     ]
   },
   "Jhs": {
-    "version": "数据库版本:5.4.2",
+    "version": "数据库版本:5.27.1",
     "pv": {
-      "taobao": "taobao://m.tb.cn/h.4Jt9cFX",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4Jt9cFX",
-      "taobaolite": "taobaolite://m.tb.cn/h.4Jt9cFX"
+      "taobao": "taobao://m.tb.cn/h.4tjP7bh",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4tjP7bh",
+      "taobaolite": "taobaolite://m.tb.cn/h.4tjP7bh"
     },
     "main": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -411,7 +414,7 @@
         "stars": {
           "title": "攒星星",
           "type": "stars",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&sourceType=other&fromToken=xBVj6P9UvoVobWAQTnvT7EUqUZUJ&sceneId=107&hd_from_id=100027&deliveryId=",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&sourceType=other&fromToken=xBVj6P9UvoVobWAQTnvT7EUqUZUJ&sceneId=107&hd_from_id=100027&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "2284 other_0_0_2284_0",
@@ -445,57 +448,23 @@
             "13766 other_106_256001_13766_0",
             "13763 other_106_239008_13763_0",
             "13762 shop_106_244006_13762_0",
-            "13770 other_106_239009_13770_0",
-            "13666 other_7_1_13666_0"
-          ]
-        }
-      },
-      {
-        "stars": {
-          "title": "五五盛典",
-          "type": "stars",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&sourceType=other&fromToken=xBVj6P9UvoVobWAQTnvT7EUqUZUJ&sceneId=107&hd_from_id=100027&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "13877 other_106_229010_13877_0",
-            "13877 other_106_229010_13877_1",
-            "13877 other_106_229010_13877_2",
-            "13877 other_106_229010_13877_3",
-            "13877 other_106_229010_13877_4",
-            "13877 other_106_229010_13877_5",
-            "13877 other_106_229010_13877_6",
-            "13878 other_106_229021_13878_0",
-            "13878 other_106_229022_13878_0",
-            "13878 other_106_229023_13878_0",
-            "13878 other_106_229024_13878_0",
-            "13878 other_106_229025_13878_0",
-            "13878 other_106_229028_13878_0",
-            "13880 other_106_229008_13880_0",
-            "13880 other_106_229008_13880_1",
-            "13880 other_106_229008_13880_2",
-            "13880 other_106_229008_13880_3",
-            "13880 other_106_229008_13880_4",
-            "13880 other_106_229008_13880_5",
-            "13880 other_106_229008_13880_6",
-            "13880 other_106_229008_13880_7",
-            "13881 other_106_229020_13881_0",
-            "13881 other_106_229020_13881_1",
-            "13881 other_106_229020_13881_2",
-            "13881 other_106_229020_13881_3",
-            "13881 other_106_229020_13881_4",
-            "13881 other_106_229020_13881_5",
-            "13881 other_106_229020_13881_6"
+            "13770 other_106_239009_13770_55",
+            "13666 other_7_1_13666_0",
+            "14382 other_17_256001_14382_0",
+            "13759 other_140_1_13759_0",
+            "14397 expo_123_269002_14397_0",
+            "9015 other_148_0_9015_0"
           ]
         }
       }
     ]
   },
   "Hlzx": {
-    "version": "数据库版本:4.17.1",
+    "version": "数据库版本:5.28.1",
     "pv": {
-      "taobao": "taobao://m.tb.cn/h.4Jt9cFX",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4Jt9cFX",
-      "taobaolite": "taobaolite://m.tb.cn/h.4Jt9cFX"
+      "taobao": "taobao://m.tb.cn/h.4tjP7bh",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4tjP7bh",
+      "taobaolite": "taobaolite://m.tb.cn/h.4tjP7bh"
     },
     "main": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -522,7 +491,7 @@
         "steps": {
           "title": "攒步数",
           "type": "steps",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=1148&sourceType=other&hd_from_id=100095&deliveryId=",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=1148&sourceType=other&hd_from_id=100095&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "9479 linked_94_0_9479_0",
@@ -543,93 +512,48 @@
             "9516 other_90_95040_9516_0",
             "12511 expo_3_155001_12511_0",
             "12511 expo_3_155002_12511_0",
-            "12511 expo_3_155003_12511_0"
+            "12511 expo_3_155003_12511_0",
+            "14477 shop_9_308001_14477_0",
+            "14477 shop_9_308002_14477_0",
+            "14477 shop_9_308008_14477_0",
+            "13953 other_133_145003_13953_0",
+            "14811 expo_3_305007_14811_0",
+            "9519 other_0_1_9519_0",
+            "9516 other_133_232004_9516_0",
+            "13011 other_40_191007_13011_0"
           ]
         }
       },
       {
         "steps": {
-          "title": "海尔",
+          "title": "小黄人趣跑限时赛",
           "type": "steps",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=1691&sourceType=other&hd_from_id=100095&deliveryId=",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=1955&sourceType=other&hd_from_id=100095&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
-            "12949 shop_3_178004_12949_0",
-            "12950 item_3_187005_12950_0",
-            "12951 item_3_185009_12951_0",
-            "12952 item_3_176004_12952_0"
-          ]
-        }
-      },
-      {
-        "steps": {
-          "title": "vivo",
-          "type": "steps",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=1689&sourceType=other&hd_from_id=100095&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "12938 shop_4_185007_12938_0",
-            "12939 item_4_178003_12939_0",
-            "12940 item_4_180004_12940_0",
-            "12941 item_4_186001_12941_0"
-          ]
-        }
-      },
-      {
-        "steps": {
-          "title": "西门子",
-          "type": "steps",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=1685&sourceType=other&hd_from_id=100095&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "12924 shop_4_180002_12924_0",
-            "12927 item_4_187003_12927_0",
-            "12930 item_4_178002_12930_0",
-            "12931 item_4_181002_12931_0"
-          ]
-        }
-      },
-      {
-        "steps": {
-          "title": "方太",
-          "type": "steps",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=1690&sourceType=other&hd_from_id=100095&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "12945 shop_4_176002_12945_0",
-            "12946 item_4_176003_12946_0",
-            "12947 item_4_188001_12947_0",
-            "12948 item_4_188002_12948_0"
-          ]
-        }
-      },
-      {
-        "steps": {
-          "title": "OPPO",
-          "type": "steps",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=1688&sourceType=other&hd_from_id=100095&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "12934 shop_4_185006_12934_0",
-            "12935 item_4_184001_12935_0",
-            "12936 item_4_180003_12936_0",
-            "12937 item_4_187004_12937_0"
+            "14716 shop_4_304005_14716_0",
+            "14712 shop_4_308008_14712_0",
+            "14695 shop_4_308007_14695_0",
+            "14717 shop_4_297005_14717_0",
+            "14842 shop_4_303005_14842_0",
+            "14842 shop_4_303006_14842_0",
+            "14842 shop_4_303007_14842_0"
           ]
         }
       }
     ]
   },
   "FarmSingle": {
-    "version": "数据库版本:5.7.1",
+    "version": "数据库版本:5.27.1",
     "pv": {
-      "taobao": "taobao://m.tb.cn/h.4Jt9cFX",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4Jt9cFX",
-      "taobaolite": "taobaolite://m.tb.cn/h.4Jt9cFX"
+      "taobao": "taobao://m.tb.cn/h.4tjP7bh",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4tjP7bh",
+      "taobaolite": "taobaolite://m.tb.cn/h.4tjP7bh"
     },
     "gd": {
-      "taobao": "taobao://m.tb.cn/h.4Jt9cFX",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4Jt9cFX",
-      "taobaolite": "taobaolite://m.tb.cn/h.4Jt9cFX"
+      "taobao": "taobao://m.tb.cn/h.4tjP7bh",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4tjP7bh",
+      "taobaolite": "taobaolite://m.tb.cn/h.4tjP7bh"
     },
     "main": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -656,7 +580,7 @@
         "tmall": {
           "title": "淘宝集肥料",
           "type": "other",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?disableNav=YES&wh_pid=daily-216010&subSource=catsmoney&fromToken=lrVqDJXSZDKgxlaZc56tdPeCWUdUM&spm=a217e.1212.tasklist.0&sceneId=971&sourceType=other&hd_from_id=100085&deliveryId=",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=lrVqDJXSZDKgxlaZc56tdPeCWUdUM&spm=a217e.1212.tasklist.0&sceneId=971&sourceType=other&hd_from_id=100085&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "7932 linked_0_0_7932_0",
@@ -696,7 +620,11 @@
             "11036 cloudsail_134_88556503330001_11036_0",
             "7938 cloudsail_156_95590500110001_7938_0",
             "12820 other_126_161003_12820_0",
-            "11497 other_143_121001_11497_0"
+            "11497 other_143_121001_11497_0",
+            "7937 cloudsail_157_95929501400001_7937_0",
+            "9708 expo_0_84009_9708_0",
+            "12585 expo_172_123083_12585_0",
+            "12768 other_5_173001_12768_0"
           ]
         }
       },
@@ -704,7 +632,7 @@
         "tmall": {
           "title": "微博集肥料",
           "type": "other",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?disableNav=YES&wh_pid=daily-216010&subSource=catsmoney&fromToken=lrVqDJXSZDKgxlaZc56tdPeCWUdUM&spm=a217e.1212.tasklist.0&sceneId=978&sourceType=other&hd_from_id=100085&deliveryId=",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=lrVqDJXSZDKgxlaZc56tdPeCWUdUM&spm=a217e.1212.tasklist.0&sceneId=978&sourceType=other&hd_from_id=100085&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "9046 other_0_0_9046_0",
@@ -720,19 +648,28 @@
         "tmall": {
           "title": "直播间任务",
           "type": "other",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?disableNav=YES&wh_pid=daily-216010&subSource=catsmoney&fromToken=lrVqDJXSZDKgxlaZc56tdPeCWUdUM&spm=a217e.1212.tasklist.0&sceneId=406&sourceType=other&hd_from_id=100004&deliveryId=",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=lrVqDJXSZDKgxlaZc56tdPeCWUdUM&spm=a217e.1212.tasklist.0&sceneId=406&sourceType=other&hd_from_id=100004&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": ["2482 other_365_0_2482_0"]
+        }
+      },
+      {
+        "tmall": {
+          "title": "集阳光任务",
+          "type": "other",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/tmallfarm/act/b-browser?wh_biz=tm&spm=farm.newfarm.task.browser&disableNav=YES",
+          "textEnd": "",
+          "item": ["0 0"]
         }
       }
     ]
   },
   "Qmxb": {
-    "version": "数据库版本:12.27.2",
+    "version": "数据库版本:5.27.1",
     "gd": {
-      "taobao": "taobao://m.tb.cn/h.4Jt9cFX",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4Jt9cFX",
-      "taobaolite": "taobaolite://m.tb.cn/h.4Jt9cFX"
+      "taobao": "taobao://m.tb.cn/h.4tjP7bh",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4tjP7bh",
+      "taobaolite": "taobaolite://m.tb.cn/h.4tjP7bh"
     },
     "main": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -759,7 +696,7 @@
         "stars": {
           "title": "得次数",
           "type": "stars",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-216010&subSource=catsmoney&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=957&sourceType=other&hd_from_id=100070&deliveryId=",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=957&sourceType=other&hd_from_id=100070&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "7778 other_0_0_7778_0",
@@ -795,9 +732,9 @@
   "TaoSign": {
     "version": "数据库版本:2.26.1",
     "pv": {
-      "taobao": "taobao://m.tb.cn/h.4Jt9cFX",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4Jt9cFX",
-      "taobaolite": "taobaolite://m.tb.cn/h.4Jt9cFX"
+      "taobao": "taobao://m.tb.cn/h.4tjP7bh",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4tjP7bh",
+      "taobaolite": "taobaolite://m.tb.cn/h.4tjP7bh"
     },
     "main": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -834,9 +771,9 @@
   "ltao_duck": {
     "version": "数据库版本:3.29.1",
     "pv": {
-      "taobao": "taobao://m.tb.cn/h.4Jt9cFX",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4Jt9cFX",
-      "taobaolite": "taobaolite://m.tb.cn/h.4Jt9cFX"
+      "taobao": "taobao://m.tb.cn/h.4tjP7bh",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4tjP7bh",
+      "taobaolite": "taobaolite://m.tb.cn/h.4tjP7bh"
     },
     "main": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -899,7 +836,7 @@
     "🔥 每天限量一元购 - 🪄变0元购": {
       "😈 0元购教程": "https://mp.weixin.qq.com/s/phkMAiYfZWghHIZNax2r8w",
       "📺 视频演示-更新": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cgndyni",
-      "🎯 一元购页面": "taobao://m.tb.cn/h.4rQjF29"
+      "🎯 一元购页面": "taobao://m.tb.cn/h.4tjPX64"
     },
     "🧧 天猫红包雨": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4kgjw96%3Fsm%3Db4c985",
     "🧧 抢1元天猫超市卡": "taobao://m.tb.cn/h.4o9vyN4?sm=62cb49",
