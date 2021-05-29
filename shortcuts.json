@@ -167,6 +167,29 @@
       "more": ""
     }
   },
+  "618cat": {
+    "version": "1.0",
+    "update_log": "- 新增 云端时间功能\n- 新增 等待长时间防假死功能\n- 弃用 动态时间功能",
+    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Jhs",
+    "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/e462233a2d124622959412550b1e7d8e",
+    "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
+    "notice": "实现自动养猫,一直逛兰蔻为正常现象~\n活动很多尽力及时更新~",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
+    "automation_url": "shortcuts://run-shortcut?name=天猫618自动养猫&input=text&text=task",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tb_jhs.png",
+    "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
+    "tip": {
+      "hongbao": "每天领...",
+      "hot": "🔥 一元购活动中...",
+      "faq": "",
+      "set": "点击查看自动化操作",
+      "team": "",
+      "other": "疑问者可查看常见问题",
+      "more": "5.30 现金红包"
+    }
+  },
   "Hlzx": {
     "version": "1.4",
     "update_log": "- 增加 多线路模式\n- 更新 任务数据",
