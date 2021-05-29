@@ -178,7 +178,7 @@
     "notice": "实现自动养猫,一直逛兰蔻为正常现象~\n活动很多尽力及时更新~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=天猫618自动养猫&input=text&text=task",
-    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tb_618cat.png",
+    "image": "https://gitee.com/leecobaby/Updater/raw/master/image/tb_618cat.jpg",
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "每天领...",
