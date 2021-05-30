@@ -460,7 +460,7 @@
     ]
   },
   "618cat": {
-    "version": "数据库版本:5.30.3",
+    "version": "数据库版本:5.30.4",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.4trcgjg",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4trcgjg",
@@ -537,7 +537,8 @@
             "14894 other_10_0_14894_0",
             "15163 cloudsail_1_102804504640001_15163_0",
             "15163 cloudsail_1_102804504640002_15163_0",
-            "14007 other_22_1_14007_0"
+            "14007 other_22_1_14007_0",
+            "14112 other_0_266001_14112_0"
           ]
         }
       },
@@ -545,7 +546,7 @@
         "stars": {
           "title": "前往支付宝",
           "type": "stars",
-          "urlScheme": "alipays://platformapi/startapp?appId=68687880&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fc%2Falipay_magic_cat&chInfo=TAOBAO_BOX&thd_con=YES&pikshemo=YES&async_uc=YES&mainConnectDelayPush=YES&delayPipeline=YES&initCustomService=YES&enableHotBoot=YES",
+          "urlScheme": "alipays://platformapi/startapp?appId=68687880&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fc%2Falipay_magic_cat&chInfo=TAOBAO_TASK&thd_con=YES&pikshemo=YES&async_uc=YES&mainConnectDelayPush=YES&delayPipeline=YES&initCustomService=YES&enableHotBoot=YES",
           "textEnd": "",
           "item": ["0 0"]
         }
