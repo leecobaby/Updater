@@ -175,7 +175,7 @@
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/e462233a2d124622959412550b1e7d8e",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "实现自动养猫,一直逛兰蔻为正常现象~\n活动很多尽力及时更新~",
+    "notice": "实现自动养猫,一直逛兰蔻为正常现象~\n超红可以使用咯，每天都可领~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=天猫618自动养猫&input=text&text=task",
     "image": "https://gitee.com/leecobaby/Updater/raw/master/image/tb_618cat.jpg",
@@ -391,12 +391,12 @@
       "👥 加入TG讨论群": "https://t.me/xuehaushe_chat",
       "👥 加入QQ情报群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=794151741&card_type=group&source=qrcode&jump_from=&auth=&authSig=QyhXG1SXGxWaEgClRfq4X7ueegscoHfN1r/027RrqaHsSfj8sR3Y7TzV6VwHx2IM&source_id=2_40001",
       "📱 其他捷径作品": "https://github.com/leecobaby/shortcuts",
-      "🧧 外卖红包": {
-        "美团红包   新用户最高领56元礼包": {
-          "已安装app": "imeituan://www.meituan.com/web?lch=cps:waimai:3:a144a9fa40a42c55af00214bb4bb3993971:6232dingdanxialeeco&url=https%3A%2F%2Frunion.meituan.com%2Furl%3Fkey%3Da144a9fa40a42c55af00214bb4bb3993971%26url%3Dhttps%253A%252F%252Fi.meituan.com%252Fawp%252Fhfe%252Fblock%252Fa945391288b790d558b7%252F78716%252Findex.html%253Fappkey%253Da144a9fa40a42c55af00214bb4bb3993971%253A6232dingdanxialeeco%26sid%3D6232dingdanxialeeco",
-          "未安装app": "https://w.dianping.com/cube/evoke/growcps/meituan.html?lch=cps:waimai:1:a144a9fa40a42c55af00214bb4bb3993971:6232dingdanxialeeco&url=https%3A%2F%2Frunion.meituan.com%2Furl%3Fkey%3Da144a9fa40a42c55af00214bb4bb3993971%26url%3Dhttps%253A%252F%252Fi.meituan.com%252Fawp%252Fhfe%252Fblock%252Fa945391288b790d558b7%252F78716%252Findex.html%253Fappkey%253Da144a9fa40a42c55af00214bb4bb3993971%253A6232dingdanxialeeco%26sid%3D6232dingdanxialeeco"
+      "🧧 外卖红包 活动更新...": {
+        "美团红包   最高领66元礼包": {
+          "已安装app": "imeituan://www.meituan.com/web?lch=cps:waimai:3:a144a9fa40a42c55af00214bb4bb3993971:6232dingdanxialeeco:2:70690&url=https%3A%2F%2Fclick.meituan.com%2Ft%3Ft%3D1%26c%3D1%26p%3DOWMpZ-uzIFOVe6JyOONs3dXuqV0qcAf-r-KCvHdXiNfM3oMXlDSgQ1lHQ7sc1bHIMXeq2XWRYP9S3VMvpbQU5suS6wIbvlY8ysKwoMucfvM-rF8Z3mNwVvDHIKVKMsgutBrr4QPAU-C_JAUQdcIGegPhA5pbiaJPBOlV_2ElhVrcWrcWxBNlqgy-azTgeuR39HLNf98hLOWEGKBDtwCamOqsJP1LLMGBuAOnfqvhqVpmOiuf2Grl8rQIjgXTpd-9hOnDON0X3YxM7kdoJCRmSis2PTLenraGrNz5ViEm8KjiXNM3vBmZ8YSUoNjoiCjP8p8fRrf7uXM2SvjABJxuflK0_ogBMj-5YH-n4hr8dW-If4ulIdQYa6FGfQ0wgLaHtMVPuoy42RYF-BZ7NsaYjbxSYy5duCSxIJLGrdqIVhFHeJkRT5MGDOXn1bf58GE8oUnmCXZ4BU0FwKjAf2QgbwXqgfp8t6YZjfKmXNSomEW1NZJF7XYewE6OFFCl6qGkCGc3dgSAjj1UhCZ0BoljZx6zxMgxRv3oJ0EePeqkyDgekdSBbU-zUSW-C7HiXVEFHoU955N0M8A_hQJv5ScS5lJqqumIL2k4S4VAUucCbmo1UOjRyJ2wpDveI4iwCFTr5RIxT8aoT2fgKQZWBwpD6v3MZ-td3z0E_aU9a2lLsyIweu9PfPngn4JqLbd6BEpLuM0XFzanyV5BRWXa9VtvNO3Qm070mTjozv7xbIo_boM",
+          "未安装app": "https://click.meituan.com/t?t=1&c=1&p=OWMpZ-uzIFOVe6JyOONs3dXuqV0qcAf-r-KCvHdXiNfM3oMXlDSgQ1lHQ7sc1bHIMXeq2XWRYP9S3VMvpbQU5suS6wIbvlY8ysKwoMucfvM-rF8Z3mNwVvDHIKVKMsgutBrr4QPAU-C_JAUQdcIGegPhA5pbiaJPBOlV_2ElhVrcWrcWxBNlqgy-azTgeuR39HLNf98hLOWEGKBDtwCamOqsJP1LLMGBuAOnfqvhqVpmOiuf2Grl8rQIjgXTpd-9hOnDON0X3YxM7kdoJCRmSis2PTLenraGrNz5ViEm8KjiXNM3vBmZ8YSUoNjoiCjP8p8fRrf7uXM2SvjABJxuflK0_ogBMj-5YH-n4hr8dW-If4ulIdQYa6FGfQ0wgLaHtMVPuoy42RYF-BZ7NsaYjbxSYy5duCSxIJLGrdqIVhFHeJkRT5MGDOXn1bf58GE8oUnmCXZ4BU0FwKjAf2QgbwXqgfp8t6YZjfKmXNSomEW1NZJF7XYewE6OFFCl6qGkCGc3dgSAjj1UhCZ0BoljZx6zxMgxRv3oJ0EePeqkyDgekdSBbU-zUSW-C7HiXVEFHoU955N0M8A_hQJv5ScS5lJqqumIL2k4S4VAUucCbmo1UOjRyJ2wpDveI4iwCFTr5RIxT8aoT2fgKQZWBwpD6v3MZ-td3z0E_aU9a2lLsyIweu9PfPngn4JqLbd6BEpLuM0XFzanyV5BRWXa9VtvNO3Qm070mTjozv7xbIo_boM"
         },
-        "饿了么现金红包   部分老用户有12无门槛补贴": "taobao://m.tb.cn/h.4Guqysh"
+        "饿了么红包  最高领31元礼包": "taobao://m.tb.cn/h.4t95exG"
       },
       "🧧 现金红包-5.30": "taobao://m.tb.cn/h.4tACY39"
     },
