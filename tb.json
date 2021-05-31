@@ -460,7 +460,7 @@
     ]
   },
   "618cat": {
-    "version": "数据库版本:5.30.4",
+    "version": "数据库版本:5.31.1",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.4trcgjg",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4trcgjg",
@@ -538,7 +538,12 @@
             "15163 cloudsail_1_102804504640001_15163_0",
             "15163 cloudsail_1_102804504640002_15163_0",
             "14007 other_22_1_14007_0",
-            "14112 other_0_266001_14112_0"
+            "14112 other_0_266001_14112_0",
+            "14945 live_5_334004_14945_0",
+            "15101 expo_4_1000000000242468001_15101_0",
+            "15101 expo_4_1000000000242468002_15101_0",
+            "15177 expo_2_1000000000242121002_15177_0",
+            "15179 expo_2_1000000054908544031_15179_0"
           ]
         }
       },
@@ -548,7 +553,7 @@
           "type": "stars",
           "urlScheme": "alipays://platformapi/startapp?appId=68687880&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fc%2Falipay_magic_cat&chInfo=TAOBAO_TASK&thd_con=YES&pikshemo=YES&async_uc=YES&mainConnectDelayPush=YES&delayPipeline=YES&initCustomService=YES&enableHotBoot=YES",
           "textEnd": "",
-          "item": ["0 0"]
+          "item": ["1 0"]
         }
       }
     ]
