@@ -577,6 +577,27 @@
           "textEnd": "",
           "item": ["1 0"]
         }
+      },
+      {
+        "stars": {
+          "title": "领喵币②",
+          "type": "stars",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=2020618-task-list&sourceType=other&fromToken=xBVj6P9UvoVobWAQTnvT7EUqUZUJ&sceneId=1788&hd_from_id=100116&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "14617 expo_4_334016_15272_0",
+            "15255 cloudsail_1_100336503710001_15255_0",
+            "15255 cloudsail_1_100336503710002_15255_0",
+            "15255 cloudsail_1_100336503710003_15255_0",
+            "15255 cloudsail_1_100336503710004_15255_0",
+            "15255 cloudsail_1_100336503710005_15255_0",
+            "15255 cloudsail_1_100336503710006_15255_0",
+            "15255 cloudsail_1_100336503710007_15255_0",
+            "15255 cloudsail_1_100336503710008_15255_0",
+            "15255 cloudsail_1_100336503710009_15255_0",
+            "15255 cloudsail_1_100336503710000_15255_0"
+          ]
+        }
       }
     ]
   },
