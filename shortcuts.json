@@ -175,7 +175,7 @@
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/e462233a2d124622959412550b1e7d8e",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "实现自动养猫,一直逛兰蔻为正常现象~\n超红可以使用咯，每天都可领~",
+    "notice": "实现自动养猫,一直逛兰蔻为正常现象~\n遇到任务异常为正常情况,不要手动去停止他,运行完大概有150多万喵币~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=天猫618自动养猫&input=text&text=task",
     "image": "https://gitee.com/leecobaby/Updater/raw/master/image/tb_618cat.jpg",
@@ -187,7 +187,7 @@
       "set": "点击查看自动化操作",
       "team": "",
       "other": "疑问者可查看常见问题",
-      "more": "5.30 现金红包"
+      "more": "可领外卖红包啦..."
     }
   },
   "Hlzx": {
