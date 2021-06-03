@@ -460,7 +460,7 @@
     ]
   },
   "618cat": {
-    "version": "数据库版本:6.3.1",
+    "version": "数据库版本:6.3.2",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.4trcgjg",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4trcgjg",
@@ -574,7 +574,9 @@
             "15255 cloudsail_1_100336503710009_15255_0",
             "15255 cloudsail_1_100336503710000_15255_0",
             "15251 cloudsail_1_104938503750001_15251_0",
-            "15058 other_7_330002_15058_0"
+            "15058 other_7_330002_15058_0",
+            "14945 live_8_352001_14945_0",
+            "15343 search_6_1770608546_15343_0"
           ]
         }
       }
