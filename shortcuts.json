@@ -175,7 +175,7 @@
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/e39695f18a5643f9b61fc7b7c28b461d",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "遇到还没读完条就跳转的情况可去指令设置增加等待时长~\n遇到任务异常为正常情况,不要手动去停止他,运行完大概有150多万喵币~",
+    "notice": "遇到还没读完条就跳转的情况可去指令设置增加等待时长~\n部分任务显示开小差,目前无解~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=天猫618自动养猫&input=text&text=task",
     "image": "https://gitee.com/leecobaby/Updater/raw/master/image/tb_618cat.jpg",
