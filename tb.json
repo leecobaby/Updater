@@ -460,7 +460,7 @@
     ]
   },
   "618cat": {
-    "version": "数据库版本:6.4.3",
+    "version": "数据库版本:6.4.5",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.4trcgjg",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4trcgjg",
@@ -540,15 +540,6 @@
       },
       {
         "stars": {
-          "title": "前往支付宝",
-          "type": "stars",
-          "urlScheme": "alipays://platformapi/startapp?appId=68687880&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fc%2Falipay_magic_cat&chInfo=TAOBAO_TASK&thd_con=YES&pikshemo=YES&async_uc=YES&mainConnectDelayPush=YES&delayPipeline=YES&initCustomService=YES&enableHotBoot=YES",
-          "textEnd": "",
-          "item": ["1 0"]
-        }
-      },
-      {
-        "stars": {
           "title": "领喵币②",
           "type": "stars",
           "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=2020618-task-list&sourceType=other&fromToken=xBVj6P9UvoVobWAQTnvT7EUqUZUJ&sceneId=1788&hd_from_id=100116&deliveryId=",
@@ -581,6 +572,15 @@
             "15077 expo_8_330016_15077_0",
             "15098 expo_8_1000000054910699031_15098_0"
           ]
+        }
+      },
+      {
+        "stars": {
+          "title": "前往支付宝 无支付宝请取消勾选",
+          "type": "stars",
+          "urlScheme": "alipays://platformapi/startapp?appId=68687880&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fc%2Falipay_magic_cat&chInfo=TAOBAO_TASK&thd_con=YES&pikshemo=YES&async_uc=YES&mainConnectDelayPush=YES&delayPipeline=YES&initCustomService=YES&enableHotBoot=YES",
+          "textEnd": "",
+          "item": ["1 0"]
         }
       }
     ]
