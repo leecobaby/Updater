@@ -462,9 +462,9 @@
   "618cat": {
     "version": "数据库版本:6.4.5",
     "pv": {
-      "taobao": "taobao://m.tb.cn/h.4trcgjg",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4trcgjg",
-      "taobaolite": "taobaolite://m.tb.cn/h.4trcgjg"
+      "taobao": "taobao://m.tb.cn/h.4uyyEOF",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4uyyEOF",
+      "taobaolite": "taobaolite://m.tb.cn/h.4uyyEOF"
     },
     "main": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -967,7 +967,7 @@
       "📺 视频演示": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cgndyni",
       "🎯 一元购页面": "taobao://m.tb.cn/h.4Glv2Dv"
     },
-    "🧧 20点 21点 惊喜红包": "taobao://m.tb.cn/h.4trcgjg",
+    "🧧 20点 21点 惊喜红包": "taobao://m.tb.cn/h.4uyyEOF",
     "天猫活动": {
       "🧧 天猫红包雨": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4kgjw96%3Fsm%3Db4c985",
       "🧧 抢1元天猫超市卡": "taobao://m.tb.cn/h.4o9vyN4?sm=62cb49",
