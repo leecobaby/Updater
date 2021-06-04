@@ -460,7 +460,7 @@
     ]
   },
   "618cat": {
-    "version": "数据库版本:6.4.2",
+    "version": "数据库版本:6.4.3",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.4trcgjg",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4trcgjg",
@@ -527,6 +527,15 @@
             "15077 expo_5_301027_15077_0",
             "15178 expo_3_1000000055277205016_15178_0"
           ]
+        }
+      },
+      {
+        "stars": {
+          "title": "云端推送",
+          "type": "stars",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=2020618-task-list&sourceType=other&fromToken=xBVj6P9UvoVobWAQTnvT7EUqUZUJ&sceneId=1857&hd_from_id=100116&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": ["13937 icpmAd_0_3637107_13937_0"]
         }
       },
       {
