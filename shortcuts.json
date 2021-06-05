@@ -168,12 +168,12 @@
     }
   },
   "618cat": {
-    "version": "1.1",
-    "update_log": "- 增加 助力大厅功能",
+    "version": "1.2",
+    "update_log": "- 增加 快速做剩余任务功能\n- 增加 随机助力功能",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/618cat",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/e39695f18a5643f9b61fc7b7c28b461d",
+    "update": "https://www.icloud.com/shortcuts/373f7237053146d0bbe475e8eb6cecda",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
     "notice": "遇到还没读完条就跳转的情况可去指令设置增加等待时长~\n部分任务显示开小差,目前无解~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
