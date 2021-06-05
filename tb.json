@@ -460,7 +460,7 @@
     ]
   },
   "618cat": {
-    "version": "数据库版本:6.4.5",
+    "version": "数据库版本:6.5.1",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.4uyyEOF",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4uyyEOF",
@@ -535,7 +535,7 @@
           "type": "stars",
           "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=2020618-task-list&sourceType=other&fromToken=xBVj6P9UvoVobWAQTnvT7EUqUZUJ&sceneId=1857&hd_from_id=100116&deliveryId=",
           "textEnd": "str1&implId=str2",
-          "item": ["13937 other_35_1_1393", "13936 other_35_1_13936_1"]
+          "item": ["13937 other_35_1_13937_1", "13936 other_35_1_13936_1"]
         }
       },
       {
