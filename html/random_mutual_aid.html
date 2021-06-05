@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
+  <title>Random mutual aid</title>
+</head>
+
+<body>
+  <script>
+
+  </script>
+
+
+  <script>
+    const json =
+      (() => {
+        const data = json.item
+        // 过滤重复的 user id
+        const uniqData = _.uniqBy(data, v => v.fromUser.id)
+        // 随机选取出 10 个助力 url - 考虑到助力已满情况和无链接的情况
+        const sampleData = _.sampleSize(uniqData, 10)
+        const urls = sampleData.map(v => v.urls[0])
+        document.write(JSON.stringify(urls))
+      })()
+  </script>
+
+</body>
+
+</html>
