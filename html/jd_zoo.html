@@ -10,12 +10,13 @@
 
 <body>
   <script>
-    const from = ``
-    const to = ``
-    const callback = ``
-    const data = ``
-
     const $ = {}
+    $.from = ``
+    $.to = ``
+    $.callback = ``
+    $.data = ``
+
+
     $.secretpInfo = {}
     $.innerPkInviteList = []
     $.signSingle = {}
@@ -25,7 +26,7 @@
     $.shopSign = ``
 
 
-    /** 下方方魔法变量来控制函数执行 **/
+    /** 下方放魔法变量来控制函数执行 **/
 
 
     //   form 来源   to 目标   callback 回调
@@ -46,12 +47,13 @@
 
     // 获取活动接口验证
     function zoo_signSingle() {
-      if (callback) {
+      if ($.callback) {
+        $.callback = ''
         takePostRequest('zoo_signSingle')
         return
       }
 
-      dealReturn('zoo_signSingle', data)
+      dealReturn('zoo_signSingle', $.data)
       if (JSON.stringify($.signSingle) === `{}` || $.signSingle.bizCode !== 0) {
         $.success = 0
         $.error = 'zoo_signSingle' + $.signSingle.bizMsg
@@ -62,17 +64,19 @@
         $.success = 1
         $.message = '获取活动信息'
         document.write(JSON.stringify($))
-        console.log(`$.message`);
+        console.log($.message);
       }
     }
 
     // 获取活动大厅信息
     function zoo_getHomeData() {
-      if (callback) {
+      if ($.callback) {
+        $.callback = ''
         takePostRequest('zoo_getHomeData');
         return
       }
 
+      dealReturn('zoo_getHomeData', $.data)
       $.userInfo = $.homeData.result.homeMainInfo
       $.success = 1
       $.message = `当前分红：${$.userInfo.raiseInfo.redNum}份，当前等级:${$.userInfo.raiseInfo.scoreLevel}\n当前金币${$.userInfo.raiseInfo.remainScore}，下一关需要${$.userInfo.raiseInfo.nextLevelScore - $.userInfo.raiseInfo.curLevelStartScore}`
@@ -80,17 +84,33 @@
       console.log($.message);
     }
 
-    // 签到
+    // 获取签到信息
     function zoo_getSignHomeData() {
-      if (callback) {
+      if ($.callback) {
+        $.callback = ''
         takePostRequest('zoo_getSignHomeData');
         return
       }
 
+      dealReturn('zoo_getSignHomeData', $.data)
+      $.success = 1
+      $.message = '获取签到信息'
+      document.write(JSON.stringify($))
+    }
+
+    // 签到
+    function zoo_sign() {
       if ($.signHomeData.todayStatus === 0) {
-        console.log(`去签到`);
-        takePostRequest('zoo_sign');
+        if ($.callback) {
+          $.callback = ''
+          takePostRequest('zoo_sign');
+          return
+        }
+
+        dealReturn('zoo_sign', $.data)
+        document.write(JSON.stringify($))
       } else {
+        $.callback = ''
         $.success = 1
         $.message = `已签到`
         document.write(JSON.stringify($))
@@ -105,13 +125,128 @@
     //收金币
     takePostRequest('zoo_collectProduceScore');
 
+    // 获取任务列表
+    function zoo_getTaskDetail() {
+      if ($.callback) {
+        $.callback = ''
+        takePostRequest('zoo_getTaskDetail');
+        return
+      }
+
+      dealReturn('zoo_getTaskDetail', $.data)
+      $.success = 1
+      document.write(JSON.stringify($))
+    }
+
+
+    // // 解耦判断器
+    // $.i = $.i || i
+    // if ($.i == $.taskList.length) {
+    //   $.callback = ''
+    //   document.write(JSON.stringify($))
+    //   break
+    // }
+    // if ($.i > i) continue;
+
     // 做任务
-    takePostRequest('zoo_getTaskDetail');
+    function doTask() {
+      if (!($.taskList.length && $.secretp)) {
+        $.error = '错误：活动火爆账号受限'
+        document.write(JSON.stringify($))
+        return
+      }
+
+      // 利用队列取代循环
+      $.doTaskFirst = $.doTaskFirst || 1
+      if ($.doTaskFirst == 1 || $.hasTaskFinish) {
+        $.doTaskFirst++
+        $.oneTask = $.taskList.shift()
+      }
+
+      if ([1, 3, 5, 7, 9, 26].includes($.oneTask.taskType) && $.oneTask.status === 1) {
+        $.activityInfoList = $.oneTask.shoppingActivityVos || $.oneTask.brandMemberVos || $.oneTask.followShopVo || $.oneTask.browseShopVo;
+
+        // 利用队列取代循环
+        $.doActivityFirst = $.doActivityFirst || true
+        if ($.doActivityFirst || $.hasActivityFinish) {
+          $.doActivityFirst = false
+          $.oneActivityInfo = $.activityInfoList.shift()
+        }
+        if ($.oneActivityInfo?.status !== 1 || !$.oneActivityInfo?.taskToken) {
+          
+          $.hasActivityFinish = true
+          $.hasTaskFinish = true
+          return
+        }
+
+        if ($.callback == 'Func.request' && ($.doActivityFirst == 2 || $.hasActivityFinish)) {
+          $.callbackInfo = {};
+          takePostRequest('zoo_collectScore');
+          $.success = 1
+          $.message = `做任务：${$.oneActivityInfo.title || $.oneActivityInfo.taskName || $.oneActivityInfo.shopName};等待完成`
+          console.log($.message);
+          return
+        }
+
+        dealReturn('zoo_collectScore', $.data)
+        if ($.callbackInfo.code === 0 && $.callbackInfo.data?.result?.taskToken) {
+          // 等待 8s
+          let sendInfo = encodeURIComponent(`{"dataSource":"newshortAward","method":"getTaskAward","reqParams":"{\\"taskToken\\":\\"${$.callbackInfo.data.result.taskToken}\\"}","sdkVersion":"1.0.0","clientLanguage":"zh"}`)
+
+          callbackResult(sendInfo)
+          // 不用返回处理数据 直接在指令里输出消息 data.toast.subTitle
+          console.log('任务完成')
+
+        } else if ($.oneTask.taskType === 5 || $.oneTask.taskType === 3 || $.oneTask.taskType === 26) {
+          $.success = 1
+          $.message = `任务完成`
+          console.log($.message);
+        } else {
+          $.error = `doTask 任务失败`
+          console.log($.error);
+        }
+
+        // Activity Task 完成
+        $.hasActivityFinish = true
+
+      } else if ($.oneTask.taskType === 2 && $.oneTask.status === 1) {
+        $.taskId = $.oneTask.taskId;
+        $.feedDetailInfo = {};
+
+        if ($.callback) {
+          
+        }
+        takePostRequest('zoo_getFeedDetail');
+        console.log(`做任务：${$.oneTask.taskName};等待完成 (实际不会添加到购物车)`);
+        let productList = $.feedDetailInfo.productInfoVos;
+        let needTime = Number($.feedDetailInfo.maxTimes) - Number($.feedDetailInfo.times);
+        for (let j = 0; j < productList.length && needTime > 0; j++) {
+          if (productList[j].status !== 1) {
+            continue;
+          }
+          $.taskToken = productList[j].taskToken;
+          console.log(`加购：${productList[j].skuName}`);
+          takePostRequest('add_car');
+          needTime--;
+        }
+      }
+
+
+      document.write(JSON.stringify($))
+    }
+
+    function qryViewkitCallbackResult() {
+
+    }
+
     for (let i = 0; i < $.taskList.length && $.secretp && !$.hotFlag; i++) {
       $.oneTask = $.taskList[i];
+
+
       if ([1, 3, 5, 7, 9, 26].includes($.oneTask.taskType) && $.oneTask.status === 1) {
         $.activityInfoList = $.oneTask.shoppingActivityVos || $.oneTask.brandMemberVos || $.oneTask.followShopVo || $.oneTask.browseShopVo;
         for (let j = 0; j < $.activityInfoList.length; j++) {
+
           $.oneActivityInfo = $.activityInfoList[j];
           if ($.oneActivityInfo.status !== 1 || !$.oneActivityInfo.taskToken) {
             continue;
@@ -159,34 +294,25 @@
 
     //领取奖励
     function callbackResult(info) {
-      return new Promise((resolve) => {
-        let url = {
-          url: `https://api.m.jd.com/?functionId=qryViewkitCallbackResult&client=wh5&clientVersion=1.0.0&body=${info}&_timestamp=` + Date.now(),
-          headers: {
-            'Origin': `https://bunearth.m.jd.com`,
-            'Cookie': $.cookie,
-            'Connection': `keep-alive`,
-            'Accept': `*/*`,
-            'Host': `api.m.jd.com`,
-            'User-Agent': $.isNode() ? (process.env.JD_USER_AGENT ? process.env.JD_USER_AGENT : (require('./USER_AGENTS').USER_AGENT)) : ($.getdata('JDUA') ? $.getdata('JDUA') : "jdapp;iPhone;9.4.4;14.3;network/4g;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1"),
-            'Accept-Encoding': `gzip, deflate, br`,
-            'Accept-Language': `zh-cn`,
-            'Content-Type': 'application/x-www-form-urlencoded',
-            'Referer': 'https://bunearth.m.jd.com'
-          }
-        }
 
-        $.get(url, async (err, resp, data) => {
-          try {
-            data = JSON.parse(data);
-            console.log(data.toast.subTitle)
-          } catch (e) {
-            $.logErr(e, resp);
-          } finally {
-            resolve()
-          }
-        })
-      })
+      let url = `https://api.m.jd.com/?functionId=qryViewkitCallbackResult&client=wh5&clientVersion=1.0.0&body=${info}&_timestamp=` + Date.now()
+      let method = 'GET'
+      let headers = {
+        'Origin': `https://bunearth.m.jd.com`,
+        'Cookie': $.cookie,
+        'Connection': `keep-alive`,
+        'Accept': `*/*`,
+        'Host': `api.m.jd.com`,
+        'User-Agent': "jdapp;iPhone;9.4.4;14.3;network/4g;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
+        'Accept-Encoding': `gzip, deflate, br`,
+        'Accept-Language': `zh-cn`,
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Referer': 'https://bunearth.m.jd.com'
+      }
+
+
+      $.request = { url, method, headers }
+      // document.write(JSON.stringify($))
     }
 
     function takePostRequest(type) {
@@ -309,7 +435,8 @@
           console.log(`错误${type}`);
       }
 
-      document.write(JSON.stringify(myRequest))
+      $.request = myRequest
+      document.write(JSON.stringify($))
     }
 
     function dealReturn(type, data) {
@@ -432,11 +559,13 @@
           break;
         case 'zoo_sign':
           if (data.code === 0 && data.data.bizCode === 0) {
-            console.log(`签到获得成功`);
-            if (data.data.result.redPacketValue) console.log(`签到获得：${data.data.result.redPacketValue} 红包`);
+            $.success = 1
+            $.message = `去签到：签到成功`
+            console.log($.message);
+            if (data.data.result.redPacketValue) $.message = `签到获得：${data.data.result.redPacketValue} 红包`;
           } else {
-            console.log(`签到失败`);
-            console.log(data);
+            $.error = `zoo_sign 签到失败`
+            console.log($.error);
           }
           break;
         case 'wxTaskDetail':
@@ -560,6 +689,7 @@
       }
       return taskBody
     }
+
 
 
   </script>
