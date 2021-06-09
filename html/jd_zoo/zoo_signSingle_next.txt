@@ -1,0 +1,13 @@
+$.callback = ''
+dealReturn('zoo_signSingle', $.data)
+if (JSON.stringify($.signSingle) === `{}` || $.signSingle.bizCode !== 0) {
+  $.success = 0
+  $.error = 'zoo_signSingle' + $.signSingle.bizMsg
+  document.write(JSON.stringify($))
+  console.log($.signSingle.bizMsg);
+} else {
+  $.success = 1
+  $.message = '获取活动信息'
+  document.write(JSON.stringify($))
+  console.log($.message);
+}

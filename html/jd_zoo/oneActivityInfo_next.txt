@@ -1,0 +1,23 @@
+$.callback = ''
+dealReturn('zoo_collectScore', $.data)
+if ($.callbackInfo.code === 0 && $.callbackInfo.data?.result?.taskToken) {
+  // 等待 8s
+  let sendInfo = encodeURIComponent(`{"dataSource":"newshortAward","method":"getTaskAward","reqParams":"{\\"taskToken\\":\\"${$.callbackInfo.data.result.taskToken}\\"}","sdkVersion":"1.0.0","clientLanguage":"zh"}`)
+
+  callbackResult(sendInfo)
+  // 不用返回处理数据 直接在指令里输出消息 data.toast.subTitle
+  $.hasActivityFinish = true
+  console.log('任务完成')
+  return
+
+} else if ($.oneTask.taskType === 5 || $.oneTask.taskType === 3 || $.oneTask.taskType === 26) {
+  $.success = 1
+  $.message = `任务完成`
+  console.log($.message);
+} else {
+  $.error = `oneActivityInfos 任务失败`
+  console.log($.error);
+}
+
+// Activity Task Finish
+document.write(JSON.stringify($))

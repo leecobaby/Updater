@@ -13,9 +13,9 @@
     const $ = {}
     $.from = ``
     $.to = ``
-    $.call = ``
     $.callback = ``
     $.data = ``
+
 
     $.secretpInfo = {}
     $.innerPkInviteList = []
@@ -26,44 +26,40 @@
     $.shopSign = ``
 
 
-    /** 下方放 call 文本，来控制函数执行 **/
+    /** 下方放魔法变量来控制函数执行 **/
 
 
-    /** 下方放 next 文本，来控制逻辑执行 **/
+    //   form 来源   to 目标   callback 回调
+    //   当回调有值则执行回调，没有则去往目标
+
+    //   func.xxx -> logicHandler(from, to, callback) -> { request, data } -> func.http -> logicHandler(from, to, callback) -> func.xxx
+    //    http 让 callback = ''
 
 
-
-    //   form 来源   to 目标   callback 回调 call 调用
-    //   当回调有值则执行回调，没有则去往目标，没有目标则去往来源
-
-    //   func.xxx -> logicHandler($) -> func.http -> logicHandler($) -> func.xxx
-    //   回调完执行 next，视情况来清空 callback
-
-
-    // zoo_signSingle
-    // zoo_getHomeData
-    // zoo_getSignHomeData
-    // zoo_sign
-    // zoo_raise
-    // zoo_getTaskDetail
-    // doTask
-
-
-
+    // 升级处理程序
+    function handleRaise() {
+      let raiseInfo = $.homeData.result.homeMainInfo.raiseInfo;
+      if (Number(raiseInfo.totalScore) > Number(raiseInfo.nextLevelScore) && raiseInfo.buttonStatus === 1) {
+        console.log(`满足升级条件，去升级`);
+        takePostRequest('zoo_raise');
+      }
+    }
 
     // 获取活动接口验证
     function zoo_signSingle() {
-      $.callback = 'Func.request'
-      takePostRequest('zoo_signSingle')
-      return
+      if ($.callback) {
+        $.callback = ''
+        takePostRequest('zoo_signSingle')
+        return
+      }
 
-      // next
-      $.callback = ''
       dealReturn('zoo_signSingle', $.data)
       if (JSON.stringify($.signSingle) === `{}` || $.signSingle.bizCode !== 0) {
+        $.success = 0
         $.error = 'zoo_signSingle' + $.signSingle.bizMsg
         document.write(JSON.stringify($))
         console.log($.signSingle.bizMsg);
+        return;
       } else {
         $.success = 1
         $.message = '获取活动信息'
@@ -74,12 +70,12 @@
 
     // 获取活动大厅信息
     function zoo_getHomeData() {
-      $.callback = 'Func.request'
-      takePostRequest('zoo_getHomeData');
-      return
+      if ($.callback) {
+        $.callback = ''
+        takePostRequest('zoo_getHomeData');
+        return
+      }
 
-      // next
-      $.callback = ''
       dealReturn('zoo_getHomeData', $.data)
       $.userInfo = $.homeData.result.homeMainInfo
       $.success = 1
@@ -90,12 +86,12 @@
 
     // 获取签到信息
     function zoo_getSignHomeData() {
-      $.callback = 'Func.request'
-      takePostRequest('zoo_getSignHomeData');
-      return
+      if ($.callback) {
+        $.callback = ''
+        takePostRequest('zoo_getSignHomeData');
+        return
+      }
 
-      // next
-      $.callback = ''
       dealReturn('zoo_getSignHomeData', $.data)
       $.success = 1
       $.message = '获取签到信息'
@@ -105,11 +101,12 @@
     // 签到
     function zoo_sign() {
       if ($.signHomeData.todayStatus === 0) {
-        $.callback = 'Func.request'
-        takePostRequest('zoo_sign');
-        return
+        if ($.callback) {
+          $.callback = ''
+          takePostRequest('zoo_sign');
+          return
+        }
 
-        $.callback = ''
         dealReturn('zoo_sign', $.data)
         document.write(JSON.stringify($))
       } else {
@@ -121,199 +118,182 @@
       }
     }
 
-    // 升级
-    function zoo_raise() {
-      let raiseInfo = $.homeData.result.homeMainInfo.raiseInfo;
-      if (Number(raiseInfo.totalScore) > Number(raiseInfo.nextLevelScore) && raiseInfo.buttonStatus === 1) {
-        $.callback = 'Func.request'
-        $.message = `满足升级条件，去升级`
-        takePostRequest('zoo_raise');
-        console.log($.message);
-        return
 
-        // next
-        $.callback = ''
-        dealReturn('zoo_raise', $.data)
-        document.write(JSON.stringify($))
-      } else {
-        $.success = 1
-        $.message = `为满足升级条件`
-        document.write(JSON.stringify($))
-      }
-    }
+    // 升级
+    handleRaise()
 
     //收金币
-    function zoo_collectProduceScore() {
-      $.callback = 'Func.request'
-      takePostRequest('zoo_collectProduceScore');
-      return
-
-      // next
-      $.callback = ''
-      dealReturn('zoo_collectProduceScore', $.data)
-      document.write(JSON.stringify($))
-    }
+    takePostRequest('zoo_collectProduceScore');
 
     // 获取任务列表
     function zoo_getTaskDetail() {
-      $.callback = 'Func.request'
-      takePostRequest('zoo_getTaskDetail');
-      return
+      if ($.callback) {
+        $.callback = ''
+        takePostRequest('zoo_getTaskDetail');
+        return
+      }
 
-      // next
-      $.callback = ''
       dealReturn('zoo_getTaskDetail', $.data)
+      $.success = 1
       document.write(JSON.stringify($))
     }
 
+
+    // // 解耦判断器
+    // $.i = $.i || i
+    // if ($.i == $.taskList.length) {
+    //   $.callback = ''
+    //   document.write(JSON.stringify($))
+    //   break
+    // }
+    // if ($.i > i) continue;
+
     // 做任务
     function doTask() {
-      // 循环逻辑单独设置 to,call
-      $.to = 'Func.logicHandler'
-      $.call = ['doTask']
-
-      // 利用队列取代循环
-      $.oneTask = $.taskList.shift()
-      if (!$.oneTask) {
-        // 循环完成重新设置 to,call
-        $.to = '', $.call.pop()
+      if (!($.taskList.length && $.secretp)) {
+        $.error = '错误：活动火爆账号受限'
         document.write(JSON.stringify($))
         return
+      }
+
+      // 利用队列取代循环
+      $.doTaskFirst = $.doTaskFirst || 1
+      if ($.doTaskFirst == 1 || $.hasTaskFinish) {
+        $.doTaskFirst++
+        $.oneTask = $.taskList.shift()
       }
 
       if ([1, 3, 5, 7, 9, 26].includes($.oneTask.taskType) && $.oneTask.status === 1) {
         $.activityInfoList = $.oneTask.shoppingActivityVos || $.oneTask.brandMemberVos || $.oneTask.followShopVo || $.oneTask.browseShopVo;
 
-        oneActivityInfo()
+        // 利用队列取代循环
+        $.doActivityTime = $.doActivityTime || 1
+        if ($.doActivityTime == 1 || $.hasActivityFinish) {
+          $.oneActivityInfo = $.activityInfoList.shift()
+        }
+        if ($.oneActivityInfo?.status !== 1 || !$.oneActivityInfo?.taskToken) {
+          $.hasActivityFinish = true
+          return
+        }
+
+        if ($.callback == 'Func.request' && ($.doActivityTime == 1 || $.hasActivityFinish)) {
+          $.doActivityTime++
+          $.callbackInfo = {};
+          takePostRequest('zoo_collectScore');
+          $.success = 1
+          $.message = `做任务：${$.oneActivityInfo.title || $.oneActivityInfo.taskName || $.oneActivityInfo.shopName};等待完成`
+          console.log($.message);
+          return
+        }
+
+        dealReturn('zoo_collectScore', $.data)
+        if ($.callbackInfo.code === 0 && $.callbackInfo.data?.result?.taskToken) {
+          // 等待 8s
+          let sendInfo = encodeURIComponent(`{"dataSource":"newshortAward","method":"getTaskAward","reqParams":"{\\"taskToken\\":\\"${$.callbackInfo.data.result.taskToken}\\"}","sdkVersion":"1.0.0","clientLanguage":"zh"}`)
+
+          callbackResult(sendInfo)
+          // 不用返回处理数据 直接在指令里输出消息 data.toast.subTitle
+          $.hasActivityFinish = true
+          console.log('任务完成')
+          return
+
+        } else if ($.oneTask.taskType === 5 || $.oneTask.taskType === 3 || $.oneTask.taskType === 26) {
+          $.success = 1
+          $.message = `任务完成`
+          console.log($.message);
+        } else {
+          $.error = `doTask 任务失败`
+          console.log($.error);
+        }
+
+        // Activity Task 完成
+        $.hasActivityFinish = true
 
       } else if ($.oneTask.taskType === 2 && $.oneTask.status === 1) {
 
-        zoo_getFeedDetail()
+        $.doAddCarTime = $.doAddCarTime || 1
+        if ($.callback == 'Func.request' && $.doAddCarTime == 1) {
+          $.taskId = $.oneTask.taskId;
+          $.feedDetailInfo = {};
+          takePostRequest('zoo_getFeedDetail');
+          $.success = 1
+          $.message = `做任务：${$.oneTask.taskName};等待完成 (实际不会添加到购物车)`
+          console.log($.message);
+        }
 
+        let productList = $.feedDetailInfo.productInfoVos;
+        let needTime = Number($.feedDetailInfo.maxTimes) - Number($.feedDetailInfo.times);
+        for (let j = 0; j < productList.length && needTime > 0; j++) {
+          if (productList[j].status !== 1) {
+            continue;
+          }
+          $.taskToken = productList[j].taskToken;
+          console.log(`加购：${productList[j].skuName}`);
+          takePostRequest('add_car');
+          needTime--;
+        }
       }
+
 
       document.write(JSON.stringify($))
     }
 
-    //  处理任务列表单类型任务
-    function oneActivityInfo() {
-      // 循环逻辑单独设置 to,call  嵌套调用里面用数组形式 push
-      $.to = 'Func.logicHandler'
-      $.call[$.call.length - 1] == 'oneActivityInfo' || $.call.push('oneActivityInfo')
+    function qryViewkitCallbackResult() {
 
-      // 利用队列取代循环
-      $.oneActivityInfo = $.activityInfoList.shift()
-      if (!$.oneActivityInfo) {
-        // 循环完成重新设置 call
-        $.call.pop()
-        document.write(JSON.stringify($))
-        return
-      }
-
-      // 做过的任务则跳过重新执行 oneActivityInfo()
-      if ($.oneActivityInfo?.status !== 1 || !$.oneActivityInfo?.taskToken) {
-        document.write(JSON.stringify($))
-        return
-      }
-
-      $.callbackInfo = {};
-      $.message = `做任务：${$.oneActivityInfo.title || $.oneActivityInfo.taskName || $.oneActivityInfo.shopName};等待完成`
-      $.callback = 'Func.request'
-      takePostRequest('zoo_collectScore');
-      console.log($.message);
-      return
-
-      // next 
-      $.callback = ''
-      dealReturn('zoo_collectScore', $.data)
-      if ($.callbackInfo.code === 0 && $.callbackInfo.data?.result?.taskToken) {
-        let sendInfo = encodeURIComponent(`{"dataSource":"newshortAward","method":"getTaskAward","reqParams":"{\\"taskToken\\":\\"${$.callbackInfo.data.result.taskToken}\\"}","sdkVersion":"1.0.0","clientLanguage":"zh"}`)
-
-        // 等待 8s
-        $.wait = 8
-        $.callback = 'Func.request'
-        callbackResult(sendInfo)
-        return
-
-        // next next
-        $.callback = ''
-        $.wait = 1
-        $.success = 1
-        $.message = `完成任务： ${$.data.toast?.subTitle}`
-        console.log($.message)
-        document.write(JSON.stringify($))
-
-      } else if ($.oneTask.taskType === 5 || $.oneTask.taskType === 3 || $.oneTask.taskType === 26) {
-        $.success = 1
-        $.message = `任务完成`
-        console.log($.message);
-      } else {
-        $.error = `oneActivityInfo 任务失败`
-        console.log($.error);
-      }
-
-      // Activity Task Finish
-      document.write(JSON.stringify($))
     }
 
-    // 处理购物车任务信息
-    function zoo_getFeedDetail() {
-      // 嵌套调用里面用数组形式 push
-      $.call[$.call.length - 1] == 'zoo_getFeedDetail' || $.call.push('zoo_getFeedDetail')
+    for (let i = 0; i < $.taskList.length && $.secretp && !$.hotFlag; i++) {
+      $.oneTask = $.taskList[i];
 
-      $.taskId = $.oneTask.taskId;
-      $.feedDetailInfo = {};
-      $.callback = 'Func.request'
-      $.message = `做任务：${$.oneTask.taskName};等待完成 (实际不会添加到购物车)`
-      takePostRequest('zoo_getFeedDetail');
-      document.write(JSON.stringify($))
-      return
 
-      // next
-      $.callback = ''
-      dealReturn('zoo_getFeedDetail', $.data)
-      $.productList = $.feedDetailInfo.productInfoVos;
-      $.needTime = Number($.feedDetailInfo.maxTimes) - Number($.feedDetailInfo.times);
-      $.call.pop()
-      add_car()
-    }
+      if ([1, 3, 5, 7, 9, 26].includes($.oneTask.taskType) && $.oneTask.status === 1) {
+        $.activityInfoList = $.oneTask.shoppingActivityVos || $.oneTask.brandMemberVos || $.oneTask.followShopVo || $.oneTask.browseShopVo;
+        for (let j = 0; j < $.activityInfoList.length; j++) {
 
-    // 加购物车
-    function add_car() {
-      // 循环逻辑单独设置 to,call  嵌套调用里面用数组形式 push
-      $.to = 'Func.logicHandler'
-      $.call[$.call.length - 1] == 'add_car' || $.call.push('add_car')
+          $.oneActivityInfo = $.activityInfoList[j];
+          if ($.oneActivityInfo.status !== 1 || !$.oneActivityInfo.taskToken) {
+            continue;
+          }
+          $.callbackInfo = {};
+          console.log(`做任务：${$.oneActivityInfo.title || $.oneActivityInfo.taskName || $.oneActivityInfo.shopName};等待完成`);
+          takePostRequest('zoo_collectScore');
 
-      $.addCarInfo = $.productList.shift()
-      if ($.needTime <= 0) {
-        // 循环完成重新设置 to,call
-        $.to = '', $.call.pop()
-        document.write(JSON.stringify($))
-        return
+
+          if ($.callbackInfo.code === 0 && $.callbackInfo.data?.result?.taskToken) {
+            // 等待 8s
+            let sendInfo = encodeURIComponent(`{"dataSource":"newshortAward","method":"getTaskAward","reqParams":"{\\"taskToken\\":\\"${$.callbackInfo.data.result.taskToken}\\"}","sdkVersion":"1.0.0","clientLanguage":"zh"}`)
+            callbackResult(sendInfo)
+          } else if ($.oneTask.taskType === 5 || $.oneTask.taskType === 3 || $.oneTask.taskType === 26) {
+            console.log(`任务完成`);
+          } else {
+            console.log($.callbackInfo);
+            console.log(`任务失败`);
+          }
+        }
+      } else if ($.oneTask.taskType === 2 && $.oneTask.status === 1) {
+        console.log(`做任务：${$.oneTask.taskName};等待完成 (实际不会添加到购物车)`);
+        $.taskId = $.oneTask.taskId;
+        $.feedDetailInfo = {};
+        takePostRequest('zoo_getFeedDetail');
+        let productList = $.feedDetailInfo.productInfoVos;
+        let needTime = Number($.feedDetailInfo.maxTimes) - Number($.feedDetailInfo.times);
+        for (let j = 0; j < productList.length && needTime > 0; j++) {
+          if (productList[j].status !== 1) {
+            continue;
+          }
+          $.taskToken = productList[j].taskToken;
+          console.log(`加购：${productList[j].skuName}`);
+          takePostRequest('add_car');
+          needTime--;
+        }
       }
-
-      if ($.addCarInfo.status !== 1) {
-        document.write(JSON.stringify($))
-        return
-      }
-      $.taskToken = $.addCarInfo.taskToken;
-      $.needTime--;
-      $.message = `加购：${$.addCarInfo.skuName}`
-      $.callback = 'Func.request'
-      takePostRequest('add_car');
-      document.write(JSON.stringify($))
-      return
-
-      // next
-      $.callback = ''
-      dealReturn('add_car', $.data)
-      document.write(JSON.stringify($))
     }
 
 
+    takePostRequest('zoo_getHomeData');
+    handleRaise()
 
 
-    /** Base Tool **/
 
     //领取奖励
     function callbackResult(info) {
@@ -463,6 +443,12 @@
     }
 
     function dealReturn(type, data) {
+      try {
+        data = JSON.parse(data);
+      } catch (e) {
+        console.log(`返回异常：${data}`);
+        return;
+      }
       switch (type) {
         case 'zoo_signSingle':
           if (data.code === 0) $.signSingle = data.data
@@ -485,24 +471,18 @@
           break;
         case 'zoo_collectProduceScore':
           if (data.code === 0 && data.data && data.data.result) {
-            $.success = 1
-            $.message = `收取成功，获得：${data.data.result.produceScore}`
-            console.log($.message);
+            console.log(`收取成功，获得：${data.data.result.produceScore}`);
           } else {
-            $.error = 'zoo_collectProduceScore 收取失败'
-            console.log($.error);
+            console.log(JSON.stringify(data));
           }
           if (data.code === 0 && data.data && data.data.bizCode === -1002) {
             $.hotFlag = true;
-            $.error = `该账户脚本执行任务火爆，暂停执行任务，请手动做任务或者等待解决火爆问题`
-            console.log($.error)
+            console.log(`该账户脚本执行任务火爆，暂停执行任务，请手动做任务或者等待解决脚本火爆问题`)
           }
           break;
         case 'zoo_getTaskDetail':
           if (data.code === 0) {
-            $.success = 1
-            $.message = `互助码：${data.data.result.inviteId || '助力已满，获取助力码失败'}`
-            console.log($.message);
+            console.log(`互助码：${data.data.result.inviteId || '助力已满，获取助力码失败'}`);
             if (data.data.result.inviteId) {
               $.inviteList.push({
                 'ues': $.UserName,
@@ -518,10 +498,7 @@
           $.callbackInfo = data;
           break;
         case 'zoo_raise':
-          if (data.code === 0) {
-            $.success = 1
-            $.message = `升级成功`
-          } else { $.error = 'zoo_raise 升级失败' }
+          if (data.code === 0) console.log(`升级成功`);
           break;
         case 'help':
         case 'pkHelp':
@@ -661,16 +638,17 @@
           if (data.code === 0) {
             let acquiredScore = data.data.result.acquiredScore;
             if (Number(acquiredScore) > 0) {
-              $.message = `加购成功,获得金币:${acquiredScore}`
+              console.log(`加购成功,获得金币:${acquiredScore}`);
             } else {
-              $.message = `加购成功`
+              console.log(`加购成功`);
             }
           } else {
-            $.error = `加购失败`
+            console.log(JSON.stringify(data));
+            console.log(`加购失败`);
           }
           break
         default:
-          $.error = `未判断的异常${type}`
+          console.log(`未判断的异常${type}`);
       }
     }
 
@@ -688,11 +666,11 @@
         'Content-Type': `application/x-www-form-urlencoded`,
         'Host': `api.m.jd.com`,
         'Connection': `keep-alive`,
-        'User-Agent': "jdapp;iPhone;9.4.4;14.3;network/4g;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
+        'User-Agent': $.isNode() ? (process.env.JD_USER_AGENT ? process.env.JD_USER_AGENT : (require('./USER_AGENTS').USER_AGENT)) : ($.getdata('JDUA') ? $.getdata('JDUA') : "jdapp;iPhone;9.4.4;14.3;network/4g;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1"),
         'Referer': `https://wbbny.m.jd.com`,
         'Accept-Language': `zh-cn`
       };
-      return { url, method, headers, body };
+      return { url: url, method: method, headers: headers, body: body };
     }
 
     function getBody(type) {

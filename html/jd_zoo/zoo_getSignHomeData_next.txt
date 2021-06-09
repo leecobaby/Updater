@@ -1,0 +1,5 @@
+$.callback = ''
+dealReturn('zoo_getSignHomeData', $.data)
+$.success = 1
+$.message = '获取签到信息'
+document.write(JSON.stringify($))
