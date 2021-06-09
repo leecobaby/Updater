@@ -5,7 +5,7 @@
  * 专们在快捷指令里运行的京东登录授权获取cookie脚本，此方式得到的cookie有效期为90天(实际待测试)
  * @Author leecobaby https://github.com/leecobaby
  * @Last Modified by: leecobaby
- * @Last Modified time: 2021-01-23
+ * @Last Modified time: 2021-06-5
  * Modify from LXK9301 https://github.com/LXK9301
  */
 const $ = new Env('登录京东获取Cookie')
@@ -46,7 +46,7 @@ const Shortcuts = {}
     // $.done();
   })
 
-function loginEntrance() {
+function loginEntrance () {
   return new Promise((resolve) => {
     $.get(taskUrl(), async (err, resp, data) => {
       try {
@@ -68,7 +68,7 @@ function loginEntrance() {
   })
 }
 
-function generateQrcode() {
+function generateQrcode () {
   return new Promise((resolve) => {
     $.post(taskPostUrl(), (err, resp, data) => {
       try {
@@ -114,7 +114,7 @@ function generateQrcode() {
   })
 }
 
-function checkLogin() {
+function checkLogin () {
   return new Promise((resolve) => {
     const options = {
       url: `https://plogin.m.jd.com/cgi-bin/m/tmauthchecktoken?&token=${token}&ou_state=0&okl_token=${okl_token}`,
@@ -148,7 +148,7 @@ function checkLogin() {
   })
 }
 
-function getCookie() {
+function getCookie () {
   return new Promise(async (resolve) => {
     // Scriptable Timer calss
     $.timer = Timer.schedule(1000, true, async () => {
@@ -182,7 +182,7 @@ function getCookie() {
   })
 }
 
-function formatCookie(headers) {
+function formatCookie (headers) {
   new Promise((resolve) => {
     let str = headers['Set-Cookie']
     let reg_pt_key = new RegExp('pt_key=(.*?)(?:;)', 'gi')
@@ -210,7 +210,7 @@ function formatCookie(headers) {
   })
 }
 
-function formatSetCookies(headers, body) {
+function formatSetCookies (headers, body) {
   new Promise((resolve) => {
     s_token = body['s_token']
     let str = headers['Set-Cookie']
@@ -231,7 +231,7 @@ function formatSetCookies(headers, body) {
   })
 }
 
-function taskUrl() {
+function taskUrl () {
   return {
     url: `https://plogin.m.jd.com/cgi-bin/mm/new_login_entrance?lang=chs&appid=300&returnurl=https://wq.jd.com/passport/LoginRedirect?state=${Date.now()}&returnurl=https://home.m.jd.com/myJd/newhome.action?sceneval=2&ufc=&/myJd/home.action&source=wq_passport`,
     headers: {
@@ -248,7 +248,7 @@ function taskUrl() {
   }
 }
 
-function taskPostUrl() {
+function taskPostUrl () {
   return {
     url: `https://plogin.m.jd.com/cgi-bin/m/tmauthreflogurl?s_token=${s_token}&v=${Date.now()}&remember=true`,
     body: `lang=chs&appid=300&source=wq_passport&returnurl=https://wqlogin2.jd.com/passport/LoginRedirect?state=${Date.now()}&returnurl=//home.m.jd.com/myJd/newhome.action?sceneval=2&ufc=&/myJd/home.action`,
@@ -265,13 +265,13 @@ function taskPostUrl() {
   }
 }
 
-function Env(name, opts) {
+function Env (name, opts) {
   class Http {
     constructor(env) {
       this.env = env
     }
 
-    send(opts, method = 'GET') {
+    send (opts, method = 'GET') {
       opts = typeof opts === 'string' ? { url: opts } : opts
       let sender = this.get
       if (method === 'POST') {
@@ -285,11 +285,11 @@ function Env(name, opts) {
       })
     }
 
-    get(opts) {
+    get (opts) {
       return this.send.call(this.env, opts)
     }
 
-    post(opts) {
+    post (opts) {
       return this.send.call(this.env, opts, 'POST')
     }
   }
@@ -309,7 +309,7 @@ function Env(name, opts) {
       this.log('', `🔔${this.name}, 开始!`)
     }
 
-    isNode() {
+    isNode () {
       return (
         'undefined' !== typeof module &&
         !!module.exports &&
@@ -317,7 +317,7 @@ function Env(name, opts) {
       )
     }
 
-    isScritable() {
+    isScritable () {
       return (
         'undefined' !== typeof module &&
         !!module.exports &&
@@ -325,19 +325,19 @@ function Env(name, opts) {
       )
     }
 
-    isQuanX() {
+    isQuanX () {
       return 'undefined' !== typeof $task
     }
 
-    isSurge() {
+    isSurge () {
       return 'undefined' !== typeof $httpClient && 'undefined' === typeof $loon
     }
 
-    isLoon() {
+    isLoon () {
       return 'undefined' !== typeof $loon
     }
 
-    toObj(str, defaultValue = null) {
+    toObj (str, defaultValue = null) {
       try {
         return JSON.parse(str)
       } catch {
@@ -345,7 +345,7 @@ function Env(name, opts) {
       }
     }
 
-    toStr(obj, defaultValue = null) {
+    toStr (obj, defaultValue = null) {
       try {
         return JSON.stringify(obj)
       } catch {
@@ -353,18 +353,18 @@ function Env(name, opts) {
       }
     }
 
-    getjson(key, defaultValue) {
+    getjson (key, defaultValue) {
       let json = defaultValue
       const val = this.getdata(key)
       if (val) {
         try {
           json = JSON.parse(this.getdata(key))
-        } catch {}
+        } catch { }
       }
       return json
     }
 
-    setjson(val, key) {
+    setjson (val, key) {
       try {
         return this.setdata(JSON.stringify(val), key)
       } catch {
@@ -372,13 +372,13 @@ function Env(name, opts) {
       }
     }
 
-    getScript(url) {
+    getScript (url) {
       return new Promise((resolve) => {
         this.get({ url }, (err, resp, body) => resolve(body))
       })
     }
 
-    runScript(script, runOpts) {
+    runScript (script, runOpts) {
       return new Promise((resolve) => {
         let httpapi = this.getdata('@chavy_boxjs_userCfgs.httpapi')
         httpapi = httpapi ? httpapi.replace(/\n/g, '').trim() : httpapi
@@ -402,7 +402,7 @@ function Env(name, opts) {
       }).catch((e) => this.logErr(e))
     }
 
-    loaddata() {
+    loaddata () {
       if (this.isNode()) {
         this.fs = this.fs ? this.fs : require('fs')
         this.path = this.path ? this.path : require('path')
@@ -427,7 +427,7 @@ function Env(name, opts) {
       } else return {}
     }
 
-    writedata() {
+    writedata () {
       if (this.isNode()) {
         this.fs = this.fs ? this.fs : require('fs')
         this.path = this.path ? this.path : require('path')
@@ -450,7 +450,7 @@ function Env(name, opts) {
       }
     }
 
-    lodash_get(source, path, defaultValue = undefined) {
+    lodash_get (source, path, defaultValue = undefined) {
       const paths = path.replace(/\[(\d+)\]/g, '.$1').split('.')
       let result = source
       for (const p of paths) {
@@ -462,7 +462,7 @@ function Env(name, opts) {
       return result
     }
 
-    lodash_set(obj, path, value) {
+    lodash_set (obj, path, value) {
       if (Object(obj) !== obj) return obj
       if (!Array.isArray(path)) path = path.toString().match(/[^.[\]]+/g) || []
       path
@@ -477,7 +477,7 @@ function Env(name, opts) {
       return obj
     }
 
-    getdata(key) {
+    getdata (key) {
       let val = this.getval(key)
       // 如果以 @
       if (/^@/.test(key)) {
@@ -495,7 +495,7 @@ function Env(name, opts) {
       return val
     }
 
-    setdata(val, key) {
+    setdata (val, key) {
       let issuc = false
       if (/^@/.test(key)) {
         const [, objkey, paths] = /^@(.*?)\.(.*?)$/.exec(key)
@@ -520,7 +520,7 @@ function Env(name, opts) {
       return issuc
     }
 
-    getval(key) {
+    getval (key) {
       if (this.isSurge() || this.isLoon()) {
         return $persistentStore.read(key)
       } else if (this.isQuanX()) {
@@ -533,7 +533,7 @@ function Env(name, opts) {
       }
     }
 
-    setval(val, key) {
+    setval (val, key) {
       if (this.isSurge() || this.isLoon()) {
         return $persistentStore.write(val, key)
       } else if (this.isQuanX()) {
@@ -548,7 +548,7 @@ function Env(name, opts) {
       }
     }
 
-    initGotEnv(opts) {
+    initGotEnv (opts) {
       this.got = this.got ? this.got : require('got')
       this.cktough = this.cktough ? this.cktough : require('tough-cookie')
       this.ckjar = this.ckjar ? this.ckjar : new this.cktough.CookieJar()
@@ -561,7 +561,7 @@ function Env(name, opts) {
     }
 
     // scriptable Request https://docs.scriptable.app/request/
-    initRequestEnv(opts, method) {
+    initRequestEnv (opts, method) {
       this.$httpClient = new Request('')
       this.$httpClient.url = opts.url
       this.$httpClient.method = method
@@ -570,7 +570,7 @@ function Env(name, opts) {
       this.$httpClient.allowInsecureRequest = true
     }
 
-    get(opts, callback = () => {}) {
+    get (opts, callback = () => { }) {
       if (opts.headers) {
         delete opts.headers['Content-Type']
         delete opts.headers['Content-Length']
@@ -652,7 +652,7 @@ function Env(name, opts) {
       }
     }
 
-    post(opts, callback = () => {}) {
+    post (opts, callback = () => { }) {
       // 如果指定了请求体, 但没指定`Content-Type`, 则自动生成
       if (opts.body && opts.headers && !opts.headers['Content-Type']) {
         opts.headers['Content-Type'] = 'application/x-www-form-urlencoded'
@@ -725,7 +725,7 @@ function Env(name, opts) {
      * @param {number} 可选: 根据指定时间戳返回格式化日期
      *
      */
-    time(fmt, ts = null) {
+    time (fmt, ts = null) {
       const date = ts ? new Date(ts) : new Date()
       let o = {
         'M+': date.getMonth() + 1,
@@ -768,7 +768,7 @@ function Env(name, opts) {
      * @param {*} opts 通知参数
      *
      */
-    msg(title = name, subt = '', desc = '', opts) {
+    msg (title = name, subt = '', desc = '', opts) {
       const toEnvOpts = (rawopts) => {
         if (!rawopts) return rawopts
         if (typeof rawopts === 'string') {
@@ -810,14 +810,14 @@ function Env(name, opts) {
       }
     }
 
-    log(...logs) {
+    log (...logs) {
       if (logs.length > 0) {
         this.logs = [...this.logs, ...logs]
       }
       console.log(logs.join(this.logSeparator))
     }
 
-    logErr(err, msg) {
+    logErr (err, msg) {
       const isPrintSack = !this.isSurge() && !this.isQuanX() && !this.isLoon()
       if (!isPrintSack) {
         this.log('', `❗️${this.name}, 错误!`, err)
@@ -826,11 +826,11 @@ function Env(name, opts) {
       }
     }
 
-    wait(time) {
+    wait (time) {
       return new Promise((resolve) => setTimeout(resolve, time))
     }
 
-    done(val = {}) {
+    done (val = {}) {
       const endTime = new Date().getTime()
       const costTime = (endTime - this.startTime) / 1000
       this.log('', `🔔${this.name}, 结束! 🕛 ${costTime} 秒`)
