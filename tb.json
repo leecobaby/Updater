@@ -460,7 +460,7 @@
     ]
   },
   "618cat": {
-    "version": "数据库版本:6.5.2",
+    "version": "数据库版本:6.9.1",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.4uyyEOF",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4uyyEOF",
@@ -573,6 +573,15 @@
             "15098 expo_8_1000000054910699031_15098_0",
             "14373 live_24_312486226239_14373_0"
           ]
+        }
+      },
+      {
+        "stars": {
+          "title": "去往淘宝",
+          "type": "stars",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/z/hdwk/20210618/singlegame?wh_biz=tm&disableNav=YES&qd_from=zfbbanner&prismFrom=zfb&hd_from_id=100116&sceneId=1871&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": ["14112 other_0_266001_14112_0"]
         }
       },
       {

@@ -1,5 +1,5 @@
- $.callback = ''
-        $.success = 1
-        $.message = `完成任务： ${$.data.toast?.subTitle}`
-        console.log($.message)
-        document.write(JSON.stringify($))
+$.callback = ''
+$.success = 1
+$.message = `完成任务： ${$.data.toast?.subTitle}`
+console.log($.message)
+document.write(JSON.stringify($))
