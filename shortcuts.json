@@ -175,7 +175,7 @@
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/373f7237053146d0bbe475e8eb6cecda",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "部分账号出现活动限制，请重装淘宝app手动任务一两天，指令任务方式已更改~\n快速做任务功能先不要使用了~",
+    "notice": "部分账号出现活动限制，请重装淘宝app手动任务一两天，会恢复的~\n大量的逛兰蔻可能导致行为数据异常了，手动能有效清洗自己的行为数据~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=天猫618自动养猫&input=text&text=task",
     "image": "https://gitee.com/leecobaby/Updater/raw/master/image/tb_618cat.png",
