@@ -137,7 +137,7 @@
         document.write(JSON.stringify($))
       } else {
         $.success = 1
-        $.message = `为满足升级条件`
+        $.message = `未满足升级条件`
         document.write(JSON.stringify($))
       }
     }
@@ -501,7 +501,7 @@
         case 'zoo_getTaskDetail':
           if (data.code === 0) {
             $.success = 1
-            $.message = `互助码：${data.data.result.inviteId || '助力已满，获取助力码失败'}`
+            $.message = `好友互助码:${data.data.result.inviteId || '助力已满，获取助力码失败'}`
             console.log($.message);
             if (data.data.result.inviteId) {
               $.inviteList.push({

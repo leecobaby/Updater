@@ -74,7 +74,7 @@ function zoo_raise() {
   let raiseInfo = $.homeData.result.homeMainInfo.raiseInfo;
   if (Number(raiseInfo.totalScore) > Number(raiseInfo.nextLevelScore) && raiseInfo.buttonStatus === 1) {
     $.callback = 'Func.request'
-    $.message = `满足升级条件，去升级`
+    $.message = `未足升级条件，去升级`
     takePostRequest('zoo_raise');
     console.log($.message);
     return
@@ -449,7 +449,7 @@ function dealReturn(type, data) {
     case 'zoo_getTaskDetail':
       if (data.code === 0) {
         $.success = 1
-        $.message = `互助码：${data.data.result.inviteId || '助力已满，获取助力码失败'}`
+        $.message = `好友互助码：${data.data.result.inviteId || '助力已满，获取助力码失败'}`
         console.log($.message);
         if (data.data.result.inviteId) {
           $.inviteList.push({
