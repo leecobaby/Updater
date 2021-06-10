@@ -1,6 +1,47 @@
 
+const $ = {}
+// $.from = ``
+// $.to = ``
+// $.call = ``
+// $.callback = ``
+// $.data = ``
+
+// $.secretpInfo = {}
+// $.innerPkInviteList = []
+// $.signSingle = {}
+// $.homeData = {}
+// $.secretp = ``
+// $.taskList = []
+// $.shopSign = ``
+
+
+/** 下方放 call 文本，来控制函数执行 **/
+
+
+/** 下方放 next 文本，来控制逻辑执行 **/
+
+
+
+//   form 来源   to 目标   callback 回调 call 调用
+//   当回调有值则执行回调，没有则去往目标，没有目标则去往来源
+
+//   func.xxx -> logicHandler($) -> func.http -> logicHandler($) -> func.xxx
+//   回调完执行 next，视情况来清空 callback
+
+
+// zoo_signSingle
+// zoo_getHomeData
+// zoo_getSignHomeData
+// zoo_getTaskDetail
+// zoo_sign
+// zoo_raise
+// doTask
+
+
+
+
 // 获取活动接口验证
-function zoo_signSingle() {
+function zoo_signSingle () {
   $.callback = 'Func.request'
   takePostRequest('zoo_signSingle')
   return
@@ -21,7 +62,7 @@ function zoo_signSingle() {
 }
 
 // 获取活动大厅信息
-function zoo_getHomeData() {
+function zoo_getHomeData () {
   $.callback = 'Func.request'
   takePostRequest('zoo_getHomeData');
   return
@@ -37,7 +78,7 @@ function zoo_getHomeData() {
 }
 
 // 获取签到信息
-function zoo_getSignHomeData() {
+function zoo_getSignHomeData () {
   $.callback = 'Func.request'
   takePostRequest('zoo_getSignHomeData');
   return
@@ -51,7 +92,7 @@ function zoo_getSignHomeData() {
 }
 
 // 签到
-function zoo_sign() {
+function zoo_sign () {
   if ($.signHomeData.todayStatus === 0) {
     $.callback = 'Func.request'
     takePostRequest('zoo_sign');
@@ -70,11 +111,11 @@ function zoo_sign() {
 }
 
 // 升级
-function zoo_raise() {
+function zoo_raise () {
   let raiseInfo = $.homeData.result.homeMainInfo.raiseInfo;
   if (Number(raiseInfo.totalScore) > Number(raiseInfo.nextLevelScore) && raiseInfo.buttonStatus === 1) {
     $.callback = 'Func.request'
-    $.message = `未足升级条件，去升级`
+    $.message = `满足升级条件，去升级`
     takePostRequest('zoo_raise');
     console.log($.message);
     return
@@ -85,13 +126,13 @@ function zoo_raise() {
     document.write(JSON.stringify($))
   } else {
     $.success = 1
-    $.message = `为满足升级条件`
+    $.message = `未满足升级条件`
     document.write(JSON.stringify($))
   }
 }
 
 //收金币
-function zoo_collectProduceScore() {
+function zoo_collectProduceScore () {
   $.callback = 'Func.request'
   takePostRequest('zoo_collectProduceScore');
   return
@@ -103,7 +144,7 @@ function zoo_collectProduceScore() {
 }
 
 // 获取任务列表
-function zoo_getTaskDetail() {
+function zoo_getTaskDetail () {
   $.callback = 'Func.request'
   takePostRequest('zoo_getTaskDetail');
   return
@@ -115,7 +156,7 @@ function zoo_getTaskDetail() {
 }
 
 // 做任务
-function doTask() {
+function doTask () {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
   $.call = ['doTask']
@@ -144,7 +185,7 @@ function doTask() {
 }
 
 //  处理任务列表单类型任务
-function oneActivityInfo() {
+function oneActivityInfo () {
   // 循环逻辑单独设置 to,call  嵌套调用里面用数组形式 push
   $.to = 'Func.logicHandler'
   $.call[$.call.length - 1] == 'oneActivityInfo' || $.call.push('oneActivityInfo')
@@ -205,7 +246,7 @@ function oneActivityInfo() {
 }
 
 // 处理购物车任务信息
-function zoo_getFeedDetail() {
+function zoo_getFeedDetail () {
   // 嵌套调用里面用数组形式 push
   $.call[$.call.length - 1] == 'zoo_getFeedDetail' || $.call.push('zoo_getFeedDetail')
 
@@ -227,7 +268,7 @@ function zoo_getFeedDetail() {
 }
 
 // 加购物车
-function add_car() {
+function add_car () {
   // 循环逻辑单独设置 to,call  嵌套调用里面用数组形式 push
   $.to = 'Func.logicHandler'
   $.call[$.call.length - 1] == 'add_car' || $.call.push('add_car')
@@ -264,7 +305,7 @@ function add_car() {
 /** Base Tool **/
 
 //领取奖励
-function callbackResult(info) {
+function callbackResult (info) {
 
   let url = `https://api.m.jd.com/?functionId=qryViewkitCallbackResult&client=wh5&clientVersion=1.0.0&body=${info}&_timestamp=` + Date.now()
   let method = 'GET'
@@ -286,7 +327,7 @@ function callbackResult(info) {
   // document.write(JSON.stringify($))
 }
 
-function takePostRequest(type) {
+function takePostRequest (type) {
   let body = ``;
   let myRequest = ``;
   switch (type) {
@@ -410,7 +451,7 @@ function takePostRequest(type) {
   document.write(JSON.stringify($))
 }
 
-function dealReturn(type, data) {
+function dealReturn (type, data) {
   switch (type) {
     case 'zoo_signSingle':
       if (data.code === 0) $.signSingle = data.data
@@ -449,7 +490,7 @@ function dealReturn(type, data) {
     case 'zoo_getTaskDetail':
       if (data.code === 0) {
         $.success = 1
-        $.message = `好友互助码：${data.data.result.inviteId || '助力已满，获取助力码失败'}`
+        $.message = `好友互助码:${data.data.result.inviteId || '助力已满，获取助力码失败'}`
         console.log($.message);
         // if (data.data.result.inviteId) {
         //   $.inviteList.push({
@@ -622,7 +663,7 @@ function dealReturn(type, data) {
   }
 }
 
-function getPostRequest(type, body) {
+function getPostRequest (type, body) {
   let url = `https://api.m.jd.com/client.action?functionId=${type}`;
   if (type === 'listTask' || type === 'acceptTask') {
     url = `https://ms.jr.jd.com/gw/generic/hy/h5/m/${type}`;
@@ -643,7 +684,7 @@ function getPostRequest(type, body) {
   return { url, method, headers, body };
 }
 
-function getBody(type) {
+function getBody (type) {
   let rnd = Math.floor(1e6 + 9e6 * Math.random()).toString()
   let ss = JSON.stringify({ "extraData": { "log": "-1", "sceneid": "QD216hPageh5" }, "secretp": $.secretp, "random": rnd.toString() });
   let taskBody = '';
@@ -662,4 +703,3 @@ function getBody(type) {
   }
   return taskBody
 }
-
