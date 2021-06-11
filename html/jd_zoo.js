@@ -16,7 +16,6 @@
 
 // 为了让加密的 getBody() 跑通
 let secretp = $.secretp
-$.CryptoJS = CryptoJS
 
 
 /** 下方放 call 文本，来控制函数执行 **/
@@ -182,10 +181,9 @@ function doTask () {
 
     zoo_getFeedDetail()
 
+  } else {
+    document.write(JSON.stringify($))
   }
-
-  $.CryptoJS = null
-  document.write(JSON.stringify($))
 }
 
 //  处理任务列表单类型任务
@@ -333,6 +331,7 @@ function callbackResult (info) {
 }
 
 function takePostRequest (type) {
+  $.CryptoJS = CryptoJS
   let body = ``;
   let myRequest = ``;
   switch (type) {
