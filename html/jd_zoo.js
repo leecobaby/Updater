@@ -238,13 +238,12 @@ function oneActivityInfo () {
     $.success = 1
     $.message = `任务完成`
     console.log($.message);
+    document.write(JSON.stringify($))
   } else {
     $.error = `oneActivityInfo 任务失败`
     console.log($.error);
+    document.write(JSON.stringify($))
   }
-
-  // Activity Task Finish
-  document.write(JSON.stringify($))
 }
 
 // 处理购物车任务信息
@@ -308,7 +307,7 @@ function add_car () {
 
 //领取奖励
 function callbackResult (info) {
-
+  $.CryptoJS = CryptoJS
   let url = `https://api.m.jd.com/?functionId=qryViewkitCallbackResult&client=wh5&clientVersion=1.0.0&body=${info}&_timestamp=` + Date.now()
   let method = 'GET'
   let headers = {
