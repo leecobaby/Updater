@@ -184,14 +184,15 @@ function doTask () {
 
   }
 
+  $.CryptoJS = null
   document.write(JSON.stringify($))
 }
 
 //  处理任务列表单类型任务
 function oneActivityInfo () {
   // 循环逻辑单独设置 to,call  嵌套调用里面用数组形式 push
-  $.to = 'Func.logicHandler'
-  $.call[$.call.length - 1] == 'oneActivityInfo' || $.call.push('oneActivityInfo')
+  $.to = 'Func.logicHandler';
+  ($.call[$.call.length - 1] == 'oneActivityInfo') || $.call.push('oneActivityInfo')
 
   // 利用队列取代循环
   $.oneActivityInfo = $.activityInfoList.shift()
@@ -209,7 +210,7 @@ function oneActivityInfo () {
   }
 
   $.callbackInfo = {};
-  $.message = `做任务：${$.oneActivityInfo.title || $.oneActivityInfo.taskName || $.oneActivityInfo.shopName};等待完成`
+  $.message = `做任务：${$.oneActivityInfo.title || $.oneActivityInfo.taskName || $.oneActivityInfo.shopName} 等待完成...`
   $.callback = 'Func.request'
   takePostRequest('zoo_collectScore');
   console.log($.message);
@@ -251,7 +252,7 @@ function oneActivityInfo () {
 // 处理购物车任务信息
 function zoo_getFeedDetail () {
   // 嵌套调用里面用数组形式 push
-  $.call[$.call.length - 1] == 'zoo_getFeedDetail' || $.call.push('zoo_getFeedDetail')
+  ; ($.call[$.call.length - 1] == 'zoo_getFeedDetail') || $.call.push('zoo_getFeedDetail')
 
   $.taskId = $.oneTask.taskId;
   $.feedDetailInfo = {};
@@ -707,6 +708,7 @@ function getPostBody (type) {
   } else {
     taskBody = `functionId=${type}&body=${JSON.stringify({ "taskId": $.oneTask.taskId, "actionType": 1, "taskToken": $.oneActivityInfo.taskToken, "ss": ss })}&client=wh5&clientVersion=1.0.0`
   }
+  // console.log(taskBody);
   return taskBody
 }
 
