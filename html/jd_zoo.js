@@ -327,7 +327,8 @@ function callbackResult (info) {
 
 
   $.request = { url, method, headers }
-  // document.write(JSON.stringify($))
+  $.CryptoJS = null
+  document.write(JSON.stringify($))
 }
 
 function takePostRequest (type) {
@@ -348,6 +349,7 @@ function takePostRequest (type) {
       break;
     case 'zoo_collectProduceScore':
       body = getPostBody(type);
+      // console.log(body);
       myRequest = getPostRequest(`zoo_collectProduceScore`, body);
       break;
     case 'zoo_getFeedDetail':
@@ -451,10 +453,12 @@ function takePostRequest (type) {
   }
 
   $.request = myRequest
+  $.CryptoJS = null
   document.write(JSON.stringify($))
 }
 
 function dealReturn (type, data) {
+  $.CryptoJS = null
   switch (type) {
     case 'zoo_signSingle':
       if (data.code === 0) $.signSingle = data.data
