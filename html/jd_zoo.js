@@ -492,7 +492,7 @@ function dealReturn (type, data) {
       }
       if (data.code === 0 && data.data && data.data.bizCode === -1002) {
         $.hotFlag = true;
-        $.error = `该账户脚本执行任务火爆，暂停执行任务，请手动做任务或者等待解决火爆问题`
+        $.error = `zoo_collectProduceScore 接口失效，等待修复`
         console.log($.error)
       }
       break;
