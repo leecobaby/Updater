@@ -460,7 +460,7 @@
     ]
   },
   "618cat": {
-    "version": "数据库版本:6.10.1",
+    "version": "数据库版本:6.12.1",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.4uyyEOF",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4uyyEOF",
@@ -494,7 +494,6 @@
           "urlScheme": "HTTPS://pages.tmall.com/wow/z/hdwk/20210618/singlegame?wh_biz=tm&disableNav=YES&qd_from=zfbbanner&prismFrom=zfb&sceneId=1788&hd_from_id=100116&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
-            "14366 other_16_0_14366_0",
             "15116 cloudsail_1_103565003020001_15116_0",
             "15116 cloudsail_1_103565003020002_15116_0",
             "15116 cloudsail_1_103565003020003_15116_0",

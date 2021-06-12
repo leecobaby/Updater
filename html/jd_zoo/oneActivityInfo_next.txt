@@ -27,7 +27,7 @@ if ($.callbackInfo.code === 0 && $.callbackInfo.data?.result?.taskToken) {
   console.log($.message);
   document.write(JSON.stringify($))
 } else {
-  $.error = `oneActivityInfo 任务失败`
+  $.error = `oneActivityInfo 任务失败，接口失效等待更新~`
   console.log($.error);
   document.write(JSON.stringify($))
 }
