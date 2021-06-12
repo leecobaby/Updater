@@ -224,15 +224,19 @@ function oneActivityInfo () {
     $.wait = 8
     $.callback = 'Func.request'
     callbackResult(sendInfo)
-    return
+    // return
+    // 这里的逻辑是在 next 里面的，而 next 不是一个函数，所以不能使用 return 来中断
 
+    // 对于 next next 这种嵌套需要单独隔离，只在运行到的时候调用，判断是否有页面内容为好的方式
     // next next
-    $.callback = ''
-    $.wait = 1
-    $.success = 1
-    $.message = `完成任务： ${$.data.toast?.subTitle}`
-    console.log($.message)
-    document.write(JSON.stringify($))
+    if (!document.body.innerText) {
+      $.callback = ''
+      $.wait = 1
+      $.success = 1
+      $.message = `完成任务： ${$.data.toast?.subTitle}`
+      console.log($.message)
+      document.write(JSON.stringify($))
+    }
 
   } else if ($.oneTask.taskType === 5 || $.oneTask.taskType === 3 || $.oneTask.taskType === 26) {
     $.success = 1
