@@ -1,4 +1,5 @@
 $.callback = ''
+$.wait = 1
 $.success = 1
 $.message = `完成任务： ${$.data.toast?.subTitle}`
 console.log($.message)
