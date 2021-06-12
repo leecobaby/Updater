@@ -253,14 +253,14 @@ function oneActivityInfo () {
 // 处理购物车任务信息
 function zoo_getFeedDetail () {
   // 嵌套调用里面用数组形式 push
-  ; ($.call[$.call.length - 1] == 'zoo_getFeedDetail') || $.call.push('zoo_getFeedDetail')
+  $.to = 'Func.logicHandler';
+  ($.call[$.call.length - 1] == 'zoo_getFeedDetail') || $.call.push('zoo_getFeedDetail')
 
   $.taskId = $.oneTask.taskId;
   $.feedDetailInfo = {};
   $.callback = 'Func.request'
   $.message = `做任务：${$.oneTask.taskName};等待完成 (实际不会添加到购物车)`
   takePostRequest('zoo_getFeedDetail');
-  document.write(JSON.stringify($))
   return
 
   // next
@@ -281,7 +281,7 @@ function add_car () {
   $.addCarInfo = $.productList.shift()
   if ($.needTime <= 0) {
     // 循环完成重新设置 to,call
-    $.to = '', $.call.pop()
+    $.call.pop()
     document.write(JSON.stringify($))
     return
   }
@@ -295,7 +295,6 @@ function add_car () {
   $.message = `加购：${$.addCarInfo.skuName}`
   $.callback = 'Func.request'
   takePostRequest('add_car');
-  document.write(JSON.stringify($))
   return
 
   // next
