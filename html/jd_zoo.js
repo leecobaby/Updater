@@ -244,7 +244,7 @@ function oneActivityInfo () {
     console.log($.message);
     document.write(JSON.stringify($))
   } else {
-    $.error = `oneActivityInfo 任务失败`
+    $.error = `oneActivityInfo 任务失败，此接口失效等待修复`
     console.log($.error);
     document.write(JSON.stringify($))
   }
