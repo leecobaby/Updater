@@ -1,3 +1,12 @@
+/**
+ * name: jd_zoo
+ * author: @leeco
+ * merge: @lxk0301 @yangtingxiao
+ * apply: shortcuts
+ * activity: https://wbbny.m.jd.com/babelDiy/Zeus/2s7hhSTbhMgxpGoa9JDnbDzJTaBB/index.html
+ * tips: Only for learning and communication, strictly prohibited for commercial use, please delete within 24 hours
+ */
+
 // const $ = {}
 // $.from = ``
 // $.to = ``
