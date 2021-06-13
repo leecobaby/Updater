@@ -322,12 +322,76 @@ function getMapTaskDetail () {
 
 // 做图鉴任务
 function doMapTask () {
-  $.call = ['doMapTask']
+  $.call = []
 
-  //分享
-  $.call[$.call.length - 1] == 'zoo_getWelfareScore' && zoo_getWelfareScore()
+  // 分享
+  zoo_getWelfareScore()
+
+  // 做店铺任务  -  因为保证简单逻辑 doMapTask 只会执行一次，需要在上一个任务完成后衔接上去
+
+  console.log(`去做店铺任务`);
+  $.shopInfoList = [];
+  await takePostRequest('qryCompositeMaterials');
+  for (let i = 0; i < $.shopInfoList.length; i++) {
+    $.shopSign = $.shopInfoList[i].extension.shopId;
+    console.log(`执行第${i + 1}个店铺任务：${$.shopInfoList[i].name} ID:${$.shopSign}`);
+    $.shopResult = {};
+    await takePostRequest('zoo_shopLotteryInfo');
+    await $.wait(1000);
+    if (JSON.stringify($.shopResult) === `{}`) continue;
+    $.shopTask = $.shopResult.taskVos;
+    for (let i = 0; i < $.shopTask.length; i++) {
+      $.oneTask = $.shopTask[i];
+      //console.log($.oneTask);
+      if ($.oneTask.taskType === 21 || $.oneTask.taskType === 14 || $.oneTask.status !== 1) { continue; } //不做入会//不做邀请
+      $.activityInfoList = $.oneTask.shoppingActivityVos || $.oneTask.simpleRecordInfoVo;
+      if ($.oneTask.taskType === 12) {//签到
+        if ($.shopResult.dayFirst === 0) {
+          $.oneActivityInfo = $.activityInfoList;
+          console.log(`店铺签到`);
+          await takePostRequest('zoo_bdCollectScore');
+        }
+        continue;
+      }
+      for (let j = 0; j < $.activityInfoList.length; j++) {
+        $.oneActivityInfo = $.activityInfoList[j];
+        if ($.oneActivityInfo.status !== 1 || !$.oneActivityInfo.taskToken) {
+          continue;
+        }
+        $.callbackInfo = {};
+        console.log(`做任务：${$.oneActivityInfo.subtitle || $.oneActivityInfo.title || $.oneActivityInfo.taskName || $.oneActivityInfo.shopName};等待完成`);
+        await takePostRequest('zoo_collectScore');
+        if ($.callbackInfo.code === 0 && $.callbackInfo.data && $.callbackInfo.data.result && $.callbackInfo.data.result.taskToken) {
+          await $.wait(8000);
+          let sendInfo = encodeURIComponent(`{"dataSource":"newshortAward","method":"getTaskAward","reqParams":"{\\"taskToken\\":\\"${$.callbackInfo.data.result.taskToken}\\"}","sdkVersion":"1.0.0","clientLanguage":"zh"}`)
+          await callbackResult(sendInfo)
+        } else {
+          await $.wait(2000);
+          console.log(`任务完成`);
+        }
+      }
+    }
+    await $.wait(1000);
+    let boxLotteryNum = $.shopResult.boxLotteryNum;
+    for (let j = 0; j < boxLotteryNum; j++) {
+      console.log(`开始第${j + 1}次拆盒`)
+      //抽奖
+      await takePostRequest('zoo_boxShopLottery');
+      await $.wait(3000);
+    }
+    // let wishLotteryNum = $.shopResult.wishLotteryNum;
+    // for (let j = 0; j < wishLotteryNum; j++) {
+    //   console.log(`开始第${j+1}次能量抽奖`)
+    //   //抽奖
+    //   await takePostRequest('zoo_wishShopLottery');
+    //   await $.wait(3000);
+    // }
+    await $.wait(3000);
+  }
+
 }
 
+// 图鉴店铺分享
 function zoo_getWelfareScore () {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler';
@@ -338,7 +402,9 @@ function zoo_getWelfareScore () {
   if (!$.oneMapInfo) {
     // 循环完成重新设置 call
     $.call.pop()
-    document.write(JSON.stringify($))
+    // document.write(JSON.stringify($))
+    // 衔接下一个任务
+    qryCompositeMaterials()
     return
   }
 
@@ -354,11 +420,161 @@ function zoo_getWelfareScore () {
     dealReturn('zoo_getWelfareScore', $.data)
     document.write(JSON.stringify($))
   }
-
 }
 
+// 图鉴店铺列表
+function qryCompositeMaterials () {
+  $.shopInfoList = [];
+  $.callback = 'Func.request'
+  $.message = `去做店铺任务`
+  takePostRequest('qryCompositeMaterials');
+  return
 
+  // next
+  $.callback = ''
+  $.call.push('zoo_shopLotteryInfo') // 衔接下一个任务
+  dealReturn('qryCompositeMaterials', $.data)
+  document.write(JSON.stringify($))
+}
 
+// 图鉴店铺信息
+function zoo_shopLotteryInfo () {
+  $.call[$.call.length - 1] == 'zoo_shopLotteryInfo' || $.call.push('zoo_shopLotteryInfo')
+
+  $.oneShopInfo = $.shopInfoList.shift()
+  if (!$.oneShopInfo) {
+    // 循环完成重新设置 call
+    $.call.pop()
+    document.write(JSON.stringify($))
+    // 衔接下一个任务
+    // qryCompositeMaterials()
+    return
+  }
+
+  $.shopSign = $.oneShopInfo.extension?.shopId;
+  $.message = `执行店铺任务：${$.oneShopInfo.name} ID:${$.shopSign}`
+  $.shopResult = {};
+  $.callback = 'Func.request'
+  takePostRequest('zoo_shopLotteryInfo');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('zoo_shopLotteryInfo', $.data)
+  if (JSON.stringify($.shopResult) !== `{}`) {
+    $.shopTask = $.shopResult.taskVos;
+    // 衔接下一环节
+    zoo_bdCollectScore()
+  }
+}
+
+// 图鉴店铺签到
+function zoo_bdCollectScore () {
+  $.call[$.call.length - 1] == 'zoo_bdCollectScore' || $.call.push('zoo_bdCollectScore')
+
+  $.oneTask = $.shopTask.shift()
+  if (!$.oneTask) {
+    // 循环完成重新设置 call
+    $.call.pop()
+    document.write(JSON.stringify($))
+    // 衔接下一个任务
+    // qryCompositeMaterials()
+    return
+  }
+
+  if ($.oneTask.taskType === 21 || $.oneTask.taskType === 14 || $.oneTask.status !== 1) { return } //不做入会//不做邀请
+  $.activityInfoList = $.oneTask.shoppingActivityVos || $.oneTask.simpleRecordInfoVo;
+  if ($.oneTask.taskType === 12) {
+    if ($.shopResult.dayFirst === 0) {
+      $.oneActivityInfo = $.activityInfoList;
+      $.callback = 'Func.request'
+      $.message = `店铺签到`
+      takePostRequest('zoo_bdCollectScore');
+      return
+
+      // next
+      $.callback = ''
+      dealReturn('zoo_bdCollectScore', $.data)
+      document.write(JSON.stringify($))
+    }
+    return
+  }
+  // 衔接下一环节
+  doMapShopTask()
+
+  for (let i = 0; i < $.shopTask.length; i++) {
+    $.oneTask = $.shopTask[i];
+    //console.log($.oneTask);
+    if ($.oneTask.taskType === 21 || $.oneTask.taskType === 14 || $.oneTask.status !== 1) { continue; } //不做入会//不做邀请
+    $.activityInfoList = $.oneTask.shoppingActivityVos || $.oneTask.simpleRecordInfoVo;
+    if ($.oneTask.taskType === 12) {//签到
+      if ($.shopResult.dayFirst === 0) {
+        $.oneActivityInfo = $.activityInfoList;
+        console.log(`店铺签到`);
+        await takePostRequest('zoo_bdCollectScore');
+      }
+      continue;
+    }
+    for (let j = 0; j < $.activityInfoList.length; j++) {
+      $.oneActivityInfo = $.activityInfoList[j];
+      if ($.oneActivityInfo.status !== 1 || !$.oneActivityInfo.taskToken) {
+        continue;
+      }
+      $.callbackInfo = {};
+      console.log(`做任务：${$.oneActivityInfo.subtitle || $.oneActivityInfo.title || $.oneActivityInfo.taskName || $.oneActivityInfo.shopName};等待完成`);
+      await takePostRequest('zoo_collectScore');
+      if ($.callbackInfo.code === 0 && $.callbackInfo.data && $.callbackInfo.data.result && $.callbackInfo.data.result.taskToken) {
+        await $.wait(8000);
+        let sendInfo = encodeURIComponent(`{"dataSource":"newshortAward","method":"getTaskAward","reqParams":"{\\"taskToken\\":\\"${$.callbackInfo.data.result.taskToken}\\"}","sdkVersion":"1.0.0","clientLanguage":"zh"}`)
+        await callbackResult(sendInfo)
+      } else {
+        await $.wait(2000);
+        console.log(`任务完成`);
+      }
+    }
+  }
+}
+
+function doMapShopTask () {
+  $.call[$.call.length - 1] == 'doMapShopTask' || $.call.push('doMapShopTask')
+
+  $.oneActivityInfo = $.activityInfoList.shift()
+  if (!$.oneActivityInfo) {
+    // 循环完成重新设置 call
+    $.call.pop()
+    document.write(JSON.stringify($))
+    return
+  }
+
+  if ($.oneActivityInfo.status !== 1 || !$.oneActivityInfo.taskToken) { continue }
+  $.callbackInfo = {}
+  $.message = `做任务：${$.oneActivityInfo.subtitle || $.oneActivityInfo.title || $.oneActivityInfo.taskName || $.oneActivityInfo.shopName} 等待完成`
+  $.callback = 'Func.request'
+  takePostRequest('zoo_collectScore')
+
+  // next
+  $.callback = ''
+  dealReturn('zoo_collectScore', $.data)
+  if ($.callbackInfo.code === 0 && $.callbackInfo.data?.result?.taskToken) {
+    // 等待 8s
+    $.wait = 8
+    let sendInfo = encodeURIComponent(`{"dataSource":"newshortAward","method":"getTaskAward","reqParams":"{\\"taskToken\\":\\"${$.callbackInfo.data.result.taskToken}\\"}","sdkVersion":"1.0.0","clientLanguage":"zh"}`)
+    $.callback = 'Func.request'
+    callbackResult(sendInfo)
+    // return
+
+    // next next
+    if (!document.body.innerText){
+      $.callback = ''
+      $.wait = 1
+      $.message = `完成任务： ${$.data.toast?.subTitle}`
+      document.write(JSON.stringify($))
+    }
+  } else {
+    $.message = `任务完成`
+  }
+  
+}
 
 /** Base Tool **/
 
@@ -658,14 +874,14 @@ function dealReturn (type, data) {
       break;
     case 'zoo_bdCollectScore':
       if (data.code === 0) {
-        console.log(`签到获得：${data.data.result.score}`);
+        $.message = `签到获得：${data.data.result.score}`
       }
       break;
     case 'qryCompositeMaterials':
       //console.log(data);
       if (data.code === '0') {
         $.shopInfoList = data.data.resultData.list;
-        console.log(`获取到${$.shopInfoList.length}个店铺`);
+        $.message = `获取到${$.shopInfoList.length}个店铺`
       }
       break
     case 'zoo_boxShopLottery':
@@ -696,7 +912,7 @@ function dealReturn (type, data) {
       break;
     case 'zoo_getWelfareScore':
       if (data.code === 0) {
-        console.log(`分享成功，获得：${data.data.result.score}`);
+        $.message = `分享成功，获得：${data.data.result.score}`
       }
       break;
     case 'jdjrTaskDetail':
