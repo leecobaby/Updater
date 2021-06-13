@@ -39,6 +39,8 @@ let secretp = $.secretp
 // zoo_sign
 // zoo_raise
 // doTask
+// getMapTaskDetail
+// doMapTask
 
 
 
@@ -456,7 +458,7 @@ function doMapShopTask () {
     return
   }
 
-  if ($.oneActivityInfo.status !== 1 || !$.oneActivityInfo.taskToken) { continue }
+  if ($.oneActivityInfo.status !== 1 || !$.oneActivityInfo.taskToken) { return }
   $.callbackInfo = {}
   $.message = `做任务：${$.oneActivityInfo.subtitle || $.oneActivityInfo.title || $.oneActivityInfo.taskName || $.oneActivityInfo.shopName} 等待完成`
   $.callback = 'Func.request'
