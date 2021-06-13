@@ -363,15 +363,15 @@
     }
   },
   "JD_zoo": {
-    "version": "0.2",
-    "update_log": "- 修复 活动接口失效问题\n 增加 做图鉴任务",
+    "version": "1.0",
+    "update_log": "- 修复 活动接口失效问题\n- 增加 做图鉴任务",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_zoo#版本日志"
     },
     "help": "",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/cf48680c8e05467683986f272ee9a462",
+    "update": "https://www.icloud.com/shortcuts/f645a4df56084b7fa52ab2d339c0ba31",
     "notice": "京东动物联盟内测，问题很多，除了图鉴任务其他基本已正常~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-动物联盟&input=text&text=task",
@@ -381,12 +381,12 @@
     "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_zoo/",
     "tip": {
       "hongbao": "",
-      "hot": "",
+      "hot": "🧧红包每天领...",
       "faq": "有疑问的请查看",
-      "set": "",
+      "set": "支持自动化运行",
       "team": "",
       "other": "",
-      "more": ""
+      "more": "🧧6.15抢现金红包"
     }
   },
   "More": {
