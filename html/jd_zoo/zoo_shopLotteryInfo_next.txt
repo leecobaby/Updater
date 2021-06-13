@@ -1,0 +1,7 @@
+$.callback = ''
+dealReturn('zoo_shopLotteryInfo', $.data)
+if (JSON.stringify($.shopResult) !== `{}`) {
+  $.shopTask = $.shopResult.taskVos;
+  // 衔接下一环节
+  zoo_bdCollectScore()
+}
