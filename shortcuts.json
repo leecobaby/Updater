@@ -372,7 +372,7 @@
     "help": "",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/f645a4df56084b7fa52ab2d339c0ba31",
-    "notice": "京东动物联盟内测，问题很多，除了图鉴任务其他基本已正常~",
+    "notice": "实现自动任务，初代版本问题很多，除了图鉴任务其他基本算正常~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-动物联盟&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/jd_nian.png",
