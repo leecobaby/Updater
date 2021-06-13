@@ -157,7 +157,7 @@ function zoo_getTaskDetail () {
   document.write(JSON.stringify($))
 }
 
-// 做任务
+// 做主务
 function doTask () {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
@@ -172,18 +172,20 @@ function doTask () {
     return
   }
 
-  if ([1, 3, 5, 7, 9, 26].includes($.oneTask.taskType) && $.oneTask.status === 1) {
-    $.activityInfoList = $.oneTask.shoppingActivityVos || $.oneTask.brandMemberVos || $.oneTask.followShopVo || $.oneTask.browseShopVo;
+  if ([1, 2, 3, 5, 7, 9, 26].includes($.oneTask.taskType) && $.oneTask.status === 1) {
+    $.activityInfoList = $.oneTask.productInfoVos || $.oneTask.shoppingActivityVos || $.oneTask.brandMemberVos || $.oneTask.followShopVo || $.oneTask.browseShopVo;
 
     oneActivityInfo()
 
-  } else if ($.oneTask.taskType === 2 && $.oneTask.status === 1) {
+  }
+
+  if ($.oneTask.taskType === 2 && $.oneTask.status === 1 && !$.oneTask.taskName.includes("逛逛")) {
 
     zoo_getFeedDetail()
 
-  } else {
-    document.write(JSON.stringify($))
   }
+
+  !document.body.innerText && document.write(JSON.stringify($))
 }
 
 //  处理任务列表单类型任务
@@ -238,7 +240,7 @@ function oneActivityInfo () {
       document.write(JSON.stringify($))
     }
 
-  } else if ($.oneTask.taskType === 5 || $.oneTask.taskType === 3 || $.oneTask.taskType === 26) {
+  } else if ([2, 3, 5, 26].includes($.oneTask.taskType)) {
     $.success = 1
     $.message = `任务完成`
     console.log($.message);
@@ -259,7 +261,7 @@ function zoo_getFeedDetail () {
   $.taskId = $.oneTask.taskId;
   $.feedDetailInfo = {};
   $.callback = 'Func.request'
-  $.message = `做任务：${$.oneTask.taskName};等待完成 (实际不会添加到购物车)`
+  $.message = `做任务：${$.oneTask.taskName} 等待完成`
   takePostRequest('zoo_getFeedDetail');
   return
 
@@ -290,6 +292,7 @@ function add_car () {
     document.write(JSON.stringify($))
     return
   }
+
   $.taskToken = $.addCarInfo.taskToken;
   $.needTime--;
   $.message = `加购：${$.addCarInfo.skuName}`
@@ -301,6 +304,57 @@ function add_car () {
   $.callback = ''
   dealReturn('add_car', $.data)
   document.write(JSON.stringify($))
+}
+
+// 做图鉴任务列表
+function getMapTaskDetail () {
+  //分享
+  $.myMapList = [];
+  $.callback = 'Func.request'
+  takePostRequest('zoo_myMap');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('zoo_myMap', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 做图鉴任务
+function doMapTask () {
+  $.call = ['doMapTask']
+
+  //分享
+  $.call[$.call.length - 1] == 'zoo_getWelfareScore' && zoo_getWelfareScore()
+}
+
+function zoo_getWelfareScore () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler';
+  $.call[$.call.length - 1] == 'zoo_getWelfareScore' || $.call.push('zoo_getWelfareScore')
+
+  $.oneMapInfo = $.myMapList.shift()
+  $.currentScence = ++$.currentScence || 0
+  if (!$.oneMapInfo) {
+    // 循环完成重新设置 call
+    $.call.pop()
+    document.write(JSON.stringify($))
+    return
+  }
+
+
+  if ($.oneMapInfo.isFirstShare === 1) {
+    $.callback = 'Func.request'
+    $.message = `去分享${$.oneMapInfo.partyName}`
+    takePostRequest('zoo_getWelfareScore')
+    return
+
+    // next
+    $.callback = ''
+    dealReturn('zoo_getWelfareScore', $.data)
+    document.write(JSON.stringify($))
+  }
+
 }
 
 
