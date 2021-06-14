@@ -183,7 +183,7 @@ function doTask () {
     return
   }
 
-  if ([1, 2, 3, 5, 7, 9, 26].includes($.oneTask.taskType) && $.oneTask.status === 1) {
+  if ([1, 2, 3, 5, 7, 9, 26].includes($.oneTask.taskType) && $.oneTask.status === 1 && $.oneTask.taskName.includes("逛逛")) {
     $.activityInfoList = $.oneTask.productInfoVos || $.oneTask.shoppingActivityVos || $.oneTask.brandMemberVos || $.oneTask.followShopVo || $.oneTask.browseShopVo;
 
     oneActivityInfo()
