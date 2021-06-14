@@ -872,7 +872,7 @@ function dealReturn (type, data) {
       break;
     case 'add_car':
       if (data.code === 0) {
-        let acquiredScore = data.data?.result?.addProductVos?.acquiredScore;
+        let acquiredScore = data.data?.result?.addProductVos[0]?.acquiredScore;
         if (Number(acquiredScore) > 0) {
           $.message = `加购成功,获得金币:${acquiredScore}`
         } else {
