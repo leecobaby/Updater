@@ -379,6 +379,8 @@ function zoo_getWelfareScore () {
     $.callback = ''
     dealReturn('zoo_getWelfareScore', $.data)
     document.write(JSON.stringify($))
+  } else {
+    document.write(JSON.stringify($))
   }
 }
 
