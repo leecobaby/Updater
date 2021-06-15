@@ -272,6 +272,7 @@ function oneActivityInfo () {
 function zoo_getFeedDetail () {
   // 嵌套调用里面用数组形式 push
   $.to = 'Func.logicHandler';
+  $.call.push('zoo_getFeedDetail')
 
   $.taskId = $.oneTask.taskId;
   $.feedDetailInfo = {};
@@ -285,6 +286,7 @@ function zoo_getFeedDetail () {
   dealReturn('zoo_getFeedDetail', $.data)
   $.productList = $.feedDetailInfo.productInfoVos;
   $.needTime = Number($.feedDetailInfo.maxTimes) - Number($.feedDetailInfo.times);
+  $.call.pop()
   add_car()
 }
 
