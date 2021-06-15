@@ -25,7 +25,7 @@
 
 // 为了让加密的 getBody() 跑通
 let secretp = $.secretp
-let UA = $.ua
+let UA = $.ua || null
 
 /** 下方放 call 文本，来控制函数执行 **/
 
@@ -779,7 +779,7 @@ function dealReturn (type, data) {
       break;
     case 'zoo_getFeedDetail':
       if (data.code === 0) {
-        $.feedDetailInfo = data.data.? result?.addProductVos[0] || data.data?.result?.viewProductVos[0];
+        $.feedDetailInfo = data.data?.result?.addProductVos[0] || data.data?.result?.viewProductVos[0];
       }
       break;
     case 'zoo_pk_collectScore':
