@@ -21,13 +21,13 @@ if ($.callbackInfo.code === 0 && $.callbackInfo.data?.result?.taskToken) {
     document.write(JSON.stringify($))
   }
 
-} else if ($.oneTask.taskType === 5 || $.oneTask.taskType === 3 || $.oneTask.taskType === 26) {
+} else if ([2, 3, 5, 26].includes($.oneTask.taskType)) {
   $.success = 1
   $.message = `任务完成`
   console.log($.message);
   document.write(JSON.stringify($))
 } else {
-  $.error = `oneActivityInfo 任务失败，接口失效等待更新~`
+  $.error = `oneActivityInfo ${$.oneTask.taskId} 任务失败，此接口失效等待修复`
   console.log($.error);
   document.write(JSON.stringify($))
 }

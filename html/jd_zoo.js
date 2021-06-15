@@ -221,7 +221,7 @@ function oneActivityInfo () {
   }
 
   $.callbackInfo = {};
-  $.message = `做任务：${$.oneActivityInfo.title || $.oneActivityInfo.taskName || $.oneActivityInfo.shopName} 等待完成...`
+  $.message = `做任务：${$.oneActivityInfo.skuName || $.oneActivityInfo.taskName || $.oneActivityInfo.title || $.oneActivityInfo.shopName} 等待完成...`
   $.callback = 'Func.request'
   takePostRequest('zoo_collectScore');
   console.log($.message);
