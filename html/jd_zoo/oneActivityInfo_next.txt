@@ -5,6 +5,7 @@ if ($.callbackInfo.code === 0 && $.callbackInfo.data?.result?.taskToken) {
 
   // 等待 8s
   $.wait = 8
+  $.next = 1
   $.callback = 'Func.request'
   callbackResult(sendInfo)
   // return
