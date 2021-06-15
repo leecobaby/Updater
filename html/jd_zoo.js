@@ -835,7 +835,7 @@ function dealReturn (type, data) {
       break;
     case 'zoo_bdCollectScore':
       if (data.code === 0) {
-        $.message = `签到获得：${data.data.result.score}`
+        $.message = `签到获得：${data.data?.result?.score}`
       }
       break;
     case 'qryCompositeMaterials':
