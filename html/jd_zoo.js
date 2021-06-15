@@ -431,6 +431,8 @@ function zoo_shopLotteryInfo () {
     // 衔接下一环节
     $.next = 0
     zoo_bdCollectScore()
+  } else {
+    document.write(JSON.stringify($))
   }
 }
 
@@ -495,6 +497,7 @@ function doMapShopTask () {
     $.wait = 8
     let sendInfo = encodeURIComponent(`{"dataSource":"newshortAward","method":"getTaskAward","reqParams":"{\\"taskToken\\":\\"${$.callbackInfo.data.result.taskToken}\\"}","sdkVersion":"1.0.0","clientLanguage":"zh"}`)
     $.callback = 'Func.request'
+    $.next = 1
     callbackResult(sendInfo)
     // return
 
@@ -827,7 +830,7 @@ function dealReturn (type, data) {
       break;
     case 'zoo_shopLotteryInfo':
       if (data.code === 0) {
-        $.shopResult = data.data.result;
+        $.shopResult = data.data?.result;
       }
       break;
     case 'zoo_bdCollectScore':
