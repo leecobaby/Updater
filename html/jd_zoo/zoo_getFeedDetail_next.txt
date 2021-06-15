@@ -2,5 +2,4 @@ $.callback = ''
 dealReturn('zoo_getFeedDetail', $.data)
 $.productList = $.feedDetailInfo.productInfoVos;
 $.needTime = Number($.feedDetailInfo.maxTimes) - Number($.feedDetailInfo.times);
-$.call.pop()
 add_car()

@@ -15,6 +15,7 @@
     const $ = {}
     let secretp = '123'
     let UA = $.ua || null
+    $.call = ['doTask']
     $.CryptoJS = CryptoJS
     $.data = {
       "code": 0,
@@ -431,10 +432,17 @@
       "msg": "调用成功"
     }
 
+
     $.callback = ''
-    dealReturn('add_car', $.data)
-    document.write(JSON.stringify($))
-    console.log(JSON.parse(document.body.innerText));
+    dealReturn('zoo_getFeedDetail', $.data)
+    $.productList = $.feedDetailInfo.productInfoVos;
+    $.needTime = Number($.feedDetailInfo.maxTimes) - Number($.feedDetailInfo.times);
+    add_car()
+    console.log($);
+    // $.callback = ''
+    // dealReturn('add_car', $.data)
+    // document.write(JSON.stringify($))
+    // console.log(JSON.parse(document.body.innerText));
     // console.log(getBody());
   </script>
 </body>
