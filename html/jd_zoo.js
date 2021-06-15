@@ -24,8 +24,8 @@
 // $.shopSign = ``
 
 // 为了让加密的 getBody() 跑通
-// let secretp = $.secretp
-// let UA = $.ua
+let secretp = $.secretp
+let UA = $.ua
 
 /** 下方放 call 文本，来控制函数执行 **/
 
