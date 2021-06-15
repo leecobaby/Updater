@@ -870,7 +870,7 @@ function dealReturn (type, data) {
       break;
     case 'zoo_getWelfareScore':
       if (data.code === 0) {
-        $.message = `分享成功，获得：${data.data.result.score}`
+        $.message = `分享成功，获得：${data.data?.result?.score}`
       }
       break;
     case 'jdjrTaskDetail':
