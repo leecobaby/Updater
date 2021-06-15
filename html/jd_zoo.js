@@ -486,6 +486,7 @@ function doMapShopTask () {
   $.callbackInfo = {}
   $.message = `做任务：${$.oneActivityInfo.subtitle || $.oneActivityInfo.title || $.oneActivityInfo.taskName || $.oneActivityInfo.shopName} 等待完成`
   $.callback = 'Func.request'
+  $.next = 1
   takePostRequest('zoo_collectScore')
   return
 
@@ -837,7 +838,7 @@ function dealReturn (type, data) {
       if (data.code === 0) {
         $.message = `签到获得：${data.data?.result?.score}`
       } else {
-        $.errpr = '签到失败'
+        $.error = '签到失败'
       }
       break;
     case 'qryCompositeMaterials':
