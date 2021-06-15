@@ -363,15 +363,15 @@
     }
   },
   "JD_zoo": {
-    "version": "1.0",
-    "update_log": "- 修复 活动接口失效问题\n- 增加 做图鉴任务",
+    "version": "1.1",
+    "update_log": "- 优化 启动速度\n- 优化 授权逻辑\n- 修复 部分任务接口",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_zoo#版本日志"
     },
     "help": "",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/f645a4df56084b7fa52ab2d339c0ba31",
+    "update": "https://www.icloud.com/shortcuts/d8f78c7198824735838be7fd915a263c",
     "notice": "实现自动任务，初代版本问题很多，无限过期可以删除cookie~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-动物联盟&input=text&text=task",
