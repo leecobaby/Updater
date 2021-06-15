@@ -175,7 +175,7 @@
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/3c467d23294648ca8e0680d0aead41f6",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "今天最后一天，升满级拿完61.8，最近有惊喜红包和现金红包~",
+    "notice": "恭喜满级的朋友，没满级的别丧气，官方应该还有其他活动~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=天猫618自动养猫&input=text&text=task",
     "image": "https://gitee.com/leecobaby/Updater/raw/master/image/tb_618cat.png",
@@ -183,12 +183,12 @@
     "tip": {
       "hongbao": "每天领...",
       "surplus": "可快速完成任务...",
-      "hot": "🧧 6.15 16点惊喜红包",
+      "hot": "🧧 6.16 20点惊喜红包",
       "faq": "",
       "set": "点击查看自动化操作",
       "team": "可随机助力",
       "other": "疑问者可查看常见问题",
-      "more": "🧧 6.15抢现红包"
+      "more": "🧧 6.16抢现红包"
     }
   },
   "Hlzx": {
