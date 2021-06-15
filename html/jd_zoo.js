@@ -24,8 +24,8 @@
 // $.shopSign = ``
 
 // 为了让加密的 getBody() 跑通
-let secretp = $.secretp
-let UA = $.ua
+// let secretp = $.secretp
+// let UA = $.ua
 
 /** 下方放 call 文本，来控制函数执行 **/
 
@@ -272,7 +272,6 @@ function oneActivityInfo () {
 function zoo_getFeedDetail () {
   // 嵌套调用里面用数组形式 push
   $.to = 'Func.logicHandler';
-  ($.call[$.call.length - 1] == 'zoo_getFeedDetail') || $.call.push('zoo_getFeedDetail')
 
   $.taskId = $.oneTask.taskId;
   $.feedDetailInfo = {};
@@ -286,7 +285,6 @@ function zoo_getFeedDetail () {
   dealReturn('zoo_getFeedDetail', $.data)
   $.productList = $.feedDetailInfo.productInfoVos;
   $.needTime = Number($.feedDetailInfo.maxTimes) - Number($.feedDetailInfo.times);
-  $.call.pop()
   add_car()
 }
 
@@ -781,7 +779,7 @@ function dealReturn (type, data) {
       break;
     case 'zoo_getFeedDetail':
       if (data.code === 0) {
-        $.feedDetailInfo = data.data.result.addProductVos[0];
+        $.feedDetailInfo = data.data.? result?.addProductVos[0] || data.data?.result?.viewProductVos[0];
       }
       break;
     case 'zoo_pk_collectScore':
