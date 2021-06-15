@@ -185,6 +185,7 @@ function doTask () {
 
   if ([1, 3, 5, 7, 9, 26].includes($.oneTask.taskType) && $.oneTask.status === 1) {
     $.activityInfoList = $.oneTask.shoppingActivityVos || $.oneTask.brandMemberVos || $.oneTask.followShopVo || $.oneTask.browseShopVo;
+    $.activityInfoList.time = 30
 
     oneActivityInfo()
 
@@ -197,6 +198,7 @@ function doTask () {
   } else if ($.oneTask.taskType === 2 && $.oneTask.status === 1 && $.oneTask.taskName.includes("逛逛")) {
 
     $.activityInfoList = $.oneTask.productInfoVos
+    $.activityInfoList.time = 30
     oneActivityInfo()
 
   }
@@ -212,7 +214,7 @@ function oneActivityInfo () {
 
   // 利用队列取代循环
   $.oneActivityInfo = $.activityInfoList.shift()
-  if (!$.oneActivityInfo) {
+  if (!$.oneActivityInfo || --$.activityInfoList.time <= 0) {
     // 循环完成重新设置 call
     $.call.pop()
     document.write(JSON.stringify($))
@@ -240,7 +242,7 @@ function oneActivityInfo () {
 
     // 等待 8s
     $.wait = 8
-    $.next = 1
+    $.next = 1 // 覆盖前面的 0
     $.callback = 'Func.request'
     callbackResult(sendInfo)
     // return
@@ -382,6 +384,8 @@ function zoo_getWelfareScore () {
 
 // 图鉴店铺列表
 function qryCompositeMaterials () {
+  $.call[$.call.length - 1] == 'qryCompositeMaterials' || $.call.push('qryCompositeMaterials')
+
   $.shopInfoList = [];
   $.callback = 'Func.request'
   $.message = `去做店铺任务`
@@ -390,7 +394,7 @@ function qryCompositeMaterials () {
 
   // next
   $.callback = ''
-  $.next = 0 // 衔接下一个函数前，重置 next 防止获取 next 失败
+  $.call.pop()
   $.call.push('zoo_shopLotteryInfo') // 衔接下一个任务
   dealReturn('qryCompositeMaterials', $.data)
   document.write(JSON.stringify($))
@@ -423,6 +427,7 @@ function zoo_shopLotteryInfo () {
   if (JSON.stringify($.shopResult) !== `{}`) {
     $.shopTask = $.shopResult.taskVos;
     // 衔接下一环节
+    $.next = 0
     zoo_bdCollectScore()
   }
 }
@@ -509,14 +514,14 @@ function zoo_boxShopLottery () {
   $.call[$.call.length - 1] == 'zoo_boxShopLottery' || $.call.push('zoo_boxShopLottery')
 
   $.boxLottery = $.shopResult.boxLotteryNum.shift()
-  let j = ++j || 1
+  $.j = ++$.j || 1
   if (!$.boxLottery) {
     // 循环完成重新设置 call
     $.call.pop()
     return
   }
 
-  $.message = `开始第${j}次拆盒`
+  $.message = `开始第${$.j}次拆盒`
   $.callback = 'Func.request'
   takePostRequest('zoo_boxShopLottery');
   return
