@@ -184,7 +184,7 @@ function doTask () {
   }
 
   if ([1, 3, 5, 7, 9, 26].includes($.oneTask.taskType) && $.oneTask.status === 1) {
-    $.activityInfoList = $.oneTask.productInfoVos || $.oneTask.shoppingActivityVos || $.oneTask.brandMemberVos || $.oneTask.followShopVo || $.oneTask.browseShopVo;
+    $.activityInfoList = $.oneTask.shoppingActivityVos || $.oneTask.brandMemberVos || $.oneTask.followShopVo || $.oneTask.browseShopVo;
 
     oneActivityInfo()
 
@@ -240,6 +240,7 @@ function oneActivityInfo () {
 
     // 等待 8s
     $.wait = 8
+    $.next = 1
     $.callback = 'Func.request'
     callbackResult(sendInfo)
     // return
@@ -389,6 +390,7 @@ function qryCompositeMaterials () {
 
   // next
   $.callback = ''
+  $.next = 0 // 衔接下一个函数前，重置 next 防止获取 next 失败
   $.call.push('zoo_shopLotteryInfo') // 衔接下一个任务
   dealReturn('qryCompositeMaterials', $.data)
   document.write(JSON.stringify($))
@@ -405,8 +407,6 @@ function zoo_shopLotteryInfo () {
     // 跳出 logicHandler
     $.to = ''
     document.write(JSON.stringify($))
-    // 衔接下一个任务
-    // qryCompositeMaterials()
     return
   }
 
@@ -690,7 +690,7 @@ function dealReturn (type, data) {
       if (data.code === 0) {
         if (data.data['bizCode'] === 0) {
           $.homeData = data.data;
-          $.secretp = data.data.result.homeMainInfo.secretp;
+          $.secretp = data.data?.result?.homeMainInfo?.secretp;
           // $.secretpInfo[$.UserName] = $.secretp;
         }
       }
@@ -720,7 +720,7 @@ function dealReturn (type, data) {
     case 'zoo_getTaskDetail':
       if (data.code === 0) {
         $.success = 1
-        $.message = `好友互助码:${data.data.result.inviteId || '助力已满，获取助力码失败'}`
+        $.message = `好友互助码:${data.data?.result?.inviteId || '助力已满，获取助力码失败'}`
         console.log($.message);
         // if (data.data.result.inviteId) {
         //   $.inviteList.push({
@@ -858,7 +858,7 @@ function dealReturn (type, data) {
       break
     case `zoo_myMap`:
       if (data.code === 0) {
-        $.myMapList = data.data.result.sceneMap.sceneInfo;
+        $.myMapList = data.data?.result?.sceneMap?.sceneInfo;
       }
       break;
     case 'zoo_getWelfareScore':
