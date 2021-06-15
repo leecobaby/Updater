@@ -412,6 +412,10 @@
         }
       }
     },
+    "ua": {
+      "ua1": { "ua": "", "sign": "jdSign1.js" },
+      "ua2": { "ua": "", "sign": "jdSign2.js" }
+    },
     "codeList": [
       "zoo_function",
       "add_car_next",
