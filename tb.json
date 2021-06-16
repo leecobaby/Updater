@@ -700,7 +700,7 @@
     ]
   },
   "FarmSingle": {
-    "version": "数据库版本:5.27.1",
+    "version": "数据库版本:6.16.2",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.4uyAT2b",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4uyAT2b",
@@ -745,41 +745,17 @@
             "7941 expo_0_75049_7941_0",
             "7941 expo_0_75049_7941_1",
             "7941 expo_0_75049_7941_2",
-            "8479 other_0_68006_8479_0",
-            "7936 cloudSailAd_0_291988128281_7936_0",
             "8350 other_0_0_8350_0",
             "8351 other_0_0_8351_0",
-            "4550 other_0_0_4550_0",
-            "8444 other_0_68007_8444_0",
-            "2969 other_0_0_2969_0",
-            "3205 other_0_0_3205_0",
-            "8276 other_0_79050_8276_0",
-            "8588 other_0_70008_8588_0",
-            "7936 cloudSailAd_0_3498179_7936_0",
-            "7937 cloudSailAd_0_148_7937_0",
-            "11171 expo_0_106010_11171_0",
-            "10946 other_97_74002_10946_0",
             "8272 other_0_79046_8272_0",
             "8273 other_0_62009_8273_0",
             "8273 other_0_62009_8273_1",
             "8273 other_0_62001_8273_0",
             "11984 other_1_79046_11984_0",
             "11984 other_1_79046_11984_1",
-            "11496 other_0_121001_11496_0",
-            "7937 cloudSailAd_0_82817000440001_7937_0",
-            "7938 cloudSailAd_0_82824001410001_7938_0",
-            "7940 cloudSailAd_0_82824001410001_7940_0",
-            "11640 other_112_123001_11640_0",
-            "8271 other_106_72011_8271_0",
-            "8588 other_106_70008_8588_0",
             "9042 cloudsail_134_86933501710001_9042_0",
             "11036 cloudsail_134_88556503330001_11036_0",
             "7938 cloudsail_156_95590500110001_7938_0",
-            "12820 other_126_161003_12820_0",
-            "11497 other_143_121001_11497_0",
-            "7937 cloudsail_157_95929501400001_7937_0",
-            "9708 expo_0_84009_9708_0",
-            "12585 expo_172_123083_12585_0",
             "12768 other_5_173001_12768_0"
           ]
         }
@@ -790,7 +766,7 @@
           "type": "other",
           "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=lrVqDJXSZDKgxlaZc56tdPeCWUdUM&spm=a217e.1212.tasklist.0&sceneId=978&sourceType=other&hd_from_id=100085&deliveryId=",
           "textEnd": "str1&implId=str2",
-          "item": [
+          "item":
             "9046 other_0_0_9046_0",
             "8016 other_0_105008_8016_0",
             "8950 other_0_98013_8950_0",
@@ -815,7 +791,7 @@
           "type": "other",
           "urlScheme": "HTTPS://pages.tmall.com/wow/tmallfarm/act/b-browser?wh_biz=tm&spm=farm.newfarm.task.browser&disableNav=YES",
           "textEnd": "",
-          "item": ["0 0"]
+          "item": ["1 0"]
         }
       }
     ]
