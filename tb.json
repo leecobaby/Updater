@@ -764,7 +764,7 @@
           "type": "other",
           "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=lrVqDJXSZDKgxlaZc56tdPeCWUdUM&spm=a217e.1212.tasklist.0&sceneId=978&sourceType=other&hd_from_id=100085&deliveryId=",
           "textEnd": "str1&implId=str2",
-          "item":
+          "item":[
             "9046 other_0_0_9046_0",
             "8016 other_0_105008_8016_0",
             "8950 other_0_98013_8950_0",
