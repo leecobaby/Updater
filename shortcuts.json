@@ -215,12 +215,12 @@
     }
   },
   "FarmSingle": {
-    "version": "1.5",
-    "update_log": "- 优化 部分逻辑",
+    "version": "1.6",
+    "update_log": "- 新增 云端时间功能\n- 新增 等待长时间防假死功能\n- 弃用 动态时间功能",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/FarmSingle",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/b6d2c363bdff4100b892810ec4509654",
+    "update": "https://www.icloud.com/shortcuts/5526fe881e8f4c5eaa6e6ea2b609e394",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
     "notice": "任务链接已更新~\n618临近，活动较多请关注~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
