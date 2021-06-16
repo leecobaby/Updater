@@ -371,7 +371,7 @@
     },
     "help": "",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/76b8817662cb46969ae69e8f1fec053c",
+    "update": "https://www.icloud.com/shortcuts/9e331b559702436392f7d74287177418",
     "notice": "主任务没做完可多运行几次后期版本会优化，无限账号过期大概率是因为存入的cookie是错误的，可以去删除cookie，指令修复能解决很多问题",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-动物联盟&input=text&text=task",
