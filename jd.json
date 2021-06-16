@@ -418,8 +418,12 @@
         "signUrl": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_zoo/jdSign1.js"
       },
       "UA2": {
-        "ua": "jdapp;iPhone;9.2.0;14.1;",
+        "ua": "jdapp;iPhone;10.0.1;14.4.2;model/iPhone12,1;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
         "signUrl": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_zoo/jdSign2.js"
+      },
+      "UA3": {
+        "ua": "jdapp;iPhone;9.2.0;14.1;",
+        "signUrl": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_zoo/jdSign3.js"
       }
     },
     "codeList": [
