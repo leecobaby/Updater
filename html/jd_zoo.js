@@ -176,18 +176,17 @@ function help () {
   $.call = ['help']
   $.inviteList = Array.isArray($.inviteList) ? $.inviteList : [$.inviteList]
 
-  $.oneInviteInfo = $.inviteList.shift()
-  if (!$.oneInviteInfo || $.helpMax) {
+  $.inviteId = $.inviteList.shift()
+  if (!inviteId || $.helpMax) {
     // 循环完成重新设置 to,call
     $.to = '', $.call.pop()
     document.write(JSON.stringify($))
     return
   }
 
-  if ($.oneInviteInfo.max) { return }
+  if ($.friendHelpMax) { return }
 
-  $.inviteId = $.oneInviteInfo.inviteId;
-  $.message = `${$.UserName}去助力${$.oneInviteInfo.ues},助力码${$.inviteId}`
+  $.message = `${$.UserName}去助力，助力码:${$.inviteId}`
   $.callback = 'Func.request'
   takePostRequest('help');
   return
@@ -796,7 +795,7 @@ function dealReturn (type, data) {
           break;
         case -201:
           $.message = `助力已满`
-          $.oneInviteInfo.max = true;
+          $.friendHelpMax = true;
           break;
         case -202:
           $.message = `已经助力过该好友`
