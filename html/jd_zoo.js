@@ -189,7 +189,7 @@ function help () {
 
   if ($.friendHelpMax) { return }
 
-  $.message = `${$.UserName}去助力，助力码:${$.inviteId}`
+  $.message = `${$.UserName}去助力，对方助力码:\n${$.inviteId}`
   $.callback = 'Func.request'
   takePostRequest('help');
   return
@@ -792,7 +792,7 @@ function dealReturn (type, data) {
     case 'help':
     case 'pkHelp':
       //console.log(data);
-      switch (data.data.bizCode) {
+      switch (data.data?.bizCode) {
         case 0:
           $.message = `助力成功`
           break;
