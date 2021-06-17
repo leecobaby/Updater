@@ -7,7 +7,7 @@
  * tips: Only for learning and communication, strictly prohibited for commercial use, please delete within 24 hours
  */
 
-// const $ = {}
+const $ = {}
 // $.from = ``
 // $.to = ``
 // $.call = ``
@@ -28,6 +28,8 @@
 let secretp = $.secretp
 let UA = $.ua
 let uuid = $.uuid || 'ef746bc0663f7ca06cdd1fa724c15451900039cf'
+let joyToken = "MDFJb0lXQzAxMQ==.eFl7ZHt7V39md3BceylzHi4eHRtxW30HPXhDf3t3ZV43ZT14ETkOBSFALWISIAV6Yic5InBiDXAuJjAkdFI3.66c2abd5"
+$.cookie += `joyytoken=50084${joyToken};`
 
 /** 下方放 call 文本，来控制函数执行 **/
 
