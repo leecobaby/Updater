@@ -986,6 +986,7 @@ function getPostBody (type) {
 function getToken () {
   $.request = {
     url: `https://bh.m.jd.com/gettoken`,
+    method: 'POST',
     headers: {
       'Content-Type': `text/plain;charset=UTF-8`
     },
