@@ -363,16 +363,16 @@
     }
   },
   "JD_zoo": {
-    "version": "1.3",
-    "update_log": "- 修复 部分账号接口失效问题\n- 增加 切换 UA 功能，解决部分账号接口被限制问题\n- 增加 好友互助功能\n- 优化 接口失效停止运行指令逻辑",
+    "version": "1.4",
+    "update_log": "- 修复 切换UA实则并没切换 bug\n- 修复 指令修复和删除 cookie 不退出指令 bug\n- 修复 接口失效还继续任务 bug\n- 解决 大部分人失效问题",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_zoo#版本日志"
     },
     "help": "",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/9e331b559702436392f7d74287177418",
-    "notice": "主任务没做完可多运行几次后期版本会优化，无限账号过期大概率是因为存入的cookie是错误的，可以去删除cookie，指令修复能解决很多问题",
+    "update": "https://www.icloud.com/shortcuts/b35ed45000c94c9cbeff0956a676337e",
+    "notice": "初次使用可以先只选择收金币任务，任务成功说明此账号接口有效\n是否无限账号过期大概率是因为存入的cookie是错误的，可以去删除cookie~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-动物联盟&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/jd_nian.png",
