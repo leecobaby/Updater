@@ -447,7 +447,8 @@
       "zoo_boxShopLottery_next",
       "zoo_getWelfareScore_next",
       "zoo_shopLotteryInfo_next",
-      "help_next"
+      "help_next",
+      "getToken_next"
     ],
     "task": [
       {

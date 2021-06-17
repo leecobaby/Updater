@@ -28,8 +28,7 @@
 let secretp = $.secretp
 let UA = $.ua
 let uuid = $.uuid || 'ef746bc0663f7ca06cdd1fa724c15451900039cf'
-let joyToken = "MDFJb0lXQzAxMQ==.eFl7ZHt7V39md3BceylzHi4eHRtxW30HPXhDf3t3ZV43ZT14ETkOBSFALWISIAV6Yic5InBiDXAuJjAkdFI3.66c2abd5"
-$.cookie = $.cookie.includes('joyytoken') ? $.cookie : $.cookie + `joyytoken=50084${joyToken};`
+// $.cookie = $.cookie.includes('joyytoken') ? $.cookie : $.cookie + `joyytoken=50084${$.joyToken};`
 
 /** 下方放 call 文本，来控制函数执行 **/
 
@@ -45,6 +44,7 @@ $.cookie = $.cookie.includes('joyytoken') ? $.cookie : $.cookie + `joyytoken=500
 //   回调完执行 next，视情况来清空 callback
 
 
+// getToken
 // zoo_signSingle
 // zoo_getHomeData
 // zoo_getSignHomeData
@@ -981,6 +981,24 @@ function getPostBody (type) {
   }
   // console.log(taskBody);
   return taskBody
+}
+
+function getToken () {
+  $.request = {
+    url: `https://bh.m.jd.com/gettoken`,
+    headers: {
+      'Content-Type': `text/plain;charset=UTF-8`
+    },
+    body: `content={"appname":"50084","whwswswws":"","jdkey":"","body":{"platform":"1"}}`
+  }
+  $.callback = 'Func.request'
+  document.write(JSON.stringify($))
+
+  // next
+  $.callback = ''
+  $.joyToken = $.data.joyytoken
+  $.cookie += `joyytoken=50084${$.joyToken};`
+  document.write(JSON.stringify($))
 }
 
 // function getBody () {
