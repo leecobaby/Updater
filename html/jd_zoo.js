@@ -7,7 +7,7 @@
  * tips: Only for learning and communication, strictly prohibited for commercial use, please delete within 24 hours
  */
 
-const $ = {}
+// const $ = {}
 // $.from = ``
 // $.to = ``
 // $.call = ``
