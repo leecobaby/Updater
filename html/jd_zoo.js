@@ -28,6 +28,7 @@
 let secretp = $.secretp
 let UA = $.ua
 let uuid = $.uuid || 'ef746bc0663f7ca06cdd1fa724c15451900039cf'
+let joyToken = $.joyToken
 // $.cookie = $.cookie.includes('joyytoken') ? $.cookie : $.cookie + `joyytoken=50084${$.joyToken};`
 
 /** 下方放 call 文本，来控制函数执行 **/
