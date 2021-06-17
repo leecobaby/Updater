@@ -410,6 +410,9 @@
           "Connection": "keep-alive",
           "Referer": "https://wqs.jd.com/my/jingdou/my.shtml?sceneval=2"
         }
+      },
+      "getToken": {
+        "url": "https://bh.m.jd.com/gettoken"
       }
     },
     "uaInfo": {
