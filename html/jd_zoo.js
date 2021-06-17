@@ -187,7 +187,10 @@ function help () {
     return
   }
 
-  if ($.friendHelpMax) { return }
+  if ($.friendHelpMax) {
+    document.write(JSON.stringify($))
+    return
+  }
 
   $.message = `${$.UserName}去助力，对方助力码:\n${$.inviteId}`
   $.callback = 'Func.request'
