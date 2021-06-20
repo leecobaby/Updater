@@ -700,7 +700,7 @@
     ]
   },
   "FarmSingle": {
-    "version": "数据库版本:6.19.1",
+    "version": "数据库版本:6.20.1",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.4uyAT2b",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4uyAT2b",
@@ -763,7 +763,7 @@
             "8276 other_185_79050_8276_0",
             "12585 expo_200_123083_12585_0",
             "8274 other_187_62010_8274_0",
-            "13025 cloudsail_200_114247504010001_13025_30",
+            "13025 cloudsail_200_114247504010001_13025_0",
             "11704 cloudsail_200_114150501820001_11704_0"
           ]
         }
