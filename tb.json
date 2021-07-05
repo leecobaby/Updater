@@ -676,7 +676,7 @@
     ]
   },
   "FarmSingle": {
-    "version": "数据库版本:6.20.1",
+    "version": "数据库版本:7.5.1",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.4uyAT2b",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4uyAT2b",
@@ -752,6 +752,7 @@
           "textEnd": "str1&implId=str2",
           "item": [
             "9046 other_0_0_9046_0",
+            "8015 other_213_0_8015_0",
             "8016 other_0_105008_8016_0",
             "8950 other_0_98013_8950_0",
             "10386 other_0_100016_10386_0",
