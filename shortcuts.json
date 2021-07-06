@@ -215,14 +215,14 @@
     }
   },
   "FarmSingle": {
-    "version": "1.6",
-    "update_log": "- 新增 云端时间功能\n- 新增 等待长时间防假死功能\n- 弃用 动态时间功能",
+    "version": "1.7",
+    "update_log": "- 尝试 兼容 IOS15 运行\n- 修复 微博任务问题\n- 修复 云端任务时间假死问题",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/FarmSingle",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/5526fe881e8f4c5eaa6e6ea2b609e394",
+    "update": "https://www.icloud.com/shortcuts/ab3ce38690dd4023851e1ec7b3d17296",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "云端已修复假死问题无需更新~",
+    "notice": "已兼容ios15，运行自动化之前，请先手动运行一遍指令，以确保给予指令所有权限~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=芭芭农场自动集肥料&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
@@ -230,12 +230,12 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 6.17 20点惊喜红包",
+      "hot": "🔥 7月一元购活动中...",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 6.15抢现红包"
+      "more": ""
     }
   },
   "Qmxb": {
