@@ -887,6 +887,34 @@
       }
     ]
   },
+  "ele_exb": {
+    "version": "数据库版本:7.7.1",
+    "pv": {
+      "taobao": "taobao://m.tb.cn/h.4Jt9cFX",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4Jt9cFX",
+      "eleme": "taobaolite://m.tb.cn/h.4Jt9cFX"
+    },
+    "main": {
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fwww.tmall.com%2F",
+      "eleme": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%23mallPage"
+    },
+    "home": {
+      "taobao": "taobao://pages.tmall.com/wow/z/sale/nsrSolution/ltao-duck-home?disableNav=YES",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fsale%2FnsrSolution%2Fltao-duck-home%3FdisableNav%3DYES",
+      "eleme": "taobaolite://pages.tmall.com/wow/z/sale/nsrSolution/ltao-duck-home?disableNav=YES"
+    },
+    "end": {
+      "taobao": "taobao://pages.tmall.com/wow/z/sale/nsrSolution/ltao-duck-home?disableNav=YES",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fsale%2FnsrSolution%2Fltao-duck-home%3FdisableNav%3DYES",
+      "eleme": "taobaolite://pages.tmall.com/wow/z/sale/nsrSolution/ltao-duck-home?disableNav=YES"
+    },
+    "app": {
+      "淘宝": "taobao",
+      "天猫": "tmall",
+      "淘宝特价版": "taobaolite"
+    }
+  },
   "team": {
     "👤 为作者助力": "taobao://m.tb.cn/h.4i7XpWg?sm=f09c1a",
     "👥 相互助力群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=830385420&card_type=group&source=qrcode&jump_from=&auth=&authSig=CtFeH1TafXW5JK0ALJh4EbaUkBHKJ6ykRB6+ejGS3fvjGPae8Am9sPg+sm0xsTNX&source_id=2_40001"
