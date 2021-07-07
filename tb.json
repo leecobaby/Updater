@@ -892,7 +892,7 @@
     "pv": {
       "taobao": "taobao://m.tb.cn/h.4Jt9cFX",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4Jt9cFX",
-      "eleme": "taobaolite://m.tb.cn/h.4Jt9cFX"
+      "eleme": "eleme://web?url=https%3A%2F%2Fm.tb.cn%2Fh.4xdzqg5"
     },
     "main": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
