@@ -311,26 +311,26 @@
   },
   "ele_exb": {
     "version": "1.0",
-    "update_log": "- 增加 多线路模式\n- 更新 任务数据",
+    "update_log": "- 增加 饿了么、支付宝、淘宝端任务\n- 增加 云端时间支持",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/ele_exb",
     "help": "",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/a123d58e2fb0494990a1743499fd1ae6",
-    "faq": "https://github.com/leecobaby/shortcuts/tree/master/ELEME.FAQ.md",
+    "update": "https://www.icloud.com/shortcuts/154c6dcb7adf465dbdf2adfdb6cf0a49",
+    "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
     "notice": "",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
-    "automation_url": "shortcuts://run-shortcut?name=淘特-发财鸭&input=text&text=task",
+    "automation_url": "shortcuts://run-shortcut?name=饿了么-饿小宝&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
-    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/ltao.png",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/eleme.png",
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 特价版1元购...",
+      "hot": "🔥 限量一元购...",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": ""
+      "more": "饿了么外卖新活动..."
     }
   },
   "AutoBox": {
