@@ -948,7 +948,7 @@
     ]
   },
   "ele_exb": {
-    "version": "数据库版本:7.8.1",
+    "version": "数据库版本:7.11.1",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.4xdzqg5",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4xdzqg5",
@@ -999,8 +999,18 @@
             "20210414103347177399951817 0",
             "20210413224825243384104087 0",
             "20210604152210090368163578 0",
-            "20210413212154000368665617 0"
+            "20210413212154000368665617 0",
+            "20210413224216497318809202 0"
           ]
+        }
+      },
+      {
+        "tmall": {
+          "title": "签到",
+          "type": "other",
+          "urlScheme": "HTTPS://tb.ele.me/wow/alsc/mod/3d8e366b731979482ae13d48?actId=20201112195531414199581157&tagId=20210630160016806377000000000099&collectionId=20210413173107468959026730&from=a13.b_activity_kb_m25916&alscBpBlockCode=916332_6126594210&bizScene=xiaobao&referPageId=a2ogi.20773536_0d13e6f5-708f-441c-81d5-fa8aac969ea6_1625652071355&srcSpm=a2ogi.20773536.c204147.d145371_6&spm=a2ogi.20773536.c204147.d145371_6&taskId=",
+          "textEnd": "str1",
+          "item": ["20210414103347177399951817 0"]
         }
       }
     ]
