@@ -317,7 +317,7 @@
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/154c6dcb7adf465dbdf2adfdb6cf0a49",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "",
+    "notice": "据观测饿小宝每次送餐数量固定，使用指令参与活动也很麻烦，喜欢自动化的不推荐使用本指令。",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=饿了么-饿小宝&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
@@ -448,7 +448,12 @@
           "已安装app": "imeituan://www.meituan.com/web?lch=cps:waimai:3:a144a9fa40a42c55af00214bb4bb3993971:6232dingdanxialeeco:2:70690&url=https%3A%2F%2Fclick.meituan.com%2Ft%3Ft%3D1%26c%3D1%26p%3DOWMpZ-uzIFOVe6JyOONs3dXuqV0qcAf-r-KCvHdXiNfM3oMXlDSgQ1lHQ7sc1bHIMXeq2XWRYP9S3VMvpbQU5suS6wIbvlY8ysKwoMucfvM-rF8Z3mNwVvDHIKVKMsgutBrr4QPAU-C_JAUQdcIGegPhA5pbiaJPBOlV_2ElhVrcWrcWxBNlqgy-azTgeuR39HLNf98hLOWEGKBDtwCamOqsJP1LLMGBuAOnfqvhqVpmOiuf2Grl8rQIjgXTpd-9hOnDON0X3YxM7kdoJCRmSis2PTLenraGrNz5ViEm8KjiXNM3vBmZ8YSUoNjoiCjP8p8fRrf7uXM2SvjABJxuflK0_ogBMj-5YH-n4hr8dW-If4ulIdQYa6FGfQ0wgLaHtMVPuoy42RYF-BZ7NsaYjbxSYy5duCSxIJLGrdqIVhFHeJkRT5MGDOXn1bf58GE8oUnmCXZ4BU0FwKjAf2QgbwXqgfp8t6YZjfKmXNSomEW1NZJF7XYewE6OFFCl6qGkCGc3dgSAjj1UhCZ0BoljZx6zxMgxRv3oJ0EePeqkyDgekdSBbU-zUSW-C7HiXVEFHoU955N0M8A_hQJv5ScS5lJqqumIL2k4S4VAUucCbmo1UOjRyJ2wpDveI4iwCFTr5RIxT8aoT2fgKQZWBwpD6v3MZ-td3z0E_aU9a2lLsyIweu9PfPngn4JqLbd6BEpLuM0XFzanyV5BRWXa9VtvNO3Qm070mTjozv7xbIo_boM",
           "未安装app": "https://click.meituan.com/t?t=1&c=1&p=OWMpZ-uzIFOVe6JyOONs3dXuqV0qcAf-r-KCvHdXiNfM3oMXlDSgQ1lHQ7sc1bHIMXeq2XWRYP9S3VMvpbQU5suS6wIbvlY8ysKwoMucfvM-rF8Z3mNwVvDHIKVKMsgutBrr4QPAU-C_JAUQdcIGegPhA5pbiaJPBOlV_2ElhVrcWrcWxBNlqgy-azTgeuR39HLNf98hLOWEGKBDtwCamOqsJP1LLMGBuAOnfqvhqVpmOiuf2Grl8rQIjgXTpd-9hOnDON0X3YxM7kdoJCRmSis2PTLenraGrNz5ViEm8KjiXNM3vBmZ8YSUoNjoiCjP8p8fRrf7uXM2SvjABJxuflK0_ogBMj-5YH-n4hr8dW-If4ulIdQYa6FGfQ0wgLaHtMVPuoy42RYF-BZ7NsaYjbxSYy5duCSxIJLGrdqIVhFHeJkRT5MGDOXn1bf58GE8oUnmCXZ4BU0FwKjAf2QgbwXqgfp8t6YZjfKmXNSomEW1NZJF7XYewE6OFFCl6qGkCGc3dgSAjj1UhCZ0BoljZx6zxMgxRv3oJ0EePeqkyDgekdSBbU-zUSW-C7HiXVEFHoU955N0M8A_hQJv5ScS5lJqqumIL2k4S4VAUucCbmo1UOjRyJ2wpDveI4iwCFTr5RIxT8aoT2fgKQZWBwpD6v3MZ-td3z0E_aU9a2lLsyIweu9PfPngn4JqLbd6BEpLuM0XFzanyV5BRWXa9VtvNO3Qm070mTjozv7xbIo_boM"
         },
-        "饿了么红包  最高领31元礼包": "taobao://m.tb.cn/h.4t95exG"
+        "饿了么红包  最高领31元礼包": {
+          "平台礼包-淘宝": "taobao://m.tb.cn/h.4Ba6uyX",
+          "平台礼包-饿了么": "eleme://web?url=https%3A%2F%2Fm.tb.cn%2Fh.4Ba6uyX",
+          "平台礼包-支付宝": "alipays://platformapi/startapp?appId=20000067&url=https%3A%2F%2Fm.tb.cn%2Fh.4Ba6uyX",
+          "联盟红包-饿了么": "eleme://web?url=https%3A%2F%2Fh5.ele.me%2Fant%2Fqrcode%3Fopen_type%3Dminiapp%26url_id%3D35%26inviterId%3D74f86c%26_ltracker_f%3Dtjyj2_app_grzx2"
+        }
       },
       "🧧 现金红包-6.15": "taobao://m.tb.cn/h.4uLee50"
     },
