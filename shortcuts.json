@@ -262,14 +262,14 @@
     }
   },
   "TaoSign": {
-    "version": "1.0",
-    "update_log": "",
+    "version": "1.2",
+    "update_log": "- 修复 云端时间假死问题\n- 修复 签到读条还未完成就跳转问题\n- 增加 天猫小黑盒任务\n- 增加 天猫美食任务",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/TaoSign",
     "help": "",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/f89486a1677847edaaee88f34ad01bd7",
+    "update": "https://www.icloud.com/shortcuts/ffef108852354d628d68b985a62ffa71",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "任务链接已更新~\n618临近，活动较多请关注~",
+    "notice": "已新增活动任务，此指令将持续增加淘宝更多活动任务~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=淘宝签到&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
@@ -277,7 +277,7 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 一元购变零元购...",
+      "hot": "🔥 限量一元购",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
