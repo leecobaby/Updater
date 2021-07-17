@@ -853,7 +853,7 @@
     ]
   },
   "TaoSign": {
-    "version": "数据库版本:7.17.1",
+    "version": "数据库版本:7.17.2",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.4DBS6ct",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4DBS6ct",
@@ -887,6 +887,20 @@
           "urlScheme": "HTTPS://pages.tmall.com/wow/z/mit/hbqd/welfare4",
           "textEnd": "",
           "item": ["1 1_35"]
+        }
+      },
+      {
+        "stars": {
+          "title": "天猫小黑盒",
+          "type": "tmall",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=lrVqDJXSZDKgxlaZc56tdPeCWUdUM&spm=a217e.1212.tasklist.0&sceneId=1396&sourceType=other&hd_from_id=100101&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "16722 other_1_418027_16722_0",
+            "11068 other_143_245001_11068_0",
+            "16723 other_1_408028_16723_0",
+            "16221 other_16_108009_16221_0"
+          ]
         }
       }
     ]
