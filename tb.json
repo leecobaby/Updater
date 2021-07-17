@@ -853,7 +853,7 @@
     ]
   },
   "TaoSign": {
-    "version": "数据库版本:2.26.1",
+    "version": "数据库版本:7.17.1",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.4DBS6ct",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4DBS6ct",
@@ -886,7 +886,7 @@
           "type": "hongbaosign",
           "urlScheme": "HTTPS://pages.tmall.com/wow/z/mit/hbqd/welfare4",
           "textEnd": "",
-          "item": ["1 1"]
+          "item": ["1 1_35"]
         }
       }
     ]
