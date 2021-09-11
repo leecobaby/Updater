@@ -359,7 +359,7 @@
     ]
   },
   "Jhs": {
-    "version": "数据库版本:9.11.4",
+    "version": "数据库版本:9.11.5",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.f19ZkJp",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f19ZkJp",
@@ -412,17 +412,12 @@
             "14382 other_33_256001_14382_0",
             "781 other_498_508020_781_0",
             "15276 other_236_465077_15276_0",
-            "18181 other_37_401001_18181_0"
+            "18181 other_37_401001_18181_0",
+            "18523 other_236_465072_18523_0",
+            "18182 other_37_1_18182_0",
+            "18524 other_236_465064_18524_0",
+            "18526 other_236_508034_18526_0"
           ]
-        }
-      },
-      {
-        "stars": {
-          "title": "新增",
-          "type": "stars",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&sourceType=other&fromToken=xBVj6P9UvoVobWAQTnvT7EUqUZUJ&sceneId=107&hd_from_id=100027&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": ["18523 other_236_465072_18523_0", "18182 other_37_1_18182_0"]
         }
       }
     ]
