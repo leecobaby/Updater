@@ -359,7 +359,7 @@
     ]
   },
   "Jhs": {
-    "version": "数据库版本:5.27.1",
+    "version": "数据库版本:9.11.1",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.f19ZkJp",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f19ZkJp",
@@ -376,9 +376,9 @@
       "taobaolite": "taobaolite://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?wh_pid=daily-192654&disableNav=YES"
     },
     "end": {
-      "taobao": "taobao://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?wh_pid=daily-192654&disableNav=YES",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fa%2Fact%2Fju%2Fdailygroup%2F1583%2Fwupr%3Fwh_pid%3Ddaily-192654%26disableNav%3DYES",
-      "taobaolite": "taobaolite://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?wh_pid=daily-192654&disableNav=YES"
+      "taobao": "taobao://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?ut_sk=1.X7c7EQcMz0gDAGYKcRv9hLW2_21380790_1631361971008.Copy.common&wh_pid=daily-253613",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fa%2Fact%2Fju%2Fdailygroup%2F1583%2Fwupr%3Fut_sk%3D1.X7c7EQcMz0gDAGYKcRv9hLW2_21380790_1631361971008.Copy.common%26wh_pid%3Ddaily-253613",
+      "taobaolite": "taobaolite://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?ut_sk=1.X7c7EQcMz0gDAGYKcRv9hLW2_21380790_1631361971008.Copy.common&wh_pid=daily-253613"
     },
     "app": {
       "淘宝": "taobao",
@@ -393,43 +393,14 @@
           "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&sourceType=other&fromToken=xBVj6P9UvoVobWAQTnvT7EUqUZUJ&sceneId=107&hd_from_id=100027&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
-            "2284 other_0_0_2284_0",
-            "7869 other_0_69028_7869_0",
-            "7868 other_0_54004_7868_0",
-            "4736 other_0_0_4736_0",
-            "4040 other_0_0_4040_0",
-            "4773 other_0_77002_4773_0",
-            "2740 other_0_0_2740_0",
-            "782 other_0_0_782_0",
-            "3584 other_0_0_3584_0",
-            "4502 other_0_0_4502_0",
-            "8223 other_0_79019_8223_0",
-            "7384 other_0_0_7384_0",
-            "6645 other_0_0_6645_0",
-            "4127 other_0_0_4127_0",
-            "8263 other_0_79038_8263_0",
-            "7712 other_0_54003_7712_0",
-            "781 other_0_0_781_0",
-            "10417 other_0_1_10417_0",
-            "10417 other_0_1_10417_1",
-            "10649 other_0_109001_10649_0",
-            "9509 other_0_1_9509_0",
-            "9086 other_0_72017_9086_0",
-            "11012 other_204_108003_11012_0",
-            "11489 other_116_77001_11489_0",
-            "11489 other_116_77001_11489_1",
-            "11489 other_116_77001_11489_2",
-            "11531 other_18_79024_11531_0",
-            "11511 other_66_114024_11511_0",
-            "13766 other_106_256001_13766_0",
-            "13763 other_106_239008_13763_0",
-            "13762 shop_106_244006_13762_0",
-            "13770 other_106_239009_13770_55",
-            "13666 other_7_1_13666_0",
-            "14382 other_17_256001_14382_0",
-            "13759 other_140_1_13759_0",
-            "14397 expo_123_269002_14397_0",
-            "9015 other_148_0_9015_0"
+            "18160 expo_38_269002_18160_0",
+            "13770 other_236_239009_13770_0",
+            "13666 other_137_1_13666_0",
+            "18409 other_9_500019_18409_0",
+            "14396 other_236_471018_14396_0",
+            "18178 other_38_239008_18178_0",
+            "2740 other_498_0_2740_0",
+            "9086 other_257_72017_9086_0"
           ]
         }
       }
