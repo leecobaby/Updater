@@ -1,6 +1,6 @@
 {
   "Taojb": {
-    "version": "数据库版本:6.25.4",
+    "version": "数据库版本:9.12.1",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.fcbnERZ",
@@ -35,27 +35,11 @@
           "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=bXNvd52Iv9Jp0n5QS9NuPoNiYh6UV&spm=a217e.xzrwy.1.1&sceneId=1946&sourceType=other&hd_from_id=100089&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
-            "14629 expo_38_303001_14629_0",
-            "14630 other_55_301001_14630_0",
-            "14632 other_55_308001_14632_0",
-            "14647 other_38_305001_14647_0",
-            "14587 other_38_300002_14587_0",
-            "14648 other_38_304003_14648_0",
-            "15534 other_38_372001_15534_0",
-            "15539 other_38_307001_15539_0",
-            "14654 other_38_306003_14654_0",
-            "14636 other_55_314002_14636_0",
-            "14659 other_38_301002_14659_0",
-            "15227 other_25_1_15227_0",
-            "15535 other_38_325013_15535_0",
-            "14578 other_38_289001_14578_0",
-            "14653 other_38_308003_14653_0",
-            "15901 other_55_1_15901_0",
-            "15517 other_38_333013_15517_0",
-            "14559 other_38_283005_14559_0",
-            "14642 expo_37_304002_14642_0",
-            "14619 cloudsail_37_118379502940001_14619_0",
-            "14586 other_38_289002_14586_0"
+            "15971 other_4_369015_15971_0",
+            "17712 other_25_454012_17712_0",
+            "18205 other_134_408018_18205_0",
+            "14647 other_4_308002_15974_0",
+            "17435 other_5_472001_17435_0"
           ]
         }
       },
