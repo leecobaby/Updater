@@ -647,7 +647,7 @@
     ]
   },
   "FarmSingle": {
-    "version": "数据库版本:9.13.1",
+    "version": "数据库版本:9.14.1",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.fcbnERZ",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fcbnERZ",
@@ -718,6 +718,7 @@
             "7936 cloudsail_285_150204501830001_7936_0",
             "7936 other_58_424002_16847_0",
             "12359 other_273_233003_12359_0",
+            "17304 other_40_476003_17304_0",
             "17734 cloudsail_24_151510502610001_17734_0"
           ]
         }
