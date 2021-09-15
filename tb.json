@@ -1,6 +1,6 @@
 {
   "Taojb": {
-    "version": "数据最后更新:9.16.2",
+    "version": "数据最后更新:9.16.3",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.fcbnERZ",
@@ -62,21 +62,12 @@
             "15517 other_121_333013_15517_0",
             "14636 other_138_314002_14636_0",
             "14565 tpp_121_1672804522_14565_0",
-            "15501 other_121_478001_15501_0"
-          ]
-        }
-      },
-      {
-        "energy": {
-          "title": "测试",
-          "type": "energy",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=bXNvd52Iv9Jp0n5QS9NuPoNiYh6UV&spm=a217e.xzrwy.1.1&sceneId=1946&sourceType=other&hd_from_id=100089&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
+            "15501 other_121_478001_15501_0",
             "14634 other_138_310001_14634_0",
             "18068 other_121_456011_18068_0",
             "18601 other_121_298003_18601_0",
-            "15901 other_138_1_15901_0"
+            "15557 other_121_378001_15557_0",
+            "16886 other_121_460003_16886_0"
           ]
         }
       },
