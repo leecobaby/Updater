@@ -1,6 +1,6 @@
 {
   "Taojb": {
-    "version": "数据最后更新:9.16.1",
+    "version": "数据最后更新:9.16.2",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.fcbnERZ",
@@ -39,17 +39,7 @@
             "17712 other_25_454012_17712_0",
             "18205 other_134_408018_18205_0",
             "15974 other_4_308002_15974_0",
-            "17435 other_5_472001_17435_0"
-          ]
-        }
-      },
-      {
-        "energy": {
-          "title": "测试",
-          "type": "energy",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=bXNvd52Iv9Jp0n5QS9NuPoNiYh6UV&spm=a217e.xzrwy.1.1&sceneId=1946&sourceType=other&hd_from_id=100089&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
+            "17435 other_5_472001_17435_0",
             "14629 expo_121_303001_14629_0",
             "14578 other_121_289001_14578_0",
             "17542 cloudsail_46_152525002410001_17542_0",
@@ -64,6 +54,25 @@
             "14586 other_121_289002_14586_0",
             "14575 other_121_300001_14575_0",
             "16457 other_121_481001_16457_0"
+          ]
+        }
+      },
+      {
+        "energy": {
+          "title": "测试",
+          "type": "energy",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=bXNvd52Iv9Jp0n5QS9NuPoNiYh6UV&spm=a217e.xzrwy.1.1&sceneId=1946&sourceType=other&hd_from_id=100089&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "14642 expo_120_304002_14642_0",
+            "18425 other_121_488004_18425_0",
+            "14632 other_138_308001_14632_0",
+            "14653 other_121_308003_14653_0",
+            "15248 other_107_329011_15248_0",
+            "15517 other_121_333013_15517_0",
+            "14636 other_138_314002_14636_0",
+            "14565 tpp_121_1672804522_14565_0",
+            "15501 other_121_478001_15501_0"
           ]
         }
       },
