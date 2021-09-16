@@ -1,6 +1,6 @@
 {
   "Taojb": {
-    "version": "数据最后更新于:9.16.4",
+    "version": "数据最后更新于:9.17.1",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.fcbnERZ",
@@ -93,7 +93,7 @@
     "taskNew": [
       {
         "energy": {
-          "title": "新版攒能量",
+          "title": "新版攒能量①",
           "type": "energy",
           "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=bXNvd52Iv9Jp0n5QS9NuPoNiYh6UV&spm=a217e.1212.tasklist.0&sceneId=1946&sourceType=other&hd_from_id=100089&deliveryId=",
           "textEnd": "str1&implId=str2",
@@ -102,6 +102,21 @@
             "17331 other_0_448007_17331_0",
             "16832 other_0_375036_16832_0",
             "17722 other_0_304003_17722_0"
+          ]
+        }
+      },
+      {
+        "energy": {
+          "title": "新版攒能量②",
+          "type": "energy",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=bXNvd52Iv9Jp0n5QS9NuPoNiYh6UV&spm=a217e.1212.tasklist.0&sceneId=2141&sourceType=other&hd_from_id=100089&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "17712 other_0_454012_17712_0",
+            "17331 other_0_448007_17331_0",
+            "16832 other_0_375036_16832_0",
+            "17722 other_0_304003_17722_0",
+            "17256 other_44_490001_17256_0"
           ]
         }
       }
