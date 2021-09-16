@@ -1,6 +1,6 @@
 {
   "Taojb": {
-    "version": "数据最后更新于:9.16.3",
+    "version": "数据最后更新于:9.16.4",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.fcbnERZ",
@@ -90,21 +90,18 @@
         }
       }
     ],
-    "taskEndEnergy": [
+    "taskNew": [
       {
         "energy": {
-          "title": "攒剩余能量",
+          "title": "新版攒能量",
           "type": "energy",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=bXNvd52Iv9Jp0n5QS9NuPoNiYh6UV&spm=a217e.xzrwy.1.1&sceneId=1946&sourceType=other&hd_from_id=100089&deliveryId=",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=bXNvd52Iv9Jp0n5QS9NuPoNiYh6UV&spm=a217e.1212.tasklist.0&sceneId=1946&sourceType=other&hd_from_id=100089&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
-            "6016 expo_0_45001_6016_1",
-            "6216 other_0_1000000019_6216_1",
-            "8265 tjbShop_0_2204109362104_8265_0",
-            "11095 cloudSailAd_0_151_11095_1",
-            "11192 other_0_2021381_11192_1",
-            "8155 other_0_8155001_8155_1",
-            "11616 other_449_8394005_11616_0"
+            "17712 other_0_454012_17712_0",
+            "17331 other_0_448007_17331_0",
+            "16832 other_0_375036_16832_0",
+            "17722 other_0_304003_17722_0"
           ]
         }
       }
