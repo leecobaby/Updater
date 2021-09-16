@@ -1,6 +1,6 @@
 {
   "Taojb": {
-    "version": "数据最后更新:9.16.3",
+    "version": "数据最后更新于:9.16.3",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.fcbnERZ",
@@ -140,7 +140,7 @@
     ]
   },
   "1212hlz": {
-    "version": "数据库版本:12.11.1",
+    "version": "数据最后更新于:12.11.1",
     "gd": "HTTPS://m.tb.cn/h.443HPo4",
     "end": "HTTPS://pages.tmall.com/wow/z/tmtjb/town/1212-home?wh_biz=tm&disableNav=YES",
     "hongbao": "taobao://m.tb.cn/h.44CiYjQ",
@@ -320,7 +320,7 @@
     }
   },
   "Ttlhb": {
-    "version": "数据库版本:4.12.1",
+    "version": "数据最后更新于:4.12.1",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.fcbnERZ",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fcbnERZ",
@@ -371,7 +371,7 @@
     ]
   },
   "Jhs": {
-    "version": "数据库版本:9.11.5",
+    "version": "数据最后更新于:9.11.5",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.fcbnERZ",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fcbnERZ",
@@ -435,7 +435,7 @@
     ]
   },
   "618cat": {
-    "version": "数据库版本:6.14.1",
+    "version": "数据最后更新于:6.14.1",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.4uyyEOF",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4uyyEOF",
@@ -591,7 +591,7 @@
     ]
   },
   "Hlzx": {
-    "version": "数据库版本:5.28.1",
+    "version": "数据最后更新于:5.28.1",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.fcbnERZ",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fcbnERZ",
@@ -675,7 +675,7 @@
     ]
   },
   "FarmSingle": {
-    "version": "数据库版本:9.14.1",
+    "version": "数据最后更新于:9.14.1",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.fcbnERZ",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fcbnERZ",
@@ -791,7 +791,7 @@
     ]
   },
   "Qmxb": {
-    "version": "数据库版本:5.27.1",
+    "version": "数据最后更新于:5.27.1",
     "gd": {
       "taobao": "taobao://m.tb.cn/h.fcbnERZ",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fcbnERZ",
@@ -856,7 +856,7 @@
     ]
   },
   "TaoSign": {
-    "version": "数据库版本:7.18.1",
+    "version": "数据最后更新于:7.18.1",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.fcbnERZ",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fcbnERZ",
@@ -937,7 +937,7 @@
     ]
   },
   "ltao_duck": {
-    "version": "数据库版本:3.29.1",
+    "version": "数据最后更新于:3.29.1",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.fcbnERZ",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fcbnERZ",
@@ -993,7 +993,7 @@
     ]
   },
   "ele_exb": {
-    "version": "数据库版本:7.11.1",
+    "version": "数据最后更新于:7.11.1",
     "pv": {
       "taobao": "taobao://m.tb.cn/h.4xdzqg5",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4xdzqg5",
