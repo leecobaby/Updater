@@ -98,14 +98,14 @@
     "share_content_tip": "请输入已编码的音效文本内容\n我已经自动输入你剪贴板的内容拉\n─=≡Σ(((つ•̀ω•́)つ\n温馨提醒:请尽量分享10秒以内的音效"
   },
   "Taojb": {
-    "version": "2.4",
-    "update_log": "- 修复 IOS15 运行任务完成后弹窗问题\n- 更新 任务数据\n- 更新 活动数据",
+    "version": "2.5",
+    "update_log": "- 新增 新版任务运行\n- 完善 活动数据",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Taojb",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/da7d18f2fc3c4d2298d143145cb34b1d",
+    "update": "https://www.icloud.com/shortcuts/f5b696373f694ca78d2d7b96f621d8f7",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "淘金币改版原因，短期任务数据不足，很多任务没完成正常情况\n随着每天做任务，云端数据会持续增加~",
+    "notice": "旧版淘金币任务数据已补全，新版继续完善中~\n新版请运行新版任务~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=淘金币自动任务&input=text&text=task",
     "tip": {
