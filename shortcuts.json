@@ -396,18 +396,45 @@
     "help": "",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/b1a8ed6ff2174d20a0fb3117570ee3c4",
-    "notice": "初次使用可以先只选择收金币任务，任务成功说明此账号接口有效\n是否无限账号过期大概率是因为存入的cookie是错误的，可以去删除cookie~",
+    "notice": "初代版本做的部分功能未完善，没有完成的可以多运行几次指令~\n持续更新中...",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-动物联盟&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/jd_nian.png",
     "scritable": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/getJDCookie.js",
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/jd.json",
-    "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_zoo/",
+    "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_ddwj/",
     "tip": {
       "hongbao": "",
       "hot": "🧧红包每天领...",
       "faq": "有疑问的请查看",
       "set": "反馈切换UA3解决失效",
+      "team": "",
+      "other": "助力出问题可以指令修复",
+      "more": "🧧6.15抢现金红包"
+    }
+  },
+  "JD_ddwj": {
+    "version": "1.0",
+    "update_log": "- 增加 动态验证防止失效\n- 修复 助力满之后词典错误问题\n- 舍弃 图鉴任务浪费时间",
+    "about": {
+      "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
+      "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_zoo#版本日志"
+    },
+    "help": "",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/b1a8ed6ff2174d20a0fb3117570ee3c4",
+    "notice": "初代版本做的部分功能未完善，没有完成的可以多运行几次指令~\n持续更新中...",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
+    "automation_url": "shortcuts://run-shortcut?name=京东-动物联盟&input=text&text=task",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/jd_nian.png",
+    "scritable": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/getJDCookie.js",
+    "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/jd.json",
+    "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_ddwj/",
+    "tip": {
+      "hongbao": "",
+      "hot": "🧧红包每天领...",
+      "faq": "有疑问的请查看",
+      "set": "",
       "team": "",
       "other": "助力出问题可以指令修复",
       "more": "🧧6.15抢现金红包"
