@@ -65,7 +65,7 @@ function callbackResult (info) {
       }
     }
 
-    $.get(url, async (err, resp, data) => {
+    $.get(url, (err, resp, data) => {
       try {
         data = JSON.parse(data);
         console.log(data.toast.subTitle)
@@ -79,140 +79,135 @@ function callbackResult (info) {
 }
 
 // 提交请求信息
-async function takePostRequest (type) {
+function takePostRequest (type) {
+  $.CryptoJS = CryptoJS
   let body = ``;
   let myRequest = ``;
   switch (type) {
     // case 'zoo_signSingle':
     //   body = `functionId=zoo_signSingle&body={}&client=wh5&clientVersion=1.0.0`;
-    //   myRequest = await getPostRequest(`zoo_signSingle`, body);
+    //   myRequest = getPostRequest(`zoo_signSingle`, body);
     //   break;
     case 'funny_getHomeData':
       body = `functionId=funny_getHomeData&body={}&client=wh5&clientVersion=1.0.0&uuid=0bcbcdb2a68f16cf9c9ad7c9b944fd141646a849&appid=o2_act`;
-      myRequest = await getPostRequest(`funny_getHomeData`, body);
+      myRequest = getPostRequest(`funny_getHomeData`, body);
       break;
     case 'helpHomeData':
       body = `functionId=funny_getHomeData&body={"inviteId":"${$.inviteId}"}&client=wh5&clientVersion=1.0.0&uuid=0bcbcdb2a68f16cf9c9ad7c9b944fd141646a849&appid=o2_act`;
-      myRequest = await getPostRequest(`funny_getHomeData`, body);
+      myRequest = getPostRequest(`funny_getHomeData`, body);
       break;
     case 'zoo_collectProduceScore':
       body = getPostBody(type);
-      myRequest = await getPostRequest(`zoo_collectProduceScore`, body);
+      // console.log(body);
+      myRequest = getPostRequest(`zoo_collectProduceScore`, body);
       break;
     case 'zoo_getFeedDetail':
       body = `functionId=zoo_getFeedDetail&body={"taskId":"${$.taskId}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = await getPostRequest(`zoo_getFeedDetail`, body);
+      myRequest = getPostRequest(`zoo_getFeedDetail`, body);
       break;
     case 'zoo_getTaskDetail':
       body = `functionId=zoo_getTaskDetail&body={}&client=wh5&clientVersion=1.0.0`;
-      myRequest = await getPostRequest(`zoo_getTaskDetail`, body);
+      myRequest = getPostRequest(`zoo_getTaskDetail`, body);
       break;
     case 'zoo_collectScore':
       body = getPostBody(type);
       //console.log(body);
-      myRequest = await getPostRequest(`zoo_collectScore`, body);
+      myRequest = getPostRequest(`zoo_collectScore`, body);
       break;
     case 'zoo_raise':
       body = `functionId=zoo_raise&body={}&client=wh5&clientVersion=1.0.0`;
-      myRequest = await getPostRequest(`zoo_raise`, body);
+      myRequest = getPostRequest(`zoo_raise`, body);
       break;
     case 'help':
       body = getPostBody(type);
       //console.log(body);
-      myRequest = await getPostRequest(`zoo_collectScore`, body);
+      myRequest = getPostRequest(`zoo_collectScore`, body);
       break;
     case 'zoo_pk_getHomeData':
       body = `functionId=zoo_pk_getHomeData&body={}&client=wh5&clientVersion=1.0.0`;
-      myRequest = await getPostRequest(`zoo_pk_getHomeData`, body);
+      myRequest = getPostRequest(`zoo_pk_getHomeData`, body);
       break;
     case 'zoo_pk_getTaskDetail':
       body = `functionId=zoo_pk_getTaskDetail&body={}&client=wh5&clientVersion=1.0.0`;
-      myRequest = await getPostRequest(`zoo_pk_getTaskDetail`, body);
+      myRequest = getPostRequest(`zoo_pk_getTaskDetail`, body);
       break;
     case 'zoo_pk_collectScore':
       body = getPostBody(type);
       //console.log(body);
-      myRequest = await getPostRequest(`zoo_pk_collectScore`, body);
+      myRequest = getPostRequest(`zoo_pk_collectScore`, body);
       break;
     case 'zoo_pk_doPkSkill':
       body = `functionId=zoo_pk_doPkSkill&body={"skillType":"${$.skillCode}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = await getPostRequest(`zoo_pk_doPkSkill`, body);
+      myRequest = getPostRequest(`zoo_pk_doPkSkill`, body);
       break;
     case 'pkHelp':
       body = getPostBody(type);
-      myRequest = await getPostRequest(`zoo_pk_assistGroup`, body);
+      myRequest = getPostRequest(`zoo_pk_assistGroup`, body);
       break;
     case 'zoo_getSignHomeData':
       body = `functionId=zoo_getSignHomeData&body={"notCount":"1"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = await getPostRequest(`zoo_getSignHomeData`, body);
+      myRequest = getPostRequest(`zoo_getSignHomeData`, body);
       break;
     case 'zoo_sign':
       body = `functionId=zoo_sign&body={}&client=wh5&clientVersion=1.0.0`;
-      myRequest = await getPostRequest(`zoo_sign`, body);
+      myRequest = getPostRequest(`zoo_sign`, body);
       break;
     case 'wxTaskDetail':
       body = `functionId=zoo_getTaskDetail&body={"appSign":"2","channel":1,"shopSign":""}&client=wh5&clientVersion=1.0.0`;
-      myRequest = await getPostRequest(`zoo_getTaskDetail`, body);
+      myRequest = getPostRequest(`zoo_getTaskDetail`, body);
       break;
     case 'zoo_shopLotteryInfo':
       body = `functionId=zoo_shopLotteryInfo&body={"shopSign":"${$.shopSign}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = await getPostRequest(`zoo_shopLotteryInfo`, body);
+      myRequest = getPostRequest(`zoo_shopLotteryInfo`, body);
       break;
     case 'zoo_bdCollectScore':
       body = getPostBody(type);
-      myRequest = await getPostRequest(`zoo_bdCollectScore`, body);
+      myRequest = getPostRequest(`zoo_bdCollectScore`, body);
       break;
     case 'qryCompositeMaterials':
       body = `functionId=qryCompositeMaterials&body={"qryParam":"[{\\"type\\":\\"advertGroup\\",\\"mapTo\\":\\"resultData\\",\\"id\\":\\"05371960\\"}]","activityId":"2s7hhSTbhMgxpGoa9JDnbDzJTaBB","pageId":"","reqSrc":"","applyKey":"jd_star"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = await getPostRequest(`qryCompositeMaterials`, body);
+      myRequest = getPostRequest(`qryCompositeMaterials`, body);
       break;
     case 'zoo_boxShopLottery':
       body = `functionId=zoo_boxShopLottery&body={"shopSign":"${$.shopSign}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = await getPostRequest(`zoo_boxShopLottery`, body);
+      myRequest = getPostRequest(`zoo_boxShopLottery`, body);
       break;
     case `zoo_wishShopLottery`:
       body = `functionId=zoo_wishShopLottery&body={"shopSign":"${$.shopSign}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = await getPostRequest(`zoo_boxShopLottery`, body);
+      myRequest = getPostRequest(`zoo_boxShopLottery`, body);
       break;
     case `zoo_myMap`:
       body = `functionId=zoo_myMap&body={}&client=wh5&clientVersion=1.0.0`;
-      myRequest = await getPostRequest(`zoo_myMap`, body);
+      myRequest = getPostRequest(`zoo_myMap`, body);
       break;
     case 'zoo_getWelfareScore':
       body = getPostBody(type);
-      myRequest = await getPostRequest(`zoo_getWelfareScore`, body);
+      myRequest = getPostRequest(`zoo_getWelfareScore`, body);
       break;
     case 'jdjrTaskDetail':
       body = `reqData={"eid":"","sdkToken":"jdd014JYKVE2S6UEEIWPKA4B5ZKBS4N6Y6X5GX2NXL4IYUMHKF3EEVK52RQHBYXRZ67XWQF5N7XB6Y2YKYRTGQW4GV5OFGPDPFP3MZINWG2A01234567"}`;
-      myRequest = await getPostRequest(`listTask`, body);
+      myRequest = getPostRequest(`listTask`, body);
       break;
     case 'jdjrAcceptTask':
       body = `reqData={"eid":"","sdkToken":"jdd014JYKVE2S6UEEIWPKA4B5ZKBS4N6Y6X5GX2NXL4IYUMHKF3EEVK52RQHBYXRZ67XWQF5N7XB6Y2YKYRTGQW4GV5OFGPDPFP3MZINWG2A01234567","id":"${$.taskId}"}`;
-      myRequest = await getPostRequest(`acceptTask`, body);
+      myRequest = getPostRequest(`acceptTask`, body);
       break;
     case 'add_car':
       body = getPostBody(type);
-      myRequest = await getPostRequest(`zoo_collectScore`, body);
+      myRequest = getPostRequest(`zoo_collectScore`, body);
       break;
     default:
+      $.error = `takePostRequest 错误${type}`
       console.log(`错误${type}`);
   }
-  return new Promise(async resolve => {
-    $.post(myRequest, (err, resp, data) => {
-      try {
-        //console.log(data);
-        dealReturn(type, data);
-      } catch (e) {
-        $.logErr(e, resp)
-      } finally {
-        resolve();
-      }
-    })
-  })
+
+  $.request = myRequest
+  $.CryptoJS = null
+  document.write(JSON.stringify($))
 }
 
 // 获取请求信息
-async function getPostRequest (type, body) {
+function getPostRequest (type, body) {
   let url = JD_API_HOST + type;
   if (type === 'listTask' || type === 'acceptTask') {
     url = `https://ms.jr.jd.com/gw/generic/hy/h5/m/${type}`;
@@ -226,7 +221,7 @@ async function getPostRequest (type, body) {
     'Content-Type': `application/x-www-form-urlencoded`,
     'Host': `api.m.jd.com`,
     'Connection': `keep-alive`,
-    'User-Agent': $.isNode() ? (process.env.JD_USER_AGENT ? process.env.JD_USER_AGENT : (require('./USER_AGENTS').USER_AGENT)) : ($.getdata('JDUA') ? $.getdata('JDUA') : "jdapp;iPhone;10.0.6;14.4;0bcbcdb2a68f16cf9c9ad7c9b944fd141646a849;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1"),
+    'User-Agent': $.UA || "jdapp;iPhone;10.0.6;14.4;0bcbcdb2a68f16cf9c9ad7c9b944fd141646a849;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
     'Referer': `https://h5.m.jd.com`,
     'Accept-Language': `zh-cn`
   };
@@ -253,7 +248,7 @@ function getPostBody (type) {
 }
 
 // 处理返回信息
-async function dealReturn (type, data) {
+function dealReturn (type, data) {
   try {
     data = JSON.parse(data);
   } catch (e) {
@@ -261,9 +256,9 @@ async function dealReturn (type, data) {
     return;
   }
   switch (type) {
-    case 'zoo_signSingle':
-      if (data.code === 0) $.signSingle = data.data
-      break;
+    // case 'zoo_signSingle':
+    //   if (data.code === 0) $.signSingle = data.data
+    //   break;
     case 'funny_getHomeData':
       if (data?.data?.bizCode === 0) {
         $.homeData = data.data;
