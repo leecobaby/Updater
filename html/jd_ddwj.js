@@ -117,6 +117,7 @@ function oneActivityInfo () {
     return
   }
 
+  $.taskId = $.oneTask.taskId;
   $.callbackInfo = {};
   $.message = `做任务：${$.oneActivityInfo.skuName || $.oneActivityInfo.taskName || $.oneActivityInfo.title || $.oneActivityInfo.shopName} 等待完成...`
   $.callback = 'Func.request'
@@ -166,7 +167,7 @@ function oneActivityInfo () {
 //领取奖励
 function callbackResult (type) {
   let url = JD_API_HOST + type;
-  let body = `functionId=funny_collectScore&body={"taskId":${taskid},"taskToken":"${token}","ss":"{\"extraData\":{\"log\":\"\",\"sceneid\":\"HWJhPageh5\"},\"secretp\":\"${secretp}\",\"random\":\"43136926\"}","actionType":0}&client=wh5&clientVersion=1.0.0&uuid=0bcbcdb2a68f16cf9c9ad7c9b944fd141646a849&appid=o2_act`
+  let body = `functionId=funny_collectScore&body={"taskId":${taskid},"taskToken":"${token}","ss":"{\\"extraData\\":{\\"log\\":\\"\\",\\"sceneid\\":\\"HWJhPageh5\\"},\\"secretp\\":\\"${secretp}\\",\\"random\\":\\"43136926\\"}","actionType":0}&client=wh5&clientVersion=1.0.0&uuid=0bcbcdb2a68f16cf9c9ad7c9b944fd141646a849&appid=o2_act`
   let method = 'POST'
   let headers = {
     'Origin': `https://h5.m.jd.com`,
@@ -217,7 +218,7 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`funny_getTaskDetail`, body);
       break;
     case 'funny_collectScore':
-      body = `functionId=funny_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\"extraData\":{\"log\":\"\",\"sceneid\":\"HWJhPageh5\"},\"secretp\":\"${$.secretp}\",\"random\":\"43136926\"}","actionType":1}&client=wh5&clientVersion=1.0.0&uuid=0bcbcdb2a68f16cf9c9ad7c9b944fd141646a849&appid=o2_act`;
+      body = `functionId=funny_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"\\",\\"sceneid\\":\\"HWJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"43136926\\"}","actionType":1}&client=wh5&clientVersion=1.0.0&uuid=0bcbcdb2a68f16cf9c9ad7c9b944fd141646a849&appid=o2_act`;
       myRequest = getPostRequest(`funny_collectScore`, body);
       break;
     case 'zoo_raise':
