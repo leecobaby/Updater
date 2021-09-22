@@ -65,6 +65,7 @@ function doTask () {
 
   // 利用队列取代循环
   $.oneTask = $.taskList.shift()
+  $.taskId = $.oneTask?.taskId;
   if (!$.oneTask) {
     // 循环完成重新设置 to,call
     $.to = '', $.call.pop()
@@ -117,7 +118,7 @@ function oneActivityInfo () {
     return
   }
 
-  $.taskId = $.oneTask.taskId;
+  $.taskToken = $.oneActivityInfo.taskToken
   $.callbackInfo = {};
   $.message = `做任务：${$.oneActivityInfo.skuName || $.oneActivityInfo.taskName || $.oneActivityInfo.title || $.oneActivityInfo.shopName} 等待完成...`
   $.callback = 'Func.request'
