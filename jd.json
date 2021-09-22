@@ -505,30 +505,7 @@
         "signUrl": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_zoo/jdSign3.js"
       }
     },
-    "codeList": [
-      "zoo_function",
-      "add_car_next",
-      "oneActivityInfo_next_next",
-      "oneActivityInfo_next",
-      "zoo_collectProduceScore_next",
-      "zoo_getFeedDetail_next",
-      "zoo_getHomeData_next",
-      "zoo_getSignHomeData_next",
-      "zoo_getTaskDetail_next",
-      "zoo_raise_next",
-      "zoo_sign_next",
-      "zoo_signSingle_next",
-      "doMapShopTask_next_next",
-      "doMapShopTask_next",
-      "getMapTaskDetail_next",
-      "qryCompositeMaterials_next",
-      "zoo_bdCollectScore_next",
-      "zoo_boxShopLottery_next",
-      "zoo_getWelfareScore_next",
-      "zoo_shopLotteryInfo_next",
-      "help_next",
-      "getToken_next"
-    ]
+    "codeList": ["funny_getHomeData"]
   },
   "share": {
     "🔥 每日抢红包": "openapp.jdmobile://virtual?params={\"des\":\"m\",\"category\":\"jump\",\"url\":\"https://u.jd.com/8v5igcb\"}"
