@@ -9,10 +9,10 @@
 // 到指令里运行需要注释掉
 // const $ = {}
 
-$.inviteList = [];
-$.pkInviteList = [];
-$.secretpInfo = {};
-$.innerPkInviteList = [];
+// $.inviteList = [];
+// $.pkInviteList = [];
+// $.secretpInfo = {};
+// $.innerPkInviteList = [];
 
 let JD_API_HOST = `https://api.m.jd.com/client.action?advId=`;
 
@@ -237,12 +237,6 @@ function getPostBody (type) {
 
 // 处理返回信息
 function dealReturn (type, data) {
-  try {
-    data = JSON.parse(data);
-  } catch (e) {
-    console.log(`返回异常：${data}`);
-    return;
-  }
   switch (type) {
     // case 'zoo_signSingle':
     //   if (data.code === 0) $.signSingle = data.data
