@@ -505,7 +505,12 @@
         "signUrl": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_zoo/jdSign3.js"
       }
     },
-    "codeList": ["funny_getHomeData_next"]
+    "codeList": [
+      "funny_getHomeData_next",
+      "funny_getTaskDetail_next",
+      "oneActivityInfo_next",
+      "oneActivityInfo_next_next"
+    ]
   },
   "share": {
     "🔥 每日抢红包": "openapp.jdmobile://virtual?params={\"des\":\"m\",\"category\":\"jump\",\"url\":\"https://u.jd.com/8v5igcb\"}"

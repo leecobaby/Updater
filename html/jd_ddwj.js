@@ -45,26 +45,144 @@ function funny_getHomeData () {
   console.log($.message);
 }
 
+// 获取任务列表
+function funny_getTaskDetail () {
+  $.callback = 'Func.request'
+  takePostRequest('funny_getTaskDetail');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('funny_getTaskDetail', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 做主任务
+function doTask () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler'
+  $.call = ['doTask']
+
+  // 利用队列取代循环
+  $.oneTask = $.taskList.shift()
+  if (!$.oneTask) {
+    // 循环完成重新设置 to,call
+    $.to = '', $.call.pop()
+    document.write(JSON.stringify($))
+    return
+  }
+
+  if ([1, 3, 5, 7, 9, 26].includes($.oneTask.taskType) && $.oneTask.status === 1) {
+    $.activityInfoList = $.oneTask.shoppingActivityVos || $.oneTask.brandMemberVos || $.oneTask.followShopVo || $.oneTask.browseShopVo;
+    $.activityInfoList.time = 30 // 最大次数
+
+    oneActivityInfo()
+
+  }
+
+  // 加购物车
+  if ($.oneTask.taskType === 2 && $.oneTask.status === 1 && !$.oneTask.taskName.includes("逛逛")) {
+
+    zoo_getFeedDetail()
+
+  } else if ($.oneTask.taskType === 2 && $.oneTask.status === 1 && $.oneTask.taskName.includes("逛逛")) {
+
+    $.activityInfoList = $.oneTask.productInfoVos
+    $.activityInfoList.time = 30
+    oneActivityInfo()
+
+  }
+
+  !document.body.innerText && document.write(JSON.stringify($))
+}
+
+//  处理任务列表单类型任务
+function oneActivityInfo () {
+  // 循环逻辑单独设置 to,call  嵌套调用里面用数组形式 push
+  $.to = 'Func.logicHandler';
+  ($.call[$.call.length - 1] == 'oneActivityInfo') || $.call.push('oneActivityInfo')
+
+  // 利用队列取代循环
+  $.oneActivityInfo = $.activityInfoList.shift()
+  if (!$.oneActivityInfo || --$.activityInfoList.time <= 0) {
+    // 循环完成重新设置 call
+    $.call.pop()
+    document.write(JSON.stringify($))
+    return
+  }
+
+  // 做过的任务则跳过重新执行 oneActivityInfo()
+  if ($.oneActivityInfo?.status !== 1 || !$.oneActivityInfo?.taskToken) {
+    document.write(JSON.stringify($))
+    return
+  }
+
+  $.callbackInfo = {};
+  $.message = `做任务：${$.oneActivityInfo.skuName || $.oneActivityInfo.taskName || $.oneActivityInfo.title || $.oneActivityInfo.shopName} 等待完成...`
+  $.callback = 'Func.request'
+  takePostRequest('funny_collectScore');
+  console.log($.message);
+  return
+
+  // next 
+  $.callback = ''
+  dealReturn('funny_collectScore', $.data)
+  if ($.callbackInfo.code === 0 && $.callbackInfo.data?.result?.taskToken) {
+
+    // 等待 8s
+    $.wait = 8
+    $.next = 1 // 覆盖前面的 0
+    $.callback = 'Func.request'
+    callbackResult('funny_collectScore')
+    // return
+    // 这里的逻辑是在 next 里面的，而 next 不是一个函数，所以不能使用 return 来中断
+
+    // 对于 next next 这种嵌套需要单独隔离，只在运行到的时候调用，判断是否有页面内容为好的方式
+    // next next
+    if (!document.body.innerText) {
+      $.callback = ''
+      $.wait = 1
+      $.success = 1
+      $.message = `完成任务： ${$.data.result?.successToast}`
+      console.log($.message)
+      document.write(JSON.stringify($))
+    }
+
+  } else if ([2, 3, 5, 26].includes($.oneTask.taskType)) {
+    $.success = 1
+    $.message = `任务完成`
+    console.log($.message);
+    document.write(JSON.stringify($))
+  } else if ($.callbackInfo.data?.bizCode === -1002) {
+    $.hotFlag = true;
+    $.error = `oneActivityInfo ${$.oneTask.taskId} 任务失败，此接口失效可尝试去指令设置切换UA，再次运行~`
+    document.write(JSON.stringify($))
+  } else {
+    $.error = `oneActivityInfo ${$.oneTask.taskId} 任务失败，未知错误等待修复`
+    document.write(JSON.stringify($))
+  }
+}
 
 //领取奖励
-function callbackResult (info) {
-  let url = `https://api.m.jd.com/?functionId=qryViewkitCallbackResult&client=wh5&clientVersion=1.0.0&body=${info}&_timestamp=` + Date.now()
-  let method = 'GET'
+function callbackResult (type) {
+  let url = JD_API_HOST + type;
+  let body = `functionId=funny_collectScore&body={"taskId":${taskid},"taskToken":"${token}","ss":"{\"extraData\":{\"log\":\"\",\"sceneid\":\"HWJhPageh5\"},\"secretp\":\"${secretp}\",\"random\":\"43136926\"}","actionType":0}&client=wh5&clientVersion=1.0.0&uuid=0bcbcdb2a68f16cf9c9ad7c9b944fd141646a849&appid=o2_act`
+  let method = 'POST'
   let headers = {
-    'Origin': `https://bunearth.m.jd.com`,
+    'Origin': `https://h5.m.jd.com`,
     'Cookie': $.cookie,
     'Connection': `keep-alive`,
-    'Accept': `*/*`,
-    'Host': `api.m.jd.com`,
-    'User-Agent': $.UA || "Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.5(0x18000528) NetType/WIFI Language/zh_CN",
+    'Accept': `application/json, text/plain, */*`,
     'Accept-Encoding': `gzip, deflate, br`,
+    'Host': `api.m.jd.com`,
+    'Content-Type': `application/x-www-form-urlencoded`,
+    'User-Agent': $.UA || "jdapp;iPhone;10.0.6;14.4;0bcbcdb2a68f16cf9c9ad7c9b944fd141646a849;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
     'Accept-Language': `zh-cn`,
-    'Content-Type': 'application/x-www-form-urlencoded',
-    'Referer': 'https://bunearth.m.jd.com'
+    'Referer': 'https://h5.m.jd.com'
   }
 
 
-  $.request = { url, method, headers }
+  $.request = { url, method, headers, body }
   document.write(JSON.stringify($))
 }
 
@@ -94,14 +212,13 @@ function takePostRequest (type) {
       body = `functionId=zoo_getFeedDetail&body={"taskId":"${$.taskId}"}&client=wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`zoo_getFeedDetail`, body);
       break;
-    case 'zoo_getTaskDetail':
-      body = `functionId=zoo_getTaskDetail&body={}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getPostRequest(`zoo_getTaskDetail`, body);
+    case 'funny_getTaskDetail':
+      body = `functionId=funny_getTaskDetail&body={"taskId":"","appSign":"1"}&client=wh5&clientVersion=1.0.0&uuid=0bcbcdb2a68f16cf9c9ad7c9b944fd141646a849&appid=o2_act`;
+      myRequest = getPostRequest(`funny_getTaskDetail`, body);
       break;
-    case 'zoo_collectScore':
-      body = getPostBody(type);
-      //console.log(body);
-      myRequest = getPostRequest(`zoo_collectScore`, body);
+    case 'funny_collectScore':
+      body = `functionId=funny_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\"extraData\":{\"log\":\"\",\"sceneid\":\"HWJhPageh5\"},\"secretp\":\"${$.secretp}\",\"random\":\"43136926\"}","actionType":1}&client=wh5&clientVersion=1.0.0&uuid=0bcbcdb2a68f16cf9c9ad7c9b944fd141646a849&appid=o2_act`;
+      myRequest = getPostRequest(`funny_collectScore`, body);
       break;
     case 'zoo_raise':
       body = `functionId=zoo_raise&body={}&client=wh5&clientVersion=1.0.0`;
@@ -110,7 +227,7 @@ function takePostRequest (type) {
     case 'help':
       body = getPostBody(type);
       //console.log(body);
-      myRequest = getPostRequest(`zoo_collectScore`, body);
+      myRequest = getPostRequest(`funny_collectScore`, body);
       break;
     case 'zoo_pk_getHomeData':
       body = `functionId=zoo_pk_getHomeData&body={}&client=wh5&clientVersion=1.0.0`;
@@ -142,8 +259,8 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`zoo_sign`, body);
       break;
     case 'wxTaskDetail':
-      body = `functionId=zoo_getTaskDetail&body={"appSign":"2","channel":1,"shopSign":""}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getPostRequest(`zoo_getTaskDetail`, body);
+      body = `functionId=funny_getTaskDetail&body={"appSign":"2","channel":1,"shopSign":""}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`funny_getTaskDetail`, body);
       break;
     case 'zoo_shopLotteryInfo':
       body = `functionId=zoo_shopLotteryInfo&body={"shopSign":"${$.shopSign}"}&client=wh5&clientVersion=1.0.0`;
@@ -183,7 +300,7 @@ function takePostRequest (type) {
       break;
     case 'add_car':
       body = getPostBody(type);
-      myRequest = getPostRequest(`zoo_collectScore`, body);
+      myRequest = getPostRequest(`funny_collectScore`, body);
       break;
     default:
       $.error = `takePostRequest 错误${type}`
@@ -220,7 +337,7 @@ function getPostRequest (type, body) {
 function getPostBody (type) {
   let taskBody = '';
   if (type === 'help') {
-    taskBody = `functionId=zoo_collectScore&body=${JSON.stringify({ "taskId": 2, "inviteId": $.inviteId, "actionType": 1, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`
+    taskBody = `functionId=funny_collectScore&body=${JSON.stringify({ "taskId": 2, "inviteId": $.inviteId, "actionType": 1, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`
   } else if (type === 'pkHelp') {
     taskBody = `functionId=zoo_pk_assistGroup&body=${JSON.stringify({ "confirmFlag": 1, "inviteId": $.pkInviteId, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`;
   } else if (type === 'zoo_collectProduceScore') {
@@ -228,7 +345,7 @@ function getPostBody (type) {
   } else if (type === 'zoo_getWelfareScore') {
     taskBody = `functionId=zoo_getWelfareScore&body=${JSON.stringify({ "type": 2, "currentScence": $.currentScence, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`;
   } else if (type === 'add_car') {
-    taskBody = `functionId=zoo_collectScore&body=${JSON.stringify({ "taskId": $.taskId, "taskToken": $.taskToken, "actionType": 1, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`
+    taskBody = `functionId=funny_collectScore&body=${JSON.stringify({ "taskId": $.taskId, "taskToken": $.taskToken, "actionType": 1, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`
   } else {
     taskBody = `functionId=${type}&body=${JSON.stringify({ "taskId": $.oneTask.taskId, "actionType": 1, "taskToken": $.oneActivityInfo.taskToken, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`
   }
@@ -266,21 +383,16 @@ function dealReturn (type, data) {
         console.log(`该账户脚本执行任务火爆，暂停执行任务，请手动做任务或者等待解决脚本火爆问题`)
       }
       break;
-    case 'zoo_getTaskDetail':
+    case 'funny_getTaskDetail':
       if (data.code === 0) {
-        console.log(`互助码：${data.data.result.inviteId || '助力已满，获取助力码失败'}`);
-        if (data.data.result.inviteId) {
-          $.inviteList.push({
-            'ues': $.UserName,
-            'secretp': $.secretp,
-            'inviteId': data.data.result.inviteId,
-            'max': false
-          });
-        }
+        $.success = 1
+        $.message = `好友互助码:\n${data.data?.result?.inviteId || '助力已满，获取助力码失败'}`
+        console.log($.message);
+        // 这里将来需要做 多账号运行 账号相互之间助力功能
         $.taskList = data.data.result.taskVos;
       }
       break;
-    case 'zoo_collectScore':
+    case 'funny_collectScore':
       $.callbackInfo = data;
       break;
     case 'zoo_raise':
