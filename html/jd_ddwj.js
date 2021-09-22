@@ -48,39 +48,28 @@ function funny_getHomeData () {
 
 //领取奖励
 function callbackResult (info) {
-  return new Promise((resolve) => {
-    let url = {
-      url: `https://api.m.jd.com/?functionId=qryViewkitCallbackResult&client=wh5&clientVersion=1.0.0&body=${info}&_timestamp=` + Date.now(),
-      headers: {
-        'Origin': `https://bunearth.m.jd.com`,
-        'Cookie': $.cookie,
-        'Connection': `keep-alive`,
-        'Accept': `*/*`,
-        'Host': `api.m.jd.com`,
-        'User-Agent': $.isNode() ? (process.env.JD_USER_AGENT ? process.env.JD_USER_AGENT : (require('./USER_AGENTS').USER_AGENT)) : ($.getdata('JDUA') ? $.getdata('JDUA') : "jdapp;iPhone;9.4.4;14.3;network/4g;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1"),
-        'Accept-Encoding': `gzip, deflate, br`,
-        'Accept-Language': `zh-cn`,
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'Referer': 'https://bunearth.m.jd.com'
-      }
-    }
+  let url = `https://api.m.jd.com/?functionId=qryViewkitCallbackResult&client=wh5&clientVersion=1.0.0&body=${info}&_timestamp=` + Date.now()
+  let method = 'GET'
+  let headers = {
+    'Origin': `https://bunearth.m.jd.com`,
+    'Cookie': $.cookie,
+    'Connection': `keep-alive`,
+    'Accept': `*/*`,
+    'Host': `api.m.jd.com`,
+    'User-Agent': $.UA || "Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.5(0x18000528) NetType/WIFI Language/zh_CN",
+    'Accept-Encoding': `gzip, deflate, br`,
+    'Accept-Language': `zh-cn`,
+    'Content-Type': 'application/x-www-form-urlencoded',
+    'Referer': 'https://bunearth.m.jd.com'
+  }
 
-    $.get(url, (err, resp, data) => {
-      try {
-        data = JSON.parse(data);
-        console.log(data.toast.subTitle)
-      } catch (e) {
-        $.logErr(e, resp);
-      } finally {
-        resolve()
-      }
-    })
-  })
+
+  $.request = { url, method, headers }
+  document.write(JSON.stringify($))
 }
 
 // 提交请求信息
 function takePostRequest (type) {
-  $.CryptoJS = CryptoJS
   let body = ``;
   let myRequest = ``;
   switch (type) {
@@ -202,7 +191,6 @@ function takePostRequest (type) {
   }
 
   $.request = myRequest
-  $.CryptoJS = null
   document.write(JSON.stringify($))
 }
 
