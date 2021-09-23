@@ -72,10 +72,10 @@ function help () {
     return
   }
 
-  if ($.friendHelpMax) {
-    document.write(JSON.stringify($))
-    return
-  }
+  // if ($.friendHelpMax) {
+  //   document.write(JSON.stringify($))
+  //   return
+  // }
 
   $.message = `${$.UserName}去助力，对方助力码:\n${$.inviteId}`
   $.callback = 'Func.request'
@@ -100,6 +100,7 @@ function doTask () {
   if (!$.oneTask) {
     // 循环完成重新设置 to,call
     $.to = '', $.call.pop()
+    $.message = `任务已全都完成~`
     document.write(JSON.stringify($))
     return
   }
