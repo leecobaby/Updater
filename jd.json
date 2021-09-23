@@ -455,7 +455,7 @@
     ]
   },
   "JD_ddwj": {
-    "version": "上次数据更新于:9.21.1",
+    "version": "上次数据更新于:9.23.1",
     "pv": "openapp.jdmobile://virtual?params={\"des\":\"m\",\"category\":\"jump\",\"url\":\"https://u.jd.com/rL0I4ld\"}",
     "endJump": "openapp.jdmobile://virtual?params={\"des\":\"m\",\"category\":\"jump\",\"url\":\"https://h5.m.jd.com/babelDiy/Zeus/WpoxUMaPZw14nb3ZydKcvYwG4yA/index.html\"}",
     "pkHelpCode": "IgNWdiLGaPaAqdZqpd0QbcXZFPwE1VfQ9VPl2cARI1KWYjbV1EXeRSxZojc",
@@ -516,6 +516,6 @@
     ]
   },
   "share": {
-    "🔥 每日抢红包": "openapp.jdmobile://virtual?params={\"des\":\"m\",\"category\":\"jump\",\"url\":\"https://u.jd.com/8v5igcb\"}"
+    "🥮 中秋会场": "openapp.jdmobile://virtual?params={\"des\":\"m\",\"category\":\"jump\",\"url\":\"https://u.jd.com/rL0I4ld\"}"
   }
 }
