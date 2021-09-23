@@ -509,7 +509,10 @@
       "funny_getHomeData_next",
       "funny_getTaskDetail_next",
       "oneActivityInfo_next",
-      "oneActivityInfo_next_next"
+      "oneActivityInfo_next_next",
+      "help_next",
+      "funny_getFeedDetail_next",
+      "add_car_next"
     ]
   },
   "share": {

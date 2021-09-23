@@ -57,6 +57,37 @@ function funny_getTaskDetail () {
   document.write(JSON.stringify($))
 }
 
+// 好友助力
+function help () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler'
+  $.call = ['help']
+  $.inviteList = Array.isArray($.inviteList) ? $.inviteList : [$.inviteList]
+
+  $.inviteId = $.inviteList.shift()
+  if (!$.inviteId || $.helpMax) {
+    // 循环完成重新设置 to,call
+    $.to = '', $.call.pop()
+    document.write(JSON.stringify($))
+    return
+  }
+
+  if ($.friendHelpMax) {
+    document.write(JSON.stringify($))
+    return
+  }
+
+  $.message = `${$.UserName}去助力，对方助力码:\n${$.inviteId}`
+  $.callback = 'Func.request'
+  takePostRequest('help');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('help', $.data)
+  document.write(JSON.stringify($))
+}
+
 // 做主任务
 function doTask () {
   // 循环逻辑单独设置 to,call
@@ -84,7 +115,7 @@ function doTask () {
   // 加购物车
   if ($.oneTask.taskType === 2 && $.oneTask.status === 1 && !$.oneTask.taskName.includes("逛逛")) {
 
-    zoo_getFeedDetail()
+    funny_getFeedDetail()
 
   } else if ($.oneTask.taskType === 2 && $.oneTask.status === 1 && $.oneTask.taskName.includes("逛逛")) {
 
@@ -188,6 +219,60 @@ function callbackResult (type) {
   document.write(JSON.stringify($))
 }
 
+// 处理购物车任务信息
+function funny_getFeedDetail () {
+  // 嵌套调用里面用数组形式 push
+  $.to = 'Func.logicHandler';
+  $.call.push('funny_getFeedDetail')
+
+  $.feedDetailInfo = {};
+  $.callback = 'Func.request'
+  $.message = `做任务：${$.oneTask.taskName} 等待完成...`
+  takePostRequest('funny_getFeedDetail');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('funny_getFeedDetail', $.data)
+  $.productList = $.feedDetailInfo.productInfoVos;
+  $.needTime = Number($.feedDetailInfo.maxTimes) - Number($.feedDetailInfo.times);
+  $.call.pop()
+  $.next = 0 // 衔接下一个函数前，重置 next 防止获取 next 失败
+  add_car()
+}
+
+// 加购物车
+function add_car () {
+  // 循环逻辑单独设置 to,call  嵌套调用里面用数组形式 push
+  $.to = 'Func.logicHandler'
+  $.call[$.call.length - 1] == 'add_car' || $.call.push('add_car')
+
+  $.addCarInfo = $.productList.shift()
+  if ($.needTime <= 0) {
+    // 循环完成重新设置 to,call
+    $.call.pop()
+    document.write(JSON.stringify($))
+    return
+  }
+
+  if ($.addCarInfo.status !== 1) {
+    document.write(JSON.stringify($))
+    return
+  }
+
+  $.taskToken = $.addCarInfo.taskToken;
+  $.needTime--;
+  $.message = `加购：${$.addCarInfo.skuName}`
+  $.callback = 'Func.request'
+  takePostRequest('add_car');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('add_car', $.data)
+  document.write(JSON.stringify($))
+}
+
 // 提交请求信息
 function takePostRequest (type) {
   let body = ``;
@@ -210,9 +295,9 @@ function takePostRequest (type) {
       // console.log(body);
       myRequest = getPostRequest(`zoo_collectProduceScore`, body);
       break;
-    case 'zoo_getFeedDetail':
-      body = `functionId=zoo_getFeedDetail&body={"taskId":"${$.taskId}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getPostRequest(`zoo_getFeedDetail`, body);
+    case 'funny_getFeedDetail':
+      body = `functionId=funny_getFeedDetail&body={"taskId":"${$.taskId}"}&client=wh5&clientVersion=1.0.0&appid=o2_act`;
+      myRequest = getPostRequest(`funny_getFeedDetail`, body);
       break;
     case 'funny_getTaskDetail':
       body = `functionId=funny_getTaskDetail&body={"taskId":"","appSign":"1"}&client=wh5&clientVersion=1.0.0&uuid=0bcbcdb2a68f16cf9c9ad7c9b944fd141646a849&appid=o2_act`;
@@ -227,8 +312,7 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`zoo_raise`, body);
       break;
     case 'help':
-      body = getPostBody(type);
-      //console.log(body);
+      body = `functionId=funny_collectScore&body={"ss":"{\\"extraData\\":{\\"log\\":\\"\\",\\"sceneid\\":\\"HWJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"69009870\\"}","inviteId":"${$.inviteId}","isCommonDealError":true}&client=wh5&clientVersion=1.0.0&uuid=0bcbcdb2a68f16cf9c9ad7c9b944fd141646a849&appid=o2_act`;
       myRequest = getPostRequest(`funny_collectScore`, body);
       break;
     case 'zoo_pk_getHomeData':
@@ -301,7 +385,7 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`acceptTask`, body);
       break;
     case 'add_car':
-      body = getPostBody(type);
+      body = `functionId=funny_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"\\",\\"sceneid\\":\\"HWJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"43136926\\"}","actionType":1}&client=wh5&clientVersion=1.0.0&uuid=0bcbcdb2a68f16cf9c9ad7c9b944fd141646a849&appid=o2_act`;
       myRequest = getPostRequest(`funny_collectScore`, body);
       break;
     default:
@@ -403,27 +487,27 @@ function dealReturn (type, data) {
     case 'help':
     case 'pkHelp':
       //console.log(data);
-      switch (data.data.bizCode) {
+      switch (data.data?.bizCode) {
         case 0:
-          console.log(`助力成功`);
+          $.message = `助力成功`
           break;
         case -201:
-          console.log(`助力已满`);
-          $.oneInviteInfo.max = true;
+          $.message = `助力已满`
+          $.friendHelpMax = true;
           break;
         case -202:
-          console.log(`已助力`);
+          $.message = `已经助力过该好友`
           break;
         case -8:
-          console.log(`已经助力过该队伍`);
+          $.message = `已经助力过该队伍`
           break;
         case -6:
         case 108:
-          console.log(`助力次数已用光`);
-          $.canHelp = false;
+          $.message = `助力次数已用光`
+          $.helpMax = true;
           break;
         default:
-          console.log(`怪兽大作战助力失败：${JSON.stringify(data)}`);
+          $.message = `助力失败：${JSON.stringify(data)}`
       }
       break;
     case 'zoo_pk_getHomeData':
@@ -438,7 +522,7 @@ function dealReturn (type, data) {
         $.pkTaskList = data.data.result.taskVos;
       }
       break;
-    case 'zoo_getFeedDetail':
+    case 'funny_getFeedDetail':
       if (data.code === 0) {
         $.feedDetailInfo = data.data.result.addProductVos[0];
       }
@@ -534,15 +618,14 @@ function dealReturn (type, data) {
       break;
     case 'add_car':
       if (data.code === 0) {
-        let acquiredScore = data.data.result.acquiredScore;
+        let acquiredScore = data.data?.result?.acquiredScore;
         if (Number(acquiredScore) > 0) {
-          console.log(`加购成功,获得金币:${acquiredScore}`);
+          $.message = `加购成功,获得金币:${acquiredScore}`
         } else {
-          console.log(`加购成功`);
+          $.message = `加购成功`
         }
       } else {
-        console.log(JSON.stringify(data));
-        console.log(`加购失败`);
+        $.error = `加购失败`
       }
       break
     default:
