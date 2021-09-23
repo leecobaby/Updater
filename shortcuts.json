@@ -414,15 +414,15 @@
     }
   },
   "JD_ddwj": {
-    "version": "1.0",
-    "update_log": "- 采用 本地运行模式，保障所有隐私\n- 实现 自动做主任务，自动助力\n- 更新 Cookie 获取方式\n- 暂不支持 助力池，AutoBox",
+    "version": "1.1",
+    "update_log": "- 修复 账号无限过期死循环",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_ddwj#版本日志"
     },
     "help": "",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/b1a8ed6ff2174d20a0fb3117570ee3c4",
+    "update": "https://www.icloud.com/shortcuts/2f9f2e6be6914cba8507c51ddf8afa62",
     "notice": "初代版本做的部分功能未完善，没有完成的可以多运行几次指令~持续更新中...",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-东东玩家&input=text&text=task",
