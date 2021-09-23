@@ -181,7 +181,7 @@ function oneActivityInfo () {
       document.write(JSON.stringify($))
     }
 
-  } else if ([2, 3, 5, 26].includes($.oneTask.taskType)) {
+  } else if ([1, 2, 3, 5, 26].includes($.oneTask.taskType)) {
     $.success = 1
     $.message = `任务完成`
     console.log($.message);
