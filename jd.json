@@ -460,6 +460,7 @@
     "endJump": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https%3A%2F%2Fh5.m.jd.com%2FbabelDiy%2FZeus%2FWpoxUMaPZw14nb3ZydKcvYwG4yA%2Findex.html%22%7D",
     "pkHelpCode": "IgNWdiLGaPaAqdZqpd0QbcXZFPwE1VfQ9VPl2cARI1KWYjbV1EXeRSxZojc",
     "codeUrl": {
+      "CryptoJS": "https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.js",
       "JD_ddwj": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_ddwj.js"
     },
     "api": {
@@ -493,16 +494,16 @@
     },
     "uaInfo": {
       "UA1": {
-        "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.5(0x18000528) NetType/WIFI Language/zh_CN",
-        "signUrl": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_zoo/jdSign1.js"
+        "ua": "jdapp;iPhone;10.0.6;14.4;0bcbcdb2a68f16cf9c9ad7c9b944fd141646a849;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
+        "signUrl": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_ddwj/jdSign1.js"
       },
       "UA2": {
         "ua": "jdapp;iPhone;10.0.6;14.4;0bcbcdb2a68f16cf9c9ad7c9b944fd141646a849;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
-        "signUrl": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_zoo/jdSign2.js"
+        "signUrl": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_ddwj/jdSign2.js"
       },
       "UA3": {
         "ua": "jdapp;iPhone;9.2.0;14.1;",
-        "signUrl": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_zoo/jdSign3.js"
+        "signUrl": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_ddwj/jdSign2.js"
       }
     },
     "codeList": [
