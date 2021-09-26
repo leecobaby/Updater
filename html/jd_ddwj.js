@@ -199,7 +199,7 @@ function oneActivityInfo () {
 
 //领取奖励
 function callbackResult (type) {
-  let { log, random } = $.signList.shift() || {}
+  let { log, random } = $.signList?.shift() || {}
   let url = JD_API_HOST + type;
   let body = `functionId=funny_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HWJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","actionType":0}&client=wh5&clientVersion=1.0.0&uuid=c67093f5dd58d33fc5305cdc61e46a9741e05c5b&appid=o2_act`
   let method = 'POST'
@@ -277,7 +277,7 @@ function add_car () {
 
 // 提交请求信息
 function takePostRequest (type) {
-  let { log, random } = $.signList.shift() || {}
+  let { log, random } = $.signList?.shift() || {}
   let body = ``;
   let myRequest = ``;
   switch (type) {
