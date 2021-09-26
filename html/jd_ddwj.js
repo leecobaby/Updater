@@ -199,8 +199,9 @@ function oneActivityInfo () {
 
 //领取奖励
 function callbackResult (type) {
+  let { log, random } = $.signList.shift()
   let url = JD_API_HOST + type;
-  let body = `functionId=funny_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"\\",\\"sceneid\\":\\"HWJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"43136926\\"}","actionType":0}&client=wh5&clientVersion=1.0.0&uuid=0bcbcdb2a68f16cf9c9ad7c9b944fd141646a849&appid=o2_act`
+  let body = `functionId=funny_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HWJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","actionType":0}&client=wh5&clientVersion=1.0.0&uuid=0bcbcdb2a68f16cf9c9ad7c9b944fd141646a849&appid=o2_act`
   let method = 'POST'
   let headers = {
     'Origin': `https://h5.m.jd.com`,
@@ -276,6 +277,7 @@ function add_car () {
 
 // 提交请求信息
 function takePostRequest (type) {
+  let { log, random } = $.signList.shift()
   let body = ``;
   let myRequest = ``;
   switch (type) {
@@ -305,7 +307,7 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`funny_getTaskDetail`, body);
       break;
     case 'funny_collectScore':
-      body = `functionId=funny_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"\\",\\"sceneid\\":\\"HWJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"43136926\\"}","actionType":1}&client=wh5&clientVersion=1.0.0&uuid=0bcbcdb2a68f16cf9c9ad7c9b944fd141646a849&appid=o2_act`;
+      body = `functionId=funny_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"${log}\\":\\"\\",\\"sceneid\\":\\"HWJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","actionType":1}&client=wh5&clientVersion=1.0.0&uuid=0bcbcdb2a68f16cf9c9ad7c9b944fd141646a849&appid=o2_act`;
       myRequest = getPostRequest(`funny_collectScore`, body);
       break;
     case 'zoo_raise':
@@ -313,7 +315,7 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`zoo_raise`, body);
       break;
     case 'help':
-      body = `functionId=funny_collectScore&body={"ss":"{\\"extraData\\":{\\"log\\":\\"\\",\\"sceneid\\":\\"HWJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"69009870\\"}","inviteId":"${$.inviteId}","isCommonDealError":true}&client=wh5&clientVersion=1.0.0&uuid=0bcbcdb2a68f16cf9c9ad7c9b944fd141646a849&appid=o2_act`;
+      body = `functionId=funny_collectScore&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HWJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"${$.inviteId}","isCommonDealError":true}&client=wh5&clientVersion=1.0.0&uuid=0bcbcdb2a68f16cf9c9ad7c9b944fd141646a849&appid=o2_act`;
       myRequest = getPostRequest(`funny_collectScore`, body);
       break;
     case 'zoo_pk_getHomeData':
@@ -386,7 +388,7 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`acceptTask`, body);
       break;
     case 'add_car':
-      body = `functionId=funny_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"\\",\\"sceneid\\":\\"HWJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"43136926\\"}","actionType":1}&client=wh5&clientVersion=1.0.0&uuid=0bcbcdb2a68f16cf9c9ad7c9b944fd141646a849&appid=o2_act`;
+      body = `functionId=funny_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HWJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","actionType":1}&client=wh5&clientVersion=1.0.0&uuid=0bcbcdb2a68f16cf9c9ad7c9b944fd141646a849&appid=o2_act`;
       myRequest = getPostRequest(`funny_collectScore`, body);
       break;
     default:
