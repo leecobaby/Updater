@@ -349,6 +349,7 @@
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=AutoBox&input=text&text=",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-bot.png",
+    "ios15-image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/ios15-image.jpeg",
     "submit": "https://gitee.com/leecogit/auto-box/issues/new",
     "tip": {
       "hongbao": "",
