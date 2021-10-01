@@ -507,8 +507,8 @@
           "联盟红包-饿了么": "eleme://web?url=https%3A%2F%2Fh5.ele.me%2Fant%2Fqrcode%3Fopen_type%3Dminiapp%26url_id%3D35%26inviterId%3D74f86c%26_ltracker_f%3Dtjyj2_app_grzx2"
         }
       },
-      "🧧 现金红包-10.3开抢": "taobao://m.tb.cn/h.4PLy7zj",
-      "🧧 支付宝现金红包": "alipays://platformapi/startapp?appId=20001003&appClearTop=false&startMultApp=YES&actionSrc=hometab&frontFeed=true&recordHistory=true&requestType=hotwrd_ranking&keyword=711748321"
+      "🧧 现金红包 - 10.3开抢": "taobao://m.tb.cn/h.4PLy7zj",
+      "🧧 支付宝现金红包 - 每天领": "alipays://platformapi/startapp?appId=20001003&appClearTop=false&startMultApp=YES&actionSrc=hometab&frontFeed=true&recordHistory=true&requestType=hotwrd_ranking&keyword=711748321"
     },
     "more2": {
       "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
