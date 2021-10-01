@@ -359,7 +359,7 @@
   },
   "AutoBox": {
     "version": "1.3",
-    "update_log": "- 增加 计划顶置首页功能\n- 弃用 分享计划功能\n- 修复 ios15 运行的各种 bug\n- 不支持 ios13",
+    "update_log": "- 增加 计划顶置首页功能\n- 弃用 分享计划功能\n- 修复 ios15 运行的各种 bug\n- 不支持 ios13-14",
     "update": "https://www.icloud.com/shortcuts/9680517977b3447e951f5dd1d556474d",
     "about": {
       "tutorials": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox#使用教程",
