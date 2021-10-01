@@ -345,7 +345,7 @@
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/leecobaby/shortcuts",
     "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
-    "notice": "ios13不支持此版本，请去往github下载旧版，修改版本号防止更新~",
+    "notice": "ios13-14不支持此版本，旧系统请不要更新，修改版本号防止更新~\n可去github等平台下载历史版本~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=AutoBox&input=text&text=",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-bot.png",
