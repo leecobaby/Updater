@@ -602,6 +602,76 @@
       }
     ]
   },
+  "1111zcj": {
+    "version": "数据最后更新于:10.1.1",
+    "pv": {
+      "taobao": "taobao://m.tb.cn/h.4uyyEOF",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4uyyEOF",
+      "taobaolite": "taobaolite://m.tb.cn/h.4uyyEOF"
+    },
+    "main": {
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fwww.tmall.com%2F",
+      "taobaolite": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F"
+    },
+    "home": {
+      "taobao": "taobao://huodong.taobao.com/wow/z/guang/20211111/lotteryMachine?pha=true&disableNav=YES&source=zcj_wotao_banner",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=",
+      "taobaolite": "taobaolite://huodong.taobao.com/wow/z/guang/20211111/lotteryMachine?pha=true&disableNav=YES&source=zcj_wotao_banner"
+    },
+    "end": {
+      "taobao": "taobao://huodong.taobao.com/wow/z/guang/20211111/lotteryMachine?pha=true&disableNav=YES&source=zcj_wotao_banner",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fhuodong.taobao.com%2Fwow%2Fz%2Fguang%2F20211111%2FlotteryMachine%3Fpha%3Dtrue%26disableNav%3DYES%26source%3Dzcj_wotao_banner",
+      "taobaolite": "taobaolite://huodong.taobao.com/wow/z/guang/20211111/lotteryMachine?pha=true&disableNav=YES&source=zcj_wotao_banner"
+    },
+    "app": {
+      "淘宝": "taobao",
+      "天猫": "tmall",
+      "淘宝特价版": "taobaolite"
+    },
+    "task": [
+      {
+        "stars": {
+          "title": "种草浏览任务",
+          "type": "stars",
+          "urlScheme": "HTTPS://h5.m.taobao.com/tnode/index.htm?tnode=page_detail?pangesture=pullrightexit&secPageEnable=false&initDataKey=guangguangdetail_initdata&entityId=55013&tnodeListPagingEnable=false&isGuang=true&utparam=%7B%22pvid-url%22%3A%22d7136895-587d-44d2-866e-af21c1491745%22%2C%22x_guangsource%22%3A%22guang_grassPlanterSearch%22%2C%22x_source%22%3A%22guang_grassPlanterSearch%22%7D&contentId=",
+          "textEnd": "str1",
+          "item": [
+            "252729688640 0",
+            "252723281123 0",
+            "258114671633 0",
+            "325060814671 0",
+            "257971780334 0",
+            "251020833224 0",
+            "250299550769 0",
+            "263020877046 0",
+            "270535945337 0",
+            "266686647491 0",
+            "258119845650 0",
+            "258147335726 0",
+            "252414966695 0",
+            "258022994544 0",
+            "253440478452 0",
+            "258152815866 0",
+            "258088070595 0",
+            "253463826237 0",
+            "253451687148 0",
+            "253422244728 0",
+            "258145415304 0",
+            "253393533656 0",
+            "253338944466 0",
+            "277098635852 0",
+            "253380050583 0",
+            "251702111900 0",
+            "326165664312 0",
+            "277137295202 0",
+            "253348878562 0",
+            "253344460207 0"
+          ]
+        }
+      }
+    ]
+  },
   "Hlzx": {
     "version": "数据最后更新于:9.19.2",
     "pv": {
