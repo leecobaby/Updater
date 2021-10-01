@@ -285,6 +285,30 @@
       "more": ""
     }
   },
+  "1111zcj": {
+    "version": "1.0",
+    "update_log": "- 修复 云端时间假死问题\n- 修复 签到读条还未完成就跳转问题\n- 增加 天猫小黑盒任务\n- 增加 天猫美食任务",
+    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/1111zcj",
+    "help": "",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/ffef108852354d628d68b985a62ffa71",
+    "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
+    "notice": "已新增活动任务，此指令将持续增加淘宝更多活动任务~",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
+    "automation_url": "shortcuts://run-shortcut?name=淘宝种草机自动任务&input=text&text=task",
+    "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tb_sign.png",
+    "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
+    "tip": {
+      "hongbao": "",
+      "hot": "🔥 双十一活动预热",
+      "faq": "有疑问的请查看",
+      "set": "点击查看自动化操作",
+      "team": "",
+      "other": "",
+      "more": ""
+    }
+  },
   "ltao_duck": {
     "version": "1.2",
     "update_log": "- 增加 多线路模式\n- 更新 任务数据",
