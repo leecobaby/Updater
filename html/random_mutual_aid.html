@@ -18,16 +18,111 @@
 
 
   <script>
-    const json =     // 放入魔法变量
-      (() => {
-        const data = json.item
-        // 过滤重复的 user id
-        const uniqData = _.uniqBy(data, v => v.fromUser.id)
-        // 随机选取出 10 个助力 url - 考虑到助力已满情况和无链接的情况
-        const sampleData = _.sampleSize(uniqData, 10)
-        const urls = sampleData.map(v => v.urls[0])
-        document.write(JSON.stringify(urls))
-      })()
+    const json = {
+      "items": [
+        {
+          "id": "615986b0a41fd20699c1314e",
+          "text": "可以在这里发送你种草机的分享链接，发其他链接是无用功。",
+          "html": "可以在这里发送你种草机的分享链接，发其他链接是无用功。",
+          "sent": "2021-10-03T10:32:16.003Z",
+          "unread": false,
+          "readBy": 0,
+          "urls": [],
+          "mentions": [],
+          "issues": [],
+          "meta": [],
+          "v": 1,
+          "fromUser": "60b8caef6da03739847e0d8d"
+        },
+        {
+          "id": "6159895e3f09d85736f15183",
+          "text": "可以在这里发送你种草机的邀请链接，发其他链接是无用功。",
+          "html": "可以在这里发送你种草机的邀请链接，发其他链接是无用功。",
+          "sent": "2021-10-03T10:43:42.366Z",
+          "unread": false,
+          "readBy": 0,
+          "urls": [],
+          "mentions": [],
+          "issues": [],
+          "meta": [],
+          "v": 1,
+          "fromUser": "60b8caef6da03739847e0d8d"
+        },
+        {
+          "id": "6159a3517db1e3753e1d46fc",
+          "text": "下面是一条示例",
+          "html": "下面是一条示例",
+          "sent": "2021-10-03T12:34:25.920Z",
+          "unread": false,
+          "readBy": 0,
+          "urls": [],
+          "mentions": [],
+          "issues": [],
+          "meta": [],
+          "v": 1,
+          "fromUser": "60b8caef6da03739847e0d8d"
+        },
+        {
+          "id": "6159a375a41fd20699c16876",
+          "text": "5.0💲zE96XrA8YKM£ https://m.tb.cn/h.fVWjP8Q?sm=342d90  好东西太多了，还能抽大奖！",
+          "html": "5.0💲zE96XrA8YKM£ <a href=\"https://m.tb.cn/h.fVWjP8Q?sm=342d90\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"link \">https://m.tb.cn/h.fVWjP8Q?sm=342d90</a>  好东西太多了，还能抽大奖！",
+          "sent": "2021-10-03T12:35:01.330Z",
+          "unread": false,
+          "readBy": 0,
+          "urls": [
+            {
+              "url": "https://m.tb.cn/h.fVWjP8Q?sm=342d90"
+            }
+          ],
+          "mentions": [],
+          "issues": [],
+          "meta": [],
+          "v": 1,
+          "fromUser": "60b8caef6da03739847e0d8d"
+        }
+      ],
+      "lookups": {
+        "users": {
+          "60b8caef6da03739847e0d8d": {
+            "id": "60b8caef6da03739847e0d8d",
+            "username": "leecobaby",
+            "displayName": "Leeco",
+            "url": "/leecobaby",
+            "avatarUrl": "https://avatars-05.gitter.im/gh/uv/4/leecobaby",
+            "avatarUrlSmall": "https://avatars0.githubusercontent.com/u/48404687?v=4&s=60",
+            "avatarUrlMedium": "https://avatars0.githubusercontent.com/u/48404687?v=4&s=128",
+            "v": 9,
+            "gv": "4"
+          }
+        }
+      }
+    }
+    // 放入魔法变量
+
+    const data = json.items
+    // 选出有 url 的元素
+    const filterData = _.filter(data, v => v.urls[0])
+    // 过滤重复的 user id
+    const uniqData = _.uniqBy(filterData, v => v.fromUser)
+    // 随机选取出 10 个助力 url - 考虑到助力已满情况和无链接的情况
+    const sampleData = _.sampleSize(uniqData, 10)
+    const urls = sampleData.map(v => v.urls[0].url)
+
+    const item = urls.map(v => v.match(/(?<=https:\/\/).*/)[0] + ' 0');
+    const task = {
+      "help": {
+        "title": "帮助助力",
+        "type": "help",
+        "urlScheme": "HTTPS://",
+        "textEnd": "str1",
+        "item": item || ['1 0']
+      }
+    }
+
+    document.write(JSON.stringify(task))
+
+
+
   </script>
 
 </body>
