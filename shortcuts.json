@@ -286,14 +286,14 @@
     }
   },
   "1111zcj": {
-    "version": "1.0",
-    "update_log": "",
+    "version": "1.1",
+    "update_log": "- 增加 自动助力\n- 增加 简易化助力池",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/1111zcj",
     "help": "",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/76124dac42a84034af23962a0e2d6994",
+    "update": "https://www.icloud.com/shortcuts/c0c4b54fb7c349f1b37b562117f557e2",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "双十一预热任务，能经常抽到红包~\n自动相互助力制作中...",
+    "notice": "双十一预热任务，能经常抽到红包~\n为了自动化指令的体验请按要求使用助力池~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=淘宝种草机自动任务&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
