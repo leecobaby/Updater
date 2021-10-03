@@ -7,9 +7,9 @@ const uniqData = _.uniqBy(filterData, v => v.fromUser)
 // 随机选取出 10 个助力 url - 考虑到助力已满情况和无链接的情况
 const sampleData = _.sampleSize(uniqData, 10)
 const urls = sampleData.map(v => v.urls[0].url)
-document.write(JSON.stringify(urls))
 
-// const item = urls.map(v => v.match(/(?<=https:\/\/).*/)[0] + ' 0');
+const item = urls.map(v => v.match(/(?<=https:\/\/).*/)[0] + ' 0');
+document.write(JSON.stringify(item))
 // const task = {
 //   "help": {
 //     "title": "帮助助力",
