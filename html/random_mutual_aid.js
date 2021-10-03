@@ -8,7 +8,7 @@ const uniqData = _.uniqBy(filterData, v => v.fromUser)
 const sampleData = _.sampleSize(uniqData, 3)
 const urls = sampleData.map(v => v.urls[0].url)
 
-const item = urls.map(v => v.match(/https:\/\/(.*)/)[1] + ' 0');
+const item = urls.map(v => v.match(/https:\/\/(.*)/)[1] + ' 1');
 
 const task = {
   "help": {
@@ -16,7 +16,7 @@ const task = {
     "type": "help",
     "urlScheme": "HTTPS://",
     "textEnd": "str1",
-    "item": item || ['1 0']
+    "item": item || ['1 1']
   }
 }
 
