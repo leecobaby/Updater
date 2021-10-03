@@ -8,16 +8,16 @@ const uniqData = _.uniqBy(filterData, v => v.fromUser)
 const sampleData = _.sampleSize(uniqData, 10)
 const urls = sampleData.map(v => v.urls[0].url)
 
-const item = urls.map(v => v.match(/(?<=https:\/\/).*/)[0] + ' 0');
-document.write(JSON.stringify(item))
-// const task = {
-//   "help": {
-//     "title": "帮助助力",
-//     "type": "help",
-//     "urlScheme": "HTTPS://",
-//     "textEnd": "str1",
-//     "item": item || ['1 0']
-//   }
-// }
+const item = urls.map(v => v.match(/https:\/\/(.*)/)[0] + ' 0');
 
-// document.write(JSON.stringify(task))
+const task = {
+  "help": {
+    "title": "帮助助力",
+    "type": "help",
+    "urlScheme": "HTTPS://",
+    "textEnd": "str1",
+    "item": item || ['1 0']
+  }
+}
+
+document.write(JSON.stringify(task))
