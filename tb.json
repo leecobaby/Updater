@@ -383,7 +383,7 @@
     ]
   },
   "Jhs": {
-    "version": "数据最后更新于:9.11.5",
+    "version": "数据最后更新于:10.4.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fVWVxZX",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fVWVxZX",
@@ -442,6 +442,15 @@
             "18524 other_236_465064_18524_0",
             "18526 other_236_508034_18526_0"
           ]
+        }
+      },
+      {
+        "test": {
+          "title": "测试",
+          "type": "test",
+          "urlScheme": "HTTPS://",
+          "textEnd": "str2",
+          "item": ["1 m.tb.cn/h.fWliWS7?1", "1 m.tb.cn/h.fWljUcw?1", "1 m.tb.cn/h.fWlj1ua?1"]
         }
       }
     ]
@@ -603,7 +612,7 @@
     ]
   },
   "1111zcj": {
-    "version": "数据最后更新于:10.1.1",
+    "version": "数据最后更新于:10.4.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fVWVxZX",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fVWVxZX",
@@ -674,11 +683,20 @@
             "253344460207 0"
           ]
         }
+      },
+      {
+        "test": {
+          "title": "测试",
+          "type": "test",
+          "urlScheme": "HTTPS://",
+          "textEnd": "str2",
+          "item": ["1 m.tb.cn/h.fWliWS7?1", "1 m.tb.cn/h.fWljUcw?1", "1 m.tb.cn/h.fWlj1ua?1"]
+        }
       }
     ]
   },
   "Hlzx": {
-    "version": "数据最后更新于:9.19.2",
+    "version": "数据最后更新于:10.4.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fVWVxZX",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fVWVxZX",
@@ -734,11 +752,20 @@
             "13953 other_250_145003_13953_0"
           ]
         }
+      },
+      {
+        "test": {
+          "title": "测试",
+          "type": "test",
+          "urlScheme": "HTTPS://",
+          "textEnd": "str2",
+          "item": ["1 m.tb.cn/h.fWliWS7?1", "1 m.tb.cn/h.fWljUcw?1", "1 m.tb.cn/h.fWlj1ua?1"]
+        }
       }
     ]
   },
   "FarmSingle": {
-    "version": "数据最后更新于:9.14.1",
+    "version": "数据最后更新于:10.4.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fVWVxZX",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fVWVxZX",
@@ -849,6 +876,15 @@
           "urlScheme": "HTTPS://pages.tmall.com/wow/tmallfarm/act/b-browser?wh_biz=tm&spm=farm.newfarm.task.browser&disableNav=YES",
           "textEnd": "",
           "item": ["1 0"]
+        }
+      },
+      {
+        "test": {
+          "title": "测试",
+          "type": "test",
+          "urlScheme": "HTTPS://",
+          "textEnd": "str2",
+          "item": ["1 m.tb.cn/h.fWliWS7?1", "1 m.tb.cn/h.fWljUcw?1", "1 m.tb.cn/h.fWlj1ua?1"]
         }
       }
     ]
