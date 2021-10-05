@@ -688,9 +688,13 @@
         "test": {
           "title": "测试",
           "type": "test",
-          "urlScheme": "HTTPS://",
+          "urlScheme": "taobao://m.taobao.com/tbopen/index.html?h5Url=",
           "textEnd": "str2",
-          "item": ["1 m.tb.cn/h.fWliWS7?1", "1 m.tb.cn/h.fWljUcw?1", "1 m.tb.cn/h.fWlj1ua?1"]
+          "item": [
+            "1 https://m.tb.cn/h.fWliWS7?1",
+            "1 https://m.tb.cn/h.fWljUcw?1",
+            "1 https://m.tb.cn/h.fWlj1ua?1"
+          ]
         }
       }
     ]
