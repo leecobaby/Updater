@@ -309,6 +309,34 @@
       "more": "🔥 每天领支付宝现金红包"
     }
   },
+  "Kuai_kan": {
+    "version": "1.0",
+    "update_log": "- 增加 自动助力\n- 增加 简易化助力池",
+    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Kuai_kan",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/c0c4b54fb7c349f1b37b562117f557e2",
+    "faq": "",
+    "notice": "",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
+    "automation_url": "",
+    "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tb_zcj.png",
+    "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
+    "help": {
+      "gitter": "https://gitter.im/api/v1/rooms/615975436da037398487178c/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=50",
+      "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/kuai_kan.js",
+      "lodash": "https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"
+    },
+    "tip": {
+      "hongbao": "",
+      "hot": "🔥 双十一活动预热",
+      "faq": "",
+      "set": "",
+      "team": "",
+      "other": "",
+      "more": "🔥 每天领支付宝现金红包"
+    }
+  },
   "ltao_duck": {
     "version": "1.2",
     "update_log": "- 增加 多线路模式\n- 更新 任务数据",
