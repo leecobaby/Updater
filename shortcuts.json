@@ -1,10 +1,10 @@
 {
   "Snap_up": {
-    "version": "2.5",
-    "update": "https://www.icloud.com/shortcuts/c2a803993f924b51a22a22edf6294231",
+    "version": "2.7",
+    "update": "https://www.icloud.com/shortcuts/95e925b98bb14a759c743600fae67f8b",
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/LeecoGit/shortcuts/tree/master/Snap_up",
-    "update_log": "* 增加 将部分天猫和淘工厂商品强制转换成签到红包可用链接\n* 增加 淘宝天猫链接的识别\n* 更新 对最新淘口令的识别\n* 优化 运行逻辑",
+    "update_log": "- 修复 ios15 各种运行出错问题\n- 暂时停用 强制使用签到红包转换功能",
     "notice": "购买前可以帮你看看有没有隐藏优惠券哦~\n历史价格查询接口维护中...",
     "tip": {
       "rondom": ["复制整段文案都可以识别，不用刻意复制链接哦！"]
