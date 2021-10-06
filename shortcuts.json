@@ -323,7 +323,7 @@
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tb_zcj.png",
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "help": {
-      "gitter": "https://gitter.im/api/v1/rooms/615975436da037398487178c/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=50",
+      "gitter": "https://gitter.im/api/v1/rooms/615bd93d6da03739848734c3/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=50",
       "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/kuai_kan.js",
       "lodash": "https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"
     },
