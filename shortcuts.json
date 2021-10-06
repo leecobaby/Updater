@@ -263,12 +263,12 @@
     }
   },
   "TaoSign": {
-    "version": "1.2",
-    "update_log": "- 修复 云端时间假死问题\n- 修复 签到读条还未完成就跳转问题\n- 增加 天猫小黑盒任务\n- 增加 天猫美食任务",
+    "version": "1.3",
+    "update_log": "- 修复 IOS15 运行任务完成后弹窗问题\n- 更新 任务数据",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/TaoSign",
     "help": "",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/ffef108852354d628d68b985a62ffa71",
+    "update": "https://www.icloud.com/shortcuts/06d510e9ae494cb79eb4d12eb95dc13c",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
     "notice": "已新增活动任务，此指令将持续增加淘宝更多活动任务~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
