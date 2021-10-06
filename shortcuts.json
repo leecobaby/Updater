@@ -5,7 +5,7 @@
     "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
     "github": "https://github.com/LeecoGit/shortcuts/tree/master/Snap_up",
     "update_log": "- 修复 ios15 各种运行出错问题\n- 暂时停用 强制使用签到红包转换功能",
-    "notice": "购买前可以帮你看看有没有隐藏优惠券哦~\n历史价格查询接口维护中...",
+    "notice": "ios15运行需要给很多次权限哦~\n历史价格查询接口维护中...",
     "tip": {
       "rondom": ["复制整段文案都可以识别，不用刻意复制链接哦！"]
     },
