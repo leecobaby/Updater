@@ -1163,6 +1163,74 @@
       }
     ]
   },
+  "ele_dou": {
+    "version": "数据最后更新于:10.7.1",
+    "pv": {
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.4xdzqg5",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4xdzqg5",
+      "eleme": "eleme://web?url=https%3A%2F%2Fm.tb.cn%2Fh.4xdzqg5"
+    },
+    "main": {
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fwww.tmall.com%2F",
+      "eleme": "eleme://userCenter"
+    },
+    "home": {
+      "taobao": "taobao://pages.tmall.com/wow/z/sale/nsrSolution/ltao-duck-home?disableNav=YES",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fsale%2FnsrSolution%2Fltao-duck-home%3FdisableNav%3DYES",
+      "eleme": "eleme://web?url=https%3A%2F%2Frender.alipay.com%2Fp%2Fyuyan%2F180020010000419014%2Findex.html%3F__webview_options__%3DcanPullDown%253DNO%2526allowsBounceVertical%253DNO%2526transparentTitle%253Dauto%2526transparentTitleTextAuto%253DYES%2526showOptionMenu%253DNO"
+    },
+    "end": {
+      "taobao": "taobao://pages.tmall.com/wow/z/sale/nsrSolution/ltao-duck-home?disableNav=YES",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fsale%2FnsrSolution%2Fltao-duck-home%3FdisableNav%3DYES",
+      "eleme": "eleme://web?url=https%3A%2F%2Frender.alipay.com%2Fp%2Fyuyan%2F180020010000419014%2Findex.html%3F__webview_options__%3DcanPullDown%253DNO%2526allowsBounceVertical%253DNO%2526transparentTitle%253Dauto%2526transparentTitleTextAuto%253DYES%2526showOptionMenu%253DNO"
+    },
+    "app": {
+      "淘宝": "taobao",
+      "支付宝": "alipay",
+      "饿了么": "eleme"
+    },
+    "task": [
+      {
+        "eleme": {
+          "title": "逛逛任务",
+          "type": "other",
+          "urlScheme": "HTTPS://tb.ele.me/wow/alsc/mod/3d8e366b731979482ae13d48?actId=20201112195531414199581157&tagId=20210630160016806378000000000013&collectionId=20210413182643968946956540&from=a13.b_activity_kb_m25916&alscBpBlockCode=916332_6126594210&bizScene=xiaobao&referPageId=a2ogi.20773536_0d13e6f5-708f-441c-81d5-fa8aac969ea6_1625652071355&srcSpm=a2ogi.20773536.c204147.d145371_6&spm=a2ogi.20773536.c204147.d145371_6&taskId=",
+          "textEnd": "str1",
+          "item": [
+            "20210414103347177399951817 0",
+            "20210604152210090368163578 0",
+            "20210413224825243384104087 0",
+            "20210413212154000368665617 0",
+            "20210531165702098362612553 0",
+            "20210413221852921343047737 10",
+            "20210413221043696309107552 0",
+            "20210413222923240319094676 0",
+            "20210413222152022305877796 0",
+            "20210413221323105381866837 0",
+            "20210413225849273323874250 0",
+            "20210413222459032356557634 0",
+            "20210413211915355327834065 0",
+            "20210413183353559302458397 0",
+            "20210414103347177399951817 0",
+            "20210413224825243384104087 0",
+            "20210604152210090368163578 0",
+            "20210413212154000368665617 0",
+            "20210413224216497318809202 0"
+          ]
+        }
+      },
+      {
+        "tmall": {
+          "title": "签到",
+          "type": "other",
+          "urlScheme": "HTTPS://tb.ele.me/wow/alsc/mod/3d8e366b731979482ae13d48?actId=20201112195531414199581157&tagId=20210630160016806377000000000099&collectionId=20210413173107468959026730&from=a13.b_activity_kb_m25916&alscBpBlockCode=916332_6126594210&bizScene=xiaobao&referPageId=a2ogi.20773536_0d13e6f5-708f-441c-81d5-fa8aac969ea6_1625652071355&srcSpm=a2ogi.20773536.c204147.d145371_6&spm=a2ogi.20773536.c204147.d145371_6&taskId=",
+          "textEnd": "str1",
+          "item": ["20210414103347177399951817 0"]
+        }
+      }
+    ]
+  },
   "team": {
     "🏠 种草机助力池": "https://gitter.im/leecobaby-shortcuts/1111zcj?utm_source=share-link&utm_medium=link&utm_campaign=share-link",
     "🏠 快手极速版砍价助力池": "https://gitter.im/leecobaby-shortcuts/kuai_kan?utm_source=share-link&utm_medium=link&utm_campaign=share-link"
