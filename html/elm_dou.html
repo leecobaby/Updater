@@ -46,7 +46,8 @@
 
 
       var type = getQueryString('type')
-      var id = getQueryString('id')
+      var id = getQueryString('id') || 350001
+      var numKey = getQueryString('numKey')
 
       var url = pageArr[Math.floor((Math.random() * pageArr.length))]
 
@@ -56,7 +57,7 @@
 
       var root = document.getElementById('root')
 
-      root.innerHTML = `<iframe style="height:1000px;width:1000px" id="iframe" src="${iframeUrl}"></iframe>`
+      root.innerHTML = numKey + `<iframe style="height:300px;width:500px" id="iframe" src="${iframeUrl}"></iframe>`
 
       // setTimeout(() => window.location = url, 700)
     })()
