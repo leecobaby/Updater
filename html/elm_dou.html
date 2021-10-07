@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<div style="width:10px;height:10px" id="root"></div>
+
+<body>
+  <script>
+    function getQueryString(name) {
+      let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+      let r = window.location.search.substr(1).match(reg);
+      console.log(r);
+      if (r != null) {
+        return decodeURIComponent(r[2]);
+      };
+      return null;
+    }
+
+    (function start() {
+
+
+
+      var pageArr = [
+        "https://tb.ele.me/wow/alsc/mod/46dd581e91012900ee4ec4f4?missioncollectid=36&missionid=替换参数&taskfrom=a2ogi.15063444&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.0",
+        'https://tb.ele.me/wow/alsc/mod/156e0df0c951c793ab121f2e?missioncollectid=36&missionid=替换参数&taskfrom=a2ogi.15063444&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.0',
+        'https://tb.ele.me/wow/alsc/mod/13de5abe25127ef7506b99bd?missioncollectid=36&missionid=替换参数&taskfrom=a2ogi.15063444&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.0',
+        'https://tb.ele.me/wow/alsc/mod/82d95064af4694ad0edc98bf?missioncollectid=36&missionid=替换参数&taskfrom=a2ogi.15063444&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.0',
+
+
+
+        'https://tb.ele.me/wow/alsc/mod/933d4a561a9d0cdade2ca052?missioncollectid=36&missionid=替换参数&taskfrom=a2ogi.15063444&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.0',
+
+        'https://tb.ele.me/wow/alsc/mod/385c2746dab002598833d63c?missioncollectid=36&missionid=替换参数&taskfrom=a2ogi.15063444&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.0',
+
+        'https://tb.ele.me/wow/alsc/mod/e091662a12792fb1df39fb7f?missioncollectid=36&missionid=替换参数&taskfrom=a2ogi.15063444&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.0',
+
+        'https://tb.ele.me/wow/alsc/mod/46dd581e91012900ee4ec4f4?missioncollectid=36&missionid=替换参数&taskfrom=a2ogi.15063444&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.0',
+
+        'https://tb.ele.me/wow/alsc/mod/156e0df0c951c793ab121f2e?missioncollectid=36&missionid=替换参数&taskfrom=a2ogi.15063444&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.0',
+
+
+
+      ]
+
+
+      var type = getQueryString('type')
+      var id = getQueryString('id')
+
+      var url = pageArr[Math.floor((Math.random() * pageArr.length))]
+
+      var url = url.replace('替换参数', id);
+
+      var iframeUrl = `https://h5.ele.me/restapi/biz.svip_scene/svip/engine/xSupply?params[]=%7B%22tagCode%22:%22223166%22,%22extra%22:%7B%22missionDefId%22:${id},%22missionCollectionId%22:36,%22missionType%22:%22${type}%22%7D%7D&bizCode=biz_code_main&longitude=121.35623168945312&latitude=41.17439270019531&o2o_page_id=xc539zecsy89e96dwzdebha2634lgqf6_1623400808977`
+
+      var root = document.getElementById('root')
+
+      root.innerHTML = `<iframe style="height:1000px;width:1000px" id="iframe" src="${iframeUrl}"></iframe>`
+
+      // setTimeout(() => window.location = url, 700)
+    })()
+
+  </script>
+</body>
+
+</html>
