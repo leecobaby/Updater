@@ -517,6 +517,68 @@
       "add_car_next"
     ]
   },
+  "JD_fruit": {
+    "version": "上次数据更新于:10.10.1",
+    "pv": "openapp.jdmobile://virtual?openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https%3A%2F%2Fu.jd.com%2FrL0I4ld%22%7D%0A",
+    "endJump": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https%3A%2F%2Fh5.m.jd.com%2FbabelDiy%2FZeus%2FWpoxUMaPZw14nb3ZydKcvYwG4yA%2Findex.html%22%7D",
+    "pkHelpCode": "IgNWdiLGaPaAqdZqpd0QbcXZFPwE1VfQ9VPl2cARI1KWYjbV1EXeRSxZojc",
+    "codeUrl": {
+      "CryptoJS": "https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.js",
+      "JD_ddwj": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_ddwj.js"
+    },
+    "api": {
+      "isLogin": {
+        "url": "https://me-api.jd.com/user_new/info/GetJDUserInfoUnion",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json,text/plain, */*",
+          "Host": "me-api.jd.com",
+          "Accept-Encoding": "gzip, deflate, br",
+          "Accept-Language": "zh-cn",
+          "Connection": "keep-alive",
+          "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.5(0x18000528) NetType/WIFI Language/zh_CN",
+          "Referer": "https://wqs.jd.com/my/jingdou/my.shtml?sceneval=2"
+        }
+      },
+      "isLogin1": {
+        "url": "https://wq.jd.com/user/info/QueryJDUserInfo?sceneval=2",
+        "method": "POST",
+        "headers": {
+          "Accept": "application/json,text/plain, */*",
+          "Accept-Encoding": "gzip, deflate, br",
+          "Accept-Language": "zh-cn",
+          "Connection": "keep-alive",
+          "Referer": "https://wqs.jd.com/my/jingdou/my.shtml?sceneval=2"
+        }
+      },
+      "getToken": {
+        "url": "https://bh.m.jd.com/gettoken"
+      }
+    },
+    "uaInfo": {
+      "UA1": {
+        "ua": "jdapp;iPhone;10.0.6;14.4;c67093f5dd58d33fc5305cdc61e46a9741e05c5b;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
+        "signUrl": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_ddwj/jdSign1.js"
+      },
+      "UA2": {
+        "ua": "jdapp;iPhone;10.0.6;14.4;c67093f5dd58d33fc5305cdc61e46a9741e05c5b;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
+        "signUrl": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_ddwj/jdSign2.js"
+      },
+      "UA3": {
+        "ua": "jdapp;iPhone;9.2.0;14.1;",
+        "signUrl": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_ddwj/jdSign2.js"
+      }
+    },
+    "codeList": [
+      "funny_getHomeData_next",
+      "funny_getTaskDetail_next",
+      "oneActivityInfo_next",
+      "oneActivityInfo_next_next",
+      "help_next",
+      "funny_getFeedDetail_next",
+      "add_car_next"
+    ]
+  },
   "share": {
     "🥮 中秋会场": "openapp.jdmobile://virtual?params={\"des\":\"m\",\"category\":\"jump\",\"url\":\"https://u.jd.com/rL0I4ld\"}"
   }
