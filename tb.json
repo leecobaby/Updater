@@ -1176,7 +1176,7 @@
     ]
   },
   "ele_dou": {
-    "version": "数据最后更新于:10.9.1",
+    "version": "数据最后更新于:10.10.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Ftb.ele.me%2Fwow%2Falsc%2Fmod%2Fd5275789de46503ba0908a9d%3Fe%3D1%26open_type%3Dminiapp%26inviterId%3D74f86c%26actId%3D1%26_ltracker_f%3Dhjb_app_grzx%26chInfo%3Dch_app_chsub_Photo5",
       "alipay": "alipays://platformapi/startapp?appId=20000067&url=https%3A%2F%2Ftb.ele.me%2Fwow%2Falsc%2Fmod%2Fd5275789de46503ba0908a9d%3Fe%3D1%26open_type%3Dminiapp%26inviterId%3D74f86c%26actId%3D1%26_ltracker_f%3Dhjb_app_grzx%26chInfo%3Dch_app_chsub_Photo5",
@@ -1229,7 +1229,8 @@
             "236002 PAGEVIEW",
             "1306001 PAGEVIEW",
             "1036001 PAGEVIEW",
-            "478001 PAGEVIEW"
+            "478001 PAGEVIEW",
+            "1034001 PAGEVIEW"
           ]
         }
       }
