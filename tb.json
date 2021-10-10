@@ -1176,7 +1176,7 @@
     ]
   },
   "ele_dou": {
-    "version": "数据最后更新于:10.10.1",
+    "version": "数据最后更新于:10.10.2",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Ftb.ele.me%2Fwow%2Falsc%2Fmod%2Fd5275789de46503ba0908a9d%3Fe%3D1%26open_type%3Dminiapp%26inviterId%3D74f86c%26actId%3D1%26_ltracker_f%3Dhjb_app_grzx%26chInfo%3Dch_app_chsub_Photo5",
       "alipay": "alipays://platformapi/startapp?appId=20000067&url=https%3A%2F%2Ftb.ele.me%2Fwow%2Falsc%2Fmod%2Fd5275789de46503ba0908a9d%3Fe%3D1%26open_type%3Dminiapp%26inviterId%3D74f86c%26actId%3D1%26_ltracker_f%3Dhjb_app_grzx%26chInfo%3Dch_app_chsub_Photo5",
@@ -1213,24 +1213,24 @@
           "item": [
             "2210003 PAGEVIEW",
             "230003 PAGEVIEW",
-            "1390001 SIMPLESIGNIN",
-            "1130001 SIMPLESIGNIN",
             "350001 PAGEVIEW",
             "476001 PAGEVIEW",
-            "234001 SIMPLESIGNIN",
-            "1150001 SIMPLESIGNIN",
             "228003 PAGEVIEW",
             "250003 PAGEVIEW",
             "912001 PAGEVIEW",
-            "2442001 SIMPLESIGNIN",
             "342001 PAGEVIEW",
-            "1728001 SIMPLESIGNIN",
-            "1056001 SIMPLESIGNIN",
             "236002 PAGEVIEW",
             "1306001 PAGEVIEW",
             "1036001 PAGEVIEW",
             "478001 PAGEVIEW",
-            "1034001 PAGEVIEW"
+            "1034001 PAGEVIEW",
+            "1130001 SIMPLESIGNIN",
+            "234001 SIMPLESIGNIN",
+            "1150001 SIMPLESIGNIN",
+            "2442001 SIMPLESIGNIN",
+            "1728001 SIMPLESIGNIN",
+            "1056001 SIMPLESIGNIN",
+            "1390001 SIMPLESIGNIN"
           ]
         }
       }
