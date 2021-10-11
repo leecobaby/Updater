@@ -78,7 +78,7 @@ function taskInitForFarm () {
 /**
  * 好友助力
  */
-function helpInvite () {
+function help () {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
   $.call = ['helpInvite']
@@ -106,7 +106,7 @@ function helpInvite () {
 /**
  * 做签到任务
  */
-function help () {
+function signForFarm () {
   if (!$.farmTask.signInit?.todaySigned) {
     $.callback = 'Func.request'
     takeRequest('signForFarm');

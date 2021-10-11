@@ -1,4 +1,4 @@
 // next
 $.callback = ''
-dealReturn('helpInvite', $.data)
+dealReturn('signForFarm', $.data)
 document.write(JSON.stringify($))

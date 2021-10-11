@@ -569,8 +569,8 @@
     "codeList": [
       "initForFarm_next",
       "taskInitForFarm_next",
-      "helpInvite_next",
       "help_next",
+      "signForFarm_next",
       "browseAdTaskForFarm_next",
       "browseAdTaskForFarm_next_next"
     ]
