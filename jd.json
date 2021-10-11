@@ -566,6 +566,10 @@
         "ua": "jdapp;iPhone;9.2.0;14.1;"
       }
     },
+    "controller": {
+      "callList": ["initForFarm", "treeState", "taskInitForFarm"],
+      "taskList": [{ "做签到任务": "signForFarm" }, { "做浏览任务": "browseAdTaskForFarm" }]
+    },
     "codeList": [
       "initForFarm_next",
       "taskInitForFarm_next",

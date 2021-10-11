@@ -156,7 +156,7 @@ function browseAdTaskForFarm () {
   $.callback = ''
   dealReturn('browseAdTaskForFarm', $.data)
   if ($.browseResult.code === '0') {
-    $.wait = 8
+    $.wait = 6
     $.next = 1 // 覆盖前面的 0
     $.taskType = 1 // 领奖励
     $.callback = 'Func.request'
@@ -184,6 +184,36 @@ function browseAdTaskForFarm () {
 }
 
 /**
+ * 做浇水十次任务
+ */
+function doTenWater () {
+  // 暂时不做水滴换豆逻辑
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler'
+  $.call = ['doTenWater']
+
+  $.waterCount = ($.waterCount || 0);
+  if ($.waterCount + $.farmTask.totalWaterTaskInit.totalWaterTaskTimes < $.farmTask.totalWaterTaskInit.totalWaterTaskLimit) {
+    $.callback = 'Func.request'
+    takeRequest('waterGoodForFarm');
+    return
+
+    // next
+    $.waterCount++
+    $.callback = ''
+    dealReturn('waterGoodForFarm', $.data)
+    document.write(JSON.stringify($))
+  }
+  else {
+    // 循环完成重新设置 to,call
+    $.to = '', $.call.pop()
+    $.message = `今日已完成10次浇水任务`
+    document.write(JSON.stringify($))
+    return
+  }
+}
+
+/**
  * 提交请求信息
  */
 function takeRequest (type) {
@@ -207,9 +237,9 @@ function takeRequest (type) {
       body = `{"advertId":"${$.advertId}","type":"${$.taskType}"}`;
       myRequest = getRequest(`browseAdTaskForFarm`, body, 'GET');
       break;
-    case 'funny_collectScore':
-      body = `functionId=funny_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HWJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","actionType":1}&client=wh5&clientVersion=1.0.0&uuid=c67093f5dd58d33fc5305cdc61e46a9741e05c5b&appid=o2_act`;
-      myRequest = getRequest(`funny_collectScore`, body);
+    case 'waterGoodForFarm':
+      body = `{}`;
+      myRequest = getRequest(`waterGoodForFarm`, body, 'GET');
       break;
     case 'helpInvite':
       body = `{imageUrl:"",nickName:"",shareCode:"${$.inviteId}",babelChannel:"3",version:2,channel:1}`;
@@ -399,124 +429,9 @@ function dealReturn (type, data) {
           $.message = `助力失败：${JSON.stringify(data.message)}`
       }
       break;
-    case 'zoo_pk_getHomeData':
-      if (data.code === 0) {
-        console.log(`PK互助码：${data.data.result.groupInfo.groupAssistInviteId}`);
-        if (data.data.result.groupInfo.groupAssistInviteId) $.pkInviteList.push(data.data.result.groupInfo.groupAssistInviteId);
-        $.pkHomeData = data.data;
-      }
+    case 'waterGoodForFarm':
+
       break;
-    case 'zoo_pk_getTaskDetail':
-      if (data.code === 0) {
-        $.pkTaskList = data.data.result.taskVos;
-      }
-      break;
-    case 'funny_getFeedDetail':
-      if (data.code === 0) {
-        $.feedDetailInfo = data.data.result.addProductVos[0];
-      }
-      break;
-    case 'zoo_pk_collectScore':
-      break;
-    case 'zoo_pk_doPkSkill':
-      if (data.data.bizCode === 0) console.log(`使用成功`);
-      if (data.data.bizCode === -2) {
-        console.log(`队伍任务已经完成，无法释放技能!`);
-        $.doSkillFlag = false;
-      } else if (data.data.bizCode === -2003) {
-        console.log(`现在不能打怪兽`);
-        $.doSkillFlag = false;
-      }
-      break;
-    case 'zoo_getSignHomeData':
-      if (data.code === 0) {
-        $.signHomeData = data.data.result;
-      }
-      break;
-    case 'zoo_sign':
-      if (data.code === 0 && data.data.bizCode === 0) {
-        console.log(`签到获得成功`);
-        if (data.data.result.redPacketValue) console.log(`签到获得：${data.data.result.redPacketValue} 红包`);
-      } else {
-        console.log(`签到失败`);
-        console.log(data);
-      }
-      break;
-    case 'wxTaskDetail':
-      if (data.code === 0) {
-        $.wxTaskList = data.data.result.taskVos;
-      }
-      break;
-    case 'zoo_shopLotteryInfo':
-      if (data.code === 0) {
-        $.shopResult = data.data.result;
-      }
-      break;
-    case 'zoo_bdCollectScore':
-      if (data.code === 0) {
-        console.log(`签到获得：${data.data.result.score}`);
-      }
-      break;
-    case 'qryCompositeMaterials':
-      //console.log(data);
-      if (data.code === '0') {
-        $.shopInfoList = data.data.resultData.list;
-        console.log(`获取到${$.shopInfoList.length}个店铺`);
-      }
-      break
-    case 'zoo_boxShopLottery':
-      let result = data.data.result;
-      switch (result.awardType) {
-        case 8:
-          console.log(`获得金币：${result.rewardScore}`);
-          break;
-        case 5:
-          console.log(`获得：adidas能量`);
-          break;
-        case 2:
-        case 3:
-          console.log(`获得优惠券：${result.couponInfo.usageThreshold} 优惠：${result.couponInfo.quota}，${result.couponInfo.useRange}`);
-          break;
-        default:
-          console.log(`抽奖获得未知`);
-          console.log(JSON.stringify(data));
-      }
-      break
-    case 'zoo_wishShopLottery':
-      console.log(JSON.stringify(data));
-      break
-    case `zoo_myMap`:
-      if (data.code === 0) {
-        $.myMapList = data.data.result.sceneMap.sceneInfo;
-      }
-      break;
-    case 'zoo_getWelfareScore':
-      if (data.code === 0) {
-        console.log(`分享成功，获得：${data.data.result.score}`);
-      }
-      break;
-    case 'jdjrTaskDetail':
-      if (data.resultCode === 0) {
-        $.jdjrTaskList = data.resultData.top;
-      }
-      break;
-    case 'jdjrAcceptTask':
-      if (data.resultCode === 0) {
-        console.log(`领任务成功`);
-      }
-      break;
-    case 'add_car':
-      if (data.code === 0) {
-        let acquiredScore = data.data?.result?.acquiredScore;
-        if (Number(acquiredScore) > 0) {
-          $.message = `加购成功,获得金币:${acquiredScore}`
-        } else {
-          $.message = `加购成功`
-        }
-      } else {
-        $.error = `加购失败`
-      }
-      break
     default:
       console.log(`未判断的异常${type}`);
   }
