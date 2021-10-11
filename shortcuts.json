@@ -223,7 +223,7 @@
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/9886f7bb8e1c4de690564dd1ec01b071",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "工作调整问题，现已回归，已修复ios15弹窗问题~",
+    "notice": "任务异常为正常现象，不用管。已支持最新活动丰收季。",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=芭芭农场自动集肥料&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
@@ -231,7 +231,7 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 活动更新中...",
+      "hot": "🔥 双11预热中...",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
