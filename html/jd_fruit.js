@@ -134,7 +134,7 @@ function browseAdTaskForFarm () {
   // 利用队列取代循环
   $.oneTask = $.farmTask.gotBrowseTaskAdInit?.userBrowseTaskAds?.shift()
   $.advertId = $.oneTask?.advertId;
-  if (!$.farmTask.gotBrowseTaskAdInit?.f || !$.oneTask) {
+  if ($.farmTask.gotBrowseTaskAdInit?.f || !$.oneTask) {
     // 循环完成重新设置 to,call
     $.to = '', $.call.pop()
     $.message = `浏览任务已经全部完成~`
