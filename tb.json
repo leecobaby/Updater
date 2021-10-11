@@ -32,7 +32,7 @@
         "energy": {
           "title": "攒能量",
           "type": "energy",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=bXNvd52Iv9Jp0n5QS9NuPoNiYh6UV&spm=a217e.xzrwy.1.1&sceneId=1946&sourceType=other&hd_from_id=100089&deliveryId=",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.xzrwy.1.1&sceneId=1946&sourceType=other&hd_from_id=100089&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "15971 other_4_369015_15971_0",
@@ -363,7 +363,7 @@
         "energy": {
           "title": "攒福气",
           "type": "energy",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/an/tmall/default-rax/175f4129baa?wh_biz=tm&disableNav=YES&sceneId=1412&hd_from_id=100102&fromToken=ERDx5MKCxdoJ6PvwSwJtbwrCkUZU5&deliveryId=",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/an/tmall/default-rax/175f4129baa?wh_biz=tm&disableNav=YES&sceneId=1412&hd_from_id=100102&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "12159 other_28_122030_12159_0",
@@ -777,7 +777,7 @@
     ]
   },
   "FarmSingle": {
-    "version": "数据最后更新于:10.4.1",
+    "version": "数据最后更新于:10.12.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fVWVxZX",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fVWVxZX",
