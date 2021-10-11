@@ -118,6 +118,7 @@ function signForFarm () {
     document.write(JSON.stringify($))
   } else {
     $.message = `今天已签到,连续签到${$.farmTask.signInit?.totalSigned},下次签到可得${$.farmTask.signInit?.signEnergyEachAmount}g`
+    document.write(JSON.stringify($))
   }
 }
 
