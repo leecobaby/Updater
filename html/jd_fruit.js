@@ -81,7 +81,7 @@ function taskInitForFarm () {
 function help () {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
-  $.call = ['helpInvite']
+  $.call = ['help']
   $.inviteList = Array.isArray($.inviteList) ? $.inviteList : [$.inviteList]
 
   $.inviteId = $.inviteList.shift()
