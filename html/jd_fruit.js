@@ -380,12 +380,6 @@ function dealReturn (type, data) {
     case 'browseAdTaskForFarm':
       $.browseResult = data
       break;
-    case 'funny_collectScore':
-      $.callbackInfo = data;
-      break;
-    case 'zoo_raise':
-      if (data.code === 0) console.log(`升级成功`);
-      break;
     case 'helpInvite':
       switch (data.helpResult?.code) {
         case '0':
@@ -402,7 +396,7 @@ function dealReturn (type, data) {
           $.message = `助力失败，该好友已满五人助力`
           break;
         default:
-          $.message = `助力失败：${JSON.stringify(data)}`
+          $.message = `助力失败：${JSON.stringify(data.message)}`
       }
       break;
     case 'zoo_pk_getHomeData':

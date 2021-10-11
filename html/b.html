@@ -10,37 +10,29 @@
 
 <body>
   <script>
-    let activateUrl = 'https://h5.ele.me/restapi/biz.svip_scene/svip/engine/xSupply?params%5B%5D=%7B%22tagCode%22:%22223166%22,%22extra%22:%7B%22missionDefId%22:占位符1,%22missionCollectionId%22:36,%22missionType%22:%22占位符2%22%7D%7D&bizCode=biz_code_main&longitude=121.35623168945312&latitude=41.17439270019531&o2o_page_id=xc539zecsy89e96dwzdebha2634lgqf6_1623400808977'
-    let taskUrl = 'https://tb.ele.me/wow/alsc/mod/46dd581e91012900ee4ec4f4?missioncollectid=36&missionid=占位符1&taskfrom=a2ogi.15063444&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.0'
-
-    let str1 = '2210003'
-    let str2 = 'PAGEVIEW'
-    let app = 'eleme'
-
-    activateUrl = activateUrl.replace('占位符1', str1)
-    activateUrl = activateUrl.replace('占位符2', str2)
-    taskUrl = taskUrl.replace('占位符1', str1)
-    document.write(JSON.stringify(urlScheme(app)))
-
-    function urlScheme(app) {
-      switch (app) {
-        case 'taobao':
-          activateUrl = 'taobao://m.taobao.com/tbopen/index.html?h5Url=' + encodeURIComponent(activateUrl)
-          taskUrl = 'taobao://m.taobao.com/tbopen/index.html?h5Url=' + encodeURIComponent(taskUrl)
-          break;
-        case 'alipay':
-          activateUrl = 'alipays://platformapi/startapp?appId=20000067&url=' + encodeURIComponent(activateUrl)
-          taskUrl = 'alipays://platformapi/startapp?appId=20000067&url=' + encodeURIComponent(taskUrl)
-          break;
-        case 'eleme':
-          activateUrl = 'eleme://web?url=' + encodeURIComponent(activateUrl)
-          taskUrl = 'eleme://web?url=' + encodeURIComponent(taskUrl)
-          break;
-      }
-      return { activateUrl, taskUrl }
+    const data = {
+      code: '0',
+      message: null
     }
-
-
+    const $ = {}
+    switch (data.helpResult?.code) {
+      case '0':
+        $.message = `助力成功，获得${data.helpResult.salveHelpAddWater}g水滴`
+        break;
+      case '8':
+        $.message = `助力失败，您今天助力次数已耗尽`
+        $.selfHelpMax = true;
+        break;
+      case '9':
+        $.message = `助力失败，已经助力过该好友`
+        break;
+      case '10':
+        $.message = `助力失败，该好友已满五人助力`
+        break;
+      default:
+        $.message = `助力失败：${JSON.stringify(data.message)}`
+    }
+    console.log($.message)
   </script>
 </body>
 
