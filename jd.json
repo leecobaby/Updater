@@ -568,7 +568,11 @@
     },
     "controller": {
       "callList": ["initForFarm", "treeState", "taskInitForFarm"],
-      "taskList": [{ "做签到任务": "signForFarm" }, { "做浏览任务": "browseAdTaskForFarm" }]
+      "taskList": [
+        { "做签到任务": "signForFarm" },
+        { "做浏览任务": "browseAdTaskForFarm" },
+        { "其他": "cloudTip" }
+      ]
     },
     "codeList": [
       "initForFarm_next",
