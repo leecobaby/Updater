@@ -27,6 +27,7 @@ let JD_API_HOST = `https://api.m.jd.com/client.action?advId=`;
 
 //   func.xxx -> logicHandler($) -> func.http -> logicHandler($) -> func.xxx
 //   回调完执行 next，视情况来清空 callback
+//   error 为错误信息，会终止当前账号在指令中的运行，直接运行输出log开始下一个账号或结束
 
 
 // 获取活动大厅信息

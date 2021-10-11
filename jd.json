@@ -456,7 +456,7 @@
   },
   "JD_ddwj": {
     "version": "上次数据更新于:9.25.1",
-    "pv": "openapp.jdmobile://virtual?openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https%3A%2F%2Fu.jd.com%2FrL0I4ld%22%7D%0A",
+    "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https%3A%2F%2Fu.jd.com%2FrL0I4ld%22%7D%0A",
     "endJump": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https%3A%2F%2Fh5.m.jd.com%2FbabelDiy%2FZeus%2FWpoxUMaPZw14nb3ZydKcvYwG4yA%2Findex.html%22%7D",
     "pkHelpCode": "IgNWdiLGaPaAqdZqpd0QbcXZFPwE1VfQ9VPl2cARI1KWYjbV1EXeRSxZojc",
     "signList": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_ddwj/signList.json",
@@ -518,13 +518,13 @@
     ]
   },
   "JD_fruit": {
-    "version": "上次数据更新于:10.10.1",
-    "pv": "openapp.jdmobile://virtual?openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https%3A%2F%2Fu.jd.com%2FrL0I4ld%22%7D%0A",
-    "endJump": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https%3A%2F%2Fh5.m.jd.com%2FbabelDiy%2FZeus%2FWpoxUMaPZw14nb3ZydKcvYwG4yA%2Findex.html%22%7D",
+    "version": "上次数据更新于:10.11.1",
+    "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/DKWT6qK%22%7D%0A",
+    "endJump": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://h5.m.jd.com/babelDiy/Zeus/3KSjXqQabiTuD1cJ28QskrpWoBKT/index.html%22%7D",
     "pkHelpCode": "IgNWdiLGaPaAqdZqpd0QbcXZFPwE1VfQ9VPl2cARI1KWYjbV1EXeRSxZojc",
     "codeUrl": {
       "CryptoJS": "https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.js",
-      "JD_ddwj": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_ddwj.js"
+      "JD_fruit": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/JD_fruit.js"
     },
     "api": {
       "isLogin": {
@@ -536,7 +536,7 @@
           "Accept-Encoding": "gzip, deflate, br",
           "Accept-Language": "zh-cn",
           "Connection": "keep-alive",
-          "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.5(0x18000528) NetType/WIFI Language/zh_CN",
+          "User-Agent": "jdapp;iPhone;10.0.6;14.4;c67093f5dd58d33fc5305cdc61e46a9741e05c5b;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
           "Referer": "https://wqs.jd.com/my/jingdou/my.shtml?sceneval=2"
         }
       },
@@ -551,35 +551,31 @@
           "Referer": "https://wqs.jd.com/my/jingdou/my.shtml?sceneval=2"
         }
       },
-      "getToken": {
-        "url": "https://bh.m.jd.com/gettoken"
+      "api": {
+        "url": "https://api.m.jd.com/client.action"
       }
     },
     "uaInfo": {
       "UA1": {
-        "ua": "jdapp;iPhone;10.0.6;14.4;c67093f5dd58d33fc5305cdc61e46a9741e05c5b;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
-        "signUrl": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_ddwj/jdSign1.js"
+        "ua": "jdapp;iPhone;10.0.6;14.4;c67093f5dd58d33fc5305cdc61e46a9741e05c5b;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1"
       },
       "UA2": {
-        "ua": "jdapp;iPhone;10.0.6;14.4;c67093f5dd58d33fc5305cdc61e46a9741e05c5b;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
-        "signUrl": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_ddwj/jdSign2.js"
+        "ua": "jdapp;iPhone;10.0.6;14.4;c67093f5dd58d33fc5305cdc61e46a9741e05c5b;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1"
       },
       "UA3": {
-        "ua": "jdapp;iPhone;9.2.0;14.1;",
-        "signUrl": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_ddwj/jdSign2.js"
+        "ua": "jdapp;iPhone;9.2.0;14.1;"
       }
     },
     "codeList": [
-      "funny_getHomeData_next",
-      "funny_getTaskDetail_next",
-      "oneActivityInfo_next",
-      "oneActivityInfo_next_next",
-      "help_next",
-      "funny_getFeedDetail_next",
-      "add_car_next"
+      "initForFarm_next",
+      "taskInitForFarm_next",
+      "helpInvite_next",
+      "signForFarm_next",
+      "browseAdTaskForFarm_next",
+      "browseAdTaskForFarm_next_next"
     ]
   },
   "share": {
-    "🥮 中秋会场": "openapp.jdmobile://virtual?params={\"des\":\"m\",\"category\":\"jump\",\"url\":\"https://u.jd.com/rL0I4ld\"}"
+    "抢购助手 - 可快速的将链接用app打开，避免小程序抢购的卡顿": "https://www.icloud.com/shortcuts/95e925b98bb14a759c743600fae67f8b"
   }
 }
