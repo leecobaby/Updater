@@ -510,12 +510,39 @@
     "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_ddwj/",
     "tip": {
       "hongbao": "",
-      "hot": "🥮 中秋活动中...",
+      "hot": "",
       "faq": "有疑问的请查看",
       "set": "",
       "team": "",
-      "other": "助力出问题可以指令修复",
+      "other": "",
       "more": ""
+    }
+  },
+  "JD_fruit": {
+    "version": "1.0",
+    "update_log": "",
+    "about": {
+      "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
+      "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_fruit#版本日志"
+    },
+    "help": "",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/2f9f2e6be6914cba8507c51ddf8afa62",
+    "notice": "东东农场更多自动化功能正在持续增加中...\n云端助力池正在建设中...",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
+    "automation_url": "shortcuts://run-shortcut?name=京东-东东农场&input=text&text=task",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd2.jpeg",
+    "scritable": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/getJDCookie-sms.js",
+    "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/jd.json",
+    "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/fruit/",
+    "tip": {
+      "hongbao": "",
+      "hot": "",
+      "faq": "有疑问的请查看",
+      "set": "",
+      "team": "",
+      "other": "",
+      "more": "🧧 红包每天领"
     }
   },
   "More": {
