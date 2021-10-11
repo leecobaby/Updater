@@ -106,7 +106,7 @@ function helpInvite () {
 /**
  * 做签到任务
  */
-function signForFarm () {
+function help () {
   if (!$.farmTask.signInit?.todaySigned) {
     $.callback = 'Func.request'
     takeRequest('signForFarm');
