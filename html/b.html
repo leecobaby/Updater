@@ -9,30 +9,7 @@
 </head>
 
 <body>
-  <script>
-    const data = {
-      code: '0',
-      message: null
-    }
-    const $ = {}
-    switch (data.helpResult?.code) {
-      case '0':
-        $.message = `助力成功，获得${data.helpResult.salveHelpAddWater}g水滴`
-        break;
-      case '8':
-        $.message = `助力失败，您今天助力次数已耗尽`
-        $.selfHelpMax = true;
-        break;
-      case '9':
-        $.message = `助力失败，已经助力过该好友`
-        break;
-      case '10':
-        $.message = `助力失败，该好友已满五人助力`
-        break;
-      default:
-        $.message = `助力失败：${JSON.stringify(data.message)}`
-    }
-    document.write(JSON.stringify(data))
+  <script src="./jd_fruit.js">
   </script>
 </body>
 

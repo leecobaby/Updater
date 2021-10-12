@@ -499,7 +499,7 @@ function dealReturn (type, data) {
       }
       break;
     case 'gotStageAwardForFarm':
-      data.code === '0' && $.message = `【${$.waterResult.waterStatusMsg}】奖励${data.addEnergy}g💧`
+      data.code === '0' && ($.message = `【${$.waterResult.waterStatusMsg}】奖励${data.addEnergy}g💧`)
       break
     default:
       console.log(`未判断的异常${type}`);
