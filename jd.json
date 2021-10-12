@@ -571,6 +571,8 @@
       "taskList": [
         { "做签到任务": "signForFarm" },
         { "做浏览任务": "browseAdTaskForFarm" },
+        { "做浇水十次任务": "doTenWater" },
+        { "领取阶段性水滴奖励": "gotStageAwardForFarm" },
         { "其他": "cloudTip" }
       ]
     },
@@ -580,7 +582,9 @@
       "help_next",
       "signForFarm_next",
       "browseAdTaskForFarm_next",
-      "browseAdTaskForFarm_next_next"
+      "browseAdTaskForFarm_next_next",
+      "doTenWater_next",
+      "gotStageAwardForFarm_next"
     ]
   },
   "share": {

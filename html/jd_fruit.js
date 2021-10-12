@@ -49,7 +49,6 @@ function initForFarm () {
   $.callback = ''
   dealReturn('initForFarm', $.data)
   document.write(JSON.stringify($))
-  console.log($.message);
 }
 
 /**
@@ -206,7 +205,6 @@ function doTenWater () {
     return
 
     // next
-    $.waterCount++
     $.callback = ''
     dealReturn('waterGoodForFarm', $.data)
     document.write(JSON.stringify($))
@@ -219,6 +217,50 @@ function doTenWater () {
     return
   }
 }
+
+/**
+ * 领取阶段性水滴奖励
+ */
+function gotStageAwardForFarm () {
+  if ($.waterResult.waterStatus === 0 && $.waterResult.treeEnergy === 10) {
+    $.callback = 'Func.request'
+    $.taskType = '1'
+    $.waterResult.waterStatusMsg = '果树发芽了'
+    takeRequest('gotStageAwardForFarm');
+    return
+  } else if ($.waterResult.waterStatus === 1) {
+    $.callback = 'Func.request'
+    $.taskType = '2'
+    $.waterResult.waterStatusMsg = '果树开花了'
+    takeRequest('gotStageAwardForFarm');
+    return
+  } else if ($.waterResult.waterStatus === 2) {
+    $.callback = 'Func.request'
+    $.taskType = '3'
+    $.waterResult.waterStatusMsg = '果树结果了'
+    takeRequest('gotStageAwardForFarm');
+    return
+  } else {
+    $.message = '暂无阶段奖励'
+    document.write(JSON.stringify($))
+    return
+  }
+
+  // next
+  $.callback = ''
+  dealReturn('gotStageAwardForFarm', $.data)
+  document.write(JSON.stringify($))
+}
+
+/**
+ * 领取首次浇水奖励
+ */
+function firstWaterTaskForFarm () {
+  if (!$.firstRun) {
+    taskInitForFarm()
+  }
+}
+
 
 /**
  * 提交请求信息
@@ -249,12 +291,12 @@ function takeRequest (type) {
       myRequest = getRequest(`waterGoodForFarm`, body, 'GET');
       break;
     case 'helpInvite':
-      body = `{imageUrl:"",nickName:"",shareCode:"${$.inviteId}",babelChannel:"3",version:2,channel:1}`;
+      body = `{"imageUrl":"","nickName":"","shareCode":"${$.inviteId}","babelChannel":"3","version":2,"channel":1}`;
       myRequest = getRequest(`initForFarm`, body, 'GET');
       break;
-    case 'zoo_pk_getHomeData':
-      body = `functionId=zoo_pk_getHomeData&body={}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`zoo_pk_getHomeData`, body);
+    case 'gotStageAwardForFarm':
+      body = `{"type":${$.taskType}}`;
+      myRequest = getRequest(`gotStageAwardForFarm`, body, 'GET');
       break;
     case 'zoo_pk_getTaskDetail':
       body = `functionId=zoo_pk_getTaskDetail&body={}&client=wh5&clientVersion=1.0.0`;
@@ -437,8 +479,28 @@ function dealReturn (type, data) {
       }
       break;
     case 'waterGoodForFarm':
-
+      $.waterResult = data
+      if ($.waterResult.code === '0') {
+        $.message = `成功浇水 ${$.waterCoun++} 次，剩余水滴${$.waterResult.totalEnergy}g`
+        if ($.waterResult.finished) {
+          // 已证实，waterResult.finished为true，表示水果可以去领取兑换了
+          $.error = `【⏰ 提醒】${$.farmInfo.farmUserPro?.name}已可领取\n请去京东APP或微信小程序查看`
+          break
+        } else {
+          if ($.waterResult.totalEnergy < 10) {
+            $.message = `水滴不够，结束浇水`
+            $.to = '', $.call.pop()
+            break
+          }
+        }
+      } else {
+        $.message = '浇水出现失败异常,跳出不在继续浇水'
+        $.to = '', $.call.pop()
+      }
       break;
+    case 'gotStageAwardForFarm':
+      data.code === '0' && $.message = `【${$.waterResult.waterStatusMsg}】奖励${data.addEnergy}g💧`
+      break
     default:
       console.log(`未判断的异常${type}`);
   }
