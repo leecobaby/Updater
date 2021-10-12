@@ -1246,25 +1246,12 @@
     ]
   },
   "team": {
-    "🏠 种草机助力池": "https://gitter.im/leecobaby-shortcuts/1111zcj?utm_source=share-link&utm_medium=link&utm_campaign=share-link",
-    "🏠 快手极速版砍价助力池": "https://gitter.im/leecobaby-shortcuts/kuai_kan?utm_source=share-link&utm_medium=link&utm_campaign=share-link"
+    "🏠 种草机助力池": "https://gitter.im/leecobaby-shortcuts/1111zcj?utm_source=share-link&utm_medium=link&utm_campaign=share-link"
   },
   "share": {
     "🔥 抢购助手 - 一键转换签到红包抵扣": "https://www.icloud.com/shortcuts/64b5f93e1119403da44ac3ddd5ad8bf0",
-    "淘特活动": {
-      "🧧 淘宝特价版新人0.1元购": "taobao://m.tb.cn/h.4CqYJe0",
-      "🧧 淘宝特价版7月品牌补贴": "taobao://m.tb.cn/h.4DBjjVR"
-    },
-    "🐙 聚划算星星10,13点换广西券": "taobao://m.tb.cn/h.4jU2zgr",
-    "🔥 7月限量一元购 - 🪄变0元购": {
-      "😈 0元购教程": "https://mp.weixin.qq.com/s/phkMAiYfZWghHIZNax2r8w",
-      "📺 视频演示": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cgndyni",
-      "🎯 一元购页面": "taobao://m.tb.cn/h.4DBRn6n"
-    },
-    "天猫活动": {
-      "🧧 天猫红包雨": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.4kgjw96%3Fsm%3Db4c985",
-      "🧧 抢1元天猫超市卡": "taobao://m.tb.cn/h.4o9vyN4?sm=62cb49",
-      "🃏 猫超翻牌抢0.01元好货": "taobao://m.tb.cn/h.4xFSHgA"
+    "淘特新活动": {
+      "🧧 淘宝特价版新人0.1元购": "taobao://m.tb.cn/h.ffZx3Aq"
     },
     "🌲 芭芭农场下单任务": {
       "000🌲000 点击插看下单任务教程 👉": "https://github.com/leecobaby/shortcuts/blob/master/TB.FAQ.md#%E5%A6%82%E4%BD%95%E5%AE%8C%E6%88%90%E8%8A%AD%E8%8A%AD%E5%86%9C%E5%9C%BA%E4%B8%8B%E5%8D%95%E4%BB%BB%E5%8A%A1",
@@ -1272,6 +1259,14 @@
       "0.1元包邮 - 螺钉": "taobao://pages.tmall.com/wow/tmallfarm/act/new-order?wh_biz=tm&disableNav=YES&bizCode=new_browse_task&searchKey=螺钉",
       "0.1元包邮 - 六角螺丝": "taobao://pages.tmall.com/wow/tmallfarm/act/new-order?wh_biz=tm&disableNav=YES&bizCode=new_browse_task&searchKey=六角螺丝",
       "0.1元包邮 - 卡箍": "taobao://pages.tmall.com/wow/tmallfarm/act/new-order?wh_biz=tm&disableNav=YES&bizCode=new_browse_task&searchKey=卡箍"
+    },
+    "🔥 双十一活动预告": {
+      "🧧 最高 1111 整点惊喜红包 🧧": "taobao://s.click.taobao.com/3INregu",
+      "🧧 10.20-11.11 每天领红包 🧧": "taobao://s.click.taobao.com/3INregu",
+      "🧧 2021-10-20 13:00 、14:00、18:00、19:00、20:00、21:00": "taobao://s.click.taobao.com/3INregu",
+      "🧧 2021-10-21 13:00 、14:00、18:00、19:00、20:00、21:00": "taobao://s.click.taobao.com/3INregu",
+      "🎉 10-20-20:00:00至10-31-21:59:59 预售订单 单单开奖": "taobao://s.click.taobao.com/3INregu",
+      "💰 10.15 10.18 10.20 10.25 10.30 快捷指令领专属预售补贴": "taobao://s.click.taobao.com/3INregu"
     }
   }
 }
