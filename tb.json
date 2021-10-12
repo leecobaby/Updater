@@ -1,6 +1,6 @@
 {
   "Taojb": {
-    "version": "数据最后更新于:9.17.1",
+    "version": "数据最后更新于:10.12.1",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fVWVxZX",
@@ -383,7 +383,7 @@
     ]
   },
   "Jhs": {
-    "version": "数据最后更新于:10.4.1",
+    "version": "数据最后更新于:10.12.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fVWVxZX",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fVWVxZX",
@@ -414,7 +414,7 @@
         "stars": {
           "title": "攒星星",
           "type": "stars",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&sourceType=other&fromToken=xBVj6P9UvoVobWAQTnvT7EUqUZUJ&sceneId=107&hd_from_id=100027&deliveryId=",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&sourceType=other&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&sceneId=107&hd_from_id=100027&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "18160 expo_38_269002_18160_0",
@@ -704,7 +704,7 @@
     ]
   },
   "Hlzx": {
-    "version": "数据最后更新于:10.4.1",
+    "version": "数据最后更新于:10.12.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fVWVxZX",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fVWVxZX",
@@ -735,7 +735,7 @@
         "steps": {
           "title": "攒步数",
           "type": "steps",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=1148&sourceType=other&hd_from_id=100095&deliveryId=",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=1148&sourceType=other&hd_from_id=100095&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "17878 linked_29_0_17878_0",
@@ -817,7 +817,7 @@
           "textEnd": "str1&implId=str2",
           "item": [
             "17065 other_76_1_17065_0",
-            "12766 other_0_163002_12766_0",
+            "18744 other_0_163002_18744_0",
             "7932 linked_274_0_7932_0",
             "11640 other_274_307006_11640_0",
             "12080 expo_261_122021_12080_0",
@@ -849,7 +849,7 @@
             "7936 other_58_424002_16847_0",
             "12359 other_273_233003_12359_0",
             "17304 other_40_476003_17304_0",
-            "17734 cloudsail_24_151510502610001_17734_0"
+            "8275 other_302_0_8275_0"
           ]
         }
       },
