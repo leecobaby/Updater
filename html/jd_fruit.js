@@ -222,19 +222,19 @@ function doTenWater () {
  * 领取阶段性水滴奖励
  */
 function gotStageAwardForFarm () {
-  if ($.waterResult.waterStatus === 0 && $.waterResult.treeEnergy === 10) {
+  if ($.waterResult?.waterStatus === 0 && $.waterResult?.treeEnergy === 10) {
     $.callback = 'Func.request'
     $.taskType = '1'
     $.waterResult.waterStatusMsg = '果树发芽了'
     takeRequest('gotStageAwardForFarm');
     return
-  } else if ($.waterResult.waterStatus === 1) {
+  } else if ($.waterResult?.waterStatus === 1) {
     $.callback = 'Func.request'
     $.taskType = '2'
     $.waterResult.waterStatusMsg = '果树开花了'
     takeRequest('gotStageAwardForFarm');
     return
-  } else if ($.waterResult.waterStatus === 2) {
+  } else if ($.waterResult?.waterStatus === 2) {
     $.callback = 'Func.request'
     $.taskType = '3'
     $.waterResult.waterStatusMsg = '果树结果了'
