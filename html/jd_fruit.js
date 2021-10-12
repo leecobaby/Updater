@@ -481,7 +481,7 @@ function dealReturn (type, data) {
     case 'waterGoodForFarm':
       $.waterResult = data
       if ($.waterResult.code === '0') {
-        $.message = `成功浇水 ${$.waterCoun++} 次，剩余水滴${$.waterResult.totalEnergy}g`
+        $.message = `成功浇水 ${++$.waterCount} 次，剩余水滴${$.waterResult.totalEnergy}g`
         if ($.waterResult.finished) {
           // 已证实，waterResult.finished为true，表示水果可以去领取兑换了
           $.error = `【⏰ 提醒】${$.farmInfo.farmUserPro?.name}已可领取\n请去京东APP或微信小程序查看`
