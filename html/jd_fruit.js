@@ -256,11 +256,51 @@ function gotStageAwardForFarm () {
  * 领取首次浇水奖励
  */
 function firstWaterTaskForFarm () {
-  if (!$.firstRun) {
-    taskInitForFarm()
+  // 此处调用别的函数，并不会执行 next 所以需要再执行一次 next
+  taskInitForFarm()
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('taskInitForFarm', $.data)
+  if (!$.farmTask.firstWaterInit.f && $.farmTask.firstWaterInit.totalWaterTimes > 0) {
+    $.callback = 'Func.request'
+    takeRequest('firstWaterTaskForFarm');
+    // return
+    // 这里的逻辑是在 next 里面的，而 next 不是一个函数，所以不能使用 return 来中断
+
+    // 对于 next next 这种嵌套需要单独隔离，只在运行到的时候调用，判断是否有页面内容为好的方式
+
+    // next next
+    if (!document.body.innerText) {
+      $.callback = ''
+      dealReturn('firstWaterTaskForFarm', $.data)
+      document.write(JSON.stringify($))
+    }
+  } else {
+    $.message = '首次浇水奖励已领取'
+    document.write(JSON.stringify($))
   }
 }
 
+/**
+ * 领取十次浇水奖励
+ */
+function totalWaterTaskForFarm () {
+  if (!$.farmTask.totalWaterTaskInit.f && $.farmTask.totalWaterTaskInit.totalWaterTaskTimes >= $.farmTask.totalWaterTaskInit.totalWaterTaskLimit) {
+    $.callback = 'Func.request'
+    takeRequest('totalWaterTaskForFarm');
+    return
+
+    // next
+    $.callback = ''
+    dealReturn('totalWaterTaskForFarm', $.data)
+    document.write(JSON.stringify($))
+  } else if ($.farmTask.totalWaterTaskInit.totalWaterTaskTimes < $.farmTask.totalWaterTaskInit.totalWaterTaskLimit) {
+    $.message = `【十次浇水奖励】任务未完成，今日浇水${$.farmTask.totalWaterTaskInit.totalWaterTaskTimes}次`
+  }
+  document.write(JSON.stringify($))
+}
 
 /**
  * 提交请求信息
@@ -298,14 +338,13 @@ function takeRequest (type) {
       body = `{"type":${$.taskType}}`;
       myRequest = getRequest(`gotStageAwardForFarm`, body, 'GET');
       break;
-    case 'zoo_pk_getTaskDetail':
-      body = `functionId=zoo_pk_getTaskDetail&body={}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`zoo_pk_getTaskDetail`, body);
+    case 'firstWaterTaskForFarm':
+      body = `{}`;
+      myRequest = getRequest(`firstWaterTaskForFarm`, body, 'GET');
       break;
-    case 'zoo_pk_collectScore':
-      body = getPostBody(type);
-      //console.log(body);
-      myRequest = getRequest(`zoo_pk_collectScore`, body);
+    case 'totalWaterTaskForFarm':
+      body = `{}`;
+      myRequest = getRequest(`totalWaterTaskForFarm`, body, 'GET');
       break;
     case 'zoo_pk_doPkSkill':
       body = `functionId=zoo_pk_doPkSkill&body={"skillType":"${$.skillCode}"}&client=wh5&clientVersion=1.0.0`;
@@ -500,6 +539,20 @@ function dealReturn (type, data) {
       break;
     case 'gotStageAwardForFarm':
       data.code === '0' && ($.message = `【${$.waterResult.waterStatusMsg}】奖励${data.addEnergy}g💧`)
+      break
+    case 'firstWaterTaskForFarm':
+      if (data.code === '0') {
+        $.message = `【首次浇水奖励】获得${data.amount}g💧`
+      } else {
+        $.message = `领取首次浇水奖励结果：${JSON.stringify(data.message)}`
+      }
+      break
+    case 'totalWaterTaskForFarm':
+      if (data.code === '0') {
+        $.message = `【十次浇水奖励】获得${data.totalWaterTaskEnergy}g💧`
+      } else {
+        $.message = `领取10次浇水奖励结果：${JSON.stringify(data.message)}`
+      }
       break
     default:
       console.log(`未判断的异常${type}`);
