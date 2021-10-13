@@ -339,7 +339,7 @@
     }
   },
   "Ttlhb": {
-    "version": "数据最后更新于:4.12.1",
+    "version": "数据最后更新于:10.13.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fVWVxZX",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fVWVxZX",
@@ -370,20 +370,19 @@
         "energy": {
           "title": "攒福气",
           "type": "energy",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/an/tmall/default-rax/175f4129baa?wh_biz=tm&disableNav=YES&sceneId=1412&hd_from_id=100102&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&deliveryId=",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=58Do5BOuVVPEv5LeHWGHWzbhOUDUjUw&spm=a217e.1212.tasklist.0&sceneId=1412&sourceType=other&hd_from_id=100102&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
-            "12159 other_28_122030_12159_0",
-            "12159 other_28_122030_12159_1",
-            "12159 other_28_122030_12159_2",
-            "12069 other_5_124024_12069_0",
-            "12068 other_28_119059_12068_0",
-            "12128 other_28_1_12128_1",
-            "12057 other_28_122019_12057_0",
-            "12070 other_19_124024_12070_0",
-            "12035 other_42_122022_12035_0",
-            "12018 other_42_110034_12018_0",
-            "12073 other_19_124025_12073_0"
+            "17240 other_226_429002_17240_0",
+            "18521 other_203_467020_18521_0",
+            "12069 other_203_124024_12069_0",
+            "15235 other_226_470002_15235_0",
+            "17129 other_203_484007_17129_0",
+            "19907 other_226_578006_19907_0",
+            "12480 other_189_580003_12480_0",
+            "12018 other_226_421009_12018_0",
+            "17757 other_226_455008_17757_0",
+            "18718 other_226_0_18718_0"
           ]
         }
       }
