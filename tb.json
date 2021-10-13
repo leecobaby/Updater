@@ -339,7 +339,7 @@
     }
   },
   "Ttlhb": {
-    "version": "数据最后更新于:10.13.3",
+    "version": "数据最后更新于:10.14.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fVWVxZX",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fVWVxZX",
@@ -370,7 +370,7 @@
         "energy": {
           "title": "攒福气",
           "type": "energy",
-          "urlScheme": "HTTPS://lpages.tmall.com/wow/an/tmall/default-rax/175f4129baa?wh_biz=tm&disableNav=YES&sceneId=1412&hd_from_id=100102&fromToken=58Do5BOuVVPEv5LeHWGHWzbhOUDUjUw&deliveryId=",
+          "urlScheme": "HTTPS://åpages.tmall.com/wow/an/tmall/default-rax/175f4129baa?wh_biz=tm&disableNav=YES&sceneId=1412&hd_from_id=100102&fromToken=58Do5BOuVVPEv5LeHWGHWzbhOUDUjUw&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "17240 other_226_429002_17240_0",
