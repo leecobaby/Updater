@@ -122,12 +122,12 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json"
   },
   "Ttlhb": {
-    "version": "1.1",
-    "update_log": "* 初步自动任务\n* 支持自动化、多账号、ipad终端\n* 采用自动淘宝任务框架",
+    "version": "1.2",
+    "update_log": "- 修复 ios15 运行完弹窗问题\n- 更新 任务数据",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Ttlhb",
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/075b4ca189c84c968bf95d7380bdfea1",
+    "update": "https://www.icloud.com/shortcuts/ed56dc80faef422184d7f638d177c1e6",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
     "notice": "已支持新版天天领红包任务~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
@@ -136,7 +136,7 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 双十一活动预热中",
+      "hot": "🔥 预购补贴来拉...",
       "tjb": "请配合食用",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
@@ -287,12 +287,12 @@
     }
   },
   "1111zcj": {
-    "version": "1.1",
-    "update_log": "- 增加 自动助力\n- 增加 简易化助力池",
+    "version": "1.2",
+    "update_log": "- 增加 ios15 未指定文件夹的解决方法提示\n- 增加 做 500 次浏览任务功能",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/1111zcj",
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/c0c4b54fb7c349f1b37b562117f557e2",
+    "update": "https://www.icloud.com/shortcuts/ebc3d058584a4f57a336f7f13bd6bbba",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
     "notice": "双十一预热任务，能经常抽到红包~\n为了自动化指令的体验请按要求使用助力池~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
@@ -302,7 +302,7 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 双十一活动预热",
+      "hot": "🔥 预购补贴来了...",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
@@ -543,7 +543,7 @@
       "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ"
     },
     "more1": {
-      "👥 即将建新群": "https://jq.qq.com/?_wv=1027&k=pF9LvHgH",
+      "👥 ios快捷指令讨论群②": "https://jq.qq.com/?_wv=1027&k=pF9LvHgH",
       "👥 加入TG讨论群": "https://t.me/xuehaushe_chat",
       "👥 加入QQ情报群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=794151741&card_type=group&source=qrcode&jump_from=&auth=&authSig=QyhXG1SXGxWaEgClRfq4X7ueegscoHfN1r/027RrqaHsSfj8sR3Y7TzV6VwHx2IM&source_id=2_40001",
       "📱 其他捷径作品": "https://github.com/leecobaby/shortcuts",
