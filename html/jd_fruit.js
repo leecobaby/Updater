@@ -376,7 +376,7 @@ function waterFriendForFarm () {
 
     // next
     $.callback = ''
-    $.farmTask.waterFriendTaskInit?.waterFriendCountKey++
+    $.farmTask.waterFriendTaskInit.waterFriendCountKey++
     dealReturn('waterFriendForFarm', $.data)
     document.write(JSON.stringify($))
   }
