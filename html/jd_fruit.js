@@ -78,7 +78,20 @@ function taskInitForFarm () {
   $.callback = ''
   dealReturn('taskInitForFarm', $.data)
   document.write(JSON.stringify($))
-  // 暂时没做被水滴砸中逻辑
+}
+
+/**
+ * 获取好友列表
+ */
+function friendListInitForFarm () {
+  $.callback = 'Func.request'
+  takeRequest('friendListInitForFarm');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('friendListInitForFarm', $.data)
+  document.write(JSON.stringify($))
 }
 
 /**
@@ -119,9 +132,25 @@ function signForFarm () {
     return
 
     // next
-    $.callback = ''
     dealReturn('signForFarm', $.data)
-    document.write(JSON.stringify($))
+    // 被水滴砸中
+    if ($.farmInfo.todayGotWaterGoalTask.canPop) {
+      takeRequest('gotWaterGoalTaskForFarm');
+      // return
+      // 这里的逻辑是在 next 里面的，而 next 不是一个函数，所以不能使用 return 来中断
+
+      // 对于 next next 这种嵌套需要单独隔离，只在运行到的时候调用，判断是否有页面内容为好的方式
+
+      // next next
+      if (!document.body.innerText) {
+        $.callback = ''
+        dealReturn('gotWaterGoalTaskForFarm', $.data)
+        document.write(JSON.stringify($))
+      }
+    } else {
+      $.callback = ''
+      document.write(JSON.stringify($))
+    }
   } else {
     $.message = `今天已签到,连续签到${$.farmTask.signInit?.totalSigned},下次签到可得${$.farmTask.signInit?.signEnergyEachAmount}g`
     document.write(JSON.stringify($))
@@ -303,6 +332,64 @@ function totalWaterTaskForFarm () {
 }
 
 /**
+ * 做定时领水
+ */
+function gotThreeMealForFarm () {
+  if (!$.farmTask.gotThreeMealInit.f) {
+    $.callback = 'Func.request'
+    takeRequest('gotThreeMealForFarm');
+    return
+
+    // next
+    $.callback = ''
+    dealReturn('gotThreeMealForFarm', $.data)
+    document.write(JSON.stringify($))
+  } else {
+    $.message = '当前不在定时领水时间断或者已经领过'
+    document.write(JSON.stringify($))
+  }
+}
+
+/**
+ * 给两个好友浇水
+ */
+function waterFriendForFarm () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler'
+  $.call = ['waterFriendForFarm']
+
+  if (!$.needWaterFriends && $.friendList.friends?.length > 0) {
+    $.needWaterFriends = $.friendList.friends.filter(v => v.friendState === 1)
+  } else if ($.friendList.friends?.length <= 0) {
+    // 循环完成重新设置 to,call
+    $.to = '', $.call.pop()
+    $.message = '您的好友列表暂无好友,快去邀请您的好友吧!'
+    document.write(JSON.stringify($))
+    return
+  }
+
+  if ($.farmTask.waterFriendTaskInit?.waterFriendCountKey < 2) {
+    $.shareCode = $.needWaterFriends[$.farmTask.waterFriendTaskInit?.waterFriendCountKey].shareCode
+    $.callback = 'Func.request'
+    takeRequest('waterFriendForFarm');
+    return
+
+    // next
+    $.callback = ''
+    $.farmTask.waterFriendTaskInit?.waterFriendCountKey++
+    dealReturn('waterFriendForFarm', $.data)
+    document.write(JSON.stringify($))
+  }
+  else {
+    // 循环完成重新设置 to,call
+    $.to = '', $.call.pop()
+    $.message = `今日已经为两个好友浇水`
+    document.write(JSON.stringify($))
+    return
+  }
+}
+
+/**
  * 提交请求信息
  */
 function takeRequest (type) {
@@ -346,21 +433,21 @@ function takeRequest (type) {
       body = `{}`;
       myRequest = getRequest(`totalWaterTaskForFarm`, body, 'GET');
       break;
-    case 'zoo_pk_doPkSkill':
-      body = `functionId=zoo_pk_doPkSkill&body={"skillType":"${$.skillCode}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`zoo_pk_doPkSkill`, body);
+    case 'gotWaterGoalTaskForFarm':
+      body = `{"type":3}`;
+      myRequest = getRequest(`gotWaterGoalTaskForFarm`, body, 'GET');
       break;
-    case 'pkHelp':
-      body = getPostBody(type);
-      myRequest = getRequest(`zoo_pk_assistGroup`, body);
+    case 'gotThreeMealForFarm':
+      body = `{}`;
+      myRequest = getRequest(`gotThreeMealForFarm`, body, 'GET');
       break;
-    case 'zoo_getSignHomeData':
-      body = `functionId=zoo_getSignHomeData&body={"notCount":"1"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`zoo_getSignHomeData`, body);
+    case 'friendListInitForFarm':
+      body = `{"version":4,"channel":1}`;
+      myRequest = getRequest(`friendListInitForFarm`, body, 'GET');
       break;
-    case 'zoo_sign':
-      body = `functionId=zoo_sign&body={}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`zoo_sign`, body);
+    case 'waterFriendForFarm':
+      body = `{"shareCode":${$.shareCode},"version":6,"channel":1}`;
+      myRequest = getRequest(`waterFriendForFarm`, body, 'GET');
       break;
     case 'wxTaskDetail':
       body = `functionId=funny_getTaskDetail&body={"appSign":"2","channel":1,"shopSign":""}&client=wh5&clientVersion=1.0.0`;
@@ -488,11 +575,19 @@ function dealReturn (type, data) {
     case 'taskInitForFarm':
       if (data) { $.farmTask = data } else { $.error = `服务器返回数据异常，请检查原因~` }
       break;
+    case 'friendListInitForFarm':
+      $.friendList = data
+      break
     case 'signForFarm':
       if (data.code === "0") {
         $.message = `【签到成功】获得${data.amount}g💧`
       } else {
         $.message = `签到结果:  ${JSON.stringify(data)}`
+      }
+      break;
+    case 'gotWaterGoalTaskForFarm':
+      if (data.code === "0") {
+        $.message = `【被水滴砸中】获得${data.addEnergy}g💧`
       }
       break;
     case 'browseAdTaskForFarm':
@@ -552,6 +647,20 @@ function dealReturn (type, data) {
         $.message = `【十次浇水奖励】获得${data.totalWaterTaskEnergy}g💧`
       } else {
         $.message = `领取10次浇水奖励结果：${JSON.stringify(data.message)}`
+      }
+      break
+    case 'gotThreeMealForFarm':
+      if (data.code === '0') {
+        $.message = `【定时领水】获得${data.amount}g💧`
+      } else {
+        $.message = `定时领水成功结果：${JSON.stringify(data.message)}`
+      }
+      break
+    case 'waterFriendForFarm':
+      if (data.code === '0') {
+        $.message = `为第${$.farmTask.waterFriendTaskInit?.waterFriendCountKey}个好友浇水成功`
+      } else if (data.code === '11') {
+        $.message = '浇水失败：水滴不够'
       }
       break
     default:
