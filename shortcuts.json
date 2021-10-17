@@ -47,7 +47,7 @@
       }
     },
     "more": {
-      "🧧 现金红包-10.15": "taobao://m.tb.cn/h.feKWhqt",
+      "🧧 现金红包-10.18": "taobao://m.tb.cn/h.f40DIUh",
       "👥 加入QQ京东情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
       "👥 加入QQ淘宝情报群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=622340333&card_type=group&source=qrcode&jump_from=&auth=&authSig=RPqW9VSePIx4jWxGhYLvMvfdLkFPydHzo50qyVwmb9zhPjv7lF3HnSRF5WuJfjaX&source_id=2_40001",
       "👥 加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
@@ -106,12 +106,12 @@
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/f5b696373f694ca78d2d7b96f621d8f7",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "旧版淘金币任务数据已补全，新版继续完善中~\n新版请运行新版任务~",
+    "notice": "🔥 预售活动已经开启，具体去往活动大厅~\n新版请运行新版任务~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=淘金币自动任务&input=text&text=task",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 双十一活动预热",
+      "hot": "🔥 加战队夺第一",
       "taskEnd": "剩余没完成的任务请运行",
       "faq": "有疑问的请查看",
       "set": "",
@@ -129,7 +129,7 @@
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/ed56dc80faef422184d7f638d177c1e6",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "已支持新版天天领红包任务~",
+    "notice": "预售活动已经开启，具体去往活动大厅~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=天天领红包自动任务&input=text&text=1",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tb_ttlhb.png",
@@ -153,14 +153,14 @@
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/46a28871487e47038fd8aef7261d0318",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "99聚划算活动中...\n已支持划算江湖活动，15级瓜分千万红包~",
+    "notice": "预售活动已经开启，具体去往活动大厅~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=聚划算章鱼自动任务&input=text&text=task",
     "image": "https://gitee.com/leecobaby/Updater/raw/master/image/tb_jhs.png",
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 双十一活动预热",
+      "hot": "🔥 加战队夺第一",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
@@ -200,14 +200,14 @@
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/59fd80aa88be4e419e0b8f11e43028d3",
     "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
-    "notice": "活动任务数据已更新，只有iphone设备才能刷步数~",
+    "notice": "预售活动已经开启，具体去往活动大厅~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=活力中心自动任务&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tb_hlzx.png",
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 双十一活动预热",
+      "hot": "🔥 加战队夺第一",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
@@ -223,7 +223,7 @@
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/9886f7bb8e1c4de690564dd1ec01b071",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "任务异常为正常现象，不用管。已支持最新活动丰收季。",
+    "notice": "预售活动已经开启，具体去往活动大厅~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=芭芭农场自动集肥料&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
@@ -231,12 +231,12 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 双11预热中...",
+      "hot": "🔥 加战队夺第一",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": ""
+      "more": "🧧 10.18抢现金红包"
     }
   },
   "Qmxb": {
@@ -278,12 +278,12 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 双十一活动预热",
+      "hot": "🔥 加战队夺第一分大额",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": ""
+      "more": "🧧 10.18抢现金红包"
     }
   },
   "1111zcj": {
@@ -302,12 +302,12 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 预购补贴来了...",
+      "hot": "🔥 加战队夺第一分大额",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🔥 10.15抢现金红包"
+      "more": "🔥 10.18抢现金红包"
     }
   },
   "ltao_duck": {
@@ -558,7 +558,7 @@
           "联盟红包-饿了么": "eleme://web?url=https%3A%2F%2Ftb.ele.me%2Fwow%2Falsc%2Fmod%2Fd5275789de46503ba0908a9d%3Fe%3D1%26open_type%3Dminiapp%26inviterId%3D74f86c%26actId%3D1%26_ltracker_f%3Dhjb_app_grzx%26chInfo%3Dch_app_chsub_Photo"
         }
       },
-      "🧧 现金红包 - 10.15开抢": "taobao://m.tb.cn/h.feKWhqt",
+      "🧧 现金红包 - 10.18开抢": "taobao://m.tb.cn/h.f40DIUh",
       "🧧 支付宝现金红包": "alipays://platformapi/startapp?appId=20000067&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fc%2Falipay-red-qrcode%2Fshared.html%3Fchannel%3Dsearch_pwd%26shareId%3D2088102986032700%26token%3D11w194707wxbnqkmg21ke2d%26campStr%3DkPPFvOxaCL3f85TiKss2wsBZgIjulHjG%26sign%3Dlj1gjQ8PxzMbaRNG5RKOee%2FhckXIyodWvTJbBTYOleI%3D%26chInfo%3Dsousuoma%26c_stype%3Dsearch_pwd"
     },
     "more2": {
