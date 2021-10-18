@@ -435,7 +435,7 @@
     }
   },
   "JD_sign": {
-    "version": "1.2",
+    "version": "1.3",
     "update_log": "- 修复 授权登录方式\n- 修复 一些问题\n- 优化 架构",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
@@ -447,17 +447,18 @@
     "notice": "初步实现京东10种签到功能~\n初代版本暂不支持显示奖励明细~",
     "video": "",
     "automation_url": "shortcuts://run-shortcut?name=京东-多合一签到&input=text&text=task",
-    "image": "https://gitee.com/leecobaby/Updater/raw/master/image/jd_jd.png",
-    "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/jd.json",
-    "scritable": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/getJDCookie.js",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd.png",
+    "scritable": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/getJDCookie-sms.js",
+    "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/jd.json",
+    "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_sign/",
     "tip": {
       "hongbao": "",
-      "hot": "",
+      "hot": "🔥 双十一活动预热",
       "faq": "有疑问的请查看",
       "set": "",
       "team": "",
       "other": "",
-      "more": ""
+      "more": "🧧 美团红包升级"
     }
   },
   "JD_zoo": {
