@@ -11,6 +11,7 @@
 // 到指令里运行需要注释掉
 // const $ = {}
 
+// JingDongStore()
 // $.inviteList = [];
 // $.pkInviteList = [];
 // $.secretpInfo = {};
@@ -387,8 +388,9 @@ function dealReturn (type, data) {
       }
       break;
     case 'JingDongStore':
-      if (data.data && data.data.success === true && data.data.bizCode === 0) {
-        $.message = `京东商城-超市: 成功, 明细: ${merge.JDGStore.bean || `无`}京豆 🐶`
+      if (data.data?.success === true && data.data?.bizCode === 0) {
+        const bean = data.data.result.jdBeanCount || 0
+        $.message = `京东商城-超市: 成功, 明细: ${bean || `无`}京豆 🐶`
       } else {
         if (!data.data) data.data = {}
         const tp = data.data.bizCode == 811 ? `已签过` : data.data.bizCode == 300 ? `Cookie失效` : `${data.data.bizMsg || `未知`}`
