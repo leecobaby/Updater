@@ -54,7 +54,7 @@
         { "京东京豆": "JingDongBean" },
         { "京东超市": "JingDongStore" },
         { "京东转盘": "JingDongTurn" },
-        { "京东闪购": "JDFlashSale" },
+        { "京东闪购 - 签到领豆": "JDFlashSale" },
         { "京东闪购 - 瓜分京豆": "FlashSaleDivide" },
         { "京东现金红包": "JingDongCash" },
         { "其他": "cloudTip" }

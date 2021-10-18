@@ -436,7 +436,7 @@ function dealReturn (type, data) {
       }
       break;
     case 'FlashSaleDivide':
-      if (data.result.code == 0) {
+      if (data.result?.code == 0) {
         const bean = data.result.jdBeanNum || 0
         $.message = "京东闪购-瓜分: 成功, 明细: " + (bean || "无") + "京豆 🐶"
       } else {
