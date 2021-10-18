@@ -158,7 +158,7 @@ function friendListInitForFarm () {
  * 好友助力
  */
 function help () {
-  document.write(JSON.stringify($)
+  document.write(JSON.stringify($))
 }
 
 
