@@ -1,10 +1,28 @@
 {
   "JD_sign": {
-    "version": "数据库版本:2.2.1",
-    "pv": "openapp.jdmobile://virtual?params={\"des\":\"m\",\"category\":\"jump\",\"url\":\"https://u.jd.com/thCBSZW\"}",
-    "endJump": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"jdreactcommon\",\"appname\":\"JDReactMyJdSubModule\",\"modulename\":\"JDReactMyJdSubModule\",\"ishidden\":true,\"needLogin\":true}",
+    "version": "上次数据更新于:10.18.1",
+    "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/DKWT6qK%22%7D%0A",
+    "endJump": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/DKWT6qK%22%7D",
+    "pkHelpCode": "IgNWdiLGaPaAqdZqpd0QbcXZFPwE1VfQ9VPl2cARI1KWYjbV1EXeRSxZojc",
+    "codeUrl": {
+      "CryptoJS": "https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.js",
+      "JD_sign": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_sign.js"
+    },
     "api": {
       "isLogin": {
+        "url": "https://me-api.jd.com/user_new/info/GetJDUserInfoUnion",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json,text/plain, */*",
+          "Host": "me-api.jd.com",
+          "Accept-Encoding": "gzip, deflate, br",
+          "Accept-Language": "zh-cn",
+          "Connection": "keep-alive",
+          "User-Agent": "jdapp;iPhone;10.0.6;14.4;c67093f5dd58d33fc5305cdc61e46a9741e05c5b;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
+          "Referer": "https://wqs.jd.com/my/jingdou/my.shtml?sceneval=2"
+        }
+      },
+      "isLogin1": {
         "url": "https://wq.jd.com/user/info/QueryJDUserInfo?sceneval=2",
         "method": "POST",
         "headers": {
@@ -14,67 +32,41 @@
           "Connection": "keep-alive",
           "Referer": "https://wqs.jd.com/my/jingdou/my.shtml?sceneval=2"
         }
+      },
+      "api": {
+        "url": "https://api.m.jd.com/client.action"
       }
     },
-    "task": [
-      {
-        "name": "京东京豆",
-        "method": "post",
-        "url": "https://api.m.jd.com/client.action",
-        "body": "functionId=signBeanIndex&appid=ld"
+    "uaInfo": {
+      "UA1": {
+        "ua": "jdapp;iPhone;10.0.6;14.4;c67093f5dd58d33fc5305cdc61e46a9741e05c5b;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1"
       },
-      {
-        "name": "京东超市",
-        "method": "get",
-        "url": "https://api.m.jd.com/api?appid=jdsupermarket&functionId=smtg_sign&clientVersion=8.0.0&client=m&body=%7B%7D",
-        "Origin": "https://jdsupermarket.jd.com"
+      "UA2": {
+        "ua": "jdapp;iPhone;10.0.6;14.4;c67093f5dd58d33fc5305cdc61e46a9741e05c5b;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1"
       },
-      {
-        "name": "金融简单赚钱",
-        "method": "post",
-        "url": "https://ms.jr.jd.com/gw/generic/zc/h5/m/queryOpenScreenReward",
-        "body": "reqData=%7B%22channelCode%22%3A%22ZHUANQIAN%22%2C%22clientType%22%3A%22sms%22%2C%22clientVersion%22%3A%2211.0%22%7D"
-      },
-      {
-        "name": "金融钢镚",
-        "method": "post",
-        "url": "https://ms.jr.jd.com/gw/generic/hy/h5/m/signIn1",
-        "body": "reqData=%7B%22channelSource%22%3A%22JRAPP6.0%22%2C%22riskDeviceParam%22%3A%22%7B%7D%22%7D"
-      },
-      {
-        "name": "京东转盘",
-        "method": "get",
-        "url": "https://api.m.jd.com/client.action?functionId=wheelSurfIndex&body=%7B%22actId%22%3A%22jgpqtzjhvaoym%22%2C%22appSource%22%3A%22jdhome%22%7D&appid=ld"
-      },
-      {
-        "name": "京东闪购",
-        "method": "post",
-        "url": "https://api.m.jd.com/client.action?functionId=partitionJdSgin",
-        "body": "body=%7B%22version%22%3A%22v2%22%7D&client=apple&clientVersion=9.0.8&openudid=1fce88cd05c42fe2b054e846f11bdf33f016d676&sign=6768e2cf625427615dd89649dd367d41&st=1597248593305&sv=121"
-      },
-      {
-        "name": "京东现金红包",
-        "method": "post",
-        "url": "https://api.m.jd.com/client.action?functionId=ccSignInNew",
-        "body": "body=%7B%22pageClickKey%22%3A%22CouponCenter%22%2C%22eid%22%3A%22O5X6JYMZTXIEX4VBCBWEM5PTIZV6HXH7M3AI75EABM5GBZYVQKRGQJ5A2PPO5PSELSRMI72SYF4KTCB4NIU6AZQ3O6C3J7ZVEP3RVDFEBKVN2RER2GTQ%22%2C%22shshshfpb%22%3A%22v1%5C%2FzMYRjEWKgYe%2BUiNwEvaVlrHBQGVwqLx4CsS9PH1s0s0Vs9AWk%2B7vr9KSHh3BQd5NTukznDTZnd75xHzonHnw%3D%3D%22%2C%22childActivityUrl%22%3A%22openapp.jdmobile%253a%252f%252fvirtual%253fparams%253d%257b%255c%2522category%255c%2522%253a%255c%2522jump%255c%2522%252c%255c%2522des%255c%2522%253a%255c%2522couponCenter%255c%2522%257d%22%2C%22monitorSource%22%3A%22cc_sign_ios_index_config%22%7D&client=apple&clientVersion=8.5.0&d_brand=apple&d_model=iPhone8%2C2&openudid=1fce88cd05c42fe2b054e846f11bdf33f016d676&scope=11&screen=1242%2A2208&sign=1cce8f76d53fc6093b45a466e93044da&st=1581084035269&sv=102"
-      },
-      {
-        "name": "京东领现金",
-        "method": "get",
-        "url": "https://api.m.jd.com/client.action?functionId=cash_sign&body=%7B%22remind%22%3A0%2C%22inviteCode%22%3A%22%22%2C%22type%22%3A0%2C%22breakReward%22%3A0%7D&client=apple&clientVersion=9.0.8&openudid=1fce88cd05c42fe2b054e846f11bdf33f016d676&sign=7e2f8bcec13978a691567257af4fdce9&st=1596954745073&sv=111"
-      },
-      {
-        "name": "京东金贴",
-        "method": "get",
-        "url": "https://ms.jr.jd.com/gw/generic/uc/h5/m/signIn7",
-        "Referer": "https://active.jd.com/forever/cashback/index"
-      },
-      {
-        "name": "京东金融-抽奖",
-        "method": "post",
-        "url": "https://ms.jr.jd.com/gw/generic/syh_yxmx/h5/m/handleSign",
-        "body": "reqData=%7B%22activityNo%22%3A%22e2d1b240d5674def8178be6b4faac5b6%22%2C%22signType%22%3A%221%22%2C%22encryptSign%22%3A%22%22%7D"
+      "UA3": {
+        "ua": "jdapp;iPhone;9.2.0;14.1;"
       }
+    },
+    "controller": {
+      "callList": [],
+      "taskList": [
+        { "京东京豆": "JingDongBean" },
+        { "京东超市": "JingDongStore" },
+        { "京东转盘": "JingDongTurn" },
+        { "京东闪购": "JDFlashSale" },
+        { "京东闪购 - 瓜分京豆": "FlashSaleDivide" },
+        { "京东现金红包": "JingDongCash" },
+        { "其他": "cloudTip" }
+      ]
+    },
+    "codeList": [
+      "JingDongBean_next",
+      "JingDongStore_next",
+      "JingDongTurn_next",
+      "JDFlashSale_next",
+      "FlashSaleDivide_next",
+      "JingDongCash_next"
     ]
   },
   "JD_nian": {
