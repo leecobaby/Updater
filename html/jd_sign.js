@@ -158,28 +158,7 @@ function friendListInitForFarm () {
  * 好友助力
  */
 function help () {
-  // 循环逻辑单独设置 to,call
-  $.to = 'Func.logicHandler'
-  $.call = ['help']
-  $.inviteList = Array.isArray($.inviteList) ? $.inviteList : [$.inviteList]
-
-  $.inviteId = $.inviteList.shift()
-  if (!$.inviteId || $.selfHelpMax) {
-    // 循环完成重新设置 to,call
-    $.to = '', $.call.pop()
-    document.write(JSON.stringify($))
-    return
-  }
-
-  $.message = `${$.UserName}去助力，对方助力码:\n${$.inviteId}`
-  $.callback = 'Func.request'
-  takeRequest('helpInvite');
-  return
-
-  // next
-  $.callback = ''
-  dealReturn('helpInvite', $.data)
-  document.write(JSON.stringify($))
+  document.write(JSON.stringify($)
 }
 
 
