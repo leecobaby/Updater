@@ -443,7 +443,7 @@
     },
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/5d4bbe5da8c843e5bf96e89881c61c76",
+    "update": "https://www.icloud.com/shortcuts/911166fff124414bb2c07030361ae9ec",
     "notice": "已更换架构，初步实现京东各类签到，其他任务后续会静默推送~\n京东双11大促即将来临，关注活动大厅~",
     "video": "",
     "automation_url": "shortcuts://run-shortcut?name=京东-多合一签到&input=text&text=task",
