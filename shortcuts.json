@@ -436,15 +436,15 @@
   },
   "JD_sign": {
     "version": "1.3",
-    "update_log": "- 修复 授权登录方式\n- 修复 一些问题\n- 优化 架构",
+    "update_log": "- 实现 自动做任务，后台任务\n- 重构 架构，采用云端更新推送任务",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_sign#版本日志"
     },
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/7700808a249a480895b03f3c5a64ea40",
-    "notice": "初步实现京东10种签到功能~\n初代版本暂不支持显示奖励明细~",
+    "update": "https://www.icloud.com/shortcuts/5d4bbe5da8c843e5bf96e89881c61c76",
+    "notice": "已更换架构，初步实现京东各类签到，其他任务后续会静默推送~\n京东双11大促即将来临，关注活动大厅~",
     "video": "",
     "automation_url": "shortcuts://run-shortcut?name=京东-多合一签到&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd.png",
@@ -458,7 +458,7 @@
       "set": "",
       "team": "",
       "other": "",
-      "more": "🧧 美团红包升级"
+      "more": "🧧 10.20抢现金红包"
     }
   },
   "JD_zoo": {
