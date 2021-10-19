@@ -34,7 +34,7 @@
  * 云端推送提示
  */
 function cloudTip () {
-  $.message = `其他功能和任务正在开发中，上线将自动推送到指令中，无需任何操作~`
+  $.message = `指令已运行完毕！\n其他功能和任务正在开发中，上线将自动推送到指令中，无需任何操作~`
   document.write(JSON.stringify($))
 }
 
@@ -123,7 +123,7 @@ function JingDongCash () {
 }
 
 /**
- * 京东小魔方
+ * 京东小魔方  暂时不做
  */
 function JDMagicCube () {
   $.callback = 'Func.request'
@@ -134,6 +134,80 @@ function JDMagicCube () {
   $.callback = ''
   dealReturn('JDMagicCube', $.data)
   document.write(JSON.stringify($))
+}
+
+/**
+ * 京东金贴
+ */
+function JingDongSubsidy () {
+  $.callback = 'Func.request'
+  takeRequest('JingDongSubsidy');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('JingDongSubsidy', $.data)
+  document.write(JSON.stringify($))
+}
+
+/**
+ * 京东领现金
+ */
+function JingDongGetCash () {
+  $.callback = 'Func.request'
+  takeRequest('JingDongGetCash');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('JingDongGetCash', $.data)
+  document.write(JSON.stringify($))
+}
+
+/**
+ * 京东摇一摇
+ */
+function JingDongShake () {
+  $.callback = 'Func.request'
+  takeRequest('JingDongShake');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('JingDongShake', $.data)
+  // 在涉及到 next 后面调用其他函数时需要判断网页文本，防止覆盖
+  if (document.body.innerHTML) {
+    document.write(JSON.stringify($))
+  }
+}
+
+/**
+ * 京东秒杀
+ */
+function JDSecKilling () {
+  $.callback = 'Func.request'
+  takeRequest('JDSecKilling');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('JDSecKilling', $.data)
+  if ($.taskType) {
+    $.callback = 'Func.request'
+    takeRequest('JDSecKillingNext')
+    // return
+    // 这里的逻辑是在 next 里面的，而 next 不是一个函数，所以不能使用 return 来中断
+    // 对于 next next 这种嵌套需要单独隔离，只在运行到的时候调用，判断是否有页面内容为好的方式
+
+    // next next 
+    if (!document.body.innerHTML) {
+      $.callback = ''
+      dealReturn('JDSecKillingNext', $.data)
+      document.write(JSON.stringify($))
+    }
+  } else {
+    document.write(JSON.stringify($))
+  }
 }
 
 
@@ -206,25 +280,36 @@ function takeRequest (type) {
       url = `https://api.m.jd.com/client.action?functionId=getNewsInteractionInfo&appid=smfe&body=${encodeURIComponent(`{"sign":2}`)}`
       myRequest = getRequest(url, body, 'GET');
       break;
-    case 'firstWaterTaskForFarm':
-      body = `{}`;
-      myRequest = getRequest(`firstWaterTaskForFarm`, body, 'GET');
+    case 'JingDongSubsidy':
+      url = 'https://ms.jr.jd.com/gw/generic/uc/h5/m/signIn7'
+      headers = {
+        Referer: "https://active.jd.com/forever/cashback/index"
+      }
+      myRequest = getRequest(url, body, 'GET', headers);
       break;
-    case 'totalWaterTaskForFarm':
-      body = `{}`;
-      myRequest = getRequest(`totalWaterTaskForFarm`, body, 'GET');
+    case 'JingDongGetCash':
+      url = 'https://api.m.jd.com/client.action?functionId=cash_sign&body=%7B%22remind%22%3A0%2C%22inviteCode%22%3A%22%22%2C%22type%22%3A0%2C%22breakReward%22%3A0%7D&client=apple&clientVersion=9.0.8&openudid=1fce88cd05c42fe2b054e846f11bdf33f016d676&sign=7e2f8bcec13978a691567257af4fdce9&st=1596954745073&sv=111'
+      myRequest = getRequest(url, body, 'GET');
       break;
-    case 'gotWaterGoalTaskForFarm':
-      body = `{"type":3}`;
-      myRequest = getRequest(`gotWaterGoalTaskForFarm`, body, 'GET');
+    case 'JingDongShake':
+      url = 'https://api.m.jd.com/client.action?appid=vip_h5&functionId=vvipclub_shaking'
+      myRequest = getRequest(url, body, 'GET');
       break;
-    case 'gotThreeMealForFarm':
-      body = `{}`;
-      myRequest = getRequest(`gotThreeMealForFarm`, body, 'GET');
+    case 'JDSecKilling':
+      url = 'https://api.m.jd.com/client.action'
+      headers = {
+        Origin: 'https://h5.m.jd.com'
+      }
+      body = `functionId=homePageV2&appid=SecKill2020`;
+      myRequest = getRequest(url, body, 'POST', headers);
       break;
-    case 'friendListInitForFarm':
-      body = `{"version":4,"channel":1}`;
-      myRequest = getRequest(`friendListInitForFarm`, body, 'GET');
+    case 'JDSecKillingNext':
+      url = 'https://api.m.jd.com/client.action'
+      headers = {
+        Origin: 'https://h5.m.jd.com'
+      }
+      body = `functionId=doInteractiveAssignment&body=%7B%22encryptProjectId%22%3A%22${$.taskType.projectId}%22%2C%22encryptAssignmentId%22%3A%22${$.taskType.taskId}%22%2C%22completionFlag%22%3Atrue%7D&client=wh5&appid=SecKill2020`;
+      myRequest = getRequest(url, body, 'POST', headers);
       break;
     case 'waterFriendForFarm':
       body = `{"shareCode":${$.shareCode},"version":6,"channel":1}`;
@@ -290,7 +375,7 @@ function takeRequest (type) {
  * @param {string} method 请求方式
  * @returns 
  */
-function getRequest (url, body = {}, method = 'POST', heander = {}) {
+function getRequest (url, body = {}, method = 'POST', header = {}) {
   // if (type === 'listTask' || type === 'acceptTask') {
   //   url = `https://ms.jr.jd.com/gw/generic/hy/h5/m/${type}`;
   // }
@@ -299,7 +384,7 @@ function getRequest (url, body = {}, method = 'POST', heander = {}) {
   // }
   const headers = {
     'Accept': `application/json, text/plain, */*`,
-    'Origin': heander.Origin || `https://h5.m.jd.com`,
+    'Origin': header.Origin || `https://h5.m.jd.com`,
     'Accept-Encoding': `gzip, deflate, br`,
     "Cache-Control": "no-cache",
     'Cookie': $.cookie,
@@ -310,7 +395,7 @@ function getRequest (url, body = {}, method = 'POST', heander = {}) {
     "sec-fetch-mode": "cors",
     "sec-fetch-site": "same-site",
     'User-Agent': $.UA || "jdapp;iPhone;9.4.4;14.3;network/4g;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
-    'Referer': `https://home.m.jd.com/myJd/newhome.action`,
+    'Referer': header.Referer || `https://home.m.jd.com/myJd/newhome.action`,
     'Accept-Language': `zh-cn`
   };
   return { url: url, method: method, headers: headers, body: body };
@@ -448,60 +533,88 @@ function dealReturn (type, data) {
         }
       }
       break;
-    case 'helpInvite':
-      switch (data.helpResult?.code) {
-        case '0':
-          $.message = `助力成功，获得${data.helpResult.salveHelpAddWater}g水滴`
-          break;
-        case '8':
-          $.message = `助力失败，您今天助力次数已耗尽`
-          $.selfHelpMax = true;
-          break;
-        case '9':
-          $.message = `助力失败，已经助力过该好友`
-          break;
-        case '10':
-          $.message = `助力失败，该好友已满五人助力`
-          break;
-        default:
-          $.message = `助力失败：${JSON.stringify(data.message)}`
+    case 'JingDongSubsidy':
+      if (data.resultData?.data?.thisAmount) {
+        const subsidy = data.resultData.data.thisAmountStr
+        $.message = `京东商城-金贴: 成功, 明细: ${ubsidy || `无`}金贴 💰`
+      } else {
+        // merge.subsidy.fail = 1
+        if (json.match(/已存在|"thisAmount":0/)) {
+          $.message = "京东商城-金贴: 失败, 原因: 无金贴 ⚠️"
+        } else if (json.match(/请先登录/)) {
+          $.message = "京东商城-金贴: 失败, 原因: Cookie失效‼️"
+        } else {
+          const msg = json.split(/\"msg\":\"([\u4e00-\u9fa5].+?)\"/)[1];
+          $.message = `京东商城-金贴: 失败, ${msg || `原因: 未知`} ⚠️`
+        }
       }
       break;
-    case 'waterGoodForFarm':
-      $.waterResult = data
-      if ($.waterResult.code === '0') {
-        $.message = `成功浇水 ${++$.waterCount} 次，剩余水滴${$.waterResult.totalEnergy}g`
-        if ($.waterResult.finished) {
-          // 已证实，waterResult.finished为true，表示水果可以去领取兑换了
-          $.error = `【⏰ 提醒】${$.farmInfo.farmUserPro?.name}已可领取\n请去京东APP或微信小程序查看`
-          break
+    case 'JingDongGetCash':
+      if (data.data?.success && data.data?.result) {
+        $.message = `京东商城-现金: 成功, 明细: ${data.data?.result?.signCash || `无`}现金 💰`
+      } else {
+        if (json.match(/\"bizCode\":201|已经签过/)) {
+          $.message = "京东商城-现金: 失败, 原因: 已签过 ⚠️"
+        } else if (json.match(/\"code\":300|退出登录/)) {
+          $.message = "京东商城-现金: 失败, 原因: Cookie失效‼️"
         } else {
-          if ($.waterResult.totalEnergy < 10) {
-            $.message = `水滴不够，结束浇水`
-            $.to = '', $.call.pop()
-            break
-          }
+          $.message = "京东商城-现金: 失败, 原因: 未知 ⚠️"
+        }
+      }
+      break;
+    case 'JingDongShake':
+      if (json.match(/prize/)) {
+        if (data.data?.prizeBean) {
+          const bean = data.data?.prizeBean?.count || 0
+          $.message = `京东商城-摇摇: 成功, 明细: ${bean || `无`}京豆 🐶`
+        } else if (data.data?.prizeCoupon) {
+          $.message = `京东商城-摇摇: 获得满${data.data?.prizeCoupon?.quota}减${data.data?.prizeCoupon?.discount}优惠券→ ${data.data?.prizeCoupon?.limitStr}`
+        } else {
+          $.message = `京东商城-摇摇: 成功, 明细: 未知 ⚠️`
+        }
+        if (data.data?.luckyBox?.freeTimes != 0) {
+          $.next = 0 // 调用函数之前重置 next
+          JingDongShake()
+          return
         }
       } else {
-        $.message = '浇水出现失败异常,跳出不在继续浇水'
-        $.to = '', $.call.pop()
+        if (json.match(/true/)) {
+          $.message = `京东商城-摇摇: 成功, 明细: 无奖励 🐶`
+          if (data.data?.luckyBox?.freeTimes != 0) {
+            $.next = 0 // 调用函数之前重置 next
+            JingDongShake()
+            return
+          }
+        } else {
+          if (json.match(/(无免费|8000005|9000005)/)) {
+            $.message = "京东商城-摇摇: 失败, 原因: 已摇过 ⚠️"
+          } else if (json.match(/(未登录|101)/)) {
+            $.message = "京东商城-摇摇: 失败, 原因: Cookie失效‼️"
+          } else {
+            $.message += `京东商城-摇摇: 失败, 原因: 未知 ⚠️`
+          }
+        }
       }
-      break;
-    case 'gotStageAwardForFarm':
-      data.code === '0' && ($.message = `【${$.waterResult.waterStatusMsg}】奖励${data.addEnergy}g💧`)
+      $.next = 1 // 覆盖 next
       break
-    case 'firstWaterTaskForFarm':
-      if (data.code === '0') {
-        $.message = `【首次浇水奖励】获得${data.amount}g💧`
+    case 'JDSecKilling':
+      if (data.code == 203 || data.code == 3 || data.code == 101) {
+        $.message = `京东秒杀-红包: 失败, 原因: Cookie失效‼️`;
+      } else if (data.result?.projectId && data.result?.taskId) {
+        $.taskType = {
+          projectId: data.result.projectId,
+          taskId: data.result.taskId
+        }
       } else {
-        $.message = `领取首次浇水奖励结果：${JSON.stringify(data.message)}`
+        $.message = `京东秒杀-红包: 失败, 暂无有效活动 ⚠️`;
       }
       break
-    case 'totalWaterTaskForFarm':
-      if (data.code === '0') {
-        $.message = `【十次浇水奖励】获得${data.totalWaterTaskEnergy}g💧`
+    case 'JDSecKillingNext':
+      if (data.code == 0 && data.subCode == 0) {
+        const qt = json.match(/"discount":(\d.*?),/);
+        $.message = `京东秒杀-红包: 成功, 明细: ${qt || `无`}红包 🧧`;
       } else {
-        $.message = `领取10次浇水奖励结果：${JSON.stringify(data.message)}`
+        $.message = `京东秒杀-红包: 失败, ${data.subCode == 103 ? `原因: 已领取` : data.msg ? data.msg : `原因: 未知`} ⚠️`;
       }
       break
     case 'gotThreeMealForFarm':
