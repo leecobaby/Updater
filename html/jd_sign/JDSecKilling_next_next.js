@@ -1,5 +1,5 @@
 // next next 
-if (!document.body.innerHTML) {
+if (!document.body.innerText) {
   $.callback = ''
   dealReturn('JDSecKillingNext', $.data)
   document.write(JSON.stringify($))
