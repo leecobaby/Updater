@@ -610,7 +610,7 @@ function dealReturn (type, data) {
       break
     case 'JDSecKillingNext':
       if (data.code == 0 && data.subCode == 0) {
-        const qt = json.match(/"discount":(\d.*?),/);
+        const qt = json.match(/"discount":(\d.*?),/)[2];
         $.message = `京东秒杀-红包: 成功, 明细: ${qt || `无`}红包 🧧`;
       } else {
         $.message = `京东秒杀-红包: 失败, ${data.subCode == 103 ? `原因: 已领取` : data.msg ? data.msg : `原因: 未知`} ⚠️`;
