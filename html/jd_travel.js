@@ -167,8 +167,8 @@ function doTask () {
 
   // 加购物车
   if ($.oneTask.taskType === 2 && $.oneTask.status === 1 && !$.oneTask.taskName.includes("逛逛")) {
-    // 暂时不做
-    // travel_getFeedDetail()
+
+    travel_getFeedDetail()
 
   } else if ($.oneTask.taskType === 2 && $.oneTask.status === 1 && $.oneTask.taskName.includes("逛逛")) {
 
@@ -267,7 +267,7 @@ function callbackResult (type) {
   document.write(JSON.stringify($))
 }
 
-// 处理购物车任务信息
+// 处理浏览商品任务信息
 function travel_getFeedDetail () {
   // 嵌套调用里面用数组形式 push
   $.to = 'Func.logicHandler';
@@ -286,16 +286,16 @@ function travel_getFeedDetail () {
   $.needTime = Number($.feedDetailInfo.maxTimes) - Number($.feedDetailInfo.times);
   $.call.pop()
   $.next = 0 // 衔接下一个函数前，重置 next 防止获取 next 失败
-  add_car()
+  browseProducts()
 }
 
-// 加购物车
-function add_car () {
+// 做浏览商品任务
+function browseProducts () {
   // 循环逻辑单独设置 to,call  嵌套调用里面用数组形式 push
   $.to = 'Func.logicHandler'
-  $.call[$.call.length - 1] == 'add_car' || $.call.push('add_car')
+  $.call[$.call.length - 1] == 'browseProducts' || $.call.push('browseProducts')
 
-  $.addCarInfo = $.productList.shift()
+  $.proCarInfo = $.productList.shift()
   if ($.needTime <= 0) {
     // 循环完成重新设置 to,call
     $.call.pop()
@@ -303,21 +303,21 @@ function add_car () {
     return
   }
 
-  if ($.addCarInfo.status !== 1) {
+  if ($.proCarInfo.status !== 1) {
     document.write(JSON.stringify($))
     return
   }
 
-  $.taskToken = $.addCarInfo.taskToken;
+  $.taskToken = $.proCarInfo.taskToken;
   $.needTime--;
-  $.message = `加购：${$.addCarInfo.skuName}`
+  $.message = `浏览商品：${$.proCarInfo.skuName}`
   $.callback = 'Func.request'
-  takePostRequest('add_car');
+  takePostRequest('browseProducts');
   return
 
   // next
   $.callback = ''
-  dealReturn('add_car', $.data)
+  dealReturn('browseProducts', $.data)
   document.write(JSON.stringify($))
 }
 
@@ -339,17 +339,13 @@ function takePostRequest (type) {
       body = `functionId=travel_getTaskDetail&body={}&client=wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`travel_getTaskDetail`, body);
       break;
-    case 'helpHomeData':
-      body = `functionId=funny_getHomeData&body={"inviteId":"${$.inviteId}"}&client=wh5&clientVersion=1.0.0&uuid=c67093f5dd58d33fc5305cdc61e46a9741e05c5b&appid=o2_act`;
-      myRequest = getPostRequest(`funny_getHomeData`, body);
-      break;
     case 'travel_collectAtuoScore':
       body = `functionId=travel_collectAtuoScore&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`
       myRequest = getPostRequest(`travel_collectAtuoScore`, body);
       break;
-    case 'funny_getFeedDetail':
-      body = `functionId=funny_getFeedDetail&body={"taskId":"${$.taskId}"}&client=wh5&clientVersion=1.0.0&appid=o2_act`;
-      myRequest = getPostRequest(`funny_getFeedDetail`, body);
+    case 'travel_getFeedDetail':
+      body = `functionId=travel_getFeedDetail&body={"taskId":"${$.taskId}"}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`travel_getFeedDetail`, body);
       break;
     case 'travel_collectScore':
       body = `functionId=travel_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYGJZYh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","actionType":1}&client=wh5&clientVersion=1.0.0`;
@@ -432,9 +428,9 @@ function takePostRequest (type) {
       body = `reqData={"eid":"","sdkToken":"jdd014JYKVE2S6UEEIWPKA4B5ZKBS4N6Y6X5GX2NXL4IYUMHKF3EEVK52RQHBYXRZ67XWQF5N7XB6Y2YKYRTGQW4GV5OFGPDPFP3MZINWG2A01234567","id":"${$.taskId}"}`;
       myRequest = getPostRequest(`acceptTask`, body);
       break;
-    case 'add_car':
-      body = `functionId=funny_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYGJZYh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","actionType":1}&client=wh5&clientVersion=1.0.0&uuid=c67093f5dd58d33fc5305cdc61e46a9741e05c5b&appid=o2_act`;
-      myRequest = getPostRequest(`funny_collectScore`, body);
+    case 'browseProducts':
+      body = `functionId=travel_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`travel_collectScore`, body);
       break;
     default:
       $.error = `takePostRequest 错误${type}`
@@ -567,7 +563,7 @@ function dealReturn (type, data) {
         $.pkTaskList = data.data.result.taskVos;
       }
       break;
-    case 'funny_getFeedDetail':
+    case 'travel_getFeedDetail':
       if (data.code === 0) {
         $.feedDetailInfo = data.data.result.addProductVos[0];
       }
@@ -575,7 +571,7 @@ function dealReturn (type, data) {
     case 'zoo_pk_collectScore':
       break;
     case 'travel_pk_collectPkExpandScore':
-      data.code === 0 && ($.message = data.data?.bizMsg)
+      // data.code === 0 && ($.message = data.data?.bizMsg)
       break;
     case 'zoo_getSignHomeData':
       if (data.code === 0) {
@@ -654,7 +650,7 @@ function dealReturn (type, data) {
         console.log(`领任务成功`);
       }
       break;
-    case 'add_car':
+    case 'browseProducts':
       if (data.code === 0) {
         let acquiredScore = data.data?.result?.acquiredScore;
         if (Number(acquiredScore) > 0) {
@@ -663,7 +659,7 @@ function dealReturn (type, data) {
           $.message = `加购成功`
         }
       } else {
-        $.error = `加购失败`
+        $.message = `加购失败`
       }
       break
     default:
