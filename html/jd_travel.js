@@ -575,7 +575,7 @@ function dealReturn (type, data) {
     case 'zoo_pk_collectScore':
       break;
     case 'travel_pk_collectPkExpandScore':
-      data.code === 0 && $.message = data.data?.bizMsg
+      data.code === 0 && ($.message = data.data?.bizMsg)
       break;
     case 'zoo_getSignHomeData':
       if (data.code === 0) {
