@@ -129,7 +129,7 @@ function pkHelp () {
 }
 
 // pk助力
-function travel_pk_collectPkExpandScore (]) {
+function travel_pk_collectPkExpandScore () {
   $.callback = 'Func.request'
   takePostRequest('travel_pk_collectPkExpandScore');
   return
