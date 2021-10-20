@@ -156,7 +156,7 @@ function doTask () {
   // 加购物车
   if ($.oneTask.taskType === 2 && $.oneTask.status === 1 && !$.oneTask.taskName.includes("逛逛")) {
     // 暂时不做
-    travel_getFeedDetail()
+    // travel_getFeedDetail()
 
   } else if ($.oneTask.taskType === 2 && $.oneTask.status === 1 && $.oneTask.taskName.includes("逛逛")) {
 
