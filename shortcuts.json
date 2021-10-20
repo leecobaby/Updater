@@ -543,6 +543,33 @@
       "more": "🧧 美团红包升级"
     }
   },
+  "JD_travel": {
+    "version": "1.0",
+    "update_log": "",
+    "about": {
+      "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
+      "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_travel#版本日志"
+    },
+    "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/2f9f2e6be6914cba8507c51ddf8afa62",
+    "notice": "初步实现任务，其他功能后续将云端推送~\n任务没做完可以尝试多运行几遍~",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
+    "automation_url": "shortcuts://run-shortcut?name=京东-双11环游记&input=text&text=task",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd.png",
+    "scritable": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/getJDCookie-sms.js",
+    "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/jd.json",
+    "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_travel/",
+    "tip": {
+      "hongbao": "",
+      "hot": "🛍 20日预售尖货来袭",
+      "faq": "有疑问的请查看",
+      "set": "",
+      "team": "",
+      "other": "",
+      "more": "🧧 美团红包升级"
+    }
+  },
   "More": {
     "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
     "加入QQ情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
