@@ -654,12 +654,12 @@ function dealReturn (type, data) {
       if (data.code === 0) {
         let acquiredScore = data.data?.result?.acquiredScore;
         if (Number(acquiredScore) > 0) {
-          $.message = `加购成功,获得金币:${acquiredScore}`
+          $.message = `加购|浏览成功,获得金币:${acquiredScore}`
         } else {
-          $.message = `加购成功`
+          $.message = `加购|浏览成功`
         }
       } else {
-        $.message = `加购失败`
+        $.message = `加购|浏览失败`
       }
       break
     default:
