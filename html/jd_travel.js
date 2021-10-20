@@ -29,6 +29,15 @@ let JD_API_HOST = `https://api.m.jd.com/client.action?functionId=`;
 //   回调完执行 next，视情况来清空 callback
 //   error 为错误信息，会终止当前账号在指令中的运行，直接运行输出log开始下一个账号或结束
 
+
+/**
+ * 云端推送提示
+ */
+function cloudTip () {
+  $.message = `指令已运行完毕！\n其他功能和任务正在开发中，上线将自动推送到指令中，无需任何操作~`
+  document.write(JSON.stringify($))
+}
+
 // 获取第一次进活动页奖励
 function travel_getMainMsgPopUp () {
   $.callback = 'Func.request'
@@ -39,7 +48,6 @@ function travel_getMainMsgPopUp () {
   $.callback = ''
   document.write(JSON.stringify($))
 }
-
 
 // 获取活动大厅信息
 function travel_getHomeData () {
@@ -62,6 +70,18 @@ function travel_getTaskDetail () {
   // next
   $.callback = ''
   dealReturn('travel_getTaskDetail', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 收汪汪币
+function travel_collectAtuoScore () {
+  $.callback = 'Func.request'
+  takePostRequest('travel_collectAtuoScore');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('travel_collectAtuoScore', $.data)
   document.write(JSON.stringify($))
 }
 
@@ -122,11 +142,11 @@ function doTask () {
   }
 
   // 加购物车
-  if ($.oneTask.taskType === 2 && $.oneTask.status === 1 && !$.oneTask.taskName.includes("逛逛")) {
+  if ($.oneTask.taskType === 2 && $.oneTask.status === 1 && !$.oneTask.taskName.includes("浏览")) {
+    // 暂时不做
+    // funny_getFeedDetail()
 
-    funny_getFeedDetail()
-
-  } else if ($.oneTask.taskType === 2 && $.oneTask.status === 1 && $.oneTask.taskName.includes("逛逛")) {
+  } else if ($.oneTask.taskType === 2 && $.oneTask.status === 1 && $.oneTask.taskName.includes("浏览")) {
 
     $.activityInfoList = $.oneTask.productInfoVos
     $.activityInfoList.time = 30
@@ -163,7 +183,6 @@ function oneActivityInfo () {
   $.message = `做任务：${$.oneActivityInfo.skuName || $.oneActivityInfo.taskName || $.oneActivityInfo.title || $.oneActivityInfo.shopName} 等待完成...`
   $.callback = 'Func.request'
   takePostRequest('travel_collectScore');
-  console.log($.message);
   return
 
   // next 
@@ -175,7 +194,7 @@ function oneActivityInfo () {
     $.wait = 8
     $.next = 1 // 覆盖前面的 0
     $.callback = 'Func.request'
-    callbackResult('funny_collectScore')
+    callbackResult('travel_collectScore')
     // return
     // 这里的逻辑是在 next 里面的，而 next 不是一个函数，所以不能使用 return 来中断
 
@@ -184,19 +203,15 @@ function oneActivityInfo () {
     if (!document.body.innerText) {
       $.callback = ''
       $.wait = 1
-      $.success = 1
-      $.message = `${$.data?.data?.result?.successToast}`
-      console.log($.message)
+      $.message = `${$.data?.toast?.subTitle}`
       document.write(JSON.stringify($))
     }
 
   } else if ([1, 2, 3, 5, 26].includes($.oneTask.taskType)) {
     $.success = 1
     $.message = `任务完成`
-    console.log($.message);
     document.write(JSON.stringify($))
   } else if ($.callbackInfo.data?.bizCode === -1002) {
-    $.hotFlag = true;
     $.error = `oneActivityInfo ${$.oneTask.taskId} 任务失败，此接口失效可尝试去指令设置切换UA，再次运行~`
     document.write(JSON.stringify($))
   } else {
@@ -208,11 +223,12 @@ function oneActivityInfo () {
 //领取奖励
 function callbackResult (type) {
   let { log, random } = $.signList?.shift() || {}
-  let url = JD_API_HOST + type;
-  let body = `functionId=funny_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HWJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","actionType":0}&client=wh5&clientVersion=1.0.0&uuid=c67093f5dd58d33fc5305cdc61e46a9741e05c5b&appid=o2_act`
+  let url = JD_API_HOST + type + '&client=wh5';
+  // riskParam 风险参数暂时为空，后期可能需要补上
+  let body = `body={"dataSource":"newshortAward","method":"getTaskAward","reqParams":"{\\"taskToken\\":\\"${$.taskToken}\\"}","sdkVersion":"1.0.0","clientLanguage":"zh","onlyTimeId":"","riskParam":""}`
   let method = 'POST'
   let headers = {
-    'Origin': `https://h5.m.jd.com`,
+    'Origin': `https://pro.m.jd.com`,
     'Cookie': $.cookie,
     'Connection': `keep-alive`,
     'Accept': `application/json, text/plain, */*`,
@@ -220,11 +236,9 @@ function callbackResult (type) {
     'Host': `api.m.jd.com`,
     'Content-Type': `application/x-www-form-urlencoded`,
     'User-Agent': $.UA || "jdapp;iPhone;10.0.6;14.4;c67093f5dd58d33fc5305cdc61e46a9741e05c5b;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
-    'Accept-Language': `zh-cn`,
-    'Referer': 'https://h5.m.jd.com'
+    'Accept-Language': `zh-CN`,
+    'Referer': 'https://pro.m.jd.com/'
   }
-
-
   $.request = { url, method, headers, body }
   document.write(JSON.stringify($))
 }
@@ -305,26 +319,25 @@ function takePostRequest (type) {
       body = `functionId=funny_getHomeData&body={"inviteId":"${$.inviteId}"}&client=wh5&clientVersion=1.0.0&uuid=c67093f5dd58d33fc5305cdc61e46a9741e05c5b&appid=o2_act`;
       myRequest = getPostRequest(`funny_getHomeData`, body);
       break;
-    case 'zoo_collectProduceScore':
-      body = getPostBody(type);
-      // console.log(body);
-      myRequest = getPostRequest(`zoo_collectProduceScore`, body);
+    case 'travel_collectAtuoScore':
+      body = `functionId=travel_collectAtuoScore&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`
+      myRequest = getPostRequest(`travel_collectAtuoScore`, body);
       break;
     case 'funny_getFeedDetail':
       body = `functionId=funny_getFeedDetail&body={"taskId":"${$.taskId}"}&client=wh5&clientVersion=1.0.0&appid=o2_act`;
       myRequest = getPostRequest(`funny_getFeedDetail`, body);
       break;
     case 'travel_collectScore':
-      body = `functionId=funny_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HWJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","actionType":1}&client=wh5&clientVersion=1.0.0&uuid=c67093f5dd58d33fc5305cdc61e46a9741e05c5b&appid=o2_act`;
-      myRequest = getPostRequest(`funny_collectScore`, body);
+      body = `functionId=travel_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYGJZYh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","actionType":1}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`travel_collectScore`, body);
       break;
     case 'zoo_raise':
       body = `functionId=zoo_raise&body={}&client=wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`zoo_raise`, body);
       break;
     case 'help':
-      body = `functionId=funny_collectScore&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HWJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"${$.inviteId}","isCommonDealError":true}&client=wh5&clientVersion=1.0.0&uuid=c67093f5dd58d33fc5305cdc61e46a9741e05c5b&appid=o2_act`;
-      myRequest = getPostRequest(`funny_collectScore`, body);
+      body = `functionId=travel_collectScore&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYGJZYh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"${$.inviteId}"}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`travel_collectScore`, body);
       break;
     case 'zoo_pk_getHomeData':
       body = `functionId=zoo_pk_getHomeData&body={}&client=wh5&clientVersion=1.0.0`;
@@ -396,7 +409,7 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`acceptTask`, body);
       break;
     case 'add_car':
-      body = `functionId=funny_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HWJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","actionType":1}&client=wh5&clientVersion=1.0.0&uuid=c67093f5dd58d33fc5305cdc61e46a9741e05c5b&appid=o2_act`;
+      body = `functionId=funny_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYGJZYh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","actionType":1}&client=wh5&clientVersion=1.0.0&uuid=c67093f5dd58d33fc5305cdc61e46a9741e05c5b&appid=o2_act`;
       myRequest = getPostRequest(`funny_collectScore`, body);
       break;
     default:
@@ -476,18 +489,17 @@ function dealReturn (type, data) {
         //console.log(`$.secretp：${$.secretp}`);
       }
       break;
-    case 'zoo_collectProduceScore':
-      if (data.code === 0 && data.data && data.data.result) {
-        console.log(`收取成功，获得：${data.data.result.produceScore}`);
+    case 'travel_collectAtuoScore':
+      if (data.code === 0 && data.data?.result) {
+        $.message = `收取成功，获得：${data.data.result.produceScore} 汪汪币`
       } else {
-        console.log(JSON.stringify(data));
+        $.message = JSON.stringify(data)
       }
       if (data.code === 0 && data.data && data.data.bizCode === -1002) {
-        $.hotFlag = true;
-        console.log(`该账户脚本执行任务火爆，暂停执行任务，请手动做任务或者等待解决脚本火爆问题`)
+        $.error = `该账户脚本执行任务火爆，暂停执行任务，请手动做任务或者等待解决脚本火爆问题`
       }
       break;
-    case 'funny_collectScore':
+    case 'travel_collectScore':
       $.callbackInfo = data;
       break;
     case 'zoo_raise':
@@ -498,7 +510,7 @@ function dealReturn (type, data) {
       //console.log(data);
       switch (data.data?.bizCode) {
         case 0:
-          $.message = `助力成功`
+          $.message = `助力成功，你获得${data.data?.result?.score}汪汪币`
           break;
         case -201:
           $.message = `助力已满`
