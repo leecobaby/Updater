@@ -128,6 +128,18 @@ function pkHelp () {
   document.write(JSON.stringify($))
 }
 
+// pk助力
+function travel_pk_collectPkExpandScore (]) {
+  $.callback = 'Func.request'
+  takePostRequest('travel_pk_collectPkExpandScore');
+  return
+
+  //next
+  $.callback = ''
+  dealReturn('travel_pk_collectPkExpandScore', $.data)
+  document.write(JSON.stringify($))
+}
+
 // 做主任务
 function doTask () {
   // 循环逻辑单独设置 to,call
@@ -364,9 +376,9 @@ function takePostRequest (type) {
       //console.log(body);
       myRequest = getPostRequest(`zoo_pk_collectScore`, body);
       break;
-    case 'zoo_pk_doPkSkill':
-      body = `functionId=zoo_pk_doPkSkill&body={"skillType":"${$.skillCode}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getPostRequest(`zoo_pk_doPkSkill`, body);
+    case 'travel_pk_collectPkExpandScore':
+      body = `functionId=travel_pk_collectPkExpandScore&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYGJZYh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"PKASTT0195L6r47PBTNYCtIMjDX0CjRWnIaRzTIjeQOc"}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`travel_pk_collectPkExpandScore`, body);
       break;
     case 'travel_pk_joinGroup':
       body = `functionId=travel_collectScore&body={"confirmFlag":"1","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYGJZYh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"${$.pkHelpCode}"}&client=wh5&clientVersion=1.0.0`
@@ -562,15 +574,8 @@ function dealReturn (type, data) {
       break;
     case 'zoo_pk_collectScore':
       break;
-    case 'zoo_pk_doPkSkill':
-      if (data.data.bizCode === 0) console.log(`使用成功`);
-      if (data.data.bizCode === -2) {
-        console.log(`队伍任务已经完成，无法释放技能!`);
-        $.doSkillFlag = false;
-      } else if (data.data.bizCode === -2003) {
-        console.log(`现在不能打怪兽`);
-        $.doSkillFlag = false;
-      }
+    case 'travel_pk_collectPkExpandScore':
+      data.code === 0 && $.message = data.data?.bizMsg
       break;
     case 'zoo_getSignHomeData':
       if (data.code === 0) {
