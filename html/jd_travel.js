@@ -176,10 +176,11 @@ function doTask () {
     $.activityInfoList.time = 30
     oneActivityInfo()
 
-  } else if ($.oneTask.taskType === 5 && $.oneTask.status === 1) {
-
-    travel_getFeedDetail()
   }
+  // else if ($.oneTask.taskType === 5 && $.oneTask.status === 1) {
+
+  //   travel_getFeedDetail()
+  // }
 
   !document.body.innerText && document.write(JSON.stringify($))
 }
