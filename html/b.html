@@ -13,7 +13,7 @@
 
   </script>
   <script>
-    const obj = {
+    const data = {
       "code": 0,
       "data": {
         "bizCode": 0,
@@ -410,7 +410,11 @@
       },
       "msg": "调用成功"
     }
-    console.log(obj.data?.result?.addProductVos[0]);
+    dealReturn('travel_getFeedDetail', data)
+    $.productList = $.feedDetailInfo.productInfoVos || $.feedDetailInfo.browseShopVo
+    $.needTime = Number($.feedDetailInfo.maxTimes) - Number($.feedDetailInfo.times);
+    $.next = 0 // 衔接下一个函数前，重置 next 防止获取 next 失败
+    browseProducts()
   </script>
 </body>
 

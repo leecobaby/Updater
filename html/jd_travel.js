@@ -310,7 +310,7 @@ function browseProducts () {
 
   $.taskToken = $.proCarInfo.taskToken;
   $.needTime--;
-  $.message = `浏览商品：${$.proCarInfo.skuName}`
+  $.message = `浏览商品：${$.proCarInfo.skuName || $.proCarInfo.shopName}`
   $.callback = 'Func.request'
   takePostRequest('browseProducts');
   return
