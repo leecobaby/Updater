@@ -568,9 +568,10 @@ function dealReturn (type, data) {
       }
       break;
     case 'travel_getFeedDetail':
-      if (data.code === 0) {
-        data.data?.result?.addProductVos && ($.feedDetailInfo = data.data?.result?.addProductVos[0]);
-        data.data?.result?.taskVos && ($.feedDetailInfo = data.data?.result?.taskVos[0]);
+      if (data.data?.result?.addProductVos) {
+        $.feedDetailInfo = data.data?.result?.addProductVos[0]
+      } else if (data.data?.result?.taskVos) {
+        $.feedDetailInfo = data.data?.result?.taskVos[0]
       }
       break;
     case 'zoo_pk_collectScore':
