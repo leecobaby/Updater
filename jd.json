@@ -655,7 +655,7 @@
       ],
       "taskList": [
         { "收汪汪币": "travel_collectAtuoScore" },
-        { "做主任务": "doTask" },
+        { "先做主任务": "doTask" },
         { "获取任务列表 - 1": "travel_getTaskDetail" },
         { "再做主任务 - 1": "doTask" },
         { "获取任务列表 - 2": "travel_getTaskDetail" },
