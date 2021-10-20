@@ -116,6 +116,18 @@ function help () {
   document.write(JSON.stringify($))
 }
 
+// 组队助力
+function pkHelp () {
+  $.callback = 'Func.request'
+  takePostRequest('travel_pk_joinGroup');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('pkHelp', $.data)
+  document.write(JSON.stringify($))
+}
+
 // 做主任务
 function doTask () {
   // 循环逻辑单独设置 to,call
@@ -356,9 +368,9 @@ function takePostRequest (type) {
       body = `functionId=zoo_pk_doPkSkill&body={"skillType":"${$.skillCode}"}&client=wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`zoo_pk_doPkSkill`, body);
       break;
-    case 'pkHelp':
-      body = getPostBody(type);
-      myRequest = getPostRequest(`zoo_pk_assistGroup`, body);
+    case 'travel_pk_joinGroup':
+      body = `functionId=travel_collectScore&body={"confirmFlag":"1","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYGJZYh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"${$.pkHelpCode}"}&client=wh5&clientVersion=1.0.0`
+      myRequest = getPostRequest(`travel_pk_joinGroup`, body);
       break;
     case 'zoo_getSignHomeData':
       body = `functionId=zoo_getSignHomeData&body={"notCount":"1"}&client=wh5&clientVersion=1.0.0`;
@@ -519,8 +531,8 @@ function dealReturn (type, data) {
         case -202:
           $.message = `已经助力过该好友`
           break;
-        case -8:
-          $.message = `已经助力过该队伍`
+        case -5:
+          $.message = `${data.data?.bizMsg || '已加入该队伍'}`
           break;
         case -6:
         case 108:
