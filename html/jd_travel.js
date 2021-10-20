@@ -156,7 +156,7 @@ function doTask () {
   // 加购物车
   if ($.oneTask.taskType === 2 && $.oneTask.status === 1 && !$.oneTask.taskName.includes("逛逛")) {
     // 暂时不做
-    // funny_getFeedDetail()
+    travel_getFeedDetail()
 
   } else if ($.oneTask.taskType === 2 && $.oneTask.status === 1 && $.oneTask.taskName.includes("逛逛")) {
 
@@ -256,20 +256,20 @@ function callbackResult (type) {
 }
 
 // 处理购物车任务信息
-function funny_getFeedDetail () {
+function travel_getFeedDetail () {
   // 嵌套调用里面用数组形式 push
   $.to = 'Func.logicHandler';
-  $.call.push('funny_getFeedDetail')
+  $.call.push('travel_getFeedDetail')
 
   $.feedDetailInfo = {};
   $.callback = 'Func.request'
   $.message = `做任务：${$.oneTask.taskName} 等待完成...`
-  takePostRequest('funny_getFeedDetail');
+  takePostRequest('travel_getFeedDetail');
   return
 
   // next
   $.callback = ''
-  dealReturn('funny_getFeedDetail', $.data)
+  dealReturn('travel_getFeedDetail', $.data)
   $.productList = $.feedDetailInfo.productInfoVos;
   $.needTime = Number($.feedDetailInfo.maxTimes) - Number($.feedDetailInfo.times);
   $.call.pop()
