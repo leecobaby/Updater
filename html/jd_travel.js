@@ -142,11 +142,11 @@ function doTask () {
   }
 
   // 加购物车
-  if ($.oneTask.taskType === 2 && $.oneTask.status === 1 && !$.oneTask.taskName.includes("浏览")) {
+  if ($.oneTask.taskType === 2 && $.oneTask.status === 1 && !$.oneTask.taskName.includes("逛逛")) {
     // 暂时不做
     // funny_getFeedDetail()
 
-  } else if ($.oneTask.taskType === 2 && $.oneTask.status === 1 && $.oneTask.taskName.includes("浏览")) {
+  } else if ($.oneTask.taskType === 2 && $.oneTask.status === 1 && $.oneTask.taskName.includes("逛逛")) {
 
     $.activityInfoList = $.oneTask.productInfoVos
     $.activityInfoList.time = 30
