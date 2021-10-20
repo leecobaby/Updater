@@ -7,7 +7,7 @@ if ($.callbackInfo.code === 0 && $.callbackInfo.data?.result?.taskToken) {
   $.wait = 8
   $.next = 1 // 覆盖前面的 0
   $.callback = 'Func.request'
-  callbackResult('travel_collectScore')
+  callbackResult('qryViewkitCallbackResult')
   // return
   // 这里的逻辑是在 next 里面的，而 next 不是一个函数，所以不能使用 return 来中断
 
