@@ -20,9 +20,8 @@
       } else if (data.data?.result?.taskVos) {
         $.feedDetailInfo = data.data?.result?.taskVos[0]
       }
-      console.log($.feedDetailInfo);
     }
-    $.productList = $.feedDetailInfo?.productInfoVos || $.feedDetailInfo?.browseShopVo;
+    $.productList = $.feedDetailInfo.productInfoVos || $.feedDetailInfo.browseShopVo;
     console.log($.productList);
     // browseProducts()
   </script>
