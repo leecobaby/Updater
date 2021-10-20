@@ -37,6 +37,13 @@ function cloudTip () {
   $.message = `指令已运行完毕！\n其他功能和任务正在开发中，上线将自动推送到指令中，无需任何操作~`
   document.write(JSON.stringify($))
 }
+/**
+ * 云端推送提示
+ */
+function update () {
+  $.message = `本地任务和开发是同步的，开发过程中难免存在bug，如果运行时卡住，请过段时间再试请理解~`
+  document.write(JSON.stringify($))
+}
 
 // 获取第一次进活动页奖励
 function travel_getMainMsgPopUp () {
@@ -168,7 +175,7 @@ function doTask () {
   // 加购物车
   if ($.oneTask.taskType === 2 && $.oneTask.status === 1 && !$.oneTask.taskName.includes("逛逛")) {
 
-    // travel_getFeedDetail()
+    travel_getFeedDetail()
 
   } else if ($.oneTask.taskType === 2 && $.oneTask.status === 1 && $.oneTask.taskName.includes("逛逛")) {
 
@@ -176,11 +183,9 @@ function doTask () {
     $.activityInfoList.time = 30
     oneActivityInfo()
 
+  } else if ($.oneTask.taskType === 5 && $.oneTask.status === 1) {
+    travel_getFeedDetail()
   }
-
-  // else if ($.oneTask.taskType === 5 && $.oneTask.status === 1) {
-  //   travel_getFeedDetail()
-  // }
 
   !document.body.innerText && document.write(JSON.stringify($))
 }

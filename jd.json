@@ -654,6 +654,7 @@
         "travel_pk_collectPkExpandScore"
       ],
       "taskList": [
+        { "任务已经更新至10.21": "update" },
         { "收汪汪币": "travel_collectAtuoScore" },
         { "先做主任务": "doTask" },
         { "获取任务列表 - 1": "travel_getTaskDetail" },
