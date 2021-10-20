@@ -157,8 +157,8 @@ function doTask () {
     return
   }
 
-  if ([1, 3, 5, 7, 9, 26].includes($.oneTask.taskType) && $.oneTask.status === 1) {
-    $.activityInfoList = $.oneTask.shoppingActivityVos || $.oneTask.brandMemberVos || $.oneTask.followShopVo || $.oneTask.browseShopVo;
+  if ([1, 3, 7, 9, 26].includes($.oneTask.taskType) && $.oneTask.status === 1) {
+    $.activityInfoList = $.oneTask.shoppingActivityVos || $.oneTask.brandMemberVos || $.oneTask.followShopVo;
     $.activityInfoList.time = 30 // 最大次数
 
     oneActivityInfo()
@@ -176,6 +176,8 @@ function doTask () {
     $.activityInfoList.time = 30
     oneActivityInfo()
 
+  } else if ($.oneTask.taskType === 5) {
+    travel_getFeedDetail()
   }
 
   !document.body.innerText && document.write(JSON.stringify($))
