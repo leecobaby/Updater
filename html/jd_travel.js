@@ -177,6 +177,7 @@ function doTask () {
     oneActivityInfo()
 
   } else if ($.oneTask.taskType === 5) {
+
     travel_getFeedDetail()
   }
 
