@@ -597,6 +597,85 @@
       "gotThreeMealForFarm_next"
     ]
   },
+  "JD_travel": {
+    "version": "上次数据更新于:10.16.1",
+    "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/DKWT6qK%22%7D%0A",
+    "endJump": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://h5.m.jd.com/babelDiy/Zeus/3KSjXqQabiTuD1cJ28QskrpWoBKT/index.html%22%7D",
+    "pkHelpCode": "IgNWdiLGaPaAqdZqpd0QbcXZFPwE1VfQ9VPl2cARI1KWYjbV1EXeRSxZojc",
+    "codeUrl": {
+      "CryptoJS": "https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.js",
+      "JD_fruit": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_fruit.js"
+    },
+    "api": {
+      "isLogin": {
+        "url": "https://me-api.jd.com/user_new/info/GetJDUserInfoUnion",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json,text/plain, */*",
+          "Host": "me-api.jd.com",
+          "Accept-Encoding": "gzip, deflate, br",
+          "Accept-Language": "zh-cn",
+          "Connection": "keep-alive",
+          "User-Agent": "jdapp;iPhone;10.0.6;14.4;c67093f5dd58d33fc5305cdc61e46a9741e05c5b;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
+          "Referer": "https://wqs.jd.com/my/jingdou/my.shtml?sceneval=2"
+        }
+      },
+      "isLogin1": {
+        "url": "https://wq.jd.com/user/info/QueryJDUserInfo?sceneval=2",
+        "method": "POST",
+        "headers": {
+          "Accept": "application/json,text/plain, */*",
+          "Accept-Encoding": "gzip, deflate, br",
+          "Accept-Language": "zh-cn",
+          "Connection": "keep-alive",
+          "Referer": "https://wqs.jd.com/my/jingdou/my.shtml?sceneval=2"
+        }
+      },
+      "api": {
+        "url": "https://api.m.jd.com/client.action"
+      }
+    },
+    "uaInfo": {
+      "UA1": {
+        "ua": "jdapp;iPhone;10.0.6;14.4;c67093f5dd58d33fc5305cdc61e46a9741e05c5b;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1"
+      },
+      "UA2": {
+        "ua": "jdapp;iPhone;10.0.6;14.4;c67093f5dd58d33fc5305cdc61e46a9741e05c5b;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1"
+      },
+      "UA3": {
+        "ua": "jdapp;iPhone;9.2.0;14.1;"
+      }
+    },
+    "controller": {
+      "callList": ["initForFarm", "treeState", "taskInitForFarm", "friendListInitForFarm"],
+      "taskList": [
+        { "做签到任务": "signForFarm" },
+        { "做浏览任务": "browseAdTaskForFarm" },
+        { "做浇水十次任务": "doTenWater" },
+        { "做定时领水": "gotThreeMealForFarm" },
+        { "领取阶段性水滴奖励": "gotStageAwardForFarm" },
+        { "领取首次浇水奖励": "firstWaterTaskForFarm" },
+        { "领取十次浇水奖励": "totalWaterTaskForFarm" },
+        { "其他": "cloudTip" }
+      ]
+    },
+    "codeList": [
+      "initForFarm_next",
+      "taskInitForFarm_next",
+      "help_next",
+      "signForFarm_next",
+      "signForFarm_next_next",
+      "browseAdTaskForFarm_next",
+      "browseAdTaskForFarm_next_next",
+      "doTenWater_next",
+      "gotStageAwardForFarm_next",
+      "firstWaterTaskForFarm_next",
+      "firstWaterTaskForFarm_next_next",
+      "totalWaterTaskForFarm_next",
+      "friendListInitForFarm_next",
+      "gotThreeMealForFarm_next"
+    ]
+  },
   "share": {
     "🤖 抢购助手 - 可快速的将链接用app打开，避免小程序抢购的卡顿": "https://www.icloud.com/shortcuts/95e925b98bb14a759c743600fae67f8b",
     "📱 开Plus&Apple 联名会员，全年2次只换不修": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/3KzjYyP%22%7D",

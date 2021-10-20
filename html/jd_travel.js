@@ -1,0 +1,643 @@
+/**
+ * name: 京东-双11环游记
+ * author: @leeco
+ * apply: shortcuts
+ * activity: https://wbbny.m.jd.com/babelDiy/Zeus/2vVU4E7JLH9gKYfLQ5EVW6eN2P7B/index.html
+ * tips: Only for learning and communication, strictly prohibited for commercial use, please delete within 24 hours
+ */
+
+// 到指令里运行需要注释掉
+// const $ = {}
+
+// $.inviteList = [];
+// $.pkInviteList = [];
+// $.secretpInfo = {};
+// $.innerPkInviteList = [];
+
+let JD_API_HOST = `https://api.m.jd.com/client.action?functionId=`;
+
+/** 下方放 call 文本，来控制函数执行 **/
+
+
+/** 下方放 next 文本，来控制逻辑执行 **/
+
+
+//   form 来源   to 目标   callback 回调   call 调用
+//   当回调有值则执行回调，没有则去往目标，没有目标则去往来源
+
+//   func.xxx -> logicHandler($) -> func.http -> logicHandler($) -> func.xxx
+//   回调完执行 next，视情况来清空 callback
+//   error 为错误信息，会终止当前账号在指令中的运行，直接运行输出log开始下一个账号或结束
+
+// 获取第一次进活动页奖励
+function travel_getMainMsgPopUp () {
+  $.callback = 'Func.request'
+  takePostRequest('travel_getMainMsgPopUp');
+  return
+
+  // next
+  $.callback = ''
+  document.write(JSON.stringify($))
+}
+
+
+// 获取活动大厅信息
+function travel_getHomeData () {
+  $.callback = 'Func.request'
+  takePostRequest('travel_getHomeData');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('travel_getHomeData', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 获取任务列表
+function travel_getTaskDetail () {
+  $.callback = 'Func.request'
+  takePostRequest('travel_getTaskDetail');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('travel_getTaskDetail', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 好友助力
+function help () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler'
+  $.call = ['help']
+  $.inviteList = Array.isArray($.inviteList) ? $.inviteList : [$.inviteList]
+
+  $.inviteId = $.inviteList.shift()
+  if (!$.inviteId || $.helpMax) {
+    // 循环完成重新设置 to,call
+    $.to = '', $.call.pop()
+    document.write(JSON.stringify($))
+    return
+  }
+
+  // if ($.friendHelpMax) {
+  //   document.write(JSON.stringify($))
+  //   return
+  // }
+
+  $.message = `${$.UserName}去助力，对方助力码:\n${$.inviteId}`
+  $.callback = 'Func.request'
+  takePostRequest('help');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('help', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 做主任务
+function doTask () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler'
+  $.call = ['doTask']
+
+  // 利用队列取代循环
+  $.oneTask = $.taskList.shift()
+  $.taskId = $.oneTask?.taskId;
+  if (!$.oneTask) {
+    // 循环完成重新设置 to,call
+    $.to = '', $.call.pop()
+    $.message = `任务已全都完成~`
+    document.write(JSON.stringify($))
+    return
+  }
+
+  if ([1, 3, 5, 7, 9, 26].includes($.oneTask.taskType) && $.oneTask.status === 1) {
+    $.activityInfoList = $.oneTask.shoppingActivityVos || $.oneTask.brandMemberVos || $.oneTask.followShopVo || $.oneTask.browseShopVo;
+    $.activityInfoList.time = 30 // 最大次数
+
+    oneActivityInfo()
+
+  }
+
+  // 加购物车
+  if ($.oneTask.taskType === 2 && $.oneTask.status === 1 && !$.oneTask.taskName.includes("逛逛")) {
+
+    funny_getFeedDetail()
+
+  } else if ($.oneTask.taskType === 2 && $.oneTask.status === 1 && $.oneTask.taskName.includes("逛逛")) {
+
+    $.activityInfoList = $.oneTask.productInfoVos
+    $.activityInfoList.time = 30
+    oneActivityInfo()
+
+  }
+
+  !document.body.innerText && document.write(JSON.stringify($))
+}
+
+//  处理任务列表单类型任务
+function oneActivityInfo () {
+  // 循环逻辑单独设置 to,call  嵌套调用里面用数组形式 push
+  $.to = 'Func.logicHandler';
+  ($.call[$.call.length - 1] == 'oneActivityInfo') || $.call.push('oneActivityInfo')
+
+  // 利用队列取代循环
+  $.oneActivityInfo = $.activityInfoList.shift()
+  if (!$.oneActivityInfo || --$.activityInfoList.time <= 0) {
+    // 循环完成重新设置 call
+    $.call.pop()
+    document.write(JSON.stringify($))
+    return
+  }
+
+  // 做过的任务则跳过重新执行 oneActivityInfo()
+  if ($.oneActivityInfo?.status !== 1 || !$.oneActivityInfo?.taskToken) {
+    document.write(JSON.stringify($))
+    return
+  }
+
+  $.taskToken = $.oneActivityInfo.taskToken
+  $.callbackInfo = {};
+  $.message = `做任务：${$.oneActivityInfo.skuName || $.oneActivityInfo.taskName || $.oneActivityInfo.title || $.oneActivityInfo.shopName} 等待完成...`
+  $.callback = 'Func.request'
+  takePostRequest('travel_collectScore');
+  console.log($.message);
+  return
+
+  // next 
+  $.callback = ''
+  dealReturn('travel_collectScore', $.data)
+  if ($.callbackInfo.code === 0 && $.callbackInfo.data?.result?.taskToken) {
+
+    // 等待 8s
+    $.wait = 8
+    $.next = 1 // 覆盖前面的 0
+    $.callback = 'Func.request'
+    callbackResult('funny_collectScore')
+    // return
+    // 这里的逻辑是在 next 里面的，而 next 不是一个函数，所以不能使用 return 来中断
+
+    // 对于 next next 这种嵌套需要单独隔离，只在运行到的时候调用，判断是否有页面内容为好的方式
+    // next next
+    if (!document.body.innerText) {
+      $.callback = ''
+      $.wait = 1
+      $.success = 1
+      $.message = `${$.data?.data?.result?.successToast}`
+      console.log($.message)
+      document.write(JSON.stringify($))
+    }
+
+  } else if ([1, 2, 3, 5, 26].includes($.oneTask.taskType)) {
+    $.success = 1
+    $.message = `任务完成`
+    console.log($.message);
+    document.write(JSON.stringify($))
+  } else if ($.callbackInfo.data?.bizCode === -1002) {
+    $.hotFlag = true;
+    $.error = `oneActivityInfo ${$.oneTask.taskId} 任务失败，此接口失效可尝试去指令设置切换UA，再次运行~`
+    document.write(JSON.stringify($))
+  } else {
+    $.error = `oneActivityInfo ${$.oneTask.taskId} 任务失败，未知错误等待修复`
+    document.write(JSON.stringify($))
+  }
+}
+
+//领取奖励
+function callbackResult (type) {
+  let { log, random } = $.signList?.shift() || {}
+  let url = JD_API_HOST + type;
+  let body = `functionId=funny_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HWJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","actionType":0}&client=wh5&clientVersion=1.0.0&uuid=c67093f5dd58d33fc5305cdc61e46a9741e05c5b&appid=o2_act`
+  let method = 'POST'
+  let headers = {
+    'Origin': `https://h5.m.jd.com`,
+    'Cookie': $.cookie,
+    'Connection': `keep-alive`,
+    'Accept': `application/json, text/plain, */*`,
+    'Accept-Encoding': `gzip, deflate, br`,
+    'Host': `api.m.jd.com`,
+    'Content-Type': `application/x-www-form-urlencoded`,
+    'User-Agent': $.UA || "jdapp;iPhone;10.0.6;14.4;c67093f5dd58d33fc5305cdc61e46a9741e05c5b;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
+    'Accept-Language': `zh-cn`,
+    'Referer': 'https://h5.m.jd.com'
+  }
+
+
+  $.request = { url, method, headers, body }
+  document.write(JSON.stringify($))
+}
+
+// 处理购物车任务信息
+function funny_getFeedDetail () {
+  // 嵌套调用里面用数组形式 push
+  $.to = 'Func.logicHandler';
+  $.call.push('funny_getFeedDetail')
+
+  $.feedDetailInfo = {};
+  $.callback = 'Func.request'
+  $.message = `做任务：${$.oneTask.taskName} 等待完成...`
+  takePostRequest('funny_getFeedDetail');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('funny_getFeedDetail', $.data)
+  $.productList = $.feedDetailInfo.productInfoVos;
+  $.needTime = Number($.feedDetailInfo.maxTimes) - Number($.feedDetailInfo.times);
+  $.call.pop()
+  $.next = 0 // 衔接下一个函数前，重置 next 防止获取 next 失败
+  add_car()
+}
+
+// 加购物车
+function add_car () {
+  // 循环逻辑单独设置 to,call  嵌套调用里面用数组形式 push
+  $.to = 'Func.logicHandler'
+  $.call[$.call.length - 1] == 'add_car' || $.call.push('add_car')
+
+  $.addCarInfo = $.productList.shift()
+  if ($.needTime <= 0) {
+    // 循环完成重新设置 to,call
+    $.call.pop()
+    document.write(JSON.stringify($))
+    return
+  }
+
+  if ($.addCarInfo.status !== 1) {
+    document.write(JSON.stringify($))
+    return
+  }
+
+  $.taskToken = $.addCarInfo.taskToken;
+  $.needTime--;
+  $.message = `加购：${$.addCarInfo.skuName}`
+  $.callback = 'Func.request'
+  takePostRequest('add_car');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('add_car', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 提交请求信息
+function takePostRequest (type) {
+  let { log, random } = $.signList?.shift() || {}
+  let body = ``;
+  let myRequest = ``;
+  switch (type) {
+    case 'travel_getMainMsgPopUp':
+      body = `functionId=travel_getMainMsgPopUp&body={"channel":"1"}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`travel_getMainMsgPopUp`, body);
+      break;
+    case 'travel_getHomeData':
+      body = `functionId=travel_getHomeData&body={}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`travel_getHomeData`, body);
+      break;
+    case 'travel_getTaskDetail':
+      body = `functionId=travel_getTaskDetail&body={}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`travel_getTaskDetail`, body);
+      break;
+    case 'helpHomeData':
+      body = `functionId=funny_getHomeData&body={"inviteId":"${$.inviteId}"}&client=wh5&clientVersion=1.0.0&uuid=c67093f5dd58d33fc5305cdc61e46a9741e05c5b&appid=o2_act`;
+      myRequest = getPostRequest(`funny_getHomeData`, body);
+      break;
+    case 'zoo_collectProduceScore':
+      body = getPostBody(type);
+      // console.log(body);
+      myRequest = getPostRequest(`zoo_collectProduceScore`, body);
+      break;
+    case 'funny_getFeedDetail':
+      body = `functionId=funny_getFeedDetail&body={"taskId":"${$.taskId}"}&client=wh5&clientVersion=1.0.0&appid=o2_act`;
+      myRequest = getPostRequest(`funny_getFeedDetail`, body);
+      break;
+    case 'travel_collectScore':
+      body = `functionId=funny_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HWJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","actionType":1}&client=wh5&clientVersion=1.0.0&uuid=c67093f5dd58d33fc5305cdc61e46a9741e05c5b&appid=o2_act`;
+      myRequest = getPostRequest(`funny_collectScore`, body);
+      break;
+    case 'zoo_raise':
+      body = `functionId=zoo_raise&body={}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`zoo_raise`, body);
+      break;
+    case 'help':
+      body = `functionId=funny_collectScore&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HWJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"${$.inviteId}","isCommonDealError":true}&client=wh5&clientVersion=1.0.0&uuid=c67093f5dd58d33fc5305cdc61e46a9741e05c5b&appid=o2_act`;
+      myRequest = getPostRequest(`funny_collectScore`, body);
+      break;
+    case 'zoo_pk_getHomeData':
+      body = `functionId=zoo_pk_getHomeData&body={}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`zoo_pk_getHomeData`, body);
+      break;
+    case 'zoo_pk_getTaskDetail':
+      body = `functionId=zoo_pk_getTaskDetail&body={}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`zoo_pk_getTaskDetail`, body);
+      break;
+    case 'zoo_pk_collectScore':
+      body = getPostBody(type);
+      //console.log(body);
+      myRequest = getPostRequest(`zoo_pk_collectScore`, body);
+      break;
+    case 'zoo_pk_doPkSkill':
+      body = `functionId=zoo_pk_doPkSkill&body={"skillType":"${$.skillCode}"}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`zoo_pk_doPkSkill`, body);
+      break;
+    case 'pkHelp':
+      body = getPostBody(type);
+      myRequest = getPostRequest(`zoo_pk_assistGroup`, body);
+      break;
+    case 'zoo_getSignHomeData':
+      body = `functionId=zoo_getSignHomeData&body={"notCount":"1"}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`zoo_getSignHomeData`, body);
+      break;
+    case 'zoo_sign':
+      body = `functionId=zoo_sign&body={}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`zoo_sign`, body);
+      break;
+    case 'wxTaskDetail':
+      body = `functionId=funny_getTaskDetail&body={"appSign":"2","channel":1,"shopSign":""}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`funny_getTaskDetail`, body);
+      break;
+    case 'zoo_shopLotteryInfo':
+      body = `functionId=zoo_shopLotteryInfo&body={"shopSign":"${$.shopSign}"}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`zoo_shopLotteryInfo`, body);
+      break;
+    case 'zoo_bdCollectScore':
+      body = getPostBody(type);
+      myRequest = getPostRequest(`zoo_bdCollectScore`, body);
+      break;
+    case 'qryCompositeMaterials':
+      body = `functionId=qryCompositeMaterials&body={"qryParam":"[{\\"type\\":\\"advertGroup\\",\\"mapTo\\":\\"resultData\\",\\"id\\":\\"05371960\\"}]","activityId":"2s7hhSTbhMgxpGoa9JDnbDzJTaBB","pageId":"","reqSrc":"","applyKey":"jd_star"}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`qryCompositeMaterials`, body);
+      break;
+    case 'zoo_boxShopLottery':
+      body = `functionId=zoo_boxShopLottery&body={"shopSign":"${$.shopSign}"}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`zoo_boxShopLottery`, body);
+      break;
+    case `zoo_wishShopLottery`:
+      body = `functionId=zoo_wishShopLottery&body={"shopSign":"${$.shopSign}"}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`zoo_boxShopLottery`, body);
+      break;
+    case `zoo_myMap`:
+      body = `functionId=zoo_myMap&body={}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`zoo_myMap`, body);
+      break;
+    case 'zoo_getWelfareScore':
+      body = getPostBody(type);
+      myRequest = getPostRequest(`zoo_getWelfareScore`, body);
+      break;
+    case 'jdjrTaskDetail':
+      body = `reqData={"eid":"","sdkToken":"jdd014JYKVE2S6UEEIWPKA4B5ZKBS4N6Y6X5GX2NXL4IYUMHKF3EEVK52RQHBYXRZ67XWQF5N7XB6Y2YKYRTGQW4GV5OFGPDPFP3MZINWG2A01234567"}`;
+      myRequest = getPostRequest(`listTask`, body);
+      break;
+    case 'jdjrAcceptTask':
+      body = `reqData={"eid":"","sdkToken":"jdd014JYKVE2S6UEEIWPKA4B5ZKBS4N6Y6X5GX2NXL4IYUMHKF3EEVK52RQHBYXRZ67XWQF5N7XB6Y2YKYRTGQW4GV5OFGPDPFP3MZINWG2A01234567","id":"${$.taskId}"}`;
+      myRequest = getPostRequest(`acceptTask`, body);
+      break;
+    case 'add_car':
+      body = `functionId=funny_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HWJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","actionType":1}&client=wh5&clientVersion=1.0.0&uuid=c67093f5dd58d33fc5305cdc61e46a9741e05c5b&appid=o2_act`;
+      myRequest = getPostRequest(`funny_collectScore`, body);
+      break;
+    default:
+      $.error = `takePostRequest 错误${type}`
+      console.log(`错误${type}`);
+  }
+
+  $.request = myRequest
+  document.write(JSON.stringify($))
+}
+
+// 获取请求信息
+function getPostRequest (type, body) {
+  let url = JD_API_HOST + type;
+  if (type === 'listTask' || type === 'acceptTask') {
+    url = `https://ms.jr.jd.com/gw/generic/hy/h5/m/${type}`;
+  }
+  const method = `POST`;
+  const headers = {
+    'Accept': `application/json, text/plain, */*`,
+    'Origin': `https://wbbny.m.jd.com`,
+    'Accept-Encoding': `gzip, deflate, br`,
+    'Cookie': $.cookie,
+    'Content-Type': `application/x-www-form-urlencoded`,
+    'Host': `api.m.jd.com`,
+    'Connection': `keep-alive`,
+    'User-Agent': $.UA || "jdapp;iPhone;10.0.6;14.4;c67093f5dd58d33fc5305cdc61e46a9741e05c5b;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
+    'Referer': `https://wbbny.m.jd.com/`,
+    'Accept-Language': `zh-CN`
+  };
+  return { url: url, method: method, headers: headers, body: body };
+}
+
+// 组织请求 body
+function getPostBody (type) {
+  let taskBody = '';
+  if (type === 'help') {
+    taskBody = `functionId=funny_collectScore&body=${JSON.stringify({ "taskId": 2, "inviteId": $.inviteId, "actionType": 1, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`
+  } else if (type === 'pkHelp') {
+    taskBody = `functionId=zoo_pk_assistGroup&body=${JSON.stringify({ "confirmFlag": 1, "inviteId": $.pkInviteId, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`;
+  } else if (type === 'zoo_collectProduceScore') {
+    taskBody = `functionId=zoo_collectProduceScore&body=${JSON.stringify({ "ss": getBody() })}&client=wh5&clientVersion=1.0.0`;
+  } else if (type === 'zoo_getWelfareScore') {
+    taskBody = `functionId=zoo_getWelfareScore&body=${JSON.stringify({ "type": 2, "currentScence": $.currentScence, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`;
+  } else if (type === 'add_car') {
+    taskBody = `functionId=funny_collectScore&body=${JSON.stringify({ "taskId": $.taskId, "taskToken": $.taskToken, "actionType": 1, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`
+  } else {
+    taskBody = `functionId=${type}&body=${JSON.stringify({ "taskId": $.oneTask.taskId, "actionType": 1, "taskToken": $.oneActivityInfo.taskToken, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`
+  }
+  return taskBody
+}
+
+// 处理返回信息
+function dealReturn (type, data) {
+  switch (type) {
+    case 'travel_getHomeData':
+      if (data?.data?.bizCode === 0) {
+        $.homeData = data.data;
+        $.secretp = data.data.result.homeMainInfo.secretp;
+        $.userInfo = $.homeData.result.homeMainInfo
+        const point = $.userInfo.raiseInfo.cityConfig.points[$.userInfo.raiseInfo.scoreLevel % 5 - 2] || '无'
+        $.message = `当前玩家进度: ${$.userInfo.raiseInfo.cityConfig.cityName}-${point} ${$.userInfo.curCity}/20\n剩余汪汪币${$.userInfo.raiseInfo.remainScore}，下一关需要${$.userInfo.raiseInfo.nextLevelScore - $.userInfo.raiseInfo.curLevelStartScore}`
+        // $.secretpInfo[$.UserName] = $.secretp;
+      }
+      break;
+    case 'travel_getTaskDetail':
+      if (data.code === 0) {
+        $.message = `好友互助码:\n${data.data?.result?.inviteId || '助力已满，获取助力码失败'}`
+        // 这里将来需要做 多账号运行 账号相互之间助力功能
+        $.taskList = data.data.result.taskVos;
+      }
+      break;
+    case 'helpHomeData':
+      console.log(data)
+      if (data.code === 0) {
+        $.secretp = data.data.result.homeMainInfo.secretp;
+        //console.log(`$.secretp：${$.secretp}`);
+      }
+      break;
+    case 'zoo_collectProduceScore':
+      if (data.code === 0 && data.data && data.data.result) {
+        console.log(`收取成功，获得：${data.data.result.produceScore}`);
+      } else {
+        console.log(JSON.stringify(data));
+      }
+      if (data.code === 0 && data.data && data.data.bizCode === -1002) {
+        $.hotFlag = true;
+        console.log(`该账户脚本执行任务火爆，暂停执行任务，请手动做任务或者等待解决脚本火爆问题`)
+      }
+      break;
+    case 'funny_collectScore':
+      $.callbackInfo = data;
+      break;
+    case 'zoo_raise':
+      if (data.code === 0) console.log(`升级成功`);
+      break;
+    case 'help':
+    case 'pkHelp':
+      //console.log(data);
+      switch (data.data?.bizCode) {
+        case 0:
+          $.message = `助力成功`
+          break;
+        case -201:
+          $.message = `助力已满`
+          $.friendHelpMax = true;
+          break;
+        case -202:
+          $.message = `已经助力过该好友`
+          break;
+        case -8:
+          $.message = `已经助力过该队伍`
+          break;
+        case -6:
+        case 108:
+          $.message = `助力次数已用光`
+          $.helpMax = true;
+          break;
+        default:
+          $.message = `助力失败：${JSON.stringify(data)}`
+      }
+      break;
+    case 'zoo_pk_getHomeData':
+      if (data.code === 0) {
+        console.log(`PK互助码：${data.data.result.groupInfo.groupAssistInviteId}`);
+        if (data.data.result.groupInfo.groupAssistInviteId) $.pkInviteList.push(data.data.result.groupInfo.groupAssistInviteId);
+        $.pkHomeData = data.data;
+      }
+      break;
+    case 'zoo_pk_getTaskDetail':
+      if (data.code === 0) {
+        $.pkTaskList = data.data.result.taskVos;
+      }
+      break;
+    case 'funny_getFeedDetail':
+      if (data.code === 0) {
+        $.feedDetailInfo = data.data.result.addProductVos[0];
+      }
+      break;
+    case 'zoo_pk_collectScore':
+      break;
+    case 'zoo_pk_doPkSkill':
+      if (data.data.bizCode === 0) console.log(`使用成功`);
+      if (data.data.bizCode === -2) {
+        console.log(`队伍任务已经完成，无法释放技能!`);
+        $.doSkillFlag = false;
+      } else if (data.data.bizCode === -2003) {
+        console.log(`现在不能打怪兽`);
+        $.doSkillFlag = false;
+      }
+      break;
+    case 'zoo_getSignHomeData':
+      if (data.code === 0) {
+        $.signHomeData = data.data.result;
+      }
+      break;
+    case 'zoo_sign':
+      if (data.code === 0 && data.data.bizCode === 0) {
+        console.log(`签到获得成功`);
+        if (data.data.result.redPacketValue) console.log(`签到获得：${data.data.result.redPacketValue} 红包`);
+      } else {
+        console.log(`签到失败`);
+        console.log(data);
+      }
+      break;
+    case 'wxTaskDetail':
+      if (data.code === 0) {
+        $.wxTaskList = data.data.result.taskVos;
+      }
+      break;
+    case 'zoo_shopLotteryInfo':
+      if (data.code === 0) {
+        $.shopResult = data.data.result;
+      }
+      break;
+    case 'zoo_bdCollectScore':
+      if (data.code === 0) {
+        console.log(`签到获得：${data.data.result.score}`);
+      }
+      break;
+    case 'qryCompositeMaterials':
+      //console.log(data);
+      if (data.code === '0') {
+        $.shopInfoList = data.data.resultData.list;
+        console.log(`获取到${$.shopInfoList.length}个店铺`);
+      }
+      break
+    case 'zoo_boxShopLottery':
+      let result = data.data.result;
+      switch (result.awardType) {
+        case 8:
+          console.log(`获得金币：${result.rewardScore}`);
+          break;
+        case 5:
+          console.log(`获得：adidas能量`);
+          break;
+        case 2:
+        case 3:
+          console.log(`获得优惠券：${result.couponInfo.usageThreshold} 优惠：${result.couponInfo.quota}，${result.couponInfo.useRange}`);
+          break;
+        default:
+          console.log(`抽奖获得未知`);
+          console.log(JSON.stringify(data));
+      }
+      break
+    case 'zoo_wishShopLottery':
+      console.log(JSON.stringify(data));
+      break
+    case `zoo_myMap`:
+      if (data.code === 0) {
+        $.myMapList = data.data.result.sceneMap.sceneInfo;
+      }
+      break;
+    case 'zoo_getWelfareScore':
+      if (data.code === 0) {
+        console.log(`分享成功，获得：${data.data.result.score}`);
+      }
+      break;
+    case 'jdjrTaskDetail':
+      if (data.resultCode === 0) {
+        $.jdjrTaskList = data.resultData.top;
+      }
+      break;
+    case 'jdjrAcceptTask':
+      if (data.resultCode === 0) {
+        console.log(`领任务成功`);
+      }
+      break;
+    case 'add_car':
+      if (data.code === 0) {
+        let acquiredScore = data.data?.result?.acquiredScore;
+        if (Number(acquiredScore) > 0) {
+          $.message = `加购成功,获得金币:${acquiredScore}`
+        } else {
+          $.message = `加购成功`
+        }
+      } else {
+        $.error = `加购失败`
+      }
+      break
+    default:
+      console.log(`未判断的异常${type}`);
+  }
+}
