@@ -506,7 +506,7 @@ function dealReturn (type, data) {
       break;
     case 'travel_getTaskDetail':
       if (data.code === 0) {
-        $.message = `好友互助码:\n${data.data?.result?.inviteId || '助力已满，获取助力码失败'}`
+        $.message = `你的好友互助码为:\n${data.data?.result?.inviteId || '你已被助力满，获取助力码失败'}`
         // 这里将来需要做 多账号运行 账号相互之间助力功能
         $.taskList = data.data.result.taskVos;
       }
