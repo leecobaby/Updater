@@ -675,7 +675,8 @@
       "oneActivityInfo_next_next",
       "travel_pk_collectPkExpandScore_next",
       "travel_getFeedDetail_next",
-      "browseProducts_next"
+      "browseProducts_next",
+      "oneTaskHandle_next"
     ]
   },
   "share": {

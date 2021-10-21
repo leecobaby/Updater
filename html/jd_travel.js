@@ -227,6 +227,7 @@ function travel_getBadgeAward () {
 function oneTaskHandle () {
   $.taskId = $.oneTask.taskId
   $.taskToken = $.oneTask.simpleRecordInfoVo.taskToken
+  $.message = `做任务：${$.oneTask.taskName} 等待完成...`
   $.callback = 'Func.request'
   takePostRequest('oneTaskHandle');
   return
@@ -235,7 +236,6 @@ function oneTaskHandle () {
   $.callback = ''
   dealReturn('oneTaskHandle', $.data)
   document.write(JSON.stringify($))
-
 }
 
 //  处理任务列表单类型任务
