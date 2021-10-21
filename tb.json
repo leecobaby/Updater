@@ -716,7 +716,7 @@
     ]
   },
   "1111ys": {
-    "version": "数据最后更新于:10.18.1",
+    "version": "数据最后更新于:10.21.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f40FUIz",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f40FUIz",
@@ -751,7 +751,7 @@
     "task": [
       {
         "stars": {
-          "title": "预售浏览任务",
+          "title": "预售集战力",
           "type": "stars",
           "urlScheme": "HTTPS://",
           "textEnd": "str2",
@@ -773,6 +773,22 @@
             "1 s.click.taobao.com/t?e=m%3D2%26s%3D%2FJ%2Fb6NQ61Slw4vFB6t2Z2ueEDrYVVa64bRMC03PU1ohyINtkUhsv0N99woHWCjyAR8QvUUywP6Gm6X%2BgQI8d7OlD8PexXQHOLUZXgTD3DEdmfHizoM27dRHds6T50urgLDTaGRwPNw6ptNiWyW674%2Fko8mBkqH242VOw7Ocw5AR%2BPe6GaMZYjzyl%2FKvecvjCIYULNg46oBA%3D&union_lens=lensId%3AOPT%401634492696%40693fc8f9-c943-4108-8604-9cc461658b45_521027319777%401&",
             "1 s.click.taobao.com/t?e=m%3D2%26s%3D6qH1p8fJ%2F6xw4vFB6t2Z2ueEDrYVVa64bRMC03PU1ohyINtkUhsv0N99woHWCjyAR8QvUUywP6Gm6X%2BgQI8d7OlD8PexXQHOLUZXgTD3DEdmfHizoM27dRHds6T50urgLDTaGRwPNw6ptNiWyW674xHq3%2F9IrnD73bk9c5uYdcIFrvKEc4AFCVwaKlvX1%2BgKxg5p7bh%2BFbQ%3D&union_lens=lensId%3AOPT%401634492696%40693fc8f9-c943-4108-8604-9cc461658b45_654533502203%401&",
             "1 s.click.taobao.com/t?e=m%3D2%26s%3D%2BnU8bRNHDaxw4vFB6t2Z2ueEDrYVVa64bRMC03PU1ohyINtkUhsv0N99woHWCjyAR8QvUUywP6Gm6X%2BgQI8d7OlD8PexXQHOLUZXgTD3DEdmfHizoM27dRHds6T50urgLDTaGRwPNw6ptNiWyW674w8NZ82r98TxJUi9JVK%2FpHqfY%2Bci6XCaT5%2Bom75pUC3ZIYULNg46oBA%3D&union_lens=lensId%3AOPT%401634492696%40693fc8f9-c943-4108-8604-9cc461658b45_608361708142%401&"
+          ]
+        }
+      },
+      {
+        "stars": {
+          "title": "预售攒能量",
+          "type": "stars",
+          "urlScheme": "HTTPS://",
+          "textEnd": "str2",
+          "item": [
+            "1 s.click.taobao.com/t?e=m%3D2%26s%3Dyxbbo%2B42LH9w4vFB6t2Z2ueEDrYVVa646aU5mWYV2GpyINtkUhsv0EcT6nHXYnHiUQNP5V5wDxSm6X%2BgQI8d7OlD8PexXQHOLUZXgTD3DEdmfHizoM27dY%2FUhcH4l7r%2BaG5o8cqfJUCDkWU289XbN5T94hwwuSf791bQjsNFGeaZLf2kH4TOGXEqY%2Bakgpmw&union_lens=lensId%3AOPT%401634816292%40e086b054-50b2-4b46-a1c4-4e6d542fda26_593564341311%401&",
+            "1 s.click.taobao.com/t?e=m%3D2%26s%3Dmz9Pzock1bBw4vFB6t2Z2ueEDrYVVa646aU5mWYV2GpyINtkUhsv0EcT6nHXYnHiUQNP5V5wDxSm6X%2BgQI8d7OlD8PexXQHOLUZXgTD3DEdmfHizoM27dY%2FUhcH4l7r%2BaG5o8cqfJUA9LzfRtqUiMlsB83ETy77uCiyjke1U9opCAT9LTE3TVCGFCzYOOqAQ&union_lens=lensId%3AOPT%401634816292%40e086b054-50b2-4b46-a1c4-4e6d542fda26_638803382665%401&",
+            "1 s.click.taobao.com/t?e=m%3D2%26s%3DVf2kDsPb4Cdw4vFB6t2Z2ueEDrYVVa646aU5mWYV2GpyINtkUhsv0EcT6nHXYnHiUQNP5V5wDxSm6X%2BgQI8d7OlD8PexXQHOLUZXgTD3DEdmfHizoM27dY%2FUhcH4l7r%2BaG5o8cqfJUBVBAh7ATeloWxt4kSZpxDIVZsn3I5SXS%2FiLkMoxD2VFnEqY%2Bakgpmw&union_lens=lensId%3AOPT%401634816292%40e086b054-50b2-4b46-a1c4-4e6d542fda26_653917439183%401&",
+            "1 s.click.taobao.com/t?e=m%3D2%26s%3D4%2BYSxIz4jNpw4vFB6t2Z2ueEDrYVVa646aU5mWYV2GpyINtkUhsv0EcT6nHXYnHiUQNP5V5wDxSm6X%2BgQI8d7OlD8PexXQHOLUZXgTD3DEdmfHizoM27dY%2FUhcH4l7r%2BaG5o8cqfJUDU2oWp7lkxG3%2BfPEoSk5sNFxywbbGLUxxoNVaCexUN1iGFCzYOOqAQ&union_lens=lensId%3AOPT%401634816292%40e086b054-50b2-4b46-a1c4-4e6d542fda26_652623428917%401&",
+            "1 s.click.taobao.com/t?e=m%3D2%26s%3DBaEGHi7fqBBw4vFB6t2Z2ueEDrYVVa646aU5mWYV2GpyINtkUhsv0EcT6nHXYnHiUQNP5V5wDxSm6X%2BgQI8d7OlD8PexXQHOLUZXgTD3DEdmfHizoM27dY%2FUhcH4l7r%2BaG5o8cqfJUBuYUkTc6eM3aZvQ7aaGTLwiHyq0G85qMREh8jDAxG%2FunEqY%2Bakgpmw&union_lens=lensId%3AOPT%401634816292%40e086b054-50b2-4b46-a1c4-4e6d542fda26_557201257176%401&",
+            "1 s.click.taobao.com/t?e=m%3D2%26s%3DTxnWbxmFEtlw4vFB6t2Z2ueEDrYVVa646aU5mWYV2GpyINtkUhsv0EcT6nHXYnHiUQNP5V5wDxSm6X%2BgQI8d7OlD8PexXQHOLUZXgTD3DEdmfHizoM27dY%2FUhcH4l7r%2BaG5o8cqfJUA2ZAj4LMU0Vj%2FkDGpaDciSiryraE8x8oLRoHWfbXeSYnEqY%2Bakgpmw&union_lens=lensId%3AOPT%401634816292%40e086b054-50b2-4b46-a1c4-4e6d542fda26_551192056909%401&"
           ]
         }
       }
@@ -1410,7 +1426,7 @@
   },
   "team": {
     "🏠 种草机助力池": "https://gitter.im/leecobaby-shortcuts/1111zcj?utm_source=share-link&utm_medium=link&utm_campaign=share-link",
-    "👥 预售战队助力池": "https://gitter.im/leecobaby-shortcuts/1111ys?utm_source=share-link&utm_medium=link&utm_campaign=share-link",
+    "👥 预售战队助力池 - 即将改为攒能量助力池": "https://gitter.im/leecobaby-shortcuts/1111ys?utm_source=share-link&utm_medium=link&utm_campaign=share-link",
     "🍬 喵糖战队池 - 建设中": ""
   },
   "share": {
