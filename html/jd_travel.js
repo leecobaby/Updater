@@ -92,6 +92,26 @@ function travel_collectAtuoScore () {
   document.write(JSON.stringify($))
 }
 
+// 每日签到
+function travel_sign () {
+  $.callback = 'Func.request'
+  takePostRequest('travel_sign');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('travel_sign', $.data)
+  $.callback = 'Func.request'
+  takePostRequest('travel_getSignHomeData');
+
+  // next next
+  if (!document.body.innerText) {
+    $.callback = ''
+    dealReturn('travel_getSignHomeData', $.data)
+    document.write(JSON.stringify($))
+  }
+}
+
 // 好友助力
 function help () {
   // 循环逻辑单独设置 to,call
@@ -148,7 +168,6 @@ function travel_pk_collectPkExpandScore () {
 }
 
 // 多次做任务控制器
-
 function doTaskController () {
   switch (key) {
     case value:
@@ -395,6 +414,29 @@ function browseProducts () {
   document.write(JSON.stringify($))
 }
 
+// 打卡升级
+function travel_raise () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler'
+  $.call = ['travel_raise']
+
+  if ($.raiseStatus) {
+    // 循环完成重新设置 to,call
+    $.to = '', $.call.pop()
+    document.write(JSON.stringify($))
+    return
+  }
+
+  $.callback = 'Func.request'
+  takePostRequest('travel_raise');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('travel_raise', $.data)
+  document.write(JSON.stringify($))
+}
+
 // 提交请求信息
 function takePostRequest (type) {
   let { log, random } = $.signList?.shift() || {}
@@ -455,20 +497,20 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`travel_pk_joinGroup`, body);
       break;
     case 'oneTaskHandle':
-      body = ody = `functionId=travel_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`;
+      body = `functionId=travel_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`travel_collectScore`, body);
       break;
-    case 'zoo_sign':
-      body = `functionId=zoo_sign&body={}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getPostRequest(`zoo_sign`, body);
+    case 'travel_sign':
+      body = `functionId=travel_sign&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`travel_sign`, body);
       break;
-    case 'wxTaskDetail':
-      body = `functionId=funny_getTaskDetail&body={"appSign":"2","channel":1,"shopSign":""}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getPostRequest(`funny_getTaskDetail`, body);
+    case 'travel_getSignHomeData':
+      body = `functionId=travel_getSignHomeData&body={}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`travel_getSignHomeData`, body);
       break;
-    case 'zoo_shopLotteryInfo':
-      body = `functionId=zoo_shopLotteryInfo&body={"shopSign":"${$.shopSign}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getPostRequest(`zoo_shopLotteryInfo`, body);
+    case 'travel_raise':
+      body = `functionId=travel_raise&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`travel_raise`, body);
       break;
     case 'zoo_bdCollectScore':
       body = getPostBody(type);
@@ -578,11 +620,12 @@ function dealReturn (type, data) {
         $.taskList = data.data.result.taskVos;
       }
       break;
-    case 'helpHomeData':
-      console.log(data)
-      if (data.code === 0) {
-        $.secretp = data.data.result.homeMainInfo.secretp;
-        //console.log(`$.secretp：${$.secretp}`);
+    case 'travel_raise':
+      if (data.code === 0 && data.data?.bizCode === 0) {
+        $.message = `升级成功`
+      } else {
+        $.message = `升级失败，汪汪币不足`
+        $.raiseStatus = 1
       }
       break;
     case 'travel_collectAtuoScore':
@@ -662,18 +705,18 @@ function dealReturn (type, data) {
         $.message = `完成任务：获得 ${data.data?.result?.acquiredScore} 汪汪币`
       }
       break;
-    case 'zoo_sign':
-      if (data.code === 0 && data.data.bizCode === 0) {
-        console.log(`签到获得成功`);
-        if (data.data.result.redPacketValue) console.log(`签到获得：${data.data.result.redPacketValue} 红包`);
+    case 'travel_sign':
+      if (data.code === 0 && data.data?.bizCode === 0) {
+        $.message = `签到成功：获得 ${data.data?.result?.scoreResult?.score} 汪汪币，其他奖励 ${JSON.stringify(data.data?.result?.scoreResult)}`
+      } else if (data.data?.bizCode === -6004) {
+        $.message = `已经签到过了`
       } else {
-        console.log(`签到失败`);
-        console.log(data);
+        $.message = `签到失败：原因${JSON.stringify(data)}`
       }
       break;
-    case 'wxTaskDetail':
-      if (data.code === 0) {
-        $.wxTaskList = data.data.result.taskVos;
+    case 'travel_getSignHomeData':
+      if (data.code === 0 && data.data?.bizCode === 0) {
+        $.message = `当前已连续签到 ${data.data?.result?.progress} 天/23天`
       }
       break;
     case 'zoo_shopLotteryInfo':

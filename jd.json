@@ -656,11 +656,13 @@
       "taskList": [
         { "任务已经更新至10.21": "update" },
         { "收汪汪币": "travel_collectAtuoScore" },
+        { "每日签到": "travel_sign" },
         { "先做主任务": "doTask" },
         { "获取任务列表 - 1": "travel_getTaskDetail" },
         { "再做主任务 - 1": "doTask" },
         { "获取任务列表 - 2": "travel_getTaskDetail" },
         { "再做主任务 - 2": "doTask" },
+        { "打开升级 - 测试中...": "travel_raise" },
         { "其他": "cloudTip" }
       ]
     },
@@ -676,7 +678,9 @@
       "travel_pk_collectPkExpandScore_next",
       "travel_getFeedDetail_next",
       "browseProducts_next",
-      "oneTaskHandle_next"
+      "travel_sign_next",
+      "travel_sign_next_next",
+      "travel_raise_next"
     ]
   },
   "share": {
