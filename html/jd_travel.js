@@ -185,9 +185,57 @@ function doTask () {
 
   } else if ($.oneTask.taskType === 5 && $.oneTask.status === 1) {
     travel_getFeedDetail()
+  } else if ($.oneTask.taskType === 0 && $.oneTask.status === 1) {
+    oneTaskHandle()
   }
 
   !document.body.innerText && document.write(JSON.stringify($))
+}
+
+// 领累计任务降级
+function travel_getBadgeAward () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler'
+  $.call = ['travel_getBadgeAward']
+
+  // 利用队列取代循环
+  $.oneTask = $.badgeAwardList.shift()
+  $.awardToken = $.oneTask?.awardToken;
+  if (!$.oneTask) {
+    // 循环完成重新设置 to,call
+    $.to = '', $.call.pop()
+    $.message = `任务已全都完成~`
+    document.write(JSON.stringify($))
+    return
+  }
+
+  if ($.oneTask.status === 4) {
+    document.write(JSON.stringify($))
+    return
+  }
+
+  $.callback = 'Func.request'
+  takePostRequest('travel_getBadgeAward');
+
+  // next
+  $.callback = ''
+  dealReturn('travel_getBadgeAward', $.data)
+  document.write(JSON.stringify($))
+}
+
+// taskType = 0 的任务
+function oneTaskHandle () {
+  $.taskId = $.oneTask.taskId
+  $.taskToken = $.oneTask.simpleRecordInfoVo.taskToken
+  $.callback = 'Func.request'
+  takePostRequest('oneTaskHandle');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('oneTaskHandle', $.data)
+  document.write(JSON.stringify($))
+
 }
 
 //  处理任务列表单类型任务
@@ -360,9 +408,9 @@ function takePostRequest (type) {
       body = `functionId=travel_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYGJZYh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","actionType":1}&client=wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`travel_collectScore`, body);
       break;
-    case 'zoo_raise':
-      body = `functionId=zoo_raise&body={}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getPostRequest(`zoo_raise`, body);
+    case 'travel_getBadgeAward':
+      body = `functionId=travel_getBadgeAward&body={"awardToken":"${$.awardToken}"}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`travel_getBadgeAward`, body);
       break;
     case 'help':
       body = `functionId=travel_collectScore&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYGJZYh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"${$.inviteId}"}&client=wh5&clientVersion=1.0.0`;
@@ -389,9 +437,9 @@ function takePostRequest (type) {
       body = `functionId=travel_collectScore&body={"confirmFlag":"1","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYGJZYh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"${$.pkHelpCode}"}&client=wh5&clientVersion=1.0.0`
       myRequest = getPostRequest(`travel_pk_joinGroup`, body);
       break;
-    case 'zoo_getSignHomeData':
-      body = `functionId=zoo_getSignHomeData&body={"notCount":"1"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getPostRequest(`zoo_getSignHomeData`, body);
+    case 'oneTaskHandle':
+      body = ody = `functionId=travel_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`travel_collectScore`, body);
       break;
     case 'zoo_sign':
       body = `functionId=zoo_sign&body={}&client=wh5&clientVersion=1.0.0`;
@@ -493,6 +541,7 @@ function getPostBody (type) {
 
 // 处理返回信息
 function dealReturn (type, data) {
+  !data && ($.error = '接口返回数据为空，检查账号cookie是否过期或错误')
   switch (type) {
     case 'travel_getHomeData':
       if (data?.data?.bizCode === 0) {
@@ -508,6 +557,7 @@ function dealReturn (type, data) {
       if (data.code === 0) {
         $.message = `你的好友互助码为:\n${data.data?.result?.inviteId || '你已被助力满，获取助力码失败'}`
         // 这里将来需要做 多账号运行 账号相互之间助力功能
+        $.badgeAwardList = data.data.result.lotteryTaskVos[0].badgeAwardVos
         $.taskList = data.data.result.taskVos;
       }
       break;
@@ -531,8 +581,12 @@ function dealReturn (type, data) {
     case 'travel_collectScore':
       $.callbackInfo = data;
       break;
-    case 'zoo_raise':
-      if (data.code === 0) console.log(`升级成功`);
+    case 'travel_getBadgeAward':
+      if (data.code === 0 && data.data?.bizCode === 0) {
+        $.message = `累计任务成功领取：${data.data?.result?.myAwardVos[0]?.pointVo?.score} 汪汪币`
+      } else {
+        $.message = `领取失败：${data}`
+      }
       break;
     case 'help':
     case 'pkHelp':
@@ -586,9 +640,9 @@ function dealReturn (type, data) {
     case 'travel_pk_collectPkExpandScore':
       // data.code === 0 && ($.message = data.data?.bizMsg)
       break;
-    case 'zoo_getSignHomeData':
-      if (data.code === 0) {
-        $.signHomeData = data.data.result;
+    case 'oneTaskHandle':
+      if (data.code === 0 && data.data?.bizCode === 0) {
+        $.message = `完成任务：获得 ${data.data?.result?.acquiredScore} 汪汪币`
       }
       break;
     case 'zoo_sign':
