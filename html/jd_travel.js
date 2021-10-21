@@ -185,7 +185,7 @@ function doTask () {
 
   } else if ($.oneTask.taskType === 5 && $.oneTask.status === 1) {
     travel_getFeedDetail()
-  } else if ($.oneTask.taskType === 0 && $.oneTask.status === 1) {
+  } else if ($.oneTask.taskType === 0 && ($.oneTask.status === 1 || $.oneTask.status === 3)) {
     oneTaskHandle()
   }
 
