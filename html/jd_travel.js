@@ -147,6 +147,19 @@ function travel_pk_collectPkExpandScore () {
   document.write(JSON.stringify($))
 }
 
+// 多次做任务控制器
+
+function doTaskController () {
+  switch (key) {
+    case value:
+
+      break;
+
+    default:
+      break;
+  }
+}
+
 // 做主任务
 function doTask () {
   // 循环逻辑单独设置 to,call
@@ -225,6 +238,8 @@ function travel_getBadgeAward () {
 
 // taskType = 0 的任务
 function oneTaskHandle () {
+  // 嵌套调用里面用数组形式 push
+  ($.call[$.call.length - 1] == 'oneTaskHandle') || $.call.push('oneActivityInfo')
   $.taskId = $.oneTask.taskId
   $.taskToken = $.oneTask.simpleRecordInfoVo.taskToken
   $.message = `做任务：${$.oneTask.taskName} 等待完成...`
@@ -235,6 +250,8 @@ function oneTaskHandle () {
   // next
   $.callback = ''
   dealReturn('oneTaskHandle', $.data)
+  // 去往 doTask
+  $.call.pop()
   document.write(JSON.stringify($))
 }
 
