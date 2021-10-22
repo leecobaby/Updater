@@ -675,6 +675,7 @@
       "travel_collectAtuoScore_next",
       "oneActivityInfo_next",
       "oneActivityInfo_next_next",
+      "oneTaskHandle_next",
       "travel_pk_collectPkExpandScore_next",
       "travel_getFeedDetail_next",
       "browseProducts_next",
