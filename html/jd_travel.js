@@ -112,6 +112,18 @@ function travel_sign () {
   }
 }
 
+// 获取助力池数据
+function getHelpCode () {
+  $.callback = 'Func.request'
+  takePostRequest('travel_getHomeData');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('travel_getHomeData', $.data)
+  document.write(JSON.stringify($))
+}
+
 // 好友助力
 function help () {
   // 循环逻辑单独设置 to,call
@@ -169,12 +181,37 @@ function travel_pk_collectPkExpandScore () {
 
 // 多次做任务控制器
 function doTaskController () {
-  switch (key) {
-    case value:
-
+  switch ($.taskStep++) {
+    case 1:
+      doTask()
       break;
-
+    case 2:
+      travel_getTaskDetail()
+      break;
+    case 3:
+      doTask()
+      break;
+    case 3:
+      travel_getTaskDetail()
+      break;
+    case 4:
+      doTask()
+      break;
+    case 5:
+      travel_getTaskDetail()
+      break;
+    case 6:
+      doTask()
+      break;
+    case 7:
+      travel_getTaskDetail()
+      break;
+    case 8:
+      doTask()
+      break;
     default:
+      $.to = '', $.call.pop()
+      document.write(JSON.stringify($))
       break;
   }
 }

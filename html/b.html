@@ -35,7 +35,17 @@
       "msg": "调用成功"
     }
 
-    getPostRequest('jdjrTaskDetail')
+    function isJsonString(str) {
+      try {
+        if (typeof JSON.parse(str) == "object") {
+          return true;
+        }
+      } catch (e) {
+      }
+      return false;
+    }
+    console.log(isJsonString(``))
+    // getPostRequest('jdjrTaskDetail')
     // browseProducts()
   </script>
 </body>

@@ -795,7 +795,7 @@
     ]
   },
   "1111": {
-    "version": "数据最后更新于:10.22.13",
+    "version": "数据最后更新于:10.22.14",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f40FUIz",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f40FUIz",
@@ -835,6 +835,9 @@
           "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/tmc/32985/15487/wupr?spm=2021hudong.pk1111.tasklist-pentaprism.19933&disableNav=YES&wh_pid=main-402601&shop_router_ignore=true&fromToken=Nr2EB7lSRRL79VJXFr6oIMl2frU0UzUr&sceneId=2368&hd_from_id=100136&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
+            "19409 other_23_0_19409_0",
+            "18735 other_51_497010_18735_0",
+            "19941 other_8_586008_19941_0",
             "19933 other_8_586007_19933_0",
             "18734 other_51_526005_18734_0",
             "19093 other_29_507006_19093_0",
@@ -877,7 +880,7 @@
         "stars": {
           "title": "逛店铺①",
           "type": "stars",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/tmc/32985/15487/wupr?spm=2021hudong.pk1111.tasklist-pentaprism.19933&disableNav=YES&wh_pid=main-402601&shop_router_ignore=true&fromToken=Nr2EB7lSRRL79VJXFr6oIMl2frU0UzUr&sceneId=2368&hd_from_id=100136&deliveryId=",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/tmc/32985/15487/wupr?spm=2021hudong.pk1111.tasklist-pentaprism.19933&disableNav=YES&wh_pid=main-402601&shop_router_ignore=true&fromToken=r2rz1GgTooVXqxaLFAjJcVqGHgUBUPUr&sceneId=2385&hd_from_id=100136&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "20533 cloudsail_0_167495502140001_20533_0",
