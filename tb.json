@@ -795,7 +795,7 @@
     ]
   },
   "1111": {
-    "version": "数据最后更新于:10.22.14",
+    "version": "数据最后更新于:10.22.15",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f40FUIz",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f40FUIz",
@@ -992,6 +992,26 @@
             "20168 cloudsail_3_169065002350001_20168_2",
             "20168 cloudsail_3_169065002350001_20168_3",
             "20168 cloudsail_3_169065002350001_20168_4"
+          ]
+        }
+      },
+      {
+        "stars": {
+          "title": "浏览店铺④",
+          "type": "stars",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=awLZer9I00Ed6nwafk7Dcla5HkUzUNU7&spm=a217e.xzrwy.1.1&sceneId=2385&sourceType=other&hd_from_id=100136&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "20533 cloudsail_0_167495502140001_20533_0",
+            "20533 cloudsail_0_167495502140001_20533_1",
+            "20533 cloudsail_0_167495502140001_20533_2",
+            "20533 cloudsail_0_167495502140001_20533_3",
+            "20533 cloudsail_0_167495502140001_20533_4",
+            "20533 cloudsail_0_167495502140001_20533_5",
+            "20533 cloudsail_0_167495502140001_20533_6",
+            "20533 cloudsail_0_167495502140001_20533_7",
+            "20533 cloudsail_0_167495502140001_20533_8",
+            "20533 cloudsail_0_167495502140001_20533_9"
           ]
         }
       },
