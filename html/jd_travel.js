@@ -7,7 +7,7 @@
  */
 
 // 到指令里运行需要注释掉
-// const $ = {}
+const $ = {}
 
 // $.inviteList = [];
 // $.pkInviteList = [];
@@ -898,6 +898,6 @@ function dealReturn (type, data) {
       }
       break
     default:
-      $.error = '什么情况，有未知异常‼️' + type
+    // $.error = '什么情况，有未知异常‼️' + type
   }
 }
