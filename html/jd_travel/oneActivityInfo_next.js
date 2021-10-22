@@ -25,9 +25,9 @@ if ($.callbackInfo.code === 0 && $.callbackInfo.data?.result?.taskToken) {
   $.message = `任务完成`
   document.write(JSON.stringify($))
 } else if ($.callbackInfo.data?.bizCode === -1002) {
-  $.error = `oneActivityInfo ${$.oneTask.taskId} 任务失败，此接口失效可尝试去指令设置切换UA，再次运行~`
+  $.error = `oneActivityInfo ${$.oneTask.taskId}/${$.oneTask.taskType} 任务失败，此接口失效可尝试去指令设置切换UA，再次运行~`
   document.write(JSON.stringify($))
 } else {
-  $.error = `oneActivityInfo ${$.oneTask.taskId} 任务失败，未知错误等待修复`
+  $.message = `oneActivityInfo ${$.oneTask.taskId}/${$.oneTask.taskType} 任务失败，未知错误等待修复，尝试继续运行指令~`
   document.write(JSON.stringify($))
 }
