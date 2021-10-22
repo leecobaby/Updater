@@ -224,7 +224,7 @@ function doTask () {
   !document.body.innerText && document.write(JSON.stringify($))
 }
 
-// 领累计任务降级
+// 领累计任务奖励
 function travel_getBadgeAward () {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
@@ -337,7 +337,7 @@ function oneActivityInfo () {
   }
 }
 
-//领取奖励
+// 领取奖励
 function callbackResult (type) {
   let { log, random } = $.signList?.shift() || {}
   let url = JD_API_HOST + type + '&client=wh5';
