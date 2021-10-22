@@ -34,7 +34,9 @@
       },
       "msg": "调用成功"
     }
-    console.log(data.data?.result?.myAwardVos[0]?.pointVo?.score);
+
+    dealReturn('oneTaskHandle', { cod: 1 })
+    console.log($.data, $.error, $.message);
     // browseProducts()
   </script>
 </body>

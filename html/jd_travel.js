@@ -7,7 +7,7 @@
  */
 
 // 到指令里运行需要注释掉
-// const $ = {}
+const $ = {}
 
 // $.inviteList = [];
 // $.pkInviteList = [];
@@ -259,7 +259,7 @@ function travel_getBadgeAward () {
 function oneTaskHandle () {
   // 嵌套调用里面用数组形式 push
   ($.call[$.call.length - 1] == 'oneTaskHandle') || $.call.push('oneTaskHandle')
-  $.taskId = $.oneTask.taskId
+  // $.taskId = $.oneTask.taskId
   $.taskToken = $.oneTask.simpleRecordInfoVo.taskToken
   $.message = `做任务：${$.oneTask.taskName} 等待完成...`
   $.callback = 'Func.request'
@@ -439,7 +439,7 @@ function travel_raise () {
 
 // 提交请求信息
 function takePostRequest (type) {
-  let { log, random } = $.signList?.shift() || {}
+  let { log, random } = $.signList?.shift() || { log: "", random: "" }
   let body = ``;
   let myRequest = ``;
   switch (type) {
@@ -600,7 +600,7 @@ function getPostBody (type) {
 
 // 处理返回信息
 function dealReturn (type, data) {
-  !data && ($.error = '接口返回数据为空，检查账号cookie是否过期或错误')
+  if (!data) $.error = '接口返回数据为空，检查账号cookie是否过期或错误'
   switch (type) {
     case 'travel_getHomeData':
       if (data?.data?.bizCode === 0) {
@@ -703,6 +703,8 @@ function dealReturn (type, data) {
     case 'oneTaskHandle':
       if (data.code === 0 && data.data?.bizCode === 0) {
         $.message = `完成任务：获得 ${data.data?.result?.acquiredScore} 汪汪币`
+      } else {
+        $.message = `任务失败：原因 ${JSON.stringify(data)}`
       }
       break;
     case 'travel_sign':
