@@ -910,9 +910,9 @@
           "title": "云端推送",
           "type": "stars",
           "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&spm=a217e.xzrwy.1.1&sceneId=2385&sourceType=other&hd_from_id=100136&",
-          "textEnd": "str1",
+          "textEnd": "str2",
           "item": [
-            "fromToken=awLZer9I00Ed6nwafk7Dcla5HkUzUNU7&deliveryId=220168&implId=live_3_331825504912_20199_0 1"
+            "1 fromToken=awLZer9I00Ed6nwafk7Dcla5HkUzUNU7&deliveryId=220168&implId=live_3_331825504912_20199_0"
           ]
         }
       }
