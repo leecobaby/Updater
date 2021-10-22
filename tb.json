@@ -795,7 +795,7 @@
     ]
   },
   "1111": {
-    "version": "数据最后更新于:10.22.5",
+    "version": "数据最后更新于:10.22.6",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f40FUIz",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f40FUIz",
@@ -902,6 +902,17 @@
             "20168 cloudsail_3_169065002350001_20168_2",
             "20168 cloudsail_3_169065002350001_20168_3",
             "20168 cloudsail_3_169065002350001_20168_4"
+          ]
+        }
+      },
+      {
+        "stars": {
+          "title": "云端推送",
+          "type": "stars",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&spm=a217e.xzrwy.1.1&sceneId=2385&sourceType=other&hd_from_id=100136&",
+          "textEnd": "str1",
+          "item": [
+            "fromToken=awLZer9I00Ed6nwafk7Dcla5HkUzUNU7&deliveryId=220168&implId=live_3_331825504912_20199_0 1"
           ]
         }
       }
