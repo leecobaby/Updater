@@ -258,7 +258,7 @@ function travel_getBadgeAward () {
 // taskType = 0 的任务
 function oneTaskHandle () {
   // 嵌套调用里面用数组形式 push
-  ($.call[$.call.length - 1] == 'oneTaskHandle') || $.call.push('oneActivityInfo')
+  ($.call[$.call.length - 1] == 'oneTaskHandle') || $.call.push('oneTaskHandle')
   $.taskId = $.oneTask.taskId
   $.taskToken = $.oneTask.simpleRecordInfoVo.taskToken
   $.message = `做任务：${$.oneTask.taskName} 等待完成...`
