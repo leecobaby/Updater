@@ -236,7 +236,6 @@ function travel_getBadgeAward () {
   if (!$.oneTask) {
     // 循环完成重新设置 to,call
     $.to = '', $.call.pop()
-    $.message = `任务已全都完成~`
     document.write(JSON.stringify($))
     return
   }
@@ -248,6 +247,7 @@ function travel_getBadgeAward () {
 
   $.callback = 'Func.request'
   takePostRequest('travel_getBadgeAward');
+  return
 
   // next
   $.callback = ''
