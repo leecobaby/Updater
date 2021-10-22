@@ -34,7 +34,7 @@ let JD_API_HOST = `https://api.m.jd.com/client.action?functionId=`;
  * 云端推送提示
  */
 function cloudTip () {
-  $.message = `指令已运行完毕！\n其他功能和任务正在开发中，上线将自动推送到指令中，无需任何操作~`
+  $.message = `指令已运行完毕！入会任务和下单任务不负责做哦！\n其他功能和任务正在开发中，上线将自动推送到指令中，无需任何操作~`
   document.write(JSON.stringify($))
 }
 /**
