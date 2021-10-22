@@ -795,7 +795,7 @@
     ]
   },
   "1111": {
-    "version": "数据最后更新于:10.22.8",
+    "version": "数据最后更新于:10.22.9",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f40FUIz",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f40FUIz",
@@ -822,12 +822,59 @@
       "淘宝特价版": "taobaolite"
     },
     "help": {
-      "gitter": "https://gitter.im/api/v1/rooms/616cdf536da0373984881632/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=50",
-      "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/random_mutual_1111ys.js",
-      "link": "https://gitter.im/leecobaby-shortcuts/1111ys?utm_source=share-link&utm_medium=link&utm_campaign=share-link",
+      "gitter": "https://gitter.im/api/v1/rooms/6170e0576da03739848855d7/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=100",
+      "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/random_mutual_1111.js",
+      "link": "https://gitter.im/leecobaby-shortcuts/1111?utm_source=share-link&utm_medium=link&utm_campaign=share-link",
       "lodash": "https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"
     },
     "task": [
+      {
+        "stars": {
+          "title": "做主任务",
+          "type": "stars",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=2pGOkzEU77BPNDklsYgESNYKHXhdUWUD&spm=a217e.xzrwy.1.1&sceneId=2368&sourceType=other&hd_from_id=100136&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "19933 other_8_586007_19933_0",
+            "18734 other_51_526005_18734_0",
+            "19093 other_29_507006_19093_0",
+            "19938 other_8_561007_19938_0",
+            "18721 other_51_485001_18721_0",
+            "19094 other_30_536007_19094_0",
+            "20195 live_3_332685410803_20195_0",
+            "19000 ald.res.19312519_29_149754_19000_0",
+            "20161 ald.res.19312519_3_149397_20161_0",
+            "19714 cloudsail_10_167837001650001_19714_0",
+            "20163 cloudsail_3_169185003470001_20163_0",
+            "20163 cloudsail_3_169185003470001_20163_1",
+            "20163 cloudsail_3_169185003470001_20163_2",
+            "20163 cloudsail_3_169185003470001_20163_3",
+            "20163 cloudsail_3_169185003470001_20163_4",
+            "20163 cloudsail_3_169185003470001_20163_5",
+            "20163 cloudsail_3_169185003470001_20163_6",
+            "20163 cloudsail_3_169185003470001_20163_7",
+            "20163 cloudsail_3_169185003470001_20163_8",
+            "20163 cloudsail_3_169185003470001_20163_9",
+            "20164 cloudsail_3_169036502550001_20164_0",
+            "20164 cloudsail_3_169036502550001_20164_1",
+            "20164 cloudsail_3_169036502550001_20164_2",
+            "20164 cloudsail_3_169036502550001_20164_3",
+            "20164 cloudsail_3_169036502550001_20164_4",
+            "20164 cloudsail_3_169036502550001_20164_5",
+            "20164 cloudsail_3_169036502550001_20164_6",
+            "20164 cloudsail_3_169036502550001_20164_7",
+            "20164 cloudsail_3_169036502550001_20164_8",
+            "20164 cloudsail_3_169036502550001_20164_9",
+            "20165 cloudsail_3_167066504390001_20165_0",
+            "20165 cloudsail_3_167066504390001_20165_1",
+            "20165 cloudsail_3_167066504390001_20165_2",
+            "20165 cloudsail_3_167066504390001_20165_3",
+            "20165 cloudsail_3_167066504390001_20165_4"
+          ]
+        }
+      }
+    ],
+    "otherTask": [
       {
         "stars": {
           "title": "做喵糖主任务",
@@ -913,51 +960,6 @@
           "textEnd": "str2",
           "item": [
             "1 fromToken=r2rz1GgTooVkKLb1CAjJcVLAhgUBUPUr&deliveryId=20199&implId=live_3_331825504912_20199_0"
-          ]
-        }
-      },
-      {
-        "stars": {
-          "title": "⚠️部分账号梯度更新数据需要运行此任务才有结算 - 不要选择其他任务只做此任务！！！",
-          "type": "stars",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=2pGOkzEU77BPNDklsYgESNYKHXhdUWUD&spm=a217e.xzrwy.1.1&sceneId=2368&sourceType=other&hd_from_id=100136&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "19933 other_8_586007_19933_0",
-            "18734 other_51_526005_18734_0",
-            "19093 other_29_507006_19093_0",
-            "19938 other_8_561007_19938_0",
-            "18721 other_51_485001_18721_0",
-            "19094 other_30_536007_19094_0",
-            "20195 live_3_332685410803_20195_0",
-            "19000 ald.res.19312519_29_149754_19000_0",
-            "20161 ald.res.19312519_3_149397_20161_0",
-            "19714 cloudsail_10_167837001650001_19714_0",
-            "20163 cloudsail_3_169185003470001_20163_0",
-            "20163 cloudsail_3_169185003470001_20163_1",
-            "20163 cloudsail_3_169185003470001_20163_2",
-            "20163 cloudsail_3_169185003470001_20163_3",
-            "20163 cloudsail_3_169185003470001_20163_4",
-            "20163 cloudsail_3_169185003470001_20163_5",
-            "20163 cloudsail_3_169185003470001_20163_6",
-            "20163 cloudsail_3_169185003470001_20163_7",
-            "20163 cloudsail_3_169185003470001_20163_8",
-            "20163 cloudsail_3_169185003470001_20163_9",
-            "20164 cloudsail_3_169036502550001_20164_0",
-            "20164 cloudsail_3_169036502550001_20164_1",
-            "20164 cloudsail_3_169036502550001_20164_2",
-            "20164 cloudsail_3_169036502550001_20164_3",
-            "20164 cloudsail_3_169036502550001_20164_4",
-            "20164 cloudsail_3_169036502550001_20164_5",
-            "20164 cloudsail_3_169036502550001_20164_6",
-            "20164 cloudsail_3_169036502550001_20164_7",
-            "20164 cloudsail_3_169036502550001_20164_8",
-            "20164 cloudsail_3_169036502550001_20164_9",
-            "20165 cloudsail_3_167066504390001_20165_0",
-            "20165 cloudsail_3_167066504390001_20165_1",
-            "20165 cloudsail_3_167066504390001_20165_2",
-            "20165 cloudsail_3_167066504390001_20165_3",
-            "20165 cloudsail_3_167066504390001_20165_4"
           ]
         }
       }
