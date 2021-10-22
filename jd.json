@@ -662,7 +662,7 @@
         { "再做主任务 - 1": "doTask" },
         { "获取任务列表 - 2": "travel_getTaskDetail" },
         { "再做主任务 - 2": "doTask" },
-        { "打开升级 - 测试中...": "travel_raise" },
+        { "打开升级": "travel_raise" },
         { "其他": "cloudTip" }
       ]
     },
