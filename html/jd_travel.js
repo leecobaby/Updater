@@ -437,6 +437,48 @@ function travel_raise () {
   document.write(JSON.stringify($))
 }
 
+// 获取京东金融任务列表
+function jdjrTaskDetail (params) {
+  $.callback = 'Func.request'
+  takePostRequest('jdjrTaskDetails');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('jdjrTaskDetails', $.data)
+  document.write(JSON.stringify($))
+}
+
+function jdjrDoTask (params) {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler'
+  $.call = ['jdjrDoTask']
+
+  // 利用队列取代循环
+  $.oneTask = $.taskList.shift()
+  $.missionId = $.oneTask?.missionId;
+  if (!$.oneTask) {
+    // 循环完成重新设置 to,call
+    $.to = '', $.call.pop()
+    document.write(JSON.stringify($))
+    return
+  }
+
+  if ($.oneTask.status !== 1) {
+    document.write(JSON.stringify($))
+    return
+  }
+
+  $.callback = 'Func.request'
+  takePostRequest('jdjrDoTask');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('jdjrDoTask', $.data)
+  document.write(JSON.stringify($))
+}
+
 // 提交请求信息
 function takePostRequest (type) {
   let { log, random } = $.signList?.shift() || { log: "", random: "" }
@@ -537,8 +579,8 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`zoo_getWelfareScore`, body);
       break;
     case 'jdjrTaskDetail':
-      body = `reqData={"eid":"","sdkToken":"jdd014JYKVE2S6UEEIWPKA4B5ZKBS4N6Y6X5GX2NXL4IYUMHKF3EEVK52RQHBYXRZ67XWQF5N7XB6Y2YKYRTGQW4GV5OFGPDPFP3MZINWG2A01234567"}`;
-      myRequest = getPostRequest(`listTask`, body);
+      body = `reqData={"eid":"","sdkToken":"jdd01UGM6YXUOBTGCM6YUCAOOS7ISME4TMFAS6H2H5MUYKBFWHN54VWNKFONXTAV37DV64APTFCDSLQWF4D367NK7KLFQMVIDWALAPSTGZ5Y01234567"}`;
+      myRequest = getPostRequest(`jdjrTaskDetail`, body);
       break;
     case 'jdjrAcceptTask':
       body = `reqData={"eid":"","sdkToken":"jdd014JYKVE2S6UEEIWPKA4B5ZKBS4N6Y6X5GX2NXL4IYUMHKF3EEVK52RQHBYXRZ67XWQF5N7XB6Y2YKYRTGQW4GV5OFGPDPFP3MZINWG2A01234567","id":"${$.taskId}"}`;
@@ -560,8 +602,8 @@ function takePostRequest (type) {
 // 获取请求信息
 function getPostRequest (type, body) {
   let url = JD_API_HOST + type;
-  if (type === 'listTask' || type === 'acceptTask') {
-    url = `https://ms.jr.jd.com/gw/generic/hy/h5/m/${type}`;
+  if (type === 'jdjrTaskDetail' || type === 'acceptTask') {
+    url = `https://ms.jr.jd.com/gw/generic/uc/h5/m/miMissions`;
   }
   const method = `POST`;
   const headers = {
@@ -771,7 +813,10 @@ function dealReturn (type, data) {
       break;
     case 'jdjrTaskDetail':
       if (data.resultCode === 0) {
-        $.jdjrTaskList = data.resultData.top;
+        $.taskList = data.resultData?.data?.views;
+      } else {
+        $.taskList = []
+        $.message = `获取京东金融任务失败`
       }
       break;
     case 'jdjrAcceptTask':

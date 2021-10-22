@@ -875,7 +875,7 @@
       },
       {
         "stars": {
-          "title": "云端推送",
+          "title": "逛店铺①",
           "type": "stars",
           "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooVXqxaLFAjJcVqGHgUBUPUr&spm=a217e.xzrwy.1.1&sceneId=2385&sourceType=other&hd_from_id=100136&deliveryId=",
           "textEnd": "str1&implId=str2",
@@ -890,6 +890,26 @@
             "20533 cloudsail_0_167495502140001_20533_7",
             "20533 cloudsail_0_167495502140001_20533_8",
             "20533 cloudsail_0_167495502140001_20533_9"
+          ]
+        }
+      },
+      {
+        "stars": {
+          "title": "逛店铺②",
+          "type": "stars",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/tmc/32985/15487/wupr?spm=2021hudong.pk1111.tasklist-pentaprism.19933&disableNav=YES&wh_pid=main-402601&shop_router_ignore=true&fromToken=Nr2EB7lSRRL79VJXFr6oIMl2frU0UzUr&sceneId=2368&hd_from_id=100136&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "20540 cloudsail_0_169343504110001_20540_0",
+            "20540 cloudsail_0_169343504110001_20540_1",
+            "20540 cloudsail_0_169343504110001_20540_2",
+            "20540 cloudsail_0_169343504110001_20540_3",
+            "20540 cloudsail_0_169343504110001_20540_4",
+            "20540 cloudsail_0_169343504110001_20540_5",
+            "20540 cloudsail_0_169343504110001_20540_6",
+            "20540 cloudsail_0_169343504110001_20540_7",
+            "20540 cloudsail_0_169343504110001_20540_8",
+            "20540 cloudsail_0_169343504110001_20540_9"
           ]
         }
       }
