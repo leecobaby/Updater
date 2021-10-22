@@ -64,8 +64,8 @@ function travel_getHomeData () {
 
   // next
   $.callback = ''
-  $.error = '云端测试中'
-  // dealReturn('travel_getHomeData', $.data)
+  // $.error = '云端测试中'
+  dealReturn('travel_getHomeData', $.data)
   document.write(JSON.stringify($))
 }
 
@@ -709,8 +709,7 @@ function dealReturn (type, data) {
         $.homeData = data.data;
         $.secretp = data.data?.result?.homeMainInfo?.secretp;
         $.userInfo = $.homeData?.result?.homeMainInfo
-        const point = $.userInfo?.raiseInfo?.cityConfig?.points[$.userInfo.raiseInfo?.scoreLevel % 5 - 2].pointName || '无'
-        $.message = `当前玩家进度: ${$.userInfo?.raiseInfo?.cityConfig?.cityName}-${point} ${$.userInfo?.curCity}/20\n剩余汪汪币${$.userInfo?.raiseInfo?.remainScore}，下一关需要${$.userInfo?.raiseInfo?.nextLevelScore - $.userInfo?.raiseInfo?.curLevelStartScore}`
+        $.message = `当前玩家进度: ${$.userInfo?.raiseInfo?.cityConfig?.cityName} ${$.userInfo?.curCity}/20\n剩余汪汪币${$.userInfo?.raiseInfo?.remainScore}，下一关需要${$.userInfo?.raiseInfo?.nextLevelScore - $.userInfo?.raiseInfo?.curLevelStartScore}`
         // $.secretpInfo[$.UserName] = $.secretp;
       }
       break;
