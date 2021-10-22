@@ -343,7 +343,7 @@
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/11c46d0b1cf849a8b773ad1bae6b4fbe",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "⚠️数据已更新至10.22，部分账号无法正常结算的请手动选择列表最后一个任务运行指令~\n云端组队助力池建设中...",
+    "notice": "指令已更新，少部分用户全都任务异常的请运行第二选项~\n云端助力池已开放，需要github账号登录~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=双11喵糖自动任务&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
