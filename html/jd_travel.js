@@ -464,19 +464,28 @@ function jdjrDoTask (params) {
     return
   }
 
-  if ($.oneTask.status !== 1) {
+  if ($.oneTask.complete++ <= $.oneTask.total) {
     document.write(JSON.stringify($))
     return
   }
 
+  $.message = `做任务：${$.oneTask.title} 等待完成...`
   $.callback = 'Func.request'
   takePostRequest('jdjrDoTask');
   return
 
   // next
-  $.callback = ''
-  dealReturn('jdjrDoTask', $.data)
-  document.write(JSON.stringify($))
+  $.callback = 'Func.request'
+  takePostRequest('jdjrDoTaskFinish')
+  // return
+
+
+  // next next
+  if (!document.body.innerText) {
+    $.callback = ''
+    dealReturn('jdjrDoTask', $.data)
+    document.write(JSON.stringify($))
+  }
 }
 
 // 提交请求信息
@@ -484,6 +493,7 @@ function takePostRequest (type) {
   let { log, random } = $.signList?.shift() || { log: "", random: "" }
   let body = ``;
   let myRequest = ``;
+  let otherUrl = ``;
   switch (type) {
     case 'travel_getMainMsgPopUp':
       body = `functionId=travel_getMainMsgPopUp&body={"channel":"1"}&client=wh5&clientVersion=1.0.0`;
@@ -582,9 +592,13 @@ function takePostRequest (type) {
       body = `reqData={"eid":"","sdkToken":"jdd01UGM6YXUOBTGCM6YUCAOOS7ISME4TMFAS6H2H5MUYKBFWHN54VWNKFONXTAV37DV64APTFCDSLQWF4D367NK7KLFQMVIDWALAPSTGZ5Y01234567"}`;
       myRequest = getPostRequest(`jdjrTaskDetail`, body);
       break;
-    case 'jdjrAcceptTask':
-      body = `reqData={"eid":"","sdkToken":"jdd014JYKVE2S6UEEIWPKA4B5ZKBS4N6Y6X5GX2NXL4IYUMHKF3EEVK52RQHBYXRZ67XWQF5N7XB6Y2YKYRTGQW4GV5OFGPDPFP3MZINWG2A01234567","id":"${$.taskId}"}`;
-      myRequest = getPostRequest(`acceptTask`, body);
+    case 'jdjrDoTask':
+      otherUrl = `https://ms.jr.jd.com/gw/generic/mission/h5/m/queryMissionReceiveAfterStatus?reqData=%7B%2522missionId%2522:%2522${$.missionId}%2522%7D`
+      myRequest = getPostRequest(`jdjrDoTask`, body, otherUrl);
+      break;
+    case 'jdjrDoTaskFinish':
+      otherUrl = `https://ms.jr.jd.com/gw/generic/mission/h5/m/finishReadMission?reqData=%7B%2522missionId%2522:%2522${$.missionId}%2522,%2522readTime%2522:8%7D`
+      myRequest = getPostRequest(`jdjrDoTask`, body, otherUrl);
       break;
     case 'browseProducts':
       body = `functionId=travel_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`;
@@ -600,22 +614,29 @@ function takePostRequest (type) {
 }
 
 // 获取请求信息
-function getPostRequest (type, body) {
+function getPostRequest (type, body, otherUrl) {
   let url = JD_API_HOST + type;
-  if (type === 'jdjrTaskDetail' || type === 'acceptTask') {
-    url = `https://ms.jr.jd.com/gw/generic/uc/h5/m/miMissions`;
+  const request = {}
+  if (type === 'jdjrTaskDetail' || type === 'jdjrDoTask') {
+    request.method = 'GET'
+    request.headers = {
+      'Host': 'ms.jr.jd.com',
+      'Origin': 'https://prodev.m.jd.com',
+      'Referer': 'https://prodev.m.jd.com/'
+    }
+    url = otherUrl;
   }
-  const method = `POST`;
+  const method = request.method || `POST`;
   const headers = {
     'Accept': `application/json, text/plain, */*`,
-    'Origin': `https://wbbny.m.jd.com`,
+    'Origin': request.headers?.Origin || `https://wbbny.m.jd.com`,
     'Accept-Encoding': `gzip, deflate, br`,
     'Cookie': $.cookie,
     'Content-Type': `application/x-www-form-urlencoded`,
-    'Host': `api.m.jd.com`,
+    'Host': request.headers?.Host || `api.m.jd.com`,
     'Connection': `keep-alive`,
     'User-Agent': $.UA || "jdapp;iPhone;10.0.6;14.4;c67093f5dd58d33fc5305cdc61e46a9741e05c5b;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
-    'Referer': `https://wbbny.m.jd.com/`,
+    'Referer': request.headers?.Referer || `https://wbbny.m.jd.com/`,
     'Accept-Language': `zh-CN`
   };
   return { url: url, method: method, headers: headers, body: body };
@@ -819,9 +840,11 @@ function dealReturn (type, data) {
         $.message = `获取京东金融任务失败`
       }
       break;
-    case 'jdjrAcceptTask':
+    case 'jdjrDoTask':
       if (data.resultCode === 0) {
-        console.log(`领任务成功`);
+        $.message = '任务完成'
+      } else {
+        $.message = '任务失败'
       }
       break;
     case 'browseProducts':
@@ -837,6 +860,6 @@ function dealReturn (type, data) {
       }
       break
     default:
-      console.log(`未判断的异常${type}`);
+      $.error = '什么情况，有未知异常‼️' + type
   }
 }
