@@ -706,10 +706,10 @@ function dealReturn (type, data) {
     case 'travel_getHomeData':
       if (data?.data?.bizCode === 0) {
         $.homeData = data.data;
-        $.secretp = data.data.result.homeMainInfo.secretp;
-        $.userInfo = $.homeData.result.homeMainInfo
-        const point = $.userInfo.raiseInfo.cityConfig.points[$.userInfo.raiseInfo.scoreLevel % 5 - 2].pointName || '无'
-        $.message = `当前玩家进度: ${$.userInfo.raiseInfo.cityConfig.cityName}-${point} ${$.userInfo.curCity}/20\n剩余汪汪币${$.userInfo.raiseInfo.remainScore}，下一关需要${$.userInfo.raiseInfo.nextLevelScore - $.userInfo.raiseInfo.curLevelStartScore}`
+        $.secretp = data.data?.result?.homeMainInfo?.secretp;
+        $.userInfo = $.homeData?.result?.homeMainInfo
+        const point = $.userInfo?.raiseInfo?.cityConfig?.points[$.userInfo.raiseInfo?.scoreLevel % 5 - 2].pointName || '无'
+        $.message = `当前玩家进度: ${$.userInfo?.raiseInfo?.cityConfig?.cityName}-${point} ${$.userInfo?.curCity}/20\n剩余汪汪币${$.userInfo?.raiseInfo?.remainScore}，下一关需要${$.userInfo?.raiseInfo?.nextLevelScore - $.userInfo?.raiseInfo?.curLevelStartScore}`
         // $.secretpInfo[$.UserName] = $.secretp;
       }
       break;
