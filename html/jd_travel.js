@@ -7,7 +7,7 @@
  */
 
 // 到指令里运行需要注释掉
-const $ = {}
+// const $ = {}
 
 // $.inviteList = [];
 // $.pkInviteList = [];
@@ -701,7 +701,7 @@ function getPostBody (type) {
 
 // 处理返回信息
 function dealReturn (type, data) {
-  if (!data) $.error = '接口返回数据为空，检查账号cookie是否过期或错误'
+  if (!data) $.error = '接口返回数据为空，检查账号cookie是否过期或错误';
   switch (type) {
     case 'travel_getHomeData':
       if (data?.data?.bizCode === 0) {
