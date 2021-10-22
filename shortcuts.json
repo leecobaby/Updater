@@ -336,8 +336,8 @@
     }
   },
   "1111": {
-    "version": "1.0",
-    "update_log": "",
+    "version": "1.1",
+    "update_log": "- 更新 数据源解决无奖励问题\n- 更新 云端助力池开放",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/1111",
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
