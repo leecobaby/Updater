@@ -341,7 +341,7 @@
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/1111",
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/ebc3d058584a4f57a336f7f13bd6bbba",
+    "update": "https://www.icloud.com/shortcuts/11c46d0b1cf849a8b773ad1bae6b4fbe",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
     "notice": "⚠️数据已更新至10.22，部分账号无法正常结算的请手动选择列表最后一个任务运行指令~\n云端组队助力池建设中...",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
@@ -354,7 +354,8 @@
       "hot": "🧧 20:00 0元抢iphone13",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
-      "team": "",
+      "otherTask": "任务全都异常才可运行",
+      "help": "助力大厅已开放",
       "other": "有疑问看常见问题",
       "more": "🔥 10.25抢现金红包"
     }
