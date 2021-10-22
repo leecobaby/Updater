@@ -449,6 +449,7 @@ function jdjrTaskDetail (params) {
   document.write(JSON.stringify($))
 }
 
+// 做京东金融主任务
 function jdjrDoTask (params) {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
