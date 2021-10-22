@@ -795,7 +795,7 @@
     ]
   },
   "1111": {
-    "version": "数据最后更新于:10.22.6",
+    "version": "数据最后更新于:10.22.7",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f40FUIz",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f40FUIz",
@@ -913,6 +913,30 @@
           "textEnd": "str2",
           "item": [
             "1 fromToken=r2rz1GgTooVkKLb1CAjJcVLAhgUBUPUr&deliveryId=20199&implId=live_3_331825504912_20199_0"
+          ]
+        }
+      },
+      {
+        "stars": {
+          "title": "部分账号梯度更新数据需要运行此任务才有结算",
+          "type": "stars",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=2pGOkzEU77BPNDklsYgESNYKHXhdUWUD&spm=a217e.xzrwy.1.1&sceneId=2368&sourceType=other&hd_from_id=100136&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "19933 other_8_586007_19933_0",
+            "18734 other_51_526005_18734_0",
+            "19093 other_29_507006_19093_0",
+            "19938 other_8_561007_19938_0",
+            "20163 cloudsail_3_169185003470001_20163_0",
+            "20163 cloudsail_3_169185003470001_20163_1",
+            "20163 cloudsail_3_169185003470001_20163_2",
+            "20163 cloudsail_3_169185003470001_20163_3",
+            "20163 cloudsail_3_169185003470001_20163_4",
+            "20163 cloudsail_3_169185003470001_20163_5",
+            "20163 cloudsail_3_169185003470001_20163_6",
+            "20163 cloudsail_3_169185003470001_20163_7",
+            "20163 cloudsail_3_169185003470001_20163_8",
+            "20163 cloudsail_3_169185003470001_20163_9"
           ]
         }
       }
