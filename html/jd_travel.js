@@ -64,7 +64,8 @@ function travel_getHomeData () {
 
   // next
   $.callback = ''
-  dealReturn('travel_getHomeData', $.data)
+  $.error = '云端测试中'
+  // dealReturn('travel_getHomeData', $.data)
   document.write(JSON.stringify($))
 }
 
