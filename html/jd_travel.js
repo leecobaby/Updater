@@ -664,7 +664,7 @@ function getPostRequest (type, body, otherUrl) {
   let url = JD_API_HOST + type;
   const request = {}
   if (type === 'jdjrTaskDetail' || type === 'jdjrDoTask') {
-    request.method = 'GET'
+    type === 'jdjrDoTask' && (request.method = 'GET')
     request.headers = {
       'Host': 'ms.jr.jd.com',
       'Origin': 'https://prodev.m.jd.com',
