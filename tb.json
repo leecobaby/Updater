@@ -768,7 +768,7 @@
     ]
   },
   "1111": {
-    "version": "数据最后更新于:10.23.2",
+    "version": "数据最后更新于:10.23.3",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.ff0tOor",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.ff0tOor",
@@ -850,26 +850,6 @@
         "stars": {
           "title": "逛店铺①",
           "type": "stars",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/tmc/32985/15487/wupr?spm=2021hudong.pk1111.tasklist-pentaprism.19933&disableNav=YES&wh_pid=main-402601&shop_router_ignore=true&fromToken=r2rz1GgTooVXqxaLFAjJcVqGHgUBUPUr&sceneId=2385&hd_from_id=100136&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "20533 cloudsail_0_167495502140001_20533_0",
-            "20533 cloudsail_0_167495502140001_20533_1",
-            "20533 cloudsail_0_167495502140001_20533_2",
-            "20533 cloudsail_0_167495502140001_20533_3",
-            "20533 cloudsail_0_167495502140001_20533_4",
-            "20533 cloudsail_0_167495502140001_20533_5",
-            "20533 cloudsail_0_167495502140001_20533_6",
-            "20533 cloudsail_0_167495502140001_20533_7",
-            "20533 cloudsail_0_167495502140001_20533_8",
-            "20533 cloudsail_0_167495502140001_20533_9"
-          ]
-        }
-      },
-      {
-        "stars": {
-          "title": "逛店铺②",
-          "type": "stars",
           "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/tmc/32985/15487/wupr?spm=2021hudong.pk1111.tasklist-pentaprism.19933&disableNav=YES&wh_pid=main-402601&shop_router_ignore=true&fromToken=Nr2EB7lSRRL79VJXFr6oIMl2frU0UzUr&sceneId=2368&hd_from_id=100136&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
@@ -883,6 +863,26 @@
             "20540 cloudsail_0_169343504110001_20540_7",
             "20540 cloudsail_0_169343504110001_20540_8",
             "20540 cloudsail_0_169343504110001_20540_9"
+          ]
+        }
+      },
+      {
+        "stars": {
+          "title": "逛店铺② - 可能不加硬糖但会过红包任务",
+          "type": "stars",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/tmc/32985/15487/wupr?spm=2021hudong.pk1111.tasklist-pentaprism.19933&disableNav=YES&wh_pid=main-402601&shop_router_ignore=true&fromToken=r2rz1GgTooVXqxaLFAjJcVqGHgUBUPUr&sceneId=2385&hd_from_id=100136&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "20533 cloudsail_0_167495502140001_20533_0",
+            "20533 cloudsail_0_167495502140001_20533_1",
+            "20533 cloudsail_0_167495502140001_20533_2",
+            "20533 cloudsail_0_167495502140001_20533_3",
+            "20533 cloudsail_0_167495502140001_20533_4",
+            "20533 cloudsail_0_167495502140001_20533_5",
+            "20533 cloudsail_0_167495502140001_20533_6",
+            "20533 cloudsail_0_167495502140001_20533_7",
+            "20533 cloudsail_0_167495502140001_20533_8",
+            "20533 cloudsail_0_167495502140001_20533_9"
           ]
         }
       },
