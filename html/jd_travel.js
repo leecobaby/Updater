@@ -170,14 +170,19 @@ function pkHelp () {
 
 // pk助力
 function travel_pk_collectPkExpandScore () {
-  $.callback = 'Func.request'
-  takePostRequest('travel_pk_collectPkExpandScore');
-  return
+  if (new Date().getHours() >= 8 && new Date().getHours() <= 19) {
+    $.callback = 'Func.request'
+    $.pkExpandId = 'PKASTT0195L6r47PBTNYCtIMjDX0CjRWnIaRzTIjeQOc'
+    takePostRequest('travel_pk_collectPkExpandScore');
+    return
 
-  //next
-  $.callback = ''
-  dealReturn('travel_pk_collectPkExpandScore', $.data)
-  document.write(JSON.stringify($))
+    //next
+    $.callback = ''
+    dealReturn('travel_pk_collectPkExpandScore', $.data)
+    document.write(JSON.stringify($))
+  } else {
+    document.write(JSON.stringify($))
+  }
 }
 
 // 多次做任务控制器
@@ -494,7 +499,7 @@ function jdjrDoTask (params) {
   $.call = ['jdjrDoTask']
 
   // 利用队列取代循环
-  $.oneTask = $.taskList.shift()
+  $.oneTask = $.jdjrTaskList.shift()
   $.missionId = $.oneTask?.missionId;
   if (!$.oneTask) {
     // 循环完成重新设置 to,call
@@ -580,7 +585,7 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`zoo_pk_collectScore`, body);
       break;
     case 'travel_pk_collectPkExpandScore':
-      body = `functionId=travel_pk_collectPkExpandScore&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYGJZYh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"PKASTT0195L6r47PBTNYCtIMjDX0CjRWnIaRzTIjeQOc"}&client=wh5&clientVersion=1.0.0`;
+      body = `functionId=travel_pk_collectPkExpandScore&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYGJZYh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"${$.pkExpandId}"}&client=wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`travel_pk_collectPkExpandScore`, body);
       break;
     case 'travel_pk_joinGroup':
@@ -872,9 +877,9 @@ function dealReturn (type, data) {
       break;
     case 'jdjrTaskDetail':
       if (data.resultCode === 0) {
-        $.taskList = data.resultData?.data?.views;
+        $.jdjrTaskList = data.resultData?.data?.views || [];
       } else {
-        $.taskList = []
+        $.jdjrTaskList = []
         $.message = `获取京东金融任务失败`
       }
       break;
