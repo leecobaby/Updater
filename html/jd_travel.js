@@ -484,12 +484,12 @@ function travel_raise () {
 // 获取京东金融任务列表
 function jdjrTaskDetail (params) {
   $.callback = 'Func.request'
-  takePostRequest('jdjrTaskDetails');
+  takePostRequest('jdjrTaskDetail');
   return
 
   // next
   $.callback = ''
-  dealReturn('jdjrTaskDetails', $.data)
+  dealReturn('jdjrTaskDetail', $.data)
   document.write(JSON.stringify($))
 }
 

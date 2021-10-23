@@ -1,4 +1,4 @@
 // next
 $.callback = ''
-dealReturn('jdjrTaskDetails', $.data)
+dealReturn('jdjrTaskDetail', $.data)
 document.write(JSON.stringify($))
