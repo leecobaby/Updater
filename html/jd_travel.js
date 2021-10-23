@@ -635,7 +635,8 @@ function takePostRequest (type) {
       break;
     case 'jdjrTaskDetail':
       body = `reqData={"eid":"","sdkToken":"jdd01UGM6YXUOBTGCM6YUCAOOS7ISME4TMFAS6H2H5MUYKBFWHN54VWNKFONXTAV37DV64APTFCDSLQWF4D367NK7KLFQMVIDWALAPSTGZ5Y01234567"}`;
-      myRequest = getPostRequest(`jdjrTaskDetail`, body);
+      otherUrl = `https://ms.jr.jd.com/gw/generic/uc/h5/m/miMissions`
+      myRequest = getPostRequest(`jdjrTaskDetail`, body, otherUrl);
       break;
     case 'jdjrDoTask':
       otherUrl = `https://ms.jr.jd.com/gw/generic/mission/h5/m/queryMissionReceiveAfterStatus?reqData=%7B%2522missionId%2522:%2522${$.missionId}%2522%7D`
