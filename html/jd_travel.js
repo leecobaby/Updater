@@ -505,6 +505,7 @@ function jdjrDoTask (params) {
   if (!$.oneTask) {
     // 循环完成重新设置 to,call
     $.to = '', $.call.pop()
+    $.wait = 1
     document.write(JSON.stringify($))
     return
   }
@@ -520,6 +521,7 @@ function jdjrDoTask (params) {
   return
 
   // next
+  $.wait = 8
   $.callback = 'Func.request'
   takePostRequest('jdjrDoTaskFinish')
   // return
