@@ -768,7 +768,7 @@
     ]
   },
   "1111": {
-    "version": "数据最后更新于:10.23.1",
+    "version": "数据最后更新于:10.23.2",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.ff0tOor",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.ff0tOor",
@@ -883,6 +883,36 @@
             "20540 cloudsail_0_169343504110001_20540_7",
             "20540 cloudsail_0_169343504110001_20540_8",
             "20540 cloudsail_0_169343504110001_20540_9"
+          ]
+        }
+      },
+      {
+        "stars": {
+          "title": "去往支付宝任务",
+          "type": "stars",
+          "urlScheme": "alipays://platformapi/startapp?appId=68687635&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fc%2F18orxwq9ap1c&ttb=always&titlePenetrate=YES&abv=NO&chInfo=TAOBAO_TASK",
+          "textEnd": "",
+          "item": ["1 1"]
+        }
+      },
+      {
+        "stars": {
+          "title": "去往淘宝任务",
+          "type": "stars",
+          "urlScheme": "taobao://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES&qd_from=zfbbanner&bc_fl_src=zfb_banner&qd_dice=aliPayTaskBanner&async=false&idfa=00000000-0000-0000-0000-000000000000&surge_ssr=true&afcflow=unkown",
+          "textEnd": "",
+          "item": ["1 1"]
+        }
+      },
+      {
+        "stars": {
+          "title": "惊喜宝箱 - 会去往支付宝",
+          "type": "stars",
+          "urlScheme": "",
+          "textEnd": "str2",
+          "item": [
+            "1 alipays://platformapi/startapp?appId=68687791&url=%2Fwww%2Findex.html%3Fsource%3Dtb2021d11e",
+            "1 taobao://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES&qd_from=zfbsurprise&bc_fl_src=zfb_surprise&async=false&idfa=00000000-0000-0000-0000-000000000000&surge_ssr=true&afcflow=unkown"
           ]
         }
       }
