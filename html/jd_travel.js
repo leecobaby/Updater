@@ -506,6 +506,7 @@ function jdjrDoTask (params) {
     // 循环完成重新设置 to,call
     $.to = '', $.call.pop()
     $.wait = 1
+    $.message = '浏览任务已全都完成~'
     document.write(JSON.stringify($))
     return
   }
