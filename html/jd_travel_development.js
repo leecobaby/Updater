@@ -931,7 +931,7 @@ function dealReturn (type, data) {
       const list = sampleData.map(v => v.text)
       // 将助力池的助力码添加进助力列表
       $.inviteList = $.inviteList.concat(list)
-      $.message = `测试：${$.inviteList}`
+      $.message = `测试：${$.inviteList}\n${list}`
       break;
     case 'zoo_bdCollectScore':
       if (data.code === 0) {
