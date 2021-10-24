@@ -704,7 +704,7 @@ function takePostRequest (type) {
         Cookie: `null`,
         'x-access-token': '$9OVxcJtRbFDBoGj9Z3hXLFw9b3mrlWmop6Lw84IBmhs='
       }
-      myRequest = getRequest(`getHelpCode`, body, 'GET', headers);
+      myRequest = getRequest(url, body, 'GET', headers);
       break;
     case 'jdjrTaskDetail':
       body = `reqData={"eid":"","sdkToken":"jdd01UGM6YXUOBTGCM6YUCAOOS7ISME4TMFAS6H2H5MUYKBFWHN54VWNKFONXTAV37DV64APTFCDSLQWF4D367NK7KLFQMVIDWALAPSTGZ5Y01234567"}`;
