@@ -635,6 +635,12 @@
       },
       "api": {
         "url": "https://api.m.jd.com/client.action"
+      },
+      "gitter": {
+        "url": "https://gitter.im"
+      },
+      "jdjr": {
+        "url": "https://ms.jr.jd.com"
       }
     },
     "uaInfo": {
