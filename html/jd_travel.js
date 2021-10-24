@@ -182,7 +182,7 @@ function pkHelp () {
 function travel_pk_collectPkExpandScore () {
   if (new Date().getHours() >= 8 && new Date().getHours() <= 19) {
     $.callback = 'Func.request'
-    $.pkExpandId = 'PKASTT0195L6r47PBTNYCtIMjDX0CjRWnIaRzTIjeQOc'
+    $.pkExpandId = 'PKASTT0195L6r47PBTNYCtIMjDX0CjRWnIaRzT0jeQO' || 'PKASTT0195L6r47PBTNYCtIMjDX0CjRWnIaRzTIjeQOc'
     takePostRequest('travel_pk_collectPkExpandScore');
     return
 
