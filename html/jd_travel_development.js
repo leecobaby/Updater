@@ -7,7 +7,7 @@
  */
 
 // 到指令里运行需要注释掉
-const $ = {}; $.call = 'test'
+// const $ = {}; $.call = 'test'
 
 
 // $.inviteList = [];
