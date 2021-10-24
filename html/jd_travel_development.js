@@ -40,7 +40,7 @@ function init () {
     $.inviteList = $.inviteList.filter(v => v !== '')
   } else {
     $.inviteList = []
-    $.inviteId = '不助力~'
+    $.message = '不助力~'
   }
 
 
