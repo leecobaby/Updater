@@ -35,9 +35,15 @@ let JD_API_HOST = `https://api.m.jd.com/client.action?functionId=`;
  */
 function init () {
   // 处理助力码
-  $.inviteList = Array.isArray($.inviteList) ? $.inviteList : [$.inviteList]
-  
-  $.message = `本地任务和开发是同步的，开发过程中难免存在bug，如果运行时卡住，请过段时间再试请理解~`
+  if ($.inviteList) {
+    $.inviteList = Array.isArray($.inviteList) ? $.inviteList : [$.inviteList]
+    $.inviteList = $.inviteList.filter(v => v !== '')
+  } else {
+    $.inviteList = []
+    $.inviteId = '不助力~'
+  }
+
+
   document.write(JSON.stringify($))
 }
 /**
@@ -51,6 +57,7 @@ function cloudTip () {
  * 任务日期提示
  */
 function update () {
+  $.message = `本地任务和开发是同步的，开发过程中难免存在bug，如果运行时卡住，请过段时间再试请理解~`
   document.write(JSON.stringify($))
 }
 
