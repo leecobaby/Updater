@@ -230,10 +230,10 @@ function travel_pk_getHomeData () {
 
 // pk助力
 function travel_pk_collectPkExpandScore () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler'
+  $.call = ['travel_pk_collectPkExpandScore']
   if (new Date().getHours() >= 20 && new Date().getHours() <= 22) {
-    // 循环逻辑单独设置 to,call
-    $.to = 'Func.logicHandler'
-    $.call = ['travel_pk_collectPkExpandScore']
 
     $.pkExpandId = $.pkExpandList.shift()
     if (!$.pkExpandId) {
