@@ -7,10 +7,10 @@ if (check) {
   if (from == 'Func.main') {
     if ($.data.retcode === 1001) {
       $.overdue = 'Cookie 已过期，请去往指令设置重新授权登录！'
-      return
+    } else {
+      $.nickname = $.data.data?.userInfo?.baseInfo?.nickname
+      $.beanNum = $.data.data?.assetInfo?.beanNum
     }
-    $.nickname = $.data.data?.userInfo?.baseInfo?.nickname
-    $.beanNum = $.data.data?.assetInfo?.beanNum
   }
 } else {
   $.error = '服务器返回的居然不是json值,内容为:' + (data || '空')
