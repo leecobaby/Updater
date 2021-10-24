@@ -695,7 +695,8 @@
       "jdjrTaskDetail_next",
       "jdjrDoTask_next",
       "jdjrDoTask_next_next",
-      "getHelpCode_next"
+      "getHelpCode_next",
+      "travel_pk_getHomeData_next"
     ]
   },
   "share": {

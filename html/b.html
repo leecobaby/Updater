@@ -84,9 +84,12 @@
         }
       }
     }
-    takePostRequest('getHelpCode');
+    // takePostRequest('getHelpCode');
     $.inviteList = ['22']
-    dealReturn('getHelpCode', data)
+    $.inviteList = $.inviteList.filter(v => v !== '')
+    $.inviteList = $.inviteList.concat(['22'])
+    console.log($.inviteList);
+    // dealReturn('getHelpCode', data)
     console.log($.message);
   </script>
 </body>

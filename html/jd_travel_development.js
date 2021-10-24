@@ -58,6 +58,9 @@ function init () {
   }
   $.pkExpandList.push('PKASTT0195L6r47PBTNYCtIMjDX0CjRWnIaRzTIjeQOc')
 
+  // 任务流程初始化
+  $.taskStep = 1
+
   document.write(JSON.stringify($))
 }
 
@@ -90,7 +93,6 @@ function travel_getMainMsgPopUp () {
 
 // 获取活动大厅信息
 function travel_getHomeData () {
-  $.taskStep = 1
   $.callback = 'Func.request'
   takePostRequest('travel_getHomeData');
   return
@@ -212,6 +214,17 @@ function pkHelp () {
   // next
   $.callback = ''
   dealReturn('pkHelp', $.data)
+  document.write(JSON.stringify($))
+}
+
+function travel_pk_getHomeData () {
+  $.callback = 'Func.request'
+  takePostRequest('travel_pk_getHomeData');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('travel_pk_getHomeData', $.data)
   document.write(JSON.stringify($))
 }
 
@@ -638,9 +651,9 @@ function takePostRequest (type) {
       body = `functionId=travel_collectScore&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYGJZYh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"${$.inviteId}"}&client=wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`travel_collectScore`, body);
       break;
-    case 'zoo_pk_getHomeData':
-      body = `functionId=zoo_pk_getHomeData&body={}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getPostRequest(`zoo_pk_getHomeData`, body);
+    case 'travel_pk_getHomeData':
+      body = `functionId=travel_pk_getHomeData&body={}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`travel_pk_getHomeData`, body);
       break;
     case 'zoo_pk_getTaskDetail':
       body = `functionId=zoo_pk_getTaskDetail&body={}&client=wh5&clientVersion=1.0.0`;
@@ -875,11 +888,10 @@ function dealReturn (type, data) {
           $.message = `助力失败：${JSON.stringify(data)}`
       }
       break;
-    case 'zoo_pk_getHomeData':
-      if (data.code === 0) {
-        console.log(`PK互助码：${data.data.result.groupInfo.groupAssistInviteId}`);
-        if (data.data.result.groupInfo.groupAssistInviteId) $.pkInviteList.push(data.data.result.groupInfo.groupAssistInviteId);
-        $.pkHomeData = data.data;
+    case 'travel_pk_getHomeData':
+      if (data.code === 0 && data.data?.bizCode === 0) {
+        // $.pkHomeData = data.data;
+        $.message = `你的组队码为：\n${data.data?.result?.groupInfo?.groupJoinInviteId}`
       }
       break;
     case 'zoo_pk_getTaskDetail':
@@ -931,7 +943,6 @@ function dealReturn (type, data) {
       const list = sampleData.map(v => v.text)
       // 将助力池的助力码添加进助力列表
       $.inviteList = $.inviteList.concat(list)
-      $.message = `测试：${$.inviteList}\n${list}`
       break;
     case 'zoo_bdCollectScore':
       if (data.code === 0) {
