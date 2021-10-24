@@ -710,7 +710,7 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`zoo_myMap`, body);
       break;
     case 'getHelpCode':
-      url = 'https://gitter.im/api/v1/rooms/6171836d6da0373984886132/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=100'
+      url = 'https://gitter.im/api/v1/rooms/6171836d6da0373984886132/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=50'
       headers = {
         Origin: `https://gitter.im/leecobaby-shortcuts/`,
         Host: `gitter.im`,
