@@ -13,7 +13,7 @@ if (check) {
     }
   }
 } else {
-  $.error = '服务器返回的居然不是json值,内容为:' + (data || '空')
+  // $.error = '服务器返回的居然不是json值,内容为:' + (data || '空')
   $.data = data
 }
 
