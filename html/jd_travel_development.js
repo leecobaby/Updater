@@ -60,6 +60,7 @@ function init () {
 
   document.write(JSON.stringify($))
 }
+
 /**
  * 云端推送提示
  */
@@ -67,6 +68,7 @@ function cloudTip () {
   $.message = `指令已运行完毕！入会任务和下单任务不负责做哦！\n其他功能和任务正在开发中，上线将自动推送到指令中，无需任何操作~`
   document.write(JSON.stringify($))
 }
+
 /**
  * 任务日期提示
  */
@@ -601,6 +603,8 @@ function takePostRequest (type) {
   let body = ``;
   let myRequest = ``;
   let otherUrl = ``;
+  let url = ``;
+  let headers = ``;
   switch (type) {
     case 'travel_getMainMsgPopUp':
       body = `functionId=travel_getMainMsgPopUp&body={"channel":"1"}&client=wh5&clientVersion=1.0.0`;
@@ -692,7 +696,14 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`zoo_myMap`, body);
       break;
     case 'getHelpCode':
-      myRequest = getRequest(`getHelpCode`, body);
+      url = 'https://gitter.im/api/v1/rooms/6171836d6da0373984886132/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=100'
+      headers = {
+        Origin: `https://gitter.im/leecobaby-shortcuts/`,
+        Host: `gitter.im`,
+        Referer: `https://gitter.im/leecobaby-shortcuts/jd_travel`,
+        Cookie: `null`
+      }
+      myRequest = getRequest(`getHelpCode`, body, 'GET', headers);
       break;
     case 'jdjrTaskDetail':
       body = `reqData={"eid":"","sdkToken":"jdd01UGM6YXUOBTGCM6YUCAOOS7ISME4TMFAS6H2H5MUYKBFWHN54VWNKFONXTAV37DV64APTFCDSLQWF4D367NK7KLFQMVIDWALAPSTGZ5Y01234567"}`;
@@ -752,19 +763,16 @@ function getPostRequest (type, body, otherUrl) {
 // 获取其他请求信息
 function getRequest (url, body = {}, method = 'POST', header = {}) {
   const headers = {
-    'Accept': `application/json, text/plain, */*`,
+    'Accept': `application/json, text/javascript, */*`,
     'Origin': header.Origin || `https://h5.m.jd.com`,
     'Accept-Encoding': `gzip, deflate, br`,
-    'Cookie': $.cookie,
+    'Cookie': header.Cookie || $.cookie,
     'Content-Type': `application/x-www-form-urlencoded`,
-    'Host': `api.m.jd.com`,
+    'Host': header.Host || `api.m.jd.com`,
     'Connection': `keep-alive`,
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "same-site",
     'User-Agent': $.UA || "jdapp;iPhone;9.4.4;14.3;network/4g;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
     'Referer': header.Referer || `https://home.m.jd.com/myJd/newhome.action`,
-    'Accept-Language': `zh-cn`
+    'Accept-Language': `zh-CN,zh-Hans;q=0.9`
   };
   return { url: url, method: method, headers: headers, body: body };
 }
@@ -911,10 +919,18 @@ function dealReturn (type, data) {
         $.message = `当前已连续签到 ${data.data?.result?.progress} 天/23天`
       }
       break;
-    case 'zoo_shopLotteryInfo':
-      if (data.code === 0) {
-        $.shopResult = data.data.result;
-      }
+    case 'getHelpCode':
+      const data = json.items
+      // 选出有 url 的元素
+      const filterData = _.filter(data, v => v.text.match(/^[\w-]*$/g))
+      // 过滤重复的 user id
+      const uniqData = _.uniqBy(filterData, v => v.fromUser)
+      // 随机选取出 5 个助力码 - 考虑到助力已满情况和无效码的情况
+      const sampleData = _.sampleSize(uniqData, 5)
+      const list = sampleData.map(v => v.text)
+      // 将助力池的助力码添加进助力列表
+      $.inviteList.concat(list)
+      $.message = `测试：${$.inviteList}`
       break;
     case 'zoo_bdCollectScore':
       if (data.code === 0) {
