@@ -604,7 +604,8 @@
     "pkHelpCode": "E7unasWZHoZIX1kYiw8sbLbDzBTAz9WH22-dryVy9Pl-4zHBWpnA0Jc",
     "codeUrl": {
       "CryptoJS": "https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.js",
-      "JD_travel": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_travel.js"
+      "JD_travel": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_travel.js",
+      "JD_travel2": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_travel2.js"
     },
     "api": {
       "isLogin": {
@@ -658,11 +659,7 @@
         { "任务已经更新至10.23": "update" },
         { "收汪汪币": "travel_collectAtuoScore" },
         { "每日签到": "travel_sign" },
-        { "先做主任务": "doTask" },
-        { "获取任务列表 - 1": "travel_getTaskDetail" },
-        { "再做主任务 - 1": "doTask" },
-        { "获取任务列表 - 2": "travel_getTaskDetail" },
-        { "再做主任务 - 2": "doTask" },
+        { "做主任务": "doTaskController" },
         { "领取累计奖励 - 火爆也能做": "travel_getBadgeAward" },
         { "做京东金融主任务 - 火爆也能做": "jdjrDoTask" },
         { "打卡升级": "travel_raise" },
