@@ -7,7 +7,7 @@
  */
 
 // 到指令里运行需要注释掉
-// const $ = {}; $.call = 'test'
+const $ = {}; $.call = 'test'
 
 
 // $.inviteList = [];
@@ -40,9 +40,23 @@ function init () {
     $.inviteList = $.inviteList.filter(v => v !== '')
   } else {
     $.inviteList = []
-    $.message = '不助力~'
   }
-
+  // 处理组队码
+  if ($.pkHelpList) {
+    $.pkHelpList = Array.isArray($.pkHelpList) ? $.pkHelpList : [$.pkHelpList]
+    $.pkHelpList = $.pkHelpList.filter(v => v !== '')
+  } else {
+    $.pkHelpList = []
+  }
+  $.pkHelpList.push('E7unasWZHoZIX1kYiw8sbLbDzBTAz9WH22-dryVy9Pl-4zHBWpnA0Jc')
+  // 处理膨胀码
+  if ($.pkExpandList) {
+    $.pkExpandList = Array.isArray($.pkExpandList) ? $.pkExpandList : [$.pkExpandList]
+    $.pkExpandList = $.pkExpandList.filter(v => v !== '')
+  } else {
+    $.pkExpandList = []
+  }
+  $.pkExpandList.push('PKASTT0195L6r47PBTNYCtIMjDX0CjRWnIaRzTIjeQOc')
 
   document.write(JSON.stringify($))
 }
@@ -150,7 +164,6 @@ function help () {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
   $.call = ['help']
-  $.inviteList = Array.isArray($.inviteList) ? $.inviteList : [$.inviteList]
 
   $.inviteId = $.inviteList.shift()
   if (!$.inviteId || $.helpMax) {
@@ -176,8 +189,20 @@ function help () {
   document.write(JSON.stringify($))
 }
 
-// 组队助力
+// 组队
 function pkHelp () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler'
+  $.call = ['pkHelp']
+
+  $.pkHelpId = $.pkHelpList.shift()
+  if (!$.pkHelpId) {
+    // 循环完成重新设置 to,call
+    $.to = '', $.call.pop()
+    document.write(JSON.stringify($))
+    return
+  }
+  $.message = `${$.UserName}去入队，对方组队码:\n${$.pkHelpId}`
   $.callback = 'Func.request'
   takePostRequest('travel_pk_joinGroup');
   return
@@ -190,9 +215,19 @@ function pkHelp () {
 
 // pk助力
 function travel_pk_collectPkExpandScore () {
-  if (new Date().getHours() >= 8 && new Date().getHours() <= 19) {
+  if (new Date().getHours() >= 20 && new Date().getHours() <= 22) {
+    // 循环逻辑单独设置 to,call
+    $.to = 'Func.logicHandler'
+    $.call = ['travel_pk_collectPkExpandScore']
+
+    $.pkExpandId = $.pkExpandList.shift()
+    if (!$.pkExpandId) {
+      // 循环完成重新设置 to,call
+      $.to = '', $.call.pop()
+      document.write(JSON.stringify($))
+      return
+    }
     $.callback = 'Func.request'
-    $.pkExpandId = 'PKASTT0195L6r47PBTNYCtIMjDX0CjRWnIaRzTIjeQOc'
     takePostRequest('travel_pk_collectPkExpandScore');
     return
 
@@ -201,7 +236,7 @@ function travel_pk_collectPkExpandScore () {
     dealReturn('travel_pk_collectPkExpandScore', $.data)
     document.write(JSON.stringify($))
   } else {
-    $.message = '云端测试中...'
+    $.message = '云端测试中1...'
     document.write(JSON.stringify($))
   }
 }
@@ -617,7 +652,7 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`travel_pk_collectPkExpandScore`, body);
       break;
     case 'travel_pk_joinGroup':
-      body = `functionId=travel_collectScore&body={"confirmFlag":"1","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYGJZYh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"${$.pkHelpCode}"}&client=wh5&clientVersion=1.0.0`
+      body = `functionId=travel_collectScore&body={"confirmFlag":"1","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYGJZYh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"${$.pkHelpId}"}&client=wh5&clientVersion=1.0.0`
       myRequest = getPostRequest(`travel_pk_joinGroup`, body);
       break;
     case 'oneTaskHandle':
@@ -854,7 +889,6 @@ function dealReturn (type, data) {
     case 'zoo_pk_collectScore':
       break;
     case 'travel_pk_collectPkExpandScore':
-      $.message = '云端测试中...'
       break;
     case 'oneTaskHandle':
       if (data.code === 0 && data.data?.bizCode === 0) {
