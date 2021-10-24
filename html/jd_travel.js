@@ -30,7 +30,12 @@ let JD_API_HOST = `https://api.m.jd.com/client.action?functionId=`;
 //   回调完执行 next，视情况来清空 callback
 //   error 为错误信息，会终止当前账号在指令中的运行，直接运行输出log开始下一个账号或结束
 
-
+/**
+ * 初始化
+ */
+function init () {
+  document.write(JSON.stringify($))
+}
 /**
  * 云端推送提示
  */
@@ -39,7 +44,7 @@ function cloudTip () {
   document.write(JSON.stringify($))
 }
 /**
- * 云端推送提示
+ * 任务日期提示
  */
 function update () {
   $.message = `本地任务和开发是同步的，开发过程中难免存在bug，如果运行时卡住，请过段时间再试请理解~`

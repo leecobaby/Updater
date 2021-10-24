@@ -650,6 +650,7 @@
     },
     "controller": {
       "callList": [
+        "init",
         "travel_getMainMsgPopUp",
         "travel_getHomeData",
         "travel_getTaskDetail",
