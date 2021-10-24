@@ -251,6 +251,7 @@ function travel_pk_collectPkExpandScore () {
     dealReturn('travel_pk_collectPkExpandScore', $.data)
     document.write(JSON.stringify($))
   } else {
+    $.to = '', $.call.pop()
     $.message = '云端测试中1...'
     document.write(JSON.stringify($))
   }
