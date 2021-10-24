@@ -182,7 +182,7 @@ function pkHelp () {
 function travel_pk_collectPkExpandScore () {
   if (new Date().getHours() >= 20 && new Date().getHours() <= 23) {
     $.callback = 'Func.request'
-    $.pkExpandId = 'PKASTT0195L6r47PBTNYCtIMjDX0CjRWnIaRzT0jeQO' || 'PKASTT0195L6r47PBTNYCtIMjDX0CjRWnIaRzTIjeQOc'
+    $.pkExpandId = 'PKASTT0195L6r47PBTNYCtIMjDX0CjRWnIaRzTIjeQOc'
     takePostRequest('travel_pk_collectPkExpandScore');
     return
 
@@ -844,7 +844,6 @@ function dealReturn (type, data) {
     case 'zoo_pk_collectScore':
       break;
     case 'travel_pk_collectPkExpandScore':
-      $.message = '云端测试中...'
       break;
     case 'oneTaskHandle':
       if (data.code === 0 && data.data?.bizCode === 0) {
