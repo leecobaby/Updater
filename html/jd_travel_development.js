@@ -7,7 +7,7 @@
  */
 
 // 到指令里运行需要注释掉
-const $ = {}; $.call = 'test'
+// const $ = {}; $.call = 'test'
 
 
 // $.inviteList = [];
@@ -929,10 +929,8 @@ function dealReturn (type, data) {
       // 随机选取出 5 个助力码 - 考虑到助力已满情况和无效码的情况
       const sampleData = _.sampleSize(uniqData, 5)
       const list = sampleData.map(v => v.text)
-      console.log(list);
       // 将助力池的助力码添加进助力列表
-      $.inviteList.concat(['ss'],[])
-      console.log($.inviteList);
+      $.inviteList = $.inviteList.concat(list)
       $.message = `测试：${$.inviteList}`
       break;
     case 'zoo_bdCollectScore':
