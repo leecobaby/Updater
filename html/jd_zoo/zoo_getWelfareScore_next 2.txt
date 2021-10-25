@@ -1,3 +1,0 @@
-$.callback = ''
-dealReturn('zoo_getWelfareScore', $.data)
-document.write(JSON.stringify($))

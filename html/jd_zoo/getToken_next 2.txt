@@ -1,4 +1,0 @@
-$.callback = ''
-$.joyToken = $.data.joyytoken
-$.cookie += `joyytoken=50084${$.joyToken};`
-document.write(JSON.stringify($))

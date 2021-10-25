@@ -1,3 +1,0 @@
-$.callback = ''
-dealReturn('zoo_sign', $.data)
-document.write(JSON.stringify($))

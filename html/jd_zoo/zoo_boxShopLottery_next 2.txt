@@ -1,3 +1,0 @@
-$.callback = ''
-dealReturn('zoo_boxShopLottery', $.data)
-document.write(JSON.stringify($))
