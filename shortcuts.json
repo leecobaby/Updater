@@ -578,7 +578,7 @@
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/fa5d4eaf7b264dd098e3caafbd2ea7ad",
-    "notice": "指令已修复，如还遇到转换错误请重启手机多试几次~\n活动火爆问题尝试去指令设置切换UA运行，无效则等待修复~\n任务没做完可以尝试多运行几遍~",
+    "notice": "⚠️⚠️服务器被挤爆了，晚点再试把~\n活动火爆问题尝试去指令设置切换UA运行，无效则等待修复~\n任务没做完可以尝试多运行几遍~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-双11环游记&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd.png",
