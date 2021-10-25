@@ -557,7 +557,7 @@ function travel_raise () {
 }
 
 // 获取京东金融任务列表
-function jdjrTaskDetail (params) {
+function jdjrTaskDetail () {
   $.callback = 'Func.request'
   takePostRequest('jdjrTaskDetail');
   return
@@ -569,7 +569,7 @@ function jdjrTaskDetail (params) {
 }
 
 // 做京东金融主任务
-function jdjrDoTask (params) {
+function jdjrDoTask () {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
   $.call = ['jdjrDoTask']
