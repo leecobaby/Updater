@@ -231,7 +231,6 @@ function travel_pk_getHomeData () {
 // pk助力
 function travel_pk_collectPkExpandScore () {
   // 循环逻辑单独设置 to,call
-  // 暂时不加不然出问题
   $.to = 'Func.logicHandler'
   $.call = ['travel_pk_collectPkExpandScore']
   if (new Date().getHours() >= 20 && new Date().getHours() <= 22) {
@@ -558,7 +557,7 @@ function travel_raise () {
 }
 
 // 获取京东金融任务列表
-function jdjrTaskDetail () {
+function jdjrTaskDetail (params) {
   $.callback = 'Func.request'
   takePostRequest('jdjrTaskDetail');
   return
@@ -570,7 +569,7 @@ function jdjrTaskDetail () {
 }
 
 // 做京东金融主任务
-function jdjrDoTask () {
+function jdjrDoTask (params) {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
   $.call = ['jdjrDoTask']
@@ -711,7 +710,7 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`zoo_myMap`, body);
       break;
     case 'getHelpCode':
-      url = 'https://gitter.im/api/v1/rooms/6171836d6da0373984886132/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=37'
+      url = 'https://gitter.im/api/v1/rooms/6171836d6da0373984886132/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=100'
       headers = {
         Origin: `https://gitter.im/leecobaby-shortcuts/`,
         Host: `gitter.im`,
@@ -936,10 +935,8 @@ function dealReturn (type, data) {
       }
       break;
     case 'getHelpCode':
-      data = JSON.stringify(data).replace(/[\r\n<br><p>]/g, '')
-      data = JSON.parse(data)
       // 选出有 助力码 的元素
-      const filterData = _.filter(data.items, v => v.text.match(/^[\w-]{20,}$/g))
+      const filterData = _.filter(data.items, v => v.text.match(/^[\w-]*$/g))
       // 过滤重复的 user id
       const uniqData = _.uniqBy(filterData, v => v.fromUser)
       // 随机选取出 5 个助力码 - 考虑到助力已满情况和无效码的情况
