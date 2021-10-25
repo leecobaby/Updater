@@ -9,13 +9,10 @@
 
 <body>
   <script>
-    /**
-     * 2021-10-07
-     * athor:@fly486 
-     */
     function getQueryString(name) {
       let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
       let r = window.location.search.substr(1).match(reg);
+      console.log(r);
       if (r != null) {
         return decodeURIComponent(r[2]);
       };
@@ -60,9 +57,9 @@
 
       var root = document.getElementById('root')
 
-      root.innerHTML = `<iframe style="height:300px;width:500px" id="iframe" src="${iframeUrl}"></iframe>`
+      root.innerHTML = `<iframe style="height:1000px;width:1000px" id="iframe" src="${iframeUrl}"></iframe>`
 
-      setTimeout(() => window.location = url, 700)
+      // setTimeout(() => window.location = url, 700)
     })()
 
   </script>
