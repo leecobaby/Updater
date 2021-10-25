@@ -938,7 +938,7 @@ function dealReturn (type, data) {
     case 'getHelpCode':
       data = JSON.stringify(data).replace(/[\r\n<br><p>]*/g, '')
       data = JSON.parse(data)
-      $.data = data
+      $.data = {}
       // 选出有 助力码 的元素
       const filterData = _.filter(data.items, v => v.text.match(/^[\w-]{20,}$/g))
       // 过滤重复的 user id
