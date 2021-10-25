@@ -570,7 +570,7 @@
   },
   "JD_travel": {
     "version": "1.2",
-    "update_log": "- 修复 注意力意外字符带来的错误\n- 修改 验证数据的方式",
+    "update_log": "- 修复 助力池意外字符带来的错误\n- 修改 验证数据的方式",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_travel#版本日志"
