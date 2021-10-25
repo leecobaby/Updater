@@ -711,7 +711,7 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`zoo_myMap`, body);
       break;
     case 'getHelpCode':
-      url = 'https://gitter.im/api/v1/rooms/6171836d6da0373984886132/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=37'
+      url = 'https://gitter.im/api/v1/rooms/6171836d6da0373984886132/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=100'
       headers = {
         Origin: `https://gitter.im/leecobaby-shortcuts/`,
         Host: `gitter.im`,
@@ -942,7 +942,7 @@ function dealReturn (type, data) {
       // 选出有 助力码 的元素
       const filterData = _.filter(data.items, v => v.text.match(/^[\w-]*$/g))
       // 过滤重复的 user id
-      const uniqData = _.uniqBy(filterData, v => v.fomUse) 
+      const uniqData = _.uniqBy(filterData, v => v.fomUse)
       // 随机选取出 5 个助力码 - 考虑到助力已满情况和无效码的情况
       const sampleData = _.sampleSize(uniqData, 5)
       const list = sampleData.map(v => v.text)
