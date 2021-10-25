@@ -940,9 +940,9 @@ function dealReturn (type, data) {
       data = JSON.parse(data)
       $.data = {}
       // 选出有 助力码 的元素
-      const filterData = _.filter(data.items, v => v.text.match(/^[\w-]{15,}$/g))
+      const filterData = _.filter(data.items, v => v.text.match(/^[\w-]*$/g))
       // 过滤重复的 user id
-      const uniqData = _.uniqBy(filterData, v => v.fromUser)
+      const uniqData = _.uniqBy(filterData, v => v.fomUse) 
       // 随机选取出 5 个助力码 - 考虑到助力已满情况和无效码的情况
       const sampleData = _.sampleSize(uniqData, 5)
       const list = sampleData.map(v => v.text)
