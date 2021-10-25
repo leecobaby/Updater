@@ -232,7 +232,7 @@ function travel_pk_getHomeData () {
 function travel_pk_collectPkExpandScore () {
   // 循环逻辑单独设置 to,call
   // 暂时不加不然出问题
-  // $.to = 'Func.logicHandler'
+  $.to = 'Func.logicHandler'
   $.call = ['travel_pk_collectPkExpandScore']
   if (new Date().getHours() >= 20 && new Date().getHours() <= 22) {
 
@@ -945,6 +945,7 @@ function dealReturn (type, data) {
       const list = sampleData.map(v => v.text)
       // 将助力池的助力码添加进助力列表
       $.inviteList = $.inviteList.concat(list)
+      $.from = 'Func.handleList'
       break;
     case 'zoo_bdCollectScore':
       if (data.code === 0) {
