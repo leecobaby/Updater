@@ -9,9 +9,9 @@
  */
 let notice = new Notification()
 const webView = new WebView();
-const url = 'https://plogin.m.jd.com/login/login?appid=300&returnurl=https%3A%2F%2Fwqs.jd.com%2Fmy%2Faccountv2.shtml%3Fsceneval%3D2%26jxsid%3D16323729562173504755%26ptag%3D7155.1.2&source=wq_passport';
+const url = 'https://mcr.jd.com/credit_home/pages/index.html?btPageType=BT&channelName=024';
 await webView.loadURL(url);
-notice.body = '已为你打开京东短信登录页，请授权登录之后点击左上角关闭~\n下一次无需登录可直接关闭~'
+notice.body = '👇 已为你打开京东短信登录页，请授权登录之后点击左上角"close"关闭~\n下一次无需登录可直接关闭~'
 notice.sound = 'event'
 notice.schedule()
 await webView.present(true);
