@@ -255,7 +255,6 @@ function travel_pk_collectPkExpandScore () {
     document.write(JSON.stringify($))
   } else {
     $.to = '', $.call.pop()
-    $.message = '云端测试中1...'
     document.write(JSON.stringify($))
   }
 }
