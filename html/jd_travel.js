@@ -827,7 +827,7 @@ function dealReturn (type, data) {
         $.message = `当前玩家进度: ${$.userInfo?.raiseInfo?.cityConfig?.cityName} ${$.userInfo?.curCity}/20\n剩余汪汪币${$.userInfo?.raiseInfo?.remainScore}，下一关需要${$.userInfo?.raiseInfo?.nextLevelScore - $.userInfo?.raiseInfo?.curLevelStartScore}`
         // $.secretpInfo[$.UserName] = $.secretp;
       } else if (data?.code === -30001) {
-        $.error = '⚠️ 你的 cookie 错误或者过期，请去往指令设置重新授权！'
+        $.error = '⚠️ 你的 cookie 错误或者过期，请去往指令设置重新授权！\n抓包的请不要登出账号和关闭网页，直接关闭浏览器即可。'
       }
       break;
     case 'travel_getTaskDetail':
