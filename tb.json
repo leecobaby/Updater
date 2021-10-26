@@ -803,6 +803,21 @@
     "task": [
       {
         "stars": {
+          "title": "逛店铺①",
+          "type": "stars",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/tmc/32985/15487/wupr?spm=2021hudong.pk1111.tasklist-pentaprism.19933&disableNav=YES&wh_pid=main-402601&shop_router_ignore=true&fromToken=Nr2EB7lSRRL79VJXFr6oIMl2frU0UzUr&sceneId=2368&hd_from_id=100136&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "20629 cloudsail_1_167031500890001_20629_0",
+            "20629 cloudsail_1_167031500890001_20629_1",
+            "20629 cloudsail_1_167031500890001_20629_2",
+            "20629 cloudsail_1_167031500890001_20629_3",
+            "20629 cloudsail_1_167031500890001_20629_4"
+          ]
+        }
+      },
+      {
+        "stars": {
           "title": "做主任务",
           "type": "stars",
           "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/tmc/32985/15487/wupr?spm=2021hudong.pk1111.tasklist-pentaprism.19933&disableNav=YES&wh_pid=main-402601&shop_router_ignore=true&fromToken=Nr2EB7lSRRL79VJXFr6oIMl2frU0UzUr&sceneId=2368&hd_from_id=100136&deliveryId=",
@@ -848,21 +863,6 @@
             "1 fromToken=NdbKM5OTRR0poj7AFr6oIMRDurU0UzUr&sceneId=2368&hd_from_id=100136&deliveryId=19933&implId=other_11_586007_19933_0",
             "1 fromToken=8pn2OwjUddNRkbDrUBa9UnvjCAUnUkU6&sceneId=2368&hd_from_id=100136&deliveryId=20195&implId=live_6_332470786444_20195_0",
             "1 fromToken=Jw7xKO0IJJglk2vefOvKinY6ckUPURUZ&sceneId=2368&hd_from_id=100136&deliveryId=19094&implId=other_33_536007_19094_0"
-          ]
-        }
-      },
-      {
-        "stars": {
-          "title": "逛店铺①",
-          "type": "stars",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/tmc/32985/15487/wupr?spm=2021hudong.pk1111.tasklist-pentaprism.19933&disableNav=YES&wh_pid=main-402601&shop_router_ignore=true&fromToken=Nr2EB7lSRRL79VJXFr6oIMl2frU0UzUr&sceneId=2368&hd_from_id=100136&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "20629 cloudsail_1_167031500890001_20629_0",
-            "20629 cloudsail_1_167031500890001_20629_1",
-            "20629 cloudsail_1_167031500890001_20629_2",
-            "20629 cloudsail_1_167031500890001_20629_3",
-            "20629 cloudsail_1_167031500890001_20629_4"
           ]
         }
       },
