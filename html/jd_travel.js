@@ -48,7 +48,9 @@ function init () {
   } else {
     $.pkHelpList = []
   }
-  $.pkHelpList.push('E7unasWZHoZIX1kYiw8sbLbDzBTAz9WH22-dryVy9Pl-4zHBWpnA0Jc')
+  if (new Date().getHours() >= 9 && new Date().getHours() <= 11) {
+    $.pkHelpList.push('E7unasWZHoZIX1kYiw8sbLbDzBTAz9WH22-dryVy9Pl-4zHBWpnA0Jc')
+  }
   // 处理膨胀码
   if ($.pkExpandList) {
     $.pkExpandList = Array.isArray($.pkExpandList) ? $.pkExpandList : [$.pkExpandList]
