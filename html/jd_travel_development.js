@@ -7,7 +7,7 @@
  */
 
 // 到指令里运行需要注释掉
-const $ = {}; $.call = 'test'
+// const $ = {}; $.call = 'test'
 
 
 // $.inviteList = [];
@@ -48,7 +48,9 @@ function init () {
   } else {
     $.pkHelpList = []
   }
-  $.pkHelpList.push('E7unasWZHoZIX1kYiw8sbLbDzBTAz9WH22-dryVy9Pl-4zHBWpnA0Jc')
+  if (new Date().getHours() >= 9 && new Date().getHours() <= 11) {
+    $.pkHelpList.push('E7unasWZHoZIX1kYiw8sbLbDzBTAz9WH22-dryVy9Pl-4zHBWpnA0Jc')
+  }
   // 处理膨胀码
   if ($.pkExpandList) {
     $.pkExpandList = Array.isArray($.pkExpandList) ? $.pkExpandList : [$.pkExpandList]
@@ -231,6 +233,7 @@ function travel_pk_getHomeData () {
 // pk助力
 function travel_pk_collectPkExpandScore () {
   // 循环逻辑单独设置 to,call
+  // 暂时不加不然出问题
   $.to = 'Func.logicHandler'
   $.call = ['travel_pk_collectPkExpandScore']
   if (new Date().getHours() >= 20 && new Date().getHours() <= 22) {
@@ -252,7 +255,6 @@ function travel_pk_collectPkExpandScore () {
     document.write(JSON.stringify($))
   } else {
     $.to = '', $.call.pop()
-    $.message = '云端测试中1...'
     document.write(JSON.stringify($))
   }
 }
@@ -557,7 +559,7 @@ function travel_raise () {
 }
 
 // 获取京东金融任务列表
-function jdjrTaskDetail (params) {
+function jdjrTaskDetail () {
   $.callback = 'Func.request'
   takePostRequest('jdjrTaskDetail');
   return
@@ -569,7 +571,7 @@ function jdjrTaskDetail (params) {
 }
 
 // 做京东金融主任务
-function jdjrDoTask (params) {
+function jdjrDoTask () {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
   $.call = ['jdjrDoTask']
@@ -686,7 +688,7 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`travel_getSignHomeData`, body);
       break;
     case 'travel_raise':
-      body = getPostBody('travel_raise');
+      body = `functionId=travel_raise&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`travel_raise`, body);
       break;
     case 'zoo_bdCollectScore':
@@ -795,23 +797,20 @@ function getRequest (url, body = {}, method = 'POST', header = {}) {
 
 // 组织请求 body
 function getPostBody (type) {
-  $.CryptoJS = CryptoJS
-  let ss = getBody()
   let taskBody = '';
-  if (type === 'travel_raise') {
-    taskBody = `functionId=travel_raise&body=${JSON.stringify({ "ss": ss })}&client=wh5&clientVersion=1.0.0`
+  if (type === 'help') {
+    taskBody = `functionId=funny_collectScore&body=${JSON.stringify({ "taskId": 2, "inviteId": $.inviteId, "actionType": 1, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`
   } else if (type === 'pkHelp') {
-    taskBody = `functionId=zoo_pk_assistGroup&body=${JSON.stringify({ "confirmFlag": 1, "inviteId": $.pkInviteId, "ss": ss })}&client=wh5&clientVersion=1.0.0`;
+    taskBody = `functionId=zoo_pk_assistGroup&body=${JSON.stringify({ "confirmFlag": 1, "inviteId": $.pkInviteId, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`;
   } else if (type === 'zoo_collectProduceScore') {
-    taskBody = `functionId=zoo_collectProduceScore&body=${JSON.stringify({ "ss": ss })}&client=wh5&clientVersion=1.0.0`;
+    taskBody = `functionId=zoo_collectProduceScore&body=${JSON.stringify({ "ss": getBody() })}&client=wh5&clientVersion=1.0.0`;
   } else if (type === 'zoo_getWelfareScore') {
-    taskBody = `functionId=zoo_getWelfareScore&body=${JSON.stringify({ "type": 2, "currentScence": $.currentScence, "ss": ss })}&client=wh5&clientVersion=1.0.0`;
+    taskBody = `functionId=zoo_getWelfareScore&body=${JSON.stringify({ "type": 2, "currentScence": $.currentScence, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`;
   } else if (type === 'add_car') {
-    taskBody = `functionId=funny_collectScore&body=${JSON.stringify({ "taskId": $.taskId, "taskToken": $.taskToken, "actionType": 1, "ss": ss })}&client=wh5&clientVersion=1.0.0`
+    taskBody = `functionId=funny_collectScore&body=${JSON.stringify({ "taskId": $.taskId, "taskToken": $.taskToken, "actionType": 1, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`
   } else {
-    taskBody = `functionId=${type}&body=${JSON.stringify({ "taskId": $.oneTask.taskId, "actionType": 1, "taskToken": $.oneActivityInfo.taskToken, "ss": ss })}&client=wh5&clientVersion=1.0.0`
+    taskBody = `functionId=${type}&body=${JSON.stringify({ "taskId": $.oneTask.taskId, "actionType": 1, "taskToken": $.oneActivityInfo.taskToken, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`
   }
-  $.CryptoJS = null
   return taskBody
 }
 
@@ -826,6 +825,8 @@ function dealReturn (type, data) {
         $.userInfo = $.homeData?.result?.homeMainInfo
         $.message = `当前玩家进度: ${$.userInfo?.raiseInfo?.cityConfig?.cityName} ${$.userInfo?.curCity}/20\n剩余汪汪币${$.userInfo?.raiseInfo?.remainScore}，下一关需要${$.userInfo?.raiseInfo?.nextLevelScore - $.userInfo?.raiseInfo?.curLevelStartScore}`
         // $.secretpInfo[$.UserName] = $.secretp;
+      } else if (data?.code === -30001) {
+        $.error = '⚠️ 你的 cookie 错误或者过期，请去往指令设置重新授权！\n抓包的请不要登出账号和关闭网页，直接关闭浏览器即可。'
       }
       break;
     case 'travel_getTaskDetail':
@@ -938,10 +939,13 @@ function dealReturn (type, data) {
       }
       break;
     case 'getHelpCode':
+      data = JSON.stringify(data).replace(/[\r\n<br><p>]*/g, '')
+      data = JSON.parse(data)
+      $.data = {}
       // 选出有 助力码 的元素
       const filterData = _.filter(data.items, v => v.text.match(/^[\w-]*$/g))
       // 过滤重复的 user id
-      const uniqData = _.uniqBy(filterData, v => v.fromUser)
+      const uniqData = _.uniqBy(filterData, v => v.fomUse)
       // 随机选取出 5 个助力码 - 考虑到助力已满情况和无效码的情况
       const sampleData = _.sampleSize(uniqData, 5)
       const list = sampleData.map(v => v.text)
@@ -1022,7 +1026,6 @@ function dealReturn (type, data) {
     // $.error = '什么情况，有未知异常‼️' + type
   }
 }
-
 
 /**
  * Minified by jsDelivr using Terser v3.14.1.
