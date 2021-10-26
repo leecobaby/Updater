@@ -688,7 +688,7 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`travel_getSignHomeData`, body);
       break;
     case 'travel_raise':
-      body = `functionId=travel_raise&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`;
+      body = getPostBody('travel_raise');
       myRequest = getPostRequest(`travel_raise`, body);
       break;
     case 'zoo_bdCollectScore':
@@ -797,20 +797,23 @@ function getRequest (url, body = {}, method = 'POST', header = {}) {
 
 // 组织请求 body
 function getPostBody (type) {
+  $.CryptoJS = CryptoJS
+  let ss = getBody()
   let taskBody = '';
-  if (type === 'help') {
-    taskBody = `functionId=funny_collectScore&body=${JSON.stringify({ "taskId": 2, "inviteId": $.inviteId, "actionType": 1, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`
+  if (type === 'travel_raise') {
+    taskBody = `functionId=travel_raise&body=${JSON.stringify({ "ss": ss })}&client=wh5&clientVersion=1.0.0`
   } else if (type === 'pkHelp') {
-    taskBody = `functionId=zoo_pk_assistGroup&body=${JSON.stringify({ "confirmFlag": 1, "inviteId": $.pkInviteId, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`;
+    taskBody = `functionId=zoo_pk_assistGroup&body=${JSON.stringify({ "confirmFlag": 1, "inviteId": $.pkInviteId, "ss": ss })}&client=wh5&clientVersion=1.0.0`;
   } else if (type === 'zoo_collectProduceScore') {
-    taskBody = `functionId=zoo_collectProduceScore&body=${JSON.stringify({ "ss": getBody() })}&client=wh5&clientVersion=1.0.0`;
+    taskBody = `functionId=zoo_collectProduceScore&body=${JSON.stringify({ "ss": ss })}&client=wh5&clientVersion=1.0.0`;
   } else if (type === 'zoo_getWelfareScore') {
-    taskBody = `functionId=zoo_getWelfareScore&body=${JSON.stringify({ "type": 2, "currentScence": $.currentScence, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`;
+    taskBody = `functionId=zoo_getWelfareScore&body=${JSON.stringify({ "type": 2, "currentScence": $.currentScence, "ss": ss })}&client=wh5&clientVersion=1.0.0`;
   } else if (type === 'add_car') {
-    taskBody = `functionId=funny_collectScore&body=${JSON.stringify({ "taskId": $.taskId, "taskToken": $.taskToken, "actionType": 1, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`
+    taskBody = `functionId=funny_collectScore&body=${JSON.stringify({ "taskId": $.taskId, "taskToken": $.taskToken, "actionType": 1, "ss": ss })}&client=wh5&clientVersion=1.0.0`
   } else {
-    taskBody = `functionId=${type}&body=${JSON.stringify({ "taskId": $.oneTask.taskId, "actionType": 1, "taskToken": $.oneActivityInfo.taskToken, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`
+    taskBody = `functionId=${type}&body=${JSON.stringify({ "taskId": $.oneTask.taskId, "actionType": 1, "taskToken": $.oneActivityInfo.taskToken, "ss": ss })}&client=wh5&clientVersion=1.0.0`
   }
+  $.CryptoJS = null
   return taskBody
 }
 
