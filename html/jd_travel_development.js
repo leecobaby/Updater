@@ -1103,6 +1103,8 @@ function dealReturn (type, data) {
           default:
             $.message = `抽奖成功：获得未知`
         }
+        // 剩余机会为 0
+        data.data?.result?.userActionResult?.userLightChance === 0 && $.call.pop()
       } else if (data.code === 0 && data.data?.bizCode === 112) {
         $.message = `抽奖次数已用完`
         $.call.pop()
