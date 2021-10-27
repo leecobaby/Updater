@@ -637,6 +637,8 @@ function doShopTask () {
     return
   }
 
+  // 重置抽检碎片 id
+  $.fragmentId = 1
   // 获取单店铺 appId
   getAppId()
 
@@ -711,6 +713,7 @@ function doOneShopTask () {
 function doShopLottery () {
   $.call[$.call.length - 1] == 'doShopLottery' || $.call.push('doShopLottery')
 
+  $.fragmentId++
   $.callback = 'Func.request'
   takePostRequest('doShopLottery');
   return
