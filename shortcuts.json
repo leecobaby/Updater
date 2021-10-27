@@ -578,7 +578,7 @@
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/fa5d4eaf7b264dd098e3caafbd2ea7ad",
-    "notice": "服务器已恢复，请自觉使用助力池，否则不再提供~\n提示风险账户也有可能是cookie错误或过期~",
+    "notice": "新增任务火爆也能做~\n短期请不要升级15.1,无法及时做兼容性适配~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-双11环游记&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd.png",
@@ -592,7 +592,7 @@
       "set": "",
       "help": "助力池已上线...",
       "other": "",
-      "more": "🧧 10.25抢现金红包"
+      "more": "🧧 10.30现金红包"
     }
   },
   "More": {
