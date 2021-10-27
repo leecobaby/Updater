@@ -62,7 +62,7 @@ function init () {
 
   // 任务流程初始化
   $.taskStep = 1
-
+  $.message = `指令也只作为自动化方案开源分享，并不保证他带来的任何副作用，任何副作用请自行负责，如不同意请停止使用！`
   document.write(JSON.stringify($))
 }
 
@@ -854,7 +854,7 @@ function dealReturn (type, data) {
         $.message = JSON.stringify(data)
       }
       if (data.code === 0 && data.data && data.data.bizCode === -1002) {
-        $.error = `该账户脚本执行任务火爆，暂停执行任务，请手动做任务或者等待解决脚本火爆问题`
+        $.error = `该账户脚本执行任务火爆，暂停执行任务，请手动做任务或者等待解决脚本火爆问题\n火爆并非账户问题，而是官方对工具做任务场景做了限制手段。`
       }
       break;
     case 'travel_collectScore':

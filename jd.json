@@ -669,7 +669,7 @@
         "getHelpCode"
       ],
       "taskList": [
-        { "任务已经更新至10.25": "update" },
+        { "提示:不想助力可去指令设置关闭": "update" },
         { "收汪汪币": "travel_collectAtuoScore" },
         { "每日签到": "travel_sign" },
         { "做主任务": "doTaskController" },
