@@ -9,12 +9,28 @@
 </head>
 
 <body>
-  <script src="">
+  <script src="jd_travel_development.js">
 
   </script>
   <script>
 
-    // console.log(CryptoJS);
+    const b = 'Cookie: isg=BPX1oLsr-My1_Bxn68u8UHnSDnWvcqmExyXiDXcahGyyThZAP8KjVBncmpT4FcE8; _l_g_=Ug%3D%3D; _nk_=js%5Cu84DD%5Cu8272%5Cu5929%5Cu7A7A; _tb_token_=f8185931eeeed; cancelledSubSites=empty; cookie1=ACvlpcXYH3IXv5wH8PBGVQlxuCxmDVApnGhmFIWWNg8%3D; cookie17=UU6m3OCeWMpo; cookie2=12f59eebf3bf6e9be26bafb36806859a; csg=293d8025; dnk=js%5Cu84DD%5Cu8272%5Cu5929%5Cu7A7A; lgc=js%5Cu84DD%5Cu8272%5Cu5929%5Cu7A7A; login=true; sg=%E7%A9%BA76; sgcookie=E1002I8fnOC6kwRm5ihv%2Bqz3KJlG0EKZfbULgF%2FD55l%2Blo2PW659tJ5GjgWAcPefO9g%2BYnNZPLYUyMvakBgxy7hcR3k6Bd2NCzEboGxyQC8KoG0%3D; t=96025448582de573fdf8209de7c865d3; tracknick=js%5Cu84DD%5Cu8272%5Cu5929%5Cu7A7A; uc1=cookie15=UtASsssmOIJ0bQ%3D%3D&cookie21=URm48syIZJfmZ9wVCtmvOA%3D%3D&existShop=false&cookie14=Uoe3cr%2FwFDshww%3D%3D; uc3=nk2=CcASBYyuRaGKKQ%3D%3D&vt3=F8dCujSvYqiE8lzTtfs%3D&id2=UU6m3OCeWMpo&lg2=UIHiLt3xD8xYTw%3D%3D; uc4=id4=0%40U2xrccki5Rsp4ywMaSxfSo%2Fglx8%3D&nk4=0%40C%2F9P0w%2BMc3oNVp2A9S0bdGZhJS3z; unb=267358237; _slk_skip_tbpass_=true; _m_h5_tk=e808ca84136cbf4453ce0420dc10c61c_1635277572484; _m_h5_tk_enc=3815329c3d7efb91f0574b73c78b61ae; cna=lZHyGbJhzH0CAXyg1oI4HPVd; miid=3373356201452654699'
+
+    function getUrl(api, token, t, appKey, data) {
+      let sign = CryptoJS.MD5(token + '&' + t + '&' + appKey + '&' + data).toString()
+      console.log(sign);
+      let url = `https://h5api.m.tmall.com/h5/${api}/1.0/?jsv=2.6.1&appKey=${appKey}&t=${t}&sign=${sign}&api=${api}&v=1.0&timeout=5000&data=${encodeURIComponent(data)}`
+      return url
+    }
+
+    const api = 'mtop.taobao.pentaprism.scene.query'
+    // const api = 'mtop.taobao.pentaprism.scene.queryitem'
+    const data = '{"sceneId":"2368"}'
+    // const data = '{"deliveryId":"19094","hd_from_id":"100136","implId":"other_33_536007_19094_0","sceneId":"2368"}'
+    const token = '59d8c7c659be91cee67a1223ec881b59'
+    const t = new Date().getTime()
+    const appKey = '12574478'
+    console.log(getUrl(api, token, t, appKey, data));
     // $.secretp = '_Zhmj3fpu_27uWrd1_vQDLdvFw'
     // console.log(getBody());
     // $.inviteList = []

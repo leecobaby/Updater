@@ -841,6 +841,26 @@
       },
       {
         "stars": {
+          "title": "逛店铺",
+          "type": "stars",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/tmc/32985/15487/wupr?spm=2021hudong.pk1111.tasklist-pentaprism.19933&disableNav=YES&wh_pid=main-402601&shop_router_ignore=true&fromToken=8lAW5dJCddNEO0L5sBa9UnvDhAUnUkU6&sceneId=2368&hd_from_id=100136&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "20171 other_8_567003_20171_0",
+            "20171 other_8_567003_20171_1",
+            "20171 other_8_567003_20171_2",
+            "20171 other_8_567003_20171_3",
+            "20171 other_8_567003_20171_4",
+            "20171 other_8_567003_20171_5",
+            "20171 other_8_567003_20171_6",
+            "20171 other_8_567003_20171_7",
+            "20171 other_8_567003_20171_8",
+            "20171 other_8_567003_20171_9"
+          ]
+        }
+      },
+      {
+        "stars": {
           "title": "做其他任务 - 此任务大部分账号强校验做不了就手动",
           "type": "stars",
           "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/tmc/32985/15487/wupr?spm=2021hudong.pk1111.tasklist-pentaprism.19933&disableNav=YES&wh_pid=main-402601&shop_router_ignore=true&",
