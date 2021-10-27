@@ -1113,6 +1113,8 @@ function dealReturn (type, data) {
       } else if (data.code === 0 && data.data?.bizCode === 112) {
         $.message = `抽奖次数已用完`
         $.call.pop()
+      } else if (data.code === 0 && data.data?.bizCode === -1007) {
+        $.message = `你已抽过此奖项`
       }
       else {
         $.message = `抽奖出错：${JSON.stringify(data)}`
