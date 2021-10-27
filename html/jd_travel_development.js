@@ -652,7 +652,6 @@ function getAppId () {
   // next
   $.callback = ''
   dealReturn('getAppId', $.data)
-  $.message = '测试中...'
   $.call.pop()
   $.next = 0 // 衔接下一个函数前，重置 next 防止获取 next 失败
   getShopHomeData()
@@ -694,7 +693,7 @@ function doOneShopTask () {
   }
 
   let taskInfo = $.oneTask.simpleRecordInfoVo || $.oneTask.followShopVo || $.oneTask.shoppingActivityVos
-  $.taskToken = taskInfo[0].taskToken
+  $.taskToken = taskInfo.taskToken || taskInfo[0].taskToken
   $.message = `做任务：${$.oneTask.taskName} 等待完成...`
   $.callback = 'Func.request'
   takePostRequest('doOneShopTask');
@@ -708,6 +707,8 @@ function doOneShopTask () {
 
 // 单店铺抽奖
 function doShopLottery () {
+  $.call[$.call.length - 1] == 'doShopLottery' || $.call.push('doShopLottery')
+
 
 }
 
@@ -1060,6 +1061,7 @@ function dealReturn (type, data) {
       } else {
         $.message = `获取店铺信息失败：${JSON.stringify(data)}`
       }
+      $.message = '测试中1...'
       break;
     case 'getShopHomeData':
       if (data.code === 0 && data.data?.bizCode === 0) {
