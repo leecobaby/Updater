@@ -7,7 +7,7 @@
  */
 
 // 到指令里运行需要注释掉
-// const $ = {}; $.call = 'test'
+const $ = {}; $.call = 'test'
 
 
 // $.inviteList = [];
@@ -68,7 +68,7 @@ function init () {
   ]
   // 生成随机 UA UUID
   $.uuid = randomString(40)
-  $.UA = `jdapp;iPhone;10.2.0;13.1.2;${uuid};M/5.0;network/wifi;ADID/;model/iPhone8,1;addressid/2308460611;appBuild/167853;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 13_1_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1;`
+  $.UA = `jdapp;iPhone;10.2.0;13.1.2;${$.uuid};M/5.0;network/wifi;ADID/;model/iPhone8,1;addressid/2308460611;appBuild/167853;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 13_1_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1;`
 
   $.message = `本指令作为自动化方案开源分享，并不保证他带来的任何副作用，任何副作用请自行负责，如不同意请停止使用！`
   document.write(JSON.stringify($))

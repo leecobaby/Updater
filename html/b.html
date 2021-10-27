@@ -1522,6 +1522,7 @@
     for (const item of b.data.privateDomain.list) {
       arr.push(item.extension.venderLink1.match(/https:\/\/h5\.m\.jd\.com\/babelDiy\/Zeus\/(.*)\//)[1])
     }
+    init()
     takePostRequest('getAppId');
     // $.secretp = '_Zhmj3fpu_27uWrd1_vQDLdvFw'
     // console.log(getBody());
