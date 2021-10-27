@@ -62,6 +62,14 @@ function init () {
 
   // 任务流程初始化
   $.taskStep = 1
+  // 大牌店铺列表初始化
+  $.shopList = [
+    '3Nim1gacyGYMAXmZ3Y2k5VBxaejJ', '46zESrwfq44GweVpStuKbRC41Hte', '2L7HSDRra3SWkaXjMuTu7t12pcD3', 'FMMgZP4rY1Jn8No6ecHX9iXeUMM', 'o1eBs9bj8uSU61u69cU23RRD1CF', 'MS542hXYyzw3kSpiRWc4541HEBq', '32SnogmGSmooYj8fjfVEYfSZQJAh', '238znECxVhPhxMo6MwBtbKymQxJ5', 'iWCMNDBk5LGH6vk3KUMjh4zDqxW', '4Cs3hEQxMxvqJPj71yboqP8bsA6W', 'hntbhJys5n6ruPgxTvnkLi6uKV1', '23ATdy5hbTTCBAb3EGg9jiLePwVt', '2mn15qhUwtay1HC9q6zzgtKQi9hE', '45jeQMDcxfrUJ4WgytKLtEanZ3aG', 'xyDmumXCUwrynUBKF3BWGgNmNJy'
+  ]
+  // 生成随机 UA UUID
+  $.uuid = randomString(40)
+  $.UA = `jdapp;iPhone;10.2.0;13.1.2;${$.uuid};M/5.0;network/wifi;ADID/;model/iPhone8,1;addressid/2308460611;appBuild/167853;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 13_1_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1;`
+
   $.message = `本指令作为自动化方案开源分享，并不保证他带来的任何副作用，任何副作用请自行负责，如不同意请停止使用！`
   document.write(JSON.stringify($))
 }
@@ -613,6 +621,111 @@ function jdjrDoTask () {
   }
 }
 
+// 做大牌店铺任务
+function doShopTask () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler';
+  $.call = ['doShopTask']
+
+  // 利用队列取代循环
+  $.oneShop = $.shopList.shift()
+  if (!$.oneShop) {
+    // 循环完成重新设置 to,call
+    $.to = '', $.call.pop()
+    $.message = `任务已全都完成~`
+    document.write(JSON.stringify($))
+    return
+  }
+
+  // 重置抽检碎片 id
+  $.fragmentId = 1
+  // 获取单店铺 appId
+  getAppId()
+
+}
+
+// 获取单店铺 appId
+function getAppId () {
+  $.call[$.call.length - 1] == 'getAppId' || $.call.push('getAppId')
+  $.callback = 'Func.request'
+  takePostRequest('getAppId');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('getAppId', $.data)
+  $.call.pop()
+  $.next = 0 // 衔接下一个函数前，重置 next 防止获取 next 失败
+  getShopHomeData()
+}
+
+// 获取店铺任务列表
+function getShopHomeData () {
+  $.call[$.call.length - 1] == 'getShopHomeData' || $.call.push('getShopHomeData')
+  $.callback = 'Func.request'
+  takePostRequest('getShopHomeData');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('getShopHomeData', $.data)
+  $.call.pop()
+  $.next = 0 // 衔接下一个函数前，重置 next 防止获取 next 失败
+  doOneShopTask()
+}
+
+// 做单店铺任务
+function doOneShopTask () {
+  $.call[$.call.length - 1] == 'doOneShopTask' || $.call.push('doOneShopTask')
+
+  // 利用队列取代循环
+  $.oneTask = $.taskList.shift()
+  $.taskId = $.oneTask?.taskId
+  if (!$.oneTask) {
+    // 循环完成重新设置 call
+    $.call.pop()
+    // 通过 push 衔接下一个函数
+    $.call.push('doShopLottery')
+    document.write(JSON.stringify($))
+    return
+  }
+
+  // 做过的任务和特殊类型则跳过重新执行 oneTask()
+  if ($.oneTask?.status !== 1 || $.oneTask?.taskType === 21 || $.oneTask?.taskType === 28 || $.oneTask?.taskType === 15) {
+    document.write(JSON.stringify($))
+    return
+  }
+
+  let taskInfo = $.oneTask.simpleRecordInfoVo || $.oneTask.followShopVo || $.oneTask.shoppingActivityVos
+  $.taskToken = taskInfo.taskToken || taskInfo[0].taskToken
+  $.message = `做任务：${$.oneTask.taskName} 等待完成...`
+  $.callback = 'Func.request'
+  takePostRequest('doOneShopTask');
+  return
+
+  // next 
+  $.callback = ''
+  dealReturn('doOneShopTask', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 单店铺抽奖
+function doShopLottery () {
+  $.call[$.call.length - 1] == 'doShopLottery' || $.call.push('doShopLottery')
+
+  $.fragmentId++
+  $.callback = 'Func.request'
+  takePostRequest('doShopLottery');
+  return
+
+  // next
+  $.callback = ''
+  // 如果抽奖机会用光，则 pop() 逻辑写在 dealReturn 利于维护
+  dealReturn('doShopLottery', $.data)
+  document.write(JSON.stringify($))
+}
+
+
 // 提交请求信息
 function takePostRequest (type) {
   let { log, random } = $.signList?.shift() || { log: "", random: "" }
@@ -691,21 +804,25 @@ function takePostRequest (type) {
       body = `functionId=travel_raise&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`travel_raise`, body);
       break;
-    case 'zoo_bdCollectScore':
-      body = getPostBody(type);
-      myRequest = getPostRequest(`zoo_bdCollectScore`, body);
+    case 'getAppId':
+      body = `functionId=factory_getStaticConfig&appid=wh5&clientVersion=1.0.0&body={"encryptActivityId":"${$.oneShop}","channelId":1}`
+      otherUrl = 'https://api.m.jd.com/'
+      myRequest = getPostRequest(`factory_getStaticConfig`, body, otherUrl);
       break;
-    case 'qryCompositeMaterials':
-      body = `functionId=qryCompositeMaterials&body={"qryParam":"[{\\"type\\":\\"advertGroup\\",\\"mapTo\\":\\"resultData\\",\\"id\\":\\"05371960\\"}]","activityId":"2s7hhSTbhMgxpGoa9JDnbDzJTaBB","pageId":"","reqSrc":"","applyKey":"jd_star"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getPostRequest(`qryCompositeMaterials`, body);
+    case 'getShopHomeData':
+      body = `functionId=template_mongo_getHomeData&appid=wh5&clientVersion=1.0.0&body={"taskToken":"","appId":"${$.appId}","channelId":1}`;
+      otherUrl = 'https://api.m.jd.com/'
+      myRequest = getPostRequest(`template_mongo_getHomeData`, body, otherUrl);
       break;
-    case 'zoo_boxShopLottery':
-      body = `functionId=zoo_boxShopLottery&body={"shopSign":"${$.shopSign}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getPostRequest(`zoo_boxShopLottery`, body);
+    case 'doOneShopTask':
+      body = `functionId=template_mongo_collectScore&appid=wh5&clientVersion=1.0.0&body={"taskToken":"${$.taskToken}","taskId":${$.taskId},"actionType":0,"appId":"${$.appId}","safeStr":"{\\"random\\":\\"\\",\\"sceneid\\":\\"HYJGJSh5\\",\\"log\\":\\"\\"}"}`;
+      otherUrl = otherUrl = 'https://api.m.jd.com/client.action'
+      myRequest = getPostRequest(`template_mongo_collectScore`, body, otherUrl);
       break;
-    case `zoo_wishShopLottery`:
-      body = `functionId=zoo_wishShopLottery&body={"shopSign":"${$.shopSign}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getPostRequest(`zoo_boxShopLottery`, body);
+    case `doShopLottery`:
+      body = `functionId=template_mongo_lottery&appid=wh5&clientVersion=1.0.0&body={"appId":"${$.appId}","fragmentId":${$.fragmentId}}`;
+      otherUrl = 'https://api.m.jd.com/'
+      myRequest = getPostRequest(`template_mongo_lottery`, body, otherUrl);
       break;
     case `zoo_myMap`:
       body = `functionId=zoo_myMap&body={}&client=wh5&clientVersion=1.0.0`;
@@ -750,7 +867,7 @@ function takePostRequest (type) {
 
 // 获取请求信息
 function getPostRequest (type, body, otherUrl) {
-  let url = JD_API_HOST + type;
+  let url = otherUrl || (JD_API_HOST + type);
   const request = {}
   if (type === 'jdjrTaskDetail' || type === 'jdjrDoTask') {
     type === 'jdjrDoTask' && (request.method = 'GET')
@@ -952,38 +1069,55 @@ function dealReturn (type, data) {
       // 将助力池的助力码添加进助力列表
       $.inviteList = $.inviteList.concat(list)
       break;
-    case 'zoo_bdCollectScore':
-      if (data.code === 0) {
-        console.log(`签到获得：${data.data.result.score}`);
+    case 'getAppId':
+      if (data.code === 0 && data.data?.bizCode === 0) {
+        $.appId = data.data?.result?.appId
+      } else {
+        $.message = `获取店铺信息失败：${JSON.stringify(data)}`
       }
       break;
-    case 'qryCompositeMaterials':
-      //console.log(data);
-      if (data.code === '0') {
-        $.shopInfoList = data.data.resultData.list;
-        console.log(`获取到${$.shopInfoList.length}个店铺`);
+    case 'getShopHomeData':
+      if (data.code === 0 && data.data?.bizCode === 0) {
+        $.taskList = data.data?.result?.taskVos
+      } else {
+        $.message = `获取店铺任务列表失败：${JSON.stringify(data)}`
       }
       break
-    case 'zoo_boxShopLottery':
-      let result = data.data.result;
-      switch (result.awardType) {
-        case 8:
-          console.log(`获得金币：${result.rewardScore}`);
-          break;
-        case 5:
-          console.log(`获得：adidas能量`);
-          break;
-        case 2:
-        case 3:
-          console.log(`获得优惠券：${result.couponInfo.usageThreshold} 优惠：${result.couponInfo.quota}，${result.couponInfo.useRange}`);
-          break;
-        default:
-          console.log(`抽奖获得未知`);
-          console.log(JSON.stringify(data));
+    case 'doOneShopTask':
+      if (data.code === 0 && data.data?.bizCode === 0) {
+        $.message = `完成任务：获得 ${data.data?.result?.acquiredScore} 汪汪币`
+      } else {
+        $.message = `任务失败：原因 ${JSON.stringify(data)}`
       }
       break
-    case 'zoo_wishShopLottery':
-      console.log(JSON.stringify(data));
+    case 'doShopLottery':
+      if (data.code === 0 && data.data?.bizCode === 0) {
+        switch (data.data?.result?.userAwardDto?.type) {
+          case 0:
+            $.message = `抽奖成功：获得空气`
+            break;
+          case 1:
+            $.message = `抽奖成功：获得优惠券`
+            break;
+          case 2:
+          case 3:
+            $.message = `抽奖成功：获得未知`
+            break;
+          case 5:
+            $.message = `抽奖成功：获得 ${data.data?.result?.userAwardDto?.scoreVo?.quantity} 汪汪币`
+          default:
+            $.message = `抽奖成功：获得未知`
+        }
+        // 剩余机会为 0
+        data.data?.result?.userActionResult?.userLightChance === 0 && $.call.pop()
+      } else if (data.code === 0 && data.data?.bizCode === 112) {
+        $.message = `抽奖次数已用完`
+        $.call.pop()
+      }
+      else {
+        $.message = `抽奖出错：${JSON.stringify(data)}`
+        $.call.pop()
+      }
       break
     case `zoo_myMap`:
       if (data.code === 0) {
@@ -1023,7 +1157,7 @@ function dealReturn (type, data) {
       }
       break
     default:
-    // $.error = '什么情况，有未知异常‼️' + type
+      $.error = '什么情况，有未知异常‼️' + type
   }
 }
 
