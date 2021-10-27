@@ -598,7 +598,7 @@
     ]
   },
   "JD_travel": {
-    "version": "上次数据更新于:10.25.1",
+    "version": "上次数据更新于:10.27.1",
     "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/DKWT6qK%22%7D%0A",
     "endJump": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://wbbny.m.jd.com/babelDiy/Zeus/2vVU4E7JLH9gKYfLQ5EVW6eN2P7B/index.html%22%7D",
     "help": {
@@ -675,6 +675,7 @@
         { "做主任务": "doTaskController" },
         { "领取累计奖励 - 火爆也能做": "travel_getBadgeAward" },
         { "做京东金融主任务 - 火爆也能做": "jdjrDoTask" },
+        { "做大牌店铺任务 - 测试中": "doShopTask" },
         { "打卡升级": "travel_raise" },
         { "其他": "cloudTip" }
       ]
@@ -700,7 +701,10 @@
       "jdjrDoTask_next",
       "jdjrDoTask_next_next",
       "getHelpCode_next",
-      "travel_pk_getHomeData_next"
+      "travel_pk_getHomeData_next",
+      "getAppId_next",
+      "getShopHomeData_next",
+      "doOneShopTask_next"
     ]
   },
   "share": {

@@ -62,7 +62,7 @@ function init () {
 
   // 任务流程初始化
   $.taskStep = 1
-  $.message = `指令也只作为自动化方案开源分享，并不保证他带来的任何副作用，任何副作用请自行负责，如不同意请停止使用！`
+  $.message = `本指令作为自动化方案开源分享，并不保证他带来的任何副作用，任何副作用请自行负责，如不同意请停止使用！`
   document.write(JSON.stringify($))
 }
 
@@ -1025,6 +1025,14 @@ function dealReturn (type, data) {
     default:
     // $.error = '什么情况，有未知异常‼️' + type
   }
+}
+
+function randomString (e) {
+  e = e || 32;
+  let t = "abcdef0123456789", a = t.length, n = "";
+  for (let i = 0; i < e; i++)
+    n += t.charAt(Math.floor(Math.random() * a));
+  return n
 }
 
 /**
