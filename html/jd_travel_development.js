@@ -682,6 +682,8 @@ function doOneShopTask () {
   if (!$.oneTask) {
     // 循环完成重新设置 call
     $.call.pop()
+    // 通过 push 衔接下一个函数
+    $.call.push('doShopLottery')
     document.write(JSON.stringify($))
     return
   }
@@ -709,7 +711,15 @@ function doOneShopTask () {
 function doShopLottery () {
   $.call[$.call.length - 1] == 'doShopLottery' || $.call.push('doShopLottery')
 
+  $.callback = 'Func.request'
+  takePostRequest('doShopLottery');
+  return
 
+  // next
+  $.callback = ''
+  // 如果抽奖机会用光，则 pop() 逻辑写在 dealReturn 利于维护
+  dealReturn('doShopLottery', $.data)
+  document.write(JSON.stringify($))
 }
 
 
@@ -806,9 +816,10 @@ function takePostRequest (type) {
       otherUrl = otherUrl = 'https://api.m.jd.com/client.action'
       myRequest = getPostRequest(`template_mongo_collectScore`, body, otherUrl);
       break;
-    case `zoo_wishShopLottery`:
-      body = `functionId=zoo_wishShopLottery&body={"shopSign":"${$.shopSign}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getPostRequest(`zoo_boxShopLottery`, body);
+    case `doShopLottery`:
+      body = `functionId=template_mongo_lottery&appid=wh5&clientVersion=1.0.0&body={"appId":"${$.appId}","fragmentId":${$.fragmentId}}`;
+      otherUrl = 'https://api.m.jd.com/'
+      myRequest = getPostRequest(`template_mongo_lottery`, body, otherUrl);
       break;
     case `zoo_myMap`:
       body = `functionId=zoo_myMap&body={}&client=wh5&clientVersion=1.0.0`;
@@ -1061,7 +1072,6 @@ function dealReturn (type, data) {
       } else {
         $.message = `获取店铺信息失败：${JSON.stringify(data)}`
       }
-      $.message = '测试中1...'
       break;
     case 'getShopHomeData':
       if (data.code === 0 && data.data?.bizCode === 0) {
@@ -1077,22 +1087,29 @@ function dealReturn (type, data) {
         $.message = `任务失败：原因 ${JSON.stringify(data)}`
       }
       break
-    case 'zoo_boxShopLottery':
-      let result = data.data.result;
-      switch (result.awardType) {
-        case 8:
-          console.log(`获得金币：${result.rewardScore}`);
-          break;
-        case 5:
-          console.log(`获得：adidas能量`);
-          break;
-        case 2:
-        case 3:
-          console.log(`获得优惠券：${result.couponInfo.usageThreshold} 优惠：${result.couponInfo.quota}，${result.couponInfo.useRange}`);
-          break;
-        default:
-          console.log(`抽奖获得未知`);
-          console.log(JSON.stringify(data));
+    case 'doShopLottery':
+      if (data.code === 0 && data.data?.bizCode === 0) {
+        switch (data.data?.result?.userAwardDto?.type) {
+          case 0:
+            $.message = `抽奖成功：获得空气`
+            break;
+          case 1:
+            $.message = `抽奖成功：获得优惠券`
+            break;
+          case 2:
+          case 3:
+            $.message = `抽奖成功：获得未知`
+            break;
+          default:
+            $.message = `抽奖成功：获得未知`
+        }
+      } else if (data.code === 0 && data.data?.bizCode === 112) {
+        $.message = `抽奖次数已用完`
+        $.call.pop()
+      }
+      else {
+        $.message = `抽奖出错：${JSON.stringify(data)}`
+        $.call.pop()
       }
       break
     case `zoo_myMap`:

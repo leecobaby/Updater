@@ -704,7 +704,8 @@
       "travel_pk_getHomeData_next",
       "getAppId_next",
       "getShopHomeData_next",
-      "doOneShopTask_next"
+      "doOneShopTask_next",
+      "doShopLottery_next"
     ]
   },
   "share": {
