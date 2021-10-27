@@ -1103,6 +1103,8 @@ function dealReturn (type, data) {
           case 3:
             $.message = `抽奖成功：获得未知`
             break;
+          case 5:
+            $.message = `抽奖成功：获得 ${data.data?.result?.userAwardDto?.scoreVo?.quantity} 汪汪币`
           default:
             $.message = `抽奖成功：获得未知`
         }
