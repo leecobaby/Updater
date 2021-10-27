@@ -13,7 +13,7 @@
 
   </script>
   <script>
-
+    const $ = {}
     const b = {
       "msg": "success",
       "code": "0",
@@ -1523,6 +1523,7 @@
       arr.push(item.extension.venderLink1.match(/https:\/\/h5\.m\.jd\.com\/babelDiy\/Zeus\/(.*)\//)[1])
     }
     init()
+    doShopTask()
     takePostRequest('getAppId');
     // $.secretp = '_Zhmj3fpu_27uWrd1_vQDLdvFw'
     // console.log(getBody());

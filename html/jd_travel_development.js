@@ -625,7 +625,7 @@ function jdjrDoTask () {
 function doShopTask () {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler';
-  $.call[$.call.length - 1] == 'doShopTask' || $.call.push('doShopTask')
+  $.call = ['doShopTask']
 
   // 利用队列取代循环
   $.oneShop = $.shopList.shift()
