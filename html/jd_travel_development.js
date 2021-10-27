@@ -64,7 +64,7 @@ function init () {
   $.taskStep = 1
   // 大牌店铺列表初始化
   $.shopList = [
-    ['3Nim1gacyGYMAXmZ3Y2k5VBxaejJ', '46zESrwfq44GweVpStuKbRC41Hte', '2L7HSDRra3SWkaXjMuTu7t12pcD3', 'FMMgZP4rY1Jn8No6ecHX9iXeUMM', 'o1eBs9bj8uSU61u69cU23RRD1CF', 'MS542hXYyzw3kSpiRWc4541HEBq', '32SnogmGSmooYj8fjfVEYfSZQJAh', '238znECxVhPhxMo6MwBtbKymQxJ5', 'iWCMNDBk5LGH6vk3KUMjh4zDqxW', '4Cs3hEQxMxvqJPj71yboqP8bsA6W', 'hntbhJys5n6ruPgxTvnkLi6uKV1', '23ATdy5hbTTCBAb3EGg9jiLePwVt', '2mn15qhUwtay1HC9q6zzgtKQi9hE', '45jeQMDcxfrUJ4WgytKLtEanZ3aG', 'xyDmumXCUwrynUBKF3BWGgNmNJy']
+    '3Nim1gacyGYMAXmZ3Y2k5VBxaejJ', '46zESrwfq44GweVpStuKbRC41Hte', '2L7HSDRra3SWkaXjMuTu7t12pcD3', 'FMMgZP4rY1Jn8No6ecHX9iXeUMM', 'o1eBs9bj8uSU61u69cU23RRD1CF', 'MS542hXYyzw3kSpiRWc4541HEBq', '32SnogmGSmooYj8fjfVEYfSZQJAh', '238znECxVhPhxMo6MwBtbKymQxJ5', 'iWCMNDBk5LGH6vk3KUMjh4zDqxW', '4Cs3hEQxMxvqJPj71yboqP8bsA6W', 'hntbhJys5n6ruPgxTvnkLi6uKV1', '23ATdy5hbTTCBAb3EGg9jiLePwVt', '2mn15qhUwtay1HC9q6zzgtKQi9hE', '45jeQMDcxfrUJ4WgytKLtEanZ3aG', 'xyDmumXCUwrynUBKF3BWGgNmNJy'
   ]
   // 生成随机 UA UUID
   $.uuid = randomString(40)
@@ -652,6 +652,7 @@ function getAppId () {
   // next
   $.callback = ''
   dealReturn('getAppId', $.data)
+  $.message = '测试中...'
   $.call.pop()
   $.next = 0 // 衔接下一个函数前，重置 next 防止获取 next 失败
   getShopHomeData()
@@ -704,6 +705,12 @@ function doOneShopTask () {
   dealReturn('doOneShopTask', $.data)
   document.write(JSON.stringify($))
 }
+
+// 单店铺抽奖
+function doShopLottery () {
+
+}
+
 
 // 提交请求信息
 function takePostRequest (type) {
@@ -1126,6 +1133,14 @@ function dealReturn (type, data) {
     default:
       $.error = '什么情况，有未知异常‼️' + type
   }
+}
+
+function randomString (e) {
+  e = e || 32;
+  let t = "abcdef0123456789", a = t.length, n = "";
+  for (let i = 0; i < e; i++)
+    n += t.charAt(Math.floor(Math.random() * a));
+  return n
 }
 
 /**
