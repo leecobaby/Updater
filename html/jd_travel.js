@@ -4,6 +4,7 @@
  * apply: shortcuts
  * activity: https://wbbny.m.jd.com/babelDiy/Zeus/2vVU4E7JLH9gKYfLQ5EVW6eN2P7B/index.html
  * tips: Only for learning and communication, strictly prohibited for commercial use, please delete within 24 hours
+ * 使用修改请说明来源
  */
 
 // 到指令里运行需要注释掉
