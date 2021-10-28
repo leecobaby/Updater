@@ -768,7 +768,7 @@
     ]
   },
   "1111": {
-    "version": "数据最后更新于:10.27.1",
+    "version": "数据最后更新于:10.28.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f5wXuj4",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f5wXuj4",
@@ -856,22 +856,6 @@
             "20171 other_8_567003_20171_7",
             "20171 other_8_567003_20171_8",
             "20171 other_8_567003_20171_9"
-          ]
-        }
-      },
-      {
-        "stars": {
-          "title": "做其他任务 - 此任务大部分账号强校验做不了就手动",
-          "type": "stars",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/tmc/32985/15487/wupr?spm=2021hudong.pk1111.tasklist-pentaprism.19933&disableNav=YES&wh_pid=main-402601&shop_router_ignore=true&",
-          "textEnd": "str2",
-          "item": [
-            "1 fromToken=dQDeM5bi99WKvBY6CERZC69wuqUpULUN&sceneId=2368&hd_from_id=100136&deliveryId=19934&implId=other_13_588002_19934_0",
-            "1 fromToken=kpVorJQUoolj9pYKivGOfEo9HAUBUgUb&sceneId=2368&hd_from_id=100136&deliveryId=20195&implId=live_8_333357110480_20195_0",
-            "1 fromToken=Jw7xKO0IJJglk2vefOvKinY6ckUPURUZ&sceneId=2368&hd_from_id=100136&deliveryId=19094&implId=other_33_536007_19094_0",
-            "1 fromToken=jQVloDei00DPZ5wXH71YFpLPCDUoUbUK&sceneId=2368&hd_from_id=100136&deliveryId=19000&implId=ald.res.19312519_34_150627_19000_0",
-            "1 fromToken=LJ7r8oNI99oOwreKCVR1t7ERUzUQUXUB&sceneId=2368&hd_from_id=100136&deliveryId=18732&implId=other_56_528003_18732_0",
-            "1 fromToken=vOV0jMECaarWjV1gUGK2fd2jfrUlUvUx&sceneId=2368&hd_from_id=100136&deliveryId=20618&implId=other_2_574008_20618_0"
           ]
         }
       },
