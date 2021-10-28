@@ -569,15 +569,15 @@
     }
   },
   "JD_travel": {
-    "version": "1.2",
-    "update_log": "- 修复 助力池意外字符带来的错误\n- 修改 验证数据的方式",
+    "version": "1.3",
+    "update_log": "- 新增 任务火爆也能做\n- 更新 指令内循环以适配长时间运行\n- 更新 尝试性兼容 ios15.1\n- 更新 随机生成 UA",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_travel#版本日志"
     },
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/fa5d4eaf7b264dd098e3caafbd2ea7ad",
+    "update": "https://www.icloud.com/shortcuts/1e3e360a3af44e648e9e9ec6057c569d",
     "notice": "🔥新增任务火爆也能做~\n短期请不要升级15.1,无法及时做兼容性适配~\n🧧 28日京享红包来袭，具体请前往活动大厅！",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-双11环游记&input=text&text=task",
