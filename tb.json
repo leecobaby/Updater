@@ -768,7 +768,7 @@
     ]
   },
   "1111": {
-    "version": "数据最后更新于:10.28.1",
+    "version": "数据最后更新于:10.28.2",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f5wXuj4",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f5wXuj4",
@@ -808,6 +808,7 @@
           "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/tmc/32985/15487/wupr?spm=2021hudong.pk1111.tasklist-pentaprism.19933&disableNav=YES&wh_pid=main-402601&shop_router_ignore=true&fromToken=jQVloDei00DPZ5wXH71YFpLPCDUoUbUK&sceneId=2368&hd_from_id=100136&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
+            "20723 other_0_1_20723_0",
             "19409 other_23_0_19409_0",
             "20666 other_1_485001_20666_0",
             "19941 other_8_586008_19941_0",
