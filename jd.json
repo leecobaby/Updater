@@ -669,7 +669,7 @@
         "getHelpCode"
       ],
       "taskList": [
-        { "提示:不想助力可去指令设置关闭": "update" },
+        { "提示:如果账号不火爆可以不勾选店铺任务": "update" },
         { "做大牌店铺任务 - 火爆也能做": "doShopTask" },
         { "收汪汪币": "travel_collectAtuoScore" },
         { "每日签到": "travel_sign" },
