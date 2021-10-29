@@ -4,6 +4,7 @@
  * apply: shortcuts
  * activity: https://wbbny.m.jd.com/babelDiy/Zeus/2vVU4E7JLH9gKYfLQ5EVW6eN2P7B/index.html
  * tips: Only for learning and communication, strictly prohibited for commercial use, please delete within 24 hours
+ * 使用修改请说明来源
  */
 
 // 到指令里运行需要注释掉
@@ -149,6 +150,7 @@ function travel_sign () {
 
   // next
   $.callback = ''
+  $.next = 1
   dealReturn('travel_sign', $.data)
   $.callback = 'Func.request'
   takePostRequest('travel_getSignHomeData');
@@ -458,7 +460,7 @@ function oneActivityInfo () {
     $.message = `任务完成`
     document.write(JSON.stringify($))
   } else if ($.callbackInfo.data?.bizCode === -1002) {
-    $.error = `oneActivityInfo ${$.oneTask.taskId}/${$.oneTask.taskType} 任务失败，此接口失效可尝试去指令设置切换UA，再次运行~`
+    $.error = `oneActivityInfo ${$.oneTask.taskId}/${$.oneTask.taskType} 任务失败，此账号火爆，请手动做任务等待更新~`
     document.write(JSON.stringify($))
   } else {
     $.message = `oneActivityInfo ${$.oneTask.taskId}/${$.oneTask.taskType} 任务失败，未知错误等待修复，尝试继续运行指令~`
@@ -914,6 +916,10 @@ function getRequest (url, body = {}, method = 'POST', header = {}) {
 
 // 组织请求 body
 function getPostBody (type) {
+  // 对 15.1 的特殊优化
+  $.data = JSON.parse(data.d)
+  data = $.data
+
   let taskBody = '';
   if (type === 'help') {
     taskBody = `functionId=funny_collectScore&body=${JSON.stringify({ "taskId": 2, "inviteId": $.inviteId, "actionType": 1, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`
@@ -1113,6 +1119,8 @@ function dealReturn (type, data) {
       } else if (data.code === 0 && data.data?.bizCode === 112) {
         $.message = `抽奖次数已用完`
         $.call.pop()
+      } else if (data.code === 0 && data.data?.bizCode === -1007) {
+        $.message = `你已抽过此奖项`
       }
       else {
         $.message = `抽奖出错：${JSON.stringify(data)}`
@@ -1159,6 +1167,7 @@ function dealReturn (type, data) {
     default:
       $.error = '什么情况，有未知异常‼️' + type
   }
+  type != 'travel_collectScore' && ($.data = {})
 }
 
 function randomString (e) {
