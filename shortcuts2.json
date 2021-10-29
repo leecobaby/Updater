@@ -570,7 +570,7 @@
   },
   "JD_travel": {
     "version": "1.4",
-    "update_log": "- 新增 任务火爆也能做\n- 更新 指令内循环以适配长时间运行\n- 更新 尝试性兼容 ios15.1\n- 更新 随机生成 UA",
+    "update_log": "- 新增 手动红包互助和环游记互助功能\n- 更新 继续兼容优化 ios15.1\n- 我任然不建议你升级 15.1，指令运行时间是 15.0 的 20 多倍",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_travel#版本日志"
