@@ -916,9 +916,6 @@ function getRequest (url, body = {}, method = 'POST', header = {}) {
 
 // 组织请求 body
 function getPostBody (type) {
-  // 对 15.1 的特殊优化
-  $.data = JSON.parse(data.d)
-  data = $.data
 
   let taskBody = '';
   if (type === 'help') {
@@ -940,6 +937,10 @@ function getPostBody (type) {
 // 处理返回信息
 function dealReturn (type, data) {
   if (!data) $.error = '接口返回数据为空，检查账号cookie是否过期或错误';
+  // 对 15.1 的特殊优化
+  $.data = JSON.parse(data.d)
+  data = $.data
+  type != 'travel_collectScore' && ($.data = {})
   switch (type) {
     case 'travel_getHomeData':
       if (data?.data?.bizCode === 0) {
@@ -1167,7 +1168,7 @@ function dealReturn (type, data) {
     default:
       $.error = '什么情况，有未知异常‼️' + type
   }
-  type != 'travel_collectScore' && ($.data = {})
+
 }
 
 function randomString (e) {

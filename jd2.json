@@ -79,7 +79,7 @@
     ]
   },
   "JD_nian": {
-    "version": "数据库版本:1.29.2",
+    "version": "数据库版本:1.29.3",
     "pv": "openapp.jdmobile://virtual?params={\"des\":\"m\",\"category\":\"jump\",\"url\":\"https://u.jd.com/thCBSZW\"}",
     "endJump": "openapp.jdmobile://virtual?params={\"des\":\"m\",\"category\":\"jump\",\"url\":\"https://wbbny.m.jd.com/babelDiy/Zeus/2cKMj86srRdhgWcKonfExzK4ZMBy/index.html\"}",
     "pkHelpCode": "IgNWdiLGaPaAqdZqpd0QbcXZFPwE1VfQ9VPl2cARI1KWYjbV1EXeRSxZojc",
@@ -598,7 +598,7 @@
     ]
   },
   "JD_travel": {
-    "version": "上次数据更新于:10.29.1",
+    "version": "上次数据更新于:10.29.2",
     "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/3wUjhXR%22%7D",
     "endJump": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://wbbny.m.jd.com/babelDiy/Zeus/2vVU4E7JLH9gKYfLQ5EVW6eN2P7B/index.html%22%7D",
     "help": {
