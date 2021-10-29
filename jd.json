@@ -673,7 +673,7 @@
         { "收汪汪币": "travel_collectAtuoScore" },
         { "每日签到": "travel_sign" },
         { "做主任务": "doTaskController" },
-        { "做大牌店铺任务 - 火爆也能做": "doShopTask" },
+        { "做店铺抽奖任务 - 火爆也能做": "doShopTask" },
         { "领取累计奖励 - 火爆也能做": "travel_getBadgeAward" },
         { "做京东金融主任务 - 火爆也能做": "jdjrDoTask" },
         { "打卡升级": "travel_raise" },
