@@ -1163,6 +1163,7 @@ function dealReturn (type, data) {
     default:
       $.error = '什么情况，有未知异常‼️' + type
   }
+  type != 'travel_collectScore' && ($.data = {})
 }
 
 function randomString (e) {
