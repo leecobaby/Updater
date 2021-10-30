@@ -1088,7 +1088,7 @@
     ]
   },
   "FarmSingle": {
-    "version": "数据最后更新于:10.30.1",
+    "version": "数据最后更新于:10.31.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f5wXuj4",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f5wXuj4",
@@ -1152,7 +1152,25 @@
             "17304 other_40_476003_17304_0",
             "19740 other_18_588001_19740_0",
             "18822 cloudsail_333_3168730831_18822_0",
-            "17734 cloudsail_73_177558002010001_17734_35"
+            "17734 cloudsail_73_177558002010001_17734_35",
+            "11640 other_333_307006_11640_0",
+            "12023 other_320_122012_12023_0"
+          ]
+        }
+      },
+      {
+        "tmall": {
+          "title": "小黑盒新品空间",
+          "type": "other",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=1118&sourceType=other&hd_from_id=100085&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "20712 cloudsail_7_177181504460001_20712_0",
+            "20712 cloudsail_7_177181504460001_20712_1",
+            "20712 cloudsail_7_177181504460001_20712_2",
+            "8954 expo_333_75049_8954_0",
+            "8954 expo_333_75049_8954_1",
+            "8954 expo_333_75049_8954_2"
           ]
         }
       },
