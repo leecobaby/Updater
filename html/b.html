@@ -9,8 +9,9 @@
 </head>
 
 <body>
-  <script src="https://cdn.jsdelivr.net/npm/loadsh@0.0.4/lodash.min.js"></script>
-  <script src="./random_mutual_jd.js">
+  <!-- <script src="https://cdn.jsdelivr.net/npm/loadsh@0.0.4/lodash.min.js"></script>
+  <script src="./random_mutual_jd.js"> -->
+  <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.js">
 
   </script>
   <script>
@@ -25,13 +26,13 @@
     }
 
     // const api = 'mtop.taobao.pentaprism.scene.query'
-    // // const api = 'mtop.taobao.pentaprism.scene.queryitem'
+    const api = 'mtop.taobao.pentaprism.scene.queryitem'
     // const data = '{"sceneId":"2368"}'
-    // // const data = '{"deliveryId":"19094","hd_from_id":"100136","implId":"other_33_536007_19094_0","sceneId":"2368"}'
-    // const token = '59d8c7c659be91cee67a1223ec881b59'
-    // const time = new Date().getTime()
-    // const appKey = '12574478'
-    // console.log(getUrl(api, token, t, appKey, data));
+    const data = '{"deliveryId":"20536","hd_from_id":"100136","implId":"other_7_590010_20536_0","sceneId":"2368"}'
+    const token = '9e31abd5549f8f01e2a0625228c1e2cb'
+    const t = new Date().getTime()
+    const appKey = '12574478'
+    console.log(getUrl(api, token, t, appKey, data));
   </script>
 </body>
 
