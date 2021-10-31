@@ -679,6 +679,7 @@
         { "做店铺抽奖任务 - 火爆也能做": "doShopTask" },
         { "领取累计奖励 - 火爆也能做": "travel_getBadgeAward" },
         { "做京东金融主任务 - 火爆也能做": "jdjrDoTask" },
+        { "沸腾之夜助力 - 测试中": "helpPartyCode" },
         { "打卡升级": "travel_raise" },
         { "其他": "cloudTip" }
       ]
@@ -709,7 +710,8 @@
       "getShopHomeData_next",
       "doOneShopTask_next",
       "doShopLottery_next",
-      "getPartyHomeData_next"
+      "getPartyHomeData_next",
+      "helpPartyCode_next"
     ]
   },
   "share": {

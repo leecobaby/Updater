@@ -61,6 +61,17 @@ function init () {
   }
   $.pkExpandList.push('PKASTT0195L6r47PBTNYCtIMjDX0CjRWnIaRzTIjeQOc')
 
+  // 处理沸腾之夜助力码
+  if ($.partyHelpList) {
+    $.partyHelpList = Array.isArray($.partyHelpList) ? $.partyHelpList : [$.partyHelpList]
+    $.partyHelpList = $.partyHelpList.filter(v => v !== '')
+  } else {
+    $.partyHelpList = []
+  }
+  if (new Date().getHours() >= 9 && new Date().getHours() <= 11) {
+    $.pkHelpList.push('E7unasWZHoZIX1kYiw8sbLbDzBTAz9WH22-dryVy9Pl-4zHBWpnA0Jc')
+  }
+
   // 任务流程初始化
   $.taskStep = 1
   // 大牌店铺列表初始化
@@ -739,6 +750,30 @@ function getPartyHomeData () {
   document.write(JSON.stringify($))
 }
 
+// 沸腾之夜助力
+function helpPartyCode () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler'
+  $.call = ['helpPartyCode']
+
+  $.inviteId = $.partyHelpList.shift()
+  if (!$.inviteId) {
+    // 循环完成重新设置 to,call
+    $.to = '', $.call.pop()
+    document.write(JSON.stringify($))
+    return
+  }
+
+  $.message = `${$.UserName}去助力，对方沸腾之夜助力码:\n${$.inviteId}`
+  $.callback = 'Func.request'
+  takePostRequest('helpPartyCode');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('helpPartyCode', $.data)
+  document.write(JSON.stringify($))
+}
 
 // 提交请求信息
 function takePostRequest (type) {
@@ -840,8 +875,13 @@ function takePostRequest (type) {
       break;
     case `getPartyHomeData`:
       body = `functionId=party1031_init&body={}&client=wh5&clientVersion=1.0.0&appid=o2_act&uuid=${$.uuid}`;
-      otherUrl = 'https://api.m.jd.com/client.action?advId=party1031_assist'
+      otherUrl = 'https://api.m.jd.com/client.action?advId=party1031_init'
       myRequest = getPostRequest(`party1031_init`, body, otherUrl);
+      break;
+    case `helpPartyCode`:
+      body = `functionId=party1031_assist&client=wh5&clientVersion=1.0.0&appid=o2_act&_stk=appid,body,client,clientVersion,functionId&_ste=1&h5st=&body={"inviteCode":"${$.inviteId}"}&uuid=${$.uuid}`;
+      otherUrl = 'https://api.m.jd.com/client.action?advId=party1031_assist'
+      myRequest = getPostRequest(`party1031_assist`, body, otherUrl);
       break;
     case 'getHelpCode':
       url = 'https://gitter.im/api/v1/rooms/6171836d6da0373984886132/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=100'
@@ -1088,6 +1128,7 @@ function dealReturn (type, data) {
       const list = sampleData.map(v => v.text)
       // 将助力池的助力码添加进助力列表
       $.inviteList = $.inviteList.concat(list)
+      $.partyHelpList = $.partyHelpList.concat(list)
       break;
     case 'getAppId':
       if (data.code === 0 && data.data?.bizCode === 0) {
@@ -1144,11 +1185,15 @@ function dealReturn (type, data) {
     case `getPartyHomeData`:
       if (data.code === 0 && data.data?.bizCode === 0) {
         $.message = `你的沸腾之夜助力码为：\n${data.data.result?.inviteCode}`
+      } else {
+        $.message = `获取沸腾之夜助力码失败：${data}`
       }
       break;
-    case 'zoo_getWelfareScore':
-      if (data.code === 0) {
-        console.log(`分享成功，获得：${data.data.result.score}`);
+    case 'helpPartyCode':
+      if (data.code === 0 && data.data?.bizCode === 0) {
+        $.message = `助力成功：${data}`
+      } else {
+        $.message = `助力失败：${data}`
       }
       break;
     case 'jdjrTaskDetail':
