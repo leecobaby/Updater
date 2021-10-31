@@ -801,7 +801,8 @@
       "lodash": "https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"
     },
     "code": {
-      "getCookieData": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/tb/getCookieData.js"
+      "getCookieData": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/tb/getCookieData.js",
+      "getTaskData": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/tb/getTaskData.js"
     },
     "task": [
       {
