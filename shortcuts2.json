@@ -341,6 +341,10 @@
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/1111",
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
+    "about": {
+      "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
+      "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_sign#版本日志"
+    },
     "update": "https://www.icloud.com/shortcuts/11c46d0b1cf849a8b773ad1bae6b4fbe",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
     "notice": "短期请不要升级15.1,无法及时做兼容性适配~\n🧧 今晚 8:00 拼手气抢5元",
