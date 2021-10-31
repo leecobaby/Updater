@@ -10,57 +10,12 @@
 
 <body>
   <script>
-    const cookie = `
-_m_h5_tk=7004e038d1f48f102d46d770abbf3a16_1635661332687;
-
-_m_h5_tk_enc=27cc912eb86cc07e7f3da928665281fa;
-
-isg=BLe3Wn1NmvBFnB5_5PjNHNtJTK8BfIveDfC4FQlk0wbtuNf6EUwbLnWanp7mS2NW;
-
-l=eBTicEQIgcF79zJQBOfahurza77OSCdYYuPzaNbMiOCPOH5B5QeOW6UUYtT6C31Rh67eR3k5PdE9BeYBmQAonxvtMUO4flMmn;
-
-tfstk=cTOABRah68Fwdf05xKHo5wx82fulZxMAbkju64HvLyTjpgwOi--Hvk6mta_RK4C..;
-
-_samesite_flag_=true;
-
-_tb_token_=7511357e0e3e7;
-
-cookie2=91d745e7470f62a3acc5f12c00efc4d8;
-
-t=3b14c4c9d763d5cb99aa413942dc5929;
-
-cna=awsEGnCeS2sCAX1pYi97Fp5d;
-
-WAPFDFDTGFG=%2B4cMKKP%2B8PI%2BNvDx8oUls7ouLZeoc1PJMw%3D%3D;
-
-_w_app_lg=0;
-
-_w_tb_nick=js%E8%93%9D%E8%89%B2%E5%A4%A9%E7%A9%BA;
-
-ntm=0;
-
-_cc_=V32FPkk%2Fhw%3D%3D;
-
-lgc=js%5Cu84DD%5Cu8272%5Cu5929%5Cu7A7A;
-
-munb=267358237;
-
-sgcookie=E100nengDjWo3wyB2jYWOLeLJ7m%2B0ADAv9DkPjqKhxBHrx%2BYyEmT54TqtTFYJa83w4AqslHpun11xbTr4yZ8Oqa6iEw%2BjB2dmszl4BxzE357P%2Bo%3D;
-
-tracknick=js%5Cu84DD%5Cu8272%5Cu5929%5Cu7A7A;
-
-uc3=nk2=CcASBYyuRaGKKQ%3D%3D&id2=UU6m3OCeWMpo&lg2=URm48syIIVrSKA%3D%3D&vt3=F8dCujumCdod%2FjctgeQ%3D;
-
-uc4=id4=0%40U2xrccki5Rsp4ywMaSxYm6gI%2FwQ%3D&nk4=0%40C%2F9P0w%2BMc3oNVp2A9S0bc2V6S2%2Bn;
-
-xlly_s=1;
-    
-`.replace(/\s/g, '')
-    const activityId = 'FarmSingle'
-    const tk = cookie.match(/_m_h5_tk=\w+/g)[0]
+    const cookieStr = `cna=awsEGnCeS2sCAX1pYi97Fp5d;isg=BFdXelcg-tPeD35fhNhtfHup7M-hnCv-bdAYNamEcyaN2HcasWy7ThX6PvZGKwN2;WAPFDFDTGFG=%2B4cMKKP%2B8PI%2BNvDx8oUls7ouLZeoc1PJMw%3D%3D;_w_app_lg=0;_w_tb_nick=js%E8%93%9D%E8%89%B2%E5%A4%A9%E7%A9%BA;ntm=0;ockeqeudmj=g4Nsyv0%3D;_cc_=V32FPkk%2Fhw%3D%3D;_l_g_=Ug%3D%3D;_nk_=js%5Cu84DD%5Cu8272%5Cu5929%5Cu7A7A;_tb_token_=e4133851633ee;cancelledSubSites=empty;cookie1=ACvlpcXYH3IXv5wH8PBGVQlxuCxmDVApnGhmFIWWNg8%3D;cookie17=UU6m3OCeWMpo;cookie2=224d3bf78fcdcf75bdee2d01ea897ed5;csg=1961f039;dnk=js%5Cu84DD%5Cu8272%5Cu5929%5Cu7A7A;l=eBTicEQIgcF7944-BOfaKurza77tJCdbYuPzaNbMiOCP9Xfp5lalW6UQEx89Cn1dh6-pR3k5PdE9BeYBmQd-nxvtrVrGCTHmn;lgc=js%5Cu84DD%5Cu8272%5Cu5929%5Cu7A7A;munb=267358237;sg=%E7%A9%BA76;sgcookie=E100nengDjWo3wyB2jYWOLeLJ7m%2B0ADAv9DkPjqKhxBHrx%2BYyEmT54TqtTFYJa83w4AqslHpun11xbTr4yZ8Oqa6iEw%2BjB2dmszl4BxzE357P%2Bo%3D;skt=ddd34520f9dceef0;t=3b14c4c9d763d5cb99aa413942dc5929;tfstk=ceLdBANcylUPtcc1nHniNI2OwShGaSidU-XgyfnT09GiUj48VsvenKefxqf16icO.;tracknick=js%5Cu84DD%5Cu8272%5Cu5929%5Cu7A7A;uc1=cookie14=Uoe3crgbwHpRrw%3D%3D&cookie15=Vq8l%2BKCLz3%2F65A%3D%3D&cookie21=Vq8l%2BKCLiv0MyZ1zjQoZBg%3D%3D&existShop=false;uc3=nk2=CcASBYyuRaGKKQ%3D%3D&id2=UU6m3OCeWMpo&lg2=URm48syIIVrSKA%3D%3D&vt3=F8dCujumCdod%2FjctgeQ%3D;uc4=id4=0%40U2xrccki5Rsp4ywMaSxYm6gI%2FwQ%3D&nk4=0%40C%2F9P0w%2BMc3oNVp2A9S0bc2V6S2%2Bn;unb=267358237;xlly_s=1;_samesite_flag_=true;_m_h5_tk=9e31abd5549f8f01e2a0625228c1e2cb_1635598483775;_m_h5_tk_enc=7331e87df1edcb256a4b2a9afae102eb;`
+    const activityId = ``
+    const Cookie = cookieStr.replace(/\s/g, '')
+    const tk = Cookie.match(/_m_h5_tk=\w+/g)[0]
     const url = `https://service-lv90ws2p-1251309300.sh.apigw.tencentcs.com/release/api?activityId=${activityId}&tk=${tk}`
-    console.log(cookie, tk);
-    document.write(JSON.stringify({ cookie, url }))
+    document.write(JSON.stringify({ Cookie, url }))
   </script>
 </body>
 
