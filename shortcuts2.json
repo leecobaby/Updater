@@ -343,7 +343,7 @@
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/11c46d0b1cf849a8b773ad1bae6b4fbe",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "无法助力的有童鞋反馈找淘宝人工客服帮助解决了~\n匹配不到对手的可以退队，通过支付宝进他人的队伍~",
+    "notice": "短期请不要升级15.1,无法及时做兼容性适配~\n🧧 今晚 8:00 拼手气抢5元",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=双11喵糖自动任务&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
@@ -351,7 +351,7 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 20点拼手速额外抢2元",
+      "hot": "🧧 今晚 8:00 拼手气抢5元",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "otherTask": "任务全都异常才可运行",
