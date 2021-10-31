@@ -110,4 +110,5 @@ const firstLoop = () => {
 }
 task['1111'].task[0].main.item = items
 firstLoop()
-document.write(JSON.stringify(task))
+$.task = task
+document.write(JSON.stringify($))
