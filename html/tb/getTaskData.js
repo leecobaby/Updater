@@ -7,10 +7,11 @@ if (data.ret && data.ret[0] == "SUCCESS::调用成功" && data.data?.model) {
     if (item.progress.needTimes !== '0') {
       let times = Number(item.progress.needTimes)
       for (let i = 0; i < times; i++) {
+        let title = item.assets.title
         let deliveryId = item.taskParams.deliveryId
         let implId = item.taskParams.implId.match(/(.*)_/g) + i
         let fromToken = item.taskParams.fromToken
-        items.push(`1 fromToken=${fromToken}&deliveryId=${deliveryId}&implId=${implId}`)
+        items.push(`${deliveryId}-${title} fromToken=${fromToken}&deliveryId=${deliveryId}&implId=${implId}`)
         '1 '
       }
     }
