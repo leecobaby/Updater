@@ -1128,7 +1128,14 @@ function dealReturn (type, data) {
       const list = sampleData.map(v => v.text)
       // 将助力池的助力码添加进助力列表
       $.inviteList = $.inviteList.concat(list)
-      $.partyHelpList = $.partyHelpList.concat(list)
+      // 选出有 助力码 的元素
+      const filterData1 = _.filter(data.items, v => v.text.match(/^[\w-]{10,20}$/g))
+      // 过滤重复的 user id
+      const uniqData1 = _.uniqBy(filterData, v => v.fomUse)
+      // 随机选取出 5 个助力码 - 考虑到助力已满情况和无效码的情况
+      const sampleData1 = _.sampleSize(uniqData, 5)
+      const list1 = sampleData.map(v => v.text)
+      $.partyHelpList = $.partyHelpList.concat(list1)
       break;
     case 'getAppId':
       if (data.code === 0 && data.data?.bizCode === 0) {
