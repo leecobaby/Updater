@@ -673,7 +673,6 @@
       ],
       "taskList": [
         { "提示:如果活动火爆请只选择火爆也能做": "update" },
-        { "沸腾之夜助力 - 火爆也能做": "helpPartyCode" },
         { "收汪汪币": "travel_collectAtuoScore" },
         { "每日签到": "travel_sign" },
         { "做主任务": "doTaskController" },
