@@ -667,6 +667,7 @@
         "travel_getTaskDetail",
         "travel_pk_getHomeData",
         "travel_pk_collectPkExpandScore",
+        "getPartyHomeData",
         "jdjrTaskDetail",
         "getHelpCode"
       ],
@@ -707,7 +708,8 @@
       "getAppId_next",
       "getShopHomeData_next",
       "doOneShopTask_next",
-      "doShopLottery_next"
+      "doShopLottery_next",
+      "getPartyHomeData_next"
     ]
   },
   "share": {

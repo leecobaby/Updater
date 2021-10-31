@@ -727,6 +727,18 @@ function doShopLottery () {
   document.write(JSON.stringify($))
 }
 
+// 沸腾之夜大厅信息
+function getPartyHomeData () {
+  $.callback = 'Func.request'
+  takePostRequest('getPartyHomeData');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('getPartyHomeData', $.data)
+  document.write(JSON.stringify($))
+}
+
 
 // 提交请求信息
 function takePostRequest (type) {
@@ -826,9 +838,10 @@ function takePostRequest (type) {
       otherUrl = 'https://api.m.jd.com/'
       myRequest = getPostRequest(`template_mongo_lottery`, body, otherUrl);
       break;
-    case `zoo_myMap`:
-      body = `functionId=zoo_myMap&body={}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getPostRequest(`zoo_myMap`, body);
+    case `getPartyHomeData`:
+      body = `functionId=party1031_init&body={}&client=wh5&clientVersion=1.0.0&appid=o2_act&uuid=${$.uuid}`;
+      otherUrl = 'https://api.m.jd.com/client.action?advId=party1031_assist'
+      myRequest = getPostRequest(`party1031_init`, body, otherUrl);
       break;
     case 'getHelpCode':
       url = 'https://gitter.im/api/v1/rooms/6171836d6da0373984886132/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=100'
@@ -1128,9 +1141,9 @@ function dealReturn (type, data) {
         $.call.pop()
       }
       break
-    case `zoo_myMap`:
-      if (data.code === 0) {
-        $.myMapList = data.data.result.sceneMap.sceneInfo;
+    case `getPartyHomeData`:
+      if (data.code === 0 && data.data?.bizCode === 0) {
+        $.message = `你的沸腾之夜助力码为：\n${data.data.result?.inviteCode}`
       }
       break;
     case 'zoo_getWelfareScore':
