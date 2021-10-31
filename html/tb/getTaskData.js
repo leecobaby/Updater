@@ -69,45 +69,58 @@ let task = {
     ],
   },
 }
-const firstTask = [{
-  "stars": {
-    "title": "去往支付宝任务",
-    "type": "stars",
-    "urlScheme": "alipays://platformapi/startapp?appId=68687635&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fc%2F18orxwq9ap1c&ttb=always&titlePenetrate=YES&abv=NO&chInfo=TAOBAO_TASK",
-    "textEnd": "",
-    "item": ["1 1"]
+const firstTask = [
+  {
+    "stars": {
+      "title": "云端推送",
+      "type": "stars",
+      "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/tmc/32985/15490/wupr?spm=2021hudong.pk1111.tasklist-pentaprism.19933&disableNav=YES&wh_pid=main-403648&shop_router_ignore=true&fromToken=jQVloDei00DPZ5wXH71YFpLPCDUoUbUK&sceneId=2368&hd_from_id=100136&deliveryId=",
+      "textEnd": "str1&implId=str2",
+      "item": [
+        "19714 cloudsail_17_170990502440001_19714_0"
+      ]
+    }
+  },
+  {
+    "stars": {
+      "title": "去往支付宝任务",
+      "type": "stars",
+      "urlScheme": "alipays://platformapi/startapp?appId=68687635&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fc%2F18orxwq9ap1c&ttb=always&titlePenetrate=YES&abv=NO&chInfo=TAOBAO_TASK",
+      "textEnd": "",
+      "item": ["1 1"]
+    }
+  },
+  {
+    "stars": {
+      "title": "去往淘宝任务",
+      "type": "stars",
+      "urlScheme": "taobao://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES&qd_from=zfbbanner&bc_fl_src=zfb_banner&qd_dice=aliPayTaskBanner&async=false&idfa=00000000-0000-0000-0000-000000000000&surge_ssr=true&afcflow=unkown",
+      "textEnd": "",
+      "item": ["1 1"]
+    }
+  },
+  {
+    "stars": {
+      "title": "惊喜宝箱 - 会去往支付宝",
+      "type": "stars",
+      "urlScheme": "",
+      "textEnd": "str2",
+      "item": [
+        "1 alipays://platformapi/startapp?appId=68687791&url=%2Fwww%2Findex.html%3Fsource%3Dtb2021d11e",
+        "1 taobao://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES&qd_from=zfbsurprise&bc_fl_src=zfb_surprise&async=false&idfa=00000000-0000-0000-0000-000000000000&surge_ssr=true&afcflow=unkown"
+      ]
+    }
+  },
+  {
+    "stars": {
+      "title": "超级糖果任务",
+      "type": "stars",
+      "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/tmc/32985/15487/wupr?spm=2021hudong.pk1111.tasklist-pentaprism.19933&disableNav=YES&wh_pid=main-403648&shop_router_ignore=true&fromToken=DM0N6oRUll9gLDJwf9gVIO9pU9UdU2U8&sceneId=2380&hd_from_id=100136&deliveryId=",
+      "textEnd": "str1&implId=str2",
+      "item": ["18874 other_37_1_18874_0"]
+    }
   }
-},
-{
-  "stars": {
-    "title": "去往淘宝任务",
-    "type": "stars",
-    "urlScheme": "taobao://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES&qd_from=zfbbanner&bc_fl_src=zfb_banner&qd_dice=aliPayTaskBanner&async=false&idfa=00000000-0000-0000-0000-000000000000&surge_ssr=true&afcflow=unkown",
-    "textEnd": "",
-    "item": ["1 1"]
-  }
-},
-{
-  "stars": {
-    "title": "惊喜宝箱 - 会去往支付宝",
-    "type": "stars",
-    "urlScheme": "",
-    "textEnd": "str2",
-    "item": [
-      "1 alipays://platformapi/startapp?appId=68687791&url=%2Fwww%2Findex.html%3Fsource%3Dtb2021d11e",
-      "1 taobao://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES&qd_from=zfbsurprise&bc_fl_src=zfb_surprise&async=false&idfa=00000000-0000-0000-0000-000000000000&surge_ssr=true&afcflow=unkown"
-    ]
-  }
-},
-{
-  "stars": {
-    "title": "超级糖果任务",
-    "type": "stars",
-    "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/tmc/32985/15487/wupr?spm=2021hudong.pk1111.tasklist-pentaprism.19933&disableNav=YES&wh_pid=main-403648&shop_router_ignore=true&fromToken=DM0N6oRUll9gLDJwf9gVIO9pU9UdU2U8&sceneId=2380&hd_from_id=100136&deliveryId=",
-    "textEnd": "str1&implId=str2",
-    "item": ["18874 other_37_1_18874_0"]
-  }
-}]
+]
 
 task['1111'].task[0].main.item = items
 loopTime == '1' && (task['1111'].task = task['1111'].task.concat(firstTask))
