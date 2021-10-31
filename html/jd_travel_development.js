@@ -1186,14 +1186,23 @@ function dealReturn (type, data) {
       if (data.code === 0 && data.data?.bizCode === 0) {
         $.message = `你的沸腾之夜助力码为：\n${data.data.result?.inviteCode}`
       } else {
-        $.message = `获取沸腾之夜助力码失败：${data}`
+        $.message = `获取沸腾之夜助力码失败：${JSON.stringify(data)}`
       }
       break;
     case 'helpPartyCode':
-      if (data.code === 0 && data.data?.bizCode === 0) {
-        $.message = `助力成功：${data}`
-      } else {
-        $.message = `助力失败：${data}`
+      switch (data.data?.bizCode) {
+        case 0:
+          $.message = `助力成功：${JSON.stringify(data)}`
+          break;
+        case -201:
+          $.message = `不能为自己助力`
+          break;
+        case 108:
+          $.message = `助力次数已用光`
+          $.helpMax = true;
+          break;
+        default:
+          $.message = `助力失败：${JSON.stringify(data)}`
       }
       break;
     case 'jdjrTaskDetail':
