@@ -9,7 +9,9 @@ if (data.ret && data.ret[0] == "SUCCESS::调用成功" && data.data?.model) {
       for (let i = 0; i < times; i++) {
         let deliveryId = item.taskParams.deliveryId
         let implId = item.taskParams.implId.match(/(.*)_/g) + i
-        items.push(`${deliveryId} ${implId}`)
+        let fromToken = item.taskParams.fromToken
+        items.push(`1 fromToken=${fromToken}&deliveryId=${deliveryId}&implId=${implId}`)
+        '1 '
       }
     }
   }
@@ -59,8 +61,8 @@ let task = {
         "main": {
           "title": "做主任务 - 部分任务异常不用理会",
           "type": "main",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/tmc/32985/15487/wupr?spm=2021hudong.pk1111.tasklist-pentaprism.19933&disableNav=YES&wh_pid=main-402601&shop_router_ignore=true&fromToken=jQVloDei00DPZ5wXH71YFpLPCDUoUbUK&sceneId=2368&hd_from_id=100136&deliveryId=",
-          "textEnd": "str1&implId=str2"
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/tmc/32985/15487/wupr?spm=2021hudong.pk1111.tasklist-pentaprism.19933&disableNav=YES&wh_pid=main-402601&shop_router_ignore=true&sceneId=2368&hd_from_id=100136&",
+          "textEnd": "str2"
         }
       },
     ],
@@ -105,10 +107,8 @@ const firstTask = [{
     "item": ["18874 other_37_1_18874_0"]
   }
 }]
-const firstLoop = () => {
-  loopTime == '1' && (task['1111'].task = task['1111'].task.concat(firstTask))
-}
+
 task['1111'].task[0].main.item = items
-firstLoop()
+loopTime == '1' && (task['1111'].task = task['1111'].task.concat(firstTask))
 $.task = task
 document.write(JSON.stringify($))
