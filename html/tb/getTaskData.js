@@ -14,7 +14,7 @@ if (data.ret && data.ret[0] == "SUCCESS::调用成功" && data.data?.model) {
     }
   }
 } else {
-  $.error = `出错了请检查 Cookie 是否正确且未过期，也可以运行普通模式`
+  $.error = `出错了请检查 Cookie 是否正确且未过期，也可以运行普通模式 ${JSON.stringify(data)}`
 }
 console.log(items);
 let task = {
