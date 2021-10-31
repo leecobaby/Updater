@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>getLink</title>
+  <title>getCookieData</title>
 </head>
 
 <body>
@@ -60,7 +60,7 @@ xlly_s=1;
     const tk = cookie.match(/_m_h5_tk=\w+/g)[0]
     const url = `https://service-lv90ws2p-1251309300.sh.apigw.tencentcs.com/release/api?activityId=${activityId}&tk=${tk}`
     console.log(cookie, tk);
-    document.write(url)
+    document.write(JSON.stringify({ cookie, url }))
   </script>
 </body>
 

@@ -673,13 +673,13 @@
       ],
       "taskList": [
         { "提示:如果活动火爆请只选择火爆也能做": "update" },
+        { "沸腾之夜助力 - 火爆也能做": "helpPartyCode" },
         { "收汪汪币": "travel_collectAtuoScore" },
         { "每日签到": "travel_sign" },
         { "做主任务": "doTaskController" },
         { "做店铺抽奖任务 - 火爆也能做": "doShopTask" },
         { "领取累计奖励 - 火爆也能做": "travel_getBadgeAward" },
         { "做京东金融主任务 - 火爆也能做": "jdjrDoTask" },
-        { "沸腾之夜助力 - 测试中": "helpPartyCode" },
         { "打卡升级": "travel_raise" },
         { "其他": "cloudTip" }
       ]

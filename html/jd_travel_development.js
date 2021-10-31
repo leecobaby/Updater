@@ -757,7 +757,7 @@ function helpPartyCode () {
   $.call = ['helpPartyCode']
 
   $.inviteId = $.partyHelpList.shift()
-  if (!$.inviteId) {
+  if (!$.inviteId || $.partyHelpMax) {
     // 循环完成重新设置 to,call
     $.to = '', $.call.pop()
     document.write(JSON.stringify($))
@@ -1197,9 +1197,9 @@ function dealReturn (type, data) {
         case -201:
           $.message = `不能为自己助力`
           break;
-        case 108:
+        case -202:
           $.message = `助力次数已用光`
-          $.helpMax = true;
+          $.partyHelpMax = true;
           break;
         default:
           $.message = `助力失败：${JSON.stringify(data)}`
