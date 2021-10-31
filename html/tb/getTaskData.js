@@ -62,7 +62,7 @@ let task = {
         "main": {
           "title": "做主任务 - 部分任务异常不用理会",
           "type": "main",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/tmc/32985/15487/wupr?spm=2021hudong.pk1111.tasklist-pentaprism.19933&disableNav=YES&wh_pid=main-402601&shop_router_ignore=true&sceneId=2368&hd_from_id=100136&",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/tmc/32985/15490/wupr?spm=2021hudong.pk1111.tasklist-pentaprism.19933&disableNav=YES&wh_pid=main-402601&shop_router_ignore=true&sceneId=2368&hd_from_id=100136&",
           "textEnd": "str2"
         }
       },
