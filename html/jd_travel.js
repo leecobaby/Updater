@@ -989,7 +989,7 @@ function getPostBody (type) {
 
 // 处理返回信息
 function dealReturn (type, data) {
-  if (!data) $.error = '接口返回数据为空，检查账号cookie是否过期或错误';
+  if (!data.d) $.error = '接口返回数据为空，检查账号cookie是否过期或错误';
   // 对 15.1 的特殊优化
   $.data = JSON.parse(data.d)
   data = $.data
@@ -1004,6 +1004,8 @@ function dealReturn (type, data) {
         // $.secretpInfo[$.UserName] = $.secretp;
       } else if (data?.code === -30001) {
         $.error = '⚠️ 你的 cookie 错误或者过期，请去往指令设置重新授权！\n抓包的请不要登出账号和关闭网页，直接关闭浏览器即可。'
+      } else {
+        $.error = `⚠️ 存在错误 ${JSON.stringify(data)}`
       }
       break;
     case 'travel_getTaskDetail':
