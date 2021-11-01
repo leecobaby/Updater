@@ -1004,6 +1004,8 @@ function dealReturn (type, data) {
         // $.secretpInfo[$.UserName] = $.secretp;
       } else if (data?.code === -30001) {
         $.error = '⚠️ 你的 cookie 错误或者过期，请去往指令设置重新授权！\n抓包的请不要登出账号和关闭网页，直接关闭浏览器即可。'
+      } else {
+        $.error = `⚠️ 存在错误 ${JSON.stringify(data)}`
       }
       break;
     case 'travel_getTaskDetail':
