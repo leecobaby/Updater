@@ -115,7 +115,7 @@ const firstTask = [
     "stars": {
       "title": "超级糖果任务",
       "type": "stars",
-      "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/tmc/32985/15487/wupr?spm=2021hudong.pk1111.tasklist-pentaprism.19933&disableNav=YES&wh_pid=main-403648&shop_router_ignore=true&fromToken=DM0N6oRUll9gLDJwf9gVIO9pU9UdU2U8&sceneId=2380&hd_from_id=100136&deliveryId=",
+      "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/tmc/32985/15490/wupr?spm=2021hudong.pk1111.tasklist-pentaprism.19933&disableNav=YES&wh_pid=main-403648&shop_router_ignore=true&fromToken=DM0N6oRUll9gLDJwf9gVIO9pU9UdU2U8&sceneId=2380&hd_from_id=100136&deliveryId=",
       "textEnd": "str1&implId=str2",
       "item": ["18874 other_37_1_18874_0"]
     }
