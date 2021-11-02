@@ -879,6 +879,20 @@
       },
       {
         "stars": {
+          "title": "逛店铺③",
+          "type": "stars",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/tmc/32985/15490/wupr?spm=2021hudong.pk1111.tasklist-pentaprism.19933&disableNav=YES&wh_pid=main-403648&shop_router_ignore=true&fromToken=8lAW5dJCddNEO0L5sBa9UnvDhAUnUkU6&sceneId=2368&hd_from_id=100136&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "20823 cloudsail_1_178981001640001_20823_0",
+            "20823 cloudsail_1_178981001640001_20823_1",
+            "20823 cloudsail_1_178981001640001_20823_2",
+            "20823 cloudsail_1_178981001640001_20823_3"
+          ]
+        }
+      },
+      {
+        "stars": {
           "title": "去往支付宝任务",
           "type": "stars",
           "urlScheme": "alipays://platformapi/startapp?appId=68687635&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fc%2F18orxwq9ap1c&ttb=always&titlePenetrate=YES&abv=NO&chInfo=TAOBAO_TASK",
