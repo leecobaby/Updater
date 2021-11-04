@@ -48,7 +48,7 @@
     },
     "more": {
       "🧧 抢最高 8888 超级红包": "taobao://m.tb.cn/h.fUVxFJD",
-      "🧧 现金红包-10.30": "taobao://m.tb.cn/h.f5R1Yvt",
+      "🧧 现金红包-11.5": "taobao://m.tb.cn/h.f5R1Yvt",
       "👥 加入QQ京东情报群": "https://jq.qq.com/?_wv=1027&k=tx5Mzgh2",
       "👥 加入QQ淘宝情报群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=622340333&card_type=group&source=qrcode&jump_from=&auth=&authSig=RPqW9VSePIx4jWxGhYLvMvfdLkFPydHzo50qyVwmb9zhPjv7lF3HnSRF5WuJfjaX&source_id=2_40001",
       "👥 加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
@@ -237,7 +237,7 @@
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 10.30抢现金红包"
+      "more": "🧧 11.5抢现金红包"
     }
   },
   "Qmxb": {
@@ -284,7 +284,7 @@
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 10.30抢现金红包"
+      "more": "🧧 11.5抢现金红包"
     }
   },
   "1111zcj": {
@@ -308,7 +308,7 @@
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🔥 10.30抢现金红包"
+      "more": "🔥 11.5抢现金红包"
     }
   },
   "1111ys": {
@@ -332,7 +332,7 @@
       "set": "点击查看自动化操作",
       "team": "",
       "other": "💰 去活动页分钱了",
-      "more": "🔥 10.30抢现金红包"
+      "more": "🔥 11.5抢现金红包"
     }
   },
   "1111": {
@@ -361,7 +361,7 @@
       "otherTask": "任务全都异常才可运行",
       "help": "助力大厅已开放",
       "other": "有疑问看常见问题",
-      "more": "🔥 1.5抢现金红包"
+      "more": "🔥 11.5抢现金红包"
     }
   },
   "ltao_duck": {
@@ -488,7 +488,7 @@
       "set": "",
       "team": "",
       "other": "",
-      "more": "🧧 10.30抢现金红包"
+      "more": "🧧 11.5抢现金红包"
     }
   },
   "JD_zoo": {
@@ -569,7 +569,7 @@
       "set": "",
       "team": "",
       "other": "",
-      "more": "🧧 10.30抢现金红包"
+      "more": "🧧 11.5抢现金红包"
     }
   },
   "JD_travel": {
@@ -582,7 +582,7 @@
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/4cb840a5e97e47f7b89552f7f0d679c6",
-    "notice": "预售和红包别过期了~\n短期请不要升级15.1,无法及时做兼容性适配~",
+    "notice": "短期请不要升级15.1,无法及时做兼容性适配~\n大部分人都火爆了,可以只做店铺抽奖任务,做完20000币也是肉~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-双11环游记&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd.png",
@@ -590,13 +590,13 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/jd.json",
     "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_travel/",
     "tip": {
-      "log": "",
-      "hot": "🧧 红包加码独有奖池",
+      "log": "助力码在这",
+      "hot": "🧧 京享红包每天领",
       "faq": "有疑问的请查看",
       "set": "第一次用请授权",
       "help": "可以手动互助拉",
       "other": "",
-      "more": "🧧 10.30现金红包"
+      "more": "🧧 11.5现金红包"
     }
   },
   "More": {
@@ -640,7 +640,7 @@
           "联盟红包-饿了么": "eleme://web?url=https%3A%2F%2Ftb.ele.me%2Fwow%2Falsc%2Fmod%2Fd5275789de46503ba0908a9d%3Fe%3D1%26open_type%3Dminiapp%26inviterId%3D74f86c%26actId%3D1%26_ltracker_f%3Dhjb_app_grzx%26chInfo%3Dch_app_chsub_Photo"
         }
       },
-      "🧧 现金红包 - 10.30开抢": "taobao://m.tb.cn/h.f5R1Yvt"
+      "🧧 现金红包 - 11.5开抢": "taobao://m.tb.cn/h.f5R1Yvt"
     },
     "more2": {
       "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
