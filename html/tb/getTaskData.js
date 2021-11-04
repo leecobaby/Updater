@@ -80,17 +80,9 @@ const firstTask = [
       "urlScheme": `HTTPS://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES&shop_router_ignore=true&fromToken=${fromToken}&sceneId=2368&hd_from_id=100136&deliveryId=`,
       "textEnd": "str1&implId=str2",
       "item": [
-        "19714 cloudsail_17_170990502440001_19714_0",
-        "20164 cloudsail_3_169036502550001_20164_0",
-        "20164 cloudsail_3_169036502550001_20164_1",
-        "20164 cloudsail_3_169036502550001_20164_2",
-        "20164 cloudsail_3_169036502550001_20164_3",
-        "20164 cloudsail_3_169036502550001_20164_4",
-        "20164 cloudsail_3_169036502550001_20164_5",
-        "20164 cloudsail_3_169036502550001_20164_6",
-        "20164 cloudsail_3_169036502550001_20164_7",
-        "20164 cloudsail_3_169036502550001_20164_8",
-        "20164 cloudsail_3_169036502550001_20164_9"
+        "20904 cloudsail_1_171340004590001_20904_0",
+        "20904 cloudsail_1_171340004590001_20904_1",
+        "20904 cloudsail_1_171340004590001_20904_2"
       ]
     }
   },

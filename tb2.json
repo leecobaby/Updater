@@ -768,7 +768,7 @@
     ]
   },
   "1111": {
-    "version": "数据最后更新于:11.4.4",
+    "version": "数据最后更新于:11.5.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f5wXuj4",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f5wXuj4",
@@ -812,8 +812,6 @@
           "urlScheme": "HTTPS://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES&shop_router_ignore=true&sceneId=2368&hd_from_id=100136&fromToken=2V8W5YPi77BBjX0bUY7giNovs1UdUWUD&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
-            "19714 cloudsail_17_170990502440001_19714_0",
-            "20731 cloudsail_1_169419003410001_20731_0",
             "20731 cloudsail_1_169419003410001_20731_0",
             "19919 other_15_590007_19919_0",
             "19409 other_23_0_19409_0",
@@ -822,8 +820,7 @@
             "19093 other_29_507006_19093_0",
             "18721 other_56_509003_18721_0",
             "19000 ald.res.19312519_29_149754_19000_0",
-            "20161 ald.res.19312519_3_149397_20161_0",
-            "19714 cloudsail_10_167837001650001_19714_0"
+            "20161 ald.res.19312519_3_149397_20161_0"
           ]
         }
       },
@@ -849,50 +846,14 @@
       },
       {
         "stars": {
-          "title": "逛店铺② - 云端推送 - 十次",
-          "type": "stars",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES&shop_router_ignore=true&sceneId=2368&hd_from_id=100136&fromToken=lrVqDJXSZZdZAXkGtBbzUXGqcWUdUMUW&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "20164 cloudsail_3_169036502550001_20164_0",
-            "20164 cloudsail_3_169036502550001_20164_1",
-            "20164 cloudsail_3_169036502550001_20164_2",
-            "20164 cloudsail_3_169036502550001_20164_3",
-            "20164 cloudsail_3_169036502550001_20164_4",
-            "20164 cloudsail_3_169036502550001_20164_5",
-            "20164 cloudsail_3_169036502550001_20164_6",
-            "20164 cloudsail_3_169036502550001_20164_7",
-            "20164 cloudsail_3_169036502550001_20164_8",
-            "20164 cloudsail_3_169036502550001_20164_9"
-          ]
-        }
-      },
-      {
-        "stars": {
-          "title": "逛店铺③ - 云端推送 - 四次",
+          "title": "逛店铺② - 云端推送 - 三次",
           "type": "stars",
           "urlScheme": "HTTPS://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES&shop_router_ignore=true&sceneId=2368&hd_from_id=100136&fromToken=vOV0jMECaa62Jx5KFGK2fdG9FrUlUvUx&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
-            "20823 cloudsail_1_178981001640001_20823_0",
-            "20823 cloudsail_1_178981001640001_20823_1",
-            "20823 cloudsail_1_178981001640001_20823_2",
-            "20823 cloudsail_1_178981001640001_20823_3"
-          ]
-        }
-      },
-      {
-        "stars": {
-          "title": "逛店铺④ - 云端推送 - 五次",
-          "type": "stars",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES&shop_router_ignore=true&sceneId=2368&hd_from_id=100136&fromToken=lrVqDJXSZZdZAXkGtBbzUXGqcWUdUMUW&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "20896 cloudsail_0_168828504410001_20896_0",
-            "20896 cloudsail_0_168828504410001_20896_1",
-            "20896 cloudsail_0_168828504410001_20896_2",
-            "20896 cloudsail_0_168828504410001_20896_3",
-            "20896 cloudsail_0_168828504410001_20896_4"
+            "20904 cloudsail_1_171340004590001_20904_0",
+            "20904 cloudsail_1_171340004590001_20904_1",
+            "20904 cloudsail_1_171340004590001_20904_2"
           ]
         }
       },
