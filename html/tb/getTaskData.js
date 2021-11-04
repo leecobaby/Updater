@@ -2,6 +2,8 @@
 // const loopTime = ``
 const $ = {}
 const items = []
+// 共用与云端已送的 fromToken
+let fromToken = ''
 if (data.ret && data.ret[0] == "SUCCESS::调用成功" && data.data?.model) {
   for (const item of data.data?.model) {
     if (item.progress.needTimes !== '0') {
@@ -10,7 +12,7 @@ if (data.ret && data.ret[0] == "SUCCESS::调用成功" && data.data?.model) {
         let title = item.assets.title
         let deliveryId = item.taskParams.deliveryId
         let implId = item.taskParams.implId.match(/(.*)_/g) + i
-        let fromToken = item.taskParams.fromToken
+        fromToken = item.taskParams.fromToken
         items.push(`${deliveryId}-${title} fromToken=${fromToken}&deliveryId=${deliveryId}&implId=${implId}`)
         '1 '
       }
@@ -62,7 +64,7 @@ let task = {
         "main": {
           "title": "做主任务 - 部分任务异常不用理会",
           "type": "main",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/tmc/32985/15490/wupr?spm=2021hudong.pk1111.tasklist-pentaprism.19933&disableNav=YES&wh_pid=main-403648&shop_router_ignore=true&sceneId=2368&hd_from_id=100136&",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES&shop_router_ignore=true&sceneId=2368&hd_from_id=100136&",
           "textEnd": "str2"
         }
       },
@@ -74,7 +76,7 @@ const firstTask = [
     "stars": {
       "title": "云端推送",
       "type": "stars",
-      "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/tmc/32985/15490/wupr?spm=2021hudong.pk1111.tasklist-pentaprism.19933&disableNav=YES&wh_pid=main-403648&shop_router_ignore=true&fromToken=jQVloDei00DPZ5wXH71YFpLPCDUoUbUK&sceneId=2368&hd_from_id=100136&deliveryId=",
+      "urlScheme": `HTTPS://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES&shop_router_ignore=true&fromToken=${fromToken}&sceneId=2368&hd_from_id=100136&deliveryId=`,
       "textEnd": "str1&implId=str2",
       "item": [
         "19714 cloudsail_17_170990502440001_19714_0",
@@ -125,7 +127,7 @@ const firstTask = [
     "stars": {
       "title": "超级糖果任务",
       "type": "stars",
-      "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/tmc/32985/15490/wupr?spm=2021hudong.pk1111.tasklist-pentaprism.19933&disableNav=YES&wh_pid=main-403648&shop_router_ignore=true&fromToken=DM0N6oRUll9gLDJwf9gVIO9pU9UdU2U8&sceneId=2380&hd_from_id=100136&deliveryId=",
+      "urlScheme": `HTTPS://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES&shop_router_ignore=true&fromToken=${fromToken}&sceneId=2380&hd_from_id=100136&deliveryId=`,
       "textEnd": "str1&implId=str2",
       "item": ["18874 other_37_1_18874_0"]
     }

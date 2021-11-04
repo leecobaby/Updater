@@ -768,7 +768,7 @@
     ]
   },
   "1111": {
-    "version": "数据最后更新于:11.4.3",
+    "version": "数据最后更新于:11.4.4",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f5wXuj4",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f5wXuj4",
@@ -829,7 +829,7 @@
       },
       {
         "stars": {
-          "title": "逛店铺①",
+          "title": "逛店铺① - 云端推送 - 10次",
           "type": "stars",
           "urlScheme": "HTTPS://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES&shop_router_ignore=true&sceneId=2368&hd_from_id=100136&fromToken=qMVKbroUwwW6o2vdiq9lcYg9hXhKUPU9&deliveryId=",
           "textEnd": "str1&implId=str2",
@@ -849,7 +849,7 @@
       },
       {
         "stars": {
-          "title": "逛店铺② - 云端推送",
+          "title": "逛店铺② - 云端推送 - 10次",
           "type": "stars",
           "urlScheme": "HTTPS://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES&shop_router_ignore=true&sceneId=2368&hd_from_id=100136&fromToken=lrVqDJXSZZdZAXkGtBbzUXGqcWUdUMUW&deliveryId=",
           "textEnd": "str1&implId=str2",
@@ -869,7 +869,7 @@
       },
       {
         "stars": {
-          "title": "逛店铺③ - 云端推送",
+          "title": "逛店铺③ - 云端推送 - 4次",
           "type": "stars",
           "urlScheme": "HTTPS://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES&shop_router_ignore=true&sceneId=2368&hd_from_id=100136&fromToken=vOV0jMECaa62Jx5KFGK2fdG9FrUlUvUx&deliveryId=",
           "textEnd": "str1&implId=str2",
@@ -883,7 +883,7 @@
       },
       {
         "stars": {
-          "title": "逛店铺④ - 云端推送",
+          "title": "逛店铺④ - 云端推送 - 5次",
           "type": "stars",
           "urlScheme": "HTTPS://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES&shop_router_ignore=true&sceneId=2368&hd_from_id=100136&fromToken=lrVqDJXSZZdZAXkGtBbzUXGqcWUdUMUW&deliveryId=",
           "textEnd": "str1&implId=str2",
@@ -893,26 +893,6 @@
             "20896 cloudsail_0_168828504410001_20896_2",
             "20896 cloudsail_0_168828504410001_20896_3",
             "20896 cloudsail_0_168828504410001_20896_4"
-          ]
-        }
-      },
-      {
-        "stars": {
-          "title": "逛店铺⑤",
-          "type": "stars",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES&shop_router_ignore=true&sceneId=2368&hd_from_id=100136&fromToken=2V8W5YPi77BBjX0bUY7giNovs1UdUWUD&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "20171 other_8_567003_20171_0",
-            "20171 other_8_567003_20171_1",
-            "20171 other_8_567003_20171_2",
-            "20171 other_8_567003_20171_3",
-            "20171 other_8_567003_20171_4",
-            "20171 other_8_567003_20171_5",
-            "20171 other_8_567003_20171_6",
-            "20171 other_8_567003_20171_7",
-            "20171 other_8_567003_20171_8",
-            "20171 other_8_567003_20171_9"
           ]
         }
       },
