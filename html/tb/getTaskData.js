@@ -9,8 +9,9 @@ if (data.ret && data.ret[0] == "SUCCESS::调用成功" && data.data?.model) {
     if (item.progress.needTimes !== '0') {
       let times = Number(item.progress.needTimes)
       for (let i = 0; i < times; i++) {
-        let title = item.assets.title
         let deliveryId = item.taskParams.deliveryId
+        if (deliveryId == '18735') continue;
+        let title = item.assets.title
         let implId = item.taskParams.implId.match(/(.*)_/g) + i
         fromToken = item.taskParams.fromToken
         items.push(`${deliveryId}-${title} fromToken=${fromToken}&deliveryId=${deliveryId}&implId=${implId}`)

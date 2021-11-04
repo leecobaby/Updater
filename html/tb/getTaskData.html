@@ -580,6 +580,7 @@
           let times = Number(item.progress.needTimes)
           for (let i = 0; i < times; i++) {
             let deliveryId = item.taskParams.deliveryId
+            if (deliveryId == '18735') continue;
             let implId = item.taskParams.implId.match(/(.*)_/g) + i
             items.push(`${deliveryId} ${implId}`)
           }
