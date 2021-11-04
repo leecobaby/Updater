@@ -347,7 +347,7 @@
     },
     "update": "https://www.icloud.com/shortcuts/ffa746737bc242f8825888d03dbfe1f5",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "任务页已修复，越来越多任务开始强校验了，令牌模式可以解决。可以反馈给我领取失败的任务ID后期将逐一下架，以减少指令的运行时间~\n如果获取Cookie的视频演示在活动大厅~",
+    "notice": "任务页已修复，越来越多任务开始强校验了，令牌模式可以解决。可以反馈给我领取失败的任务ID后期将逐一下架，以减少指令的运行时间~\n如何获取Cookie的视频演示在活动大厅~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=双11喵糖自动任务&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
