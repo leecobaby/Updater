@@ -768,7 +768,7 @@
     ]
   },
   "1111": {
-    "version": "数据最后更新于:11.3.1",
+    "version": "数据最后更新于:11.4.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f5wXuj4",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f5wXuj4",
@@ -809,7 +809,7 @@
         "stars": {
           "title": "做主任务 - 部分任务异常不用理会",
           "type": "stars",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/2001/wupr?wh_pid=daily-260052&status_bar_transparent=true&spm=2021hudong.pk1111.tasklist-pentaprism.19941&disableNav=YES&prismTrace=19941&sourceType=other&sceneId=2368&hd_from_id=100136&fromToken=lrVqDJXSZZdZAXkGtBbzUXGqcWUdUMUW&deliveryId=",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/2001/wupr?wh_pid=daily-260052&status_bar_transparent=true&spm=2021hudong.pk1111.tasklist-pentaprism.19941&disableNav=YES&prismTrace=19941&sourceType=other&sceneId=2368&hd_from_id=100136&fromToken=2V8W5YPi77BBjX0bUY7giNovs1UdUWUD&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "19714 cloudsail_17_170990502440001_19714_0",
@@ -823,7 +823,17 @@
             "18721 other_56_509003_18721_0",
             "19000 ald.res.19312519_29_149754_19000_0",
             "20161 ald.res.19312519_3_149397_20161_0",
-            "19714 cloudsail_10_167837001650001_19714_0",
+            "19714 cloudsail_10_167837001650001_19714_0"
+          ]
+        }
+      },
+      {
+        "stars": {
+          "title": "逛店铺①",
+          "type": "stars",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/2001/wupr?wh_pid=daily-260052&status_bar_transparent=true&spm=2021hudong.pk1111.tasklist-pentaprism.19941&disableNav=YES&prismTrace=19941&sourceType=other&sceneId=2368&hd_from_id=100136&fromToken=qMVKbroUwwW6o2vdiq9lcYg9hXhKUPU9&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
             "20163 cloudsail_3_169185003470001_20163_0",
             "20163 cloudsail_3_169185003470001_20163_1",
             "20163 cloudsail_3_169185003470001_20163_2",
@@ -839,7 +849,7 @@
       },
       {
         "stars": {
-          "title": "逛店铺①",
+          "title": "逛店铺② - 云端推送",
           "type": "stars",
           "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/2001/wupr?wh_pid=daily-260052&status_bar_transparent=true&spm=2021hudong.pk1111.tasklist-pentaprism.19941&disableNav=YES&prismTrace=19941&sourceType=other&sceneId=2368&hd_from_id=100136&fromToken=lrVqDJXSZZdZAXkGtBbzUXGqcWUdUMUW&deliveryId=",
           "textEnd": "str1&implId=str2",
@@ -859,27 +869,7 @@
       },
       {
         "stars": {
-          "title": "逛店铺②",
-          "type": "stars",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/2001/wupr?wh_pid=daily-260052&status_bar_transparent=true&spm=2021hudong.pk1111.tasklist-pentaprism.19941&disableNav=YES&prismTrace=19941&sourceType=other&sceneId=2368&hd_from_id=100136&fromToken=lrVqDJXSZZdZAXkGtBbzUXGqcWUdUMUW&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "20171 other_8_567003_20171_0",
-            "20171 other_8_567003_20171_1",
-            "20171 other_8_567003_20171_2",
-            "20171 other_8_567003_20171_3",
-            "20171 other_8_567003_20171_4",
-            "20171 other_8_567003_20171_5",
-            "20171 other_8_567003_20171_6",
-            "20171 other_8_567003_20171_7",
-            "20171 other_8_567003_20171_8",
-            "20171 other_8_567003_20171_9"
-          ]
-        }
-      },
-      {
-        "stars": {
-          "title": "逛店铺③",
+          "title": "逛店铺③ - 云端推送",
           "type": "stars",
           "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/2001/wupr?wh_pid=daily-260052&status_bar_transparent=true&spm=2021hudong.pk1111.tasklist-pentaprism.19941&disableNav=YES&prismTrace=19941&sourceType=other&sceneId=2368&hd_from_id=100136&fromToken=lrVqDJXSZZdZAXkGtBbzUXGqcWUdUMUW&deliveryId=",
           "textEnd": "str1&implId=str2",
@@ -893,7 +883,7 @@
       },
       {
         "stars": {
-          "title": "逛店铺④",
+          "title": "逛店铺④ - 云端推送",
           "type": "stars",
           "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/2001/wupr?wh_pid=daily-260052&status_bar_transparent=true&spm=2021hudong.pk1111.tasklist-pentaprism.19941&disableNav=YES&prismTrace=19941&sourceType=other&sceneId=2368&hd_from_id=100136&fromToken=lrVqDJXSZZdZAXkGtBbzUXGqcWUdUMUW&deliveryId=",
           "textEnd": "str1&implId=str2",
@@ -903,6 +893,26 @@
             "20896 cloudsail_0_168828504410001_20896_2",
             "20896 cloudsail_0_168828504410001_20896_3",
             "20896 cloudsail_0_168828504410001_20896_4"
+          ]
+        }
+      },
+      {
+        "stars": {
+          "title": "逛店铺⑤",
+          "type": "stars",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/a/act/tmall/dailygroup/2001/wupr?wh_pid=daily-260052&status_bar_transparent=true&spm=2021hudong.pk1111.tasklist-pentaprism.19941&disableNav=YES&prismTrace=19941&sourceType=other&sceneId=2368&hd_from_id=100136&fromToken=2V8W5YPi77BBjX0bUY7giNovs1UdUWUD&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "20171 other_8_567003_20171_0",
+            "20171 other_8_567003_20171_1",
+            "20171 other_8_567003_20171_2",
+            "20171 other_8_567003_20171_3",
+            "20171 other_8_567003_20171_4",
+            "20171 other_8_567003_20171_5",
+            "20171 other_8_567003_20171_6",
+            "20171 other_8_567003_20171_7",
+            "20171 other_8_567003_20171_8",
+            "20171 other_8_567003_20171_9"
           ]
         }
       },
