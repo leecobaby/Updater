@@ -342,12 +342,13 @@
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
     "about": {
-      "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
+      "faq": "https://github.com/leecobaby/shortcuts/blob/master/TB.FAQ.md#%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96-cookie",
+      "video": "https://github.com/leecobaby/shortcuts/blob/master/TB.FAQ.md#%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96-cookie",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_sign#版本日志"
     },
     "update": "https://www.icloud.com/shortcuts/ffa746737bc242f8825888d03dbfe1f5",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "任务页已修复，越来越多任务开始强校验了，令牌模式可以解决。可以反馈给我领取失败的任务ID后期将逐一下架，以减少指令的运行时间~\n如何获取Cookie的视频演示在活动大厅~",
+    "notice": "任务页已修复，越来越多任务开始强校验了，令牌模式可以解决\n如何获取Cookie的视频演示在活动大厅~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=双11喵糖自动任务&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
@@ -355,10 +356,9 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 1.1至5日红包加码",
+      "hot": "🧧 11.5预售补贴手慢无",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
-      "otherTask": "任务全都异常才可运行",
       "help": "助力大厅已开放",
       "other": "有疑问看常见问题",
       "more": "🔥 11.5抢现金红包"
