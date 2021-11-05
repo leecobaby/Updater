@@ -10,7 +10,7 @@ if (data.ret && data.ret[0] == "SUCCESS::调用成功" && data.data?.model) {
       let times = Number(item.progress.needTimes)
       for (let i = 0; i < times; i++) {
         let deliveryId = item.taskParams.deliveryId
-        if (deliveryId == '18735') continue;
+        if (deliveryId == '18734' || deliveryId == '18735') continue;
         let title = item.assets.title
         let implId = item.taskParams.implId.match(/(.*)_/g) + i
         fromToken = item.taskParams.fromToken
