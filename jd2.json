@@ -527,7 +527,8 @@
     "pkHelpCode": "IgNWdiLGaPaAqdZqpd0QbcXZFPwE1VfQ9VPl2cARI1KWYjbV1EXeRSxZojc",
     "codeUrl": {
       "CryptoJS": "https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.js",
-      "JD_fruit": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_fruit.js"
+      "JD_fruit": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_fruit.js",
+      "checkCookie": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/checkCookie.js"
     },
     "api": {
       "isLogin": {
