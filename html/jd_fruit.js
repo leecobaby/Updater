@@ -614,7 +614,7 @@ function dealReturn (type, data) {
       }
       break;
     case 'browseAdTaskForFarm':
-      $.message = `测试 ${JSON.stringify(data)}`
+      // $.message = `测试 ${JSON.stringify(data)}`
       $.browseResult = data
       break;
     case 'browseAdTaskForFarmHandle':

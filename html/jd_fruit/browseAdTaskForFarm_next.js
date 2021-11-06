@@ -16,7 +16,7 @@ if ($.browseResult.code === '0') {
   if (!document.body.innerText) {
     $.callback = ''
     $.wait = 1
-    takeRequest('browseAdTaskForFarmHandle')
+    dealReturn('browseAdTaskForFarmHandle')
     document.write(JSON.stringify($))
   }
 } else {
