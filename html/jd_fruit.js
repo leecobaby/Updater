@@ -228,7 +228,7 @@ function browseAdTaskForFarm () {
     if (!document.body.innerText) {
       $.callback = ''
       $.wait = 1
-      dealReturn('browseAdTaskForFarmHandle')
+      dealReturn('browseAdTaskForFarmHandle', $.data)
       document.write(JSON.stringify($))
     }
   } else {
@@ -581,7 +581,7 @@ function dealReturn (type, data) {
   // 对 15.1 的特殊优化
   $.data = JSON.parse(data.d)
   data = $.data
-  type != 'browseAdTaskForFarm' && ($.data = {})
+  $.data = {}
   switch (type) {
     case 'initForFarm':
       if (data) {
