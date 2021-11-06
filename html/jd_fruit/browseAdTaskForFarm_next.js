@@ -2,7 +2,7 @@
 $.callback = ''
 dealReturn('browseAdTaskForFarm', $.data)
 if ($.browseResult.code === '0') {
-  $.wait = 8
+  $.wait = 6
   $.next = 1 // 覆盖前面的 0
   $.taskType = 1 // 领奖励
   $.callback = 'Func.request'
@@ -16,11 +16,7 @@ if ($.browseResult.code === '0') {
   if (!document.body.innerText) {
     $.callback = ''
     $.wait = 1
-    if ($.data.code === '0') {
-      $.message = `完成任务,获得${$.data?.amount}g💧`
-    } else {
-      $.message = `浏览任务结果: ${JSON.stringify(data)}`
-    }
+    takeRequest('browseAdTaskForFarmHandle')
     document.write(JSON.stringify($))
   }
 } else {

@@ -227,11 +227,7 @@ function browseAdTaskForFarm () {
     if (!document.body.innerText) {
       $.callback = ''
       $.wait = 1
-      if ($.data.code === '0') {
-        $.message = `完成任务，获得${$.data?.amount}g💧`
-      } else {
-        $.message = `浏览任务结果: ${JSON.stringify(data)}`
-      }
+      takeRequest('browseAdTaskForFarmHandle')
       document.write(JSON.stringify($))
     }
   } else {
@@ -593,7 +589,7 @@ function dealReturn (type, data) {
           $.success = 1
           $.message = `【好友互助码】:\n${$.farmInfo?.farmUserPro?.shareCode || '助力已满，获取助力码失败'}\n【已兑换水果】${$.farmInfo.farmUserPro?.winTimes}次`
         } else {
-          $.error = `【数据异常】请手动登录京东app查看此账号是否正常，Cookie是否正确且未过期 ，返回的数据: ${JSON.stringify($.farmInfo)} `
+          $.error = `【数据异常】请手动登录京东app查看是否已选择了水果种植，Cookie是否正确且未过期 ，返回的数据: ${JSON.stringify($.farmInfo)} `
         }
       } else {
         $.error = `服务器返回数据异常，请检查原因~`
@@ -619,6 +615,13 @@ function dealReturn (type, data) {
       break;
     case 'browseAdTaskForFarm':
       $.browseResult = data
+      break;
+    case 'browseAdTaskForFarmHandle':
+      if (data.code === '0') {
+        $.message = `完成任务，获得${data?.amount}g💧`
+      } else {
+        $.message = `浏览任务结果: ${JSON.stringify(data)}`
+      }
       break;
     case 'helpInvite':
       switch (data.helpResult?.code) {
