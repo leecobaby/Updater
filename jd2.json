@@ -570,7 +570,7 @@
       }
     },
     "controller": {
-      "callList": ["initForFarm", "treeState", "taskInitForFarm", "friendListInitForFarm"],
+      "callList": ["init", "initForFarm", "treeState", "taskInitForFarm", "friendListInitForFarm"],
       "taskList": [
         { "做签到任务": "signForFarm" },
         { "做浏览任务": "browseAdTaskForFarm" },
