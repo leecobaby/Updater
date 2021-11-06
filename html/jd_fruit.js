@@ -217,7 +217,6 @@ function browseAdTaskForFarm () {
     $.next = 1 // 覆盖前面的 0
     $.taskType = 1 // 领奖励
     $.callback = 'Func.request'
-    $.message = '测试'
     takeRequest('browseAdTaskForFarm')
     // return
     // 这里的逻辑是在 next 里面的，而 next 不是一个函数，所以不能使用 return 来中断
