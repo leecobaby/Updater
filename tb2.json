@@ -1481,9 +1481,9 @@
   "ele_dou": {
     "version": "数据最后更新于:11.6.2",
     "pv": {
-      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Ftb.ele.me%2Fwow%2Falsc%2Fmod%2Fd5275789de46503ba0908a9d%3Fe%3D1%26open_type%3Dminiapp%26inviterId%3D74f86c%26actId%3D1%26_ltracker_f%3Dhjb_app_grzx%26chInfo%3Dch_app_chsub_Photo5",
-      "alipay": "alipays://platformapi/startapp?appId=20000067&url=https%3A%2F%2Ftb.ele.me%2Fwow%2Falsc%2Fmod%2Fd5275789de46503ba0908a9d%3Fe%3D1%26open_type%3Dminiapp%26inviterId%3D74f86c%26actId%3D1%26_ltracker_f%3Dhjb_app_grzx%26chInfo%3Dch_app_chsub_Photo5",
-      "eleme": "eleme://web?url=https%3A%2F%2Ftb.ele.me%2Fwow%2Falsc%2Fmod%2Fd5275789de46503ba0908a9d%3Fe%3D1%26open_type%3Dminiapp%26inviterId%3D74f86c%26actId%3D1%26_ltracker_f%3Dhjb_app_grzx%26chInfo%3Dch_app_chsub_Photo5"
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f57BIpL%3Fsm%3D4560b2",
+      "alipay": "alipays://platformapi/startapp?appId=2021001110676437&page=pages/my/index",
+      "eleme": "eleme://userCenter"
     },
     "main": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -1506,6 +1506,16 @@
       "饿了么": "eleme"
     },
     "task": [
+      {
+        "eleme": {
+          "title": "领券",
+          "type": "other",
+          "activateUrl": "https://tb.ele.me/wow/alsc/mod/d5275789de46503ba0908a9d?e=1&open_type=miniapp&inviterId=74f86c&actId=1&_ltracker_f=hjb_app_grzx&chInfo=ch_app_chsub_Photo5",
+          "taskUrl": "https://m.tb.cn/h.fTf8DJQ",
+          "textEnd": "str1",
+          "item": ["1 1"]
+        }
+      },
       {
         "eleme": {
           "title": "逛逛任务",

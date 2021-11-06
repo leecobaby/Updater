@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let activateUrl = ''
+    let taskUrl = ''
+
+    let str1 = ''
+    let str2 = ''
+    let app = ''
+
+    activateUrl = activateUrl.replace('占位符1', str1)
+    activateUrl = activateUrl.replace('占位符2', str2)
+    taskUrl = taskUrl.replace('占位符1', str1)
+
+    document.write(JSON.stringify(urlScheme(app)))
+
+    function urlScheme(app) {
+      switch (app) {
+        case 'taobao':
+          activateUrl = 'taobao://m.taobao.com/tbopen/index.html?h5Url=' + encodeURIComponent(activateUrl)
+          taskUrl = 'taobao://m.taobao.com/tbopen/index.html?h5Url=' + encodeURIComponent(taskUrl)
+          break;
+        case 'alipay':
+          activateUrl = 'alipays://platformapi/startapp?appId=20000067&url=' + encodeURIComponent(activateUrl)
+          taskUrl = 'alipays://platformapi/startapp?appId=20000067&url=' + encodeURIComponent(taskUrl)
+          break;
+        case 'eleme':
+          activateUrl = 'eleme://web?url=' + encodeURIComponent(activateUrl)
+          taskUrl = 'eleme://web?url=' + encodeURIComponent(taskUrl)
+          break;
+      }
+      return { activateUrl, taskUrl }
+    }
+
+
+  </script>
+</body>
+
+</html>
