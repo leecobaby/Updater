@@ -217,6 +217,7 @@ function browseAdTaskForFarm () {
     $.next = 1 // 覆盖前面的 0
     $.taskType = 1 // 领奖励
     $.callback = 'Func.request'
+    $.message = '测试'
     takeRequest('browseAdTaskForFarm')
     // return
     // 这里的逻辑是在 next 里面的，而 next 不是一个函数，所以不能使用 return 来中断
@@ -231,7 +232,7 @@ function browseAdTaskForFarm () {
       document.write(JSON.stringify($))
     }
   } else {
-    $.message = `浏览任务结果: ${JSON.stringify(data)}`
+    $.message = `浏览任务结果: ${JSON.stringify($.data)}`
     document.write(JSON.stringify($))
   }
 }
@@ -695,7 +696,7 @@ function dealReturn (type, data) {
       }
       break
     default:
-      console.log(`未判断的异常${type}`);
+      $.error = `未判断的异常${type}`
   }
 }
 
