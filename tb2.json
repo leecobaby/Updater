@@ -1479,7 +1479,7 @@
     ]
   },
   "ele_dou": {
-    "version": "数据最后更新于:10.12.1",
+    "version": "数据最后更新于:11.6.2",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Ftb.ele.me%2Fwow%2Falsc%2Fmod%2Fd5275789de46503ba0908a9d%3Fe%3D1%26open_type%3Dminiapp%26inviterId%3D74f86c%26actId%3D1%26_ltracker_f%3Dhjb_app_grzx%26chInfo%3Dch_app_chsub_Photo5",
       "alipay": "alipays://platformapi/startapp?appId=20000067&url=https%3A%2F%2Ftb.ele.me%2Fwow%2Falsc%2Fmod%2Fd5275789de46503ba0908a9d%3Fe%3D1%26open_type%3Dminiapp%26inviterId%3D74f86c%26actId%3D1%26_ltracker_f%3Dhjb_app_grzx%26chInfo%3Dch_app_chsub_Photo5",
@@ -1514,13 +1514,18 @@
           "taskUrl": "https://tb.ele.me/wow/alsc/mod/156e0df0c951c793ab121f2e?missioncollectid=36&missionid=占位符1&taskfrom=a2ogi.15063444&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.3",
           "textEnd": "str1",
           "item": [
-            "2210003 PAGEVIEW",
-            "230003 PAGEVIEW",
+            "1034001 PAGEVIEW",
             "350001 PAGEVIEW",
+            "3046001 PAGEVIEW",
+            "3014001 PAGEVIEW",
+            "3012001 PAGEVIEW",
+            "1306001 PAGEVIEW",
+            "3018001 PAGEVIEW",
+            "3016001 PAGEVIEW",
+            "2938001 PAGEVIEW",
             "476001 PAGEVIEW",
+            "2484001 PAGEVIEW",
             "228003 PAGEVIEW",
-            "250003 PAGEVIEW",
-            "912001 PAGEVIEW",
             "342001 PAGEVIEW",
             "236002 PAGEVIEW",
             "1306001 PAGEVIEW",

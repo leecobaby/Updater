@@ -558,6 +558,11 @@ function getPostBody (type) {
 
 // 处理返回信息
 function dealReturn (type, data) {
+  if (!data.d) $.error = '接口返回数据为空，检查账号cookie是否过期或错误';
+  // 对 15.1 的特殊优化
+  $.data = JSON.parse(data.d)
+  data = $.data
+  type != 'browseAdTaskForFarm' && ($.data = {})
   switch (type) {
     case 'initForFarm':
       if (data) {
@@ -566,7 +571,7 @@ function dealReturn (type, data) {
           $.success = 1
           $.message = `【好友互助码】:\n${$.farmInfo?.farmUserPro?.shareCode || '助力已满，获取助力码失败'}\n【已兑换水果】${$.farmInfo.farmUserPro?.winTimes}次`
         } else {
-          $.error = `【数据异常】请手动登录京东app查看此账号是否正常，农场初始化数据: ${JSON.stringify($.farmInfo)} `
+          $.error = `【数据异常】请手动登录京东app查看此账号是否正常，Cookie是否正确且未过期 ，返回的数据: ${JSON.stringify($.farmInfo)} `
         }
       } else {
         $.error = `服务器返回数据异常，请检查原因~`
