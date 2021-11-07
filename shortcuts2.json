@@ -546,15 +546,15 @@
     }
   },
   "JD_fruit": {
-    "version": "1.0",
-    "update_log": "",
+    "version": "1.1",
+    "update_log": "- 更新 随机 UA 生成\n- 更新 开发者模式\n- 取消 前置助力功能，作为列表任务，指令设置里关闭助力后哪怕选中助力也无法助力\n- 兼容 优化 ios15.1 的运行（我任然不建议你升级 15.1,运行时长是原来的 20 倍）\n- 优化 判断 cookie 逻辑，容错逻辑\n- 优化 小屏手机的显示和提示",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_fruit#版本日志"
     },
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/2f9f2e6be6914cba8507c51ddf8afa62",
+    "update": "https://www.icloud.com/shortcuts/2d803e13f75e459e937cf0997a764889",
     "notice": "🧧 6/7日 10:00去往活动大厅瓜分60w专属红包！\n云端助力池正在建设中...",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-东东农场&input=text&text=task",
