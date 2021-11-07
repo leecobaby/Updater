@@ -420,7 +420,7 @@
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/154c6dcb7adf465dbdf2adfdb6cf0a49",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "在运行指令前请确保目标app已登录账号，支付宝，淘宝需要手动登录一次~\nios15第一次运行需要多次授权~",
+    "notice": "逛代码页为正常现象，请不要停止他~\nios15第一次运行需要多次授权~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=饿了么-饿小宝&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
@@ -428,12 +428,12 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 抢最高 8888 红包",
+      "hot": "🧧 红包每日抢",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 支付宝每日领红包"
+      "more": ""
     }
   },
   "AutoBox": {
