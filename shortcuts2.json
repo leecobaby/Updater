@@ -348,7 +348,7 @@
     },
     "update": "https://www.icloud.com/shortcuts/a2c78b549662411a83184e094462a0d2",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "越来越多任务开始强校验了，令牌模式可以解决，蚂蚁森林这种任务先手动做了，容易占着任务列表，影响令牌模式无法获取到新的任务数据。\n15系统更新或安装需要授权很多次不要漏了",
+    "notice": "越来越多任务开始强校验了，令牌模式可以解决，蚂蚁森林这种任务先手动做了，容易占着任务列表，影响令牌模式无法获取到新的任务数据。\n👑 王者争霸赛自动任务指令在活动大厅~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=双11喵糖自动任务&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
@@ -358,7 +358,7 @@
       "hongbao": "",
       "hot": "🧧 8-10日红包加码",
       "faq": "有疑问的请查看",
-      "set": "点击查看自动化操作",
+      "set": "可调整等待时长",
       "help": "助力大厅已开放",
       "other": "有疑问看常见问题",
       "more": "🔥 11.8抢现金红包"
