@@ -47,8 +47,8 @@
       }
     },
     "more": {
-      "🧧 抢最高 8888 超级红包": "taobao://m.tb.cn/h.fUVxFJD",
-      "🧧 现金红包-11.5": "taobao://m.tb.cn/h.fTDqGRt",
+      "🧧 超红每日抢": "taobao://m.tb.cn/h.fUVxFJD",
+      "🧧 现金红包-11.8": "taobao://m.tb.cn/h.fTLDg4Q",
       "👥 加入QQ京东情报群": "https://jq.qq.com/?_wv=1027&k=tx5Mzgh2",
       "👥 加入QQ淘宝情报群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=622340333&card_type=group&source=qrcode&jump_from=&auth=&authSig=RPqW9VSePIx4jWxGhYLvMvfdLkFPydHzo50qyVwmb9zhPjv7lF3HnSRF5WuJfjaX&source_id=2_40001",
       "👥 加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
@@ -112,7 +112,7 @@
     "automation_url": "shortcuts://run-shortcut?name=淘金币自动任务&input=text&text=task",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 抢最高 8888 红包",
+      "hot": "🧧 8-10日红包加码",
       "taskEnd": "剩余没完成的任务请运行",
       "faq": "有疑问的请查看",
       "set": "",
@@ -137,7 +137,7 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 抢最高 8888 红包",
+      "hot": "🧧 8-10日红包加码",
       "tjb": "请配合食用",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
@@ -161,7 +161,7 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 抢最高 8888 红包",
+      "hot": "🧧 8-10日红包加码",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
@@ -185,7 +185,7 @@
     "tip": {
       "hongbao": "每天领...",
       "surplus": "可快速完成任务...",
-      "hot": "🧧 抢最高 8888 红包",
+      "hot": "🧧 8-10日红包加码",
       "faq": "",
       "set": "点击查看自动化操作",
       "team": "可随机助力",
@@ -208,7 +208,7 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 抢最高 8888 红包",
+      "hot": "🧧 8-10日红包加码",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
@@ -232,12 +232,12 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 抢最高 8888 红包",
+      "hot": "🧧 8-10日红包加码",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 11.5抢现金红包"
+      "more": "🧧 11.8抢现金红包"
     }
   },
   "Qmxb": {
@@ -255,7 +255,7 @@
     "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 抢最高 8888 红包",
+      "hot": "🧧 8-10日红包加码",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
@@ -279,12 +279,12 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 抢最高 8888 红包",
+      "hot": "🧧 8-10日红包加码",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 11.5抢现金红包"
+      "more": "🧧 11.8抢现金红包"
     }
   },
   "1111zcj": {
@@ -303,12 +303,12 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 红包加码日...",
+      "hot": "🧧 8-10日红包加码",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🔥 11.5抢现金红包"
+      "more": "🔥 11.8抢现金红包"
     }
   },
   "1111ys": {
@@ -319,20 +319,20 @@
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/37db740153d449db8d5aecca327fa5e5",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "21日21:00 瓜分战队奖金~🧧\n已支持攒能量任务，助力池即将切换为攒能量助力~",
+    "notice": "🔥王者争霸赛开始了，瓜分千万奖池~\n已支持王者争霸赛浏览和助力任务~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=淘宝预售自动任务&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
-    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tb_zcj.png",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tb_wzzb.jpg",
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 红包加码日...",
+      "hot": "🧧 8-10日红包加码",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
-      "other": "💰 去活动页分钱了",
-      "more": "🔥 11.5抢现金红包"
+      "other": "王者争霸赛开始了",
+      "more": "🔥 11.8抢现金红包"
     }
   },
   "1111": {
@@ -356,12 +356,12 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 11.5预售补贴手慢无",
+      "hot": "🧧 8-10日红包加码",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "help": "助力大厅已开放",
       "other": "有疑问看常见问题",
-      "more": "🔥 11.5抢现金红包"
+      "more": "🔥 11.8抢现金红包"
     }
   },
   "ltao_duck": {
@@ -380,7 +380,7 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 抢最高 8888 红包",
+      "hot": "🧧 8-10日红包加码",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
@@ -404,7 +404,7 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 抢最高 8888 红包",
+      "hot": "🧧 8-10日红包加码",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
@@ -474,7 +474,7 @@
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/407764531450467e9f8359a972c6ec43",
-    "notice": "已更换架构，初步实现京东各类签到，其他任务后续会静默推送~\n🧧 20:00红包加码！",
+    "notice": "已更换架构，初步实现京东各类签到，其他任务后续会静默推送~\n🧧 10日20:00 重磅加码！",
     "video": "",
     "automation_url": "shortcuts://run-shortcut?name=京东-多合一签到&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd.png",
@@ -483,12 +483,12 @@
     "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_sign/",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 20:00红包加码",
+      "hot": "🧧 10日20:00 重磅加码",
       "faq": "有疑问的请查看",
       "set": "",
       "team": "",
       "other": "",
-      "more": "🧧 11.5抢现金红包"
+      "more": "🧧 11.8抢现金红包"
     }
   },
   "JD_zoo": {
@@ -555,7 +555,7 @@
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/2d803e13f75e459e937cf0997a764889",
-    "notice": "🧧 20:00红包加码\n云端助力池正在建设中...",
+    "notice": "🧧 10日20:00 重磅加码\n云端助力池正在建设中...",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-东东农场&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd2.jpeg",
@@ -564,12 +564,12 @@
     "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_fruit/",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 20:00红包加码",
+      "hot": "🧧 10日20:00 重磅加码",
       "faq": "有疑问的请查看",
       "set": "",
       "team": "",
       "other": "",
-      "more": "🧧 11.5抢现金红包"
+      "more": "🧧 11.8抢现金红包"
     }
   },
   "JD_travel": {
@@ -582,7 +582,7 @@
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/4cb840a5e97e47f7b89552f7f0d679c6",
-    "notice": "🧧 20:00红包加码\n大部分人都火爆了,可以只做店铺抽奖任务,做完20000币也是肉~",
+    "notice": "🧧 10日20:00 重磅加码\n大部分人都火爆了,可以只做店铺抽奖任务,做完20000币也是肉~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-双11环游记&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd.png",
@@ -591,7 +591,7 @@
     "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_travel/",
     "tip": {
       "log": "助力码在这",
-      "hot": "🧧 20:00红包加码",
+      "hot": "🧧 10日20:00 重磅加码",
       "faq": "有疑问的请查看",
       "set": "第一次用请授权",
       "help": "可以手动互助拉",
@@ -640,7 +640,7 @@
           "联盟红包-饿了么": "eleme://web?url=https%3A%2F%2Ftb.ele.me%2Fwow%2Falsc%2Fmod%2Fd5275789de46503ba0908a9d%3Fe%3D1%26open_type%3Dminiapp%26inviterId%3D74f86c%26actId%3D1%26_ltracker_f%3Dhjb_app_grzx%26chInfo%3Dch_app_chsub_Photo"
         }
       },
-      "🧧 现金红包 - 11.5开抢": "taobao://m.tb.cn/h.fTDqGRt"
+      "🧧 现金红包 - 11.8开抢": "taobao://m.tb.cn/h.fTLDg4Q"
     },
     "more2": {
       "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
