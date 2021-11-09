@@ -66,6 +66,20 @@ function cloudTip () {
 }
 
 /**
+ * 京东双11红包
+ */
+function getHongBao () {
+  $.callback = 'Func.request'
+  takeRequest('getHongBao');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('getHongBao', $.data)
+  document.write(JSON.stringify($))
+}
+
+/**
  * 京东京豆
  */
 function JingDongBean () {
@@ -271,6 +285,11 @@ function takeRequest (type) {
   let body = ``, url = ``;
   let myRequest = ``;
   switch (type) {
+    case 'getHongBao':
+      url = `https://api.m.jd.com/api?functionId=getCoupons&appid=u&_=${Date.now()}&loginType=2&body={%22platform%22:4,%22unionActId%22:%2231134%22,%22actId%22:%22${$.actId}%22,%22d%22:%22${rebateCode}%22,%22unionShareId%22:%22${shareId}%22,%22type%22:${type},%22eid%22:%22${$.eid}%22}&client=apple&clientVersion=8.3.6&h5st=undefined`
+      body = `functionId=signBeanIndex&appid=ld`
+      myRequest = getRequest(url, body);
+      break;
     case 'JingDongBean':
       url = 'https://api.m.jd.com/client.action'
       body = `functionId=signBeanIndex&appid=ld`
