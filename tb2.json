@@ -890,6 +890,20 @@
       },
       {
         "stars": {
+          "title": "逛店铺④ - 云端推送 - 四次",
+          "type": "stars",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES&shop_router_ignore=true&sceneId=2368&hd_from_id=100136&fromToken=vOV0jMECaa62Jx5KFGK2fdG9FrUlUvUx&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "21256 cloudsail_1_170839502350001_21256_0",
+            "21256 cloudsail_1_184063501680001_21256_1",
+            "21256 cloudsail_1_184063501680001_21256_2",
+            "21256 cloudsail_1_184063501680001_21256_3"
+          ]
+        }
+      },
+      {
+        "stars": {
           "title": "去往支付宝任务",
           "type": "stars",
           "urlScheme": "alipays://platformapi/startapp?appId=68687635&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fc%2F18orxwq9ap1c&ttb=always&titlePenetrate=YES&abv=NO&chInfo=TAOBAO_TASK",
