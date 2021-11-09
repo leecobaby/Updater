@@ -29,6 +29,31 @@
 //   回调完执行 next，视情况来清空 callback
 //   error 为错误信息，会终止当前账号在指令中的运行，直接运行输出log开始下一个账号或结束
 
+
+/**
+ * 初始化
+ */
+function init () {
+  // 处理助力码
+  if ($.inviteList) {
+    $.inviteList = Array.isArray($.inviteList) ? $.inviteList : [$.inviteList]
+    $.inviteList = $.inviteList.filter(v => v !== '')
+  } else {
+    $.inviteList = []
+  }
+
+  // 任务流程初始化
+  $.taskStep = 1
+
+  // 生成随机 UA UUID
+  $.uuid = randomString(40)
+  $.UA = `jdapp;iPhone;10.2.0;13.1.2;${$.uuid};M/5.0;network/wifi;ADID/;model/iPhone8,1;addressid/2308460611;appBuild/167853;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 13_1_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1;`
+
+  $.message = `本指令作为自动化方案开源分享，并不保证他带来的任何副作用，任何副作用请自行负责，如不同意请停止使用！`
+  document.write(JSON.stringify($))
+}
+
+
 /**
  * 云端推送提示
  */
@@ -639,4 +664,12 @@ function dealReturn (type, data) {
     default:
       console.log(`未判断的异常${type}`);
   }
+}
+
+function randomString (e) {
+  e = e || 32;
+  let t = "abcdef0123456789", a = t.length, n = "";
+  for (let i = 0; i < e; i++)
+    n += t.charAt(Math.floor(Math.random() * a));
+  return n
 }
