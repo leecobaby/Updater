@@ -25,7 +25,7 @@ if (data.ret && data.ret[0] == "SUCCESS::调用成功" && data.data?.model) {
 console.log(items);
 let task = {
   "1111": {
-    "version": "数据最后更新于:10.31.1",
+    "version": "数据最后更新于:11.9.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f6MJdVL",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f6MJdVL",
@@ -82,7 +82,12 @@ const firstTask = [
       "item": [
         "20904 cloudsail_1_171340004590001_20904_0",
         "20904 cloudsail_1_171340004590001_20904_1",
-        "20904 cloudsail_1_171340004590001_20904_2"
+        "20904 cloudsail_1_171340004590001_20904_2",
+        "21255 cloudsail_1_184063501680001_21255_0",
+        "21255 cloudsail_1_184063501680001_21255_1",
+        "21255 cloudsail_1_184063501680001_21255_2",
+        "21255 cloudsail_1_184063501680001_21255_3",
+        "19714 cloudsail_28_178266503710001_19714_0",
       ]
     }
   },
