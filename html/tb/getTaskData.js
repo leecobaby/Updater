@@ -4,8 +4,8 @@ const $ = {}
 const items = []
 // 共用与云端已送的 fromToken
 let fromToken = ''
-if (data.ret && data.ret[0] == "SUCCESS::调用成功" && data.data?.model) {
-  for (const item of data.data?.model) {
+if (data.ret && data.ret[0] == "SUCCESS::调用成功" && data.data && data.data.model) {
+  for (const item of data.data.model) {
     if (item.progress.needTimes !== '0') {
       let times = Number(item.progress.needTimes)
       for (let i = 0; i < times; i++) {

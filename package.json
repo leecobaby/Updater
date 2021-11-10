@@ -1,0 +1,28 @@
+{
+  "name": "updater",
+  "version": "1.0.0",
+  "description": "一个远程更新器，维护版本，云端数据存储",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d dist",
+    "safari": "babel babel -d dist",
+    "webpack": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/leecobaby/Updater.git"
+  },
+  "author": "Leeco",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "babel-loader": "^8.2.3",
+    "babel-preset-minify": "^0.5.1",
+    "core-js": "^3.19.1",
+    "webpack": "^5.63.0",
+    "webpack-cli": "^4.9.1"
+  }
+}

@@ -16,23 +16,6 @@
   </script>
   <script>
     const $ = {}
-
-
-    function getUrl(api, token, t, appKey, data) {
-      let sign = CryptoJS.MD5(token + '&' + t + '&' + appKey + '&' + data).toString()
-      console.log(sign);
-      let url = `https://h5api.m.tmall.com/h5/${api}/1.0/?jsv=2.6.1&appKey=${appKey}&t=${t}&sign=${sign}&api=${api}&v=1.0&timeout=5000&data=${encodeURIComponent(data)}`
-      return url
-    }
-
-    // const api = 'mtop.taobao.pentaprism.scene.query'
-    const api = 'mtop.taobao.pentaprism.scene.queryitem'
-    // const data = '{"sceneId":"2368"}'
-    const data = '{"deliveryId":"20536","hd_from_id":"100136","implId":"other_7_590010_20536_0","sceneId":"2368"}'
-    const token = '9e31abd5549f8f01e2a0625228c1e2cb'
-    const t = new Date().getTime()
-    const appKey = '12574478'
-    console.log(getUrl(api, token, t, appKey, data));
   </script>
 </body>
 
