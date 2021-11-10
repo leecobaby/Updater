@@ -48,7 +48,7 @@
     },
     "more": {
       "🧧 超红每日抢": "taobao://m.tb.cn/h.fUVxFJD",
-      "🧧 现金红包-11.8": "taobao://m.tb.cn/h.fTLDg4Q",
+      "🧧 现金红包-11.10": "taobao://m.tb.cn/h.fgSEQ3f",
       "👥 加入QQ京东情报群": "https://jq.qq.com/?_wv=1027&k=tx5Mzgh2",
       "👥 加入QQ淘宝情报群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=622340333&card_type=group&source=qrcode&jump_from=&auth=&authSig=RPqW9VSePIx4jWxGhYLvMvfdLkFPydHzo50qyVwmb9zhPjv7lF3HnSRF5WuJfjaX&source_id=2_40001",
       "👥 加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
@@ -237,7 +237,7 @@
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 11.8抢现金红包"
+      "more": "🧧 11.10抢现金红包"
     }
   },
   "Qmxb": {
@@ -284,7 +284,7 @@
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 11.8抢现金红包"
+      "more": "🧧 11.10抢现金红包"
     }
   },
   "1111zcj": {
@@ -308,7 +308,7 @@
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🔥 11.8抢现金红包"
+      "more": "🔥 11.10抢现金红包"
     }
   },
   "1111ys": {
@@ -332,7 +332,7 @@
       "set": "点击查看自动化操作",
       "team": "",
       "other": "王者争霸赛开始了",
-      "more": "🔥 11.8抢现金红包"
+      "more": "🔥 11.10抢现金红包"
     }
   },
   "1111": {
@@ -348,7 +348,7 @@
     },
     "update": "https://www.icloud.com/shortcuts/a2c78b549662411a83184e094462a0d2",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "越来越多任务开始强校验了，令牌模式可以解决，蚂蚁森林这种任务先手动做了，容易占着任务列表，影响令牌模式无法获取到新的任务数据。\n👑 王者争霸赛自动任务指令在活动大厅~",
+    "notice": "猜测没有做满红包任务的11日也有心愿奖，别放弃~\n🧧 活动大厅有指令专属红包，请关注~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=双11喵糖自动任务&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
@@ -361,7 +361,7 @@
       "set": "可调整等待时长",
       "help": "助力大厅已开放",
       "other": "有疑问看常见问题",
-      "more": "🔥 11.8抢现金红包"
+      "more": "🔥 11.10抢现金红包"
     }
   },
   "ltao_duck": {
@@ -474,7 +474,7 @@
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/407764531450467e9f8359a972c6ec43",
-    "notice": "已更换架构，初步实现京东各类签到，其他任务后续会静默推送~\n🧧 10日20:00 重磅加码！",
+    "notice": "已更换架构，初步实现京东各类签到，其他任务后续会静默推送~\n🧧 10日20:00 重磅加码，这两天活动大厅有专属红包请关注~",
     "video": "",
     "automation_url": "shortcuts://run-shortcut?name=京东-多合一签到&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd.png",
@@ -488,7 +488,7 @@
       "set": "",
       "team": "",
       "other": "",
-      "more": "🧧 11.8抢现金红包"
+      "more": "🧧 11.10抢现金红包"
     }
   },
   "JD_zoo": {
@@ -546,16 +546,16 @@
     }
   },
   "JD_fruit": {
-    "version": "1.1",
-    "update_log": "- 更新 随机 UA 生成\n- 更新 开发者模式\n- 取消 前置助力功能，作为列表任务，指令设置里关闭助力后哪怕选中助力也无法助力\n- 兼容 优化 ios15.1 的运行（我任然不建议你升级 15.1,运行时长是原来的 20 倍）\n- 优化 判断 cookie 逻辑，容错逻辑\n- 优化 小屏手机的显示和提示",
+    "version": "1.2",
+    "update_log": "- 修复 ios13.0-13.4 因 Safari 浏览器旧引擎不识别 ES2020+ 的语法糖带来的致命错误\n- 优化 获取词典的方案，代码兼容性及压缩，运行速度加快 20%\n- 兼容 ios15.1 系统，运行速度相比上一版本加快 1000%\n- 任然不建议你升级 15.1 系统，无法确定是否还存在不稳定因素",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_fruit#版本日志"
     },
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/2d803e13f75e459e937cf0997a764889",
-    "notice": "🧧 10日20:00 重磅加码\n云端助力池正在建设中...",
+    "update": "https://www.icloud.com/shortcuts/ef828c8eec4b49848b415309c359b5ac",
+    "notice": "🧧 10日20:00 重磅加码，这两天活动大厅有专属红包请关注~\n云端助力池正在建设中...",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-东东农场&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd2.jpeg",
@@ -569,7 +569,7 @@
       "set": "",
       "team": "",
       "other": "",
-      "more": "🧧 11.8抢现金红包"
+      "more": "🧧 11.10抢现金红包"
     }
   },
   "JD_travel": {
@@ -582,7 +582,7 @@
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/4cb840a5e97e47f7b89552f7f0d679c6",
-    "notice": "🧧 10日20:00 重磅加码\n大部分人都火爆了,可以只做店铺抽奖任务,做完20000币也是肉~",
+    "notice": "🧧 10日20:00 重磅加码，这两天活动大厅有专属红包请关注~\n大部分人都火爆了,可以只做店铺抽奖任务,做完20000币也是肉~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-双11环游记&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd.png",
@@ -640,7 +640,7 @@
           "联盟红包-饿了么": "eleme://web?url=https%3A%2F%2Ftb.ele.me%2Fwow%2Falsc%2Fmod%2Fd5275789de46503ba0908a9d%3Fe%3D1%26open_type%3Dminiapp%26inviterId%3D74f86c%26actId%3D1%26_ltracker_f%3Dhjb_app_grzx%26chInfo%3Dch_app_chsub_Photo"
         }
       },
-      "🧧 现金红包 - 11.8开抢": "taobao://m.tb.cn/h.fTLDg4Q"
+      "🧧 现金红包 - 11.10开抢": "taobao://m.tb.cn/h.fgSEQ3f"
     },
     "more2": {
       "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
