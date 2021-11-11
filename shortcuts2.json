@@ -546,8 +546,8 @@
     }
   },
   "JD_fruit": {
-    "version": "1.2",
-    "update_log": "- 修复 ios13.0-13.4 因 Safari 浏览器旧引擎不识别 ES2020+ 的语法糖带来的致命错误\n- 优化 获取词典的方案，代码兼容性及压缩，运行速度加快 20%\n- 兼容 ios15.1 系统，运行速度相比上一版本加快 1000%\n- 任然不建议你升级 15.1 系统，无法确定是否还存在不稳定因素",
+    "version": "1.3",
+    "update_log": "- 更新 增加 Scriptable 获取 Cookie 线路。一条线路获取 Cookie 一直无法用可以尝试切换到另一条线路获取 Cookie\n- 修复 跳转 Scriptable App 报错问题",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_fruit#版本日志"
@@ -555,7 +555,7 @@
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/ef828c8eec4b49848b415309c359b5ac",
-    "notice": "🧧 10日20:00 重磅加码，这两天活动大厅有专属红包请关注~\n云端助力池正在建设中...",
+    "notice": "🧧 一元购建设中...\n云端助力池正在建设中...",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-东东农场&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd2.jpeg",
@@ -566,10 +566,10 @@
       "hongbao": "",
       "hot": "🧧 0点必中红包！",
       "faq": "有疑问的请查看",
-      "set": "",
+      "set": "使用前先授权",
       "team": "",
       "other": "",
-      "more": "🧧 11.10抢现金红包"
+      "more": ""
     }
   },
   "JD_travel": {
