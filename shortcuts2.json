@@ -422,7 +422,7 @@
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
     "notice": "逛代码页为正常现象，请不要停止他~\nios15第一次运行需要多次授权~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
-    "automation_url": "shortcuts://run-shortcut?name=饿了么-饿小宝&input=text&text=task",
+    "automation_url": "shortcuts://run-shortcut?name=饿了么-自动领豆&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/eleme.png",
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
