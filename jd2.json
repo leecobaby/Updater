@@ -281,8 +281,9 @@
         { "领取阶段性水滴奖励": "gotStageAwardForFarm" },
         { "领取首次浇水奖励": "firstWaterTaskForFarm" },
         { "领取十次浇水奖励": "totalWaterTaskForFarm" },
-        { "做小鸭子游戏": "getFullCollectionReward" },
-        { "其他": "cloudTip" }
+        { "其他": "cloudTip" },
+        { "做小鸭子游戏 - 测试中": "getFullCollectionReward" },
+        { "水滴雨 - 测试中": "waterRainForFarm" }
       ]
     },
     "codeList": [
@@ -300,7 +301,8 @@
       "totalWaterTaskForFarm_next",
       "friendListInitForFarm_next",
       "gotThreeMealForFarm_next",
-      "getFullCollectionReward_next"
+      "getFullCollectionReward_next",
+      "waterRainForFarm_next"
     ]
   },
   "JD_travel": {

@@ -9,10 +9,7 @@
 // 到指令里运行需要注释掉
 // const $ = {}
 
-// $.inviteList = [];
-// $.pkInviteList = [];
-// $.secretpInfo = {};
-// $.innerPkInviteList = [];
+// 待开发 getAwardInviteFriend getExtraAward 
 
 let JD_API_HOST = `https://api.m.jd.com/client.action?functionId=`;
 $.Utils = Utils()
@@ -56,7 +53,8 @@ function init () {
  * 云端推送提示
  */
 function cloudTip () {
-  $.message = `其他功能和任务正在开发中，上线将自动推送到指令中，无需任何操作~`
+  // 用来退出任务列表，可把测试功能和正式功能做分割
+  $.error = `其他功能和任务正在开发中，上线将自动推送到指令中，无需任何操作~`
   document.write(JSON.stringify($))
 }
 
@@ -434,6 +432,29 @@ function getFullCollectionReward () {
 }
 
 /**
+ * 水滴雨
+ */
+function waterRainForFarm () {
+  let executeWaterRain = !$.farmTask.waterRainInit?.f;
+  if (executeWaterRain) {
+    if ($.farmTask.waterRainInit?.lastTime && Date.now() < ($.farmTask.waterRainInit.lastTime + 3 * 60 * 60 * 1000)) {
+      $.message = `【第${$.farmTask.waterRainInit.winTimes + 1}次水滴雨】未到时间，请${new Date($.farmTask.waterRainInit.lastTime + 3 * 60 * 60 * 1000).toLocaleTimeString()}再试`
+    } else {
+      $.callback = 'Func.request'
+      takeRequest('waterRainForFarm');
+      return
+
+      // next
+      $.callback = ''
+      dealReturn('waterRainForFarm', $.data)
+      document.write(JSON.stringify($))
+    }
+  } else {
+    $.message = '两次水滴雨任务已全部完成~'
+  }
+}
+
+/**
  * 提交请求信息
  */
 function takeRequest (type) {
@@ -498,9 +519,9 @@ function takeRequest (type) {
       otherUrl = `${JD_API_HOST}${type}&appid=wh5&body=${encodeURIComponent(`{"type":2,"version":6,"channel":2}`)}`
       myRequest = getRequest(`getFullCollectionReward`, body, 'POST', otherUrl);
       break;
-    case 'zoo_shopLotteryInfo':
-      body = `functionId=zoo_shopLotteryInfo&body={"shopSign":"${$.shopSign}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`zoo_shopLotteryInfo`, body);
+    case 'waterRainForFarm':
+      body = `{"type":1,"hongBaoTimes":100,"version":3}`;
+      myRequest = getRequest(`zoo_shopLotteryInfo`, body, 'GET');
       break;
     case 'zoo_bdCollectScore':
       body = getPostBody(type);
@@ -721,10 +742,15 @@ function dealReturn (type, data) {
     case 'getFullCollectionReward':
       $.taskStep++;
       if (data.code === '0') {
-        data.hasLimit ? $.message = `小鸭子游戏:${data.title}` : $.message = `${data.title}`
+        $.message = `${data.title}`
       } else if (data.code === '10') {
         $.taskStep = 11 // 跳出循环
         $.message = '【游戏失败】小鸭子游戏达到上限'
+      }
+      break
+    case 'waterRainForFarm':
+      if (data.code === '0') {
+        $.message = `【第${$.farmTask.waterRainInit.winTimes + 1}次水滴雨】获得${data.addEnergy}g💧`
       }
       break
     default:
