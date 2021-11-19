@@ -523,7 +523,7 @@ function takeRequest (type) {
       break;
     case 'waterRainForFarm':
       body = `{"type":1,"hongBaoTimes":100,"version":3}`;
-      myRequest = getRequest(`zoo_shopLotteryInfo`, body, 'GET');
+      myRequest = getRequest(`waterRainForFarm`, body, 'GET');
       break;
     case 'zoo_bdCollectScore':
       body = getPostBody(type);
