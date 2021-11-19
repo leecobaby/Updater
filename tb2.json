@@ -1569,7 +1569,18 @@
       "🧧 淘宝特价版新人0.1元购": "taobao://m.tb.cn/h.ffZx3Aq",
       "🔥 淘特厂家直营无差价": "taobao://m.tb.cn/h.fT5Y4a1"
     },
-
-    " Apple Store官方商城渠道链接 - 有概率缩短发货时间": "applestore://www.apple.com.cn/?afid=p239%7C22788&cid=aos-cn-aff-ir"
+    "🎯 活动入口页": {
+      "芭芭农场": "taobao://pages.tmall.com/wow/hdwk/act/2020nhj-single?wh_biz=tm&disableNav=YES",
+      "淘金币": "taobao://pages.tmall.com/wow/z/tmtjb/town/home?disableNav=YES",
+      "聚划算章鱼": "taobao://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?wh_pid=daily-192654&disableNav=YES",
+      "活力中心": "taobao://pages.tmall.com/wow/z/hdwk/hdsolution2/game2020?wh_biz=tm&disableNav=YES&disableProgress=YES",
+      "淘宝签到": "taobao://pages.tmall.com/wow/z/mit/hbqd/welfare4",
+      "天天领红包": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fan%2Ftmall%2Fuser-growth%2Fplay-tmall%3FdisableNav%3DYES"
+    },
+    " Apple Store官方商城渠道链接 - 有概率缩短发货时间": "applestore://www.apple.com.cn/?afid=p239%7C22788&cid=aos-cn-aff-ir",
+    "🛍 黑五全球大促 11.26": {
+      "亚马逊中国 - 促销实打实": "com.amazon.mobile.shopping.web://www.amazon.cn/blackfriday?ascsubtag=106689422x2376325959&tag=topcb1725-23",
+      "亚马逊中国 - 硬盘好价": "com.amazon.mobile.shopping.web://www.amazon.cn/?ascsubtag=106689422x1776331251&tag=topcb1725-23"
+    }
   }
 }
