@@ -439,6 +439,7 @@ function waterRainForFarm () {
   if (executeWaterRain) {
     if ($.farmTask.waterRainInit?.lastTime && Date.now() < ($.farmTask.waterRainInit.lastTime + 3 * 60 * 60 * 1000)) {
       $.message = `【第${$.farmTask.waterRainInit.winTimes + 1}次水滴雨】未到时间，请${new Date($.farmTask.waterRainInit.lastTime + 3 * 60 * 60 * 1000).toLocaleTimeString()}再试`
+      document.write(JSON.stringify($))
     } else {
       $.callback = 'Func.request'
       takeRequest('waterRainForFarm');
@@ -451,6 +452,7 @@ function waterRainForFarm () {
     }
   } else {
     $.message = '两次水滴雨任务已全部完成~'
+    document.write(JSON.stringify($))
   }
 }
 
@@ -751,6 +753,8 @@ function dealReturn (type, data) {
     case 'waterRainForFarm':
       if (data.code === '0') {
         $.message = `【第${$.farmTask.waterRainInit.winTimes + 1}次水滴雨】获得${data.addEnergy}g💧`
+      } else {
+        $.message = `水滴雨结果：${JSON.stringify(data)}`
       }
       break
     default:
