@@ -15,6 +15,7 @@
 // $.innerPkInviteList = [];
 
 let JD_API_HOST = `https://api.m.jd.com/client.action?functionId=`;
+$.Utils = Utils()
 
 /** 下方放 call 文本，来控制函数执行 **/
 
@@ -40,11 +41,11 @@ function init () {
     $.inviteList = []
   }
 
-  // 任务流程初始化
+  // 任务流程初始化 或 次数循环任务初始化
   $.taskStep = 1
 
   // 生成随机 UA UUID
-  $.uuid = randomString(40)
+  $.uuid = $.Utils.randomString(40)
   $.UA = `jdapp;iPhone;10.2.0;13.1.2;${$.uuid};M/5.0;network/wifi;ADID/;model/iPhone8,1;addressid/2308460611;appBuild/167853;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 13_1_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1;`
 
   $.message = `本指令作为自动化方案开源分享，并不保证他带来的任何副作用，任何副作用请自行负责，如不同意请停止使用！`
@@ -60,7 +61,7 @@ function cloudTip () {
 }
 
 /**
- * 初始化农场, 可获取果树及用户信息API
+ * 初始化农场, 可获取果树及用户信息API 还需优化
  */
 function initForFarm () {
   $.callback = 'Func.request'
@@ -255,8 +256,7 @@ function doTenWater () {
     $.callback = ''
     dealReturn('waterGoodForFarm', $.data)
     document.write(JSON.stringify($))
-  }
-  else {
+  } else {
     // 循环完成重新设置 to,call
     $.to = '', $.call.pop()
     $.message = `今日已完成10次浇水任务`
@@ -266,7 +266,7 @@ function doTenWater () {
 }
 
 /**
- * 领取阶段性水滴奖励
+ * 领取阶段性水滴奖励 可能存在问题，原型是每次浇水都会运行一次
  */
 function gotStageAwardForFarm () {
   if ($.waterResult?.waterStatus === 0 && $.waterResult?.treeEnergy === 10) {
@@ -303,7 +303,7 @@ function gotStageAwardForFarm () {
  * 领取首次浇水奖励
  */
 function firstWaterTaskForFarm () {
-  // 此处调用别的函数，并不会执行 next 所以需要再执行一次 next
+  // 此处调用别的函数，并不会执行调用函数里的 next 而是执行这里的 next,所以 next 逻辑要移过来
   taskInitForFarm()
   return
 
@@ -369,7 +369,7 @@ function gotThreeMealForFarm () {
 }
 
 /**
- * 给两个好友浇水
+ * 给两个好友浇水 还未上线
  */
 function waterFriendForFarm () {
   // 循环逻辑单独设置 to,call
@@ -408,12 +408,39 @@ function waterFriendForFarm () {
 }
 
 /**
+ * 做小鸭子游戏
+ */
+function getFullCollectionReward () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler'
+  $.call = ['getFullCollectionReward']
+
+  if ($.taskStep <= 10) {
+    $.callback = 'Func.request'
+    takeRequest('getFullCollectionReward');
+    return
+
+    // next
+    $.callback = ''
+    dealReturn('getFullCollectionReward', $.data)
+    document.write(JSON.stringify($))
+  } else if ($.friendList.friends?.length <= 0) {
+    // 循环完成重新设置 to,call
+    $.to = '', $.call.pop(), $.taskStep = 1
+    $.message = '小鸭子游戏已完成~'
+    document.write(JSON.stringify($))
+  }
+
+}
+
+/**
  * 提交请求信息
  */
 function takeRequest (type) {
   let { log, random } = $.signList?.shift() || {}
   let body = ``;
   let myRequest = ``;
+  let otherUrl = ``;
   switch (type) {
     case 'initForFarm':
       body = `body=${encodeURIComponent(JSON.stringify({ "version": 4 }))}&appid=wh5&clientVersion=9.1.0;`
@@ -467,9 +494,9 @@ function takeRequest (type) {
       body = `{"shareCode":${$.shareCode},"version":6,"channel":1}`;
       myRequest = getRequest(`waterFriendForFarm`, body, 'GET');
       break;
-    case 'wxTaskDetail':
-      body = `functionId=funny_getTaskDetail&body={"appSign":"2","channel":1,"shopSign":""}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`funny_getTaskDetail`, body);
+    case 'getFullCollectionReward':
+      otherUrl = `${JD_API_HOST}${type}&appid=wh5&body=${encodeURIComponent(`{"type":2,"version":6,"channel":2}`)}`
+      myRequest = getRequest(`getFullCollectionReward`, body, 'POST', otherUrl);
       break;
     case 'zoo_shopLotteryInfo':
       body = `functionId=zoo_shopLotteryInfo&body={"shopSign":"${$.shopSign}"}&client=wh5&clientVersion=1.0.0`;
@@ -527,7 +554,7 @@ function takeRequest (type) {
  * @param {string} method 请求方式
  * @returns 
  */
-function getRequest (type, body = {}, method = 'POST') {
+function getRequest (type, body = {}, method = 'POST', otherUrl) {
   let url = JD_API_HOST + type;
   if (type === 'listTask' || type === 'acceptTask') {
     url = `https://ms.jr.jd.com/gw/generic/hy/h5/m/${type}`;
@@ -535,6 +562,7 @@ function getRequest (type, body = {}, method = 'POST') {
   if (method === 'GET') {
     url = `${JD_API_HOST}${type}&appid=wh5&body=${encodeURIComponent(body)}`
   }
+  url = otherUrl || url
   const headers = {
     'Accept': `application/json, text/plain, */*`,
     'Origin': `https://h5.m.jd.com`,
@@ -583,7 +611,7 @@ function dealReturn (type, data) {
         $.farmInfo = data
         if ($.farmInfo.farmUserPro) {
           $.success = 1
-          $.message = `【好友互助码】:\n${$.farmInfo?.farmUserPro?.shareCode || '助力已满，获取助力码失败'}\n【已兑换水果】${$.farmInfo.farmUserPro?.winTimes}次`
+          $.message = `【你的好友互助码】:\n${$.farmInfo?.farmUserPro?.shareCode || '助力已满，获取助力码失败'}\n【已兑换水果】${$.farmInfo.farmUserPro?.winTimes}次`
         } else {
           $.error = `【数据异常】请手动登录京东app查看是否已选择了水果种植，Cookie是否正确且未过期 ，返回的数据: ${JSON.stringify($.farmInfo)} `
         }
@@ -690,15 +718,32 @@ function dealReturn (type, data) {
         $.message = '浇水失败：水滴不够'
       }
       break
+    case 'getFullCollectionReward':
+      $.taskStep++;
+      if (data.code === '0') {
+        data.hasLimit ? $.message = `小鸭子游戏:${data.title}` : $.message = `${data.title}`
+      } else if (data.code === '10') {
+        $.taskStep = 11 // 跳出循环
+        $.message = '【游戏失败】小鸭子游戏达到上限'
+      }
+      break
     default:
       $.error = `未判断的异常${type}`
   }
 }
 
-function randomString (e) {
-  e = e || 32;
-  let t = "abcdef0123456789", a = t.length, n = "";
-  for (let i = 0; i < e; i++)
-    n += t.charAt(Math.floor(Math.random() * a));
-  return n
+/**
+ * 工具类对象 - 写成函数封装形式，是想利用函数申明提前
+ * @returns object
+ */
+function Utils () {
+  return {
+    randomString (e) {
+      e = e || 32;
+      let t = "abcdef0123456789", a = t.length, n = "";
+      for (let i = 0; i < e; i++)
+        n += t.charAt(Math.floor(Math.random() * a));
+      return n
+    }
+  }
 }
