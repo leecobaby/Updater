@@ -1,11 +1,11 @@
 const path = require('path');
+const JsonMinimizerPlugin = require("json-minimizer-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  mode: 'production',             // production 生产模式 | development 开发模式
+  mode: 'development',             // production 生产模式 | development 开发模式
   entry: {
-    jd_sign: './html/jd_sign.js',
-    test: './html/test.js',
-    checkCookie: './html/checkCookie.js',
+    tb: './index.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -14,15 +14,27 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.json$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
-        }
       }
     ]
-  }
+  },
+  plugins: [
+    new CopyPlugin({
+      patterns: [
+        {
+          context: path.resolve(__dirname, ""),
+          from: "./tb2.json",
+        },
+      ],
+    }),
+  ],
+  optimization: {
+    minimize: true,
+    minimizer: [
+      // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
+      // `...`
+      new JsonMinimizerPlugin(),
+    ],
+  },
 };

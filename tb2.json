@@ -1,6 +1,6 @@
 {
   "Taojb": {
-    "version": "数据最后更新于:11.5.2",
+    "version": "数据最后更新于:11.18.1",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f63aAiO",
@@ -41,9 +41,7 @@
             "20442 cloudsail_16_181942504290001_20442_0",
             "19096 other_40_559006_19096_0",
             "15901 other_188_1_15901_0",
-            "19931 other_171_283005_19931_0",
             "17712 other_25_454012_17712_0",
-            "15974 other_4_308002_15974_0",
             "17435 other_5_472001_17435_0",
             "14578 other_121_289001_14578_0",
             "17542 cloudsail_46_152525002410001_17542_0",
@@ -1085,7 +1083,7 @@
     ]
   },
   "FarmSingle": {
-    "version": "数据最后更新于:10.31.1",
+    "version": "数据最后更新于:11.19.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f63aAiO",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f63aAiO",
@@ -1147,11 +1145,8 @@
             "11705 cloudsail_284_147490003950001_11705_0",
             "16847 other_58_424002_16847_0",
             "17304 other_40_476003_17304_0",
-            "19740 other_18_588001_19740_0",
             "18822 cloudsail_333_3168730831_18822_0",
-            "17734 cloudsail_73_177558002010001_17734_35",
-            "11640 other_333_307006_11640_0",
-            "12023 other_320_122012_12023_0"
+            "17734 cloudsail_73_177558002010001_17734_35"
           ]
         }
       },
@@ -1162,9 +1157,6 @@
           "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=1118&sourceType=other&hd_from_id=100085&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
-            "20712 cloudsail_7_177181504460001_20712_0",
-            "20712 cloudsail_7_177181504460001_20712_1",
-            "20712 cloudsail_7_177181504460001_20712_2",
             "8954 expo_333_75049_8954_0",
             "8954 expo_333_75049_8954_1",
             "8954 expo_333_75049_8954_2"
