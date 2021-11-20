@@ -542,6 +542,8 @@ function gotClockInGift () {
  * 签到 - 限时任务 theme 为关注 venderCoupon 为领券
  */
 function clockInFollowForFarm (type) {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler';
   $.call[$.call.length - 1] == 'clockInFollowForFarm' || $.call.push('clockInFollowForFarm')
 
   // 利用队列取代循环
