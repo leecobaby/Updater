@@ -1571,7 +1571,10 @@
     },
     "🎯 活动入口页": {
       "芭芭农场": "taobao://pages.tmall.com/wow/hdwk/act/2020nhj-single?wh_biz=tm&disableNav=YES",
-      "淘金币": "taobao://pages.tmall.com/wow/z/tmtjb/town/home?disableNav=YES",
+      "淘金币": {
+        "主页": "taobao://pages.tmall.com/wow/z/tmtjb/town/home?disableNav=YES",
+        "任务页（旧）": "taobao://pages.tmall.com/wow/z/tmtjb/town/task?wh_biz=tm&disableNav=YES"
+      },
       "聚划算章鱼": "taobao://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?wh_pid=daily-192654&disableNav=YES",
       "活力中心": "taobao://pages.tmall.com/wow/z/hdwk/hdsolution2/game2020?wh_biz=tm&disableNav=YES&disableProgress=YES",
       "淘宝签到": "taobao://pages.tmall.com/wow/z/mit/hbqd/welfare4",

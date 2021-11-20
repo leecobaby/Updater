@@ -7,7 +7,7 @@
  */
 
 // 到指令里运行需要注释掉
-// const $ = {}
+const $ = {}
 
 // 待开发 getAwardInviteFriend getExtraAward turntableFarm
 
@@ -512,6 +512,7 @@ function doSignTask () {
 function clockInForFarm () {
   $.call[$.call.length - 1] == 'clockInForFarm' || $.call.push('clockInForFarm')
   $.callback = 'Func.request'
+  $.message = '开始签到'
   takeRequest('clockInForFarm');
   return
 
@@ -558,6 +559,7 @@ function clockInFollowForFarm (type) {
   if (!$.oneItem.hadGot) { document.write(JSON.stringify($)); return; }
 
   $.callback = 'Func.request'
+  $.message = '开始限时任务'
   takeRequest('clockInFollowForFarm1');
   return
 
