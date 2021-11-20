@@ -481,7 +481,8 @@ function doSignTask () {
   $.call = ['doSignTask']
 
   if ($.clockInInit.code === '0') {
-    if (!$.clockInInit.todaySigned) {
+    if (!$.clockInInit.todaySigned && $.call[$.call.length - 1] !== 'clockInForFarm') {
+      // 这里加一个 $.call 的判断，防止前两条件满足时无限循环这一步
       // 签到得水滴
       clockInForFarm()
       return
