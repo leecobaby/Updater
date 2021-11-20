@@ -546,16 +546,16 @@
     }
   },
   "JD_fruit": {
-    "version": "1.3",
-    "update_log": "- 更新 增加 Scriptable 获取 Cookie 线路。一条线路获取 Cookie 一直无法用可以尝试切换到另一条线路获取 Cookie\n- 修复 跳转 Scriptable App 报错问题",
+    "version": "1.4",
+    "update_log": "- 更新 优化 15.1 运行速度，加快 500%\n- 更新 兼容多语言环境，修复活动大厅\n- 更新 开放助力功能，云端助力池建设中...\n- 更新 云端任务逻辑细节和功能",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_fruit#版本日志"
     },
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/0de42d10e2f64011bf2be125a8fc37b0",
-    "notice": "🧧 一元购建设中...\n云端助力池正在建设中...",
+    "update": "https://www.icloud.com/shortcuts/ff0c227f189a4342be58f060e8e658a6",
+    "notice": "黑五来临，可关注活动大厅获取动态信息~\n云端助力池正在建设中...",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-东东农场&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd2.jpeg",
@@ -564,7 +564,7 @@
     "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_fruit/",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 0点必中红包！",
+      "hot": "增加活动入口页",
       "faq": "有疑问的请查看",
       "set": "使用前先授权",
       "team": "",
