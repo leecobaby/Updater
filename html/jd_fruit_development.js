@@ -7,7 +7,7 @@
  */
 
 // 到指令里运行需要注释掉
-const $ = {}
+// const $ = {}
 
 // 待开发 getAwardInviteFriend getExtraAward turntableFarm
 
