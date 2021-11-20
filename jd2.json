@@ -283,7 +283,9 @@
         { "领取十次浇水奖励": "totalWaterTaskForFarm" },
         { "其他": "cloudTip" },
         { "做小鸭子游戏 - 测试中": "getFullCollectionReward" },
-        { "水滴雨 - 测试中": "waterRainForFarm" }
+        { "水滴雨 - 测试中": "waterRainForFarm" },
+        { "获取签到活动信息 - 测试中": "clockInInitForFarm" },
+        { "做签到活动任务 - 测试中": "doSignTask" }
       ]
     },
     "codeList": [
@@ -302,7 +304,12 @@
       "friendListInitForFarm_next",
       "gotThreeMealForFarm_next",
       "getFullCollectionReward_next",
-      "waterRainForFarm_next"
+      "waterRainForFarm_next",
+      "clockInInitForFarm_next",
+      "clockInForFarm_next",
+      "gotClockInGift_next",
+      "clockInFollowForFarm_next",
+      "clockInFollowForFarm_next_next"
     ]
   },
   "JD_travel": {

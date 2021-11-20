@@ -9,7 +9,7 @@
 // 到指令里运行需要注释掉
 // const $ = {}
 
-// 待开发 getAwardInviteFriend getExtraAward 
+// 待开发 getAwardInviteFriend getExtraAward turntableFarm
 
 let JD_API_HOST = `https://api.m.jd.com/client.action?functionId=`;
 $.Utils = Utils()
@@ -456,6 +456,134 @@ function waterRainForFarm () {
   }
 }
 
+
+/**
+ * 获取签到活动信息
+ */
+function clockInInitForFarm () {
+  $.callback = 'Func.request'
+  takeRequest('clockInInitForFarm');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('clockInInitForFarm', $.data)
+  document.write(JSON.stringify($))
+}
+
+/**
+ * 做签到活动任务
+ */
+function doSignTask () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler';
+  $.call = ['doSignTask']
+
+  if ($.clockInInit.code === '0') {
+    if (!$.clockInInit.todaySigned) {
+      // 签到得水滴
+      clockInForFarm()
+      return
+    } else if ($.clockInInit.todaySigned && $.clockInInit.totalSigned === 7 && $.call[$.call.length - 1] !== 'gotClockInGift') {
+      // 这里加一个 $.call 的判断，防止前两条件满足时无限循环这一步
+      // 领取惊喜礼包38g水滴
+      gotClockInGift();
+      return
+    }
+
+    // 到这里其实就已经不用循环了，则弹出
+    $.to = '', $.call.pop()
+    if ($.clockInInit.themes && $.clockInInit.themes.length > 0) {
+      // 限时关注得水滴
+      clockInFollowForFarm('theme');
+    } else if ($.clockInInit.venderCoupons && $.clockInInit.venderCoupons.length > 0) {
+      // 限时领券得水滴
+      clockInFollowForFarm('venderCoupon')
+    }
+  } else {
+    $.to = '', $.call.pop()
+    document.write(JSON.stringify($))
+  }
+}
+
+/**
+ * 做连续签到
+ */
+function clockInForFarm () {
+  $.call[$.call.length - 1] == 'clockInForFarm' || $.call.push('clockInForFarm')
+  $.callback = 'Func.request'
+  takeRequest('clockInForFarm');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop() // 只调用一次的函数需要及时弹出
+  dealReturn('clockInForFarm', $.data)
+}
+
+/**
+ * 签到 - 领取惊喜礼包
+ */
+function gotClockInGift () {
+  $.call[$.call.length - 1] == 'gotClockInGift' || $.call.push('gotClockInGift')
+  $.callback = 'Func.request'
+  takeRequest('gotClockInGift');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop() // 只调用一次的函数需要及时弹出
+  dealReturn('gotClockInGift', $.data)
+  document.write(JSON.stringify($))
+}
+
+/**
+ * 签到 - 限时任务 theme 为关注 venderCoupon 为领券
+ */
+function clockInFollowForFarm (type) {
+  $.call[$.call.length - 1] == 'clockInFollowForFarm' || $.call.push('clockInFollowForFarm')
+
+  // 利用队列取代循环
+  $.oneItem = $.clockInInit.themes.shift()
+  $.oneItemType = type
+  if (!$.oneItem) {
+    // 循环完成重新设置 to,call
+    $.to = '', $.call.pop()
+    $.message = ` 限时任务已全都完成~`
+    document.write(JSON.stringify($))
+    return
+  }
+
+  // 关注过的则跳出
+  if (!$.oneItem.hadGot) { document.write(JSON.stringify($)); return; }
+
+  $.callback = 'Func.request'
+  takeRequest('clockInFollowForFarm1');
+  return
+
+  // next
+  $.callback = ''
+  if ($.data.code === '0') {
+    $.next = 1 // 覆盖前面的 0
+    $.callback = 'Func.request'
+    takeRequest('clockInFollowForFarm2');
+    // return
+    // 这里的逻辑是在 next 里面的，而 next 不是一个函数，所以不能使用 return 来中断
+
+    // 对于 next next 这种嵌套需要单独隔离，只在运行到的时候调用，判断是否有页面内容为好的方式
+
+    // next next
+    if (!document.body.innerText) {
+      $.callback = ''
+      dealReturn('clockInFollowForFarm2', $.data)
+      document.write(JSON.stringify($))
+    }
+  } else {
+    document.write(JSON.stringify($))
+  }
+}
+
+
 /**
  * 提交请求信息
  */
@@ -525,25 +653,25 @@ function takeRequest (type) {
       body = `{"type":1,"hongBaoTimes":100,"version":3}`;
       myRequest = getRequest(`waterRainForFarm`, body, 'GET');
       break;
-    case 'zoo_bdCollectScore':
-      body = getPostBody(type);
-      myRequest = getRequest(`zoo_bdCollectScore`, body);
+    case 'clockInInitForFarm':
+      body = `{}`;
+      myRequest = getRequest(`clockInInitForFarm`, body, 'GET');
       break;
-    case 'qryCompositeMaterials':
-      body = `functionId=qryCompositeMaterials&body={"qryParam":"[{\\"type\\":\\"advertGroup\\",\\"mapTo\\":\\"resultData\\",\\"id\\":\\"05371960\\"}]","activityId":"2s7hhSTbhMgxpGoa9JDnbDzJTaBB","pageId":"","reqSrc":"","applyKey":"jd_star"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`qryCompositeMaterials`, body);
+    case 'clockInForFarm':
+      body = `{"type":1}`;
+      myRequest = getRequest(`clockInForFarm`, body, 'GET');
       break;
-    case 'zoo_boxShopLottery':
-      body = `functionId=zoo_boxShopLottery&body={"shopSign":"${$.shopSign}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`zoo_boxShopLottery`, body);
+    case 'gotClockInGift':
+      body = `{"type":2}`;
+      myRequest = getRequest(`clockInForFarm`, body, 'GET');
       break;
-    case `zoo_wishShopLottery`:
-      body = `functionId=zoo_wishShopLottery&body={"shopSign":"${$.shopSign}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`zoo_boxShopLottery`, body);
+    case `clockInFollowForFarm1`:
+      body = `{"id":${$.oneItem.id},"type":"${$.oneItemType}","step":"1"}`;
+      myRequest = getRequest(`clockInFollowForFarm`, body, 'GET');
       break;
-    case `zoo_myMap`:
-      body = `functionId=zoo_myMap&body={}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`zoo_myMap`, body);
+    case `clockInFollowForFarm2`:
+      body = `{"id":${$.oneItem.id},"type":"${$.oneItemType}","step":"2"}`;
+      myRequest = getRequest(`clockInFollowForFarm`, body, 'GET');
       break;
     case 'zoo_getWelfareScore':
       body = getPostBody(type);
@@ -755,6 +883,34 @@ function dealReturn (type, data) {
         $.message = `【第${$.farmTask.waterRainInit.winTimes + 1}次水滴雨】获得${data.addEnergy}g💧`
       } else {
         $.message = `水滴雨结果：${JSON.stringify(data)}`
+      }
+      break
+    case 'clockInInitForFarm':
+      $.clockInInit = data
+      break
+    case 'clockInForFarm':
+      if (data.code === '0') {
+        $.message = `【第${data.signDay}天签到】获得${data.amount}g💧`
+        if (data.signDay === 7) {
+          //可以领取惊喜礼包
+          $.next = 0 // 衔接下一个函数前，重置 next 防止获取 next 失败
+          gotClockInGift();
+        } else {
+          document.write(JSON.stringify($))
+        }
+      } else {
+        $.message = `签到结果：${JSON.stringify(data)}`
+        document.write(JSON.stringify($))
+      }
+      break
+    case 'gotClockInGift':
+      if (data.code === '0') {
+        $.message = `【惊喜礼包】获得${data.amount}g💧`
+      }
+      break
+    case 'clockInFollowForFarm2':
+      if (data.code === '0') {
+        $.message = `【限时任务】${item.name}，获得水滴${data.amount}g💧`
       }
       break
     default:
