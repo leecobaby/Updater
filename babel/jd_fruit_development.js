@@ -558,7 +558,7 @@ function clockInFollowForFarm (type) {
   }
 
   // 关注过的则跳出
-  if (!$.oneItem.hadGot) { document.write(JSON.stringify($)); return; }
+  if ($.oneItem.hadGot) { document.write(JSON.stringify($)); return; }
 
   $.callback = 'Func.request'
   $.message = '开始限时任务'
