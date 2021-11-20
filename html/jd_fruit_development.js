@@ -548,7 +548,7 @@ function clockInFollowForFarm (type) {
 
   // 利用队列取代循环
   $.oneItem = $.clockInInit.themes.shift()
-  $.oneItemType = type
+  $.oneItemType = $.oneItemType || type
   if (!$.oneItem) {
     // 循环完成重新设置 to,call
     $.to = '', $.call.pop()
