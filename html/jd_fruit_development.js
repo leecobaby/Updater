@@ -891,6 +891,7 @@ function dealReturn (type, data) {
       break
     case 'clockInInitForFarm':
       $.clockInInit = data
+      $.clockInInit.feeds = null
       break
     case 'clockInForFarm':
       if (data.code === '0') {
