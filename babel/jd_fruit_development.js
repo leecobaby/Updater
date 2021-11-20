@@ -891,6 +891,8 @@ function dealReturn (type, data) {
       break
     case 'clockInInitForFarm':
       $.clockInInit = data
+      // 压缩数据，加快快捷指令运行
+      $.data = null
       $.clockInInit.feeds = null
       break
     case 'clockInForFarm':
