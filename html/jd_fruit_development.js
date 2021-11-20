@@ -917,7 +917,7 @@ function dealReturn (type, data) {
       break
     case 'clockInFollowForFarm2':
       if (data.code === '0') {
-        $.message = `【限时任务】${item.name}，获得水滴${data.amount}g💧`
+        $.message = `【限时任务】${$.oneItem.name}，获得水滴${data.amount}g💧`
       }
       break
     default:
