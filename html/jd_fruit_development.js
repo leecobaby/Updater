@@ -125,7 +125,8 @@ function help () {
   $.inviteList = Array.isArray($.inviteList) ? $.inviteList : [$.inviteList]
 
   $.inviteId = $.inviteList.shift()
-  if (!$.inviteId || $.selfHelpMax) {
+  if (!$.setHelp || !$.inviteId || $.selfHelpMax) {
+    !$.setHelp && ($.message = '你在指令设置了关闭助力，则不执行助力任务')
     // 循环完成重新设置 to,call
     $.to = '', $.call.pop()
     document.write(JSON.stringify($))
@@ -561,7 +562,6 @@ function clockInFollowForFarm (type) {
   if ($.oneItem.hadGot) { document.write(JSON.stringify($)); return; }
 
   $.callback = 'Func.request'
-  $.message = '开始限时任务'
   takeRequest('clockInFollowForFarm1');
   return
 
