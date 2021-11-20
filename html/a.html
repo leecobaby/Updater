@@ -12,20 +12,234 @@
   <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.js"></script>
   <script src="./jd_fruit_development.js"></script>
   <script>
-    $.data = { "code": "0", "f": true, "totalSigned": 1, "gotClockInGift": false, "myFollowThemeConfigTimes": 0, "message": null, "todaySigned": true, "themes": [{ "advertId": "5001584216", "image": "https://m.360buyimg.com/babel/jfs/t1/164997/38/7992/28067/6038bb8dEe9208ca7/e38374fea9d11058.png", "id": "96", "adDesc": "小样低至1元兑", "name": "美妆馆", "link": "https://pro.m.jd.com/mall/active/2kmaPNrGDNYo1LKwYtRoaSmsgbj6/index.html?babelChannel=dongdongnongchang", "hadGot": false, "hadFollow": false, "filterFlag": false }, { "advertId": "5001584217", "image": "https://m.360buyimg.com/babel/jfs/t1/197331/33/15598/27068/61824c82Ebaaf773b/f714e8a67bebe3e2.png", "id": "593", "adDesc": "免费试用小家电", "name": "京东小家电馆", "link": "https://prodev.m.jd.com/mall/active/3uvPyw1pwHARGgndatCXddLNUxHw/index.html?babelChannel=ttt18", "hadGot": false, "hadFollow": false, "filterFlag": false }, { "advertId": "5001584218", "image": "https://m.360buyimg.com/babel/jfs/t1/210885/26/8486/13709/6188b862E7b0b8e71/f1147704a2cbec26.png", "id": "482", "adDesc": "瓜分亿万京豆", "name": "分京豆", "link": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"jdreactcommon\",\"modulename\":\"JDReactSowAndReap\",\"appname\":\"JDReactSowAndReap\",\"ishidden\":true,\"param\":{\"transparentenable\":true,\"source\":\"ncguanzhurn\"}}", "hadGot": false, "hadFollow": false, "filterFlag": false }], "statisticsTimes": null, "sysTime": 1637414285866, "feeds": null, "clockInConfig": { "advertId": "7801490022", "signAward": 10, "surpriseType": "water", "minSurpriseAward": 20, "maxSurpriseAward": 26, "time": 5, "remindTime": 30, "followAward": 2, "followLimit": 3, "followTime": 5, "couponAward": 2, "couponsLimit": 6 }, "isSignRemind": false, "venderCoupons": [] }
+    $.farmTask = {
+      "allTaskFinished": false,
+      "code": "0",
+      "signInit": {
+        "signEnergyEachAmount": "10",
+        "f": true,
+        "totalSigned": 1,
+        "signEnergyAmounts": [
+          "5",
+          "10",
+          "15",
+          "20",
+          "25"
+        ],
+        "todaySigned": true
+      },
+      "gotBrowseTaskAdInit": {
+        "f": false,
+        "userBrowseTaskAds": [
+          {
+            "advertId": "0501592308",
+            "mainTitle": "新人首单低至0.1元包邮",
+            "subTitle": "浏览6秒，奖励5g水滴，每天1次",
+            "wechatPic": "https://m.360buyimg.com/babel/jfs/t1/49866/31/17366/21121/6136d7f1E0f9c876d/edb345a1fbff1c59.png",
+            "link": "https://pro.m.jd.com/mall/active/tEuziTfkH9USTCpGstvttG2VxAu/index.html?babelChannel=ttt4",
+            "picurl": "https://m.360buyimg.com/babel/jfs/t1/49866/31/17366/21121/6136d7f1E0f9c876d/edb345a1fbff1c59.png",
+            "wechatLink": "https://pro.m.jd.com/mall/active/tEuziTfkH9USTCpGstvttG2VxAu/index.html?babelChannel=ttt4",
+            "wechatMain": "新人首单低至0.1元包邮",
+            "wechatSub": "浏览6秒，奖励5g水滴，每天1次",
+            "type": "h5",
+            "reward": 5,
+            "limit": 1,
+            "time": 6,
+            "hadGotTimes": 0,
+            "hadFinishedTimes": 0
+          },
+          {
+            "advertId": "0501592309",
+            "mainTitle": "领25.74满减券  人人有红包",
+            "subTitle": "浏览6秒，奖励5g水滴，每天1次",
+            "wechatPic": "https://m.360buyimg.com/babel/jfs/t1/171250/10/22428/21344/61851521E2459f94a/9fd5f0fc394c6ea9.png",
+            "link": "https://u.jr.jd.com/uc-fe-wxgrowing/all-user-template/index/?channelLv=20211027110938BxB5Kt",
+            "picurl": "https://m.360buyimg.com/babel/jfs/t1/163801/20/11617/18144/6048a365E27edb333/638c4448e4692c48.png",
+            "wechatLink": "https://pro.m.jd.com/wq/active/3iq3s1euRwScbxQJj7AUW5Z944ZD/index.html",
+            "wechatMain": "去抢男装低至9.9元",
+            "wechatSub": "浏览6秒，奖励5g水滴，每天1次",
+            "type": "h5",
+            "reward": 5,
+            "limit": 1,
+            "time": 6,
+            "hadGotTimes": 0,
+            "hadFinishedTimes": 0
+          },
+          {
+            "advertId": "0501592311",
+            "mainTitle": "99元抢智能按摩椅",
+            "subTitle": "浏览6秒，奖励5g水滴，每天1次",
+            "wechatPic": "https://m.360buyimg.com/babel/jfs/t1/115202/1/20446/22504/61975b26Eac20a409/e17ea12682c96f46.png",
+            "link": "https://pro.m.jd.com/mall/active/3B1JZNpJhBXgCgjEGzBoUWZeDpbP/index.html",
+            "picurl": "https://m.360buyimg.com/babel/jfs/t1/115202/1/20446/22504/61975b26Eac20a409/e17ea12682c96f46.png",
+            "wechatLink": "https://pro.m.jd.com/mall/active/3B1JZNpJhBXgCgjEGzBoUWZeDpbP/index.html",
+            "wechatMain": "99元抢智能按摩椅",
+            "wechatSub": "浏览6秒，奖励5g水滴，每天1次",
+            "type": "h5",
+            "reward": 5,
+            "limit": 1,
+            "time": 6,
+            "hadGotTimes": 0,
+            "hadFinishedTimes": 0
+          },
+          {
+            "advertId": "0501592312",
+            "mainTitle": "农场专属百万红包",
+            "subTitle": "浏览6秒，奖励5g水滴，每天1次",
+            "wechatPic": "https://m.360buyimg.com/babel/jfs/t1/187385/27/13603/20339/60f17a0bE70c9aee3/4f603371fc6b3570.png",
+            "link": "/pages/market/market2/index?id=33621",
+            "picurl": "https://m.360buyimg.com/babel/jfs/t1/202894/33/5301/20339/6136d4e7E8a18fdd4/efd0bc109053e46c.png",
+            "wechatLink": "/pages/market/market2/index?id=33621",
+            "wechatMain": "农场专属百万红包",
+            "wechatSub": "浏览6秒，奖励5g水滴，每天1次",
+            "type": "pages",
+            "reward": 5,
+            "limit": 1,
+            "time": 0,
+            "appLinkType": "pages",
+            "appLinkId": "gh_45b306365c3d",
+            "hadGotTimes": 0,
+            "hadFinishedTimes": 0
+          },
+          {
+            "advertId": "0501592313",
+            "mainTitle": "9.9元包邮直降",
+            "subTitle": "奖励5g水滴，每天1次",
+            "wechatPic": "https://m.360buyimg.com/babel/jfs/t1/174470/33/18323/17009/60e514edEebf651d1/4107a791ce051f9e.png",
+            "link": "/pages/market/market2/index?id=33639&EA_PTAG=17078.62.35",
+            "picurl": "https://m.360buyimg.com/babel/jfs/t1/195699/20/11979/20901/60e57326Ea1e56793/a4c57bcada7e99b8.png",
+            "wechatLink": "https://wqsh.jd.com/promote/201801/bean/index.html",
+            "wechatMain": "签到领京豆",
+            "wechatSub": "奖励5g水滴，每天1次",
+            "type": "H5",
+            "reward": 5,
+            "limit": 1,
+            "time": 0,
+            "appLinkType": "pages",
+            "appLinkId": "gh_45b306365c3d",
+            "hadGotTimes": 0,
+            "hadFinishedTimes": 0
+          },
+          {
+            "advertId": "0501592314",
+            "mainTitle": "集勋章 瓜分百万红包",
+            "subTitle": "浏览6秒，奖励5g水滴，每天1次",
+            "wechatPic": "https://m.360buyimg.com/babel/jfs/t1/218373/19/3276/19126/61852a8aEd8383494/1a71f416b3f1aac8.png",
+            "link": "https://h5.m.jd.com/babelDiy/Zeus/m6Gntdu86ypN4ehW9oFsChdMtPG/index.html",
+            "picurl": "https://m.360buyimg.com/babel/jfs/t1/218376/34/3827/23332/618a8285E2640d012/1181be2cc4c06cb2.png",
+            "wechatLink": "/pages/market/market2/index?id=33153",
+            "wechatMain": "官方补贴 爆品低价",
+            "wechatSub": "浏览6秒，奖励5g水滴，每天1次",
+            "type": "pages",
+            "reward": 5,
+            "limit": 1,
+            "time": 6,
+            "hadGotTimes": 0,
+            "hadFinishedTimes": 0
+          },
+          {
+            "advertId": "0501592370",
+            "mainTitle": "领点点券兑现金红包",
+            "subTitle": "浏览6秒，奖励5g水滴，每天1次",
+            "wechatPic": "https://m.360buyimg.com/babel/jfs/t1/214045/16/5126/21678/61978005Ee1ef4636/a0039b00f0fe87d0.png",
+            "link": "https://h5.m.jd.com/babelDiy/Zeus/41Lkp7DumXYCFmPYtU3LTcnTTXTX/index.html?babelChannel=ttt4",
+            "picurl": "https://m.360buyimg.com/babel/jfs/t1/214045/16/5126/21678/61978005Ee1ef4636/a0039b00f0fe87d0.png",
+            "wechatLink": "https://prodev.m.jd.com/mall/active/rL7eJx9bB19FaaFfyGFjZTBHnsF/index.html",
+            "wechatMain": "去浏览时令爆款",
+            "wechatSub": "浏览6秒，奖励5g水滴，每天1次",
+            "type": "h5",
+            "reward": 5,
+            "limit": 1,
+            "time": 6,
+            "hadGotTimes": 0,
+            "hadFinishedTimes": 0
+          }
+        ]
+      },
+      "message": null,
+      "taskOrder": [
+        "firstWaterInit",
+        "waterRainInit",
+        "gotBrowseTaskAdInit",
+        "waterFriendTaskInit",
+        "totalWaterTaskInit",
+        "orderInit",
+        "signInit",
+        "gotThreeMealInit"
+      ],
+      "gotThreeMealInit": {
+        "threeMealAmount": "3-12",
+        "pos": -1,
+        "f": true,
+        "threeMealTimes": [
+          "0-9",
+          "11-14",
+          "17-21"
+        ]
+      },
+      "firstWaterInit": {
+        "firstWaterFinished": false,
+        "f": false,
+        "totalWaterTimes": 0,
+        "firstWaterEnergy": 10
+      },
+      "totalWaterTaskInit": {
+        "totalWaterTaskLimit": 10,
+        "totalWaterTaskEnergy": 15,
+        "f": false,
+        "totalWaterTaskFinished": false,
+        "totalWaterTaskTimes": 0
+      },
+      "statisticsTimes": null,
+      "sysTime": 1637423591822,
+      "orderInit": {
+        "f": false,
+        "config": {
+          "icon": "https://m.360buyimg.com/babel/jfs/t1/111514/29/3657/24036/5ea91f1eEcff946b3/caf23db23de56f4f.png",
+          "jumpLink": "https://pro.m.jd.com/mall/active/3tvdM261AGrcs5wz6QoZ5HqQZUjG/index.html",
+          "mainTitle": "【为你推荐】专属特惠",
+          "subTitle": "下单奖励50g水滴，每天2次",
+          "sendWaterX": 50,
+          "limitN": 2,
+          "refundMaxTimes": 5,
+          "finishedGotTimes": 0,
+          "finishedTimes": 0,
+          "hadFinished": false
+        }
+      },
+      "waterRainInit": {
+        "lastTime": 1638402723693,
+        "f": false,
+        "winTimes": 1,
+        "config": {
+          "maxLimit": 2,
+          "peraward": 0.2,
+          "awardmax": 10,
+          "intervalTime": 3,
+          "lotteryProb": 0,
+          "imgArea": "https://m.360buyimg.com/babel/jfs/t1/95018/25/1064/277315/5db93bf1Ecbbcedc1/85782b18bb05eab2.png",
+          "countDown": 10,
+          "countOfBomb": 0,
+          "minAwardWater": 3,
+          "maxAwardWater": 10,
+          "bottomImg": "https://m.360buyimg.com/babel/jfs/t1/79941/15/14063/356572/5db93bf7E838db707/8454fe6098c0fca3.png",
+          "keys": [],
+          "actId": 0,
+          "btnText": "回我的农场"
+        }
+      },
+      "waterFriendTaskInit": {
+        "waterFriendMax": 2,
+        "waterFriendSendWater": 25,
+        "waterFriendCountKey": 0,
+        "f": false,
+        "waterFriendGotAward": false
+      }
+    }
     let secretp = '_Zhmj3fpu_27uWrd1_vQDLdvFw'
     $.call = ['doSignTask']
     $.call.pop()
-    $.oneItem = {}
-    $.oneItem.name = 'dd'
-    dealReturn('clockInFollowForFarm2', $.data)
-    document.write(JSON.stringify($))
-    // https://api.m.jd.com/client.action?functionId=clockInFollowForFarm&appid=wh5&body={"id":96,"type":"theme","step":"1"}
-    // $.CryptoJS = CryptoJS
-    // $.callback = ''
-    // dealReturn('add_car', $.data)
-    // document.write($.replace(/\//g, '\\\/'))
-    // console.log(JSON.parse(document.body.innerText));
+    waterRainForFarm()
     // console.log(getBody());
   </script>
 </body>

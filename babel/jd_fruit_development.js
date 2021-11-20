@@ -423,7 +423,7 @@ function getFullCollectionReward () {
     $.callback = ''
     dealReturn('getFullCollectionReward', $.data)
     document.write(JSON.stringify($))
-  } else if ($.friendList.friends?.length <= 0) {
+  } else {
     // 循环完成重新设置 to,call
     $.to = '', $.call.pop(), $.taskStep = 1
     $.message = '小鸭子游戏已完成~'
