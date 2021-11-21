@@ -1482,7 +1482,7 @@
     ]
   },
   "ele_dou": {
-    "version": "数据最后更新于:11.21.1",
+    "version": "数据最后更新于:11.21.2",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f57BIpL%3Fsm%3D4560b2",
       "alipay": "alipays://platformapi/startapp?appId=2021001110676437&page=pages/my/index",
@@ -1514,7 +1514,7 @@
           "title": "领券",
           "type": "other",
           "activateUrl": "https://tb.ele.me/wow/alsc/mod/d5275789de46503ba0908a9d?e=1&open_type=miniapp&inviterId=74f86c&actId=1&_ltracker_f=hjb_app_grzx&chInfo=ch_app_chsub_Photo5",
-          "taskUrl": "https://h5.ele.me/ant/qrcode?open_type=miniapp&url_id=659&appId=2021002148648263&_ariver_appid=2021002148648263&page=pages%2Fhomepage%2Findex%3Fspm%3Da2ogi.22976091.coupon.5%26caseName%3DB%26actCode%3Dc287w08a7onx5e1g%26is_contract%3D1%26shareId%3DzQLXt69erxVIK2HCap2gajXN4jl%252F6Ap5cWK0ZYyybEsy986xH3IEZotNSU8dWcBbv3hJcVnXgmzzwb%252BknkWdTRLjhk26xmm1cJ3Bxip9zaayBxxtmDGc3OP7G0%252Br5xsa8QAstDlBg%252BpI71FcJXG2or85R1fFZpO7nIwXH4FcNdevKin%252BwQ2yw2b9C9B0gk9qSGsQFKGJaWPslU%252BK2NBwFMQogX9RusIetImMOTt1bLoQHUIlNZfBVCt0tO7Xu9pPm13vLpV486hYFWMELnYMa5w%252FmZvY%252Fpr64opdrnzkr3Ni7l0g7GZqiExrfdZL%252B9BSSSYe5xJAJRA9u%252B%252BeNk9XJwuuAYTlf9Z4plSh07aRP5w%253D",
+          "taskUrl": "https://m.tb.cn/h.fTf8DJQ",
           "textEnd": "str1",
           "item": ["1 PAGEVIEW"]
         }
