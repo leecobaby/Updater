@@ -481,38 +481,34 @@ function doSignTask () {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
   $.call = ['doSignTask']
-  if ($.clockInInit.code === '0') {
-    switch ($.taskStep++) {
-      case 1:
-        // 获取签到活动信息
-        clockInInitForFarm()
-        break;
-      case 2:
-        if (!$.clockInInit.todaySigned) {
-          // 签到得水滴
-          clockInForFarm()
-        } else if ($.clockInInit.todaySigned && $.clockInInit.totalSigned === 7) {
-          // 领取惊喜礼包38g水滴
-          gotClockInGift();
-        }
-        break;
-      case 3:
-        if ($.clockInInit.themes && $.clockInInit.themes.length > 0) {
-          // 限时关注得水滴
-          clockInFollowForFarm('theme');
-        } else if ($.clockInInit.venderCoupons && $.clockInInit.venderCoupons.length > 0) {
-          // 限时领券得水滴
-          clockInFollowForFarm('venderCoupon')
-        }
-        break;
-      default:
-        $.to = '', $.call.pop(), $.taskStep = 1
-        document.write(JSON.stringify($))
-        break;
-    }
-  } else {
-    $.to = '', $.call.pop()
-    document.write(JSON.stringify($))
+
+  switch ($.taskStep++) {
+    case 1:
+      // 获取签到活动信息
+      clockInInitForFarm()
+      break;
+    case 2:
+      if (!$.clockInInit.todaySigned) {
+        // 签到得水滴
+        clockInForFarm()
+      } else if ($.clockInInit.todaySigned && $.clockInInit.totalSigned === 7) {
+        // 领取惊喜礼包38g水滴
+        gotClockInGift();
+      }
+      break;
+    case 3:
+      if ($.clockInInit.themes && $.clockInInit.themes.length > 0) {
+        // 限时关注得水滴
+        clockInFollowForFarm('theme');
+      } else if ($.clockInInit.venderCoupons && $.clockInInit.venderCoupons.length > 0) {
+        // 限时领券得水滴
+        clockInFollowForFarm('venderCoupon')
+      }
+      break;
+    default:
+      $.to = '', $.call.pop(), $.taskStep = 1
+      document.write(JSON.stringify($))
+      break;
   }
 }
 
@@ -903,6 +899,8 @@ function dealReturn (type, data) {
       // 压缩数据，加快快捷指令运行
       $.data = null
       $.clockInInit.feeds = null
+      // 如果返回的数据有问题 则不进行签到活动的后续任务
+      if ($.clockInInit.code !== '0') $.taskStep = -1
       break
     case 'clockInForFarm':
       if (data.code === '0') {
