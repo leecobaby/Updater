@@ -494,6 +494,8 @@ function doSignTask () {
       } else if ($.clockInInit.todaySigned && $.clockInInit.totalSigned === 7) {
         // 领取惊喜礼包38g水滴
         gotClockInGift();
+      } else {
+        document.write(JSON.stringify($))
       }
       break;
     case 3:
@@ -503,6 +505,8 @@ function doSignTask () {
       } else if ($.clockInInit.venderCoupons && $.clockInInit.venderCoupons.length > 0) {
         // 限时领券得水滴
         clockInFollowForFarm('venderCoupon')
+      } else {
+        document.write(JSON.stringify($))
       }
       break;
     default:
