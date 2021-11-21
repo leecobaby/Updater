@@ -462,7 +462,7 @@ function waterRainForFarm () {
  * 获取签到活动信息
  */
 function clockInInitForFarm () {
-  $.call[$.call.length - 1] == 'clockInForFarm' || $.call.push('clockInForFarm')
+  $.call[$.call.length - 1] == 'clockInInitForFarm' || $.call.push('clockInInitForFarm')
   $.callback = 'Func.request'
   takeRequest('clockInInitForFarm');
   return
