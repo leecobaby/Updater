@@ -462,12 +462,14 @@ function waterRainForFarm () {
  * 获取签到活动信息
  */
 function clockInInitForFarm () {
+  $.call[$.call.length - 1] == 'clockInForFarm' || $.call.push('clockInForFarm')
   $.callback = 'Func.request'
   takeRequest('clockInInitForFarm');
   return
 
   // next
   $.callback = ''
+  $.call.pop() // 只调用一次的函数需要及时弹出
   dealReturn('clockInInitForFarm', $.data)
   document.write(JSON.stringify($))
 }
@@ -477,30 +479,36 @@ function clockInInitForFarm () {
  */
 function doSignTask () {
   // 循环逻辑单独设置 to,call
-  $.to = 'Func.logicHandler';
+  $.to = 'Func.logicHandler'
   $.call = ['doSignTask']
-
   if ($.clockInInit.code === '0') {
-    if (!$.clockInInit.todaySigned && $.call[$.call.length - 1] !== 'clockInForFarm') {
-      // 这里加一个 $.call 的判断，防止前两条件满足时无限循环这一步
-      // 签到得水滴
-      clockInForFarm()
-      return
-    } else if ($.clockInInit.todaySigned && $.clockInInit.totalSigned === 7 && $.call[$.call.length - 1] !== 'gotClockInGift') {
-      // 这里加一个 $.call 的判断，防止前两条件满足时无限循环这一步
-      // 领取惊喜礼包38g水滴
-      gotClockInGift();
-      return
-    }
-
-    // 到这里其实就已经不用循环了，则弹出
-    $.to = '', $.call.pop()
-    if ($.clockInInit.themes && $.clockInInit.themes.length > 0) {
-      // 限时关注得水滴
-      clockInFollowForFarm('theme');
-    } else if ($.clockInInit.venderCoupons && $.clockInInit.venderCoupons.length > 0) {
-      // 限时领券得水滴
-      clockInFollowForFarm('venderCoupon')
+    switch ($.taskStep++) {
+      case 1:
+        // 获取签到活动信息
+        clockInInitForFarm()
+        break;
+      case 2:
+        if (!$.clockInInit.todaySigned) {
+          // 签到得水滴
+          clockInForFarm()
+        } else if ($.clockInInit.todaySigned && $.clockInInit.totalSigned === 7) {
+          // 领取惊喜礼包38g水滴
+          gotClockInGift();
+        }
+        break;
+      case 3:
+        if ($.clockInInit.themes && $.clockInInit.themes.length > 0) {
+          // 限时关注得水滴
+          clockInFollowForFarm('theme');
+        } else if ($.clockInInit.venderCoupons && $.clockInInit.venderCoupons.length > 0) {
+          // 限时领券得水滴
+          clockInFollowForFarm('venderCoupon')
+        }
+        break;
+      default:
+        $.to = '', $.call.pop(), $.taskStep = 1
+        document.write(JSON.stringify($))
+        break;
     }
   } else {
     $.to = '', $.call.pop()
