@@ -1482,7 +1482,7 @@
     ]
   },
   "ele_dou": {
-    "version": "数据最后更新于:11.21.2",
+    "version": "数据最后更新于:11.23.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f57BIpL%3Fsm%3D4560b2",
       "alipay": "alipays://platformapi/startapp?appId=2021001110676437&page=pages/my/index",
@@ -1527,6 +1527,9 @@
           "taskUrl": "https://tb.ele.me/wow/alsc/mod/156e0df0c951c793ab121f2e?missioncollectid=36&missionid=占位符1&taskfrom=a2ogi.15063444&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.3",
           "textEnd": "str1",
           "item": [
+            "342001 PAGEVIEW",
+            "3354001 PAGEVIEW",
+            "2020001 PAGEVIEW",
             "3004001 PAGEVIEW",
             "2938001 PAGEVIEW",
             "2974001 PAGEVIEW",
@@ -1544,6 +1547,7 @@
             "236002 PAGEVIEW",
             "1036001 PAGEVIEW",
             "2774001 PAGEVIEW",
+            "3046001 SIMPLESIGNIN",
             "1130001 SIMPLESIGNIN",
             "3226001 SIMPLESIGNIN",
             "234001 SIMPLESIGNIN",
