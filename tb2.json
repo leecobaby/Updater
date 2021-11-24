@@ -27,6 +27,10 @@
       "天猫": "tmall",
       "淘宝特价版": "taobaolite"
     },
+    "code": {
+      "getCookieData": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/tb/getCookieData.js",
+      "getTaskData": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/tb/getTaskData.js"
+    },
     "task": [
       {
         "energy": {
