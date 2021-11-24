@@ -16,7 +16,6 @@ if (data.ret && data.ret[0] == "SUCCESS::调用成功" && data.data && data.data
         let implId = item.taskParams.implId.match(/(.*)_/g) + i
         fromToken = item.taskParams.fromToken
         items.push(`${deliveryId}-${title} fromToken=${fromToken}&deliveryId=${deliveryId}&implId=${implId}`)
-        '1 '
       }
     }
   }
@@ -133,8 +132,8 @@ function taskBaseData () {
           "main": {
             "title": "攒能量",
             "type": "energy",
-            "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.xzrwy.1.1&sceneId=1946&sourceType=other&hd_from_id=100089&deliveryId=",
-            "textEnd": "str1&implId=str2"
+            "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&spm=a217e.xzrwy.1.1&sceneId=1946&sourceType=other&hd_from_id=100089&",
+            "textEnd": "str2"
           }
         }
       ]
