@@ -23,7 +23,7 @@ if (data.ret && data.ret[0] == "SUCCESS::调用成功" && data.data && data.data
   $.error = `出错了请检查 Cookie 是否正确且未过期，也可以运行普通模式 ${JSON.stringify(data)}`
 }
 console.log(items);
-let task = taskBaseData()[app]
+let task = taskBaseData()
 const firstTask = [
   {
     "shop": {
@@ -45,8 +45,8 @@ const firstTask = [
   }
 ]
 
-task.task[0].main.item = items
-loopTime == '1' && (task.task = task.task.concat(firstTask))
+task[app].task[0].main.item = items
+loopTime == '1' && (task[app].task = task[app].task.concat(firstTask))
 $.task = task
 document.write(JSON.stringify($))
 

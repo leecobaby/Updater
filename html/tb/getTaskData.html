@@ -595,7 +595,7 @@
       $.error = `出错了请检查 Cookie 是否正确且未过期，也可以运行普通模式 ${JSON.stringify(data)}`
     }
     console.log(items);
-    let task = taskBaseData()[app]
+    let task = taskBaseData()
     const firstTask = [
       {
         "shop": {
@@ -617,8 +617,8 @@
       }
     ]
 
-    task.task[0].main.item = items
-    loopTime == '1' && (task.task = task.task.concat(firstTask))
+    task[app].task[0].main.item = items
+    loopTime == '1' && (task[app].task = task[app].task.concat(firstTask))
     $.task = task
     document.write(JSON.stringify($))
 
@@ -672,7 +672,7 @@
           ],
         },
         "Taojb": {
-          "version": "数据最后更新于:11.23.1",
+          "version": "数据最后更新于:11.24.1",
           "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
           "pv": {
             "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f63aAiO",
@@ -704,8 +704,8 @@
               "main": {
                 "title": "攒能量",
                 "type": "energy",
-                "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.xzrwy.1.1&sceneId=1946&sourceType=other&hd_from_id=100089&deliveryId=",
-                "textEnd": "str1&implId=str2"
+                "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&spm=a217e.xzrwy.1.1&sceneId=1946&sourceType=other&hd_from_id=100089&",
+                "textEnd": "str2"
               }
             }
           ]
