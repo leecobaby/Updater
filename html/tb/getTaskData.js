@@ -16,6 +16,7 @@ if (data.ret && data.ret[0] == "SUCCESS::调用成功" && data.data && data.data
         let implId = item.taskParams.implId.match(/(.*)_/g) + i
         fromToken = item.taskParams.fromToken
         items.push(`${deliveryId}-${title} fromToken=${fromToken}&deliveryId=${deliveryId}&implId=${implId}`)
+        if (app == 'Taojb') break;
       }
     }
   }
