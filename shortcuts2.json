@@ -106,7 +106,11 @@
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/e191e9e2e60740559cb003480ff19b95",
-    "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
+    "about": {
+      "faq": "https://github.com/leecobaby/shortcuts/blob/master/TB.FAQ.md#%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96-cookie",
+      "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cxdbxa6",
+      "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Taojb"
+    },
     "notice": "淘金币活动开启了强校验，需要令牌模式才能解决能量变少问题，如果嫌弃麻烦可以继续使用普通模式，令牌模式需要每次按提示领取掉奖励，否则无法获得新的任务数据~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=淘金币自动任务&input=text&text=task",
