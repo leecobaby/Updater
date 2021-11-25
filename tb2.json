@@ -33,8 +33,35 @@
     },
     "task": [
       {
+        "other": {
+          "title": "做其他任务",
+          "type": "other",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.xzrwy.1.1&sceneId=2239&sourceType=other&hd_from_id=100089&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": ["17746 other_101_490008_17746_0", "17749 other_101_455007_17749_0"]
+        }
+      },
+      {
+        "shop": {
+          "title": "逛店铺",
+          "type": "shop",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/z/tmtjb/tjbshop/coin_shops_task?wh_biz=tm&disableNav=YES&shopId=316875470&wh_dataservice=false&topIds=627271339615,606672835326,625829607411&spm=a217e.17632374&sourceId=",
+          "textEnd": "str1",
+          "item": [
+            "2027551265 0",
+            "3173651031 0",
+            "767303689 0",
+            "439649406 0",
+            "3081047815 0",
+            "1803764140 0",
+            "3055672510 0",
+            "304639978 0"
+          ]
+        }
+      },
+      {
         "energy": {
-          "title": "攒能量",
+          "title": "攒能量 - 可能需要令牌模式才有用",
           "type": "energy",
           "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.xzrwy.1.1&sceneId=1946&sourceType=other&hd_from_id=100089&deliveryId=",
           "textEnd": "str1&implId=str2",
@@ -72,24 +99,6 @@
             "17336 cloudsail_72_3143522550_17336_0",
             "19289 other_104_389019_19289_0",
             "15901 other_164_1_15901_0"
-          ]
-        }
-      },
-      {
-        "shop": {
-          "title": "逛店铺",
-          "type": "shop",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/z/tmtjb/tjbshop/coin_shops_task?wh_biz=tm&disableNav=YES&shopId=316875470&wh_dataservice=false&topIds=627271339615,606672835326,625829607411&spm=a217e.17632374&sourceId=",
-          "textEnd": "str1",
-          "item": [
-            "2027551265 0",
-            "3173651031 0",
-            "767303689 0",
-            "439649406 0",
-            "3081047815 0",
-            "1803764140 0",
-            "3055672510 0",
-            "304639978 0"
           ]
         }
       }
