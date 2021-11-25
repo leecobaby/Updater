@@ -100,22 +100,21 @@
     "share_content_tip": "请输入已编码的音效文本内容\n我已经自动输入你剪贴板的内容拉\n─=≡Σ(((つ•̀ω•́)つ\n温馨提醒:请尽量分享10秒以内的音效"
   },
   "Taojb": {
-    "version": "2.5",
-    "update_log": "- 新增 新版任务运行\n- 完善 活动数据",
+    "version": "2.7",
+    "update_log": "- 新增 令牌模式 专过强校验\n- 更新 优化小屏手机显示效果\n- 更新 多语言环境适配\n- 更新 优化 ios15.1 启动速度，加快 500%",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Taojb",
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/f5b696373f694ca78d2d7b96f621d8f7",
+    "update": "https://www.icloud.com/shortcuts/e191e9e2e60740559cb003480ff19b95",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "🧧 超级红包每天领，前往活动大厅查看更多~",
+    "notice": "淘金币活动开启了强校验，需要令牌模式才能解决能量变少问题，如果嫌弃麻烦可以继续使用普通模式，令牌模式需要每次按提示领取掉奖励，否则无法获得新的任务数据~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=淘金币自动任务&input=text&text=task",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 8-10日红包加码",
-      "taskEnd": "剩余没完成的任务请运行",
+      "hot": "🔥 黑五活动中...",
       "faq": "有疑问的请查看",
-      "set": "",
+      "set": "可以调整等待时间",
       "team": "",
       "more": ""
     },
