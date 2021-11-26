@@ -495,6 +495,7 @@ function doSignTask () {
         // 领取惊喜礼包38g水滴
         gotClockInGift();
       } else {
+        $.message = '当日已经签到过了~'
         document.write(JSON.stringify($))
       }
       break;
@@ -522,7 +523,6 @@ function doSignTask () {
 function clockInForFarm () {
   $.call[$.call.length - 1] == 'clockInForFarm' || $.call.push('clockInForFarm')
   $.callback = 'Func.request'
-  $.message = '开始签到'
   takeRequest('clockInForFarm');
   return
 
