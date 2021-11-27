@@ -416,12 +416,12 @@
     }
   },
   "ele_dou": {
-    "version": "1.0",
+    "version": "1.1",
     "update_log": "- 实现 饿了么、支付宝、淘宝端 3 账号任务",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/ele_dou",
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/154c6dcb7adf465dbdf2adfdb6cf0a49",
+    "update": "https://www.icloud.com/shortcuts/4783ca708ad546bf87302dfbac52cfad",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
     "notice": "逛代码页为正常现象，请不要停止他~\nios15第一次运行需要多次授权~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
@@ -431,7 +431,7 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 红包每日抢",
+      "hot": "",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
