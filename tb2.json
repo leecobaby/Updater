@@ -42,6 +42,19 @@
         }
       },
       {
+        "cloud": {
+          "title": "云端推送",
+          "type": "cloud",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.xzrwy.1.1&sceneId=1946&sourceType=other&hd_from_id=100089&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "21275 cloudsail_20_3452898728_21275_0",
+            "17542 cloudsail_120_125400501040001_17542_0",
+            "14556 tpp_195_339581503446_14556_0"
+          ]
+        }
+      },
+      {
         "shop": {
           "title": "逛店铺",
           "type": "shop",
@@ -61,21 +74,18 @@
       },
       {
         "energy": {
-          "title": "攒能量 - 可能需要令牌模式才有用",
+          "title": "每日任务 - 可能需要令牌模式才有用",
           "type": "energy",
           "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.xzrwy.1.1&sceneId=1946&sourceType=other&hd_from_id=100089&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "20113 other_18_578016_20113_0",
-            "14556 tpp_171_334909809165_14556_0",
             "20484 other_171_301002_20484_0",
-            "20442 cloudsail_16_181942504290001_20442_0",
             "19096 other_40_559006_19096_0",
             "15901 other_188_1_15901_0",
             "17712 other_25_454012_17712_0",
             "17435 other_5_472001_17435_0",
             "14578 other_121_289001_14578_0",
-            "17542 cloudsail_46_152525002410001_17542_0",
             "14630 other_138_301001_14630_0",
             "14574 other_138_408018_14574_0",
             "14647 other_121_305001_14647_0",
@@ -96,7 +106,6 @@
             "14634 other_138_310001_14634_0",
             "16886 other_121_460003_16886_0",
             "14629 other_147_527001_14629_0",
-            "17336 cloudsail_72_3143522550_17336_0",
             "19289 other_104_389019_19289_0",
             "15901 other_164_1_15901_0"
           ]
@@ -1591,7 +1600,8 @@
       "淘宝签到": "taobao://pages.tmall.com/wow/z/mit/hbqd/welfare4",
       "天天领红包": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fan%2Ftmall%2Fuser-growth%2Fplay-tmall%3FdisableNav%3DYES"
     },
-    " Apple Store官方商城渠道链接 - 有概率缩短发货时间": "applestore://www.apple.com.cn/?afid=p239%7C22788&cid=aos-cn-aff-ir",
+    " Apple Store官方商城渠道链接 - 有概率缩短发货时间": "https://www.apple.com.cn/?afid=p239%7C22788&cid=aos-cn-aff-ir",
+    " Apple Stor教育优惠 - 没购买过的基本可以优惠价购机": "https://www.apple.com.cn/cn-k12/store?afid=p239%7C22788&cid=aos-cn-aff-ir",
     "🛍 黑五全球大促 11.26": {
       "亚马逊中国 - 促销实打实": "com.amazon.mobile.shopping.web://www.amazon.cn/blackfriday?ascsubtag=106689422x2376325959&tag=topcb1725-23",
       "亚马逊中国 - 硬盘好价(app)": "com.amazon.mobile.shopping.web://www.amazon.cn/?ascsubtag=106689422x1776331251&tag=topcb1725-23",

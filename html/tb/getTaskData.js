@@ -11,7 +11,7 @@ if (data.ret && data.ret[0] == "SUCCESS::调用成功" && data.data && data.data
       let times = Number(item.progress.needTimes)
       for (let i = 0; i < times; i++) {
         let deliveryId = item.taskParams.deliveryId
-        if (deliveryId == '18734' || deliveryId == '18735') continue;
+        if (deliveryId == '15901' || deliveryId == '18735') continue;
         let title = item.assets.title
         let implId = item.taskParams.implId.match(/(.*)_/g) + i
         fromToken = item.taskParams.fromToken
@@ -26,6 +26,31 @@ if (data.ret && data.ret[0] == "SUCCESS::调用成功" && data.data && data.data
 console.log(items);
 let task = taskBaseData()
 const firstTask = [
+  {
+    "other": {
+      "title": "做其他任务",
+      "type": "other",
+      "urlScheme": `HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=${fromToken}&spm=a217e.xzrwy.1.1&sceneId=2239&sourceType=other&hd_from_id=100089&deliveryId=`,
+      "textEnd": "str1&implId=str2",
+      "item": [
+        "17746 other_101_490008_17746_0",
+        "17749 other_101_455007_17749_0"
+      ]
+    }
+  },
+  {
+    "cloud": {
+      "title": "云端推送",
+      "type": "cloud",
+      "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.xzrwy.1.1&sceneId=1946&sourceType=other&hd_from_id=100089&deliveryId=",
+      "textEnd": "str1&implId=str2",
+      "item": [
+        "21275 cloudsail_20_3452898728_21275_0",
+        "17542 cloudsail_120_125400501040001_17542_0",
+        "14556 tpp_195_339581503446_14556_0"
+      ]
+    }
+  },
   {
     "shop": {
       "title": "逛店铺",
@@ -131,7 +156,7 @@ function taskBaseData () {
       "task": [
         {
           "main": {
-            "title": "攒能量",
+            "title": "每日任务",
             "type": "energy",
             "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&spm=a217e.xzrwy.1.1&sceneId=1946&sourceType=other&hd_from_id=100089&",
             "textEnd": "str2"
