@@ -1590,9 +1590,7 @@
     ]
   },
   "team": {
-    "🏠 种草机助力池": "https://gitter.im/leecobaby-shortcuts/1111zcj?utm_source=share-link&utm_medium=link&utm_campaign=share-link",
-    "👑 王者争霸赛助力池": "https://gitter.im/leecobaby-shortcuts/1111ys?utm_source=share-link&utm_medium=link&utm_campaign=share-link",
-    "🍬 喵糖组队互助池": "https://gitter.im/leecobaby-shortcuts/1111?utm_source=share-link&utm_medium=link&utm_campaign=share-link"
+    "🏠 种草机助力池": "https://gitter.im/leecobaby-shortcuts/1111zcj?utm_source=share-link&utm_medium=link&utm_campaign=share-link"
   },
   "share": {
     "抢购助手": "https://www.icloud.com/shortcuts/64b5f93e1119403da44ac3ddd5ad8bf0",
@@ -1613,9 +1611,11 @@
       "天天领红包": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fan%2Ftmall%2Fuser-growth%2Fplay-tmall%3FdisableNav%3DYES",
       "种草机": "taobao://decenter.m.taobao.com/wow/z/guang/20211212/home?disableNav=YES&sourceType=other&pha=true"
     },
-    " Apple Store官方商城渠道链接 - 有概率缩短发货时间": "https://www.apple.com.cn/?afid=p239%7C22788&cid=aos-cn-aff-ir",
-    " Apple Stor教育优惠 - 没购买过的基本可以优惠价购机": "https://www.apple.com.cn/cn-k12/store?afid=p239%7C22788&cid=aos-cn-aff-ir",
-    "🛍 黑五全球大促 11.26": {
+    " Apple": {
+      " Apple Store官方商城渠道链接 - 有概率缩短发货时间": "https://www.apple.com.cn/?afid=p239%7C22788&cid=aos-cn-aff-ir",
+      " Apple Stor教育优惠 - 没购买过的基本可以优惠价购机": "https://www.apple.com.cn/cn-k12/store?afid=p239%7C22788&cid=aos-cn-aff-ir"
+    },
+    "🛒 亚马逊": {
       "亚马逊中国 - 促销实打实": "com.amazon.mobile.shopping.web://www.amazon.cn/blackfriday?ascsubtag=106689422x2376325959&tag=topcb1725-23",
       "亚马逊中国 - 硬盘好价(app)": "com.amazon.mobile.shopping.web://www.amazon.cn/?ascsubtag=106689422x1776331251&tag=topcb1725-23",
       "亚马逊中国 - 硬盘好价(微信)": "weixin://app/wx76fc280041c16519/jumpWxa/?userName=gh_faa8ac0a7dde&path=pages%2Fdetails%2FproductView.html%3Fasin%3DB07VXKF1L4%26kolId%3Ddefault%26tag%3Dndav43563-23",
