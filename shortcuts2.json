@@ -290,15 +290,39 @@
       "more": "🧧 11.10抢现金红包"
     }
   },
-  "1111zcj": {
-    "version": "1.2",
-    "update_log": "- 增加 ios15 未指定文件夹的解决方法提示\n- 增加 做 500 次浏览任务功能",
+  "Zcj": {
+    "version": "1.3",
+    "update_log": "- 更新 支持双 12 活动任务\n- 更新 优化小屏手机显示效果\n- 更新 多语言环境适配\n- 更新 优化 ios15.1 启动速度，加快 500%",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/1111zcj",
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/ebc3d058584a4f57a336f7f13bd6bbba",
+    "update": "https://www.icloud.com/shortcuts/dcfcd74921f841ed963583438be863e4",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "🧧 超级红包每天领，前往活动大厅查看更多~",
+    "notice": "已支持双12活动任务，更多活动信息关注活动大厅~",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
+    "automation_url": "shortcuts://run-shortcut?name=淘宝种草机自动任务&input=text&text=task",
+    "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tb_zcj.png",
+    "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
+    "tip": {
+      "hongbao": "",
+      "hot": "🔥 双12活动预热中...",
+      "faq": "有疑问的请查看",
+      "set": "点击查看自动化操作",
+      "help": "",
+      "other": "",
+      "more": ""
+    }
+  },
+  "1111zcj": {
+    "version": "1.3",
+    "update_log": "- 更新 支持双 12 活动任务\n- 更新 优化小屏手机显示效果\n- 更新 多语言环境适配\n- 更新 优化 ios15.1 启动速度，加快 500%",
+    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/1111zcj",
+    "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/dcfcd74921f841ed963583438be863e4",
+    "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
+    "notice": "双12活动来临，请更新新版本种草机~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=淘宝种草机自动任务&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
