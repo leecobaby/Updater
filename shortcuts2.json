@@ -298,7 +298,7 @@
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/0e402815775440e7a6118715c477542e",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "如果遇到等待时长问题，请去往其他功能点击指令修复~\n已支持双12活动任务，更多活动信息关注活动大厅~",
+    "notice": "如果遇到等待时长问题，请去往其他选项点击指令修复~\n已支持双12活动任务，更多活动信息关注活动大厅~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=淘宝种草机自动任务&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
