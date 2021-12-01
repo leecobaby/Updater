@@ -659,6 +659,91 @@
       }
     ]
   },
+  "Zcj": {
+    "version": "数据最后更新于:12.1.1",
+    "pv": {
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f63aAiO",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f63aAiO",
+      "taobaolite": "taobaolite://m.tb.cn/h.f63aAiO"
+    },
+    "main": {
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fwww.tmall.com%2F",
+      "taobaolite": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F"
+    },
+    "home": {
+      "taobao": "taobao://decenter.m.taobao.com/wow/z/guang/20211212/home?disableNav=YES&sourceType=other&pha=true",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=",
+      "taobaolite": "taobaolite://decenter.m.taobao.com/wow/z/guang/20211212/home?disableNav=YES&sourceType=other&pha=true"
+    },
+    "end": {
+      "taobao": "taobao://decenter.m.taobao.com/wow/z/guang/20211212/lotteryMachine?salt=kc_lightspeed&disableNav=YES&sourceType=other",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fhuodong.taobao.com%2Fwow%2Fz%2Fguang%2F20211111%2FlotteryMachine%3Fpha%3Dtrue%26disableNav%3DYES%26source%3Dzcj_wotao_banner",
+      "taobaolite": "taobaolite://decenter.m.taobao.com/wow/z/guang/20211212/lotteryMachine?salt=kc_lightspeed&disableNav=YES&sourceType=other"
+    },
+    "app": {
+      "淘宝": "taobao",
+      "天猫": "tmall",
+      "淘宝特价版": "taobaolite"
+    },
+    "help": {
+      "gitter": "https://gitter.im/api/v1/rooms/615975436da037398487178c/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=50",
+      "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/random_mutual_aid.js",
+      "lodash": "https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"
+    },
+    "task": [
+      {
+        "stars": {
+          "title": "种草浏览任务",
+          "type": "stars",
+          "urlScheme": "HTTPS://h5.m.taobao.com/tnode/index.htm?tnode=page_detail?pangesture=pullrightexit&secPageEnable=false&initDataKey=guangguangdetail_initdata&entityId=56489&tnodeListPagingEnable=false&isGuang=true&utparam=%7B%22pvid-url%22%3A%22d7136895-587d-44d2-866e-af21c1491745%22%2C%22x_guangsource%22%3A%22guang_grassPlanterSearch%22%2C%22x_source%22%3A%22guang_grassPlanterSearch%22%7D&contentId=",
+          "textEnd": "str1",
+          "item": [
+            "266913303103 0",
+            "257878340831 0",
+            "260958646422 0",
+            "268312430075 0",
+            "268192758140 0",
+            "268195157199 0",
+            "231046090624 0",
+            "285928122201 0",
+            "287677875713 0",
+            "285920526725 0",
+            "309600715366 0",
+            "323943071280 0",
+            "320257683406 0",
+            "322448170917 0",
+            "319321486745 0",
+            "322945963565 0",
+            "316322444011 0",
+            "310305643145 0",
+            "320513333070 0",
+            "316059631782 0",
+            "321064674077 0",
+            "306991732881 0",
+            "297740089610 0",
+            "324544684368 0",
+            "258323678582 0",
+            "315501753640 0",
+            "320258756591 0",
+            "322517360818 0",
+            "224139470699 0",
+            "319153793680 0",
+            "306020435140 0",
+            "309735100077 0",
+            "304172514292 0",
+            "303103269231 0",
+            "312030306344 0",
+            "324807886523 0",
+            "312790293154 0",
+            "297267907856 0",
+            "324980450658 0",
+            "326061614850 0"
+          ]
+        }
+      }
+    ]
+  },
   "1111zcj": {
     "version": "数据最后更新于:12.1.1",
     "pv": {
