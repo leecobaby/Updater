@@ -111,7 +111,7 @@
       "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cxdbxa6",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Taojb"
     },
-    "notice": "淘金币活动开启了强校验，需要令牌模式才能解决能量变少问题，如果嫌弃麻烦可以继续使用普通模式，令牌模式需要每次按提示领取掉奖励，否则无法获得新的任务数据~",
+    "notice": "0~10点将进行新版指令测试，会不稳，请避开此时间段使用\n淘金币活动开启了强校验，需要令牌模式才能解决能量变少问题，如果嫌弃麻烦可以继续使用普通模式，令牌模式需要每次按提示领取掉奖励，否则无法获得新的任务数据~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=淘金币自动任务&input=text&text=task",
     "tip": {
