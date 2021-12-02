@@ -1,29 +1,13 @@
 // const app = `1111`
 // const data = ``
+// const data2 = `` // 只针对淘金币新旧任务能同时做时
+// const data3 = `` // 只针对淘金币1212任务
 // const loopTime = ``
 const $ = {}
 const items = []
 // 共用与云端已送的 fromToken
 let fromToken = ''
-if (data.ret && data.ret[0] == "SUCCESS::调用成功" && data.data && data.data.model) {
-  for (const item of data.data.model) {
-    if (item.progress.needTimes !== '0') {
-      let times = Number(item.progress.needTimes)
-      for (let i = 0; i < times; i++) {
-        let deliveryId = item.taskParams.deliveryId
-        if (deliveryId == '15901' || deliveryId == '18735') continue;
-        let title = item.assets.title
-        let implId = item.taskParams.implId.match(/(.*)_/g) + i
-        fromToken = item.taskParams.fromToken
-        items.push(`${deliveryId}-${title} fromToken=${fromToken}&deliveryId=${deliveryId}&implId=${implId}`)
-        if (app == 'Taojb') break;
-      }
-    }
-  }
-} else {
-  $.error = `出错了请检查 Cookie 是否正确且未过期，也可以运行普通模式 ${JSON.stringify(data)}`
-}
-console.log(items);
+
 let task = taskBaseData()
 const firstTask = [
   {
@@ -71,10 +55,44 @@ const firstTask = [
   }
 ]
 
+taskHandle(data)
 task[app].task[0].main.item = items
+if (data2) {
+  // 清空 items
+  items.length = 0
+  taskHandle(data2)
+  task[app].task[1].main.item = items
+}
+if (data3) {
+  // 清空 items
+  items.length = 0
+  taskHandle(data3)
+  task[app].task[2].main.item = items
+}
 loopTime == '1' && (task[app].task = task[app].task.concat(firstTask))
 $.task = task
 document.write(JSON.stringify($))
+
+function taskHandle (data) {
+  if (data.ret && data.ret[0] == "SUCCESS::调用成功" && data.data && data.data.model) {
+    for (const item of data.data.model) {
+      if (item.progress.needTimes !== '0') {
+        let times = Number(item.progress.needTimes)
+        for (let i = 0; i < times; i++) {
+          let deliveryId = item.taskParams.deliveryId
+          if (deliveryId == '15901' || deliveryId == '18735') continue;
+          let title = item.assets.title
+          let implId = item.taskParams.implId.match(/(.*)_/g) + i
+          fromToken = item.taskParams.fromToken
+          items.push(`${deliveryId}-${title} fromToken=${fromToken}&deliveryId=${deliveryId}&implId=${implId}`)
+          if (app == 'Taojb') break;
+        }
+      }
+    }
+  } else {
+    $.error = `出错了请检查 Cookie 是否正确且未过期，也可以运行普通模式 ${JSON.stringify(data)}`
+  }
+}
 
 function taskBaseData () {
   return {
@@ -126,7 +144,7 @@ function taskBaseData () {
       ],
     },
     "Taojb": {
-      "version": "数据最后更新于:11.24.1",
+      "version": "数据最后更新于:12.2.1",
       "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
       "pv": {
         "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f63aAiO",
@@ -156,9 +174,25 @@ function taskBaseData () {
       "task": [
         {
           "main": {
-            "title": "每日任务",
+            "title": "每日任务(旧)",
             "type": "energy",
             "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&spm=a217e.xzrwy.1.1&sceneId=1946&sourceType=other&hd_from_id=100089&",
+            "textEnd": "str2"
+          }
+        },
+        {
+          "main": {
+            "title": "每日任务(新)",
+            "type": "energy",
+            "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&spm=a217e.xzrwy.1.1&sceneId=2141&sourceType=other&hd_from_id=100089&",
+            "textEnd": "str2"
+          }
+        },
+        {
+          "main": {
+            "title": "双十二任务",
+            "type": "energy",
+            "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&spm=a217e.xzrwy.1.1&sceneId=2496&sourceType=other&hd_from_id=100143&",
             "textEnd": "str2"
           }
         }
