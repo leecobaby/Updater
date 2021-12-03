@@ -56,18 +56,19 @@ const firstTask = [
 ]
 
 taskHandle(data)
-task[app].task[0].main.item = items
+// 后面会对数组对象进行操作，则需要进行深拷贝
+task[app].task[0].main.item = [...items]
 if (data2) {
   // 清空 items
   items.length = 0
   taskHandle(data2)
-  task[app].task[1].main.item = items
+  task[app].task[1].main.item = [...items]
 }
 if (data3) {
   // 清空 items
   items.length = 0
   taskHandle(data3)
-  task[app].task[2].main.item = items
+  task[app].task[2].main.item = [...items]
 }
 loopTime == '1' && (task[app].task = task[app].task.concat(firstTask))
 $.task = task
