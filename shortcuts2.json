@@ -100,18 +100,18 @@
     "share_content_tip": "请输入已编码的音效文本内容\n我已经自动输入你剪贴板的内容拉\n─=≡Σ(((つ•̀ω•́)つ\n温馨提醒:请尽量分享10秒以内的音效"
   },
   "Taojb": {
-    "version": "2.7",
-    "update_log": "- 新增 令牌模式 专过强校验\n- 更新 优化小屏手机显示效果\n- 更新 多语言环境适配\n- 更新 优化 ios15.1 启动速度，加快 500%",
+    "version": "2.8",
+    "update_log": "- 更新 支持淘金币新任务和双 12 活动任务\n- 注意 双 12 任务等待时长比较久，请去往任务设置调整等待时长为 20s 以上，否则容易没完成就跳转",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Taojb",
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/e191e9e2e60740559cb003480ff19b95",
+    "update": "https://www.icloud.com/shortcuts/c2772f1f8e86423ca61b984964de0cc7",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/blob/master/TB.FAQ.md#%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96-cookie",
       "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cxdbxa6",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Taojb"
     },
-    "notice": "0~10点将进行新版指令测试，会不稳，请避开此时间段使用\n淘金币活动开启了强校验，需要令牌模式才能解决能量变少问题，如果嫌弃麻烦可以继续使用普通模式，令牌模式需要每次按提示领取掉奖励，否则无法获得新的任务数据~",
+    "notice": "已支持同时做:旧任务，新任务，双12任务。\n可以通过指令大厅进旧任务页。",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=淘金币自动任务&input=text&text=task",
     "tip": {
