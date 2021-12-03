@@ -116,11 +116,11 @@
     "automation_url": "shortcuts://run-shortcut?name=淘金币自动任务&input=text&text=task",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 黑五活动中...",
+      "hot": "🔥 双12活动中...",
       "faq": "有疑问的请查看",
       "set": "可以调整等待时间",
       "team": "",
-      "more": ""
+      "more": "🧧 支付宝红包又来了"
     },
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tjb.png",
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json"
@@ -140,13 +140,13 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 8-10日红包加码",
+      "hot": "🔥 双12活动中...",
       "tjb": "请配合食用",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": ""
+      "more": "🧧 支付宝红包又来了"
     }
   },
   "Jhs": {
@@ -164,12 +164,12 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 8-10日红包加码",
+      "hot": "🔥 双12活动中...",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 6.15抢现红包"
+      "more": "🧧 支付宝红包又来了"
     }
   },
   "618cat": {
@@ -211,12 +211,12 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 8-10日红包加码",
+      "hot": "🔥 双12活动中...",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": ""
+      "more": "🧧 支付宝红包又来了"
     }
   },
   "FarmSingle": {
@@ -235,12 +235,12 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 增加活动入口",
+      "hot": "🔥 双12活动中...",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": ""
+      "more": "🧧 支付宝红包又来了"
     }
   },
   "Qmxb": {
@@ -306,12 +306,12 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 双12活动预热中...",
+      "hot": "🔥 双12活动中...",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "help": "",
       "other": "",
-      "more": ""
+      "more": "🧧 支付宝红包又来了"
     }
   },
   "1111zcj": {
@@ -460,7 +460,7 @@
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": ""
+      "more": "🧧 支付宝红包又来了"
     }
   },
   "AutoBox": {
@@ -596,7 +596,7 @@
       "set": "使用前先授权",
       "team": "",
       "other": "",
-      "more": ""
+      "more": "🧧 支付宝红包又来了"
     }
   },
   "JD_travel": {
@@ -667,6 +667,7 @@
           "联盟红包-饿了么": "eleme://web?url=https%3A%2F%2Ftb.ele.me%2Fwow%2Falsc%2Fmod%2Fd5275789de46503ba0908a9d%3Fe%3D1%26open_type%3Dminiapp%26inviterId%3D74f86c%26actId%3D1%26_ltracker_f%3Dhjb_app_grzx%26chInfo%3Dch_app_chsub_Photo"
         }
       },
+      "🧧 支付宝现金红包": "alipays://platformapi/startapp?appId=20000067&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fc%2Falipay-red-qrcode%2Fshared.html%3Fchannel%3Dsearch_pwd%26shareId%3D2088102986032700%26token%3D11w194707wxbnqkmg21ke2d%26campStr%3DkPPFvOxaCL3f85TiKss2wsBZgIjulHjG%26sign%3Dlj1gjQ8PxzMbaRNG5RKOee%2FhckXIyodWvTJbBTYOleI%3D%26chInfo%3Dsousuoma%26c_stype%3Dsearch_pwd",
       "🧧 现金红包 - 11.10开抢": "taobao://m.tb.cn/h.fgSEQ3f"
     },
     "more2": {
