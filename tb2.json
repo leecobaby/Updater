@@ -1,6 +1,6 @@
 {
   "Taojb": {
-    "version": "数据最后更新于:12.1.1",
+    "version": "数据最后更新于:12.3.1",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f63aAiO",
@@ -32,6 +32,23 @@
       "getTaskData": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/tb/getTaskData.js"
     },
     "task": [
+      {
+        "other": {
+          "title": "双十二云推送",
+          "type": "other",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.xzrwy.1.1&sceneId=2496&sourceType=other&hd_from_id=100143&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "21566 other_15_609027_21566_0",
+            "22016 other_2_643003_22016_0",
+            "21759 expo_8_1020300000367185035_21759_0",
+            "21849 other_4_630012_21849_0",
+            "21629 other_11_638007_21629_0",
+            "21645 other_10_603075_21645_0",
+            "17749 other_101_455007_17749_0"
+          ]
+        }
+      },
       {
         "other": {
           "title": "做其他任务",
