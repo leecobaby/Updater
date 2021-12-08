@@ -24,7 +24,7 @@ const firstTask = [
   },
   {
     "other": {
-      "title": "双十二任务",
+      "title": "双十二任务云推送",
       "type": "other",
       "urlScheme": `HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=${fromToken}&spm=a217e.xzrwy.1.1&sceneId=2496&sourceType=other&hd_from_id=100143&deliveryId=`,
       "textEnd": "str1&implId=str2",
