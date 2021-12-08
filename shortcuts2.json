@@ -582,7 +582,7 @@
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/ff0c227f189a4342be58f060e8e658a6",
-    "notice": "黑五来临，可关注活动大厅获取动态信息~\n云端助力池正在建设中...",
+    "notice": "🧧 活动大厅有京东双12指令专属红包~\n云端助力池正在建设中...",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-东东农场&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd2.jpeg",
@@ -591,7 +591,7 @@
     "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_fruit/",
     "tip": {
       "hongbao": "",
-      "hot": "增加活动入口页",
+      "hot": "🧧 双12专属红包",
       "faq": "有疑问的请查看",
       "set": "使用前先授权",
       "team": "",
