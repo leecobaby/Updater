@@ -112,9 +112,9 @@ function taskBaseData () {
     "1111": {
       "version": "数据最后更新于:11.9.1",
       "pv": {
-        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fSXs7nL",
-        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fSXs7nL",
-        "taobaolite": "taobaolite://m.tb.cn/h.fSXs7nL"
+        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fREX58z",
+        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fREX58z",
+        "taobaolite": "taobaolite://m.tb.cn/h.fREX58z"
       },
       "main": {
         "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -160,9 +160,9 @@ function taskBaseData () {
       "version": "数据最后更新于:12.2.1",
       "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
       "pv": {
-        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fSXs7nL",
-        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fSXs7nL",
-        "taobaolite": "taobaolite://m.tb.cn/h.fSXs7nL"
+        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fREX58z",
+        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fREX58z",
+        "taobaolite": "taobaolite://m.tb.cn/h.fREX58z"
       },
       "main": {
         "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
