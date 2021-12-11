@@ -1149,7 +1149,7 @@
     ]
   },
   "Hlzx": {
-    "version": "数据最后更新于:10.12.1",
+    "version": "数据最后更新于:12.11.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fREX58z",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fREX58z",
@@ -1187,8 +1187,6 @@
             "17878 linked_94_1_17878_0",
             "17878 linked_94_2_17878_0",
             "12667 other_163_154003_12667_0",
-            "9473 other_250_0_9473_0",
-            "18401 other_16_502022_18401_0",
             "17509 other_38_418026_17509_0",
             "9518 other_250_95041_9518_0",
             "9515 other_250_76027_9515_0",
@@ -1197,25 +1195,10 @@
             "9519 other_0_1_9519_0",
             "9475 other_250_0_9475_0",
             "9497 other_250_78001_9497_0",
-            "9472 other_251_0_9472_0",
-            "13011 other_158_510026_13011_0",
             "9487 other_251_76024_9487_0",
             "17470 other_39_453009_17470_0",
             "9516 other_250_502030_9516_0",
             "13953 other_250_145003_13953_0"
-          ]
-        }
-      },
-      {
-        "test": {
-          "title": "测试",
-          "type": "test",
-          "urlScheme": "HTTPS://",
-          "textEnd": "str2",
-          "item": [
-            "1 m.tb.cn/h.f3T6Bym?1",
-            "1 m.tb.cn/h.fWljUcw?1",
-            "1 s.click.taobao.com/q57Figu?1"
           ]
         }
       }
