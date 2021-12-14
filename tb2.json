@@ -1704,15 +1704,17 @@
       "天天领红包": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fan%2Ftmall%2Fuser-growth%2Fplay-tmall%3FdisableNav%3DYES",
       "种草机": "taobao://decenter.m.taobao.com/wow/z/guang/20211212/home?disableNav=YES&sourceType=other&pha=true"
     },
-    " Apple": {
-      " Apple Store官方商城渠道链接 - 有概率缩短发货时间": "https://www.apple.com.cn/?afid=p239%7C22788&cid=aos-cn-aff-ir",
-      " Apple Stor教育优惠 - 没购买过的基本可以优惠价购机": "https://www.apple.com.cn/cn-k12/store?afid=p239%7C22788&cid=aos-cn-aff-ir"
+    "其他活动": {
+      " Apple": {
+        " Apple Store官方商城渠道链接 - 有概率缩短发货时间": "https://www.apple.com.cn/?afid=p239%7C22788&cid=aos-cn-aff-ir",
+        " Apple Stor教育优惠 - 没购买过的基本可以优惠价购机": "https://www.apple.com.cn/cn-k12/store?afid=p239%7C22788&cid=aos-cn-aff-ir"
+      },
+      "🛒 亚马逊": {
+        "亚马逊中国 - 促销实打实": "com.amazon.mobile.shopping.web://www.amazon.cn/blackfriday?ascsubtag=106689422x2376325959&tag=topcb1725-23",
+        "亚马逊中国 - 硬盘好价": "com.amazon.mobile.shopping.web://www.amazon.cn/?ascsubtag=106689422x1776331251&tag=topcb1725-23"
+      }
     },
-    "🛒 亚马逊": {
-      "亚马逊中国 - 促销实打实": "com.amazon.mobile.shopping.web://www.amazon.cn/blackfriday?ascsubtag=106689422x2376325959&tag=topcb1725-23",
-      "亚马逊中国 - 硬盘好价(app)": "com.amazon.mobile.shopping.web://www.amazon.cn/?ascsubtag=106689422x1776331251&tag=topcb1725-23",
-      "亚马逊中国 - 硬盘好价(微信)": "weixin://app/wx76fc280041c16519/jumpWxa/?userName=gh_faa8ac0a7dde&path=pages%2Fdetails%2FproductView.html%3Fasin%3DB07VXKF1L4%26kolId%3Ddefault%26tag%3Dndav43563-23",
-      "亚马逊中国 - 微信直接购物": "weixin://app/wx76fc280041c16519/jumpWxa/?userName=gh_faa8ac0a7dde&path=pages%2FlandingPage%2FlandingPage.html%3F%26kolId%3Ddefault%26tag%3Dndav43563-23"
-    }
+    "🔥 1password 个人版注册 免费半年": "https://start.1password.com/sign-up/?c=SWITCH&cjevent=ca95688b5be511ec80ef3a530a18050d&utm_medium=affiliate&utm_source=TopCashback+%28USA%29+INC&utm_campaign=3474636&utm_content=5464610&utm_term=1Password+702x134+Logo&cjdata=MXxOfDB8WXwxNjQ5NzQ4MzA0NjA3",
+    "🔥 1password 家庭版注册 年费半价": "https://1password.com/affiliate/promo/families/?c=SWITCH50&l=&cjevent=44e3503b5be611ec81ed70890a18050e&utm_medium=affiliate&utm_source=TopCashback+%28USA%29+INC&utm_campaign=3474636&utm_content=5464610&utm_term=50%25+Off+Families+for+the+1st+Year+at+1Password%21+Use+Code+SWITCH50&cjdata=MXxOfDB8WXwxNjQ5NzQ4NTA5Nzk5"
   }
 }
