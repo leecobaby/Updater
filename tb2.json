@@ -3,9 +3,9 @@
     "version": "数据最后更新于:12.3.1",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
     "pv": {
-      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fREX58z",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fREX58z",
-      "taobaolite": "taobaolite://m.tb.cn/h.fREX58z"
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f8bALJo",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f8bALJo",
+      "taobaolite": "taobaolite://m.tb.cn/h.f8bALJo"
     },
     "main": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -32,23 +32,6 @@
       "getTaskData": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/tb/getTaskData.js"
     },
     "task": [
-      {
-        "other": {
-          "title": "双十二云推送",
-          "type": "other",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.xzrwy.1.1&sceneId=2496&sourceType=other&hd_from_id=100143&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "21566 other_15_609027_21566_0",
-            "22016 other_2_643003_22016_0",
-            "21759 expo_8_1020300000367185035_21759_0",
-            "21849 other_4_630012_21849_0",
-            "21629 other_11_638007_21629_0",
-            "21645 other_10_603075_21645_0",
-            "17749 other_101_455007_17749_0"
-          ]
-        }
-      },
       {
         "other": {
           "title": "做其他任务",
@@ -139,40 +122,6 @@
             "14629 other_147_527001_14629_0",
             "19289 other_104_389019_19289_0",
             "15901 other_164_1_15901_0"
-          ]
-        }
-      }
-    ],
-    "taskNew": [
-      {
-        "energy": {
-          "title": "新版攒能量①",
-          "type": "energy",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=bXNvd52Iv9Jp0n5QS9NuPoNiYh6UV&spm=a217e.1212.tasklist.0&sceneId=1946&sourceType=other&hd_from_id=100089&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "14628 other_165_1_14628_1",
-            "15971 other_5_369015_15971_0",
-            "17712 other_56_454012_17712_0",
-            "18205 other_165_408018_18205_0",
-            "15974 other_5_308002_15974_0",
-            "17435 other_10_472001_17435_0",
-            "19892 ald.res.19312519_0_148900_19892_0"
-          ]
-        }
-      },
-      {
-        "energy": {
-          "title": "新版攒能量②",
-          "type": "energy",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=bXNvd52Iv9Jp0n5QS9NuPoNiYh6UV&spm=a217e.1212.tasklist.0&sceneId=2141&sourceType=other&hd_from_id=100089&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "17712 other_0_454012_17712_0",
-            "17331 other_0_448007_17331_0",
-            "16832 other_0_375036_16832_0",
-            "17722 other_0_304003_17722_0",
-            "17256 other_44_490001_17256_0"
           ]
         }
       }
@@ -390,9 +339,9 @@
   "Ttlhb": {
     "version": "数据最后更新于:10.14.1",
     "pv": {
-      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fREX58z",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fREX58z",
-      "taobaolite": "taobaolite://m.tb.cn/h.fREX58z"
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f8bALJo",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f8bALJo",
+      "taobaolite": "taobaolite://m.tb.cn/h.f8bALJo"
     },
     "main": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -446,9 +395,9 @@
   "Jhs": {
     "version": "数据最后更新于:10.12.1",
     "pv": {
-      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fREX58z",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fREX58z",
-      "taobaolite": "taobaolite://m.tb.cn/h.fREX58z"
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f8bALJo",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f8bALJo",
+      "taobaolite": "taobaolite://m.tb.cn/h.f8bALJo"
     },
     "main": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -679,9 +628,9 @@
   "Zcj": {
     "version": "数据最后更新于:12.9.1",
     "pv": {
-      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fREX58z",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fREX58z",
-      "taobaolite": "taobaolite://m.tb.cn/h.fREX58z"
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f8bALJo",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f8bALJo",
+      "taobaolite": "taobaolite://m.tb.cn/h.f8bALJo"
     },
     "main": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -768,9 +717,9 @@
   "1111zcj": {
     "version": "数据最后更新于:12.1.1",
     "pv": {
-      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fREX58z",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fREX58z",
-      "taobaolite": "taobaolite://m.tb.cn/h.fREX58z"
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f8bALJo",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f8bALJo",
+      "taobaolite": "taobaolite://m.tb.cn/h.f8bALJo"
     },
     "main": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -853,9 +802,9 @@
   "1111ys": {
     "version": "数据最后更新于:11.8.1",
     "pv": {
-      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fREX58z",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fREX58z",
-      "taobaolite": "taobaolite://m.tb.cn/h.fREX58z"
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f8bALJo",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f8bALJo",
+      "taobaolite": "taobaolite://m.tb.cn/h.f8bALJo"
     },
     "main": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -863,14 +812,14 @@
       "taobaolite": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F"
     },
     "home": {
-      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fREX58z",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fREX58z",
-      "taobaolite": "taobaolite://m.tb.cn/h.fREX58z"
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f8bALJo",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f8bALJo",
+      "taobaolite": "taobaolite://m.tb.cn/h.f8bALJo"
     },
     "end": {
-      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fREX58z",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fREX58z",
-      "taobaolite": "taobaolite://m.tb.cn/h.fREX58z"
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f8bALJo",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f8bALJo",
+      "taobaolite": "taobaolite://m.tb.cn/h.f8bALJo"
     },
     "app": {
       "淘宝": "taobao",
@@ -930,9 +879,9 @@
   "1111": {
     "version": "数据最后更新于:11.10.1",
     "pv": {
-      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fREX58z",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fREX58z",
-      "taobaolite": "taobaolite://m.tb.cn/h.fREX58z"
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f8bALJo",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f8bALJo",
+      "taobaolite": "taobaolite://m.tb.cn/h.f8bALJo"
     },
     "main": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -1151,9 +1100,9 @@
   "Hlzx": {
     "version": "数据最后更新于:12.11.1",
     "pv": {
-      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fREX58z",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fREX58z",
-      "taobaolite": "taobaolite://m.tb.cn/h.fREX58z"
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f8bALJo",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f8bALJo",
+      "taobaolite": "taobaolite://m.tb.cn/h.f8bALJo"
     },
     "main": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -1207,14 +1156,14 @@
   "FarmSingle": {
     "version": "数据最后更新于:12.9.2",
     "pv": {
-      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fREX58z",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fREX58z",
-      "taobaolite": "taobaolite://m.tb.cn/h.fREX58z"
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f8bALJo",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f8bALJo",
+      "taobaolite": "taobaolite://m.tb.cn/h.f8bALJo"
     },
     "gd": {
-      "taobao": "taobao://m.tb.cn/h.fREX58z",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fREX58z",
-      "taobaolite": "taobaolite://m.tb.cn/h.fREX58z"
+      "taobao": "taobao://m.tb.cn/h.f8bALJo",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f8bALJo",
+      "taobaolite": "taobaolite://m.tb.cn/h.f8bALJo"
     },
     "main": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -1340,9 +1289,9 @@
   "Qmxb": {
     "version": "数据最后更新于:5.27.1",
     "gd": {
-      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fREX58z",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fREX58z",
-      "taobaolite": "taobaolite://m.tb.cn/h.fREX58z"
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f8bALJo",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f8bALJo",
+      "taobaolite": "taobaolite://m.tb.cn/h.f8bALJo"
     },
     "main": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -1405,9 +1354,9 @@
   "TaoSign": {
     "version": "数据最后更新于:10.6.1",
     "pv": {
-      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fREX58z",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fREX58z",
-      "taobaolite": "taobaolite://m.tb.cn/h.fREX58z"
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f8bALJo",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f8bALJo",
+      "taobaolite": "taobaolite://m.tb.cn/h.f8bALJo"
     },
     "main": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -1486,9 +1435,9 @@
   "ltao_duck": {
     "version": "数据最后更新于:3.29.1",
     "pv": {
-      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fREX58z",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fREX58z",
-      "taobaolite": "taobaolite://m.tb.cn/h.fREX58z"
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f8bALJo",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f8bALJo",
+      "taobaolite": "taobaolite://m.tb.cn/h.f8bALJo"
     },
     "main": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",

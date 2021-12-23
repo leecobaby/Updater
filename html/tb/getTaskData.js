@@ -23,18 +23,6 @@ const firstTask = [
     }
   },
   {
-    "other": {
-      "title": "双十二任务云推送",
-      "type": "other",
-      "urlScheme": `HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=${fromToken}&spm=a217e.xzrwy.1.1&sceneId=2496&sourceType=other&hd_from_id=100143&deliveryId=`,
-      "textEnd": "str1&implId=str2",
-      "item": [
-        "21566 other_15_609027_21566_0",
-        "21722 other_9_628010_21722_0"
-      ]
-    }
-  },
-  {
     "cloud": {
       "title": "云端推送",
       "type": "cloud",
@@ -112,9 +100,9 @@ function taskBaseData () {
     "1111": {
       "version": "数据最后更新于:11.9.1",
       "pv": {
-        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fREX58z",
-        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fREX58z",
-        "taobaolite": "taobaolite://m.tb.cn/h.fREX58z"
+        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f8bALJo",
+        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f8bALJo",
+        "taobaolite": "taobaolite://m.tb.cn/h.f8bALJo"
       },
       "main": {
         "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -160,9 +148,9 @@ function taskBaseData () {
       "version": "数据最后更新于:12.2.1",
       "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
       "pv": {
-        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fREX58z",
-        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fREX58z",
-        "taobaolite": "taobaolite://m.tb.cn/h.fREX58z"
+        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f8bALJo",
+        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f8bALJo",
+        "taobaolite": "taobaolite://m.tb.cn/h.f8bALJo"
       },
       "main": {
         "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
