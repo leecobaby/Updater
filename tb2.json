@@ -1,6 +1,6 @@
 {
   "Taojb": {
-    "version": "数据最后更新于:12.3.1",
+    "version": "数据最后更新于:12.23.1",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f8bALJo",
@@ -1098,7 +1098,7 @@
     ]
   },
   "Hlzx": {
-    "version": "数据最后更新于:12.11.1",
+    "version": "数据最后更新于:12.24.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f8bALJo",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f8bALJo",
@@ -1133,12 +1133,17 @@
           "textEnd": "str1&implId=str2",
           "item": [
             "17878 linked_29_0_17878_0",
-            "17878 linked_94_1_17878_0",
-            "17878 linked_94_2_17878_0",
+            "19894 other_72_601002_19894_0",
+            "13011 other_254_667006_13011_0",
+            "17569 other_133_567023_17569_0",
+            "12505 other_261_153001_12505_0",
+            "13953 other_347_669009_13953_0",
             "12667 other_163_154003_12667_0",
             "17509 other_38_418026_17509_0",
             "9518 other_250_95041_9518_0",
             "9515 other_250_76027_9515_0",
+            "17878 linked_94_1_17878_0",
+            "17878 linked_94_2_17878_0",
             "12612 other_164_143004_12612_0",
             "9511 other_250_76025_9511_0",
             "9519 other_0_1_9519_0",
