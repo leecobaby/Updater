@@ -1098,7 +1098,7 @@
     ]
   },
   "Hlzx": {
-    "version": "数据最后更新于:12.24.1",
+    "version": "数据最后更新于:12.26.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f8bALJo",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f8bALJo",
@@ -1132,6 +1132,8 @@
           "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=1148&sourceType=other&hd_from_id=100095&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
+            "9472 other_349_0_9472_0",
+            "18328 other_117_542004_18328_0",
             "17878 linked_29_0_17878_0",
             "19894 other_72_601002_19894_0",
             "13011 other_254_667006_13011_0",
@@ -1142,8 +1144,6 @@
             "17509 other_38_418026_17509_0",
             "9518 other_250_95041_9518_0",
             "9515 other_250_76027_9515_0",
-            "17878 linked_94_1_17878_0",
-            "17878 linked_94_2_17878_0",
             "12612 other_164_143004_12612_0",
             "9511 other_250_76025_9511_0",
             "9519 other_0_1_9519_0",
