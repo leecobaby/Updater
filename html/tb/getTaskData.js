@@ -138,7 +138,7 @@ function taskBaseData () {
       ],
     },
     "Taojb": {
-      "version": "数据最后更新于:12.2.1",
+      "version": "数据最后更新于:12.31.1",
       "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
       "pv": {
         "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f8bALJo",
@@ -179,14 +179,6 @@ function taskBaseData () {
             "title": "每日任务(新)",
             "type": "energy",
             "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&spm=a217e.xzrwy.1.1&sceneId=2141&sourceType=other&hd_from_id=100089&",
-            "textEnd": "str2"
-          }
-        },
-        {
-          "main": {
-            "title": "双十二任务",
-            "type": "energy",
-            "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&spm=a217e.xzrwy.1.1&sceneId=2496&sourceType=other&hd_from_id=100143&",
             "textEnd": "str2"
           }
         }
