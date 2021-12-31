@@ -100,12 +100,12 @@
     "share_content_tip": "请输入已编码的音效文本内容\n我已经自动输入你剪贴板的内容拉\n─=≡Σ(((つ•̀ω•́)つ\n温馨提醒:请尽量分享10秒以内的音效"
   },
   "Taojb": {
-    "version": "2.9",
-    "update_log": "- 修复 会运行其他指令的 bug\n- 修复 cookie 错误的 bug\n- 注意 双 12 任务等待时长比较久，请去往任务设置调整等待时长为 20s 以上，否则容易没完成就跳转",
+    "version": "3.0",
+    "update_log": "- 更新 活动数据\n- 修复 因旧活动结束无法继续运行的问题",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Taojb",
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/68f2df96cacd489583330a1567cc430b",
+    "update": "https://www.icloud.com/shortcuts/7ecb481e019f4e8dae7b1bf2facbce20",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/blob/master/TB.FAQ.md#%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96-cookie",
       "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cxdbxa6",
