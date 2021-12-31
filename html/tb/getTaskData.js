@@ -1,7 +1,6 @@
 // const app = `1111`
 // const data = ``
 // const data2 = `` // 只针对淘金币新旧任务能同时做时
-// const data3 = `` // 只针对淘金币1212任务
 // const loopTime = ``
 const $ = {}
 const items = []
@@ -63,12 +62,6 @@ if (data2) {
   items.length = 0
   taskHandle(data2)
   task[app].task[1].main.item = [...items]
-}
-if (data3) {
-  // 清空 items
-  items.length = 0
-  taskHandle(data3)
-  task[app].task[2].main.item = [...items]
 }
 loopTime == '1' && (task[app].task = task[app].task.concat(firstTask))
 $.task = task
