@@ -1644,6 +1644,67 @@
       }
     ]
   },
+  "cainiao_guo": {
+    "version": "上次数据更新于:11.25.1",
+    "pv": "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f57BIpL%3Fsm%3D4560b2",
+    "endJump": "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f57BIpL%3Fsm%3D4560b2",
+    "codeUrl": {
+      "CryptoJS": "https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.js",
+      "cainiao_guo": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/cainiao_guo.js",
+      "cainiao_guo_development": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/cainiao_guo_development.js",
+      "checkCookie": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/checkCookie.js"
+    },
+    "api": {
+      "api": {
+        "url": "https://api.m.jd.com/client.action"
+      }
+    },
+    "uaInfo": {
+      "UA1": {
+        "ua": "jdapp;iPhone;10.0.6;14.4;c67093f5dd58d33fc5305cdc61e46a9741e05c5b;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1"
+      }
+    },
+    "controller": {
+      "callList": ["init", "initForFarm", "treeState", "taskInitForFarm", "friendListInitForFarm"],
+      "taskList": [
+        { "做助力任务": "help" },
+        { "做签到任务": "signForFarm" },
+        { "做浏览任务": "browseAdTaskForFarm" },
+        { "做浇水十次任务": "doTenWater" },
+        { "做定时领水": "gotThreeMealForFarm" },
+        { "领取阶段性水滴奖励": "gotStageAwardForFarm" },
+        { "领取首次浇水奖励": "firstWaterTaskForFarm" },
+        { "领取十次浇水奖励": "totalWaterTaskForFarm" },
+        { "做小鸭子游戏": "getFullCollectionReward" },
+        { "水滴雨": "waterRainForFarm" },
+        { "做签到活动任务": "doSignTask" },
+        { "其他": "cloudTip" }
+      ]
+    },
+    "codeList": [
+      "initForFarm_next",
+      "taskInitForFarm_next",
+      "help_next",
+      "signForFarm_next",
+      "signForFarm_next_next",
+      "browseAdTaskForFarm_next",
+      "browseAdTaskForFarm_next_next",
+      "doTenWater_next",
+      "gotStageAwardForFarm_next",
+      "firstWaterTaskForFarm_next",
+      "firstWaterTaskForFarm_next_next",
+      "totalWaterTaskForFarm_next",
+      "friendListInitForFarm_next",
+      "gotThreeMealForFarm_next",
+      "getFullCollectionReward_next",
+      "waterRainForFarm_next",
+      "clockInInitForFarm_next",
+      "clockInForFarm_next",
+      "gotClockInGift_next",
+      "clockInFollowForFarm_next",
+      "clockInFollowForFarm_next_next"
+    ]
+  },
   "team": {
     "🏠 种草机助力池": "https://gitter.im/leecobaby-shortcuts/1111zcj?utm_source=share-link&utm_medium=link&utm_campaign=share-link"
   },
