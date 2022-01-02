@@ -76,7 +76,7 @@ function cloudTip () {
 function doSimpleTask () {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
-  $.call = ['help']
+  $.call = ['doSimpleTask']
 
   $.taskId = $.taskSimpleList.shift()
   if (!$.taskId) {
