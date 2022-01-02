@@ -7,7 +7,7 @@
  */
 
 // 到指令里运行需要注释掉
-// const $ = {}
+const $ = {}
 
 // $.inviteList = [];
 // $.pkInviteList = [];
@@ -466,7 +466,7 @@ function dealReturn (type, data) {
   switch (type) {
     case 'doSimpleTask':
       if (data.url) {
-        $.message = data.url
+        $.message = `结果: ${JSON.stringify(data)}`
         $.url = data.url
       } else {
         $.error = '无法获取活动链接，请稍后再试！'
