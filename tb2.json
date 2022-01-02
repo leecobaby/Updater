@@ -1666,9 +1666,9 @@
     },
     "controller": {
       "callList": ["init"],
-      "taskList": [{ "其他": "cloudTip" }]
+      "taskList": [{ "做部分任务": "doSimpleTask", "其他": "cloudTip" }]
     },
-    "codeList": []
+    "codeList": ["doSimpleTask_next"]
   },
   "team": {
     "🏠 种草机助力池": "https://gitter.im/leecobaby-shortcuts/1111zcj?utm_source=share-link&utm_medium=link&utm_campaign=share-link"
