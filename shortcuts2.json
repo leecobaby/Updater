@@ -463,6 +463,32 @@
       "more": "🧧 支付宝红包又来了"
     }
   },
+  "cainiao_guo": {
+    "version": "1.0",
+    "update_log": "- 更新 优化 15.1 运行速度，加快 500%\n- 更新 兼容多语言环境，修复活动大厅\n- 更新 开放助力功能，云端助力池建设中...\n- 更新 云端任务逻辑细节和功能",
+    "about": {
+      "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
+      "version_log": "https://github.com/leecobaby/shortcuts/tree/master/cainiao_guo#版本日志"
+    },
+    "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/ff0c227f189a4342be58f060e8e658a6",
+    "notice": "",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
+    "automation_url": "shortcuts://run-shortcut?name=菜鸟-自动领果酱&input=text&text=task",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd2.jpeg",
+    "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
+    "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/cainiao_guo/",
+    "tip": {
+      "hongbao": "",
+      "hot": "可前往活动入口",
+      "faq": "有疑问的请查看",
+      "set": "",
+      "team": "",
+      "other": "",
+      "more": ""
+    }
+  },
   "AutoBox": {
     "version": "1.3",
     "update_log": "- 增加 计划顶置首页功能\n- 弃用 分享计划功能\n- 修复 ios15 运行的各种 bug\n- 不支持 ios13-14",
