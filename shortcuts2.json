@@ -371,7 +371,7 @@
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/blob/master/TB.FAQ.md#%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96-cookie",
       "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cxdbxa6",
-      "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_sign#版本日志"
+      "version_log": "https://github.com/leecobaby/shortcuts/tree/master/1111#版本日志"
     },
     "update": "https://www.icloud.com/shortcuts/a2c78b549662411a83184e094462a0d2",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
@@ -467,9 +467,11 @@
     "version": "1.0",
     "update_log": "- 更新 优化 15.1 运行速度，加快 500%\n- 更新 兼容多语言环境，修复活动大厅\n- 更新 开放助力功能，云端助力池建设中...\n- 更新 云端任务逻辑细节和功能",
     "about": {
-      "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
+      "faq": "https://github.com/leecobaby/shortcuts/blob/master/TB.FAQ.md#%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96-cookie",
+      "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cxdbxa6",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/cainiao_guo#版本日志"
     },
+    "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/ff0c227f189a4342be58f060e8e658a6",
