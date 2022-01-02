@@ -9,12 +9,10 @@
 // 到指令里运行需要注释掉
 // const $ = {}
 
-// $.inviteList = [];
-// $.pkInviteList = [];
-// $.secretpInfo = {};
-// $.innerPkInviteList = [];
+// 待开发 getAwardInviteFriend getExtraAward turntableFarm
 
 let JD_API_HOST = `https://api.m.jd.com/client.action?functionId=`;
+$.Utils = Utils()
 
 /** 下方放 call 文本，来控制函数执行 **/
 
@@ -40,11 +38,11 @@ function init () {
     $.inviteList = []
   }
 
-  // 任务流程初始化
+  // 任务流程初始化 或 次数循环任务初始化
   $.taskStep = 1
 
   // 生成随机 UA UUID
-  $.uuid = randomString(40)
+  $.uuid = $.Utils.randomString(40)
   $.UA = `jdapp;iPhone;10.2.0;13.1.2;${$.uuid};M/5.0;network/wifi;ADID/;model/iPhone8,1;addressid/2308460611;appBuild/167853;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 13_1_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1;`
 
   $.message = `本指令作为自动化方案开源分享，并不保证他带来的任何副作用，任何副作用请自行负责，如不同意请停止使用！`
@@ -55,12 +53,13 @@ function init () {
  * 云端推送提示
  */
 function cloudTip () {
-  $.message = `其他功能和任务正在开发中，上线将自动推送到指令中，无需任何操作~`
+  // 用来退出任务列表，可把测试功能和正式功能做分割
+  $.error = `其他功能和任务正在开发中，上线将自动推送到指令中，无需任何操作~`
   document.write(JSON.stringify($))
 }
 
 /**
- * 初始化农场, 可获取果树及用户信息API
+ * 初始化农场, 可获取果树及用户信息API 还需优化
  */
 function initForFarm () {
   $.callback = 'Func.request'
@@ -126,7 +125,8 @@ function help () {
   $.inviteList = Array.isArray($.inviteList) ? $.inviteList : [$.inviteList]
 
   $.inviteId = $.inviteList.shift()
-  if (!$.inviteId || $.selfHelpMax) {
+  if (!$.setHelp || !$.inviteId || $.selfHelpMax) {
+    !$.setHelp && ($.message = '你在指令设置了关闭助力，则不执行助力任务')
     // 循环完成重新设置 to,call
     $.to = '', $.call.pop()
     document.write(JSON.stringify($))
@@ -255,8 +255,7 @@ function doTenWater () {
     $.callback = ''
     dealReturn('waterGoodForFarm', $.data)
     document.write(JSON.stringify($))
-  }
-  else {
+  } else {
     // 循环完成重新设置 to,call
     $.to = '', $.call.pop()
     $.message = `今日已完成10次浇水任务`
@@ -266,7 +265,7 @@ function doTenWater () {
 }
 
 /**
- * 领取阶段性水滴奖励
+ * 领取阶段性水滴奖励 可能存在问题，原型是每次浇水都会运行一次
  */
 function gotStageAwardForFarm () {
   if ($.waterResult?.waterStatus === 0 && $.waterResult?.treeEnergy === 10) {
@@ -303,7 +302,7 @@ function gotStageAwardForFarm () {
  * 领取首次浇水奖励
  */
 function firstWaterTaskForFarm () {
-  // 此处调用别的函数，并不会执行 next 所以需要再执行一次 next
+  // 此处调用别的函数，并不会执行调用函数里的 next 而是执行这里的 next,所以 next 逻辑要移过来
   taskInitForFarm()
   return
 
@@ -369,7 +368,7 @@ function gotThreeMealForFarm () {
 }
 
 /**
- * 给两个好友浇水
+ * 给两个好友浇水 还未上线
  */
 function waterFriendForFarm () {
   // 循环逻辑单独设置 to,call
@@ -408,12 +407,204 @@ function waterFriendForFarm () {
 }
 
 /**
+ * 做小鸭子游戏
+ */
+function getFullCollectionReward () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler'
+  $.call = ['getFullCollectionReward']
+
+  if ($.taskStep <= 10) {
+    $.callback = 'Func.request'
+    takeRequest('getFullCollectionReward');
+    return
+
+    // next
+    $.callback = ''
+    dealReturn('getFullCollectionReward', $.data)
+    document.write(JSON.stringify($))
+  } else {
+    // 循环完成重新设置 to,call
+    $.to = '', $.call.pop(), $.taskStep = 1
+    $.message = '小鸭子游戏已完成~'
+    document.write(JSON.stringify($))
+  }
+
+}
+
+/**
+ * 水滴雨
+ */
+function waterRainForFarm () {
+  let executeWaterRain = !$.farmTask.waterRainInit?.f;
+  if (executeWaterRain) {
+    if ($.farmTask.waterRainInit?.lastTime && Date.now() < ($.farmTask.waterRainInit.lastTime + 3 * 60 * 60 * 1000)) {
+      $.message = `【第${$.farmTask.waterRainInit.winTimes + 1}次水滴雨】未到时间，请${new Date($.farmTask.waterRainInit.lastTime + 3 * 60 * 60 * 1000).toLocaleTimeString()}再试`
+      document.write(JSON.stringify($))
+    } else {
+      $.callback = 'Func.request'
+      takeRequest('waterRainForFarm');
+      return
+
+      // next
+      $.callback = ''
+      dealReturn('waterRainForFarm', $.data)
+      document.write(JSON.stringify($))
+    }
+  } else {
+    $.message = '两次水滴雨任务已全部完成~'
+    document.write(JSON.stringify($))
+  }
+}
+
+
+/**
+ * 获取签到活动信息
+ */
+function clockInInitForFarm () {
+  $.call[$.call.length - 1] == 'clockInInitForFarm' || $.call.push('clockInInitForFarm')
+  $.callback = 'Func.request'
+  takeRequest('clockInInitForFarm');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop() // 只调用一次的函数需要及时弹出
+  dealReturn('clockInInitForFarm', $.data)
+  document.write(JSON.stringify($))
+}
+
+/**
+ * 做签到活动任务
+ */
+function doSignTask () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler'
+  $.call = ['doSignTask']
+
+  switch ($.taskStep++) {
+    case 1:
+      // 获取签到活动信息
+      clockInInitForFarm()
+      break;
+    case 2:
+      if (!$.clockInInit.todaySigned) {
+        // 签到得水滴
+        clockInForFarm()
+      } else if ($.clockInInit.todaySigned && $.clockInInit.totalSigned === 7) {
+        // 领取惊喜礼包38g水滴
+        gotClockInGift();
+      } else {
+        $.message = '当日已经签到过了~'
+        document.write(JSON.stringify($))
+      }
+      break;
+    case 3:
+      if ($.clockInInit.themes && $.clockInInit.themes.length > 0) {
+        // 限时关注得水滴
+        clockInFollowForFarm('theme');
+      } else if ($.clockInInit.venderCoupons && $.clockInInit.venderCoupons.length > 0) {
+        // 限时领券得水滴
+        clockInFollowForFarm('venderCoupon')
+      } else {
+        document.write(JSON.stringify($))
+      }
+      break;
+    default:
+      $.to = '', $.call.pop(), $.taskStep = 1
+      document.write(JSON.stringify($))
+      break;
+  }
+}
+
+/**
+ * 做连续签到
+ */
+function clockInForFarm () {
+  $.call[$.call.length - 1] == 'clockInForFarm' || $.call.push('clockInForFarm')
+  $.callback = 'Func.request'
+  takeRequest('clockInForFarm');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop() // 只调用一次的函数需要及时弹出
+  dealReturn('clockInForFarm', $.data)
+}
+
+/**
+ * 签到 - 领取惊喜礼包
+ */
+function gotClockInGift () {
+  $.call[$.call.length - 1] == 'gotClockInGift' || $.call.push('gotClockInGift')
+  $.callback = 'Func.request'
+  takeRequest('gotClockInGift');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop() // 只调用一次的函数需要及时弹出
+  dealReturn('gotClockInGift', $.data)
+  document.write(JSON.stringify($))
+}
+
+/**
+ * 签到 - 限时任务 theme 为关注 venderCoupon 为领券
+ */
+function clockInFollowForFarm (type) {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler';
+  $.call[$.call.length - 1] == 'clockInFollowForFarm' || $.call.push('clockInFollowForFarm')
+
+  // 利用队列取代循环
+  $.oneItem = $.clockInInit.themes.shift()
+  $.oneItemType = type || $.oneItemType
+  if (!$.oneItem) {
+    // 循环完成重新设置 to,call
+    $.to = '', $.call.pop()
+    $.message = ` 限时任务已全都完成~`
+    document.write(JSON.stringify($))
+    return
+  }
+
+  // 关注过的则跳出
+  if ($.oneItem.hadGot) { document.write(JSON.stringify($)); return; }
+
+  $.callback = 'Func.request'
+  takeRequest('clockInFollowForFarm1');
+  return
+
+  // next
+  $.callback = ''
+  if ($.data.code === '0') {
+    $.next = 1 // 覆盖前面的 0
+    $.callback = 'Func.request'
+    takeRequest('clockInFollowForFarm2');
+    // return
+    // 这里的逻辑是在 next 里面的，而 next 不是一个函数，所以不能使用 return 来中断
+
+    // 对于 next next 这种嵌套需要单独隔离，只在运行到的时候调用，判断是否有页面内容为好的方式
+
+    // next next
+    if (!document.body.innerText) {
+      $.callback = ''
+      dealReturn('clockInFollowForFarm2', $.data)
+      document.write(JSON.stringify($))
+    }
+  } else {
+    document.write(JSON.stringify($))
+  }
+}
+
+
+/**
  * 提交请求信息
  */
 function takeRequest (type) {
   let { log, random } = $.signList?.shift() || {}
   let body = ``;
   let myRequest = ``;
+  let otherUrl = ``;
   switch (type) {
     case 'initForFarm':
       body = `body=${encodeURIComponent(JSON.stringify({ "version": 4 }))}&appid=wh5&clientVersion=9.1.0;`
@@ -467,33 +658,33 @@ function takeRequest (type) {
       body = `{"shareCode":${$.shareCode},"version":6,"channel":1}`;
       myRequest = getRequest(`waterFriendForFarm`, body, 'GET');
       break;
-    case 'wxTaskDetail':
-      body = `functionId=funny_getTaskDetail&body={"appSign":"2","channel":1,"shopSign":""}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`funny_getTaskDetail`, body);
+    case 'getFullCollectionReward':
+      otherUrl = `${JD_API_HOST}${type}&appid=wh5&body=${encodeURIComponent(`{"type":2,"version":6,"channel":2}`)}`
+      myRequest = getRequest(`getFullCollectionReward`, body, 'POST', otherUrl);
       break;
-    case 'zoo_shopLotteryInfo':
-      body = `functionId=zoo_shopLotteryInfo&body={"shopSign":"${$.shopSign}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`zoo_shopLotteryInfo`, body);
+    case 'waterRainForFarm':
+      body = `{"type":1,"hongBaoTimes":100,"version":3}`;
+      myRequest = getRequest(`waterRainForFarm`, body, 'GET');
       break;
-    case 'zoo_bdCollectScore':
-      body = getPostBody(type);
-      myRequest = getRequest(`zoo_bdCollectScore`, body);
+    case 'clockInInitForFarm':
+      body = `{}`;
+      myRequest = getRequest(`clockInInitForFarm`, body, 'GET');
       break;
-    case 'qryCompositeMaterials':
-      body = `functionId=qryCompositeMaterials&body={"qryParam":"[{\\"type\\":\\"advertGroup\\",\\"mapTo\\":\\"resultData\\",\\"id\\":\\"05371960\\"}]","activityId":"2s7hhSTbhMgxpGoa9JDnbDzJTaBB","pageId":"","reqSrc":"","applyKey":"jd_star"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`qryCompositeMaterials`, body);
+    case 'clockInForFarm':
+      body = `{"type":1}`;
+      myRequest = getRequest(`clockInForFarm`, body, 'GET');
       break;
-    case 'zoo_boxShopLottery':
-      body = `functionId=zoo_boxShopLottery&body={"shopSign":"${$.shopSign}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`zoo_boxShopLottery`, body);
+    case 'gotClockInGift':
+      body = `{"type":2}`;
+      myRequest = getRequest(`clockInForFarm`, body, 'GET');
       break;
-    case `zoo_wishShopLottery`:
-      body = `functionId=zoo_wishShopLottery&body={"shopSign":"${$.shopSign}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`zoo_boxShopLottery`, body);
+    case `clockInFollowForFarm1`:
+      body = `{"id":${$.oneItem.id},"type":"${$.oneItemType}","step":"1"}`;
+      myRequest = getRequest(`clockInFollowForFarm`, body, 'GET');
       break;
-    case `zoo_myMap`:
-      body = `functionId=zoo_myMap&body={}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`zoo_myMap`, body);
+    case `clockInFollowForFarm2`:
+      body = `{"id":${$.oneItem.id},"type":"${$.oneItemType}","step":"2"}`;
+      myRequest = getRequest(`clockInFollowForFarm`, body, 'GET');
       break;
     case 'zoo_getWelfareScore':
       body = getPostBody(type);
@@ -527,7 +718,7 @@ function takeRequest (type) {
  * @param {string} method 请求方式
  * @returns 
  */
-function getRequest (type, body = {}, method = 'POST') {
+function getRequest (type, body = {}, method = 'POST', otherUrl) {
   let url = JD_API_HOST + type;
   if (type === 'listTask' || type === 'acceptTask') {
     url = `https://ms.jr.jd.com/gw/generic/hy/h5/m/${type}`;
@@ -535,6 +726,7 @@ function getRequest (type, body = {}, method = 'POST') {
   if (method === 'GET') {
     url = `${JD_API_HOST}${type}&appid=wh5&body=${encodeURIComponent(body)}`
   }
+  url = otherUrl || url
   const headers = {
     'Accept': `application/json, text/plain, */*`,
     'Origin': `https://h5.m.jd.com`,
@@ -576,18 +768,14 @@ function getPostBody (type) {
 
 // 处理返回信息
 function dealReturn (type, data) {
-  if (!data.d) $.error = '接口返回数据为空，检查账号cookie是否过期或错误';
-  // 对 15.1 的特殊优化
-  $.data = JSON.parse(data.d)
-  data = $.data
-  $.data = {}
+  if (!data) $.error = '接口返回数据为空，检查账号cookie是否过期或错误';
   switch (type) {
     case 'initForFarm':
       if (data) {
         $.farmInfo = data
         if ($.farmInfo.farmUserPro) {
           $.success = 1
-          $.message = `【好友互助码】:\n${$.farmInfo?.farmUserPro?.shareCode || '助力已满，获取助力码失败'}\n【已兑换水果】${$.farmInfo.farmUserPro?.winTimes}次`
+          $.message = `【你的好友互助码】:\n${$.farmInfo?.farmUserPro?.shareCode || '助力已满，获取助力码失败'}\n【已兑换水果】${$.farmInfo.farmUserPro?.winTimes}次`
         } else {
           $.error = `【数据异常】请手动登录京东app查看是否已选择了水果种植，Cookie是否正确且未过期 ，返回的数据: ${JSON.stringify($.farmInfo)} `
         }
@@ -694,15 +882,72 @@ function dealReturn (type, data) {
         $.message = '浇水失败：水滴不够'
       }
       break
+    case 'getFullCollectionReward':
+      $.taskStep++;
+      if (data.code === '0') {
+        $.message = `${data.title}`
+      } else if (data.code === '10') {
+        $.taskStep = 11 // 跳出循环
+        $.message = '【游戏失败】小鸭子游戏达到上限'
+      }
+      break
+    case 'waterRainForFarm':
+      if (data.code === '0') {
+        $.message = `【第${$.farmTask.waterRainInit.winTimes + 1}次水滴雨】获得${data.addEnergy}g💧`
+      } else {
+        $.message = `水滴雨结果：${JSON.stringify(data)}`
+      }
+      break
+    case 'clockInInitForFarm':
+      $.clockInInit = data
+      // 压缩数据，加快快捷指令运行
+      $.data = null
+      $.clockInInit.feeds = null
+      // 如果返回的数据有问题 则不进行签到活动的后续任务
+      if ($.clockInInit.code !== '0') $.taskStep = -1
+      break
+    case 'clockInForFarm':
+      if (data.code === '0') {
+        $.message = `【第${data.signDay}天签到】获得${data.amount}g💧`
+        if (data.signDay === 7) {
+          //可以领取惊喜礼包
+          $.next = 0 // 衔接下一个函数前，重置 next 防止获取 next 失败
+          gotClockInGift();
+        } else {
+          document.write(JSON.stringify($))
+        }
+      } else {
+        $.message = `签到结果：${JSON.stringify(data)}`
+        document.write(JSON.stringify($))
+      }
+      break
+    case 'gotClockInGift':
+      if (data.code === '0') {
+        $.message = `【惊喜礼包】获得${data.amount}g💧`
+      }
+      break
+    case 'clockInFollowForFarm2':
+      if (data.code === '0') {
+        $.message = `【限时任务】${$.oneItem.name}，获得水滴${data.amount}g💧`
+      }
+      break
     default:
       $.error = `未判断的异常${type}`
   }
 }
 
-function randomString (e) {
-  e = e || 32;
-  let t = "abcdef0123456789", a = t.length, n = "";
-  for (let i = 0; i < e; i++)
-    n += t.charAt(Math.floor(Math.random() * a));
-  return n
+/**
+ * 工具类对象 - 写成函数封装形式，是想利用函数申明提前
+ * @returns object
+ */
+function Utils () {
+  return {
+    randomString (e) {
+      e = e || 32;
+      let t = "abcdef0123456789", a = t.length, n = "";
+      for (let i = 0; i < e; i++)
+        n += t.charAt(Math.floor(Math.random() * a));
+      return n
+    }
+  }
 }

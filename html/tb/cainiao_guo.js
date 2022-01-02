@@ -40,13 +40,26 @@ function init () {
     $.inviteList = []
   }
 
-  // 任务流程初始化
+  // 初始化任务列表
+  $.taskSimpleList = ['TASK_1637751015073', 'TASK_1617282636980', 'TASK_1622627291825', 'TASK_1634814927365']
+  $.taskComplexList = ['TASK_1568776632733', 'TASK_1631686311645', 'TASK_1604582761571', 'TASK_1639462303886']
+
+  // 初始化任务流程
   $.taskStep = 1
 
   $.UA = `User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 15_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.1 Mobile/15E148 Safari/604.1`
 
-  $.message = `本指令作为自动化方案开源分享，并不保证他带来的任何副作用，任何副作用请自行负责，如不同意请停止使用！`
-  document.write(JSON.stringify($))
+  // 格式化 Cookie
+  $.cookie = $.cookie.replace(/\s/g, '')
+
+  try {
+    $.tk = $.cookie.match(/_m_h5_tk=(\w+)/)[1]
+    $.message = `本指令作为自动化方案开源分享，并不保证他带来的任何副作用，任何副作用请自行负责，如不同意请停止使用！`
+    document.write(JSON.stringify($))
+  } catch (e) {
+    $.error = `Cookie错误，请检查！`
+    document.write(JSON.stringify($))
+  }
 }
 
 /**
@@ -60,14 +73,26 @@ function cloudTip () {
 /**
  * 初始化农场, 可获取果树及用户信息API
  */
-function initForFarm () {
+function doSimpleTask () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler'
+  $.call = ['help']
+
+  $.taskId = $.taskSimpleList.shift()
+  if (!$.taskId) {
+    // 循环完成重新设置 to,call
+    $.to = '', $.call.pop()
+    document.write(JSON.stringify($))
+    return
+  }
+
   $.callback = 'Func.request'
-  takeRequest('initForFarm');
+  takeRequest('doSimpleTask');
   return
 
   // next
   $.callback = ''
-  dealReturn('initForFarm', $.data)
+  dealReturn('doSimpleTask', $.data)
   document.write(JSON.stringify($))
 }
 
@@ -347,75 +372,19 @@ function totalWaterTaskForFarm () {
   document.write(JSON.stringify($))
 }
 
-/**
- * 做定时领水
- */
-function gotThreeMealForFarm () {
-  if (!$.farmTask.gotThreeMealInit.f) {
-    $.callback = 'Func.request'
-    takeRequest('gotThreeMealForFarm');
-    return
 
-    // next
-    $.callback = ''
-    dealReturn('gotThreeMealForFarm', $.data)
-    document.write(JSON.stringify($))
-  } else {
-    $.message = '当前不在定时领水时间断或者已经领过'
-    document.write(JSON.stringify($))
-  }
-}
 
-/**
- * 给两个好友浇水
- */
-function waterFriendForFarm () {
-  // 循环逻辑单独设置 to,call
-  $.to = 'Func.logicHandler'
-  $.call = ['waterFriendForFarm']
 
-  if (!$.needWaterFriends && $.friendList.friends?.length > 0) {
-    $.needWaterFriends = $.friendList.friends.filter(v => v.friendState === 1)
-  } else if ($.friendList.friends?.length <= 0) {
-    // 循环完成重新设置 to,call
-    $.to = '', $.call.pop()
-    $.message = '您的好友列表暂无好友,快去邀请您的好友吧!'
-    document.write(JSON.stringify($))
-    return
-  }
-
-  if ($.farmTask.waterFriendTaskInit?.waterFriendCountKey < 2) {
-    $.shareCode = $.needWaterFriends[$.farmTask.waterFriendTaskInit?.waterFriendCountKey].shareCode
-    $.callback = 'Func.request'
-    takeRequest('waterFriendForFarm');
-    return
-
-    // next
-    $.callback = ''
-    $.farmTask.waterFriendTaskInit.waterFriendCountKey++
-    dealReturn('waterFriendForFarm', $.data)
-    document.write(JSON.stringify($))
-  }
-  else {
-    // 循环完成重新设置 to,call
-    $.to = '', $.call.pop()
-    $.message = `今日已经为两个好友浇水`
-    document.write(JSON.stringify($))
-    return
-  }
-}
 
 /**
  * 提交请求信息
  */
 function takeRequest (type) {
-  let { log, random } = $.signList?.shift() || {}
-  let body = ``;
-  let myRequest = ``;
+  let body = ``, myRequest = ``, url = ``, headers = ``
   switch (type) {
-    case 'initForFarm':
-      body = `body=${encodeURIComponent(JSON.stringify({ "version": 4 }))}&appid=wh5&clientVersion=9.1.0;`
-      myRequest = getRequest(`initForFarm`, body);
+    case 'doSimpleTask':
+      url = `https://service-lv90ws2p-1251309300.sh.apigw.tencentcs.com/release/api?activityId=cainiao_guo&tk=${$.tk}`
+      myRequest = getRequest(url);
       break;
     case 'taskInitForFarm':
       body = `{"version":14,"channel":1,"babelChannel":"120"}`;
@@ -441,74 +410,6 @@ function takeRequest (type) {
       body = `{"type":${$.taskType}}`;
       myRequest = getRequest(`gotStageAwardForFarm`, body, 'GET');
       break;
-    case 'firstWaterTaskForFarm':
-      body = `{}`;
-      myRequest = getRequest(`firstWaterTaskForFarm`, body, 'GET');
-      break;
-    case 'totalWaterTaskForFarm':
-      body = `{}`;
-      myRequest = getRequest(`totalWaterTaskForFarm`, body, 'GET');
-      break;
-    case 'gotWaterGoalTaskForFarm':
-      body = `{"type":3}`;
-      myRequest = getRequest(`gotWaterGoalTaskForFarm`, body, 'GET');
-      break;
-    case 'gotThreeMealForFarm':
-      body = `{}`;
-      myRequest = getRequest(`gotThreeMealForFarm`, body, 'GET');
-      break;
-    case 'friendListInitForFarm':
-      body = `{"version":4,"channel":1}`;
-      myRequest = getRequest(`friendListInitForFarm`, body, 'GET');
-      break;
-    case 'waterFriendForFarm':
-      body = `{"shareCode":${$.shareCode},"version":6,"channel":1}`;
-      myRequest = getRequest(`waterFriendForFarm`, body, 'GET');
-      break;
-    case 'wxTaskDetail':
-      body = `functionId=funny_getTaskDetail&body={"appSign":"2","channel":1,"shopSign":""}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`funny_getTaskDetail`, body);
-      break;
-    case 'zoo_shopLotteryInfo':
-      body = `functionId=zoo_shopLotteryInfo&body={"shopSign":"${$.shopSign}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`zoo_shopLotteryInfo`, body);
-      break;
-    case 'zoo_bdCollectScore':
-      body = getPostBody(type);
-      myRequest = getRequest(`zoo_bdCollectScore`, body);
-      break;
-    case 'qryCompositeMaterials':
-      body = `functionId=qryCompositeMaterials&body={"qryParam":"[{\\"type\\":\\"advertGroup\\",\\"mapTo\\":\\"resultData\\",\\"id\\":\\"05371960\\"}]","activityId":"2s7hhSTbhMgxpGoa9JDnbDzJTaBB","pageId":"","reqSrc":"","applyKey":"jd_star"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`qryCompositeMaterials`, body);
-      break;
-    case 'zoo_boxShopLottery':
-      body = `functionId=zoo_boxShopLottery&body={"shopSign":"${$.shopSign}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`zoo_boxShopLottery`, body);
-      break;
-    case `zoo_wishShopLottery`:
-      body = `functionId=zoo_wishShopLottery&body={"shopSign":"${$.shopSign}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`zoo_boxShopLottery`, body);
-      break;
-    case `zoo_myMap`:
-      body = `functionId=zoo_myMap&body={}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`zoo_myMap`, body);
-      break;
-    case 'zoo_getWelfareScore':
-      body = getPostBody(type);
-      myRequest = getRequest(`zoo_getWelfareScore`, body);
-      break;
-    case 'jdjrTaskDetail':
-      body = `reqData={"eid":"","sdkToken":"jdd014JYKVE2S6UEEIWPKA4B5ZKBS4N6Y6X5GX2NXL4IYUMHKF3EEVK52RQHBYXRZ67XWQF5N7XB6Y2YKYRTGQW4GV5OFGPDPFP3MZINWG2A01234567"}`;
-      myRequest = getRequest(`listTask`, body);
-      break;
-    case 'jdjrAcceptTask':
-      body = `reqData={"eid":"","sdkToken":"jdd014JYKVE2S6UEEIWPKA4B5ZKBS4N6Y6X5GX2NXL4IYUMHKF3EEVK52RQHBYXRZ67XWQF5N7XB6Y2YKYRTGQW4GV5OFGPDPFP3MZINWG2A01234567","id":"${$.taskId}"}`;
-      myRequest = getRequest(`acceptTask`, body);
-      break;
-    case 'add_car':
-      body = `functionId=funny_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HWJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","actionType":1}&client=wh5&clientVersion=1.0.0&uuid=c67093f5dd58d33fc5305cdc61e46a9741e05c5b&appid=o2_act`;
-      myRequest = getRequest(`funny_collectScore`, body);
-      break;
     default:
       $.error = `takeRequest 错误${type}`
       console.log(`错误${type}`);
@@ -525,29 +426,16 @@ function takeRequest (type) {
  * @param {string} method 请求方式
  * @returns 
  */
-function getRequest (type, body = {}, method = 'POST') {
-  let url = JD_API_HOST + type;
-  if (type === 'listTask' || type === 'acceptTask') {
-    url = `https://ms.jr.jd.com/gw/generic/hy/h5/m/${type}`;
-  }
-  if (method === 'GET') {
-    url = `${JD_API_HOST}${type}&appid=wh5&body=${encodeURIComponent(body)}`
-  }
+function getRequest (url, body = {}, method = 'GET', header = {}) {
   const headers = {
-    'Accept': `application/json, text/plain, */*`,
-    'Origin': `https://h5.m.jd.com`,
+    'Accept': `*/*`,
     'Accept-Encoding': `gzip, deflate, br`,
-    "Cache-Control": "no-cache",
-    'Cookie': $.cookie,
-    'Content-Type': `application/x-www-form-urlencoded`,
-    'Host': `api.m.jd.com`,
+    'Cookie': header.Cookie || ``,
+    'Host': `h5api.m.tmall.com`,
     'Connection': `keep-alive`,
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "same-site",
-    'User-Agent': $.UA || "jdapp;iPhone;9.4.4;14.3;network/4g;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
-    'Referer': `https://home.m.jd.com/myJd/newhome.action`,
-    'Accept-Language': `zh-cn`
+    'User-Agent': $.UA,
+    'Referer': header.Referer || `https://h5api.m.tmall.com`,
+    'Accept-Language': `en-US,en;q=0.9 Host: h5api.m.tmall.com`
   };
   return { url: url, method: method, headers: headers, body: body };
 }
@@ -574,23 +462,14 @@ function getPostBody (type) {
 
 // 处理返回信息
 function dealReturn (type, data) {
-  if (!data.d) $.error = '接口返回数据为空，检查账号cookie是否过期或错误';
-  // 对 15.1 的特殊优化
-  $.data = JSON.parse(data.d)
-  data = $.data
-  $.data = {}
+  if (!data) $.error = '接口返回数据为空，请检查网络情况！';
   switch (type) {
-    case 'initForFarm':
-      if (data) {
-        $.farmInfo = data
-        if ($.farmInfo.farmUserPro) {
-          $.success = 1
-          $.message = `【好友互助码】:\n${$.farmInfo?.farmUserPro?.shareCode || '助力已满，获取助力码失败'}\n【已兑换水果】${$.farmInfo.farmUserPro?.winTimes}次`
-        } else {
-          $.error = `【数据异常】请手动登录京东app查看是否已选择了水果种植，Cookie是否正确且未过期 ，返回的数据: ${JSON.stringify($.farmInfo)} `
-        }
+    case 'doSimpleTask':
+      if (data.url) {
+        $.message = data.url
+        $.url = data.url
       } else {
-        $.error = `服务器返回数据异常，请检查原因~`
+        $.error = '无法获取活动链接，请稍后再试！'
       }
       break;
     case 'taskInitForFarm':
