@@ -66,7 +66,7 @@ function init () {
  * 云端推送提示
  */
 function cloudTip () {
-  $.message = `其他功能和任务正在开发中，上线将自动推送到指令中，无需任何操作~`
+  $.message = `目前指令只能做部分任务，其他任务开发中，上线将自动推送到指令中，无需任何操作~`
   document.write(JSON.stringify($))
 }
 
@@ -82,33 +82,36 @@ function doSimpleTask () {
   if (!$.taskId) {
     // 循环完成重新设置 to,call
     $.to = '', $.call.pop()
+    $.message = `已完成所有简单任务~`
     document.write(JSON.stringify($))
     return
   }
 
   $.callback = 'Func.request'
-  takeRequest('doSimpleTask');
+  takeRequest('doSimpleTaskURL');
   return
 
   // next
   $.callback = ''
   dealReturn('doSimpleTask', $.data)
-  document.write(JSON.stringify($))
-}
+  if (!$.error) {
+    $.next = 1 // 覆盖前面的 0
+    $.callback = 'Func.request'
+    takeRequest('doSimpleTask')
+    // return
+    // 这里的逻辑是在 next 里面的，而 next 不是一个函数，所以不能使用 return 来中断
 
-/**
- * 获取农场状态
- */
-function treeState () {
-  if ($.farmInfo.treeState === 2 || $.farmInfo.treeState === 3) {
-    $.error = `【⏰ 提醒】${$.farmInfo.farmUserPro?.name}已可领取\n请去京东APP或微信小程序查看`
-  } else if ($.farmInfo.treeState === 1) {
-    $.message = `${$.farmInfo.farmUserPro?.name}种植中...`
-  } else if ($.farmInfo.treeState === 0) {
-    //已下单购买, 但未开始种植新的水果
-    $.error = `【⏰ 提醒】您忘了种植新的水果\n请去京东APP或微信小程序选购并种植新的水果`
+    // 对于 next next 这种嵌套需要单独隔离，只在运行到的时候调用，判断是否有页面内容为好的方式
+
+    // next next
+    if (!document.body.innerText) {
+      $.callback = ''
+      dealReturn('doSimpleTask', $.data)
+      document.write(JSON.stringify($))
+    }
+  } else {
+    document.write(JSON.stringify($))
   }
-  document.write(JSON.stringify($))
 }
 
 /**
@@ -382,13 +385,13 @@ function totalWaterTaskForFarm () {
 function takeRequest (type) {
   let body = ``, myRequest = ``, url = ``, headers = ``
   switch (type) {
-    case 'doSimpleTask':
-      url = `https://service-lv90ws2p-1251309300.sh.apigw.tencentcs.com/release/api?activityId=cainiao_guo&tk=${$.tk}`
+    case 'doSimpleTaskURL':
+      url = `https://service-lv90ws2p-1251309300.sh.apigw.tencentcs.com/release/api?activityId=cainiao_guo&tk=${$.tk}&api=mtop.cncreditmarket.task.checkfinish&guoguo=${$.taskId}`
       myRequest = getRequest(url);
       break;
-    case 'taskInitForFarm':
-      body = `{"version":14,"channel":1,"babelChannel":"120"}`;
-      myRequest = getRequest(`taskInitForFarm`, body, 'GET');
+    case 'doSimpleTask':
+      url = $.url;
+      myRequest = getRequest(url);
       break;
     case 'signForFarm':
       body = `{}`;
@@ -464,7 +467,7 @@ function getPostBody (type) {
 function dealReturn (type, data) {
   if (!data) $.error = '接口返回数据为空，请检查网络情况！';
   switch (type) {
-    case 'doSimpleTask':
+    case 'doSimpleTaskURL':
       if (data.url) {
         $.message = `结果: ${JSON.stringify(data)}`
         $.url = data.url
@@ -472,8 +475,16 @@ function dealReturn (type, data) {
         $.error = '无法获取活动链接，请稍后再试！'
       }
       break;
-    case 'taskInitForFarm':
-      if (data) { $.farmTask = data } else { $.error = `服务器返回数据异常，请检查原因~` }
+    case 'doSimpleTask':
+      if (data.ret && data.ret[0] == "SUCCESS::调用成功") {
+        if (data.result?.finish) {
+          $.message = `结果：任务完成`
+        } else {
+          $.message = `结果：任务失败`
+        }
+      } else {
+        $.error = `出错了请检查 Cookie 是否正确且未过期，结果：${JSON.stringify(data)}`
+      }
       break;
     case 'friendListInitForFarm':
       $.friendList = data
