@@ -41,7 +41,7 @@ function init () {
   }
 
   // 初始化任务列表
-  $.taskSimpleList = ['TASK_1637751015073', 'TASK_1617282636980', 'TASK_1622627291825', 'TASK_1634814927365']
+  $.taskSimpleList = ['TASK_1637751015073', 'TASK_1617282636980', 'TASK_1622627291825', 'TASK_1634814927365', 'TASK_1616987126124', 'TASK_1639462303886']
   $.taskComplexList = ['TASK_1568776632733', 'TASK_1631686311645', 'TASK_1604582761571', 'TASK_1639462303886']
 
   // 初始化任务流程
@@ -478,9 +478,9 @@ function dealReturn (type, data) {
     case 'doSimpleTask':
       if (data.ret && data.ret[0] == "SUCCESS::调用成功") {
         if (data.data?.result?.finish) {
-          $.message = `结果：任务完成`
+          $.message = `结果：任务完成 ${JSON.stringify(data)}`
         } else {
-          $.message = `结果：任务失败`
+          $.message = `结果：任务失败 ${JSON.stringify(data)}`
         }
       } else {
         $.error = `出错了请检查 Cookie 是否正确且未过期，结果：${JSON.stringify(data)}`
