@@ -465,7 +465,7 @@
   },
   "cainiao_guo": {
     "version": "1.0",
-    "update_log": "- 更新 优化 15.1 运行速度，加快 500%\n- 更新 兼容多语言环境，修复活动大厅\n- 更新 开放助力功能，云端助力池建设中...\n- 更新 云端任务逻辑细节和功能",
+    "update_log": "- 采用 高度解耦的分离框架\n- 实现 自动做部分任务\n- 实现 云端更新推送任务",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/blob/master/TB.FAQ.md#%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96-cookie",
       "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cxdbxa6",
@@ -475,10 +475,10 @@
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/ff0c227f189a4342be58f060e8e658a6",
-    "notice": "test",
+    "notice": "初步实现自动做淘宝端菜鸟部分任务，菜鸟端及其他任务将逐步更新~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=菜鸟-自动领果酱&input=text&text=task",
-    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd2.jpeg",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-cainiao.png",
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/cainiao_guo/",
     "tip": {
