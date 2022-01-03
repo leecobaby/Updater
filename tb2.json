@@ -1666,7 +1666,7 @@
     },
     "controller": {
       "callList": ["init"],
-      "taskList": [{ "做部分任务": "doSimpleTask", "其他": "cloudTip" }]
+      "taskList": [{ "做部分任务": "doSimpleTask" }, { "其他": "cloudTip" }]
     },
     "codeList": ["doSimpleTask_next", "doSimpleTask_next_next"]
   },
