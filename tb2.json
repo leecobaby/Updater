@@ -1647,7 +1647,7 @@
   "cainiao_guo": {
     "version": "上次数据更新于:1.2.1",
     "pv": "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f57BIpL%3Fsm%3D4560b2",
-    "endJump": "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f57BIpL%3Fsm%3D4560b2",
+    "endJump": "taobao://page.cainiao.com/mcn/cainiao-score/web/index.html",
     "codeUrl": {
       "CryptoJS": "https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.js",
       "cainiao_guo": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/cainiao_guo.js",
@@ -1655,8 +1655,8 @@
       "checkCookie": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/checkCookie.js"
     },
     "api": {
-      "api": {
-        "url": "https://api.m.jd.com/client.action"
+      "api1": {
+        "url": "https://service-lv90ws2p-1251309300.sh.apigw.tencentcs.com/"
       }
     },
     "uaInfo": {

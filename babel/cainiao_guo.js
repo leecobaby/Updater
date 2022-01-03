@@ -469,7 +469,7 @@ function dealReturn (type, data) {
   switch (type) {
     case 'doSimpleTaskURL':
       if (data.url) {
-        $.message = `结果: ${JSON.stringify(data)}`
+        // $.message = `结果: ${JSON.stringify(data)}`
         $.url = data.url
       } else {
         $.error = '无法获取活动链接，请稍后再试！'
@@ -478,7 +478,7 @@ function dealReturn (type, data) {
     case 'doSimpleTask':
       if (data.ret && data.ret[0] == "SUCCESS::调用成功") {
         if (data.data?.result?.finish) {
-          $.message = `结果：任务完成 ${JSON.stringify(data)}`
+          $.message = `结果：任务完成`
         } else {
           $.message = `结果：任务失败 ${JSON.stringify(data)}`
         }
