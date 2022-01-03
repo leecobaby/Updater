@@ -92,8 +92,8 @@ function doSimpleTask () {
   return
 
   // next
-  $.callback = ''
-  dealReturn('doSimpleTask', $.data)
+  $.callback = '';
+  dealReturn('doSimpleTaskURL', $.data)
   if (!$.error) {
     $.next = 1 // 覆盖前面的 0
     $.callback = 'Func.request'
