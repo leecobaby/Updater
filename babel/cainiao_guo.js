@@ -477,7 +477,7 @@ function dealReturn (type, data) {
       break;
     case 'doSimpleTask':
       if (data.ret && data.ret[0] == "SUCCESS::调用成功") {
-        if (data.result?.finish) {
+        if (data.data?.result?.finish) {
           $.message = `结果：任务完成`
         } else {
           $.message = `结果：任务失败`
