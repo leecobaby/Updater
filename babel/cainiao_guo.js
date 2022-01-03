@@ -483,9 +483,9 @@ function dealReturn (type, data) {
           $.message = `结果：任务失败 ${JSON.stringify(data)}`
         }
       } else if (data.ret && data.ret[0] == "FAIL_SYS_SESSION_EXPIRED::Session过期") {
-        $.message = `结果：任务错误 ${JSON.stringify(data)}`
-      } else {
         $.error = `出错了请检查 Cookie 是否正确且未过期，结果：${JSON.stringify(data)}`
+      } else {
+        $.message = `结果：任务错误 ${JSON.stringify(data)}`
       }
       break;
     case 'friendListInitForFarm':
