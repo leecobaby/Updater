@@ -386,7 +386,7 @@ function takeRequest (type) {
   let body = ``, myRequest = ``, url = ``, headers = ``
   switch (type) {
     case 'doSimpleTaskURL':
-      url = `https://service-lv90ws2p-1251309300.sh.apigw.tencentcs.com/release/api?activityId=cainiao_guo&tk=${$.tk}&api=mtop.cncreditmarket.task.checkfinish&guoguo=${$.taskId}`
+      url = `https://service-lv90ws2p-1251309300.sh.apigw.tencentcs.com/release/api?activityId=Cainiao_guo&tk=${$.tk}&api=mtop.cncreditmarket.task.checkfinish&guoguo=${$.taskId}`
       myRequest = getRequest(url);
       break;
     case 'doSimpleTask':
