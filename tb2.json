@@ -1159,7 +1159,7 @@
     ]
   },
   "FarmSingle": {
-    "version": "数据最后更新于:12.26.3",
+    "version": "数据最后更新于:1.7.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.f8bALJo",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f8bALJo",
@@ -1191,6 +1191,22 @@
       "淘宝特价版": "taobaolite"
     },
     "task": [
+      {
+        "tmall": {
+          "title": "年货节集福气 - 部分任务可能需要令牌模式",
+          "type": "other",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=2661&sourceType=other&hd_from_id=100145&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "23181 other_10_702010_23181_0",
+            "22491 other_18_1_22491_1",
+            "23642 cloudsail_1_214893503000001_23642_0",
+            "23695 cloudsail_0_219981001860001_23695_0",
+            "23639 cloudsail_1_216112503620001_23639_0",
+            "23639 cloudsail_1_216112503620001_23639_1"
+          ]
+        }
+      },
       {
         "tmall": {
           "title": "淘宝集肥料",
