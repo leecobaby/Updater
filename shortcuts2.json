@@ -222,7 +222,11 @@
   "FarmSingle": {
     "version": "2.0",
     "update_log": "- 新增 令牌模式 专过强校验\n- 增加 年货节活动令牌接口\n- 兼容 ios15.1 版本（还是不建议你升级 15.1,运行时间是原来的 2 倍）",
-    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/FarmSingle",
+    "about": {
+      "faq": "https://github.com/leecobaby/shortcuts/blob/master/TB.FAQ.md#%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96-cookie",
+      "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cxdbxa6",
+      "version_log": "https://github.com/leecobaby/shortcuts/tree/master/FarmSingle"
+    },
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/e215453fae124dc5980b2e4a65515bab",
