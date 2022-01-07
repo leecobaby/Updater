@@ -220,14 +220,14 @@
     }
   },
   "FarmSingle": {
-    "version": "1.9",
-    "update_log": "- 更新 优化小屏手机显示效果\n- 更新 多语言环境适配\n- 更新 活动大厅细节，增加活动入口引导\n- 更新 优化 ios15.1 启动速度，加快 500%",
+    "version": "2.0",
+    "update_log": "- 新增 令牌模式 专过强校验\n- 增加 年货节活动令牌接口\n- 兼容 ios15.1 版本（还是不建议你升级 15.1,运行时间是原来的 2 倍）",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/FarmSingle",
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/79e1a54ff3d949c9994e778b3a6a2620",
+    "update": "https://www.icloud.com/shortcuts/e215453fae124dc5980b2e4a65515bab",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "🔥 全球黑五大促 11.26日 硬盘美妆好价关注活动大厅~",
+    "notice": "🔥 年货节来袭，指令已支持年货节任务，前往活动页请点击活动大厅~\n🧧 年货节关注活动大厅和更多，将送红包福利~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=芭芭农场自动集肥料&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
@@ -235,12 +235,13 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 双12活动中...",
+      "hot": "🧧 抢超级红包...",
+      "help": "助力大厅已开放",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 支付宝红包又来了"
+      "more": "🧧 1.8日抢现金红包"
     }
   },
   "Qmxb": {
