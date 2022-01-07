@@ -10,6 +10,21 @@ let task = taskBaseData()
 const firstTask = [
   {
     "tmall": {
+      "title": "年货节集福气 - 云端推送",
+      "type": "other",
+      "urlScheme": `HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=2661&sourceType=other&hd_from_id=100145&deliveryId=`,
+      "textEnd": "str1&implId=str2",
+      "item": [
+        "23289 cloudsail_8_222443004330001_23289_0",
+        "23642 cloudsail_1_214893503000001_23642_0",
+        "23695 cloudsail_0_219981001860001_23695_0",
+        "23639 cloudsail_1_216112503620001_23639_0",
+        "23639 cloudsail_1_216112503620001_23639_1"
+      ]
+    }
+  },
+  {
+    "tmall": {
       "title": "淘宝集肥料",
       "type": "other",
       "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=971&sourceType=other&hd_from_id=100085&deliveryId=",
@@ -105,7 +120,7 @@ function taskHandle (data) {
         let times = Number(item.progress.needTimes)
         for (let i = 0; i < times; i++) {
           let deliveryId = item.taskParams.deliveryId
-          if (deliveryId == '15901' || deliveryId == '18735') continue;
+          if (deliveryId == '15901' || deliveryId == '18735' || deliveryId == '23157') continue;
           let title = item.assets.title
           let implId = item.taskParams.implId.match(/(.*)_/g) + i
           fromToken = item.taskParams.fromToken
