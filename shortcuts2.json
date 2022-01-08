@@ -319,6 +319,30 @@
       "more": "🧧 支付宝红包又来了"
     }
   },
+  "Taogg": {
+    "version": "1.0",
+    "update_log": "- 采用 淘宝任务框架，支持自动化和 AutoBox\n- 支持 自动助力，简易化助力池\n- 支持 年货节活动任务",
+    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Taogg",
+    "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/d0cd07b973844c8b97a5a9292b08f9fe",
+    "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
+    "notice": "已支持年货节活动任务，更多活动信息关注活动大厅~\n支持自动助力，需将链接发往助力池~",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
+    "automation_url": "shortcuts://run-shortcut?name=淘宝逛逛自动任务&input=text&text=task",
+    "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tb_zcj.png",
+    "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
+    "tip": {
+      "hongbao": "",
+      "hot": "🔥 双12活动中...",
+      "faq": "有疑问的请查看",
+      "set": "点击查看自动化操作",
+      "help": "",
+      "other": "",
+      "more": "🧧 支付宝红包又来了"
+    }
+  },
   "1111zcj": {
     "version": "1.4",
     "update_log": "- 更新 支持双 12 活动任务\n- 更新 优化小屏手机显示效果\n- 更新 多语言环境适配\n- 更新 优化 ios15.1 启动速度，加快 500%\n-修复 等待时长问题",
