@@ -120,7 +120,7 @@ function taskHandle (data) {
         let times = Number(item.progress.needTimes)
         for (let i = 0; i < times; i++) {
           let deliveryId = item.taskParams.deliveryId
-          if (deliveryId == '15901' || deliveryId == '18735' || deliveryId == '23175') continue;
+          if (deliveryId == '15901' || deliveryId == '18735' || deliveryId == '23176') continue;
           let title = item.assets.title
           let implId = item.taskParams.implId.match(/(.*)_/g) + i
           fromToken = item.taskParams.fromToken
