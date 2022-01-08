@@ -12,7 +12,7 @@ const firstTask = [
     "tmall": {
       "title": "年货节集福气 - 云端推送",
       "type": "other",
-      "urlScheme": `HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=2661&sourceType=other&hd_from_id=100145&deliveryId=`,
+      "urlScheme": `HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=2672&sourceType=other&hd_from_id=100145&deliveryId=`,
       "textEnd": "str1&implId=str2",
       "item": [
         "23289 cloudsail_8_222443004330001_23289_0",
@@ -277,7 +277,7 @@ function taskBaseData () {
           "main": {
             "title": "年货节集福气 - 部分任务可能需要令牌模式",
             "type": "other",
-            "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&spm=a217e.xzrwy.1.1&sceneId=2661&sourceType=other&hd_from_id=100145&",
+            "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&spm=a217e.xzrwy.1.1&sceneId=2672&sourceType=other&hd_from_id=100145&",
             "textEnd": "str1&implId=str2"
           }
         }
