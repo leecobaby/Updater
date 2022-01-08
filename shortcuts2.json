@@ -47,8 +47,11 @@
       }
     },
     "more": {
-      "🧧 超红每日抢": "taobao://m.tb.cn/h.fUVxFJD",
-      "🧧 现金红包-11.10": "taobao://m.tb.cn/h.fgSEQ3f",
+      "🧧 年货节超级红包": {
+        "淘宝": "taobao://m.tb.cn/h.fkhGNyD",
+        "京东": ""
+      },
+      "🧧 现金红包-1.8": "taobao://m.tb.cn/h.fQhca7X",
       "👥 加入QQ京东情报群": "https://jq.qq.com/?_wv=1027&k=tx5Mzgh2",
       "👥 加入QQ淘宝情报群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=622340333&card_type=group&source=qrcode&jump_from=&auth=&authSig=RPqW9VSePIx4jWxGhYLvMvfdLkFPydHzo50qyVwmb9zhPjv7lF3HnSRF5WuJfjaX&source_id=2_40001",
       "👥 加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
@@ -725,7 +728,7 @@
         }
       },
       "🧧 支付宝现金红包": "alipays://platformapi/startapp?appId=20000067&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fc%2Falipay-red-qrcode%2Fshared.html%3Fchannel%3Dsearch_pwd%26shareId%3D2088102986032700%26token%3D11w194707wxbnqkmg21ke2d%26campStr%3DkPPFvOxaCL3f85TiKss2wsBZgIjulHjG%26sign%3Dlj1gjQ8PxzMbaRNG5RKOee%2FhckXIyodWvTJbBTYOleI%3D%26chInfo%3Dsousuoma%26c_stype%3Dsearch_pwd",
-      "🧧 现金红包 - 11.10开抢": "taobao://m.tb.cn/h.fgSEQ3f"
+      "🧧 现金红包 - 1.8开抢": "taobao://m.tb.cn/h.fQhca7X"
     },
     "more2": {
       "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
