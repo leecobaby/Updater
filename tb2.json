@@ -714,6 +714,101 @@
       }
     ]
   },
+  "Tbgg": {
+    "version": "数据最后更新于:1.8.1",
+    "pv": {
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fQfRBJO",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fQfRBJO",
+      "taobaolite": "taobaolite://m.tb.cn/h.fQfRBJO"
+    },
+    "main": {
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fwww.tmall.com%2F",
+      "taobaolite": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F"
+    },
+    "home": {
+      "taobao": "taobao://decenter.m.taobao.com/wow/z/guang/671001/normal-plus?pha=true&activityId=671001&backToGuangguang=true&disableNav=YES&sourceType=other",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=",
+      "taobaolite": "taobaolite://decenter.m.taobao.com/wow/z/guang/671001/normal-plus?pha=true&activityId=671001&backToGuangguang=true&disableNav=YES&sourceType=other"
+    },
+    "end": {
+      "taobao": "taobao://decenter.m.taobao.com/wow/z/guang/671001/normal-plus?pha=true&activityId=671001&backToGuangguang=true&disableNav=YES&sourceType=other",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=decenter.m.taobao.com%2Fwow%2Fz%2Fguang%2F671001%2Fnormal-plus%3Fpha%3Dtrue%26activityId%3D671001%26backToGuangguang%3Dtrue%26disableNav%3DYES%26sourceType%3Dother",
+      "taobaolite": "taobaolite://decenter.m.taobao.com/wow/z/guang/671001/normal-plus?pha=true&activityId=671001&backToGuangguang=true&disableNav=YES&sourceType=other"
+    },
+    "app": {
+      "淘宝": "taobao",
+      "天猫": "tmall",
+      "淘宝特价版": "taobaolite"
+    },
+    "help": {
+      "gitter": "https://gitter.im/api/v1/rooms/615975436da037398487178c/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=50",
+      "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/random_mutual_aid.js",
+      "lodash": "https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"
+    },
+    "task": [
+      {
+        "stars": {
+          "title": "淘宝逛逛年货节任务",
+          "type": "stars",
+          "urlScheme": "HTTPS://h5.m.taobao.com/tnode/index.htm?tnode=page_detail%3Fpangesture%3Dpullrightexit%26secPageEnable%3Dtrue&entityId=51051&tnodeListPagingEnable=false&interactPageName=guang_activity-yqtk&tppPoolId=20070523&tppScene=cppPool&tppPoolId=20096541&activityId=678001&utparam=%7B%22spm-url%22%3A%22a21f4j.23887624%22%2C%22activityId%22%3A%22678001%22%7D&spm=a21f4j.23887624&contentId=",
+          "textEnd": "str1",
+          "item": [
+            "344133438081 0",
+            "344429179299 0",
+            "342959400835 0",
+            "343256153493 0",
+            "343567146827 0",
+            "344607843931 0",
+            "344170426483 0",
+            "343284720727 0",
+            "342930173544 0",
+            "343557226094 0",
+            "342940597559 0",
+            "344171667289 0",
+            "343147969200 0",
+            "343350870614 0",
+            "344413631034 0",
+            "342861636368 0",
+            "340855648632 0",
+            "344229478134 0",
+            "343230677705 0",
+            "339703448318 0",
+            "339676728857 0",
+            "342511518869 0",
+            "344672003567 0",
+            "342488393375 0",
+            "342356845262 0",
+            "342552700015 0",
+            "342489400796 0",
+            "341183361126 0",
+            "343216817050 0",
+            "343890614335 0",
+            "344690575642 0",
+            "340593730229 0",
+            "343381152051 0",
+            "341064042448 0",
+            "343819443352 0",
+            "344423235301 0",
+            "343151881338 0",
+            "343997942796 0",
+            "340793289870 0",
+            "340797270551 0",
+            "340945986392 0",
+            "343839405566 0",
+            "342308592855 0",
+            "342363011403 0",
+            "342604746602 0",
+            "341590833280 0",
+            "342084820668 0",
+            "344342239184 0",
+            "343853474807 0",
+            "340570194247 0"
+          ]
+        }
+      }
+    ]
+  },
   "1111zcj": {
     "version": "数据最后更新于:12.1.1",
     "pv": {
@@ -1701,7 +1796,7 @@
     "codeList": ["doSimpleTask_next", "doSimpleTask_next_next"]
   },
   "team": {
-    "🏠 种草机助力池": "https://gitter.im/leecobaby-shortcuts/1111zcj?utm_source=share-link&utm_medium=link&utm_campaign=share-link"
+    "🏠 淘宝逛逛助力池": "https://gitter.im/leecobaby-shortcuts/1111zcj?utm_source=share-link&utm_medium=link&utm_campaign=share-link"
   },
   "share": {
     "抢购助手": "https://www.icloud.com/shortcuts/64b5f93e1119403da44ac3ddd5ad8bf0",
