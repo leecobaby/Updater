@@ -120,7 +120,7 @@
       "faq": "有疑问的请查看",
       "set": "可以调整等待时间",
       "team": "",
-      "more": "🧧 支付宝红包又来了"
+      "more": "🧧 1.8抢现金红包"
     },
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tjb.png",
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json"
@@ -146,7 +146,7 @@
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 支付宝红包又来了"
+      "more": "🧧 1.8抢现金红包"
     }
   },
   "Jhs": {
@@ -169,7 +169,7 @@
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 支付宝红包又来了"
+      "more": "🧧 1.8抢现金红包"
     }
   },
   "618cat": {
@@ -188,7 +188,7 @@
     "tip": {
       "hongbao": "每天领...",
       "surplus": "可快速完成任务...",
-      "hot": "🧧 8-10日红包加码",
+      "hot": "🧧 抢超级红包...",
       "faq": "",
       "set": "点击查看自动化操作",
       "team": "可随机助力",
@@ -216,7 +216,7 @@
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 支付宝红包又来了"
+      "more": "🧧 1.8抢现金红包"
     }
   },
   "FarmSingle": {
@@ -231,7 +231,7 @@
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/e215453fae124dc5980b2e4a65515bab",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "🔥 年货节来袭，指令已支持年货节任务，前往活动页请点击活动大厅~\n🧧 年货节关注活动大厅和更多，将送红包福利~",
+    "notice": "cookie错误和助力跳转错误问题会晚点更新，先使用普通模式吧~\n🧧 年货节关注活动大厅和更多，将送红包福利~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=芭芭农场自动集肥料&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
@@ -263,7 +263,7 @@
     "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 8-10日红包加码",
+      "hot": "🧧 抢超级红包...",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
@@ -287,12 +287,12 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 8-10日红包加码",
+      "hot": "🧧 抢超级红包...",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 11.10抢现金红包"
+      "more": "🧧 1.8抢现金红包"
     }
   },
   "Zcj": {
@@ -316,7 +316,7 @@
       "set": "点击查看自动化操作",
       "help": "",
       "other": "",
-      "more": "🧧 支付宝红包又来了"
+      "more": "🧧 1.8抢现金红包"
     }
   },
   "Taogg": {
@@ -340,7 +340,7 @@
       "set": "点击查看自动化操作",
       "help": "",
       "other": "",
-      "more": "🧧 支付宝红包又来了"
+      "more": "🧧 1.8抢现金红包"
     }
   },
   "1111zcj": {
@@ -359,7 +359,7 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 8-10日红包加码",
+      "hot": "🧧 抢超级红包...",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
@@ -383,7 +383,7 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 8-10日红包加码",
+      "hot": "🧧 抢超级红包...",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
@@ -412,7 +412,7 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 8-10日红包加码",
+      "hot": "🧧 抢超级红包...",
       "faq": "有疑问的请查看",
       "set": "可调整等待时长",
       "help": "助力大厅已开放",
@@ -436,7 +436,7 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 8-10日红包加码",
+      "hot": "🧧 抢超级红包...",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
@@ -460,7 +460,7 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 8-10日红包加码",
+      "hot": "🧧 抢超级红包...",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
@@ -489,7 +489,7 @@
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 支付宝红包又来了"
+      "more": "🧧 1.8抢现金红包"
     }
   },
   "cainiao_guo": {
@@ -653,7 +653,7 @@
       "set": "使用前先授权",
       "team": "",
       "other": "",
-      "more": "🧧 支付宝红包又来了"
+      "more": "🧧 1.8抢现金红包"
     }
   },
   "JD_travel": {
