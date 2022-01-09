@@ -35,6 +35,10 @@ let JD_API_HOST = `https://api.m.jd.com/client.action?functionId=`;
  * 初始化
  */
 function init () {
+  // 获取助力数据
+  // $.inviteList = $.aid.inviteList
+  // $.pkHelpList = $.aid.pkHelpList
+
   // 处理助力码
   if ($.inviteList) {
     $.inviteList = Array.isArray($.inviteList) ? $.inviteList : [$.inviteList]
@@ -90,7 +94,7 @@ function init () {
  * 云端推送提示
  */
 function cloudTip () {
-  $.message = `指令已运行完毕！入会任务和下单任务不负责做哦！\n其他功能和任务正在开发中，上线将自动推送到指令中，无需任何操作~`
+  $.error = `指令已运行完毕！入会任务和下单任务不负责做哦！\n其他功能和任务正在开发中，上线将自动推送到指令中，无需任何操作~`
   document.write(JSON.stringify($))
 }
 
@@ -141,35 +145,35 @@ function tigernian_getTaskDetail () {
   document.write(JSON.stringify($))
 }
 
-// 收汪汪币
-function travel_collectAtuoScore () {
+// 收爆竹
+function tigernian_collectAtuoScore () {
   $.callback = 'Func.request'
-  takePostRequest('travel_collectAtuoScore');
+  takePostRequest('tigernian_collectAtuoScore');
   return
 
   // next
   $.callback = ''
-  dealReturn('travel_collectAtuoScore', $.data)
+  dealReturn('tigernian_collectAtuoScore', $.data)
   document.write(JSON.stringify($))
 }
 
 // 每日签到
-function travel_sign () {
+function tigernian_sign () {
   $.callback = 'Func.request'
-  takePostRequest('travel_sign');
+  takePostRequest('tigernian_sign');
   return
 
   // next
   $.callback = ''
   $.next = 1
-  dealReturn('travel_sign', $.data)
+  dealReturn('tigernian_sign', $.data)
   $.callback = 'Func.request'
-  takePostRequest('travel_getSignHomeData');
+  takePostRequest('tigernian_getSignHomeData');
 
   // next next
   if (!document.body.innerText) {
     $.callback = ''
-    dealReturn('travel_getSignHomeData', $.data)
+    dealReturn('tigernian_getSignHomeData', $.data)
     document.write(JSON.stringify($))
   }
 }
@@ -216,7 +220,7 @@ function help () {
   document.write(JSON.stringify($))
 }
 
-// 组队
+// 组队竞猜
 function pkHelp () {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
@@ -231,7 +235,7 @@ function pkHelp () {
   }
   $.message = `${$.UserName}去入队，对方组队码:\n${$.pkHelpId}`
   $.callback = 'Func.request'
-  takePostRequest('travel_pk_joinGroup');
+  takePostRequest('tigernian_pk_joinGroup');
   return
 
   // next
@@ -240,23 +244,23 @@ function pkHelp () {
   document.write(JSON.stringify($))
 }
 
-function travel_pk_getHomeData () {
+function tigernian_pk_getHomeData () {
   $.callback = 'Func.request'
-  takePostRequest('travel_pk_getHomeData');
+  takePostRequest('tigernian_pk_getHomeData');
   return
 
   // next
   $.callback = ''
-  dealReturn('travel_pk_getHomeData', $.data)
+  dealReturn('tigernian_pk_getHomeData', $.data)
   document.write(JSON.stringify($))
 }
 
 // pk助力
-function travel_pk_collectPkExpandScore () {
+function tigernian_pk_collectPkExpandScore () {
   // 循环逻辑单独设置 to,call
   // 暂时不加不然出问题
   $.to = 'Func.logicHandler'
-  $.call = ['travel_pk_collectPkExpandScore']
+  $.call = ['tigernian_pk_collectPkExpandScore']
   if (new Date().getHours() >= 20 && new Date().getHours() <= 22) {
 
     $.pkExpandId = $.pkExpandList.shift()
@@ -267,12 +271,12 @@ function travel_pk_collectPkExpandScore () {
       return
     }
     $.callback = 'Func.request'
-    takePostRequest('travel_pk_collectPkExpandScore');
+    takePostRequest('tigernian_pk_collectPkExpandScore');
     return
 
     //next
     $.callback = ''
-    dealReturn('travel_pk_collectPkExpandScore', $.data)
+    dealReturn('tigernian_pk_collectPkExpandScore', $.data)
     document.write(JSON.stringify($))
   } else {
     $.to = '', $.call.pop()
@@ -349,7 +353,7 @@ function doTask () {
   // 加购物车
   if ($.oneTask.taskType === 2 && $.oneTask.status === 1 && !$.oneTask.taskName.includes("逛逛")) {
 
-    travel_getFeedDetail()
+    tigernian_getFeedDetail()
 
   } else if ($.oneTask.taskType === 2 && $.oneTask.status === 1 && $.oneTask.taskName.includes("逛逛")) {
 
@@ -358,7 +362,7 @@ function doTask () {
     oneActivityInfo()
 
   } else if ($.oneTask.taskType === 5 && $.oneTask.status === 1) {
-    travel_getFeedDetail()
+    tigernian_getFeedDetail()
   } else if ($.oneTask.taskType === 0 && ($.oneTask.status === 1 || $.oneTask.status === 3)) {
     oneTaskHandle()
   }
@@ -367,10 +371,10 @@ function doTask () {
 }
 
 // 领累计任务奖励
-function travel_getBadgeAward () {
+function tigernian_getBadgeAward () {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
-  $.call = ['travel_getBadgeAward']
+  $.call = ['tigernian_getBadgeAward']
 
   // 利用队列取代循环
   $.oneTask = $.badgeAwardList.shift()
@@ -388,12 +392,12 @@ function travel_getBadgeAward () {
   }
 
   $.callback = 'Func.request'
-  takePostRequest('travel_getBadgeAward');
+  takePostRequest('tigernian_getBadgeAward');
   return
 
   // next
   $.callback = ''
-  dealReturn('travel_getBadgeAward', $.data)
+  dealReturn('tigernian_getBadgeAward', $.data)
   document.write(JSON.stringify($))
 }
 
@@ -441,12 +445,12 @@ function oneActivityInfo () {
   $.callbackInfo = {};
   $.message = `做任务：${$.oneActivityInfo.skuName || $.oneActivityInfo.taskName || $.oneActivityInfo.title || $.oneActivityInfo.shopName} 等待完成...`
   $.callback = 'Func.request'
-  takePostRequest('travel_collectScore');
+  takePostRequest('tigernian_collectScore');
   return
 
   // next 
   $.callback = ''
-  dealReturn('travel_collectScore', $.data)
+  dealReturn('tigernian_collectScore', $.data)
   if ($.callbackInfo.code === 0 && $.callbackInfo.data?.result?.taskToken) {
 
     // 等待 8s
@@ -484,10 +488,10 @@ function callbackResult (type) {
   let { log, random } = $.signList?.shift() || {}
   let url = JD_API_HOST + type + '&client=wh5';
   // riskParam 风险参数暂时为空，后期可能需要补上
-  let body = `body={"dataSource":"newshortAward","method":"getTaskAward","reqParams":"{\\"taskToken\\":\\"${$.taskToken}\\"}","sdkVersion":"1.0.0","clientLanguage":"zh","onlyTimeId":"","riskParam":""}`
+  let body = `body={"dataSource":"newshortAward","method":"getTaskAward","reqParams":"{\\"taskToken\\":\\"${$.taskToken}\\"}","sdkVersion":"1.0.0","clientLanguage":"zh","onlyTimeId":"","riskParam":{"platform":"3","orgType":"2","openId":"-1","pageClickKey":"Babel_VKCoupon","eid":"","fp":"-1","shshshfp":"","shshshfpa":"","shshshfpb":"","childActivityUrl":"","userArea":"-1","client":"","clientVersion":"","uuid":"","osVersion":"","brand":"","model":"","networkType":"","jda":"-1"}}`
   let method = 'POST'
   let headers = {
-    'Origin': `https://pro.m.jd.com`,
+    'Origin': `https://prodev.m.jd.com`,
     'Cookie': $.cookie,
     'Connection': `keep-alive`,
     'Accept': `application/json, text/plain, */*`,
@@ -496,27 +500,27 @@ function callbackResult (type) {
     'Content-Type': `application/x-www-form-urlencoded`,
     'User-Agent': $.UA || "jdapp;iPhone;10.0.6;14.4;c67093f5dd58d33fc5305cdc61e46a9741e05c5b;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
     'Accept-Language': `zh-CN`,
-    'Referer': 'https://pro.m.jd.com/'
+    'Referer': 'https://prodev.m.jd.com/'
   }
   $.request = { url, method, headers, body }
   document.write(JSON.stringify($))
 }
 
 // 处理浏览商品任务信息
-function travel_getFeedDetail () {
+function tigernian_getFeedDetail () {
   // 嵌套调用里面用数组形式 push
   $.to = 'Func.logicHandler';
-  $.call.push('travel_getFeedDetail')
+  $.call.push('tigernian_getFeedDetail')
 
   $.feedDetailInfo = {};
   $.callback = 'Func.request'
   $.message = `做任务：${$.oneTask.taskName} 等待完成...`
-  takePostRequest('travel_getFeedDetail');
+  takePostRequest('tigernian_getFeedDetail');
   return
 
   // next
   $.callback = ''
-  dealReturn('travel_getFeedDetail', $.data)
+  dealReturn('tigernian_getFeedDetail', $.data)
   $.productList = $.feedDetailInfo.productInfoVos || $.feedDetailInfo.browseShopVo
   $.needTime = Number($.feedDetailInfo.maxTimes) - Number($.feedDetailInfo.times);
   $.call.pop()
@@ -557,10 +561,10 @@ function browseProducts () {
 }
 
 // 打卡升级
-function travel_raise () {
+function tigernian_raise () {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
-  $.call = ['travel_raise']
+  $.call = ['tigernian_raise']
 
   if ($.raiseStatus) {
     // 循环完成重新设置 to,call
@@ -570,12 +574,12 @@ function travel_raise () {
   }
 
   $.callback = 'Func.request'
-  takePostRequest('travel_raise');
+  takePostRequest('tigernian_raise');
   return
 
   // next
   $.callback = ''
-  dealReturn('travel_raise', $.data)
+  dealReturn('tigernian_raise', $.data)
   document.write(JSON.stringify($))
 }
 
@@ -796,25 +800,25 @@ function takePostRequest (type) {
       body = `functionId=tigernian_getTaskDetail&body={}&client=wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`tigernian_getTaskDetail`, body);
       break;
-    case 'travel_collectAtuoScore':
-      body = `functionId=travel_collectAtuoScore&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`
-      myRequest = getPostRequest(`travel_collectAtuoScore`, body);
+    case 'tigernian_collectAtuoScore':
+      body = `functionId=tigernian_collectAtuoScore&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`
+      myRequest = getPostRequest(`tigernian_collectAtuoScore`, body);
       break;
-    case 'travel_getFeedDetail':
-      body = `functionId=travel_getFeedDetail&body={"taskId":"${$.taskId}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getPostRequest(`travel_getFeedDetail`, body);
+    case 'tigernian_getFeedDetail':
+      body = `functionId=tigernian_getFeedDetail&body={"taskId":"${$.taskId}"}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`tigernian_getFeedDetail`, body);
       break;
-    case 'travel_collectScore':
-      body = `functionId=travel_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYGJZYh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","actionType":1}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getPostRequest(`travel_collectScore`, body);
+    case 'tigernian_collectScore':
+      body = `functionId=tigernian_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","actionType":1}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`tigernian_collectScore`, body);
       break;
-    case 'travel_getBadgeAward':
-      body = `functionId=travel_getBadgeAward&body={"awardToken":"${$.awardToken}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getPostRequest(`travel_getBadgeAward`, body);
+    case 'tigernian_getBadgeAward':
+      body = `functionId=tigernian_getBadgeAward&body={"awardToken":"${$.awardToken}"}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`tigernian_getBadgeAward`, body);
       break;
     case 'help':
-      body = `functionId=travel_collectScore&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYGJZYh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"${$.inviteId}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getPostRequest(`travel_collectScore`, body);
+      body = `functionId=tigernian_collectScore&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"${$.inviteId}"}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`tigernian_collectScore`, body);
       break;
     case 'travel_pk_getHomeData':
       body = `functionId=travel_pk_getHomeData&body={}&client=wh5&clientVersion=1.0.0`;
@@ -830,27 +834,27 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`zoo_pk_collectScore`, body);
       break;
     case 'travel_pk_collectPkExpandScore':
-      body = `functionId=travel_pk_collectPkExpandScore&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYGJZYh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"${$.pkExpandId}"}&client=wh5&clientVersion=1.0.0`;
+      body = `functionId=travel_pk_collectPkExpandScore&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"${$.pkExpandId}"}&client=wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`travel_pk_collectPkExpandScore`, body);
       break;
     case 'travel_pk_joinGroup':
-      body = `functionId=travel_collectScore&body={"confirmFlag":"1","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYGJZYh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"${$.pkHelpId}"}&client=wh5&clientVersion=1.0.0`
+      body = `functionId=travel_collectScore&body={"confirmFlag":"1","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"${$.pkHelpId}"}&client=wh5&clientVersion=1.0.0`
       myRequest = getPostRequest(`travel_pk_joinGroup`, body);
       break;
     case 'oneTaskHandle':
-      body = `functionId=travel_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`;
+      body = `functionId=travel_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`travel_collectScore`, body);
       break;
-    case 'travel_sign':
-      body = `functionId=travel_sign&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getPostRequest(`travel_sign`, body);
+    case 'tigernian_sign':
+      body = `functionId=tigernian_sign&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`tigernian_sign`, body);
       break;
-    case 'travel_getSignHomeData':
-      body = `functionId=travel_getSignHomeData&body={}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getPostRequest(`travel_getSignHomeData`, body);
+    case 'tigernian_getSignHomeData':
+      body = `functionId=tigernian_getSignHomeData&body={}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`tigernian_getSignHomeData`, body);
       break;
     case 'travel_raise':
-      body = `functionId=travel_raise&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`;
+      body = `functionId=travel_raise&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`travel_raise`, body);
       break;
     case 'getAppId':
@@ -908,7 +912,7 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`jdjrDoTask`, body, otherUrl);
       break;
     case 'browseProducts':
-      body = `functionId=travel_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HYJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`;
+      body = `functionId=travel_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`travel_collectScore`, body);
       break;
     default:
@@ -1020,13 +1024,13 @@ function dealReturn (type, data) {
       if (data.code === 0 && data.data?.bizCode === 0) {
         $.message = `升级成功`
       } else {
-        $.message = `升级失败，汪汪币不足`
+        $.message = `升级失败，爆竹不足`
         $.raiseStatus = 1
       }
       break;
-    case 'travel_collectAtuoScore':
+    case 'tigernian_collectAtuoScore':
       if (data.code === 0 && data.data?.result) {
-        $.message = `收取成功，获得：${data.data.result.produceScore} 汪汪币`
+        $.message = `收取成功，获得：${data.data.result.produceScore} 爆竹🧨`
       } else {
         $.message = JSON.stringify(data)
       }
@@ -1034,12 +1038,12 @@ function dealReturn (type, data) {
         $.error = `该账户脚本执行任务火爆，暂停执行任务，请手动做任务或者等待解决脚本火爆问题\n火爆并非账户问题，而是官方对工具做任务场景做了限制手段。`
       }
       break;
-    case 'travel_collectScore':
+    case 'tigernian_collectScore':
       $.callbackInfo = data;
       break;
-    case 'travel_getBadgeAward':
+    case 'tigernian_getBadgeAward':
       if (data.code === 0 && data.data?.bizCode === 0) {
-        $.message = `累计任务成功领取：${data.data?.result?.myAwardVos[0]?.pointVo?.score} 汪汪币`
+        $.message = `累计任务成功领取：${data.data?.result?.myAwardVos[0]?.pointVo?.score} 爆竹🧨`
       } else {
         $.message = `领取失败：${data}`
       }
@@ -1049,7 +1053,7 @@ function dealReturn (type, data) {
       //console.log(data);
       switch (data.data?.bizCode) {
         case 0:
-          $.message = `助力成功，你获得${data.data?.result?.score}汪汪币`
+          $.message = `助力成功，你获得${data.data?.result?.score}爆竹🧨`
           break;
         case -201:
           $.message = `助力已满`
@@ -1070,9 +1074,10 @@ function dealReturn (type, data) {
           $.message = `助力失败：${JSON.stringify(data)}`
       }
       break;
-    case 'travel_pk_getHomeData':
+    case 'tigernian_pk_getHomeData':
       if (data.code === 0 && data.data?.bizCode === 0) {
         // $.pkHomeData = data.data;
+        // 暂时不实现
         $.message = `你的组队码为：\n${data.data?.result?.groupInfo?.groupJoinInviteId}`
       }
       break;
@@ -1081,7 +1086,7 @@ function dealReturn (type, data) {
         $.pkTaskList = data.data.result.taskVos;
       }
       break;
-    case 'travel_getFeedDetail':
+    case 'tigernian_getFeedDetail':
       if (data.code === 0) {
         if (data.data?.result?.addProductVos && data.data?.result.addProductVos.length) {
           $.feedDetailInfo = data.data?.result?.addProductVos[0]
@@ -1092,27 +1097,27 @@ function dealReturn (type, data) {
       break;
     case 'zoo_pk_collectScore':
       break;
-    case 'travel_pk_collectPkExpandScore':
+    case 'tigernian_pk_collectPkExpandScore':
       break;
     case 'oneTaskHandle':
       if (data.code === 0 && data.data?.bizCode === 0) {
-        $.message = `完成任务：获得 ${data.data?.result?.acquiredScore} 汪汪币`
+        $.message = `完成任务：获得 ${data.data?.result?.acquiredScore} 爆竹🧨`
       } else {
         $.message = `任务失败：原因 ${JSON.stringify(data)}`
       }
       break;
-    case 'travel_sign':
+    case 'tigernian_sign':
       if (data.code === 0 && data.data?.bizCode === 0) {
-        $.message = `签到成功：获得 ${data.data?.result?.scoreResult?.score} 汪汪币，其他奖励 ${JSON.stringify(data.data?.result?.scoreResult)}`
+        $.message = `签到成功：获得 ${data.data?.result?.scoreResult?.score} 爆竹🧨，其他奖励 ${JSON.stringify(data.data?.result?.scoreResult)}`
       } else if (data.data?.bizCode === -6004) {
         $.message = `已经签到过了`
       } else {
         $.message = `签到失败：原因${JSON.stringify(data)}`
       }
       break;
-    case 'travel_getSignHomeData':
+    case 'tigernian_getSignHomeData':
       if (data.code === 0 && data.data?.bizCode === 0) {
-        $.message = `当前已连续签到 ${data.data?.result?.progress} 天/23天`
+        $.message = `当前已连续签到 ${data.data?.result?.progress} 天/22天`
       }
       break;
     case 'getHelpCode':
@@ -1153,7 +1158,7 @@ function dealReturn (type, data) {
       break
     case 'doOneShopTask':
       if (data.code === 0 && data.data?.bizCode === 0) {
-        $.message = `完成任务：获得 ${data.data?.result?.acquiredScore} 汪汪币`
+        $.message = `完成任务：获得 ${data.data?.result?.acquiredScore} 爆竹🧨`
       } else {
         $.message = `任务失败：原因 ${JSON.stringify(data)}`
       }
@@ -1172,7 +1177,7 @@ function dealReturn (type, data) {
             $.message = `抽奖成功：获得未知`
             break;
           case 5:
-            $.message = `抽奖成功：获得 ${data.data?.result?.userAwardDto?.scoreVo?.quantity} 汪汪币`
+            $.message = `抽奖成功：获得 ${data.data?.result?.userAwardDto?.scoreVo?.quantity} 爆竹🧨`
           default:
             $.message = `抽奖成功：获得未知`
         }
@@ -1231,7 +1236,7 @@ function dealReturn (type, data) {
       if (data.code === 0) {
         let acquiredScore = data.data?.result?.acquiredScore;
         if (Number(acquiredScore) > 0) {
-          $.message = `加购|浏览成功,获得金币:${acquiredScore}`
+          $.message = `加购|浏览成功,获得:${acquiredScore} 爆竹🧨`
         } else {
           $.message = `加购|浏览成功`
         }

@@ -1,12 +1,12 @@
 // next
 $.callback = ''
-dealReturn('travel_sign', $.data)
+dealReturn('tigernian_sign', $.data)
 $.callback = 'Func.request'
-takePostRequest('travel_getSignHomeData');
+takePostRequest('tigernian_getSignHomeData');
 
 // next next
 if (!document.body.innerText) {
   $.callback = ''
-  dealReturn('travel_getSignHomeData', $.data)
+  dealReturn('tigernian_getSignHomeData', $.data)
   document.write(JSON.stringify($))
 }

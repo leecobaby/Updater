@@ -485,17 +485,23 @@
       }
     },
     "controller": {
-      "callList": ["init", "tigernian_getHomeData", "tigernian_getTaskDetail"],
+      "callList": [
+        "init",
+        "tigernian_getHomeData",
+        "tigernian_getTaskDetail",
+        "tigernian_pk_getHomeData",
+        "tigernian_pk_collectPkExpandScore"
+      ],
       "taskList": [
         { "提示:如果活动火爆请只选择火爆也能做": "update" },
-        { "其他": "cloudTip" },
-        { "收汪汪币": "tigernian_collectAtuoScore" },
+        { "收爆竹": "tigernian_collectAtuoScore" },
         { "每日签到": "tigernian_sign" },
         { "做主任务": "doTaskController" },
-        { "做店铺抽奖任务 - 火爆也能做": "doShopTask" },
-        { "领取累计奖励 - 火爆也能做": "tigernian_getBadgeAward" },
-        { "做京东金融主任务 - 火爆也能做": "jdjrDoTask" },
-        { "打卡升级": "tigernian_raise" }
+        { "领取累计奖励": "tigernian_getBadgeAward" },
+        { "其他 ↓ 下面的任务不会运行 ↓ ": "cloudTip" },
+        { "打卡升级 - 测试中": "tigernian_raise" },
+        { "做店铺抽奖任务 - 测试中": "doShopTask" },
+        { "做京东金融主任务 - 测试中": "jdjrDoTask" }
       ]
     },
     "codeList": [

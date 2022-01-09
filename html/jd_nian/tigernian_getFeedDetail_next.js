@@ -1,6 +1,6 @@
 // next
 $.callback = ''
-dealReturn('travel_getFeedDetail', $.data)
+dealReturn('tigernian_getFeedDetail', $.data)
 $.productList = $.feedDetailInfo.productInfoVos || $.feedDetailInfo.browseShopVo
 $.needTime = Number($.feedDetailInfo.maxTimes) - Number($.feedDetailInfo.times);
 $.call.pop()

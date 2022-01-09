@@ -1,6 +1,6 @@
 // next 
 $.callback = ''
-dealReturn('travel_collectScore', $.data)
+dealReturn('tigernian_collectScore', $.data)
 if ($.callbackInfo.code === 0 && $.callbackInfo.data?.result?.taskToken) {
 
   // 等待 8s

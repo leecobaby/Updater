@@ -1,4 +1,4 @@
 // next
 $.callback = ''
-dealReturn('travel_getBadgeAward', $.data)
+dealReturn('tigernian_collectAtuoScore', $.data)
 document.write(JSON.stringify($))
