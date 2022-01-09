@@ -494,6 +494,7 @@
       ],
       "taskList": [
         { "提示:如果活动火爆请只选择火爆也能做": "update" },
+        { "做助力任务": "help" },
         { "收爆竹": "tigernian_collectAtuoScore" },
         { "每日签到": "tigernian_sign" },
         { "做主任务": "doTaskController" },
