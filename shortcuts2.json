@@ -696,7 +696,7 @@
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/ff0c227f189a4342be58f060e8e658a6",
-    "notice": "🧧 初代版本会有些问题，勉强能用，功能会不断完善~\n云端助力池正在建设中...",
+    "notice": "🧧 初代版本会有些问题，勉强能用，功能会不断完善~\n已修复部分问题，云端助力池正在建设中...",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-炸年兽&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd2.jpeg",
@@ -709,7 +709,7 @@
       "faq": "有疑问的请查看",
       "set": "使用前先授权",
       "team": "",
-      "other": "setHelp问题请修复指令",
+      "other": "若一直无法运行请修复指令",
       "more": "🧧 1.8日抢现金红包"
     }
   },
