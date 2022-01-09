@@ -15,8 +15,10 @@ const firstTask = [
       "urlScheme": `HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=2672&sourceType=other&hd_from_id=100145&deliveryId=`,
       "textEnd": "str1&implId=str2",
       "item": [
-        "23289 cloudsail_8_222443004330001_23289_0",
-        "23642 cloudsail_1_214893503000001_23642_0",
+        "23761 cloudsail_1_221589504930001_23761_0",
+        "23761 cloudsail_1_221589504930001_23761_1",
+        "23761 cloudsail_1_221589504930001_23761_2",
+        "23761 cloudsail_1_221589504930001_23761_3",
         "23695 cloudsail_0_219981001860001_23695_0",
         "23639 cloudsail_1_216112503620001_23639_0",
         "23639 cloudsail_1_216112503620001_23639_1"
