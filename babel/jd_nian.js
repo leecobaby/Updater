@@ -295,25 +295,25 @@ function doTaskController () {
       doTask()
       break;
     case 2:
-      travel_getTaskDetail()
+      tigernian_getTaskDetail()
       break;
     case 3:
       doTask()
       break;
     case 3:
-      travel_getTaskDetail()
+      tigernian_getTaskDetail()
       break;
     case 4:
       doTask()
       break;
     case 5:
-      travel_getTaskDetail()
+      tigernian_getTaskDetail()
       break;
     case 6:
       doTask()
       break;
     case 7:
-      travel_getTaskDetail()
+      tigernian_getTaskDetail()
       break;
     case 8:
       doTask()
@@ -837,13 +837,13 @@ function takePostRequest (type) {
       body = `functionId=tigernian_pk_collectPkExpandScore&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"${$.pkExpandId}"}&client=wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`tigernian_pk_collectPkExpandScore`, body);
       break;
-    case 'travel_pk_joinGroup':
-      body = `functionId=travel_collectScore&body={"confirmFlag":"1","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"${$.pkHelpId}"}&client=wh5&clientVersion=1.0.0`
-      myRequest = getPostRequest(`travel_pk_joinGroup`, body);
+    case 'tigernian_pk_joinGroup':
+      body = `functionId=tigernian_collectScore&body={"confirmFlag":"1","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"${$.pkHelpId}"}&client=wh5&clientVersion=1.0.0`
+      myRequest = getPostRequest(`tigernian_pk_joinGroup`, body);
       break;
     case 'oneTaskHandle':
-      body = `functionId=travel_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getPostRequest(`travel_collectScore`, body);
+      body = `functionId=tigernian_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`tigernian_collectScore`, body);
       break;
     case 'tigernian_sign':
       body = `functionId=tigernian_sign&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`;
@@ -912,8 +912,8 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`jdjrDoTask`, body, otherUrl);
       break;
     case 'browseProducts':
-      body = `functionId=travel_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getPostRequest(`travel_collectScore`, body);
+      body = `functionId=tigernian_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`tigernian_collectScore`, body);
       break;
     default:
       $.error = `takePostRequest 错误${type}`
