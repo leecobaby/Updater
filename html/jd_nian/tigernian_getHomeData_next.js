@@ -1,4 +1,4 @@
 // next
 $.callback = ''
-dealReturn('travel_getHomeData', $.data)
+dealReturn('tigernian_getHomeData', $.data)
 document.write(JSON.stringify($))
