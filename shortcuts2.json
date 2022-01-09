@@ -123,7 +123,7 @@
       "faq": "有疑问的请查看",
       "set": "可以调整等待时间",
       "team": "",
-      "more": "🧧 1.8抢现金红包"
+      "more": "🧧 1.8日抢现金红包"
     },
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tjb.png",
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json"
@@ -149,7 +149,7 @@
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 1.8抢现金红包"
+      "more": "🧧 1.8日抢现金红包"
     }
   },
   "Jhs": {
@@ -172,7 +172,7 @@
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 1.8抢现金红包"
+      "more": "🧧 1.8日抢现金红包"
     }
   },
   "618cat": {
@@ -219,7 +219,7 @@
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 1.8抢现金红包"
+      "more": "🧧 1.8日抢现金红包"
     }
   },
   "FarmSingle": {
@@ -295,7 +295,7 @@
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 1.8抢现金红包"
+      "more": "🧧 1.8日抢现金红包"
     }
   },
   "Zcj": {
@@ -319,7 +319,7 @@
       "set": "点击查看自动化操作",
       "help": "",
       "other": "",
-      "more": "🧧 1.8抢现金红包"
+      "more": "🧧 1.8日抢现金红包"
     }
   },
   "Taogg": {
@@ -343,7 +343,7 @@
       "set": "点击查看自动化操作",
       "help": "",
       "other": "",
-      "more": "🧧 1.8抢现金红包"
+      "more": "🧧 1.8日抢现金红包"
     }
   },
   "1111zcj": {
@@ -367,20 +367,20 @@
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🔥 11.10抢现金红包"
+      "more": "🧧 1.8日抢现金红包"
     }
   },
   "1111ys": {
-    "version": "1.1",
-    "update_log": "- 新增 攒能量任务",
+    "version": "1.2",
+    "update_log": "- 新增 超红攒福气自动浏览任务",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/1111ys",
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/37db740153d449db8d5aecca327fa5e5",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "🔥王者争霸赛开始了，瓜分千万奖池~\n已支持王者争霸赛浏览和助力任务~",
+    "notice": "🔥超红攒福气赢红包和福气卡,福气卡可抽大奖~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
-    "automation_url": "shortcuts://run-shortcut?name=淘宝预售自动任务&input=text&text=task",
+    "automation_url": "shortcuts://run-shortcut?name=淘宝超红攒福气自动任务&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tb_wzzb.jpg",
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
@@ -390,8 +390,8 @@
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
-      "other": "王者争霸赛开始了",
-      "more": "🔥 11.10抢现金红包"
+      "other": "",
+      "more": "🧧 1.8日抢现金红包"
     }
   },
   "1111": {
@@ -420,7 +420,7 @@
       "set": "可调整等待时长",
       "help": "助力大厅已开放",
       "other": "有疑问看常见问题",
-      "more": "🔥 11.10抢现金红包"
+      "more": "🧧 1.8日抢现金红包"
     }
   },
   "ltao_duck": {
@@ -492,7 +492,7 @@
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 1.8抢现金红包"
+      "more": "🧧 1.8日抢现金红包"
     }
   },
   "cainiao_guo": {
@@ -575,7 +575,7 @@
       "set": "",
       "team": "",
       "other": "",
-      "more": "🧧 11.10抢现金红包"
+      "more": "🧧 1.8日抢现金红包"
     }
   },
   "JD_zoo": {
@@ -656,7 +656,7 @@
       "set": "使用前先授权",
       "team": "",
       "other": "",
-      "more": "🧧 1.8抢现金红包"
+      "more": "🧧 1.8日抢现金红包"
     }
   },
   "JD_travel": {
