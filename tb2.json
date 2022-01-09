@@ -1254,7 +1254,7 @@
     ]
   },
   "FarmSingle": {
-    "version": "数据最后更新于:1.7.3",
+    "version": "数据最后更新于:1.9.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fQfRBJO",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fQfRBJO",
@@ -1311,7 +1311,11 @@
             "23639 cloudsail_1_216112503620001_23639_0",
             "23639 cloudsail_1_216112503620001_23639_1",
             "23720 cloudsail_1_221497503320001_23720_0",
-            "23720 cloudsail_1_221497503320001_23720_1"
+            "23720 cloudsail_1_221497503320001_23720_1",
+            "23761 cloudsail_1_221589504930001_23761_0",
+            "23761 cloudsail_1_221589504930001_23761_1",
+            "23761 cloudsail_1_221589504930001_23761_2",
+            "23761 cloudsail_1_221589504930001_23761_3"
           ]
         }
       },
