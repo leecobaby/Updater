@@ -1,4 +1,4 @@
 // next
 $.callback = ''
-dealReturn('tigernian_collectAtuoScore', $.data)
+dealReturn('tigernian_collectAutoScore', $.data)
 document.write(JSON.stringify($))

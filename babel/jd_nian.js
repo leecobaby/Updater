@@ -146,14 +146,14 @@ function tigernian_getTaskDetail () {
 }
 
 // 收爆竹
-function tigernian_collectAtuoScore () {
+function tigernian_collectAutoScore () {
   $.callback = 'Func.request'
-  takePostRequest('tigernian_collectAtuoScore');
+  takePostRequest('tigernian_collectAutoScore');
   return
 
   // next
   $.callback = ''
-  dealReturn('tigernian_collectAtuoScore', $.data)
+  dealReturn('tigernian_collectAutoScore', $.data)
   document.write(JSON.stringify($))
 }
 
@@ -800,9 +800,9 @@ function takePostRequest (type) {
       body = `functionId=tigernian_getTaskDetail&body={}&client=wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`tigernian_getTaskDetail`, body);
       break;
-    case 'tigernian_collectAtuoScore':
-      body = `functionId=tigernian_collectAtuoScore&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`
-      myRequest = getPostRequest(`tigernian_collectAtuoScore`, body);
+    case 'tigernian_collectAutoScore':
+      body = `functionId=tigernian_collectAutoScore&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`
+      myRequest = getPostRequest(`tigernian_collectAutoScore`, body);
       break;
     case 'tigernian_getFeedDetail':
       body = `functionId=tigernian_getFeedDetail&body={"taskId":"${$.taskId}"}&client=wh5&clientVersion=1.0.0`;
@@ -853,9 +853,9 @@ function takePostRequest (type) {
       body = `functionId=tigernian_getSignHomeData&body={}&client=wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`tigernian_getSignHomeData`, body);
       break;
-    case 'travel_raise':
-      body = `functionId=travel_raise&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getPostRequest(`travel_raise`, body);
+    case 'tigernian_raise':
+      body = `functionId=tigernian_raise&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`tigernian_raise`, body);
       break;
     case 'getAppId':
       body = `functionId=factory_getStaticConfig&appid=wh5&clientVersion=1.0.0&body={"encryptActivityId":"${$.oneShop}","channelId":1}`
@@ -1020,7 +1020,7 @@ function dealReturn (type, data) {
         $.taskList = data.data.result.taskVos;
       }
       break;
-    case 'travel_raise':
+    case 'tigernian_raise':
       if (data.code === 0 && data.data?.bizCode === 0) {
         $.message = `升级成功`
       } else {
@@ -1028,7 +1028,7 @@ function dealReturn (type, data) {
         $.raiseStatus = 1
       }
       break;
-    case 'tigernian_collectAtuoScore':
+    case 'tigernian_collectAutoScore':
       if (data.code === 0 && data.data?.result) {
         $.message = `收取成功，获得：${data.data.result.produceScore} 爆竹🧨`
       } else {

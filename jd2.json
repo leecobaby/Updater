@@ -495,12 +495,12 @@
       "taskList": [
         { "提示:如果活动火爆请只选择火爆也能做": "update" },
         { "做助力任务": "help" },
-        { "收爆竹": "tigernian_collectAtuoScore" },
+        { "收爆竹": "tigernian_collectAutoScore" },
         { "每日签到": "tigernian_sign" },
         { "做主任务": "doTaskController" },
         { "领取累计奖励": "tigernian_getBadgeAward" },
+        { "打卡升级": "tigernian_raise" },
         { "其他 ↓ 下面的任务不会运行 ↓ ": "cloudTip" },
-        { "打卡升级 - 测试中": "tigernian_raise" },
         { "做店铺抽奖任务 - 测试中": "doShopTask" },
         { "做京东金融主任务 - 测试中": "jdjrDoTask" }
       ]
@@ -510,7 +510,7 @@
       "help_next",
       "pkHelp_next",
       "tigernian_getTaskDetail_next",
-      "tigernian_collectAtuoScore_next",
+      "tigernian_collectAutoScore_next",
       "oneActivityInfo_next",
       "oneActivityInfo_next_next",
       "oneTaskHandle_next",
