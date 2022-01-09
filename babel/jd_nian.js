@@ -820,9 +820,9 @@ function takePostRequest (type) {
       body = `functionId=tigernian_collectScore&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"${$.inviteId}"}&client=wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`tigernian_collectScore`, body);
       break;
-    case 'travel_pk_getHomeData':
-      body = `functionId=travel_pk_getHomeData&body={}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getPostRequest(`travel_pk_getHomeData`, body);
+    case 'tigernian_pk_getHomeData':
+      body = `functionId=tigernian_pk_getHomeData&body={}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`tigernian_pk_getHomeData`, body);
       break;
     case 'zoo_pk_getTaskDetail':
       body = `functionId=zoo_pk_getTaskDetail&body={}&client=wh5&clientVersion=1.0.0`;
@@ -833,9 +833,9 @@ function takePostRequest (type) {
       //console.log(body);
       myRequest = getPostRequest(`zoo_pk_collectScore`, body);
       break;
-    case 'travel_pk_collectPkExpandScore':
-      body = `functionId=travel_pk_collectPkExpandScore&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"${$.pkExpandId}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getPostRequest(`travel_pk_collectPkExpandScore`, body);
+    case 'tigernian_pk_collectPkExpandScore':
+      body = `functionId=tigernian_pk_collectPkExpandScore&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"${$.pkExpandId}"}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`tigernian_pk_collectPkExpandScore`, body);
       break;
     case 'travel_pk_joinGroup':
       body = `functionId=travel_collectScore&body={"confirmFlag":"1","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"${$.pkHelpId}"}&client=wh5&clientVersion=1.0.0`
