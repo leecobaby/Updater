@@ -72,8 +72,8 @@ function init () {
   } else {
     $.partyHelpList = []
   }
-  if (new Date().getHours() >= 9 && new Date().getHours() <= 11) {
-    $.pkHelpList.push('E7unasWZHoZIX1kYiw8sbLbDzBTAz9WH22-dryVy9Pl-4zHBWpnA0Jc')
+  if (new Date().getHours() >= 8 && new Date().getHours() <= 20) {
+    $.pkHelpList.push('m2telgJiWVSZTvQtmTwGzKlOX6368EtbQXHJOCrQbW75rR9rigmZmwE')
   }
 
   // 任务流程初始化
@@ -197,7 +197,7 @@ function help () {
   $.call = ['help']
 
   $.inviteId = $.inviteList.shift()
-  if (!$.inviteId || $.helpMax) {
+  if (!$.setHelp || !$.inviteId || $.helpMax) {
     // 循环完成重新设置 to,call
     $.to = '', $.call.pop()
     document.write(JSON.stringify($))
@@ -227,7 +227,7 @@ function pkHelp () {
   $.call = ['pkHelp']
 
   $.pkHelpId = $.pkHelpList.shift()
-  if (!$.pkHelpId) {
+  if (!$.setHelp || !$.pkHelpId) {
     // 循环完成重新设置 to,call
     $.to = '', $.call.pop()
     document.write(JSON.stringify($))
@@ -824,6 +824,14 @@ function takePostRequest (type) {
       body = `functionId=tigernian_pk_getHomeData&body={}&client=wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`tigernian_pk_getHomeData`, body);
       break;
+    case 'tigernian_pk_collectPkExpandScore':
+      body = `functionId=tigernian_pk_collectPkExpandScore&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"${$.pkExpandId}"}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`tigernian_pk_collectPkExpandScore`, body);
+      break;
+    case 'tigernian_pk_joinGroup':
+      body = `functionId=tigernian_collectScore&body={"confirmFlag":"1","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"${$.pkHelpId}"}&client=wh5&clientVersion=1.0.0`
+      myRequest = getPostRequest(`tigernian_pk_joinGroup`, body);
+      break;
     case 'zoo_pk_getTaskDetail':
       body = `functionId=zoo_pk_getTaskDetail&body={}&client=wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`zoo_pk_getTaskDetail`, body);
@@ -832,14 +840,6 @@ function takePostRequest (type) {
       body = getPostBody(type);
       //console.log(body);
       myRequest = getPostRequest(`zoo_pk_collectScore`, body);
-      break;
-    case 'tigernian_pk_collectPkExpandScore':
-      body = `functionId=tigernian_pk_collectPkExpandScore&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"${$.pkExpandId}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getPostRequest(`tigernian_pk_collectPkExpandScore`, body);
-      break;
-    case 'tigernian_pk_joinGroup':
-      body = `functionId=tigernian_collectScore&body={"confirmFlag":"1","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","inviteId":"${$.pkHelpId}"}&client=wh5&clientVersion=1.0.0`
-      myRequest = getPostRequest(`tigernian_pk_joinGroup`, body);
       break;
     case 'oneTaskHandle':
       body = `functionId=tigernian_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`;
