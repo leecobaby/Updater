@@ -1,7 +1,8 @@
 // next 
+// 这里有链式语法糖，ios13不识别，而 next 里面语法不会被 babel
 $.callback = ''
 dealReturn('tigernian_collectScore', $.data)
-if ($.callbackInfo.code === 0 && $.callbackInfo.data?.result?.taskToken) {
+if ($.callbackInfo.code === 0 && $.callbackInfo.data.result && $.callbackInfo.data.result.taskToken) {
 
   // 等待 8s
   $.wait = 8
@@ -16,7 +17,7 @@ if ($.callbackInfo.code === 0 && $.callbackInfo.data?.result?.taskToken) {
   if (!document.body.innerText) {
     $.callback = ''
     $.wait = 1
-    $.message = `${$.data?.toast?.subTitle}`
+    $.message = `${$.data.toast.subTitle}`
     document.write(JSON.stringify($))
   }
 
@@ -24,7 +25,7 @@ if ($.callbackInfo.code === 0 && $.callbackInfo.data?.result?.taskToken) {
   $.success = 1
   $.message = `任务完成`
   document.write(JSON.stringify($))
-} else if ($.callbackInfo.data?.bizCode === -1002) {
+} else if ($.callbackInfo.data.bizCode === -1002) {
   $.error = `oneActivityInfo ${$.oneTask.taskId}/${$.oneTask.taskType} 任务失败，此账号火爆，请手动做任务等待更新~`
   document.write(JSON.stringify($))
 } else {
