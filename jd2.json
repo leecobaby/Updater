@@ -502,6 +502,7 @@
         { "领取累计奖励": "tigernian_getBadgeAward" },
         { "打卡升级": "tigernian_raise" },
         { "其他 ↓ 下面的任务不会运行 ↓ ": "cloudTip" },
+        { "获取助力池数据 ": "getHelpCode" },
         { "做店铺抽奖任务 - 测试中": "doShopTask" },
         { "做京东金融主任务 - 测试中": "jdjrDoTask" }
       ]
