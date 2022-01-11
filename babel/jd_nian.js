@@ -1124,8 +1124,8 @@ function dealReturn (type, data) {
       }
       break;
     case 'getHelpCode':
-      data = JSON.stringify(data).replace(/[\r\n<br><p>]*/g, '')
-      data = JSON.parse(data)
+      // data = JSON.stringify(data).replace(/[\r\n<br><p>]*/g, '')
+      // data = JSON.parse(data)
       $.data = {}
       // 选出有 助力码 的元素
       const filterData = _.filter(data.items, v => v.text.match(/^[\w-]*$/g))
