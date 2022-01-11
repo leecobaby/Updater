@@ -687,16 +687,16 @@
     }
   },
   "JD_nian": {
-    "version": "2.5",
-    "update_log": "- 采用 最新的京东系任务框架\n- 支持 云端任务更新推送\n- 助力池建设中...",
+    "version": "2.6",
+    "update_log": "- 新增 云端助力池，互助模块\n- 修复 多账号运行的一些神奇 bug\n- 修复 通过 AutoBox 无法正常运行的 bug\n- 修复 Alook 获取到的 Cookie 无法识别的 bug",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_nian#版本日志"
     },
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/ff0c227f189a4342be58f060e8e658a6",
-    "notice": "🧧 初代版本会有些问题，勉强能用，功能会不断完善~\n已修复部分问题，云端助力池正在建设中...",
+    "update": "https://www.icloud.com/shortcuts/7120f3669afb42f1a5f7693ebe9d3bcf",
+    "notice": "此版本基本修复大部分问题，如何获取cookie视频演示将稍晚点发到活动大厅\n已开放云端助力池，如果不想助力可以去指令设置关闭助力功能",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-炸年兽&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd2.jpeg",
@@ -704,11 +704,11 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/jd.json",
     "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_nian/",
     "tip": {
-      "hongbao": "",
+      "log": "你的助力码在这",
       "hot": "🧧 年货节专属红包",
       "faq": "有疑问的请查看",
       "set": "使用前先授权",
-      "team": "",
+      "help": "提交你的助力码",
       "other": "若一直无法运行请修复指令",
       "more": "🧧 1.8日抢现金红包"
     }
