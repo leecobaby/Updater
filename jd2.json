@@ -429,7 +429,7 @@
     ]
   },
   "JD_nian": {
-    "version": "上次数据更新于:1.9.1",
+    "version": "上次数据更新于:1.11.1",
     "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/YwhAs1z%22%7D",
     "endJump": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://wbbny.m.jd.com/babelDiy/Zeus/41AJZXRUJeTqdBK9bPoPgUJiodcU/index.html%22%7D",
     "help": {
@@ -490,7 +490,8 @@
         "tigernian_getHomeData",
         "tigernian_getTaskDetail",
         "tigernian_pk_getHomeData",
-        "tigernian_pk_collectPkExpandScore"
+        "tigernian_pk_collectPkExpandScore",
+        "getHelpCode"
       ],
       "taskList": [
         { "提示:如果活动火爆请只选择火爆也能做": "update" },
@@ -502,7 +503,6 @@
         { "领取累计奖励": "tigernian_getBadgeAward" },
         { "打卡升级": "tigernian_raise" },
         { "其他 ↓ 下面的任务不会运行 ↓ ": "cloudTip" },
-        { "获取助力池数据 ": "getHelpCode" },
         { "做店铺抽奖任务 - 测试中": "doShopTask" },
         { "做京东金融主任务 - 测试中": "jdjrDoTask" }
       ]
