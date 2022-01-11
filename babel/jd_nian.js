@@ -63,7 +63,7 @@ function init () {
   } else {
     $.pkExpandList = []
   }
-  $.pkExpandList.push('PKASTT0195L6r47PBTNYCtIMjDX0CjRWnIaRzTIjeQOc')
+  $.pkExpandList.push('PKASTT0195L6r47PBTNYCtIMjDX0CTdWnIaRzTwjeQOc')
 
   // 处理沸腾之夜助力码
   if ($.partyHelpList) {
