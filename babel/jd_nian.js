@@ -125,7 +125,6 @@ function tigernian_getHomeData () {
 
   // next
   $.callback = ''
-  // $.error = '云端测试中'
   dealReturn('tigernian_getHomeData', $.data)
   document.write(JSON.stringify($))
 }
