@@ -491,7 +491,6 @@
         "tigernian_getTaskDetail",
         "tigernian_pk_getHomeData",
         "tigernian_pk_collectPkExpandScore",
-        "jdjrTaskDetail",
         "getHelpCode"
       ],
       "taskList": [
@@ -503,9 +502,7 @@
         { "做主任务": "doTaskController" },
         { "领取累计奖励": "tigernian_getBadgeAward" },
         { "打卡升级": "tigernian_raise" },
-        { "其他 ↓ 下面的任务不会运行 ↓ ": "cloudTip" },
-        { "做店铺抽奖任务 - 测试中": "doShopTask" },
-        { "做京东金融主任务 - 测试中": "jdjrDoTask" }
+        { "其他": "cloudTip" }
       ]
     },
     "codeList": [
