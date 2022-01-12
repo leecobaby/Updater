@@ -494,7 +494,7 @@
         "getHelpCode"
       ],
       "taskList": [
-        { "提示:如果活动火爆请只选择火爆也能做": "update" },
+        { "提示:如果活动火爆请手动吧": "update" },
         { "做助力任务": "help" },
         { "做组队任务": "pkHelp" },
         { "收爆竹": "tigernian_collectAutoScore" },
@@ -540,6 +540,7 @@
       "东东农场": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/2CJfqnZ%22%7D",
       "金榜年终奖": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/nI5bY4U%22%7D"
     },
-    "🧧 京东年货节红包每天抢 - 最高9999": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/Ytqy61c%22%7D"
+    "🧧 京东年货节红包每天抢 - 最高9999": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/Ytqy61c%22%7D",
+    "🧧 1月13日 20点 指令专属红包": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/Ytqy61c%22%7D"
   }
 }
