@@ -491,6 +491,7 @@
         "tigernian_getTaskDetail",
         "tigernian_pk_getHomeData",
         "tigernian_pk_collectPkExpandScore",
+        "jdjrTaskDetail",
         "getHelpCode"
       ],
       "taskList": [
