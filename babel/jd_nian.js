@@ -901,7 +901,7 @@ function takePostRequest (type) {
       myRequest = getRequest(url, body, 'GET', headers);
       break;
     case 'jdjrTaskDetail':
-      body = `reqData={"eid":"","sdkToken":"jdd01UGM6YXUOBTGCM6YUCAOOS7ISME4TMFAS6H2H5MUYKBFWHN54VWNKFONXTAV37DV64APTFCDSLQWF4D367NK7KLFQMVIDWALAPSTGZ5Y01234567"}`;
+      body = `reqData={"eid":"","sdkToken":"jdd016EJ54F6BERNW7KQN572WZUQRRFEELIAO7P6YZYZBFUAR6T7LX5KRRGOFWEUJQB57AHD3RWA4Z7J5F5TSHDK3U65XMFZIU5KWEMIWOFA01234567"}`;
       otherUrl = `https://ms.jr.jd.com/gw/generic/uc/h5/m/miMissions`
       myRequest = getPostRequest(`jdjrTaskDetail`, body, otherUrl);
       break;
@@ -934,8 +934,8 @@ function getPostRequest (type, body, otherUrl) {
     type === 'jdjrDoTask' && (request.method = 'GET')
     request.headers = {
       'Host': 'ms.jr.jd.com',
-      'Origin': 'https://prodev.m.jd.com',
-      'Referer': 'https://prodev.m.jd.com/'
+      'Origin': 'https://wbbny.m.jd.com',
+      'Referer': 'https://wbbny.m.jd.com/'
     }
     url = otherUrl;
   }
