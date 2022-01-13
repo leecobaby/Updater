@@ -696,7 +696,7 @@
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/7120f3669afb42f1a5f7693ebe9d3bcf",
-    "notice": "火爆的可以先手动做，晚点会更新推送火爆也能做的任务。\n已开放云端助力池，如果不想助力可以去指令设置关闭助力功能",
+    "notice": "火爆的可以先手动做，晚点会更新推送火爆也能做的任务。\n已开放云端助力池，如果不想助力可以去指令设置关闭助力功能\n东东农场指令很稳，推荐使用~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-炸年兽&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd2.jpeg",
