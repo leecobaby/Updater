@@ -1,5 +1,4 @@
 // next
 $.callback = ''
-$.call.pop()
-dealReturn('initForFarm', $.data)
+dealReturn('waterGoodForFarm', $.data)
 document.write(JSON.stringify($))

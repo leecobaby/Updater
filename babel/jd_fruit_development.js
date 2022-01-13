@@ -45,6 +45,9 @@ function init () {
   $.uuid = $.Utils.randomString(40)
   $.UA = `jdapp;iPhone;10.2.0;13.1.2;${$.uuid};M/5.0;network/wifi;ADID/;model/iPhone8,1;addressid/2308460611;appBuild/167853;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 13_1_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1;`
 
+  // 自变量
+  $.self = {}, $.self.show = true
+
   $.message = `本指令作为自动化方案开源分享，并不保证他带来的任何副作用，任何副作用请自行负责，如不同意请停止使用！`
   document.write(JSON.stringify($))
 }
@@ -62,12 +65,15 @@ function cloudTip () {
  * 初始化农场, 可获取果树及用户信息API 还需优化
  */
 function initForFarm () {
+  $.call = Array.isArray($.call) ? $.call : [$.call];
+  $.call[$.call.length - 1] == 'initForFarm' || $.call.push('initForFarm')
   $.callback = 'Func.request'
   takeRequest('initForFarm');
   return
 
   // next
   $.callback = ''
+  $.call.pop()
   dealReturn('initForFarm', $.data)
   document.write(JSON.stringify($))
 }
@@ -122,11 +128,10 @@ function help () {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
   $.call = ['help']
-  $.inviteList = Array.isArray($.inviteList) ? $.inviteList : [$.inviteList]
 
   $.inviteId = $.inviteList.shift()
   if (!$.setHelp || !$.inviteId || $.selfHelpMax) {
-    !$.setHelp && ($.message = '你在指令设置了关闭助力，则不执行助力任务')
+    !$.setHelp && ($.message = '你已关闭助力，就不做助力任务拉~')
     // 循环完成重新设置 to,call
     $.to = '', $.call.pop()
     document.write(JSON.stringify($))
@@ -259,6 +264,56 @@ function doTenWater () {
     // 循环完成重新设置 to,call
     $.to = '', $.call.pop()
     $.message = `今日已完成10次浇水任务`
+    document.write(JSON.stringify($))
+    return
+  }
+}
+
+/**
+ * 做剩余浇水 - 保留 100 水滴
+ */
+function doSurplusWater () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler'
+  $.call = ['doSurplusWater']
+
+  switch ($.taskStep++) {
+    case 1:
+      $.self.show = false
+      // 获取水滴信息
+      initForFarm()
+      break;
+    case 2:
+      // 执行浇水
+      doSurplusWaterGo()
+      break;
+    default:
+      $.to = '', $.call.pop(), $.taskStep = 1, $.self.show = null
+      document.write(JSON.stringify($))
+      break;
+  }
+}
+
+/**
+ * 执行剩余浇水
+ */
+function doSurplusWaterGo () {
+  $.call[$.call.length - 1] == 'doSurplusWaterGo' || $.call.push('doSurplusWaterGo')
+
+  // 保留 100 水滴
+  if ($.self.count--) {
+    $.callback = 'Func.request'
+    takeRequest('waterGoodForFarm');
+    return
+
+    // next
+    $.callback = ''
+    dealReturn('waterGoodForFarm', $.data)
+    document.write(JSON.stringify($))
+  } else {
+    // 循环完成重新设置 call
+    $.call.pop()
+    $.message = `目前剩余水滴：${$.farmInfo.farmUserPro.totalEnergy}g,不再继续浇水,保留部分水滴用于完成第二天【十次浇水得水滴】任务`
     document.write(JSON.stringify($))
     return
   }
@@ -774,8 +829,9 @@ function dealReturn (type, data) {
       if (data) {
         $.farmInfo = data
         if ($.farmInfo.farmUserPro) {
-          $.success = 1
-          $.message = `【你的好友互助码】:\n${$.farmInfo?.farmUserPro?.shareCode || '助力已满，获取助力码失败'}\n【已兑换水果】${$.farmInfo.farmUserPro?.winTimes}次`
+          $.self.overageEnergy = $.farmInfo.farmUserPro.totalEnergy - 100
+          $.self.count = parseInt($.self.overageEnergy / 10)
+          $.self.show && ($.message = `【你的好友互助码】:\n${$.farmInfo?.farmUserPro?.shareCode || '助力已满，获取助力码失败'}\n【已兑换水果】${$.farmInfo.farmUserPro?.winTimes}次`)
         } else {
           $.error = `【数据异常】请手动登录京东app查看是否已选择了水果种植，Cookie是否正确且未过期 ，返回的数据: ${JSON.stringify($.farmInfo)} `
         }
