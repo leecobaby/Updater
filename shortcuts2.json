@@ -633,16 +633,16 @@
     }
   },
   "JD_fruit": {
-    "version": "1.4",
-    "update_log": "- 更新 优化 15.1 运行速度，加快 500%\n- 更新 兼容多语言环境，修复活动大厅\n- 更新 开放助力功能，云端助力池建设中...\n- 更新 云端任务逻辑细节和功能",
+    "version": "1.5",
+    "update_log": "- 新增 云端助力池，互助模块\n- 修复 多账号运行的一些神奇 bug\n- 修复 通过 AutoBox 无法正常运行的 bug\n- 修复 Alook 获取到的 Cookie 无法识别的 bug",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_fruit#版本日志"
     },
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/ff0c227f189a4342be58f060e8e658a6",
-    "notice": "🧧 活动大厅有京东双12指令专属红包~\n云端助力池正在建设中...",
+    "update": "https://www.icloud.com/shortcuts/fcb69701c1264f98ba6df4e6c2b85561",
+    "notice": "🧧 活动大厅有京东年货节专属红包\n任务功能将会逐步完善，通过云端推送",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-东东农场&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd2.jpeg",
