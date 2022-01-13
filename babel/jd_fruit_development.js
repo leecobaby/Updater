@@ -124,7 +124,7 @@ function friendListInitForFarm () {
 // 获取助力池数据
 function getHelpCode () {
   $.callback = 'Func.request'
-  takePostRequest('getHelpCode');
+  takeRequest('getHelpCode');
   return
 
   // next
