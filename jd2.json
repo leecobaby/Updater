@@ -224,12 +224,16 @@
     "version": "上次数据更新于:1.13.1",
     "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/YwhAs1z%22%7D",
     "endJump": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://h5.m.jd.com/babelDiy/Zeus/3KSjXqQabiTuD1cJ28QskrpWoBKT/index.html%22%7D",
-    "pkHelpCode": "IgNWdiLGaPaAqdZqpd0QbcXZFPwE1VfQ9VPl2cARI1KWYjbV1EXeRSxZojc",
     "codeUrl": {
       "CryptoJS": "https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.js",
       "JD_fruit": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/jd_fruit.js",
       "JD_fruit_development": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/jd_fruit_development.js",
       "checkCookie": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/checkCookie.js"
+    },
+    "help": {
+      "gitter": "https://gitter.im/api/v1/rooms/61dfe3036da03739848e3b0a/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=50",
+      "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/random_mutual_jd.js",
+      "inviteLink": "https://gitter.im/leecobaby-shortcuts/jd_fruit?utm_source=share-link&utm_medium=link&utm_campaign=share-link"
     },
     "api": {
       "isLogin": {
@@ -272,7 +276,14 @@
       }
     },
     "controller": {
-      "callList": ["init", "initForFarm", "treeState", "taskInitForFarm", "friendListInitForFarm"],
+      "callList": [
+        "init",
+        "initForFarm",
+        "treeState",
+        "taskInitForFarm",
+        "friendListInitForFarm",
+        "getHelpCode"
+      ],
       "taskList": [
         { "做助力任务": "help" },
         { "做签到任务": "signForFarm" },
@@ -286,7 +297,8 @@
         { "水滴雨": "waterRainForFarm" },
         { "做签到活动任务": "doSignTask" },
         { "其他": "cloudTip" },
-        { "做剩余浇水": "doSurplusWater" }
+        { "做剩余浇水": "doSurplusWater" },
+        { "领取助力有奖": "receiveStageEnergy" }
       ]
     },
     "codeList": [
@@ -311,7 +323,8 @@
       "gotClockInGift_next",
       "clockInFollowForFarm_next",
       "clockInFollowForFarm_next_next",
-      "doSurplusWaterGo_next"
+      "doSurplusWaterGo_next",
+      "getHelpCode_next"
     ]
   },
   "JD_travel": {
