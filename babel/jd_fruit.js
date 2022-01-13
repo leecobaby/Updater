@@ -121,6 +121,18 @@ function friendListInitForFarm () {
   document.write(JSON.stringify($))
 }
 
+// 获取助力池数据
+function getHelpCode () {
+  $.callback = 'Func.request'
+  takeRequest('getHelpCode');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('getHelpCode', $.data)
+  document.write(JSON.stringify($))
+}
+
 /**
  * 好友助力
  */
@@ -128,11 +140,10 @@ function help () {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
   $.call = ['help']
-  $.inviteList = Array.isArray($.inviteList) ? $.inviteList : [$.inviteList]
 
   $.inviteId = $.inviteList.shift()
   if (!$.setHelp || !$.inviteId || $.selfHelpMax) {
-    !$.setHelp && ($.message = '你在指令设置了关闭助力，则不执行助力任务')
+    !$.setHelp && ($.message = '你已关闭助力，就不做助力任务拉~')
     // 循环完成重新设置 to,call
     $.to = '', $.call.pop()
     document.write(JSON.stringify($))
@@ -147,6 +158,24 @@ function help () {
   // next
   $.callback = ''
   dealReturn('helpInvite', $.data)
+  document.write(JSON.stringify($))
+}
+
+/**
+ * 领取助力有奖
+ */
+function receiveStageEnergy () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler'
+  $.call = ['receiveStageEnergy']
+
+  $.callback = 'Func.request'
+  takeRequest('receiveStageEnergy');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('receiveStageEnergy', $.data)
   document.write(JSON.stringify($))
 }
 
@@ -265,6 +294,58 @@ function doTenWater () {
     // 循环完成重新设置 to,call
     $.to = '', $.call.pop()
     $.message = `今日已完成10次浇水任务`
+    document.write(JSON.stringify($))
+    return
+  }
+}
+
+/**
+ * 做剩余浇水 - 保留 100 水滴
+ */
+function doSurplusWater () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler'
+  $.call = ['doSurplusWater']
+
+  switch ($.taskStep++) {
+    case 1:
+      $.self.show = false
+      // 获取水滴信息
+      initForFarm()
+      break;
+    case 2:
+      // 执行浇水
+      doSurplusWaterGo()
+      break;
+    default:
+      $.to = '', $.call.pop(), $.taskStep = 1, $.self.show = null
+      document.write(JSON.stringify($))
+      break;
+  }
+}
+
+/**
+ * 执行剩余浇水
+ */
+function doSurplusWaterGo () {
+  $.call[$.call.length - 1] == 'doSurplusWaterGo' || $.call.push('doSurplusWaterGo')
+
+  $.waterCount = ($.waterCount || 0);
+  // 保留 100 水滴
+  if ($.self.count--) {
+    $.callback = 'Func.request'
+    takeRequest('waterGoodForFarm');
+    return
+
+    // next
+    $.callback = ''
+    dealReturn('waterGoodForFarm', $.data)
+    document.write(JSON.stringify($))
+  } else {
+    // 循环完成重新设置 call
+    $.call.pop()
+    $.self.count = 0;
+    $.message = `目前剩余水滴：${$.farmInfo.farmUserPro.totalEnergy}g,不再继续浇水,保留部分水滴用于完成第二天【十次浇水得水滴】任务`
     document.write(JSON.stringify($))
     return
   }
@@ -611,6 +692,7 @@ function takeRequest (type) {
   let body = ``;
   let myRequest = ``;
   let otherUrl = ``;
+  let headers = ``
   switch (type) {
     case 'initForFarm':
       body = `body=${encodeURIComponent(JSON.stringify({ "version": 4 }))}&appid=wh5&clientVersion=9.1.0;`
@@ -635,6 +717,10 @@ function takeRequest (type) {
     case 'helpInvite':
       body = `{"imageUrl":"","nickName":"","shareCode":"${$.inviteId}","babelChannel":"3","version":2,"channel":1}`;
       myRequest = getRequest(`initForFarm`, body, 'GET');
+      break;
+    case 'receiveStageEnergy':
+      body = `{"version":14,"channel":1,"babelChannel":"120"}`;
+      myRequest = getRequest(`receiveStageEnergy`, body, 'GET');
       break;
     case 'gotStageAwardForFarm':
       body = `{"type":${$.taskType}}`;
@@ -692,9 +778,16 @@ function takeRequest (type) {
       body = `{"id":${$.oneItem.id},"type":"${$.oneItemType}","step":"2"}`;
       myRequest = getRequest(`clockInFollowForFarm`, body, 'GET');
       break;
-    case 'zoo_getWelfareScore':
-      body = getPostBody(type);
-      myRequest = getRequest(`zoo_getWelfareScore`, body);
+    case 'getHelpCode':
+      otherUrl = 'https://gitter.im/api/v1/rooms/61dfe3036da03739848e3b0a/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=50'
+      headers = {
+        Origin: `https://gitter.im/leecobaby-shortcuts/`,
+        Host: `gitter.im`,
+        Referer: `https://gitter.im/leecobaby-shortcuts/jd_furit`,
+        Cookie: `null`,
+        'x-access-token': '$9CBhly2onERVx680QC+7RlD+F9SJH9suq6zR+tbSvuk='
+      }
+      myRequest = getOtherRequest(otherUrl, body, 'GET', headers);
       break;
     case 'jdjrTaskDetail':
       body = `reqData={"eid":"","sdkToken":"jdd014JYKVE2S6UEEIWPKA4B5ZKBS4N6Y6X5GX2NXL4IYUMHKF3EEVK52RQHBYXRZ67XWQF5N7XB6Y2YKYRTGQW4GV5OFGPDPFP3MZINWG2A01234567"}`;
@@ -752,6 +845,24 @@ function getRequest (type, body = {}, method = 'POST', otherUrl) {
   return { url: url, method: method, headers: headers, body: body };
 }
 
+// 获取其他请求信息
+function getOtherRequest (url, body = {}, method = 'POST', header = {}) {
+  const headers = {
+    'Accept': `application/json, text/javascript, */*`,
+    'Origin': header.Origin || `https://h5.m.jd.com`,
+    'Accept-Encoding': `gzip, deflate, br`,
+    'Cookie': header.Cookie || $.cookie,
+    'Content-Type': `application/x-www-form-urlencoded`,
+    'Host': header.Host || `api.m.jd.com`,
+    'Connection': `keep-alive`,
+    'User-Agent': $.UA || "jdapp;iPhone;9.4.4;14.3;network/4g;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
+    'Referer': header.Referer || `https://home.m.jd.com/myJd/newhome.action`,
+    'Accept-Language': `zh-CN,zh-Hans;q=0.9`,
+    'x-access-token': header['x-access-token'] || ''
+  };
+  return { url: url, method: method, headers: headers, body: body };
+}
+
 // 组织请求 body
 function getPostBody (type) {
   let taskBody = '';
@@ -772,6 +883,7 @@ function getPostBody (type) {
 }
 
 
+
 // 处理返回信息
 function dealReturn (type, data) {
   if (!data) $.error = '接口返回数据为空，检查账号cookie是否过期或错误';
@@ -780,8 +892,9 @@ function dealReturn (type, data) {
       if (data) {
         $.farmInfo = data
         if ($.farmInfo.farmUserPro) {
-          $.success = 1
-          $.message = `【你的好友互助码】:\n${$.farmInfo?.farmUserPro?.shareCode || '助力已满，获取助力码失败'}\n【已兑换水果】${$.farmInfo.farmUserPro?.winTimes}次`
+          $.self.overageEnergy = $.farmInfo.farmUserPro.totalEnergy - 100
+          $.self.count = parseInt($.self.overageEnergy / 10)
+          $.self.show && ($.message = `【你的好友互助码】:\n${$.farmInfo?.farmUserPro?.shareCode || '助力已满，获取助力码失败'}\n【已兑换水果】${$.farmInfo.farmUserPro?.winTimes}次`)
         } else {
           $.error = `【数据异常】请手动登录京东app查看是否已选择了水果种植，Cookie是否正确且未过期 ，返回的数据: ${JSON.stringify($.farmInfo)} `
         }
@@ -821,7 +934,7 @@ function dealReturn (type, data) {
     case 'helpInvite':
       switch (data.helpResult?.code) {
         case '0':
-          $.message = `助力成功，获得${data.helpResult.salveHelpAddWater}g水滴`
+          $.message = `助力成功，获得${data.helpResult.salveHelpAddWater}g💧`
           break;
         case '8':
           $.message = `助力失败，您今天助力次数已耗尽`
@@ -835,6 +948,14 @@ function dealReturn (type, data) {
           break;
         default:
           $.message = `助力失败：${JSON.stringify(data.message)}`
+      }
+      break;
+    case 'receiveStageEnergy':
+      if (data.code === '0' && data.amount) {
+        $.message = `【助力有奖】获得${data.amount}g💧`
+      } else {
+        $.message = `【助力有奖】获取奖励失败${JSON.stringify(data)}`
+        $.to = ``, $.call.pop()
       }
       break;
     case 'waterGoodForFarm':
@@ -937,6 +1058,19 @@ function dealReturn (type, data) {
         $.message = `【限时任务】${$.oneItem.name}，获得水滴${data.amount}g💧`
       }
       break
+    case 'getHelpCode':
+      $.data = {}
+      // 选出有 助力码 的元素
+      const filterData = _.filter(data.items, v => v.text.match(/^\w{20,}$/g))
+      // 过滤重复的 user id
+      const uniqData = _.uniqBy(filterData, v => v.fromUser)
+      // 随机选取出 3 个助力码 - 考虑到助力已满情况和无效码的情况
+      const sampleData = _.sampleSize(uniqData, 3)
+      const list = sampleData.map(v => v.text)
+      // 将助力池的助力码添加进助力列表
+      $.inviteList = $.inviteList.concat(list)
+      $.message = `已从云端助力池获取到3条助力码追加到助力列表。助力列表预览：${JSON.stringify($.inviteList)}`
+      break;
     default:
       $.error = `未判断的异常${type}`
   }
