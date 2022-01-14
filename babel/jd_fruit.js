@@ -318,6 +318,7 @@ function doSurplusWater () {
       doSurplusWaterGo()
       break;
     default:
+      $.message = `taskStep:${$.taskStep}`
       $.to = '', $.call.pop(), $.taskStep = 1, $.self.show = null
       document.write(JSON.stringify($))
       break;
