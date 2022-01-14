@@ -3,7 +3,7 @@
  * author: @leeco
  * modified: @NobyDa
  * apply: shortcuts
- * activity: https://home.m.jd.com/myJd/newhome.action
+ * activity: https://bean.m.jd.com/bean/signIndex.action
  * tips: Only for learning and communication, strictly prohibited for commercial use, please delete within 24 hours
  */
 
@@ -15,6 +15,8 @@
 // $.pkInviteList = [];
 // $.secretpInfo = {};
 // $.innerPkInviteList = [];
+
+$.Utils = Utils()
 
 /** 下方放 call 文本，来控制函数执行 **/
 
@@ -49,7 +51,7 @@ function init () {
   $.taskStep = 1
 
   // 生成随机 UA UUID
-  $.uuid = randomString(40)
+  $.uuid = $.Utils.randomString(40)
   $.UA = `jdapp;iPhone;10.2.0;13.1.2;${$.uuid};M/5.0;network/wifi;ADID/;model/iPhone8,1;addressid/2308460611;appBuild/167853;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 13_1_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1;`
 
   $.message = `本指令作为自动化方案开源分享，并不保证他带来的任何副作用，任何副作用请自行负责，如不同意请停止使用！`
@@ -262,6 +264,40 @@ function help () {
   document.write(JSON.stringify($))
 }
 
+/**
+ * 🔥 做年货节抽签
+ */
+function doNHSign () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler'
+  $.call = ['doNHSign']
+
+  switch ($.taskStep++) {
+    case 1:
+      $.self.show = false
+      // 获取签到信息
+      getNHSignInfo()
+      break;
+    default:
+      $.to = ''; $.call.pop(); $.taskStep = 1
+      document.write(JSON.stringify($))
+      break;
+  }
+}
+
+function getNHSignInfo () {
+  $.call[$.call.length - 1] == 'getNHSignInfo' || $.call.push('getNHSignInfo')
+
+  $.callback = 'Func.request'
+  takeRequest('getNHSignInfo');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('getNHSignInfo', $.data)
+  document.write(JSON.stringify($))
+}
 
 /**
  * 提交请求信息
@@ -338,9 +374,9 @@ function takeRequest (type) {
       body = `functionId=doInteractiveAssignment&body=%7B%22encryptProjectId%22%3A%22${$.taskType.projectId}%22%2C%22encryptAssignmentId%22%3A%22${$.taskType.taskId}%22%2C%22completionFlag%22%3Atrue%7D&client=wh5&appid=SecKill2020`;
       myRequest = getRequest(url, body, 'POST', headers);
       break;
-    case 'waterFriendForFarm':
-      body = `{"shareCode":${$.shareCode},"version":6,"channel":1}`;
-      myRequest = getRequest(`waterFriendForFarm`, body, 'GET');
+    case 'getNHSignInfo':
+      url = "https://prodev.m.jd.com/mall/active/fARfxZh3zdMqs4tkFBhpqaQKTGA/index.html";
+      myRequest = getRequest(url, body, 'GET');
       break;
     case 'wxTaskDetail':
       body = `functionId=funny_getTaskDetail&body={"appSign":"2","channel":1,"shopSign":""}&client=wh5&clientVersion=1.0.0`;
@@ -451,7 +487,7 @@ function getPostBody (type) {
 // 处理返回信息
 function dealReturn (type, data) {
   if (!data) $.error = '接口返回数据为空，检查账号cookie是否过期或错误';
-  let json = JSON.stringify(data)
+  let json = $.Utils.stringify(data)
 
   switch (type) {
     case 'JingDongBean':
@@ -646,7 +682,13 @@ function dealReturn (type, data) {
         $.message = `京东秒杀-红包: 失败, ${data.subCode == 103 ? `原因: 已领取` : data.msg ? data.msg : `原因: 未知`} ⚠️`;
       }
       break
-    case 'gotThreeMealForFarm':
+    case 'getNHSignInfo':
+      try {
+        $.encryptProjectId = json.match(/"projectId":"(.*?)"/)[1];
+        $.message = `京东年货-抽签: 成功, 明细: 测试成功`
+      } catch (e) {
+        $.message = "京东年货-抽签: 失败, 明细: 无法获取活动ID ⚠️"
+      }
       if (data.code === '0') {
         $.message = `【定时领水】获得${data.amount}g💧`
       } else {
@@ -664,11 +706,28 @@ function dealReturn (type, data) {
       console.log(`未判断的异常${type}`);
   }
 }
-
-function randomString (e) {
-  e = e || 32;
-  let t = "abcdef0123456789", a = t.length, n = "";
-  for (let i = 0; i < e; i++)
-    n += t.charAt(Math.floor(Math.random() * a));
-  return n
+/**
+ * 工具类对象 - 写成函数封装形式，是想利用函数申明提前
+ * @returns object
+ */
+function Utils () {
+  return {
+    randomString (e) {
+      e = e || 32;
+      let t = "abcdef0123456789", a = t.length, n = "";
+      for (let i = 0; i < e; i++)
+        n += t.charAt(Math.floor(Math.random() * a));
+      return n
+    },
+    stringify (data) {
+      try {
+        if (typeof JSON.stringify(data) == "String") {
+          return JSON.stringify(data);
+        }
+      } catch (e) {
+        console.log(e);
+        return data;
+      }
+    }
+  }
 }

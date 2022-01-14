@@ -53,6 +53,7 @@
     "controller": {
       "callList": [],
       "taskList": [
+        { "🔥 做年货节抽签": "doNHSign" },
         { "京东京豆": "JingDongBean" },
         { "京东超市": "JingDongStore" },
         { "京东转盘": "JingDongTurn" },
@@ -77,7 +78,8 @@
       "JingDongGetCash_next",
       "JingDongShake_next",
       "JDSecKilling_next",
-      "JDSecKilling_next_next"
+      "JDSecKilling_next_next",
+      "getNHSignInfo_next"
     ]
   },
   "JD_zoo": {
@@ -555,6 +557,11 @@
       "东东农场": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/2CJfqnZ%22%7D",
       "金榜年终奖": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/nI5bY4U%22%7D",
       "炸年兽": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/SInnOhB%22%7D"
+    },
+    "抓包入口(获取Cookie)": {
+      "Safati": "https://bean.m.jd.com/bean/signIndex.action",
+      "Alook": "alook://bean.m.jd.com/bean/signIndex.action",
+      "App": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://bean.m.jd.com/bean/signIndex.action%22%7D"
     },
     "🧧 京东年货节红包每天抢 - 最高9999": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/Ytqy61c%22%7D",
     "🧧 1月13日 20点 指令专属红包": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/Ytqy61c%22%7D"
