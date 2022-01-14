@@ -600,6 +600,7 @@ function doSignTask () {
       break;
     default:
       $.to = ''; $.call.pop(); $.taskStep = 1
+      $.message = `taskStep:${$.taskStep}`
       document.write(JSON.stringify($))
       break;
   }
