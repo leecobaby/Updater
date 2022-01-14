@@ -319,7 +319,7 @@ function doSurplusWater () {
       break;
     default:
       $.message = `taskStep:${$.taskStep}`
-      $.to = '', $.call.pop(), $.taskStep = 1, $.self.show = null
+      $.to = ''; $.call.pop(); $.taskStep = 1; $.self.show = null
       document.write(JSON.stringify($))
       break;
   }
@@ -599,7 +599,7 @@ function doSignTask () {
       }
       break;
     default:
-      $.to = '', $.call.pop(), $.taskStep = 1
+      $.to = ''; $.call.pop(); $.taskStep = 1
       document.write(JSON.stringify($))
       break;
   }
