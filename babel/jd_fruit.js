@@ -641,8 +641,7 @@ function gotClockInGift () {
  * 签到 - 限时任务 theme 为关注 venderCoupon 为领券
  */
 function clockInFollowForFarm (type) {
-  // 循环逻辑单独设置 to,call
-  $.to = 'Func.logicHandler';
+  // 循环逻辑单独设置 call
   $.call[$.call.length - 1] == 'clockInFollowForFarm' || $.call.push('clockInFollowForFarm')
 
   // 利用队列取代循环
@@ -650,7 +649,7 @@ function clockInFollowForFarm (type) {
   $.oneItemType = type || $.oneItemType
   if (!$.oneItem) {
     // 循环完成重新设置 to,call
-    $.to = '', $.call.pop()
+    $.call.pop()
     $.message = ` 限时任务已全都完成~`
     document.write(JSON.stringify($))
     return
