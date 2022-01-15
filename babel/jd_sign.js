@@ -307,6 +307,7 @@ function getNHSignInfo () {
 function queryInteractiveInfo (encryptProjectId, sourceCode) {
   $.call[$.call.length - 1] == 'queryInteractiveInfo' || $.call.push('queryInteractiveInfo')
 
+  $.sourceCode = sourceCode
   $.callback = 'Func.request'
   takeRequest('queryInteractiveInfo');
   return
@@ -402,7 +403,7 @@ function takeRequest (type) {
       myRequest = getRequest(url, body, 'GET');
       break;
     case 'queryInteractiveInfo':
-      url = `https://api.m.jd.com/client.action?functionId=queryInteractiveInfo&body={"encryptProjectId":${encryptProjectId},"sourceCode":${sourceCode}}&appid=publicUseApi&client=wh5&clientVersion=1.0.0&sid=&uuid=&area=22_2005_2009_36999&networkType=`;
+      url = `https://api.m.jd.com/client.action?functionId=queryInteractiveInfo&body={"encryptProjectId":${$.encryptProjectId},"sourceCode":${$.sourceCode}}&appid=publicUseApi&client=wh5&clientVersion=1.0.0&sid=&uuid=&area=22_2005_2009_36999&networkType=`;
       myRequest = getRequest(url);
       break;
     case 'zoo_shopLotteryInfo':
