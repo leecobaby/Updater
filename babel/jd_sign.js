@@ -278,8 +278,8 @@ function doNHSign () {
       getNHSignInfo()
       break;
     case 2:
-      // 获取签到信息
-      ueryInteractiveInfo($.encryptProjectId, "aceaceglqd20211215");
+      // 查询交互信息
+      $.encryptProjectId && queryInteractiveInfo($.encryptProjectId, "aceaceglqd20211215");
       break;
     default:
       $.to = ''; $.call.pop(); $.taskStep = 1
@@ -303,6 +303,7 @@ function getNHSignInfo () {
   document.write(JSON.stringify($))
 }
 
+// 查询交互信息
 function queryInteractiveInfo (encryptProjectId, sourceCode) {
   $.call[$.call.length - 1] == 'queryInteractiveInfo' || $.call.push('queryInteractiveInfo')
 
