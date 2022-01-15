@@ -403,7 +403,7 @@ function takeRequest (type) {
       myRequest = getRequest(url, body, 'GET');
       break;
     case 'queryInteractiveInfo':
-      url = `https://api.m.jd.com/client.action?functionId=queryInteractiveInfo&body=%7B%22encryptProjectId%22%3A${$.encryptProjectId}%2C%22sourceCode%22%3A${$.sourceCode}%7D&appid=publicUseApi&client=wh5&clientVersion=1.0.0&sid=&uuid=&area=22_2005_2009_36999&networkType=`;
+      url = `https://api.m.jd.com/client.action?functionId=queryInteractiveInfo&body=%7B%22encryptProjectId%22%3A%22${$.encryptProjectId}%22%2C%22sourceCode%22%3A%22${$.sourceCode}%22%7D&appid=publicUseApi&client=wh5&clientVersion=1.0.0&sid=&uuid=&area=22_2005_2009_36999&networkType=`;
       body = ``
       myRequest = getRequest(url, body);
       break;
