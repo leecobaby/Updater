@@ -51,7 +51,7 @@
       }
     },
     "controller": {
-      "callList": [],
+      "callList": ["init"],
       "taskList": [
         { "🔥 做年货节抽签": "doNHSign" },
         { "京东京豆": "JingDongBean" },

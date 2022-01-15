@@ -274,7 +274,6 @@ function doNHSign () {
 
   switch ($.taskStep++) {
     case 1:
-      $.self.show = false
       // 获取签到信息
       getNHSignInfo()
       break;
@@ -689,11 +688,6 @@ function dealReturn (type, data) {
         $.message = `京东年货-抽签: 成功, 明细: 测试成功`
       } catch (e) {
         $.message = "京东年货-抽签: 失败, 明细: 无法获取活动ID ⚠️"
-      }
-      if (data.code === '0') {
-        $.message = `【定时领水】获得${data.amount}g💧`
-      } else {
-        $.message = `定时领水成功结果：${JSON.stringify(data.message)}`
       }
       break
     case 'waterFriendForFarm':
