@@ -277,6 +277,10 @@ function doNHSign () {
       // 获取签到信息
       getNHSignInfo()
       break;
+    case 2:
+      // 获取签到信息
+      ueryInteractiveInfo($.encryptProjectId, "aceaceglqd20211215");
+      break;
     default:
       $.to = ''; $.call.pop(); $.taskStep = 1
       document.write(JSON.stringify($))
@@ -284,6 +288,7 @@ function doNHSign () {
   }
 }
 
+// 获取抽签活动页
 function getNHSignInfo () {
   $.call[$.call.length - 1] == 'getNHSignInfo' || $.call.push('getNHSignInfo')
 
@@ -297,6 +302,21 @@ function getNHSignInfo () {
   dealReturn('getNHSignInfo', $.data)
   document.write(JSON.stringify($))
 }
+
+function queryInteractiveInfo (encryptProjectId, sourceCode) {
+  $.call[$.call.length - 1] == 'queryInteractiveInfo' || $.call.push('queryInteractiveInfo')
+
+  $.callback = 'Func.request'
+  takeRequest('queryInteractiveInfo');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('queryInteractiveInfo', $.data)
+  document.write(JSON.stringify($))
+}
+
 
 /**
  * 提交请求信息
@@ -380,9 +400,9 @@ function takeRequest (type) {
       }
       myRequest = getRequest(url, body, 'GET');
       break;
-    case 'wxTaskDetail':
-      body = `functionId=funny_getTaskDetail&body={"appSign":"2","channel":1,"shopSign":""}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`funny_getTaskDetail`, body);
+    case 'queryInteractiveInfo':
+      url = `https://api.m.jd.com/client.action?functionId=queryInteractiveInfo&body={"encryptProjectId":${encryptProjectId},"sourceCode":${sourceCode}}&appid=publicUseApi&client=wh5&clientVersion=1.0.0&sid=&uuid=&area=22_2005_2009_36999&networkType=`;
+      myRequest = getRequest(url);
       break;
     case 'zoo_shopLotteryInfo':
       body = `functionId=zoo_shopLotteryInfo&body={"shopSign":"${$.shopSign}"}&client=wh5&clientVersion=1.0.0`;
@@ -694,11 +714,11 @@ function dealReturn (type, data) {
       }
       $.data = {}
       break
-    case 'waterFriendForFarm':
+    case 'queryInteractiveInfo':
       if (data.code === '0') {
-        $.message = `为第${$.farmTask.waterFriendTaskInit?.waterFriendCountKey}个好友浇水成功`
-      } else if (data.code === '11') {
-        $.message = '浇水失败：水滴不够'
+        $.message = `测试成功`
+      } else {
+        $.message = '测试失败'
       }
       break
     default:

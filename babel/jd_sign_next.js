@@ -52,6 +52,13 @@ function Next (func) {
       dealReturn('getNHSignInfo', $.data)
       document.write(JSON.stringify($))
       break;
+    case 'queryInteractiveInfo_next':
+      // next
+      $.callback = ''
+      $.call.pop()
+      dealReturn('queryInteractiveInfo', $.data)
+      document.write(JSON.stringify($))
+      break;
     default:
       // next
       $.callback = ''

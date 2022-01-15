@@ -47,21 +47,7 @@
         { "京东秒杀": "JDSecKilling" },
         { "其他": "cloudTip" }
       ]
-    },
-    "codeList": [
-      "JingDongBean_next",
-      "JingDongStore_next",
-      "JingDongTurn_next",
-      "JDFlashSale_next",
-      "FlashSaleDivide_next",
-      "JingDongCash_next",
-      "JingDongSubsidy_next",
-      "JingDongGetCash_next",
-      "JingDongShake_next",
-      "JDSecKilling_next",
-      "JDSecKilling_next_next",
-      "getNHSignInfo_next"
-    ]
+    }
   },
   "JD_zoo": {
     "version": "数据库版本:6.17.1",
