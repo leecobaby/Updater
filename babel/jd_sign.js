@@ -442,7 +442,7 @@ function takeRequest (type) {
     case 'doInteractiveAssignment':
       body = { "encryptProjectId": $.encryptProjectId, "encryptAssignmentId": $.AssignmentId, "sourceCode": $.sourceCode, "completionFlag": true }
       if ($.taskType === 0) { body = { "encryptProjectId": $.encryptProjectId, "encryptAssignmentId": $.AssignmentId, "sourceCode": $.sourceCode, "completionFlag": true, "ext": { "exchangeNum": 1 } } }
-      url = `https://api.m.jd.com/client.action?functionId=queryInteractiveInfo&body=${JSON.stringify(body)}&appid=publicUseApi&client=wh5&clientVersion=1.0.0&sid=&uuid=&area=22_2005_2009_36999&networkType=`;
+      url = `https://api.m.jd.com/client.action?functionId=doInteractiveAssignment&body=${JSON.stringify(body)}&appid=publicUseApi&client=wh5&clientVersion=1.0.0&sid=&uuid=&area=22_2005_2009_36999&networkType=`;
       url = encodeURI(url)
       body = ``
       myRequest = getRequest(url, body);
