@@ -279,7 +279,6 @@ function doNHSign () {
       break;
     default:
       $.to = ''; $.call.pop(); $.taskStep = 1
-      $.message = `test`
       document.write(JSON.stringify($))
       break;
   }
@@ -716,7 +715,7 @@ function Utils () {
     },
     stringify (data) {
       try {
-        if (typeof JSON.stringify(data) == "String") {
+        if (typeof JSON.stringify(data) == "string") {
           return JSON.stringify(data);
         }
       } catch (e) {
