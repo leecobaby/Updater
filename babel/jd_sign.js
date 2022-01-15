@@ -375,6 +375,9 @@ function takeRequest (type) {
       break;
     case 'getNHSignInfo':
       url = "https://prodev.m.jd.com/mall/active/fARfxZh3zdMqs4tkFBhpqaQKTGA/index.html";
+      headers = {
+        ContentType: ''
+      }
       myRequest = getRequest(url, body, 'GET');
       break;
     case 'wxTaskDetail':
@@ -450,7 +453,7 @@ function getRequest (url, body = {}, method = 'POST', header = {}) {
     'Accept-Encoding': `gzip, deflate, br`,
     "Cache-Control": "no-cache",
     'Cookie': $.cookie,
-    'Content-Type': `application/x-www-form-urlencoded`,
+    'Content-Type': header.ContentType || `application/x-www-form-urlencoded`,
     'Host': `api.m.jd.com`,
     'Connection': `keep-alive`,
     "sec-fetch-dest": "empty",
