@@ -403,8 +403,9 @@ function takeRequest (type) {
       myRequest = getRequest(url, body, 'GET');
       break;
     case 'queryInteractiveInfo':
-      url = `https://api.m.jd.com/client.action?functionId=queryInteractiveInfo&body={"encryptProjectId":${$.encryptProjectId},"sourceCode":${$.sourceCode}}&appid=publicUseApi&client=wh5&clientVersion=1.0.0&sid=&uuid=&area=22_2005_2009_36999&networkType=`;
-      myRequest = getRequest(url);
+      url = `https://api.m.jd.com/client.action?functionId=queryInteractiveInfo&body=%7B%22encryptProjectId%22%3A${$.encryptProjectId}%2C%22sourceCode%22%3A${$.sourceCode}%7D&appid=publicUseApi&client=wh5&clientVersion=1.0.0&sid=&uuid=&area=22_2005_2009_36999&networkType=`;
+      body = ``
+      myRequest = getRequest(url, body);
       break;
     case 'zoo_shopLotteryInfo':
       body = `functionId=zoo_shopLotteryInfo&body={"shopSign":"${$.shopSign}"}&client=wh5&clientVersion=1.0.0`;
