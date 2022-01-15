@@ -376,7 +376,7 @@ function takeRequest (type) {
     case 'getNHSignInfo':
       url = "https://prodev.m.jd.com/mall/active/fARfxZh3zdMqs4tkFBhpqaQKTGA/index.html";
       headers = {
-        ContentType: ''
+        ContentType: 'null'
       }
       myRequest = getRequest(url, body, 'GET');
       break;
@@ -689,8 +689,10 @@ function dealReturn (type, data) {
         $.encryptProjectId = json.match(/"projectId":"(.*?)"/)[1];
         $.message = `京东年货-抽签: 成功, 明细: 测试成功`
       } catch (e) {
+        $.encryptProjectId = null
         $.message = "京东年货-抽签: 失败, 明细: 无法获取活动ID ⚠️"
       }
+      $.data = {}
       break
     case 'waterFriendForFarm':
       if (data.code === '0') {
