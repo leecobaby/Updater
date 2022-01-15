@@ -7,49 +7,15 @@
     "codeUrl": {
       "CryptoJS": "https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.js",
       "checkCookie": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/checkCookie.js",
-      "JD_sign_development": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/jd_sign_development.js",
-      "JD_sign": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/jd_sign.js"
+      "JD_sign": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/jd_sign.js",
+      "JD_sign_next": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/jd_sign_next.js",
+      "JD_sign_development": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/jd_sign_development.js"
     },
-    "api": {
-      "isLogin": {
-        "url": "https://me-api.jd.com/user_new/info/GetJDUserInfoUnion",
-        "method": "GET",
-        "headers": {
-          "Accept": "application/json,text/plain, */*",
-          "Host": "me-api.jd.com",
-          "Accept-Encoding": "gzip, deflate, br",
-          "Accept-Language": "zh-cn",
-          "Connection": "keep-alive",
-          "User-Agent": "jdapp;iPhone;10.0.6;14.4;c67093f5dd58d33fc5305cdc61e46a9741e05c5b;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
-          "Referer": "https://wqs.jd.com/my/jingdou/my.shtml?sceneval=2"
-        }
-      },
-      "isLogin1": {
-        "url": "https://wq.jd.com/user/info/QueryJDUserInfo?sceneval=2",
-        "method": "POST",
-        "headers": {
-          "Accept": "application/json,text/plain, */*",
-          "Accept-Encoding": "gzip, deflate, br",
-          "Accept-Language": "zh-cn",
-          "Connection": "keep-alive",
-          "Referer": "https://wqs.jd.com/my/jingdou/my.shtml?sceneval=2"
-        }
-      },
-      "api": {
-        "url": "https://api.m.jd.com/client.action"
-      }
-    },
-    "uaInfo": {
-      "UA1": {
-        "ua": "jdapp;iPhone;10.0.6;14.4;c67093f5dd58d33fc5305cdc61e46a9741e05c5b;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1"
-      },
-      "UA2": {
-        "ua": "jdapp;iPhone;10.0.6;14.4;c67093f5dd58d33fc5305cdc61e46a9741e05c5b;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1"
-      },
-      "UA3": {
-        "ua": "jdapp;iPhone;9.2.0;14.1;"
-      }
-    },
+    "authUrl": [
+      "https://me-api.jd.com/user_new/info/GetJDUserInfoUnion",
+      "https://wq.jd.com/user/info/QueryJDUserInfo?sceneval=2",
+      "https://api.m.jd.com/client.action"
+    ],
     "controller": {
       "callList": ["init"],
       "taskList": [
