@@ -51,7 +51,7 @@
         "淘宝": "taobao://m.tb.cn/h.fkhGNyD",
         "京东": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/Ytqy61c%22%7D"
       },
-      "🧧 现金红包-1.15开抢": "taobao://m.tb.cn/h.fQhca7X",
+      "🧧 现金红包-1.15开抢": "taobao://m.tb.cn/h.fkLMFm2",
       "👥 加入QQ京东情报群": "https://jq.qq.com/?_wv=1027&k=tx5Mzgh2",
       "👥 加入QQ淘宝情报群": "https://jq.qq.com/?_wv=1027&k=2TxdF0lM",
       "👥 加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
@@ -561,7 +561,7 @@
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/d855d59bf7944bca978c42936f65df24",
-    "notice": "已更换架构，初步实现京东各类签到，其他任务后续会静默推送~\n任务失败正常情况，很多任务只会偶尔返场，所以不好删掉",
+    "notice": "已更换架构，如弹错请去往更新选项-指令修复\n任务失败正常情况，很多任务只会偶尔返场，所以不好删掉",
     "video": "",
     "automation_url": "shortcuts://run-shortcut?name=京东-多合一签到&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd.png",
@@ -570,12 +570,12 @@
     "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_sign/",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 10日20:00 重磅加码",
+      "hot": "🧧 京东红包更新",
       "faq": "有疑问的请查看",
       "set": "",
       "team": "",
-      "other": "",
-      "more": "🧧 1.8日抢现金红包"
+      "other": "指令修复在这",
+      "more": "🧧 1.15日抢现金红包"
     }
   },
   "JD_zoo": {
@@ -717,7 +717,7 @@
     "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
     "加入QQ情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
     "其他捷径作品": "https://shimo.im/docs/DHcYv8xjcYxvHvQg/",
-    "🧧 现金红包-6.15": "taobao://m.tb.cn/h.4uLee50",
+    "🧧 现金红包-6.15": "taobao://m.tb.cn/h.fkLMFm2",
     "🔥 年货节超级红包": "taobao://m.tb.cn/h.4RaMYQr",
     "饿了么现金红包": "taobao://m.tb.cn/h.4hbqRud"
   },
@@ -755,14 +755,14 @@
         }
       },
       "🧧 支付宝现金红包": "alipays://platformapi/startapp?appId=20000067&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fc%2Falipay-red-qrcode%2Fshared.html%3Fchannel%3Dsearch_pwd%26shareId%3D2088102986032700%26token%3D11w194707wxbnqkmg21ke2d%26campStr%3DkPPFvOxaCL3f85TiKss2wsBZgIjulHjG%26sign%3Dlj1gjQ8PxzMbaRNG5RKOee%2FhckXIyodWvTJbBTYOleI%3D%26chInfo%3Dsousuoma%26c_stype%3Dsearch_pwd",
-      "🧧 现金红包 - 1.15开抢": "taobao://m.tb.cn/h.fQhca7X"
+      "🧧 现金红包 - 1.15开抢": "taobao://m.tb.cn/h.fkLMFm2"
     },
     "more2": {
       "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
       "加入QQ京东情报群": "https://jq.qq.com/?_wv=1027&k=tx5Mzgh2",
       "加入QQ淘宝情报群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=622340333&card_type=group&source=qrcode&jump_from=&auth=&authSig=RPqW9VSePIx4jWxGhYLvMvfdLkFPydHzo50qyVwmb9zhPjv7lF3HnSRF5WuJfjaX&source_id=2_40001",
       "其他捷径作品": "https://shimo.im/docs/DHcYv8xjcYxvHvQg/",
-      "🧧 现金红包-1.15": "taobao://m.tb.cn/h.4uLee50",
+      "🧧 现金红包-1.15": "taobao://m.tb.cn/h.fkLMFm2",
       "平台红包": {
         "饿了么现金红包": "taobao://m.tb.cn/h.4hbqRud",
         "支付宝现金红包": "taobao://m.tb.cn/h.VzY0yti"
