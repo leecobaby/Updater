@@ -280,6 +280,7 @@ function doNHSign () {
       break;
     default:
       $.to = ''; $.call.pop(); $.taskStep = 1
+      $.message = `test`
       document.write(JSON.stringify($))
       break;
   }
