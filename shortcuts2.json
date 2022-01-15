@@ -552,16 +552,16 @@
     }
   },
   "JD_sign": {
-    "version": "1.4",
-    "update_log": "- 兼容 优化 ios15.1 的运行（我任然不建议你升级 15.1,运行时长是原来的 20 倍）",
+    "version": "1.5",
+    "update_log": "- 采用 最新的京东系任务架构\n- 重构 指令云端架构，逻辑执行器更精简快速，减少网络压力\n- 重构 指令架构，弃用部分无意义功能\n- 新增 年货节抽签任务，其他任务持续推送",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_sign#版本日志"
     },
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/407764531450467e9f8359a972c6ec43",
-    "notice": "已更换架构，初步实现京东各类签到，其他任务后续会静默推送~\n🧧 10日20:00 重磅加码，这两天活动大厅有专属红包请关注~",
+    "update": "https://www.icloud.com/shortcuts/d855d59bf7944bca978c42936f65df24",
+    "notice": "已更换架构，初步实现京东各类签到，其他任务后续会静默推送~\n任务失败正常情况，很多任务只会偶尔返场，所以不好删掉",
     "video": "",
     "automation_url": "shortcuts://run-shortcut?name=京东-多合一签到&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd.png",
