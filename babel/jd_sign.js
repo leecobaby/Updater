@@ -286,7 +286,7 @@ function doNHSign () {
       break;
     case 3:
       // 做抽签任务
-      let dateReg = new RegExp(String(new Date.getDate()), 'g')
+      let dateReg = new RegExp(String(new Date().getDate()), 'g')
       for (let v of $.self.data) {
         if (v.assignmentName.match(dateReg)) {
           doInteractiveAssignment($.encryptProjectId, v.encryptAssignmentId, "aceaceglqd20211215", 0);
@@ -296,7 +296,7 @@ function doNHSign () {
       }
       break;
     default:
-      $.to = ''; $.call.pop(); $.taskStep = 1
+      $.to = ''; $.call.pop(); $.taskStep = 1; $.self.data = undefined
       document.write(JSON.stringify($))
       break;
   }
@@ -756,6 +756,7 @@ function dealReturn (type, data) {
     case 'queryInteractiveInfo':
       if (data.code === '0') {
         $.self.data = data.assignmentList
+        $.message = '获取交互信息成功'
       } else {
         $.message = '获取交互信息失败'
       }
