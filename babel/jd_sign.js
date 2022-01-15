@@ -686,7 +686,7 @@ function dealReturn (type, data) {
       break
     case 'getNHSignInfo':
       try {
-        $.encryptProjectId = json.match(/"projectId":"(.*?)"/)[1];
+        $.encryptProjectId = data.match(/"projectId":"(.*?)"/)[1];
         $.message = `京东年货-抽签: 成功, 明细: 测试成功`
       } catch (e) {
         $.encryptProjectId = null
