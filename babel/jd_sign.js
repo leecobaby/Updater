@@ -54,6 +54,9 @@ function init () {
   $.uuid = $.Utils.randomString(40)
   $.UA = `jdapp;iPhone;10.2.0;13.1.2;${$.uuid};M/5.0;network/wifi;ADID/;model/iPhone8,1;addressid/2308460611;appBuild/167853;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 13_1_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1;`
 
+  // 自变量
+  $.self = {}
+
   $.message = `本指令作为自动化方案开源分享，并不保证他带来的任何副作用，任何副作用请自行负责，如不同意请停止使用！`
   document.write(JSON.stringify($))
 }
@@ -281,6 +284,17 @@ function doNHSign () {
       // 查询交互信息
       $.encryptProjectId && queryInteractiveInfo($.encryptProjectId, "aceaceglqd20211215");
       break;
+    case 3:
+      // 做抽签任务
+      let dateReg = new RegExp(String(new Date.getDate()), 'g')
+      for (let v of $.self.data) {
+        if (v.assignmentName.match(dateReg)) {
+          doInteractiveAssignment($.encryptProjectId, v.encryptAssignmentId, "aceaceglqd20211215", 0);
+        } else if (v.assignmentName == '签到') {
+          doInteractiveAssignment($.encryptProjectId, v.encryptAssignmentId, "aceaceglqd20211215");
+        }
+      }
+      break;
     default:
       $.to = ''; $.call.pop(); $.taskStep = 1
       document.write(JSON.stringify($))
@@ -316,6 +330,24 @@ function queryInteractiveInfo (encryptProjectId, sourceCode) {
   $.callback = ''
   $.call.pop()
   dealReturn('queryInteractiveInfo', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 做抽签任务
+function doInteractiveAssignment (encryptProjectId, AssignmentId, sourceCode, type) {
+  $.call[$.call.length - 1] == 'doInteractiveAssignment' || $.call.push('doInteractiveAssignment')
+
+  $.sourceCode = sourceCode
+  $.AssignmentId = AssignmentId
+  $.daskType = type
+  $.callback = 'Func.request'
+  takeRequest('doInteractiveAssignment');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('doInteractiveAssignment', $.data)
   document.write(JSON.stringify($))
 }
 
@@ -407,9 +439,13 @@ function takeRequest (type) {
       body = ``
       myRequest = getRequest(url, body);
       break;
-    case 'zoo_shopLotteryInfo':
-      body = `functionId=zoo_shopLotteryInfo&body={"shopSign":"${$.shopSign}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`zoo_shopLotteryInfo`, body);
+    case 'doInteractiveAssignment':
+      body = { "encryptProjectId": $.encryptProjectId, "encryptAssignmentId": $.AssignmentId, "sourceCode": $.sourceCode, "completionFlag": true }
+      if ($.taskType === 0) { body = { "encryptProjectId": $.encryptProjectId, "encryptAssignmentId": $.AssignmentId, "sourceCode": $.sourceCode, "completionFlag": true, "ext": { "exchangeNum": 1 } } }
+      url = `https://api.m.jd.com/client.action?functionId=queryInteractiveInfo&body=${JSON.stringify(body)}&appid=publicUseApi&client=wh5&clientVersion=1.0.0&sid=&uuid=&area=22_2005_2009_36999&networkType=`;
+      url = encodeURI(url)
+      body = ``
+      myRequest = getRequest(url, body);
       break;
     case 'zoo_bdCollectScore':
       body = getPostBody(type);
@@ -719,9 +755,16 @@ function dealReturn (type, data) {
       break
     case 'queryInteractiveInfo':
       if (data.code === '0') {
-        $.message = `测试成功`
+        $.self.data = data.assignmentList
       } else {
-        $.message = '测试失败'
+        $.message = '获取交互信息失败'
+      }
+      break
+    case 'doInteractiveAssignment':
+      if (data.subCode === '0') {
+        $.message = `当前兑换${JSON.stringify(data.rewardsInfo?.successRewards)}`;
+      } else {
+        $.message = data.msg
       }
       break
     default:

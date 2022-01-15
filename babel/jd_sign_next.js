@@ -59,6 +59,13 @@ function Next (func) {
       dealReturn('queryInteractiveInfo', $.data)
       document.write(JSON.stringify($))
       break;
+    case 'doInteractiveAssignment_next':
+      // next
+      $.callback = ''
+      $.call.pop()
+      dealReturn('doInteractiveAssignment', $.data)
+      document.write(JSON.stringify($))
+      break;
     default:
       // next
       $.callback = ''
