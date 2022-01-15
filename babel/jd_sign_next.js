@@ -55,7 +55,8 @@ function Next (func) {
     default:
       // next
       $.callback = ''
-      dealReturn(func, $.data)
+      let type = String(func).replace('_next', '')
+      dealReturn(type, $.data)
       document.write(JSON.stringify($))
       break;
   }
