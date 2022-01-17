@@ -180,8 +180,8 @@ function tigernian_sign () {
 // 获取助力池数据
 function getHelpCode () {
   $.callback = 'Func.request'
-  takePostRequest('getHelpCode');
   $.modules = 1 // 引入模块
+  takePostRequest('getHelpCode');
   return
 
   // next
