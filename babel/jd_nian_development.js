@@ -181,6 +181,7 @@ function tigernian_sign () {
 function getHelpCode () {
   $.callback = 'Func.request'
   takePostRequest('getHelpCode');
+  $.modules = 1 // 引入模块
   return
 
   // next
@@ -1136,6 +1137,7 @@ function dealReturn (type, data) {
       // 将助力池的助力码添加进助力列表
       $.inviteList = $.inviteList.concat(list)
       $.message = `已从云端助力池获取到5条助力码追加到助力列表。助力列表预览：${JSON.stringify($.inviteList)}`
+      $.modules = 0 // 取消模块
       // // 选出有 助力码 的元素
       // const filterData1 = _.filter(data.items, v => v.text.match(/^[\w-]{10,20}$/g))
       // // 过滤重复的 user id
