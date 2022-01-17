@@ -5,7 +5,7 @@
     "endJump": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/YwhAs1z%22%7D",
     "pkHelpCode": "IgNWdiLGaPaAqdZqpd0QbcXZFPwE1VfQ9VPl2cARI1KWYjbV1EXeRSxZojc",
     "codeUrl": {
-      "CryptoJS": "https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.js",
+      "modules": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/modules.js",
       "checkCookie": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/checkCookie.js",
       "JD_sign": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/jd_sign.js",
       "JD_sign_next": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/jd_sign_next.js",
@@ -423,7 +423,7 @@
       "inviteLink": "https://gitter.im/leecobaby-shortcuts/jd_travel?utm_source=share-link&utm_medium=link&utm_campaign=share-link"
     },
     "codeUrl": {
-      "CryptoJS": "https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.js",
+      "modules": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/modules.js",
       "checkCookie": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/checkCookie.js",
       "JD_nian": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/jd_nian.js",
       "JD_nian_next": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/jd_nian_next.js",
