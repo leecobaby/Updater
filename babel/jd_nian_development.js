@@ -63,7 +63,7 @@ function init () {
   } else {
     $.pkExpandList = []
   }
-  $.pkExpandList.push('PKASTT0195L6r47PBTNYCtIMjDX0CjRWnIaRzTIjeQOc')
+  $.pkExpandList.push('PKASTT0195L6r47PBTNYCtIMjDX0CTdWnIaRzTwjeQOc')
 
   // 处理沸腾之夜助力码
   if ($.partyHelpList) {
@@ -125,7 +125,6 @@ function tigernian_getHomeData () {
 
   // next
   $.callback = ''
-  // $.error = '云端测试中'
   dealReturn('tigernian_getHomeData', $.data)
   document.write(JSON.stringify($))
 }
@@ -200,6 +199,7 @@ function help () {
   if (!$.setHelp || !$.inviteId || $.helpMax) {
     // 循环完成重新设置 to,call
     $.to = '', $.call.pop()
+    !$.setHelp && ($.message = `你已关闭助力，就不做助力任务拉~`)
     document.write(JSON.stringify($))
     return
   }
@@ -230,6 +230,7 @@ function pkHelp () {
   if (!$.setHelp || !$.pkHelpId) {
     // 循环完成重新设置 to,call
     $.to = '', $.call.pop()
+    !$.setHelp && ($.message = `你已关闭助力，就不做入队任务拉~`)
     document.write(JSON.stringify($))
     return
   }
@@ -900,7 +901,7 @@ function takePostRequest (type) {
       myRequest = getRequest(url, body, 'GET', headers);
       break;
     case 'jdjrTaskDetail':
-      body = `reqData={"eid":"","sdkToken":"jdd01UGM6YXUOBTGCM6YUCAOOS7ISME4TMFAS6H2H5MUYKBFWHN54VWNKFONXTAV37DV64APTFCDSLQWF4D367NK7KLFQMVIDWALAPSTGZ5Y01234567"}`;
+      body = `reqData={"eid":"","sdkToken":"jdd016EJ54F6BERNW7KQN572WZUQRRFEELIAO7P6YZYZBFUAR6T7LX5KRRGOFWEUJQB57AHD3RWA4Z7J5F5TSHDK3U65XMFZIU5KWEMIWOFA01234567"}`;
       otherUrl = `https://ms.jr.jd.com/gw/generic/uc/h5/m/miMissions`
       myRequest = getPostRequest(`jdjrTaskDetail`, body, otherUrl);
       break;
@@ -933,8 +934,8 @@ function getPostRequest (type, body, otherUrl) {
     type === 'jdjrDoTask' && (request.method = 'GET')
     request.headers = {
       'Host': 'ms.jr.jd.com',
-      'Origin': 'https://prodev.m.jd.com',
-      'Referer': 'https://prodev.m.jd.com/'
+      'Origin': 'https://wbbny.m.jd.com',
+      'Referer': 'https://wbbny.m.jd.com/'
     }
     url = otherUrl;
   }
@@ -1122,13 +1123,13 @@ function dealReturn (type, data) {
       }
       break;
     case 'getHelpCode':
-      data = JSON.stringify(data).replace(/[\r\n<br><p>]*/g, '')
-      data = JSON.parse(data)
+      // data = JSON.stringify(data).replace(/[\r\n<br><p>]*/g, '')
+      // data = JSON.parse(data)
       $.data = {}
       // 选出有 助力码 的元素
       const filterData = _.filter(data.items, v => v.text.match(/^[\w-]*$/g))
       // 过滤重复的 user id
-      const uniqData = _.uniqBy(filterData, v => v.fomUse)
+      const uniqData = _.uniqBy(filterData, v => v.fromUser)
       // 随机选取出 5 个助力码 - 考虑到助力已满情况和无效码的情况
       const sampleData = _.sampleSize(uniqData, 5)
       const list = sampleData.map(v => v.text)
@@ -1138,7 +1139,7 @@ function dealReturn (type, data) {
       // // 选出有 助力码 的元素
       // const filterData1 = _.filter(data.items, v => v.text.match(/^[\w-]{10,20}$/g))
       // // 过滤重复的 user id
-      // const uniqData1 = _.uniqBy(filterData1, v => v.fomUse)
+      // const uniqData1 = _.uniqBy(filterData1, v => v.fromUser)
       // // 随机选取出 5 个助力码 - 考虑到助力已满情况和无效码的情况
       // const sampleData1 = _.sampleSize(uniqData1, 5)
       // const list1 = sampleData1.map(v => v.text)

@@ -426,8 +426,14 @@
       "CryptoJS": "https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.js",
       "checkCookie": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/checkCookie.js",
       "JD_nian": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/jd_nian.js",
+      "JD_nian_next": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/jd_nian_next.js",
       "JD_nian_development": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/jd_nian_development.js"
     },
+    "authUrl": [
+      "https://me-api.jd.com/user_new/info/GetJDUserInfoUnion",
+      "https://wq.jd.com/user/info/QueryJDUserInfo?sceneval=2",
+      "https://api.m.jd.com/client.action"
+    ],
     "api": {
       "isLogin": {
         "url": "https://me-api.jd.com/user_new/info/GetJDUserInfoUnion",
