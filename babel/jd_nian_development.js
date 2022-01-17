@@ -82,6 +82,9 @@ function init () {
   $.shopList = [
     '3Nim1gacyGYMAXmZ3Y2k5VBxaejJ', '46zESrwfq44GweVpStuKbRC41Hte', '2L7HSDRra3SWkaXjMuTu7t12pcD3', 'FMMgZP4rY1Jn8No6ecHX9iXeUMM', 'o1eBs9bj8uSU61u69cU23RRD1CF', 'MS542hXYyzw3kSpiRWc4541HEBq', '32SnogmGSmooYj8fjfVEYfSZQJAh', '238znECxVhPhxMo6MwBtbKymQxJ5', 'iWCMNDBk5LGH6vk3KUMjh4zDqxW', '4Cs3hEQxMxvqJPj71yboqP8bsA6W', 'hntbhJys5n6ruPgxTvnkLi6uKV1', '23ATdy5hbTTCBAb3EGg9jiLePwVt', '2mn15qhUwtay1HC9q6zzgtKQi9hE', '45jeQMDcxfrUJ4WgytKLtEanZ3aG', 'xyDmumXCUwrynUBKF3BWGgNmNJy'
   ]
+  // 丢骰子店铺列表初始化
+  $.diceShopList = ['11029076', '10449451', '950884', '740107', '172517', '779870', '10319518', '11631867', '30478', '1000365883', '732696', '11517924', '734316', '587934', '10045379', '1000133563', '11566049', '823590', '10117997', '11459805', '54866', '10193620', '857116', '929059', '11394479', '642850', '803181', '944814', '91207', '156784', '208700', '621174', '10031439', '10149891', '183179', '106633', '1000225308', '733072', '130162', '10115320', '10549423', '782853', '10294175', '953454', '724490', '10269575', '989359', '1000072661', '175147', '836735', '11618770', '10632623', '86155', '57885', '927596', '213793', '11643391', '714081', '11615282', '658000', '10049280', '660862', '210266', '798546', '763029', '210731', '11333097', '665686', '10103614', '731848', '1000093453', '10228557', '125357', '121317', '102094', '10106644', '10134836', '979907', '82092', '1000076326', '33245', '664743', '10203538', '212733', '10395173', '860851', '11280938', '67322', '830062', '11459415', '10310009', '1000081681', '138065', '1000005331', '11436272', '67500', '10213817', '10377129']
+
   // 生成随机 UA UUID
   $.uuid = randomString(40)
   $.UA = `jdapp;iPhone;10.2.0;13.1.2;${$.uuid};M/5.0;network/wifi;ADID/;model/iPhone8,1;addressid/2308460611;appBuild/167853;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 13_1_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1;`
@@ -782,6 +785,79 @@ function helpPartyCode () {
   document.write(JSON.stringify($))
 }
 
+// 做丢骰子任务
+function doDiceTask () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler';
+  $.call = ['doDiceTask']
+
+  // 利用队列取代循环
+  $.oneShop = $.diceShopList.shift()
+  if (!$.oneShop) {
+    // 循环完成重新设置 to,call
+    $.to = '', $.call.pop()
+    $.message = `任务已全都完成~`
+    document.write(JSON.stringify($))
+    return
+  }
+
+  doDiceTaskController()
+}
+
+// 做丢骰子任务控制器
+function doDiceTaskController () {
+  $.call[$.call.length - 1] == 'doDiceTaskController' || $.call.push('doDiceTaskController')
+
+  switch ($.taskStep++) {
+    case 1:
+      // 获取丢骰子任务 projectId
+      jm_promotion_queryPromotionInfoByShopId()
+      break;
+    case 2:
+      tigernian_getTaskDetail()
+      break;
+    case 3:
+      doTask()
+      break;
+    case 3:
+      tigernian_getTaskDetail()
+      break;
+    case 4:
+      doTask()
+      break;
+    case 5:
+      tigernian_getTaskDetail()
+      break;
+    case 6:
+      doTask()
+      break;
+    case 7:
+      tigernian_getTaskDetail()
+      break;
+    case 8:
+      doTask()
+      break;
+    default:
+      $.to = '', $.call.pop()
+      document.write(JSON.stringify($))
+      break;
+  }
+}
+
+// 获取丢骰子任务 projectId
+function jm_promotion_queryPromotionInfoByShopId () {
+  $.call[$.call.length - 1] == 'jm_promotion_queryPromotionInfoByShopId' || $.call.push('jm_promotion_queryPromotionInfoByShopId')
+  $.callback = 'Func.request'
+  takePostRequest('jm_promotion_queryPromotionInfoByShopId');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('jm_promotion_queryPromotionInfoByShopId', $.data)
+  document.write(JSON.stringify($))
+}
+
 // 提交请求信息
 function takePostRequest (type) {
   let { log, random } = $.signList?.shift() || { log: "", random: "" }
@@ -917,6 +993,10 @@ function takePostRequest (type) {
     case 'browseProducts':
       body = `functionId=tigernian_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`tigernian_collectScore`, body);
+      break;
+    case 'jm_promotion_queryPromotionInfoByShopId':
+      body = `functionId=jm_promotion_queryPromotionInfoByShopId&body={"shopId":"${$.oneShop}","channel":20}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`jm_promotion_queryPromotionInfoByShopId`, body);
       break;
     default:
       $.error = `takePostRequest 错误${type}`
@@ -1248,10 +1328,24 @@ function dealReturn (type, data) {
       } else {
         $.message = `加购|浏览失败`
       }
-      break
-    default:
-      $.error = '什么情况，有未知异常‼️' + type
+      break;
+    case 'jm_promotion_queryPromotionInfoByShopId':
+      if (success && data.innerLink) {
+        try {
+          let acquiredScore = data.innerLink.match(/"projectId":(\d+)/)[1];
+          $.message = `获取丢骰子店铺项目ID失败`
+        } catch (e) {
+          $.message = `获取丢骰子店铺项目ID失败`
+        }
+      }
+  } else {
+    $.message = `获取丢骰子店铺项目ID失败`
+
   }
+  break;
+    default:
+  $.error = '什么情况，有未知异常‼️' + type
+}
 
 }
 
