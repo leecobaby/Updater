@@ -30,6 +30,7 @@ let JD_API_HOST = `https://api.m.jd.com/client.action?functionId=`;
 //   func.xxx -> logicHandler($) -> func.http -> logicHandler($) -> func.xxx
 //   回调完执行 next，视情况来清空 callback
 //   error 为错误信息，会终止当前账号在指令中的运行，直接运行输出log开始下一个账号或结束
+//   Next.key: 只会在执行 callback 的时候，才会产生 Next.key；如果没有执行 callback，逻辑完成时则会清空 Next.key；如果在函数内调用其他函数，而两个函数都会执行 callback，那么需要设 $.next = 0，这样才能主动清空 Next.key，但要记住用完就设为 1。
 
 /**
  * 初始化
@@ -76,12 +77,17 @@ function init () {
     $.pkHelpList.push('m2telgJiWVSZTvQtmTwGzKlOX6368EtbQXHJOCrQbW75rR9rigmZmwE')
   }
 
+  // 自变量
+  $.self = {}, $.self.count = 0
   // 任务流程初始化
   $.taskStep = 1
   // 大牌店铺列表初始化
   $.shopList = [
     '3Nim1gacyGYMAXmZ3Y2k5VBxaejJ', '46zESrwfq44GweVpStuKbRC41Hte', '2L7HSDRra3SWkaXjMuTu7t12pcD3', 'FMMgZP4rY1Jn8No6ecHX9iXeUMM', 'o1eBs9bj8uSU61u69cU23RRD1CF', 'MS542hXYyzw3kSpiRWc4541HEBq', '32SnogmGSmooYj8fjfVEYfSZQJAh', '238znECxVhPhxMo6MwBtbKymQxJ5', 'iWCMNDBk5LGH6vk3KUMjh4zDqxW', '4Cs3hEQxMxvqJPj71yboqP8bsA6W', 'hntbhJys5n6ruPgxTvnkLi6uKV1', '23ATdy5hbTTCBAb3EGg9jiLePwVt', '2mn15qhUwtay1HC9q6zzgtKQi9hE', '45jeQMDcxfrUJ4WgytKLtEanZ3aG', 'xyDmumXCUwrynUBKF3BWGgNmNJy'
   ]
+  // 丢骰子店铺列表初始化
+  $.diceShopList = ['11029076', '10449451', '950884', '740107', '172517', '779870', '10319518', '11631867', '30478', '1000365883', '732696', '11517924', '734316', '587934', '10045379', '1000133563', '11566049', '823590', '10117997', '11459805', '54866', '10193620', '857116', '929059', '11394479', '642850', '803181', '944814', '91207', '156784', '208700', '621174', '10031439', '10149891', '183179', '106633', '1000225308', '733072', '130162', '10115320', '10549423', '782853', '10294175', '953454', '724490', '10269575', '989359', '1000072661', '175147', '836735', '11618770', '10632623', '86155', '57885', '927596', '213793', '11643391', '714081', '11615282', '658000', '10049280', '660862', '210266', '798546', '763029', '210731', '11333097', '665686', '10103614', '731848', '1000093453', '10228557', '125357', '121317', '102094', '10106644', '10134836', '979907', '82092', '1000076326', '33245', '664743', '10203538', '212733', '10395173', '860851', '11280938', '67322', '830062', '11459415', '10310009', '1000081681', '138065', '1000005331', '11436272', '67500', '10213817', '10377129']
+
   // 生成随机 UA UUID
   $.uuid = randomString(40)
   $.UA = `jdapp;iPhone;10.2.0;13.1.2;${$.uuid};M/5.0;network/wifi;ADID/;model/iPhone8,1;addressid/2308460611;appBuild/167853;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 13_1_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1;`
@@ -180,6 +186,7 @@ function tigernian_sign () {
 // 获取助力池数据
 function getHelpCode () {
   $.callback = 'Func.request'
+  $.modules = 1 // 引入模块
   takePostRequest('getHelpCode');
   return
 
@@ -432,6 +439,7 @@ function oneActivityInfo () {
   if (!$.oneActivityInfo || --$.activityInfoList.time <= 0) {
     // 循环完成重新设置 call
     $.call.pop()
+    $.next = 0 // 清空 Next.key
     document.write(JSON.stringify($))
     return
   }
@@ -781,6 +789,159 @@ function helpPartyCode () {
   document.write(JSON.stringify($))
 }
 
+// 做丢骰子任务
+function doDiceTask () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler';
+  $.call = ['doDiceTask']
+
+  // 利用队列取代循环
+  $.oneShop = $.diceShopList.shift()
+  $.shopId = $.oneShop
+  if (!$.oneShop) {
+    // 循环完成重新设置 to,call
+    $.to = '', $.call.pop()
+    $.message = `已完成所有丢骰子任务~`
+    document.write(JSON.stringify($))
+    return
+  }
+
+  doDiceTaskController()
+}
+
+// 做丢骰子任务控制器
+function doDiceTaskController () {
+  $.call[$.call.length - 1] == 'doDiceTaskController' || $.call.push('doDiceTaskController')
+
+  switch ($.taskStep++) {
+    case 1:
+      // 获取丢骰子任务 projectId
+      jm_promotion_queryPromotionInfoByShopId()
+      break;
+    case 2:
+      // 获取单店铺丢骰子任务列表
+      jm_marketing_maininfo()
+      break;
+    case 3:
+      // 做单店铺每日抽奖
+      jm_hidden_tryDoTask()
+      break;
+    case 4:
+      // 做单店铺丢骰子任务
+      doOneDiceTask()
+      break;
+    case 5:
+      // 做丢骰子
+      doPlayDice()
+      break;
+    default:
+      $.call.pop(), $.taskStep = 1
+      $.message = `已完成第${++$.self.count}家丢骰子任务~`
+      document.write(JSON.stringify($))
+      break;
+  }
+}
+
+// 获取丢骰子任务 projectId
+function jm_promotion_queryPromotionInfoByShopId () {
+  $.call[$.call.length - 1] == 'jm_promotion_queryPromotionInfoByShopId' || $.call.push('jm_promotion_queryPromotionInfoByShopId')
+  $.callback = 'Func.request'
+  takePostRequest('jm_promotion_queryPromotionInfoByShopId');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('jm_promotion_queryPromotionInfoByShopId', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 获取单店铺丢骰子任务列表
+function jm_marketing_maininfo () {
+  $.call[$.call.length - 1] == 'jm_marketing_maininfo' || $.call.push('jm_marketing_maininfo')
+  $.callback = 'Func.request'
+  takePostRequest('jm_marketing_maininfo');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('jm_marketing_maininfo', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 做单店铺每日抽奖
+function jm_hidden_tryDoTask () {
+  $.call[$.call.length - 1] == 'jm_hidden_tryDoTask' || $.call.push('jm_hidden_tryDoTask')
+  $.callback = 'Func.request'
+  takePostRequest('jm_hidden_tryDoTask');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('jm_hidden_tryDoTask', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 做单店铺丢骰子任务
+function doOneDiceTask () {
+  $.call[$.call.length - 1] == 'doOneDiceTask' || $.call.push('doOneDiceTask')
+
+  // 利用队列取代循环
+  $.oneTask = $.taskList.shift()
+  $.taskId = $.oneTask?.id;
+  $.taskToken = $.oneTask?.token
+  if (!$.oneTask) {
+    // 循环完成重新设置 call
+    $.call.pop()
+    document.write(JSON.stringify($))
+    return
+  }
+
+  if ([8].includes($.oneTask.type) && ($.oneTask.totalCount - $.oneTask.finishCount) === 1) {
+    doOneDiceTask8()
+  }
+  !document.body.innerText && document.write(JSON.stringify($))
+}
+
+// 做类型 8 的丢骰子任务
+function doOneDiceTask8 () {
+  $.call[$.call.length - 1] == 'doOneDiceTask8' || $.call.push('doOneDiceTask8')
+  $.callback = 'Func.request'
+  $.message = `做任务：${$.oneTask.name}`
+  takePostRequest('doOneDiceTask8_1');
+  return
+
+  // next
+  dealReturn('doOneDiceTask8', $.data)
+  $.wait = 5
+  takePostRequest('doOneDiceTask8_2');
+  return
+  // ⚠️ 这里能用 return，是因为在新架构中，next 是在一个函数中
+
+  // next next
+  $.callback = ''
+  $.call.pop()
+  $.wait = undefined
+  dealReturn('doOneDiceTask8', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 玩丢筛子
+function doPlayDice () {
+  $.call[$.call.length - 1] == 'doPlayDice' || $.call.push('doPlayDice')
+  $.callback = 'Func.request'
+  takePostRequest('doPlayDice');
+  return
+
+  // next
+  $.callback = ''
+  // 结束循环写在 dealReturn
+  dealReturn('doPlayDice', $.data)
+  document.write(JSON.stringify($))
+}
+
 // 提交请求信息
 function takePostRequest (type) {
   let { log, random } = $.signList?.shift() || { log: "", random: "" }
@@ -916,6 +1077,35 @@ function takePostRequest (type) {
     case 'browseProducts':
       body = `functionId=tigernian_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"ZNShPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`tigernian_collectScore`, body);
+      break;
+    case 'jm_promotion_queryPromotionInfoByShopId':
+      body = `functionId=jm_promotion_queryPromotionInfoByShopId&body={"shopId":"${$.shopId}","channel":20}&client=wh5&clientVersion=1.0.0`;
+      myRequest = getPostRequest(`jm_promotion_queryPromotionInfoByShopId`, body);
+      break;
+    case 'jm_marketing_maininfo':
+      body = `functionId=jm_marketing_maininfo&body={"shopId":"${$.shopId}","venderId":"${$.venderId}","projectId":${$.projectId}}&appid=shop_view&client=wh5&clientVersion=1.0.0`;
+      otherUrl = `https://api.m.jd.com/client.action`
+      myRequest = getPostRequest(`jm_marketing_maininfo`, body, otherUrl);
+      break;
+    case 'jm_hidden_tryDoTask':
+      body = `functionId=jm_hidden_tryDoTask&body={"shopId":"${$.shopId}","venderId":"${$.venderId}","projectId":${$.projectId}}&appid=shop_view&client=wh5&clientVersion=1.0.0`;
+      otherUrl = `https://api.m.jd.com/client.action`
+      myRequest = getPostRequest(`jm_hidden_tryDoTask`, body, otherUrl);
+      break;
+    case 'doOneDiceTask8_1':
+      body = `functionId=jm_task_process&body={"shopId":"${$.shopId}","venderId":"${$.venderId}","projectId":${$.projectId},"taskId":${$.taskId},"token":"${$.taskToken}","opType":1}&appid=shop_view&client=wh5&clientVersion=1.0.0`;
+      otherUrl = `https://api.m.jd.com/client.action`
+      myRequest = getPostRequest(`jm_task_process`, body, otherUrl);
+      break;
+    case 'doOneDiceTask8_2':
+      body = `functionId=jm_task_process&body={"shopId":"${$.shopId}","venderId":"${$.venderId}","projectId":${$.projectId},"taskId":${$.taskId},"token":"${$.taskToken}","opType":2}&appid=shop_view&client=wh5&clientVersion=1.0.0`;
+      otherUrl = `https://api.m.jd.com/client.action`
+      myRequest = getPostRequest(`jm_task_process`, body, otherUrl);
+      break;
+    case 'doPlayDice':
+      body = `functionId=jm_task_process&body={"shopId":"${$.shopId}","venderId":"${$.venderId}","projectId":${$.projectId},"taskId":${$.taskDiceId},"token":"${$.taskDiceToken}","opType":2,"functionIdFixed":"jm_task_process_play"}&appid=shop_view&client=wh5&clientVersion=1.0.0`;
+      otherUrl = `https://api.m.jd.com/client.action`
+      myRequest = getPostRequest(`jm_task_process`, body, otherUrl);
       break;
     default:
       $.error = `takePostRequest 错误${type}`
@@ -1083,11 +1273,6 @@ function dealReturn (type, data) {
         $.message = `你的组队码为：\n${data.data?.result?.groupInfo?.groupJoinInviteId}`
       }
       break;
-    case 'zoo_pk_getTaskDetail':
-      if (data.code === 0) {
-        $.pkTaskList = data.data.result.taskVos;
-      }
-      break;
     case 'tigernian_getFeedDetail':
       if (data.code === 0) {
         if (data.data?.result?.addProductVos && data.data?.result.addProductVos.length) {
@@ -1096,8 +1281,6 @@ function dealReturn (type, data) {
           $.feedDetailInfo = data.data?.result?.taskVos[0]
         }
       }
-      break;
-    case 'zoo_pk_collectScore':
       break;
     case 'tigernian_pk_collectPkExpandScore':
       break;
@@ -1136,6 +1319,7 @@ function dealReturn (type, data) {
       // 将助力池的助力码添加进助力列表
       $.inviteList = $.inviteList.concat(list)
       $.message = `已从云端助力池获取到5条助力码追加到助力列表。助力列表预览：${JSON.stringify($.inviteList)}`
+      $.modules = 0 // 取消模块
       // // 选出有 助力码 的元素
       // const filterData1 = _.filter(data.items, v => v.text.match(/^[\w-]{10,20}$/g))
       // // 过滤重复的 user id
@@ -1246,7 +1430,70 @@ function dealReturn (type, data) {
       } else {
         $.message = `加购|浏览失败`
       }
-      break
+      break;
+    case 'jm_promotion_queryPromotionInfoByShopId':
+      if (data.success && data.data?.innerLink) {
+        try {
+          $.projectId = data.data.innerLink.match(/"projectId":(\d+)/)[1];
+          $.venderId = data.data.innerLink.match(/"venderId":(\d+)/)[1];
+          $.message = `获取丢骰子店铺项目ID成功`
+        } catch (e) {
+          // 失败则不继续执行
+          $.taskStep = -1
+          $.message = `获取丢骰子店铺项目ID失败`
+        }
+      } else {
+        // 失败则不继续执行
+        $.taskStep = -1
+        $.message = `获取丢骰子店铺项目ID失败`
+      }
+      break;
+    case 'jm_marketing_maininfo':
+      if (data.success && data.data?.project) {
+        $.taskList = data.data?.project?.viewTaskVOS
+        $.taskDiceId = $.taskList[0].id // 丢骰子 id
+        $.taskDiceToken = $.taskList[0].token // 丢骰子 token
+        $.taskList.shift() // 去掉第一个任务
+      } else {
+        // 失败则不继续执行
+        $.taskStep = -1
+        $.message = `获取丢骰子店铺任务列表失败`
+      }
+      break;
+    case 'jm_hidden_tryDoTask':
+      if (data.code == 300 || data.code == 200) {
+        $.message = `完成店铺每日抽奖：${data.msg || data.data?.name + '(收集奖)'}`
+      } else {
+        $.message = `抽奖失败：原因${JSON.stringify(data)}`
+      }
+      break;
+    case 'doOneDiceTask8':
+      if (data.success && data.data) {
+        if ($.data.data?.awardVO?.type == 4) {
+          $.message = `完成任务：获得${$.data.data?.awardVO?.discount}次丢骰子机会`
+        } else {
+          $.message = `任务失败：原因${JSON.stringify(data)}`
+        }
+      } else if (data.success && data.code == 200) {
+      } else {
+        $.message = `任务失败：原因${JSON.stringify(data)}`
+      }
+      break;
+    case 'doPlayDice':
+      if (data.success && data.data) {
+        if ($.data.data?.awardVO?.type == 5) {
+          $.message = `丢骰子：获得${$.data.data?.awardVO?.discount}爆竹🧨`
+        } else {
+          $.message = `丢骰子：获得${$.data.data?.awardVO?.type == 3 ? '优惠券' : '5京豆'} `
+        }
+      } else if (data.success && data.code == 804) {
+        $.message = `丢骰子：机会用完了~`
+        $.call.pop() // 跳出丢骰子
+      } else {
+        $.message = `丢骰子：错误${JSON.stringify(data)}`
+        $.call.pop() // 跳出丢骰子
+      }
+      break;
     default:
       $.error = '什么情况，有未知异常‼️' + type
   }
