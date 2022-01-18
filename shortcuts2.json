@@ -687,16 +687,16 @@
     }
   },
   "JD_nian": {
-    "version": "2.6",
-    "update_log": "- 新增 云端助力池，互助模块\n- 修复 多账号运行的一些神奇 bug\n- 修复 通过 AutoBox 无法正常运行的 bug\n- 修复 Alook 获取到的 Cookie 无法识别的 bug",
+    "version": "2.7",
+    "update_log": "- 重构 指令云端架构，逻辑执行器更精简快速，减少网络压力\n- 重构 指令架构，弃用部分无意义功能\n- 新增 逻辑执行器模块动态引入功能\n- 新增 炸年兽丢骰子任务，更多功能持续推送中",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_nian#版本日志"
     },
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/7120f3669afb42f1a5f7693ebe9d3bcf",
-    "notice": "火爆的可以先手动做，晚点会更新推送火爆也能做的任务。\n已开放云端助力池，如果不想助力可以去指令设置关闭助力功能\n东东农场指令很稳，推荐使用~",
+    "update": "https://www.icloud.com/shortcuts/6046f8f3204b4d0a9dd9130de3616822",
+    "notice": "新增炸年兽丢骰子任务，火爆的也能做，持续优化中...\n另还有东东农场指令、多合一签到，可去往活动大厅和更多查看~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-炸年兽&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd2.jpeg",
@@ -705,12 +705,12 @@
     "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_nian/",
     "tip": {
       "log": "你的助力码在这",
-      "hot": "🧧 年货节专属红包",
+      "hot": "🧧 京东年货红包(新)",
       "faq": "有疑问的请查看",
-      "set": "使用前先授权",
+      "set": "使用前确保已授权",
       "help": "提交你的助力码",
       "other": "若一直无法运行请修复指令",
-      "more": "🧧 1.8日抢现金红包"
+      "more": ""
     }
   },
   "More": {
