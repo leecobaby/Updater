@@ -835,7 +835,7 @@ function doDiceTaskController () {
       doPlayDice()
       break;
     default:
-      $.to = '', $.call.pop(), $.taskStep = 1
+      $.call.pop(), $.taskStep = 1
       document.write(JSON.stringify($))
       break;
   }
@@ -890,6 +890,7 @@ function doOneDiceTask () {
   // 利用队列取代循环
   $.oneTask = $.taskList.shift()
   $.taskId = $.oneTask?.id;
+  $.taskToken = $.oneTask?.token
   if (!$.oneTask) {
     // 循环完成重新设置 call
     $.call.pop()
@@ -1099,7 +1100,7 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`jm_task_process`, body, otherUrl);
       break;
     case 'doPlayDice':
-      body = `functionId=jm_task_process&body={"shopId":"${$.shopId}","venderId":"${$.venderId}","projectId":${$.projectId},"taskId":${$.taskId},"token":"${$.taskToken}","opType":2,"functionIdFixed":"jm_task_process_play"}&appid=shop_view&client=wh5&clientVersion=1.0.0`;
+      body = `functionId=jm_task_process&body={"shopId":"${$.shopId}","venderId":"${$.venderId}","projectId":${$.projectId},"taskId":${$.taskDiceId},"token":"${$.taskDiceToken}","opType":2,"functionIdFixed":"jm_task_process_play"}&appid=shop_view&client=wh5&clientVersion=1.0.0`;
       otherUrl = `https://api.m.jd.com/client.action`
       myRequest = getPostRequest(`jm_task_process`, body, otherUrl);
       break;
@@ -1432,7 +1433,7 @@ function dealReturn (type, data) {
         try {
           $.projectId = data.data.innerLink.match(/"projectId":(\d+)/)[1];
           $.venderId = data.data.innerLink.match(/"venderId":(\d+)/)[1];
-          $.message = `获取丢骰子店铺项目ID失败`
+          $.message = `获取丢骰子店铺项目ID成功`
         } catch (e) {
           // 失败则不继续执行
           $.taskStep = -1
@@ -1447,6 +1448,7 @@ function dealReturn (type, data) {
     case 'jm_marketing_maininfo':
       if (data.success && data.data?.project) {
         $.taskList = data.data?.project?.viewTaskVOS
+        $.taskDiceId = $.taskList[0].id // 丢骰子 id
         $.taskDiceToken = $.taskList[0].token // 丢骰子 token
         $.taskList.shift() // 去掉第一个任务
       } else {
@@ -1456,8 +1458,8 @@ function dealReturn (type, data) {
       }
       break;
     case 'jm_hidden_tryDoTask':
-      if (data.success && data.code == 300) {
-        $.message = `完成店铺每日抽奖：${data.msg}`
+      if (data.code == 300 || data.code == 200) {
+        $.message = `完成店铺每日抽奖：${data.msg || data.data?.name + '(收集奖)'}`
       } else {
         $.message = `抽奖失败：原因${JSON.stringify(data)}`
       }
