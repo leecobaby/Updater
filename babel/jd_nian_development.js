@@ -914,6 +914,7 @@ function doOneDiceTask8 () {
 
   // next
   dealReturn('doOneDiceTask8', $.data)
+  $.wait = 5
   takePostRequest('doOneDiceTask8_2');
   return
   // ⚠️ 这里能用 return，是因为在新架构中，next 是在一个函数中
@@ -921,6 +922,7 @@ function doOneDiceTask8 () {
   // next next
   $.callback = ''
   $.call.pop()
+  $.wait = undefined
   dealReturn('doOneDiceTask8', $.data)
   document.write(JSON.stringify($))
 }

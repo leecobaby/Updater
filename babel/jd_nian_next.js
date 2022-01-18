@@ -163,6 +163,7 @@ function Next (func) {
     case 'doOneDiceTask8_next':
       // next
       dealReturn('doOneDiceTask8', $.data)
+      $.wait = 5
       takePostRequest('doOneDiceTask8_2');
       return
       // ⚠️ 这里能用 return，是因为在新架构中，next 是在一个函数中
@@ -170,6 +171,7 @@ function Next (func) {
       // next next
       $.callback = ''
       $.call.pop()
+      $.wait = undefined
       dealReturn('doOneDiceTask8', $.data)
       document.write(JSON.stringify($))
       break;
@@ -177,6 +179,7 @@ function Next (func) {
       // next next
       $.callback = ''
       $.call.pop()
+      $.wait = undefined
       dealReturn('doOneDiceTask8', $.data)
       document.write(JSON.stringify($))
       break;
