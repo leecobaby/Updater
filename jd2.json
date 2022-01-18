@@ -414,7 +414,7 @@
     ]
   },
   "JD_nian": {
-    "version": "上次数据更新于:1.18.1",
+    "version": "上次数据更新于:1.18.2",
     "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/YwhAs1z%22%7D",
     "endJump": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://wbbny.m.jd.com/babelDiy/Zeus/41AJZXRUJeTqdBK9bPoPgUJiodcU/index.html%22%7D",
     "help": {
@@ -483,47 +483,19 @@
         "tigernian_pk_collectPkExpandScore"
       ],
       "taskList": [
-        { "提示:火爆请选择火爆也能做": "update" },
+        { "提示:丢骰子任务完善中": "update" },
+        { "做丢骰子任务 - 火爆也能做": "doDiceTask" },
+        { "↓↓↓如想做以下任务请取消本选项↓↓↓": "cloudTip" },
+        { "获取云端助力码": "getHelpCode" },
         { "做助力任务": "help" },
         { "做组队任务": "pkHelp" },
         { "收爆竹": "tigernian_collectAutoScore" },
         { "每日签到": "tigernian_sign" },
         { "做主任务": "doTaskController" },
         { "领取累计奖励": "tigernian_getBadgeAward" },
-        { "打卡升级": "tigernian_raise" },
-        { "其他": "cloudTip" },
-        { "获取云端助力码": "getHelpCode" },
-        { "做丢骰子任务 - 火爆也能做": "doDiceTask" }
+        { "打卡升级": "tigernian_raise" }
       ]
-    },
-    "codeList": [
-      "tigernian_getHomeData_next",
-      "help_next",
-      "pkHelp_next",
-      "tigernian_getTaskDetail_next",
-      "tigernian_collectAutoScore_next",
-      "oneActivityInfo_next",
-      "oneActivityInfo_next_next",
-      "oneTaskHandle_next",
-      "tigernian_pk_collectPkExpandScore_next",
-      "tigernian_getFeedDetail_next",
-      "browseProducts_next",
-      "tigernian_sign_next",
-      "tigernian_sign_next_next",
-      "tigernian_raise_next",
-      "tigernian_getBadgeAward_next",
-      "jdjrTaskDetail_next",
-      "jdjrDoTask_next",
-      "jdjrDoTask_next_next",
-      "getHelpCode_next",
-      "tigernian_pk_getHomeData_next",
-      "getAppId_next",
-      "getShopHomeData_next",
-      "doOneShopTask_next",
-      "doShopLottery_next",
-      "getPartyHomeData_next",
-      "helpPartyCode_next"
-    ]
+    }
   },
   "share": {
     "🤖 抢购助手 - 可快速的将链接用app打开，避免小程序抢购的卡顿": "https://www.icloud.com/shortcuts/95e925b98bb14a759c743600fae67f8b",

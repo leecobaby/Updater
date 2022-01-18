@@ -836,6 +836,7 @@ function doDiceTaskController () {
       break;
     default:
       $.call.pop(), $.taskStep = 1
+      $.message = `已完成第${++$.self.count}家丢骰子任务~`
       document.write(JSON.stringify($))
       break;
   }
@@ -894,7 +895,6 @@ function doOneDiceTask () {
   if (!$.oneTask) {
     // 循环完成重新设置 call
     $.call.pop()
-    $.message = `已完成第${++$.self.count}家丢骰子任务~`
     document.write(JSON.stringify($))
     return
   }
@@ -909,6 +909,7 @@ function doOneDiceTask () {
 function doOneDiceTask8 () {
   $.call[$.call.length - 1] == 'doOneDiceTask8' || $.call.push('doOneDiceTask8')
   $.callback = 'Func.request'
+  $.message = `做任务：${$.oneTask.name}`
   takePostRequest('doOneDiceTask8_1');
   return
 
