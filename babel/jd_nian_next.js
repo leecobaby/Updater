@@ -139,13 +139,53 @@ function Next (func) {
       $.next = 0 // 衔接下一个函数前，重置 next 防止获取 next 失败
       doOneShopTask()
       break;
-    case '00000000':
+    case 'jm_promotion_queryPromotionInfoByShopId_next':
       // next
       $.callback = ''
-      dealReturn('getShopHomeData', $.data)
       $.call.pop()
-      $.next = 0 // 衔接下一个函数前，重置 next 防止获取 next 失败
-      doOneShopTask()
+      dealReturn('jm_promotion_queryPromotionInfoByShopId', $.data)
+      document.write(JSON.stringify($))
+      break;
+    case 'jm_marketing_maininfo_next':
+      // next
+      $.callback = ''
+      $.call.pop()
+      dealReturn('jm_marketing_maininfo', $.data)
+      document.write(JSON.stringify($))
+      break;
+    case 'jm_hidden_tryDoTask_next':
+      // next
+      $.callback = ''
+      $.call.pop()
+      dealReturn('jm_hidden_tryDoTask', $.data)
+      document.write(JSON.stringify($))
+      break;
+    case 'doOneDiceTask8_next':
+      // next
+      dealReturn('doOneDiceTask8', $.data)
+      takePostRequest('doOneDiceTask8_2');
+      return
+      // ⚠️ 这里能用 return，是因为在新架构中，next 是在一个函数中
+
+      // next next
+      $.callback = ''
+      $.call.pop()
+      dealReturn('doOneDiceTask8', $.data)
+      document.write(JSON.stringify($))
+      break;
+    case 'doOneDiceTask8_next_next':
+      // next next
+      $.callback = ''
+      $.call.pop()
+      dealReturn('doOneDiceTask8', $.data)
+      document.write(JSON.stringify($))
+      break;
+    case 'demo':
+      // next next
+      $.callback = ''
+      $.call.pop()
+      dealReturn('doOneDiceTask8', $.data)
+      document.write(JSON.stringify($))
       break;
     default:
       // next
