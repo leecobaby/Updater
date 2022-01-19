@@ -10,58 +10,22 @@ let task = taskBaseData()
 const firstTask = [
   {
     "tmall": {
-      "title": "年货节集福气 - 云端推送",
-      "type": "other",
-      "urlScheme": `HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=2672&sourceType=other&hd_from_id=100145&deliveryId=`,
-      "textEnd": "str1&implId=str2",
-      "item": [
-        "23761 cloudsail_1_221589504930001_23761_0",
-        "23761 cloudsail_1_221589504930001_23761_1",
-        "23761 cloudsail_1_221589504930001_23761_2",
-        "23761 cloudsail_1_221589504930001_23761_3",
-        "23276 cloudsail_11_222573502180001_23276_0"
-      ]
-    }
-  },
-  {
-    "tmall": {
       "title": "淘宝集肥料",
       "type": "other",
       "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=971&sourceType=other&hd_from_id=100085&deliveryId=",
       "textEnd": "str1&implId=str2",
       "item": [
-        "8349 other_375_0_8349_0",
-        "22356 other_377_652011_22356_0",
-        "21634 other_279_1_21634_0",
-        "21634 other_279_1_21634_1",
         "7936 cloudsail_390_125400501040001_7936_0",
-        "12359 other_360_642008_12359_0",
         "18823 cloudsail_373_201921503940001_18823_0",
         "18822 cloudsail_373_125400501040001_18822_0",
-        "12080 other_360_633010_12080_0",
-        "17065 other_76_1_17065_0",
-        "18744 other_0_163002_18744_0",
         "7932 linked_274_0_7932_0",
         "12080 expo_261_122021_12080_0",
-        "8479 other_261_68006_8479_0",
-        "8351 other_259_0_8351_0",
-        "16847 other_47_424002_16847_0",
-        "11984 other_163_79046_11984_0",
-        "11984 other_163_79046_11984_1",
-        "12768 other_9_173001_12768_0",
         "12585 expo_283_123083_12585_0",
-        "18501 other_270_62010_18501_0",
-        "16868 other_270_440001_16868_0",
         "12322 expo_283_326009_12322_0",
         "12322 expo_283_326009_12322_1",
         "12322 expo_283_326009_12322_2",
-        "15891 other_270_398011_15891_0",
         "18125 cloudsail_283_142772500400001_18125_35",
-        "8273 other_270_62009_8273_0",
-        "8273 other_270_62009_8273_1",
         "11705 cloudsail_284_147490003950001_11705_0",
-        "16847 other_58_424002_16847_0",
-        "17304 other_40_476003_17304_0",
         "18822 cloudsail_333_3168730831_18822_0",
         "17734 cloudsail_73_177558002010001_17734_35"
       ]
@@ -231,14 +195,9 @@ function taskBaseData () {
       ]
     },
     "FarmSingle": {
-      "version": "数据最后更新于:1.7.1",
+      "version": "数据最后更新于:1.19.1",
       "pv": {
         "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fQfRBJO",
-        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fQfRBJO",
-        "taobaolite": "taobaolite://m.tb.cn/h.fQfRBJO"
-      },
-      "gd": {
-        "taobao": "taobao://m.tb.cn/h.fQfRBJO",
         "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fQfRBJO",
         "taobaolite": "taobaolite://m.tb.cn/h.fQfRBJO"
       },
@@ -275,9 +234,9 @@ function taskBaseData () {
       "task": [
         {
           "main": {
-            "title": "年货节集福气 - 部分任务可能需要令牌模式",
+            "title": "淘宝集肥料",
             "type": "other",
-            "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&spm=a217e.xzrwy.1.1&sceneId=2672&sourceType=other&hd_from_id=100145&",
+            "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&spm=a217e.xzrwy.1.1&sceneId=971&sourceType=other&hd_from_id=100085&",
             "textEnd": "str1&implId=str2"
           }
         }
