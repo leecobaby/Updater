@@ -1489,6 +1489,9 @@ function dealReturn (type, data) {
       } else if (data.success && data.code == 804) {
         $.message = `丢骰子：机会用完了~`
         $.call.pop() // 跳出丢骰子
+      } else if (data.success && data.code == 814) {
+        $.message = `丢骰子：当天参与总次数已经达到上线，将结束此任务~`
+        $.to = `` // 结束丢骰子任务
       } else {
         $.message = `丢骰子：错误${JSON.stringify(data)}`
         $.call.pop() // 跳出丢骰子
