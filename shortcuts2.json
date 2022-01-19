@@ -687,16 +687,16 @@
     }
   },
   "JD_nian": {
-    "version": "2.7",
-    "update_log": "- 重构 指令云端架构，逻辑执行器更精简快速，减少网络压力\n- 重构 指令架构，弃用部分无意义功能\n- 新增 逻辑执行器模块动态引入功能\n- 新增 炸年兽丢骰子任务，更多功能持续推送中",
+    "version": "2.8",
+    "update_log": "- 修复 长时间运行指令会导致堆栈溢出，指令崩溃的致命问题\n- 修复 多账号运行时，日志重复显示的错误\n- 优化 指令数据操作算法，在长时间运行时加快1000%的执行效率\n- 优化 通知显示模式，默认每隔一段时间简略通知，进一步加快执行效率",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_nian#版本日志"
     },
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/6046f8f3204b4d0a9dd9130de3616822",
-    "notice": "新增炸年兽丢骰子任务，火爆的也能做，持续优化中...\n另还有东东农场指令、多合一签到，可去往活动大厅和更多查看~",
+    "update": "https://www.icloud.com/shortcuts/8a96dba152d64ef1ad222b477e1969a7",
+    "notice": "指令已经进一步优化执行效率，请去往指令设置-通知模式-选简略模式\n另还有东东农场指令、多合一签到，可去往活动大厅和更多查看~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-炸年兽&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd2.jpeg",
@@ -707,7 +707,7 @@
       "log": "你的助力码在这",
       "hot": "🧧 京东年货红包(新)",
       "faq": "有疑问的请查看",
-      "set": "使用前确保已授权",
+      "set": "⚠️ 请先选择通知模式",
       "help": "提交你的助力码",
       "other": "若一直无法运行请修复指令",
       "more": ""
