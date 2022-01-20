@@ -1670,7 +1670,7 @@
     ]
   },
   "ele_dou": {
-    "version": "数据最后更新于:1.8.1",
+    "version": "数据最后更新于:1.20.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f57BIpL%3Fsm%3D4560b2",
       "alipay": "alipays://platformapi/startapp?appId=2021001110676437&page=pages/my/index",
@@ -1717,34 +1717,25 @@
           "item": [
             "3110002 PAGEVIEW",
             "4018001 PAGEVIEW",
-            "250003 PAGEVIEW",
-            "3352001 PAGEVIEW",
             "3092002 PAGEVIEW",
             "3340001 PAGEVIEW",
             "342001 PAGEVIEW",
-            "3354001 PAGEVIEW",
             "2020001 PAGEVIEW",
             "1034001 PAGEVIEW",
-            "1306001 PAGEVIEW",
             "476001 PAGEVIEW",
             "2484001 PAGEVIEW",
             "228003 PAGEVIEW",
             "236002 PAGEVIEW",
-            "1036001 PAGEVIEW",
-            "2774001 PAGEVIEW",
+            "3030001 SIMPLESIGNIN",
+            "4242001 SIMPLESIGNIN",
             "3500001 SIMPLESIGNIN",
             "3260001 SIMPLESIGNIN",
-            "3030001 SIMPLESIGNIN",
             "3266001 SIMPLESIGNIN",
-            "3046001 SIMPLESIGNIN",
             "1130001 SIMPLESIGNIN",
             "3226001 SIMPLESIGNIN",
             "234001 SIMPLESIGNIN",
             "1150001 SIMPLESIGNIN",
-            "2442001 SIMPLESIGNIN",
-            "1056001 SIMPLESIGNIN",
-            "1390001 SIMPLESIGNIN",
-            "2768001 SIMPLESIGNIN"
+            "1390001 SIMPLESIGNIN"
           ]
         }
       }
