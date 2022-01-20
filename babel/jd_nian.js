@@ -799,7 +799,7 @@ function doDiceTask () {
   $.oneShop = $.diceShopList.shift()
   $.shopId = $.oneShop
   // 为了让指令不出现崩溃，拆分店铺任务 10 个一组
-  if (!$.oneShop || $.self.count2++ == 100) {
+  if (!$.oneShop || $.self.count2++ == 10) {
     // 循环完成重新设置 to,call
     $.to = '', $.call.pop(), $.self.count2 = 1
     $.message = `已完成所有丢骰子任务~`
