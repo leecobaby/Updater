@@ -484,8 +484,6 @@
       ],
       "taskList": [
         { "提示:丢骰子任务完善中": "update" },
-        { "做丢骰子任务 - 火爆也能做": "doDiceTask" },
-        { "↓↓↓如想做以下任务请取消本选项↓↓↓": "cloudTip" },
         { "获取云端助力码": "getHelpCode" },
         { "做助力任务": "help" },
         { "做组队任务": "pkHelp" },
@@ -493,7 +491,9 @@
         { "每日签到": "tigernian_sign" },
         { "做主任务": "doTaskController" },
         { "领取累计奖励": "tigernian_getBadgeAward" },
-        { "打卡升级": "tigernian_raise" }
+        { "打卡升级": "tigernian_raise" },
+        { "↓↓↓如想做以下任务请取消本选项↓↓↓": "cloudTip" },
+        { "做丢骰子任务 - 火爆也能做": "doDiceTask" }
       ]
     }
   },
