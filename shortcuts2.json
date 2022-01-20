@@ -687,7 +687,7 @@
     }
   },
   "JD_nian": {
-    "version": "2.8",
+    "version": "2.9",
     "update_log": "- 修复 长时间运行指令会导致堆栈溢出，指令崩溃的致命问题\n- 修复 多账号运行时，日志重复显示的错误\n- 优化 指令数据操作算法，在长时间运行时加快1000%的执行效率\n- 优化 通知显示模式，默认每隔一段时间简略通知，进一步加快执行效率",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
@@ -695,8 +695,8 @@
     },
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/40bd7785f3d048908c9cee5f50fa284c",
-    "notice": "指令已经进一步优化执行效率，请去往指令设置-通知模式-选简略模式\n另还有东东农场指令、多合一签到，可去往活动大厅和更多查看~",
+    "update": "https://www.icloud.com/shortcuts/5693f04f6d274e7bb37a1f32537237f9",
+    "notice": "👹 炸年兽指令复活，快点升级吧！\n指令已经进一步优化执行效率，请去往指令设置-通知模式-选模式\n15.2+系统千万不要打开快捷指令app",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-炸年兽&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd2.jpeg",
