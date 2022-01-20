@@ -78,7 +78,7 @@ function init () {
   }
 
   // 自变量
-  $.self = {}, $.self.count = 0, $.self.count2 = 0
+  $.self = {}, $.self.count = 0, $.self.count2 = 1
   // 任务流程初始化
   $.taskStep = 1
   // 大牌店铺列表初始化
