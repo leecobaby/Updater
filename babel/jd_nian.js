@@ -78,7 +78,7 @@ function init () {
   }
 
   // 自变量
-  $.self = {}, $.self.count = 0
+  $.self = {}, $.self.count = 0, $.self.count2 = 0
   // 任务流程初始化
   $.taskStep = 1
   // 大牌店铺列表初始化
@@ -798,9 +798,10 @@ function doDiceTask () {
   // 利用队列取代循环
   $.oneShop = $.diceShopList.shift()
   $.shopId = $.oneShop
-  if (!$.oneShop) {
+  // 为了让指令不出现崩溃，拆分店铺任务 10 个一组
+  if (!$.oneShop || $.self.count2++ == 10) {
     // 循环完成重新设置 to,call
-    $.to = '', $.call.pop()
+    $.to = '', $.call.pop(), $.self.count2 = 1
     $.message = `已完成所有丢骰子任务~`
     document.write(JSON.stringify($))
     return
