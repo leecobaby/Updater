@@ -763,13 +763,17 @@ function dealReturn (type, data) {
       break
     case 'doInteractiveAssignment':
       if (data.subCode === '0') {
-        $.message = `当前兑换${JSON.stringify(data.rewardsInfo?.successRewards)}`;
+        $.message = `京东年货-抽签: 成功, 明细: 
+        ${data.rewardsInfo?.successRewards['10'] && data.rewardsInfo?.successRewards['10'][0].rewardName + '--优惠券--' + data.rewardsInfo?.successRewards['10'][0].usageThreshold + '-' + data.rewardsInfo?.successRewards['10'][0].quota ||
+          data.rewardsInfo?.successRewards['12'] && data.rewardsInfo?.successRewards['12'][0].rewardName + '--支付券--' + data.rewardsInfo?.successRewards['12'][0].usageThreshold + '-' + data.rewardsInfo?.successRewards['12'][0].quota ||
+          data.rewardsInfo?.successRewards['11'] && data.rewardsInfo?.successRewards['11'][0].rewardName + '--红包--' + data.rewardsInfo?.successRewards['11'][0].usageThreshold + '-' + data.rewardsInfo?.successRewards['11'][0].quota ||
+          JSON.stringify(data.rewardsInfo?.successRewards)} `;
       } else {
-        $.message = data.msg
+        $.message = '京东年货-抽签: 失败, 明细: ' + data.msg
       }
       break
     default:
-      console.log(`未判断的异常${type}`);
+      console.log(`未判断的异常${type} `);
   }
 }
 /**
