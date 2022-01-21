@@ -248,6 +248,7 @@ function browseAdTaskForFarm () {
   $.callback = ''
   dealReturn('browseAdTaskForFarm', $.data)
   if ($.browseResult.code === '0') {
+    $.data = {}, $.browseResult = {} // 防止此处有换行符出错
     $.wait = 6
     $.next = 1 // 覆盖前面的 0
     $.taskType = 1 // 领奖励
