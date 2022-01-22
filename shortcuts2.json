@@ -713,6 +713,27 @@
       "more": ""
     }
   },
+  "Alipay_wufu": {
+    "version": "1.1",
+    "update_log": "- 更新 支持双 12 活动任务\n- 更新 优化小屏手机显示效果\n- 更新 多语言环境适配\n- 更新 优化 ios15.1 启动速度，加快 500%\n-修复 等待时长问题",
+    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Alipay_wufu",
+    "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/d0cd07b973844c8b97a5a9292b08f9fe",
+    "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
+    "notice": "如果遇到等待时长问题，请去往其他选项点击指令修复~\n已支持双12活动任务，更多活动信息关注活动大厅~",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tb_zcj.png",
+    "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/alipay.json",
+    "tip": {
+      "hongbao": "",
+      "hot": "🔥 双12活动中...",
+      "faq": "有疑问的请查看",
+      "set": "点击查看自动化操作",
+      "help": "",
+      "other": "",
+      "more": "🧧 1.8日抢现金红包"
+    }
+  },
   "More": {
     "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
     "加入QQ情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
