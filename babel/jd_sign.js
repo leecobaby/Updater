@@ -286,14 +286,13 @@ function doNHSign () {
       break;
     case 3:
       // 做抽签任务
-      let dateReg = new RegExp(String(new Date().getDate()), 'g')
+      let dateReg = new RegExp(String(new Date().getDate()))
       for (let v of $.self.data) {
         if (v.assignmentName.match(dateReg)) {
           doInteractiveAssignment($.encryptProjectId, v.encryptAssignmentId, "aceaceglqd20211215", 0);
-        } else if (v.assignmentName == '签到') {
-          doInteractiveAssignment($.encryptProjectId, v.encryptAssignmentId, "aceaceglqd20211215");
         }
       }
+      !document.body.innerText && doInteractiveAssignment($.encryptProjectId, v.encryptAssignmentId, "aceaceglqd20211215");
       break;
     default:
       $.to = ''; $.call.pop(); $.taskStep = 1; $.self.data = undefined
@@ -339,7 +338,7 @@ function doInteractiveAssignment (encryptProjectId, AssignmentId, sourceCode, ty
 
   $.sourceCode = sourceCode
   $.AssignmentId = AssignmentId
-  $.daskType = type
+  $.taskType = type
   $.callback = 'Func.request'
   takeRequest('doInteractiveAssignment');
   return
