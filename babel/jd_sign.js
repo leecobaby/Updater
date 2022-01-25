@@ -291,7 +291,7 @@ function doNHSign () {
         if (v.assignmentName.match(dateReg)) {
           doInteractiveAssignment($.encryptProjectId, v.encryptAssignmentId, "aceaceglqd20211215", 0);
         } else if (v.assignmentName == '签到') {
-          $.self.item = v.assignmentName
+          $.self.item = v
         }
       }
       !document.body.innerText && doInteractiveAssignment($.encryptProjectId, $.self.item.encryptAssignmentId, "aceaceglqd20211215");
