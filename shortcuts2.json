@@ -346,6 +346,30 @@
       "more": "🧧 1.8日抢现金红包"
     }
   },
+  "TaoPoker": {
+    "version": "1.0",
+    "update_log": "- 采用 淘宝任务框架，支持自动化和 AutoBox\n- 支持 自动助力，简易化助力池\n- 支持 年货节活动任务",
+    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Taogg",
+    "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/d0cd07b973844c8b97a5a9292b08f9fe",
+    "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
+    "notice": "支持几个日常任务，需要就用吧，后期版本会尽力尝试支持其他任务~",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
+    "automation_url": "shortcuts://run-shortcut?name=淘宝斗地主自动任务&input=text&text=task",
+    "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tb_poker.png",
+    "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
+    "tip": {
+      "hongbao": "",
+      "hot": "",
+      "faq": "有疑问的请查看",
+      "set": "点击查看自动化操作",
+      "help": "",
+      "other": "",
+      "more": "🔥 QQ频道已建立"
+    }
+  },
   "1111zcj": {
     "version": "1.4",
     "update_log": "- 更新 支持双 12 活动任务\n- 更新 优化小屏手机显示效果\n- 更新 多语言环境适配\n- 更新 优化 ios15.1 启动速度，加快 500%\n-修复 等待时长问题",
@@ -757,10 +781,10 @@
     "mode": "more1",
     "tip": "新一期现金红包已发放",
     "more0": {
-      "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ"
+      "👾 加入QQ频道": "https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&inviteCode=17PQr8&from=181074&biz=ka&shareSource=5"
     },
     "more1": {
-      "👥 加入讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
+      "👾 加入QQ频道": "https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&inviteCode=17PQr8&from=181074&biz=ka&shareSource=5",
       "👥 加入TG讨论群": "https://t.me/xuehaushe_chat",
       "👥 加入QQ情报群": "https://jq.qq.com/?_wv=1027&k=tx5Mzgh2",
       "📱 其他捷径作品": "https://github.com/leecobaby/shortcuts",
@@ -779,7 +803,7 @@
       "🧧 现金红包 - 1.15开抢": "taobao://m.tb.cn/h.fkLMFm2"
     },
     "more2": {
-      "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
+      "👾 加入QQ频道": "https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&inviteCode=17PQr8&from=181074&biz=ka&shareSource=5",
       "加入QQ京东情报群": "https://jq.qq.com/?_wv=1027&k=tx5Mzgh2",
       "加入QQ淘宝情报群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=622340333&card_type=group&source=qrcode&jump_from=&auth=&authSig=RPqW9VSePIx4jWxGhYLvMvfdLkFPydHzo50qyVwmb9zhPjv7lF3HnSRF5WuJfjaX&source_id=2_40001",
       "其他捷径作品": "https://shimo.im/docs/DHcYv8xjcYxvHvQg/",
