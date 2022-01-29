@@ -1545,6 +1545,52 @@
       }
     ]
   },
+  "TaoPoker": {
+    "version": "数据最后更新于:1.29.1",
+    "pv": {
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fQfRBJO",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fQfRBJO",
+      "taobaolite": "taobaolite://m.tb.cn/h.fQfRBJO"
+    },
+    "main": {
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fwww.tmall.com%2F",
+      "taobaolite": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F"
+    },
+    "home": {
+      "taobao": "taobao://pages.tmall.com/wow/z/hdwk/doudizhu/sX78ziQH2ar7ax6DKZF2-doudizhu",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fhdwk%2Fdoudizhu%2FsX78ziQH2ar7ax6DKZF2-doudizhu",
+      "taobaolite": "taobaolite://pages.tmall.com/wow/z/hdwk/doudizhu/sX78ziQH2ar7ax6DKZF2-doudizhu"
+    },
+    "end": {
+      "taobao": "taobao://pages.tmall.com/wow/z/hdwk/doudizhu/sX78ziQH2ar7ax6DKZF2-doudizhu",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fhdwk%2Fdoudizhu%2FsX78ziQH2ar7ax6DKZF2-doudizhu",
+      "taobaolite": "taobaolite://pages.tmall.com/wow/z/hdwk/doudizhu/sX78ziQH2ar7ax6DKZF2-doudizhu"
+    },
+    "app": {
+      "淘宝": "taobao",
+      "天猫": "tmall",
+      "淘宝特价版": "taobaolite"
+    },
+    "task": [
+      {
+        "stars": {
+          "title": "日常任务",
+          "type": "tmall",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=1396&sourceType=other&hd_from_id=100101&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "22501 other_0_1_22501_0",
+            "17662 other_176_0_17662_0",
+            "16588 other_207_1_16588_0",
+            "24388 other_3_340002_24388_0",
+            "24371 other_3_1_24371_0",
+            "24370 linked_3_0_24370_0"
+          ]
+        }
+      }
+    ]
+  },
   "ltao_duck": {
     "version": "数据最后更新于:3.29.1",
     "pv": {
