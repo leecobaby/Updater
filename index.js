@@ -6,6 +6,8 @@ const fs = require('fs');
 
 var tb = JSON.parse(fs.readFileSync('tb2.json'))
 var jd = JSON.parse(fs.readFileSync('jd2.json'))
+var shortcuts = JSON.parse(fs.readFileSync('shortcuts2.json'))
 
 fs.writeFileSync('tb.json', JSON.stringify(tb).replace(/\//g, '\\/'))
 fs.writeFileSync('jd.json', JSON.stringify(jd).replace(/\//g, '\\/'))
+fs.writeFileSync('shortcuts.json', JSON.stringify(shortcuts).replace(/\//g, '\\/'))
