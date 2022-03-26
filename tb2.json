@@ -1262,7 +1262,7 @@
     ]
   },
   "FarmSingle": {
-    "version": "数据最后更新于:3.26.1",
+    "version": "数据最后更新于:3.27.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fQfRBJO",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fQfRBJO",
@@ -1306,52 +1306,17 @@
           "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=971&sourceType=other&hd_from_id=100085&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
+            "8275 other_468_0_8275_0",
+            "24478 other_125_1_24478_0",
+            "25517 cloudsail_450_-1092953834_25517_0",
             "12023 other_467_646007_12023_0",
             "11640 other_480_307006_11640_0",
             "12913 other_15_198007_12913_0",
             "8350 other_400_0_8350_0",
-            "8351 other_465_0_8351_0",
             "10946 other_402_703018_10946_0",
-            "8349 other_375_0_8349_0",
-            "22356 other_377_652011_22356_0",
-            "21634 other_279_1_21634_0",
-            "21634 other_279_1_21634_1",
-            "7936 cloudsail_390_125400501040001_7936_0",
-            "18823 cloudsail_373_201921503940001_18823_0",
-            "18822 cloudsail_373_125400501040001_18822_0",
             "12080 other_360_633010_12080_0",
             "17065 other_76_1_17065_0",
-            "7932 linked_274_0_7932_0",
-            "8351 other_259_0_8351_0",
-            "16847 other_47_424002_16847_0",
-            "12768 other_9_173001_12768_0",
-            "12585 expo_283_123083_12585_0",
-            "16868 other_270_440001_16868_0",
-            "12322 expo_283_326009_12322_0",
-            "12322 expo_283_326009_12322_1",
-            "12322 expo_283_326009_12322_2",
-            "15891 other_270_398011_15891_0",
-            "18125 cloudsail_283_142772500400001_18125_35",
-            "8273 other_270_62009_8273_0",
-            "8273 other_270_62009_8273_1",
-            "11705 cloudsail_284_147490003950001_11705_0",
-            "16847 other_58_424002_16847_0",
-            "17304 other_40_476003_17304_0",
-            "18822 cloudsail_333_3168730831_18822_0",
-            "17734 cloudsail_73_177558002010001_17734_35"
-          ]
-        }
-      },
-      {
-        "tmall": {
-          "title": "小黑盒新品空间",
-          "type": "other",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=1118&sourceType=other&hd_from_id=100085&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "8954 expo_333_75049_8954_0",
-            "8954 expo_333_75049_8954_1",
-            "8954 expo_333_75049_8954_2"
+            "7932 linked_274_0_7932_0"
           ]
         }
       },
@@ -1376,11 +1341,11 @@
       },
       {
         "tmall": {
-          "title": "直播间任务",
+          "title": "逛逛支付宝芭芭农场",
           "type": "other",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=406&sourceType=other&hd_from_id=100004&deliveryId=",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=2349&sourceType=other&hd_from_id=100004&deliveryId=",
           "textEnd": "str1&implId=str2",
-          "item": ["2482 other_365_0_2482_0"]
+          "item": ["20700 other_468_662005_20700_0"]
         }
       },
       {
@@ -1390,15 +1355,6 @@
           "urlScheme": "HTTPS://pages.tmall.com/wow/tmallfarm/act/b-browser?wh_biz=tm&spm=farm.newfarm.task.browser&disableNav=YES",
           "textEnd": "",
           "item": ["1 0"]
-        }
-      },
-      {
-        "test": {
-          "title": "测试",
-          "type": "test",
-          "urlScheme": "HTTPS://",
-          "textEnd": "str2",
-          "item": ["1 s.click.taobao.com/q57Figu?1"]
         }
       }
     ]
