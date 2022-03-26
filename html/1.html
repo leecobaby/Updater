@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="box"></div>
+  <script>
+    !function(a){function b(b,c,d){"use strict";function e(a){do{a=a.replace(/\n\n/g,"\n"+M+"\n")}while(a.indexOf("\n\n")>-1);return a}function f(a){B||(B=t.sizeToFill?v.font.split(/\b\d+px\b/i):t.font.split(/\b\d+px\b/i)),v.font=B[0]+a+"px"+B[1]}function g(){isNaN(t.lineHeight)?-1!==t.lineHeight.toString().indexOf("px")?L=parseInt(t.lineHeight):-1!==t.lineHeight.toString().indexOf("%")&&(L=parseInt(t.lineHeight)/100*G):L=G*t.lineHeight}function h(){if(t.sizeToFill){var a=c.trim().split(/\s+/).length,b=0,d=!1!==t.maxFontSizeToFill;do{if(d){if(!(++b<=t.maxFontSizeToFill))break;i(b)}else i(++b)}while(H<F&&I.join(" ").split(/\s+/).length==a);i(--b)}else j();t.justifyLines&&"auto"===t.lineBreak&&m(),q(),p(),o()}function i(a){f(a),L=a,j()}function j(){if(t.allowNewLine)for(var a=c.trim().split("\n"),b=0,d=0;b<a.length-1;b++)d+=a[b].trim().split(/\s+/).length,J.push(d);var e=c.trim().split(/\s+/);k(e),l(e),H=I.length*L}function k(a){var b,c,d,e;a.forEach(function(f,g){if(b="",(c=v.measureText(f).width)>E){for(var h=0;v.measureText(b+f[h]).width<=E&&h<f.length;h++)b+=f[h];d=f.slice(0,h),e=f.slice(h),a.splice(g,1,d,e)}})}function l(a){I=[];for(var b=0,c=0;b<a.length;c++)if(I[c]="","auto"===t.lineBreak){if(v.measureText(I[c]+a[b]).width>E)break;for(;v.measureText(I[c]+a[b]).width<=E&&b<a.length;)if(I[c]+=a[b]+" ",b++,t.allowNewLine)for(var d=0;d<J.length;d++)if(J[d]===b){c++,I[c]="";break}I[c]=I[c].trim()}else I[c]=a[b],b++}function m(){for(var a,b,c,d=0;d<I.length;d++)c=v.measureText(I[d]).width,(!a||c>a)&&(a=c,b=d);var e,f,g,h,i,j=" ";for(d=0;d<I.length;d++)if(d!==b&&!((e=I[d].trim().split(/\s+/).length)<=1)){I[d]=I[d].trim().split(/\s+/).join(j),f=v.measureText(j).width,g=(a-v.measureText(I[d]).width)/f,h=g/(e-1),i="";for(var k=0;k<h;k++)i+=j;I[d]=I[d].trim().split(j).join(i)}}function n(a,b,c){var d=v.measureText(a).width;switch(v.textAlign){case"center":b-=d/2;break;case"right":b-=d}v.beginPath(),v.moveTo(b,c),v.lineTo(b+d,c),v.stroke()}function o(){for(var a=M+" ",b=0;b<I.length;b++)K.y=parseInt(K.y)+L,I[b]!==a&&(v.fillText(I[b],K.x,K.y),t.strokeText&&v.strokeText(I[b],K.x,K.y),"underline"===t.textDecoration.toLocaleLowerCase()&&n(I[b],K.x,K.y))}function p(){v.textAlign=t.textAlign,"center"==t.textAlign?K.x=C/2:"right"==t.textAlign?K.x=C-t.paddingX:K.x=t.paddingX}function q(){"middle"==t.verticalAlign?K.y=(D-H)/2:"bottom"==t.verticalAlign?K.y=D-H-t.paddingY:K.y=t.paddingY}function r(){if("string"!=typeof c)throw new TypeError("The second parameter must be a String.");if(isNaN(G))throw new TypeError('Cannot parse "font".');if(isNaN(L))throw new TypeError('Cannot parse "lineHeight".');if("left"!==t.textAlign.toLocaleLowerCase()&&"center"!==t.textAlign.toLocaleLowerCase()&&"right"!==t.textAlign.toLocaleLowerCase())throw new TypeError('Property "textAlign" must be set to either "left", "center", or "right".');if("top"!==t.verticalAlign.toLocaleLowerCase()&&"middle"!==t.verticalAlign.toLocaleLowerCase()&&"bottom"!==t.verticalAlign.toLocaleLowerCase())throw new TypeError('Property "verticalAlign" must be set to either "top", "middle", or "bottom".');if("boolean"!=typeof t.justifyLines)throw new TypeError('Property "justifyLines" must be a Boolean.');if(isNaN(t.paddingX))throw new TypeError('Property "paddingX" must be a Number.');if(isNaN(t.paddingY))throw new TypeError('Property "paddingY" must be a Number.');if("boolean"!=typeof t.fitParent)throw new TypeError('Property "fitParent" must be a Boolean.');if("auto"!==t.lineBreak.toLocaleLowerCase()&&"word"!==t.lineBreak.toLocaleLowerCase())throw new TypeError('Property "lineBreak" must be set to either "auto" or "word".');if("boolean"!=typeof t.sizeToFill)throw new TypeError('Property "sizeToFill" must be a Boolean.');if("boolean"!=typeof t.strokeText)throw new TypeError('Property "strokeText" must be a Boolean.');if("boolean"!=typeof t.renderHDPI)throw new TypeError('Property "renderHDPI" must be a Boolean.');if("none"!==t.textDecoration.toLocaleLowerCase()&&"underline"!==t.textDecoration.toLocaleLowerCase())throw new TypeError('Property "textDecoration" must be set to either "none" or "underline".')}var s={font:"18px Arial, sans-serif",sizeToFill:!1,maxFontSizeToFill:!1,lineHeight:1,allowNewLine:!0,lineBreak:"auto",textAlign:"left",verticalAlign:"top",justifyLines:!1,paddingX:0,paddingY:0,fitParent:!1,strokeText:!1,renderHDPI:!0,textDecoration:"none"},t={};for(var u in s)t[u]=d.hasOwnProperty(u)?d[u]:s[u];var v=b.getContext("2d");v.font=t.font,v.textBaseline="bottom";var w=1,x="undefined"!=typeof global?global.devicePixelRatio:a.devicePixelRatio;if(t.renderHDPI&&x>1){var y={};for(var u in v)y[u]=v[u];var z=b.width,A=b.height;w=x,b.width=z*w,b.height=A*w,b.style.width=z*w*.5+"px",b.style.height=A*w*.5+"px";for(var u in y)try{v[u]=y[u]}catch(N){}v.scale(w,w)}var B,C=(t.fitParent?b.parentNode.clientWidth:b.width)/w,D=(t.fitParent?b.parentNode.clientHeight:b.height)/w,E=C-2*t.paddingX,F=D-2*t.paddingY,G=t.font.match(/\d+(px|em|%)/g)?+t.font.match(/\d+(px|em|%)/g)[0].match(/\d+/g):18,H=0,I=[],J=[],K={x:0,y:0},L=0,M="​";return c=e(c),f(G),g(),r(),h(),I}"module"in a&&"exports"in module?module.exports=b:a.CanvasTextWrapper=b}(this);
+  </script>
+
+  <script>
+      let text =
+`# 京东-多合一签到
+
+## 功能说明
+
+- 实现简单的京东零星活动自动签到功能。
+- ⚠️ 注意:使用此快捷指令需要账号的 Cookie，指令为本地运行任务，不会上传 Cookie 在内的任何隐私信息，请确保下载途径的安全性。
+- 后台模式请用桌面小组件方式运行
+- 兼容 ios13-15、ipad、多账号、自动化
+
+TG 频道:https://t.me/xuehuashe
+
+## 版本日志
+
+### 2022-01-14 v1.5
+
+- 采用 最新的京东系任务架构
+- 重构 指令云端架构，逻辑执行器更精简快速，减少网络压力
+- 重构 指令架构，弃用部分无意义功能
+- 新增 年货节抽签任务，其他任务持续推送
+
+https://www.icloud.com/shortcuts/d855d59bf7944bca978c42936f65df24
+
+### 2021-10-31 v1.4
+
+- 兼容 优化 ios15.1 的运行（我任然不建议你升级 15.1,运行时长是原来的 20 倍）
+
+https://www.icloud.com/shortcuts/407764531450467e9f8359a972c6ec43
+
+### 2021-10-18 v1.3
+
+- 实现 自动做任务，后台任务
+- 重构 架构，采用云端更新推送任务
+
+https://www.icloud.com/shortcuts/911166fff124414bb2c07030361ae9ec
+
+### 2021-02-05 v1.2
+
+- 修复 授权登录方式
+- 修复 一些问题
+- 优化 架构
+
+https://www.icloud.com/shortcuts/7700808a249a480895b03f3c5a64ea40
+
+### 2021-2-3 v1.1
+
+- 初步实现 10 种自动签到功能
+- 实现签到日志查看
+- 采用云端任务数据架构自动订阅
+- 采用本地执行任务，保障所有隐私数据
+
+https://www.icloud.com/shortcuts/eab7feef429743d2b16a2857f30accc1
+
+## 免责申明
+
+- 本快捷指令仅用于学习交流使用
+- 切勿用于商业及非法用途
+- 本指令涉及到隐私操作，请到作者发布作品的地址下载，不要轻易下载修改版，发生任何隐私泄露作者对此不负责，请保护好你的隐私。
+`
+      /**
+         * 创建高分辨率画布
+         * @param w     画布宽
+         * @param h     画布高
+         * @param ratio 屏幕分辨率
+         */
+      function createHiDPICanvas(w, h, ratio) {
+
+        const PIXEL_RATIO = (function () {
+          const c = document.createElement("canvas"),
+            ctx = c.getContext("2d"),
+            dpr = window.devicePixelRatio || 1,
+            bsr = ctx['webkitBackingStorePixelRatio'] ||
+              ctx['mozBackingStorePixelRatio'] ||
+              ctx['msBackingStorePixelRatio'] ||
+              ctx['oBackingStorePixelRatio'] ||
+              ctx['backingStorePixelRatio'] || 1;
+
+          return dpr / bsr;
+        })();
+
+        if (!ratio) { ratio = PIXEL_RATIO; }
+        const can = document.createElement("canvas");
+        can.width = w * ratio;
+        can.height = h * ratio;
+        can.style.width = w + "px";
+        can.style.height = h + "px";
+        can.getContext("2d").setTransform(ratio, 0, 0, ratio, 0, 0);
+        return can;
+      }
+
+      const myCanvas = this.createHiDPICanvas(300, 600);
+      let box = document.getElementById("box")
+      box.appendChild(myCanvas)
+
+      CanvasTextWrapper(myCanvas, text, { 
+        font: "12px Arial, sans-serif",
+        paddingX: 10,
+        paddingY: 10,
+        strokeText: false 
+      });
+  </script>
+</body>
+</html>

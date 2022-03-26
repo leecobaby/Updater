@@ -1,0 +1,415 @@
+{
+  "Snap_up": {
+    "version": "2.5",
+    "update": "https://www.icloud.com/shortcuts/c2a803993f924b51a22a22edf6294231",
+    "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
+    "github": "https://github.com/LeecoGit/shortcuts/tree/master/Snap_up",
+    "update_log": "* 增加 将部分天猫和淘工厂商品强制转换成签到红包可用链接\n* 增加 淘宝天猫链接的识别\n* 更新 对最新淘口令的识别\n* 优化 运行逻辑",
+    "notice": "购买前可以帮你看看有没有隐藏优惠券哦~\n历史价格查询接口维护中...",
+    "tip": {
+      "rondom": ["复制整段文案都可以识别，不用刻意复制链接哦！"]
+    },
+    "video": {
+      "signhongbao": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cakM0GY"
+    },
+    "api_url": "http://home.cdn.80008800.xyz/api.php",
+    "api_url2": "http://api.cdn.80008800.xyz/api.php",
+    "tb": {
+      "url_scheme": "taobao://",
+      "tkl": {
+        "regular_expression": "([\\p{Sc}\\(])\\w{8,12}([\\p{Sc}\\)])",
+        "api_url": "http://home.cdn.80008800.xyz/api",
+        "api_url_personal": "http://api.cdn.80008800.xyz/api",
+        "json_tkl": "tbk_privilege_get_response.result.data.tkl",
+        "json_coupon_click_url": "tbk_privilege_get_response.result.data.coupon_click_url",
+        "json_item_url": "tbk_privilege_get_response.result.data.item_url",
+        "json_user_type": "tbk_privilege_get_response.result.data.user_type",
+        "json_coupon_info": "tbk_privilege_get_response.result.data.coupon_info",
+        "json_coupon_type": "tbk_privilege_get_response.result.data.coupon_type",
+        "json_max_commission_rate": "tbk_privilege_get_response.result.data.max_commission_rate"
+      }
+    },
+    "jd": {
+      "url_scheme": "openapp.jdmobile://virtual?params={\"des\":\"m\",\"category\":\"jump\",\"url\":\"URL\"}",
+      "api_url": "http://home.cdn.80008800.xyz/api",
+      "json": {
+        "content": "content"
+      }
+    },
+    "pdd": {
+      "url_scheme": "pinduoduo://com.xunmeng.pinduoduo/URL"
+    },
+    "sn": {
+      "url_scheme": "suning://m.suning.com/index?adTypeCode=1002&adId=URL",
+      "api_url": "http://home.cdn.80008800.xyz/api",
+      "json": {
+        "content": "sn_responseContent.sn_body.queryBacthcustomlink.shortLink"
+      }
+    },
+    "more": {
+      "🧧 现金红包-3.2": "taobao://m.tb.cn/h.4PLy7zj",
+      "👥 加入QQ京东情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
+      "👥 加入QQ淘宝情报群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=622340333&card_type=group&source=qrcode&jump_from=&auth=&authSig=RPqW9VSePIx4jWxGhYLvMvfdLkFPydHzo50qyVwmb9zhPjv7lF3HnSRF5WuJfjaX&source_id=2_40001",
+      "👥 加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
+      "📺 视频教程": "https://video.cdnvue.com/uploads/-2216775553683075363/video/b9PwmDl",
+      "㊙️ 精选福利": {
+        "🥣 饿了么红包": "taobao://m.tb.cn/h.4hbqRud",
+        "🍔 美团红包": "imeituan://www.meituan.com/web?lch=cps:waimai:3:a144a9fa40a42c55af00214bb4bb3993971:6232dingdanxialeeco&url=https%3A%2F%2Frunion.meituan.com%2Furl%3Fkey%3Da144a9fa40a42c55af00214bb4bb3993971%26url%3Dhttps%253A%252F%252Fi.meituan.com%252Fawp%252Fhfe%252Fblock%252Fa945391288b790d558b7%252F78716%252Findex.html%253Fappkey%253Da144a9fa40a42c55af00214bb4bb3993971%253A6232dingdanxialeeco%26sid%3D6232dingdanxialeeco"
+      }
+    },
+    "more_little": {
+      "视频教程": "https://video.cdnvue.com/uploads/-2216775553683075363/video/b9PwmDl"
+    },
+    "jjh": {
+      "ok": "no",
+      "tishi": "📋剪贴板为空，请检查一下哦~\n---------------------------------\n※猜测到你可能需要以下功能※\n\n(此为纯净版，请加群获取完整版)"
+    }
+  },
+  "Sign_in": {
+    "version": "1.1",
+    "update": "https://www.icloud.com/shortcuts/91af4b2564134654ad2dbc7bce54bbdf",
+    "data": {
+      "【京东】京东会员签到": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"m\",\"url\":\"https://vip.m.jd.com/?&utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share&ShareTm=sbQQcUMkZ4AZ4dzVzEWiwuvB%2BSRLNefWg3OxfaKnTdb8I9fVRndWFjw2wynEdJbNYQeN1N8y4HgFy8p3e%2BemJguCDq%2B9dNOW0Ke1zCMW2Tkfy4yJCOdEnAqD9z3NKYq8VHAFLpmVrUvxYyUyM/AFrxdMuwCm0PEl0NvaSsG%2BMrA=\"}",
+      "【京东】京豆签到": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"m\",\"url\":\"https://bean.m.jd.com/share/index.action?&utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share&ShareTm=sPR%2BfxCcrAMyBuYZ%2BoZ2JcO2J5tl6T0CDcQ82VrzBQUgz8uQrvH26WuEyq23dLCx9NiW6H6MKbGLyEyFcqSRKQv1oegppTMXuN3qypHbeqRVv%2BZK4KmyTxyezhvEa1vYe0tL1EUJnPiSR76G76iuhCxozrl9gG0tPMMPTmWJObc=\"}",
+      "【京东】京东大转盘": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"m\",\"url\":\"https://turntable.m.jd.com/?actId=jgpqtzjhvaoym&appSource=jdmx\"}",
+      "【京东】领券页面签到": "openapp.jdmobile://virtual?params={\"category\":\"jump\",\"des\":\"m\",\"url\":\"https://coupon.m.jd.com/center/getCouponCenter.action?categoryId=0&batchStr=00000\"}",
+      "【支付宝】砸金蛋": "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://jupage.taobao.com/wow/tqg/act/zajindan",
+      "【支付宝】会员领积分": "alipays://platformapi/startapp?appId=20000160&url=%2Fwww%2FmyPoints.html",
+      "【支付宝】一分惊喜": "alipays://platformapi/startapp?appId=20000067&url=https://render.alipay.com/p/c/onemorething/home.html",
+      "【支付宝】天天抽奖": "alipays://platformapi/startapp?appId=2018103161898599"
+    },
+    "more": {
+      "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
+      "加入QQ线报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp"
+    }
+  },
+  "Ring": {
+    "version": "1.3",
+    "api": {
+      "get_ring": "http://home.80008800.xyz:90/gitee/",
+      "post_ring": "http://home.80008800.xyz:90/gitee/",
+      "download": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/shortcuts/ring/"
+    },
+    "update_tip": "发现新版本！请到社区或群获取更新~",
+    "menu_tip": "☁️共享音效盒子☁️\n- 好咖啡要和朋友一起品尝\n- 好铃音也要和朋友一起分享",
+    "share_title_tip": "请输入标题\n* 以下为参考模板可删除\n* 尽量精悍别脱离内容\n* 不要换行！！！",
+    "share_title_default": "【充电】通用音效 part 1",
+    "share_body_tip": "请输入你想说的话，不输入也没关系哦~",
+    "share_content_tip": "请输入已编码的音效文本内容\n我已经自动输入你剪贴板的内容拉\n─=≡Σ(((つ•̀ω•́)つ\n温馨提醒:请尽量分享10秒以内的音效"
+  },
+  "Taojb": {
+    "version": "2.3",
+    "update_log": "- 新增 云端时间功能\n- 新增 等待长时间防假死功能\n- 弃用 动态时间功能",
+    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Taojb",
+    "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/ad5d41d7f29244debd2c7e28b7d498b5",
+    "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
+    "notice": "任务链接已更新~\n618临近，活动较多请关注~",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
+    "automation_url": "shortcuts://run-shortcut?name=淘金币自动任务&input=text&text=task",
+    "tip": {
+      "hongbao": "",
+      "hot": "🔥 0.1元购活动中...",
+      "taskEnd": "剩余没完成的任务请运行",
+      "faq": "有疑问的请查看",
+      "set": "",
+      "team": "",
+      "more": ""
+    },
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tjb.png",
+    "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json"
+  },
+  "Ttlhb": {
+    "version": "1.1",
+    "update_log": "* 初步自动任务\n* 支持自动化、多账号、ipad终端\n* 采用自动淘宝任务框架",
+    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Ttlhb",
+    "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/075b4ca189c84c968bf95d7380bdfea1",
+    "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
+    "notice": "已支持新版天天领红包任务~\n一元购物品加购物车切换到天猫APP即可使用天猫APP专属红包~",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
+    "automation_url": "shortcuts://run-shortcut?name=天天领红包自动任务&input=text&text=1",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tb_ttlhb.png",
+    "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
+    "tip": {
+      "hongbao": "",
+      "hot": "🔥 天猫红包雨来拉...",
+      "tjb": "请配合食用",
+      "faq": "有疑问的请查看",
+      "set": "点击查看自动化操作",
+      "team": "",
+      "other": "",
+      "more": ""
+    }
+  },
+  "Jhs": {
+    "version": "1.5",
+    "update_log": "- 新增 云端时间功能\n- 新增 等待长时间防假死功能\n- 弃用 动态时间功能",
+    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Jhs",
+    "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/e462233a2d124622959412550b1e7d8e",
+    "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
+    "notice": "任务链接已更新~\n618临近，活动较多请关注~",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
+    "automation_url": "shortcuts://run-shortcut?name=聚划算章鱼自动任务&input=text&text=task",
+    "image": "https://gitee.com/leecobaby/Updater/raw/master/image/tb_618cat.jpg",
+    "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
+    "tip": {
+      "hongbao": "",
+      "hot": "🔥 一元购活动中...",
+      "faq": "有疑问的请查看",
+      "set": "点击查看自动化操作",
+      "team": "",
+      "other": "",
+      "more": ""
+    }
+  },
+  "618cat": {
+    "version": "1.0",
+    "update_log": "- 新增 云端时间功能\n- 新增 等待长时间防假死功能\n- 弃用 动态时间功能",
+    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Jhs",
+    "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/e462233a2d124622959412550b1e7d8e",
+    "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
+    "notice": "实现自动养猫,一直逛兰蔻为正常现象~\n遇到任务异常为正常情况,不要手动去停止他,运行完大概有150多万喵币~",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
+    "automation_url": "shortcuts://run-shortcut?name=天猫618自动养猫&input=text&text=task",
+    "image": "https://gitee.com/leecobaby/Updater/raw/master/image/tb_618cat.jpg",
+    "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
+    "tip": {
+      "hongbao": "每天领...",
+      "hot": "🧧 20点抢惊喜红包",
+      "faq": "",
+      "set": "点击查看自动化操作",
+      "team": "",
+      "other": "疑问者可查看常见问题",
+      "more": "可领外卖红包啦..."
+    }
+  },
+  "Hlzx": {
+    "version": "1.4",
+    "update_log": "- 增加 多线路模式\n- 更新 任务数据",
+    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Hlzx",
+    "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/e22b65e634814139a33df134edac6fdc",
+    "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
+    "notice": "任务链接已更新~\n618临近，活动较多请关注~",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
+    "automation_url": "shortcuts://run-shortcut?name=活力中心自动任务&input=text&text=task",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tb_hlzx.png",
+    "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
+    "tip": {
+      "hongbao": "",
+      "hot": "🔥 一元购变零元购...",
+      "faq": "有疑问的请查看",
+      "set": "点击查看自动化操作",
+      "team": "",
+      "other": "",
+      "more": ""
+    }
+  },
+  "FarmSingle": {
+    "version": "1.5",
+    "update_log": "- 优化 部分逻辑",
+    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/FarmSingle",
+    "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/b6d2c363bdff4100b892810ec4509654",
+    "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
+    "notice": "任务链接已更新~\n618临近，活动较多请关注~",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
+    "automation_url": "shortcuts://run-shortcut?name=芭芭农场自动集肥料&input=text&text=task",
+    "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tb_farm.png",
+    "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
+    "tip": {
+      "hongbao": "",
+      "hot": "🔥 一元购变零元购...",
+      "faq": "有疑问的请查看",
+      "set": "点击查看自动化操作",
+      "team": "",
+      "other": "",
+      "more": ""
+    }
+  },
+  "Qmxb": {
+    "version": "1.0",
+    "update_log": "- 自动化直接从头开始任务\n- 修复自动化的一个bug\n- 增加模块化接口",
+    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Qmxb",
+    "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/41c24c8c3d0e4fa48d1cfcbf8a8d590d",
+    "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
+    "notice": "任务链接已更新~\n618临近，活动较多请关注~",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
+    "automation_url": "shortcuts://run-shortcut?name=全民寻宝自动任务&input=text&text=task",
+    "image": "https://gitee.com/leecobaby/Updater/raw/master/image/tb_qmxb.png",
+    "url": "https://gitee.com/leecobaby/Updater/raw/master/tb.json",
+    "tip": {
+      "hongbao": "",
+      "hot": "",
+      "faq": "有疑问的请查看",
+      "set": "点击查看自动化操作",
+      "team": "",
+      "other": "",
+      "more": ""
+    }
+  },
+  "TaoSign": {
+    "version": "1.0",
+    "update_log": "",
+    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/TaoSign",
+    "help": "",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/f89486a1677847edaaee88f34ad01bd7",
+    "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
+    "notice": "任务链接已更新~\n618临近，活动较多请关注~",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
+    "automation_url": "shortcuts://run-shortcut?name=淘宝签到&input=text&text=task",
+    "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tb_sign.png",
+    "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
+    "tip": {
+      "hongbao": "",
+      "hot": "🔥 一元购变零元购...",
+      "faq": "有疑问的请查看",
+      "set": "点击查看自动化操作",
+      "team": "",
+      "other": "",
+      "more": ""
+    }
+  },
+  "ltao_duck": {
+    "version": "1.2",
+    "update_log": "- 增加 多线路模式\n- 更新 任务数据",
+    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/ltao_duck",
+    "help": "",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/a123d58e2fb0494990a1743499fd1ae6",
+    "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
+    "notice": "特价版任务因官方做出限制，目前只能前往直播间完成任务，暂无其他办法~\n运行任务将会自动静音，运行完毕恢复，可以去设置里手动更改设置~",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
+    "automation_url": "shortcuts://run-shortcut?name=淘特-发财鸭&input=text&text=task",
+    "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/ltao.png",
+    "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
+    "tip": {
+      "hongbao": "",
+      "hot": "🔥 特价版1元购...",
+      "faq": "有疑问的请查看",
+      "set": "点击查看自动化操作",
+      "team": "",
+      "other": "",
+      "more": ""
+    }
+  },
+  "AutoBox": {
+    "version": "1.1",
+    "update_log": "- 增加 使用教程、常见问题、先关内容\n- 修复 ios13 无法使用问题\n- 修复 单个订阅模块导致配置时出错问题\n- 优化 商城 API 访问逻辑",
+    "update": "https://www.icloud.com/shortcuts/56b8b66dca6043e1ae364ffae170aa53",
+    "about": {
+      "tutorials": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox#使用教程",
+      "faq": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox#常见问题",
+      "version_log": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox#版本日志"
+    },
+    "help": "https://docs.qq.com/doc/DWlFTc1FyUU1TY25o",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "faq": "https://docs.qq.com/doc/DWkFTb3JUVllZdFVC",
+    "notice": "欢迎各位作者来提交模块~\n初代版本有很多问题,如果不会用请等待教程和新版~",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
+    "automation_url": "shortcuts://run-shortcut?name=AutoBox&input=text&text=",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-bot.png",
+    "submit": "https://gitee.com/leecogit/auto-box/issues/new",
+    "tip": {
+      "hongbao": "",
+      "hot": "",
+      "faq": "",
+      "set": "",
+      "team": "",
+      "other": "",
+      "more": ""
+    }
+  },
+  "JD_sign": {
+    "version": "1.2",
+    "update_log": "- 修复 授权登录方式\n- 修复 一些问题\n- 优化 架构",
+    "about": {
+      "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
+      "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_sign#版本日志"
+    },
+    "help": "",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/7700808a249a480895b03f3c5a64ea40",
+    "notice": "初步实现京东10种签到功能~\n初代版本暂不支持显示奖励明细~",
+    "video": "",
+    "automation_url": "shortcuts://run-shortcut?name=京东-多合一签到&input=text&text=task",
+    "image": "https://gitee.com/leecobaby/Updater/raw/master/image/jd_jd.png",
+    "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/jd.json",
+    "scritable": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/getJDCookie.js",
+    "tip": {
+      "hongbao": "",
+      "hot": "",
+      "faq": "有疑问的请查看",
+      "set": "",
+      "team": "",
+      "other": "",
+      "more": ""
+    }
+  },
+  "More": {
+    "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
+    "加入QQ情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
+    "其他捷径作品": "https://shimo.im/docs/DHcYv8xjcYxvHvQg/",
+    "🧧 现金红包(12.8)": "taobao://m.tb.cn/h.4ffABfW",
+    "🔥 年货节超级红包": "taobao://m.tb.cn/h.4RaMYQr",
+    "饿了么现金红包": "taobao://m.tb.cn/h.4hbqRud"
+  },
+  "jjh": {
+    "ok": "yes",
+    "tishi": "📋剪贴板为空，请检查一下哦~\n---------------------------------\n※猜测到你可能需要以下功能※\n\n(此为纯净版，请加群获取完整版)",
+    "hongbao": "alipays://platformapi/startapp?appId=88886666&appClearTop=false&target=groupPre&bizType=CROWD_CODE_CASH&crowdNo=202006200206302127940823700055790860&universalDetail=true&clientVersion=10.0.0-5&prevBiz=code&sign=52e3fa8195d4210bd1e7ecc8ba907b25c428533179eff3f91421b22ee04907a2&schemeMode=reInside&source=passcode"
+  },
+  "Contact": {
+    "qq": "mqq://card/show_pslcard?src_type=internal&version=1&uin=1917019372&card_type=person&source=sharecard",
+    "qqGroup": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=605346047&card_type=group&source=qrcode&jump_from=&auth=&authSig=tFaEzF1AcIK130YGfSHWJ15xFQh6kzpeUL3KIkWmoaCCsN7AAATFaWqFUiXeNM4W&source_id=2_40001",
+    "tgGroup": "",
+    "email": "leeco@vip.qq.com"
+  },
+  "more": {
+    "mode": "more1",
+    "tip": "新一期现金红包已发放",
+    "more0": {
+      "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ"
+    },
+    "more1": {
+      "👥 加入QQ讨论群②": "https://jq.qq.com/?_wv=1027&k=pF9LvHgH",
+      "👥 加入TG讨论群": "https://t.me/xuehaushe_chat",
+      "👥 加入QQ情报群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=794151741&card_type=group&source=qrcode&jump_from=&auth=&authSig=QyhXG1SXGxWaEgClRfq4X7ueegscoHfN1r/027RrqaHsSfj8sR3Y7TzV6VwHx2IM&source_id=2_40001",
+      "📱 其他捷径作品": "https://github.com/leecobaby/shortcuts",
+      "🧧 外卖红包 活动更新...": {
+        "美团红包   最高领66元礼包": {
+          "已安装app": "imeituan://www.meituan.com/web?lch=cps:waimai:3:a144a9fa40a42c55af00214bb4bb3993971:6232dingdanxialeeco:2:70690&url=https%3A%2F%2Fclick.meituan.com%2Ft%3Ft%3D1%26c%3D1%26p%3DOWMpZ-uzIFOVe6JyOONs3dXuqV0qcAf-r-KCvHdXiNfM3oMXlDSgQ1lHQ7sc1bHIMXeq2XWRYP9S3VMvpbQU5suS6wIbvlY8ysKwoMucfvM-rF8Z3mNwVvDHIKVKMsgutBrr4QPAU-C_JAUQdcIGegPhA5pbiaJPBOlV_2ElhVrcWrcWxBNlqgy-azTgeuR39HLNf98hLOWEGKBDtwCamOqsJP1LLMGBuAOnfqvhqVpmOiuf2Grl8rQIjgXTpd-9hOnDON0X3YxM7kdoJCRmSis2PTLenraGrNz5ViEm8KjiXNM3vBmZ8YSUoNjoiCjP8p8fRrf7uXM2SvjABJxuflK0_ogBMj-5YH-n4hr8dW-If4ulIdQYa6FGfQ0wgLaHtMVPuoy42RYF-BZ7NsaYjbxSYy5duCSxIJLGrdqIVhFHeJkRT5MGDOXn1bf58GE8oUnmCXZ4BU0FwKjAf2QgbwXqgfp8t6YZjfKmXNSomEW1NZJF7XYewE6OFFCl6qGkCGc3dgSAjj1UhCZ0BoljZx6zxMgxRv3oJ0EePeqkyDgekdSBbU-zUSW-C7HiXVEFHoU955N0M8A_hQJv5ScS5lJqqumIL2k4S4VAUucCbmo1UOjRyJ2wpDveI4iwCFTr5RIxT8aoT2fgKQZWBwpD6v3MZ-td3z0E_aU9a2lLsyIweu9PfPngn4JqLbd6BEpLuM0XFzanyV5BRWXa9VtvNO3Qm070mTjozv7xbIo_boM",
+          "未安装app": "https://click.meituan.com/t?t=1&c=1&p=OWMpZ-uzIFOVe6JyOONs3dXuqV0qcAf-r-KCvHdXiNfM3oMXlDSgQ1lHQ7sc1bHIMXeq2XWRYP9S3VMvpbQU5suS6wIbvlY8ysKwoMucfvM-rF8Z3mNwVvDHIKVKMsgutBrr4QPAU-C_JAUQdcIGegPhA5pbiaJPBOlV_2ElhVrcWrcWxBNlqgy-azTgeuR39HLNf98hLOWEGKBDtwCamOqsJP1LLMGBuAOnfqvhqVpmOiuf2Grl8rQIjgXTpd-9hOnDON0X3YxM7kdoJCRmSis2PTLenraGrNz5ViEm8KjiXNM3vBmZ8YSUoNjoiCjP8p8fRrf7uXM2SvjABJxuflK0_ogBMj-5YH-n4hr8dW-If4ulIdQYa6FGfQ0wgLaHtMVPuoy42RYF-BZ7NsaYjbxSYy5duCSxIJLGrdqIVhFHeJkRT5MGDOXn1bf58GE8oUnmCXZ4BU0FwKjAf2QgbwXqgfp8t6YZjfKmXNSomEW1NZJF7XYewE6OFFCl6qGkCGc3dgSAjj1UhCZ0BoljZx6zxMgxRv3oJ0EePeqkyDgekdSBbU-zUSW-C7HiXVEFHoU955N0M8A_hQJv5ScS5lJqqumIL2k4S4VAUucCbmo1UOjRyJ2wpDveI4iwCFTr5RIxT8aoT2fgKQZWBwpD6v3MZ-td3z0E_aU9a2lLsyIweu9PfPngn4JqLbd6BEpLuM0XFzanyV5BRWXa9VtvNO3Qm070mTjozv7xbIo_boM"
+        },
+        "饿了么红包  最高领31元礼包": "taobao://m.tb.cn/h.4t95exG"
+      },
+      "🧧 现金红包-5.30": "taobao://m.tb.cn/h.4tACY39"
+    },
+    "more2": {
+      "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
+      "加入QQ京东情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
+      "加入QQ淘宝情报群": "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=622340333&card_type=group&source=qrcode&jump_from=&auth=&authSig=RPqW9VSePIx4jWxGhYLvMvfdLkFPydHzo50qyVwmb9zhPjv7lF3HnSRF5WuJfjaX&source_id=2_40001",
+      "其他捷径作品": "https://shimo.im/docs/DHcYv8xjcYxvHvQg/",
+      "🧧 现金红包(12.8)": "taobao://m.tb.cn/h.4ffABfW",
+      "平台红包": {
+        "饿了么现金红包": "taobao://m.tb.cn/h.4hbqRud",
+        "支付宝现金红包": "taobao://m.tb.cn/h.VzY0yti"
+      }
+    }
+  }
+}

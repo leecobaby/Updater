@@ -1,0 +1,14 @@
+{
+  "presets": [
+    [
+      "minify",
+      {
+        "removeConsole": true,
+        "removeDebugger": true,
+        "builtIns": false
+      }
+    ],
+    "@babel/preset-env"
+  ],
+  "comments": false
+}

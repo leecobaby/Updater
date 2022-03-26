@@ -1,0 +1,3 @@
+$.callback = ''
+dealReturn('zoo_bdCollectScore', $.data)
+document.write(JSON.stringify($))

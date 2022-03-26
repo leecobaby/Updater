@@ -1,0 +1,5 @@
+$.callback = ''
+$.call.pop()
+$.call.push('zoo_shopLotteryInfo') // 衔接下一个任务
+dealReturn('qryCompositeMaterials', $.data)
+document.write(JSON.stringify($))

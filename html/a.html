@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <div id="box"></div>
+
+  <script>
+    /**
+   * 创建高分辨率画布
+   * @param w     画布宽
+   * @param h     画布高
+   * @param ratio 屏幕分辨率
+   */
+    function createHiDPICanvas(w, h, ratio) {
+
+      const PIXEL_RATIO = (function () {
+        const c = document.createElement("canvas"),
+          ctx = c.getContext("2d"),
+          dpr = window.devicePixelRatio || 1,
+          bsr = ctx['webkitBackingStorePixelRatio'] ||
+            ctx['mozBackingStorePixelRatio'] ||
+            ctx['msBackingStorePixelRatio'] ||
+            ctx['oBackingStorePixelRatio'] ||
+            ctx['backingStorePixelRatio'] || 1;
+
+        return dpr / bsr;
+      })();
+
+      if (!ratio) { ratio = PIXEL_RATIO; }
+      const can = document.createElement("canvas");
+      can.width = w * ratio;
+      can.height = h * ratio;
+      can.style.width = w + "px";
+      can.style.height = h + "px";
+      can.getContext("2d").setTransform(ratio, 0, 0, ratio, 0, 0);
+      return can;
+    }
+
+    // 不创建高分辨率画布
+    // const canvas = document.createElement("canvas");
+    // canvas.width = 100;
+    // canvas.height = 100;
+
+    // 创建使用默认分辨率的画布
+    const myCanvas = this.createHiDPICanvas(1000, 1000);
+    let box = document.getElementById("box")
+    box.appendChild(myCanvas)
+    let ctx = myCanvas.getContext("2d");
+    ctx.font = "32px Arial";
+    ctx.fillText("Hello World Hello World Hello World\nHello World Hello World Hello World ", 10, 30);
+    console.log(myCanvas);
+
+    // 创建分辨率为 3 的画布
+    // const myCustomCanvas = this.createHiDPICanvas(100, 100, 3);
+  </script>
+
+</body>
+
+</html>

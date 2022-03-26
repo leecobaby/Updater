@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
+  <title>Random mutual aid</title>
+</head>
+
+<body>
+  <script>
+
+  </script>
+
+
+  <script>
+    const json = {
+      "items": [
+        {
+          "id": "6174cbb629ddcd02933d84a1",
+          "text": "可以在这里发送你京东-环游记的助力码，发其他码是无用功！",
+          "html": "可以在这里发送你京东-环游记的助力码，发其他码是无用功！",
+          "sent": "2021-10-24T02:57:58.212Z",
+          "readBy": 0,
+          "urls": [],
+          "mentions": [],
+          "issues": [],
+          "meta": [],
+          "v": 1,
+          "fromUser": "60b8caef6da03739847e0d8d"
+        },
+        {
+          "id": "6174cbb7f2cedf67f9a17a94",
+          "text": "可以在这里发送你京东-环游记的助力码，发其他码是无用功！",
+          "html": "可以在这里发送你京东-环游记的助力码，发其他码是无用功！",
+          "sent": "2021-10-24T02:57:59.699Z",
+          "readBy": 0,
+          "urls": [],
+          "mentions": [],
+          "issues": [],
+          "meta": [],
+          "v": 1,
+          "fromUser": "60b8caef6da03739847e0d8d"
+        },
+        {
+          "id": "6174cbc2d3ae402e4766c1e7",
+          "text": "下面是一条示例",
+          "html": "下面是一条示例",
+          "sent": "2021-10-24T02:58:10.526Z",
+          "readBy": 0,
+          "urls": [],
+          "mentions": [],
+          "issues": [],
+          "meta": [],
+          "v": 1,
+          "fromUser": "60b8caef6da03739847e0d8d"
+        },
+        {
+          "id": "6174cf5f3f09d857362eee6a",
+          "text": "ZXASTT0195L6r47PBTNYCtIMjDX0FjRWn6u7zB55awQ",
+          "html": "ZXASTT0195L6r47PBTNYCtIMjDX0FjRWn6u7zB55awQ",
+          "sent": "2021-10-24T03:13:35.095Z",
+          "readBy": 0,
+          "urls": [],
+          "mentions": [],
+          "issues": [],
+          "meta": [],
+          "v": 1,
+          "fromUser": "60b8caef6da03739847e0d8d"
+        }
+      ],
+      "lookups": {
+        "users": {
+          "60b8caef6da03739847e0d8d": {
+            "id": "60b8caef6da03739847e0d8d",
+            "username": "leecobaby",
+            "displayName": "Leeco",
+            "url": "/leecobaby",
+            "avatarUrl": "https://avatars-05.gitter.im/gh/uv/4/leecobaby",
+            "avatarUrlSmall": "https://avatars0.githubusercontent.com/u/48404687?v=4&s=60",
+            "avatarUrlMedium": "https://avatars0.githubusercontent.com/u/48404687?v=4&s=128",
+            "v": 11,
+            "gv": "4"
+          }
+        }
+      }
+    }
+    // 放入魔法变量
+
+    const data = json.items
+    // 选出有 url 的元素
+    const filterData = _.filter(data, v => v.text.match(/^[\w-]*$/g))
+    // 过滤重复的 user id
+    const uniqData = _.uniqBy(filterData, v => v.fromUser)
+    // 随机选取出 3 个助力 url - 考虑到助力已满情况和无效链接的情况
+    const sampleData = _.sampleSize(uniqData, 3)
+    const list = sampleData.map(v => v.text)
+    const task = { list }
+    document.write(JSON.stringify(task))
+
+
+
+  </script>
+
+</body>
+
+</html>
