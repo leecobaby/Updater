@@ -1262,7 +1262,7 @@
     ]
   },
   "FarmSingle": {
-    "version": "数据最后更新于:3.27.3",
+    "version": "数据最后更新于:3.27.4",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fKVldO7",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fKVldO7",
@@ -1301,25 +1301,29 @@
     "task": [
       {
         "tmall": {
+          "title": "新版任务",
+          "type": "other",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=2488&sourceType=other&hd_from_id=100004&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "21303 linked_119_0_21303_0",
+            "21316 other_462_609011_21316_0",
+            "21316 other_462_609011_21316_1",
+            "21316 other_462_609011_21316_2",
+            "21252 other_120_614010_21252_0",
+            "20668 other_133_589009_20668_0",
+            "21318 other_449_583009_21318_0"
+          ]
+        }
+      },
+      {
+        "tmall": {
           "title": "淘宝集肥料",
           "type": "other",
           "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=971&sourceType=other&hd_from_id=100085&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
-            "8349 other_461_0_8349_0",
-            "22356 other_463_652011_22356_0",
-            "18125 cloudsail_462_-311404574_18125_0",
-            "12585 expo_462_123083_12585_0",
-            "15891 other_449_398011_15891_0",
-            "16868 other_449_440001_16868_0",
-            "16847 other_235_424002_16847_0",
-            "18501 other_449_635005_18501_0",
-            "8273 other_449_62009_8273_0",
-            "12768 other_449_62009_8273_1",
-            "12768 other_0_173001_12768_0",
-            "7936 cloudsail_462_3901378244_7936_0",
             "21346 cloudsail_136_3999463632_21346_0",
-            "8275 other_468_0_8275_0",
             "24478 other_125_1_24478_0",
             "25517 cloudsail_450_-1092953834_25517_0",
             "12023 other_467_646007_12023_0",
@@ -1363,28 +1367,25 @@
       },
       {
         "tmall": {
-          "title": "其他",
+          "title": "旧版任务",
           "type": "other",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=2488&sourceType=other&hd_from_id=100004&deliveryId=",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=971&sourceType=other&hd_from_id=100085&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
-            "21303 linked_119_0_21303_0",
-            "21316 other_462_609011_21316_0",
-            "21316 other_462_609011_21316_1",
-            "21316 other_462_609011_21316_2",
-            "21252 other_120_614010_21252_0",
-            "20668 other_133_589009_20668_0",
-            "21318 other_449_583009_21318_0"
+            "8349 other_461_0_8349_0",
+            "22356 other_463_652011_22356_0",
+            "18125 cloudsail_462_-311404574_18125_0",
+            "12585 expo_462_123083_12585_0",
+            "15891 other_449_398011_15891_0",
+            "16868 other_449_440001_16868_0",
+            "16847 other_235_424002_16847_0",
+            "18501 other_449_635005_18501_0",
+            "8273 other_449_62009_8273_0",
+            "12768 other_449_62009_8273_1",
+            "12768 other_0_173001_12768_0",
+            "7936 cloudsail_462_3901378244_7936_0",
+            "8275 other_468_0_8275_0"
           ]
-        }
-      },
-      {
-        "tmall": {
-          "title": "集阳光任务",
-          "type": "other",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/tmallfarm/act/b-browser?wh_biz=tm&spm=farm.newfarm.task.browser&disableNav=YES",
-          "textEnd": "",
-          "item": ["1 0"]
         }
       }
     ]
