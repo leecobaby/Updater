@@ -1262,7 +1262,7 @@
     ]
   },
   "FarmSingle": {
-    "version": "数据最后更新于:3.27.4",
+    "version": "数据最后更新于:5.22.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fsUESve",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fsUESve",
@@ -1363,29 +1363,6 @@
           "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=2349&sourceType=other&hd_from_id=100004&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": ["20700 other_468_662005_20700_0"]
-        }
-      },
-      {
-        "tmall": {
-          "title": "旧版任务",
-          "type": "other",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=971&sourceType=other&hd_from_id=100085&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "8349 other_461_0_8349_0",
-            "22356 other_463_652011_22356_0",
-            "18125 cloudsail_462_-311404574_18125_0",
-            "12585 expo_462_123083_12585_0",
-            "15891 other_449_398011_15891_0",
-            "16868 other_449_440001_16868_0",
-            "16847 other_235_424002_16847_0",
-            "18501 other_449_635005_18501_0",
-            "8273 other_449_62009_8273_0",
-            "12768 other_449_62009_8273_1",
-            "12768 other_0_173001_12768_0",
-            "7936 cloudsail_462_3901378244_7936_0",
-            "8275 other_468_0_8275_0"
-          ]
         }
       }
     ]

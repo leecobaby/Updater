@@ -223,8 +223,8 @@
     }
   },
   "FarmSingle": {
-    "version": "2.2",
-    "update_log": "- 新增 更多资源线路\n- 更新 活动任务数据\n- 修复 云端资源无法访问问题",
+    "version": "2.3",
+    "update_log": "- 新增 多条资源线路\n- 修复 线路获取错误导致指令错误的BUG\n- 更新 任务活动数据",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/blob/master/TB.FAQ.md#%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96-cookie",
       "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cxdbxa6",
@@ -232,9 +232,9 @@
     },
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/97aa8be7efcb4e44a55174c071467171",
+    "update": "https://www.icloud.com/shortcuts/f6e53727303642dabfc76e1a7e0f3594",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "cookie错误和助力跳转错误问题会晚点更新，先使用普通模式吧~\n🧧 年货节关注活动大厅和更多，将送红包福利~",
+    "notice": "🎉 指令已更新至5.22，618活动即将来袭，请关注~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=芭芭农场自动集肥料&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
@@ -248,7 +248,7 @@
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 1.8日抢现金红包"
+      "more": ""
     }
   },
   "Qmxb": {
