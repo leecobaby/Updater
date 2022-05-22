@@ -1,8 +1,8 @@
 {
   "JD_sign": {
     "version": "上次数据更新于:1.27.1",
-    "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/YwhAs1z%22%7D%0A",
-    "endJump": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/YwhAs1z%22%7D",
+    "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/JLb8ehn%22%7D%0A",
+    "endJump": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/JLb8ehn%22%7D",
     "pkHelpCode": "IgNWdiLGaPaAqdZqpd0QbcXZFPwE1VfQ9VPl2cARI1KWYjbV1EXeRSxZojc",
     "codeUrl": {
       "modules": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/modules.js",
@@ -190,7 +190,7 @@
   },
   "JD_fruit": {
     "version": "上次数据更新于:1.13.2",
-    "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/YwhAs1z%22%7D",
+    "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/JLb8ehn%22%7D",
     "endJump": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://h5.m.jd.com/babelDiy/Zeus/3KSjXqQabiTuD1cJ28QskrpWoBKT/index.html%22%7D",
     "codeUrl": {
       "CryptoJS": "https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.js",
@@ -298,7 +298,7 @@
   },
   "JD_travel": {
     "version": "上次数据更新于:10.31.1",
-    "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/YwhAs1z%22%7D",
+    "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/JLb8ehn%22%7D",
     "endJump": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://wbbny.m.jd.com/babelDiy/Zeus/2vVU4E7JLH9gKYfLQ5EVW6eN2P7B/index.html%22%7D",
     "help": {
       "gitter": "https://gitter.im/api/v1/rooms/6171836d6da0373984886132/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=100",
@@ -414,7 +414,7 @@
   },
   "JD_nian": {
     "version": "上次数据更新于:1.20.2",
-    "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/YwhAs1z%22%7D",
+    "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/JLb8ehn%22%7D",
     "endJump": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://wbbny.m.jd.com/babelDiy/Zeus/41AJZXRUJeTqdBK9bPoPgUJiodcU/index.html%22%7D",
     "help": {
       "gitter": "https://gitter.im/api/v1/rooms/6171836d6da0373984886132/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=100",
@@ -501,6 +501,89 @@
         { "做丢骰子任务71-80家 - 火爆也能做": "doDiceTask" },
         { "做丢骰子任务81-90家 - 火爆也能做": "doDiceTask" },
         { "做丢骰子任务91-100家 - 火爆也能做": "doDiceTask" }
+      ]
+    }
+  },
+  "JD_618": {
+    "version": "上次数据更新于:5.23.1",
+    "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/JLb8ehn%22%7D",
+    "endJump": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://wbbny.m.jd.com/babelDiy/Zeus/2fUope8TDN3dUJfNzQswkBLc7uE8/index.html%22%7D",
+    "help": {
+      "gitter": "https://gitter.im/api/v1/rooms/6171836d6da0373984886132/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=100",
+      "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/random_mutual_jd.js",
+      "inviteLink": "https://gitter.im/leecobaby-shortcuts/jd_travel?utm_source=share-link&utm_medium=link&utm_campaign=share-link"
+    },
+    "codeUrl": {
+      "modules": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/modules.js",
+      "checkCookie": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/checkCookie.js",
+      "JD_618": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/jd_618.js",
+      "JD_618_next": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/jd_618_next.js",
+      "JD_618_development": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/dist/jd_618_development.js"
+    },
+    "authUrl": [
+      "https://me-api.jd.com/user_new/info/GetJDUserInfoUnion",
+      "https://wq.jd.com/user/info/QueryJDUserInfo?sceneval=2",
+      "https://api.m.jd.com/client.action"
+    ],
+    "api": {
+      "isLogin": {
+        "url": "https://me-api.jd.com/user_new/info/GetJDUserInfoUnion",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json,text/plain, */*",
+          "Host": "me-api.jd.com",
+          "Accept-Encoding": "gzip, deflate, br",
+          "Accept-Language": "zh-cn",
+          "Connection": "keep-alive",
+          "User-Agent": "jdapp;iPhone;10.0.6;14.4;c67093f5dd58d33fc5305cdc61e46a9741e05c5b;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
+          "Referer": "https://wqs.jd.com/my/jingdou/my.shtml?sceneval=2"
+        }
+      },
+      "isLogin1": {
+        "url": "https://wq.jd.com/user/info/QueryJDUserInfo?sceneval=2",
+        "method": "POST",
+        "headers": {
+          "Accept": "application/json,text/plain, */*",
+          "Accept-Encoding": "gzip, deflate, br",
+          "Accept-Language": "zh-cn",
+          "Connection": "keep-alive",
+          "Referer": "https://wqs.jd.com/my/jingdou/my.shtml?sceneval=2"
+        }
+      },
+      "api": {
+        "url": "https://api.m.jd.com/client.action"
+      },
+      "gitter": {
+        "url": "https://gitter.im"
+      },
+      "jdjr": {
+        "url": "https://ms.jr.jd.com"
+      }
+    },
+    "uaInfo": {
+      "UA1": {
+        "ua": "jdapp;iPhone;10.0.6;14.4;c67093f5dd58d33fc5305cdc61e46a9741e05c5b;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1"
+      }
+    },
+    "controller": {
+      "callList": [
+        "init",
+        "promote_getHomeData",
+        "promote_getTaskDetail",
+        "promote_pk_getHomeData",
+        "promote_pk_collectPkExpandScore"
+      ],
+      "taskList": [
+        { "提示:丢骰子任务完善中": "update" },
+        { "获取云端助力码": "getHelpCode" },
+        { "做助力任务": "help" },
+        { "做组队任务": "pkHelp" },
+        { "收金币": "promote_collectAutoScore" },
+        { "做主任务": "doTaskController" },
+        { "领取累计奖励": "promote_getBadgeAward" },
+        { "↓↓↓下面任务正在开发测试中↓↓↓": "cloudTip" },
+        { "每日签到": "promote_sign" },
+        { "抽奖": "promote_raise" }
       ]
     }
   },
