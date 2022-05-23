@@ -964,11 +964,11 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`promote_getTaskDetail`, body);
       break;
     case 'promote_collectAutoScore':
-      body = `functionId=promote_collectAutoScore&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"RAhomePageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=m&clientVersion=1.0.0`
+      body = `functionId=promote_collectAutoScore&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"RAhomePageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=m&appid=signed_wh5&clientVersion=1.0.0`
       myRequest = getPostRequest(`promote_collectAutoScore`, body);
       break;
     case 'promote_getFeedDetail':
-      body = `functionId=promote_getFeedDetail&body={"taskId":"${$.taskId}"}&client=m&clientVersion=1.0.0`;
+      body = `functionId=promote_getFeedDetail&body={"taskId":"${$.taskId}"}&client=m&appid=signed_wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`promote_getFeedDetail`, body);
       break;
     case 'promote_collectScore':
@@ -976,7 +976,7 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`promote_collectScore`, body);
       break;
     case 'promote_getBadgeAward':
-      body = `functionId=promote_getBadgeAward&body={"awardToken":"${$.awardToken}"}&client=m&clientVersion=1.0.0`;
+      body = `functionId=promote_getBadgeAward&body={"awardToken":"${$.awardToken}"}&client=m&appid=signed_wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`promote_getBadgeAward`, body);
       break;
     case 'help':
@@ -1001,38 +1001,38 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`zoo_pk_collectScore`, body);
       break;
     case 'oneTaskHandle':
-      body = `functionId=promote_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"RAhomePageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=m&clientVersion=1.0.0`;
+      body = `functionId=promote_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"RAhomePageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=m&appid=signed_wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`promote_collectScore`, body);
       break;
     case 'promote_sign':
-      body = `functionId=promote_sign&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"RAhomePageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=m&clientVersion=1.0.0`;
+      body = `functionId=promote_sign&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"RAhomePageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=m&appid=signed_wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`promote_sign`, body);
       break;
     case 'promote_getSignHomeData':
-      body = `functionId=promote_getSignHomeData&body={}&client=m&clientVersion=1.0.0`;
+      body = `functionId=promote_getSignHomeData&body={}&client=m&appid=signed_wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`promote_getSignHomeData`, body);
       break;
     case 'promote_raise':
-      body = `functionId=promote_raise&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"RAhomePageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=m&clientVersion=1.0.0`;
+      body = `functionId=promote_raise&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"RAhomePageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=m&appid=signed_wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`promote_raise`, body);
       break;
     case 'getAppId':
-      body = `functionId=factory_getStaticConfig&appid=wh5&clientVersion=1.0.0&body={"encryptActivityId":"${$.oneShop}","channelId":1}`
+      body = `functionId=factory_getStaticConfig&appid=signed_wh5&appid=signed_wh5&clientVersion=1.0.0&body={"encryptActivityId":"${$.oneShop}","channelId":1}`
       otherUrl = 'https://api.m.jd.com/'
       myRequest = getPostRequest(`factory_getStaticConfig`, body, otherUrl);
       break;
     case 'getShopHomeData':
-      body = `functionId=template_mongo_getHomeData&appid=wh5&clientVersion=1.0.0&body={"taskToken":"","appId":"${$.appId}","channelId":1}`;
+      body = `functionId=template_mongo_getHomeData&appid=signed_wh5&clientVersion=1.0.0&body={"taskToken":"","appId":"${$.appId}","channelId":1}`;
       otherUrl = 'https://api.m.jd.com/'
       myRequest = getPostRequest(`template_mongo_getHomeData`, body, otherUrl);
       break;
     case 'doOneShopTask':
-      body = `functionId=template_mongo_collectScore&appid=wh5&clientVersion=1.0.0&body={"taskToken":"${$.taskToken}","taskId":${$.taskId},"actionType":0,"appId":"${$.appId}","safeStr":"{\\"random\\":\\"\\",\\"sceneid\\":\\"HYJGJSh5\\",\\"log\\":\\"\\"}"}`;
+      body = `functionId=template_mongo_collectScore&appid=signed_wh5&clientVersion=1.0.0&body={"taskToken":"${$.taskToken}","taskId":${$.taskId},"actionType":0,"appId":"${$.appId}","safeStr":"{\\"random\\":\\"\\",\\"sceneid\\":\\"HYJGJSh5\\",\\"log\\":\\"\\"}"}`;
       otherUrl = otherUrl = 'https://api.m.jd.com/client.action'
       myRequest = getPostRequest(`template_mongo_collectScore`, body, otherUrl);
       break;
     case `doShopLottery`:
-      body = `functionId=template_mongo_lottery&appid=wh5&clientVersion=1.0.0&body={"appId":"${$.appId}","fragmentId":${$.fragmentId}}`;
+      body = `functionId=template_mongo_lottery&appid=signed_wh5&clientVersion=1.0.0&body={"appId":"${$.appId}","fragmentId":${$.fragmentId}}`;
       otherUrl = 'https://api.m.jd.com/'
       myRequest = getPostRequest(`template_mongo_lottery`, body, otherUrl);
       break;
@@ -1071,7 +1071,7 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`jdjrDoTask`, body, otherUrl);
       break;
     case 'browseProducts':
-      body = `functionId=promote_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"RAhomePageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=m&clientVersion=1.0.0`;
+      body = `functionId=promote_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"RAhomePageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=mappid=signed_wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`promote_collectScore`, body);
       break;
     case 'jm_promotion_queryPromotionInfoByShopId':
