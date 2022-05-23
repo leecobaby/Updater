@@ -1262,7 +1262,7 @@
     ]
   },
   "FarmSingle": {
-    "version": "数据最后更新于:5.23.1",
+    "version": "数据最后更新于:5.23.2",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fsUESve",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fsUESve",
@@ -1372,6 +1372,9 @@
           "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=971&sourceType=other&hd_from_id=100085&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
+            "12481 expo_525_123084_12481_0",
+            "17734 cloudsail_278_125400501040001_17734_0",
+            "18501 other_525_652011_18501_0",
             "8349 other_461_0_8349_0",
             "22356 other_463_652011_22356_0",
             "18125 cloudsail_462_-311404574_18125_0",
