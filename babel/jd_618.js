@@ -1071,7 +1071,7 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`jdjrDoTask`, body, otherUrl);
       break;
     case 'browseProducts':
-      body = `functionId=promote_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"RAhomePageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=mappid=signed_wh5&clientVersion=1.0.0`;
+      body = `functionId=promote_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"RAhomePageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=m&appid=signed_wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`promote_collectScore`, body);
       break;
     case 'jm_promotion_queryPromotionInfoByShopId':
