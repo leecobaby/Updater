@@ -54,7 +54,7 @@ function init () {
   } else {
     $.pkHelpList = []
   }
-  if (new Date().getHours() >= 9 && new Date().getHours() <= 11) {
+  if (new Date().getHours() >= 9 && new Date().getHours() <= 13) {
     $.pkHelpList.push('-HE-pbNob1yTsk9qTd4r0L7vzOL3QmxIKuqyOHpHexKQK969qM2Iru8b')
   }
   // 处理膨胀码
