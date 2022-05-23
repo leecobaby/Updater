@@ -1262,7 +1262,7 @@
     ]
   },
   "FarmSingle": {
-    "version": "数据最后更新于:5.22.1",
+    "version": "数据最后更新于:5.23.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fsUESve",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fsUESve",
@@ -1363,6 +1363,29 @@
           "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=2349&sourceType=other&hd_from_id=100004&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": ["20700 other_468_662005_20700_0"]
+        }
+      },
+      {
+        "tmall": {
+          "title": "旧版任务",
+          "type": "other",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=971&sourceType=other&hd_from_id=100085&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "8349 other_461_0_8349_0",
+            "22356 other_463_652011_22356_0",
+            "18125 cloudsail_462_-311404574_18125_0",
+            "12585 expo_462_123083_12585_0",
+            "15891 other_449_398011_15891_0",
+            "16868 other_449_440001_16868_0",
+            "16847 other_235_424002_16847_0",
+            "18501 other_449_635005_18501_0",
+            "8273 other_449_62009_8273_0",
+            "12768 other_449_62009_8273_1",
+            "12768 other_0_173001_12768_0",
+            "7936 cloudsail_462_3901378244_7936_0",
+            "8275 other_468_0_8275_0"
+          ]
         }
       }
     ]
@@ -1786,10 +1809,14 @@
   },
   "share": {
     "抢购助手": "https://www.icloud.com/shortcuts/64b5f93e1119403da44ac3ddd5ad8bf0",
-    "🔥 淘特新活动": {
-      "🧧 淘宝特价版新人0.1元购": "taobao://m.tb.cn/h.ffZx3Aq",
-      "🔥 淘特厂家直营无差价": "taobao://m.tb.cn/h.fT5Y4a1"
+    "🔥 优惠券凑单入口": {
+      "🧧 淘宝特价版新人0.1元购": "taobao://m.tb.cn/h.ftRAxLK",
+      "🎟 猫超88-5": "taobao://m.tb.cn/h.fH8o5uK",
+      "🎟 猫超618领券页": "taobao://m.tb.cn/h.fG8Il1M",
+      "🎟 猫超140-10": "taobao://pages.tmall.com/wow/an/cs/act/wupr?suid=48042081-7722-458B-8494-452B13ED6559&type=2&sp_tk=d3dqSlh0UHJjbFg&wh_biz=tm&_afc_link=1&_tbScancodeApproach_=scan&bxsign=scdOIs4FL3-nB9maRBEbamfz83BY8EI6I7cW5t6QBuz224wsq0FD47p-62rEra3ViNW2SHi14CBGuvhSd8Q8F04ibcdMbUhLMssrToeq86fBHU&u_channel=1-23037862&un=a15f829a2d3121aa6eabd07a58355624&disableNav=YES&sm=341011&shareurl=true&share_crt_v=1&ut_sk=1.YYfBaw6aRo0DAEHab7QPc2HG_21380790_1645346298850.Copy.chaoshi_act_page_tb&tk_cps_param=45076408&app=chrome&ali_trackid=2:mm_35485816_1369900328_110107500376:1645347078_126_697213938&ybhpss=cGd1aWQ9WEw2LzJMbDRrSEFEQURJT0szL0c5WFNUJmlkZW50aXR5PXRyYWRlJnR0aWQ9MjAxNF8wXzIzMDM3ODYyJTQwYmFpY2h1YW5faXBob25lXzQuMC4xLjA=&cpp=1&e=Mfpdh3fnnxNSKXwj4cEot1c6fWiIfQKG2k9eQERuheHWNx-703ryotNEGmlUbz_88ardyBxMhqh1XHQwsubvHC_IAR7ok-np8sviUM61dt32hdsVAxGbnVPl9b5CMYR-HElmxv-yBdiHH-GrP076maYkaEr0YjjVNUFkP41NGaA5cI_t3MRA4iq6CV4GH8V3Vz5kw8gl64oGZ3PtzF1lKW8dib3c3EYWUDYWruCX3MoDRb1Etzp3Lw&union_lens=recoveryid:1645347078_126_697213938&idfa=4F950A5A-5B5A-4539-979E-8357BC7710D1&wh_pid=act/chubao&surge_ssr=true&ttid=201200@taobao_iphone_10.8.10&umpChannel=1-23037862&async=false&spm=a2159r.13376460.0.0&cv=Tw4v2YfksuK&tkFlag=0&sourceType=other&short_name=b.41FnoT&sdkVersion=4.0.1.0&utparamcnt="
     },
+    "🔥 预售立减5.24日20点开启": "taobao://m.tb.cn/h.fG8rEOa",
+    "🧧 5.30日超红来袭": "taobao://m.tb.cn/h.fG8rEOa",
     "🎯 活动入口页": {
       "芭芭农场": "taobao://pages.tmall.com/wow/hdwk/act/2020nhj-single?wh_biz=tm&disableNav=YES",
       "淘金币": {
@@ -1809,8 +1836,7 @@
         " Apple Stor教育优惠 - 没购买过的基本可以优惠价购机": "https://www.apple.com.cn/cn-k12/store?afid=p239%7C22788&cid=aos-cn-aff-ir"
       },
       "🛒 亚马逊": {
-        "亚马逊中国 - 促销实打实": "com.amazon.mobile.shopping.web://www.amazon.cn/blackfriday?ascsubtag=106689422x2376325959&tag=topcb1725-23",
-        "亚马逊中国 - 硬盘好价": "com.amazon.mobile.shopping.web://www.amazon.cn/?ascsubtag=106689422x1776331251&tag=topcb1725-23"
+        "亚马逊中国 - 电子促销": "com.amazon.mobile.shopping.web://www.amazon.cn/?ascsubtag=106689422x1799729106&node=1403206071&tag=topcb1725-23"
       },
       "1Password": {
         "🔥 1password 个人版注册 免费半年": "https://start.1password.com/sign-up/?c=SWITCH&cjevent=ca95688b5be511ec80ef3a530a18050d&utm_medium=affiliate&utm_source=TopCashback+%28USA%29+INC&utm_campaign=3474636&utm_content=5464610&utm_term=1Password+702x134+Logo&cjdata=MXxOfDB8WXwxNjQ5NzQ4MzA0NjA3",
