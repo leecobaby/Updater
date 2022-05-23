@@ -55,7 +55,7 @@ function init () {
     $.pkHelpList = []
   }
   if (new Date().getHours() >= 9 && new Date().getHours() <= 11) {
-    $.pkHelpList.push('E7unasWZHoZIX1kYiw8sbLbDzBTAz9WH22-dryVy9Pl-4zHBWpnA0Jc')
+    $.pkHelpList.push('-G2_WFL8jJ2ehXtlbdayCJLb')
   }
   // 处理膨胀码
   if ($.pkExpandList) {
@@ -64,7 +64,7 @@ function init () {
   } else {
     $.pkExpandList = []
   }
-  $.pkExpandList.push('PKASTT0195L6r47PBTNYCtIMjDX0CTdWnIaRzTwjeQOc')
+  $.pkExpandList.push('-G2_WFL8jJ2ehXtlbdayCJLb')
 
   // 处理沸腾之夜助力码
   if ($.partyHelpList) {
@@ -74,7 +74,7 @@ function init () {
     $.partyHelpList = []
   }
   if (new Date().getHours() >= 8 && new Date().getHours() <= 20) {
-    $.pkHelpList.push('m2telgJiWVSZTvQtmTwGzKlOX6368EtbQXHJOCrQbW75rR9rigmZmwE')
+    $.pkHelpList.push('-G2_WFL8jJ2ehXtlbdayCJLb')
   }
 
   // 自变量
