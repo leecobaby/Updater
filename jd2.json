@@ -574,16 +574,16 @@
         "promote_pk_collectPkExpandScore"
       ],
       "taskList": [
-        { "提示:丢骰子任务完善中": "update" },
+        { "提示:做不完任务请多运行几次": "update" },
         { "获取云端助力码": "getHelpCode" },
         { "做助力任务": "help" },
         { "做组队任务": "pkHelp" },
         { "收金币": "promote_collectAutoScore" },
         { "做主任务": "doTaskController" },
         { "领取累计奖励": "promote_getBadgeAward" },
-        { "↓↓↓下面任务正在开发测试中↓↓↓": "cloudTip" },
+        { "抽奖": "promote_raise" },
         { "每日签到": "promote_sign" },
-        { "抽奖": "promote_raise" }
+        { "任务功能持续更新中...": "cloudTip" }
       ]
     }
   },
