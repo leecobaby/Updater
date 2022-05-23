@@ -1013,7 +1013,7 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`promote_getSignHomeData`, body);
       break;
     case 'promote_raise':
-      body = `functionId=promote_raise&body={"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"RAhomePageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=m&appid=signed_wh5&clientVersion=1.0.0`;
+      body = `functionId=promote_raise&body={"scenceId":1,"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"RAhomePageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=m&appid=signed_wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`promote_raise`, body);
       break;
     case 'getAppId':
@@ -1212,9 +1212,16 @@ function dealReturn (type, data) {
       break;
     case 'promote_raise':
       if (data.code === 0 && data.data?.bizCode === 0) {
-        $.message = `升级成功`
+        if (data.data?.result?.levelUpAward?.type === 1) {
+          $.message = `抽奖成功，获得${data.data?.result?.levelUpAward?.redNum || 0}份分红`
+        } else if (data.data?.result?.levelUpAward?.type === 2) {
+          $.message = `抽奖成功，获得${data.data?.result?.levelUpAward?.card?.name || '卡片'}`
+        } else if (data.data?.result?.levelUpAward?.type === 2) {
+          $.message = `抽奖成功，获得一份数字藏品`
+        }
+
       } else {
-        $.message = `升级失败，金币不足`
+        $.message = `抽奖失败，金币不足`
         $.raiseStatus = 1
       }
       break;
