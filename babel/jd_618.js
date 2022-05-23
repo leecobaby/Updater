@@ -64,7 +64,7 @@ function init () {
   } else {
     $.pkExpandList = []
   }
-  $.pkExpandList.push('-G2_WFL8jJ2ehXtlbdayCJLb')
+  $.pkExpandList.push('PKASTT0195L6r47PBTNYCtIMjDX0CTdWmYaRzTQjeQOc')
 
   // 处理沸腾之夜助力码
   if ($.partyHelpList) {
