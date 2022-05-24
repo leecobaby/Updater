@@ -1013,7 +1013,7 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`promote_getSignHomeData`, body);
       break;
     case 'promote_raise':
-      body = `functionId=promote_raise&body={"scenceId":1,"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"RAhomePageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=m&appid=signed_wh5&clientVersion=1.0.0`;
+      body = `functionId=promote_raise&body={"scenceId":2,"ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"RAhomePageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}"}&client=m&appid=signed_wh5&clientVersion=1.0.0`;
       myRequest = getPostRequest(`promote_raise`, body);
       break;
     case 'getAppId':
