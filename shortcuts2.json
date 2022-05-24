@@ -395,27 +395,27 @@
     }
   },
   "1111ys": {
-    "version": "1.2",
-    "update_log": "- 新增 超红攒福气自动浏览任务",
+    "version": "1.3",
+    "update_log": "-- 新增 更多资源线路\n- 修复 云端资源无法访问问题",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/1111ys",
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/37db740153d449db8d5aecca327fa5e5",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "🔥超红攒福气赢红包和福气卡,福气卡可抽大奖~",
+    "notice": "🔥超级争霸赛做完任务可得无门槛红包~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
-    "automation_url": "shortcuts://run-shortcut?name=淘宝超红攒福气自动任务&input=text&text=task",
+    "automation_url": "shortcuts://run-shortcut?name=淘宝超级争霸赛自动任务&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tb_wzzb.jpg",
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 抢超级红包...",
+      "hot": "",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 1.8日抢现金红包"
+      "more": "🔥 新群开放"
     }
   },
   "1111": {
