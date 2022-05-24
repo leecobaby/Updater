@@ -214,12 +214,12 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 双12活动中...",
+      "hot": "",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 1.8日抢现金红包"
+      "more": "🔥 新群开放"
     }
   },
   "FarmSingle": {
@@ -248,7 +248,7 @@
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": ""
+      "more": "🔥 新群开放"
     }
   },
   "Qmxb": {
@@ -761,7 +761,7 @@
       "set": "",
       "help": "提交你的助力码",
       "other": "若一直无法运行请修复指令",
-      "more": ""
+      "more": "🔥 新群开放"
     }
   },
   "Alipay_wufu": {
@@ -812,10 +812,10 @@
     },
     "more1": {
       "👾 加入QQ频道": "https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&inviteCode=17PQr8&from=181074&biz=ka&shareSource=5",
-      "👥 加入TG讨论群": "https://t.me/xuehaushe_chat",
+      "👥 加入QQ讨论群新群": "https://jq.qq.com/?_wv=1027&k=RMVf1iP5",
       "👥 加入QQ情报群": "https://jq.qq.com/?_wv=1027&k=tx5Mzgh2",
       "📱 其他捷径作品": "https://github.com/leecobaby/shortcuts",
-      "🧧 外卖红包 升级": {
+      "🧧 外卖红包 618": {
         "美团红包   最高领66元礼包": {
           "已安装app": "imeituan://www.meituan.com/web?lch=cps:waimai:3:a144a9fa40a42c55af00214bb4bb3993971:6232dingdanxialeeco:2:70690&url=https%3A%2F%2Fclick.meituan.com%2Ft%3Ft%3D1%26c%3D1%26p%3DOWMpZ-uzIFOVe6JyOONs3dXuqV0qcAf-r-KCvHdXiNfM3oMXlDSgQ1lHQ7sc1bHIMXeq2XWRYP9S3VMvpbQU5suS6wIbvlY8ysKwoMucfvM-rF8Z3mNwVvDHIKVKMsgutBrr4QPAU-C_JAUQdcIGegPhA5pbiaJPBOlV_2ElhVrcWrcWxBNlqgy-azTgeuR39HLNf98hLOWEGKBDtwCamOqsJP1LLMGBuAOnfqvhqVpmOiuf2Grl8rQIjgXTpd-9hOnDON0X3YxM7kdoJCRmSis2PTLenraGrNz5ViEm8KjiXNM3vBmZ8YSUoNjoiCjP8p8fRrf7uXM2SvjABJxuflK0_ogBMj-5YH-n4hr8dW-If4ulIdQYa6FGfQ0wgLaHtMVPuoy42RYF-BZ7NsaYjbxSYy5duCSxIJLGrdqIVhFHeJkRT5MGDOXn1bf58GE8oUnmCXZ4BU0FwKjAf2QgbwXqgfp8t6YZjfKmXNSomEW1NZJF7XYewE6OFFCl6qGkCGc3dgSAjj1UhCZ0BoljZx6zxMgxRv3oJ0EePeqkyDgekdSBbU-zUSW-C7HiXVEFHoU955N0M8A_hQJv5ScS5lJqqumIL2k4S4VAUucCbmo1UOjRyJ2wpDveI4iwCFTr5RIxT8aoT2fgKQZWBwpD6v3MZ-td3z0E_aU9a2lLsyIweu9PfPngn4JqLbd6BEpLuM0XFzanyV5BRWXa9VtvNO3Qm070mTjozv7xbIo_boM",
           "未安装app": "https://click.meituan.com/t?t=1&c=1&p=OWMpZ-uzIFOVe6JyOONs3dXuqV0qcAf-r-KCvHdXiNfM3oMXlDSgQ1lHQ7sc1bHIMXeq2XWRYP9S3VMvpbQU5suS6wIbvlY8ysKwoMucfvM-rF8Z3mNwVvDHIKVKMsgutBrr4QPAU-C_JAUQdcIGegPhA5pbiaJPBOlV_2ElhVrcWrcWxBNlqgy-azTgeuR39HLNf98hLOWEGKBDtwCamOqsJP1LLMGBuAOnfqvhqVpmOiuf2Grl8rQIjgXTpd-9hOnDON0X3YxM7kdoJCRmSis2PTLenraGrNz5ViEm8KjiXNM3vBmZ8YSUoNjoiCjP8p8fRrf7uXM2SvjABJxuflK0_ogBMj-5YH-n4hr8dW-If4ulIdQYa6FGfQ0wgLaHtMVPuoy42RYF-BZ7NsaYjbxSYy5duCSxIJLGrdqIVhFHeJkRT5MGDOXn1bf58GE8oUnmCXZ4BU0FwKjAf2QgbwXqgfp8t6YZjfKmXNSomEW1NZJF7XYewE6OFFCl6qGkCGc3dgSAjj1UhCZ0BoljZx6zxMgxRv3oJ0EePeqkyDgekdSBbU-zUSW-C7HiXVEFHoU955N0M8A_hQJv5ScS5lJqqumIL2k4S4VAUucCbmo1UOjRyJ2wpDveI4iwCFTr5RIxT8aoT2fgKQZWBwpD6v3MZ-td3z0E_aU9a2lLsyIweu9PfPngn4JqLbd6BEpLuM0XFzanyV5BRWXa9VtvNO3Qm070mTjozv7xbIo_boM"
@@ -823,11 +823,9 @@
         "饿了么红包  最高领31元礼包": {
           "平台礼包-淘宝": "taobao://s.click.ele.me/ZyZm0hu",
           "平台礼包-支付宝": "alipays://platformapi/startapp?appId=20000067&url=https%3A%2F%2Fs.click.ele.me%2FZyZm0hu",
-          "联盟红包-饿了么": "eleme://web?url=https%3A%2F%2Ftb.ele.me%2Fwow%2Falsc%2Fmod%2Fd5275789de46503ba0908a9d%3Fe%3D1%26open_type%3Dminiapp%26inviterId%3D74f86c%26actId%3D1%26_ltracker_f%3Dhjb_app_grzx%26chInfo%3Dch_app_chsub_Photo"
+          "联盟红包-饿了么APP": "eleme://web?url=https%3A%2F%2Fm.tb.cn%2Fh.fGoJMMr"
         }
-      },
-      "🧧 支付宝现金红包": "alipays://platformapi/startapp?appId=20000067&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fc%2Falipay-red-qrcode%2Fshared.html%3Fchannel%3Dsearch_pwd%26shareId%3D2088102986032700%26token%3D11w194707wxbnqkmg21ke2d%26campStr%3DkPPFvOxaCL3f85TiKss2wsBZgIjulHjG%26sign%3Dlj1gjQ8PxzMbaRNG5RKOee%2FhckXIyodWvTJbBTYOleI%3D%26chInfo%3Dsousuoma%26c_stype%3Dsearch_pwd",
-      "🧧 现金红包 - 1.15开抢": "taobao://m.tb.cn/h.fkLMFm2"
+      }
     },
     "more2": {
       "👾 加入QQ频道": "https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&inviteCode=17PQr8&from=181074&biz=ka&shareSource=5",
@@ -837,7 +835,7 @@
       "🧧 现金红包-1.15": "taobao://m.tb.cn/h.fkLMFm2",
       "平台红包": {
         "饿了么现金红包": "taobao://m.tb.cn/h.4hbqRud",
-        "支付宝现金红包": "taobao://m.tb.cn/h.VzY0yti"
+        "🧧 支付宝现金红包": "alipays://platformapi/startapp?appId=20000067&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fc%2Falipay-red-qrcode%2Fshared.html%3Fchannel%3Dsearch_pwd%26shareId%3D2088102986032700%26token%3D11w194707wxbnqkmg21ke2d%26campStr%3DkPPFvOxaCL3f85TiKss2wsBZgIjulHjG%26sign%3Dlj1gjQ8PxzMbaRNG5RKOee%2FhckXIyodWvTJbBTYOleI%3D%26chInfo%3Dsousuoma%26c_stype%3Dsearch_pwd"
       }
     }
   }
