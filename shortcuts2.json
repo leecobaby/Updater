@@ -200,8 +200,8 @@
     }
   },
   "Hlzx": {
-    "version": "1.6",
-    "update_log": "- 更新 优化小屏手机显示效果\n- 更新 多语言环境适配\n- 更新 活动大厅细节，增加活动入口引导\n- 更新 优化 ios15.1 启动速度，加快 500%",
+    "version": "1.7",
+    "update_log": "- 新增 更多资源线路\n- 修复 云端资源无法访问问题",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Hlzx",
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
