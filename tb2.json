@@ -1814,14 +1814,13 @@
       "芭芭农场": "taobao://pages.tmall.com/wow/hdwk/act/2020nhj-single?wh_biz=tm&disableNav=YES",
       "淘金币": {
         "主页": "taobao://pages.tmall.com/wow/z/tmtjb/town/home?disableNav=YES",
-        "任务页（旧）": "taobao://pages.tmall.com/wow/z/tmtjb/town/task?wh_biz=tm&disableNav=YES",
-        "任务页（新）": "taobao://pages.tmall.com/wow/z/tmtjb/town/tasklist-v2?wh_biz=tm&disableNav=YES"
+        "任务页": "taobao://pages.tmall.com/wow/z/tmtjb/town/tasklist-v2?wh_biz=tm&disableNav=YES"
       },
       "聚划算章鱼": "taobao://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?wh_pid=daily-192654&disableNav=YES",
       "活力中心": "taobao://pages.tmall.com/wow/z/hdwk/hdsolution2/game2020?wh_biz=tm&disableNav=YES&disableProgress=YES",
       "淘宝签到": "taobao://pages.tmall.com/wow/z/mit/hbqd/welfare4",
       "天天领红包": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fan%2Ftmall%2Fuser-growth%2Fplay-tmall%3FdisableNav%3DYES",
-      "种草机": "taobao://decenter.m.taobao.com/wow/z/guang/20211212/home?disableNav=YES&sourceType=other&pha=true"
+      "超级争霸赛": "taobao://m.tb.cn/h.fGKPpGy"
     },
     "其他活动": {
       " Apple": {
