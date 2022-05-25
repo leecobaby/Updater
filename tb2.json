@@ -1700,7 +1700,7 @@
     ]
   },
   "ele_dou": {
-    "version": "数据最后更新于:1.20.1",
+    "version": "数据最后更新于:5.26.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f57BIpL%3Fsm%3D4560b2",
       "alipay": "alipays://platformapi/startapp?appId=2021001110676437&page=pages/my/index",
@@ -1732,7 +1732,7 @@
           "title": "领券",
           "type": "other",
           "activateUrl": "https://tb.ele.me/wow/alsc/mod/d5275789de46503ba0908a9d?e=1&open_type=miniapp&inviterId=74f86c&actId=1&_ltracker_f=hjb_app_grzx&chInfo=ch_app_chsub_Photo5",
-          "taskUrl": "https://m.tb.cn/h.f9i9vhA",
+          "taskUrl": "https://m.tb.cn/h.fGoJMMr",
           "textEnd": "str1",
           "item": ["1 PAGEVIEW"]
         }
@@ -1745,27 +1745,28 @@
           "taskUrl": "https://tb.ele.me/wow/alsc/mod/156e0df0c951c793ab121f2e?missioncollectid=36&missionid=占位符1&taskfrom=a2ogi.15063444&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.3",
           "textEnd": "str1",
           "item": [
-            "3110002 PAGEVIEW",
-            "4018001 PAGEVIEW",
-            "3092002 PAGEVIEW",
+            "4926001 PAGEVIEW",
+            "5500002 PAGEVIEW",
+            "3780001 PAGEVIEW",
             "3340001 PAGEVIEW",
             "342001 PAGEVIEW",
-            "2020001 PAGEVIEW",
-            "1034001 PAGEVIEW",
-            "476001 PAGEVIEW",
-            "2484001 PAGEVIEW",
-            "228003 PAGEVIEW",
-            "236002 PAGEVIEW",
+            "5694001 PAGEVIEW",
+            "4988001 PAGEVIEW",
             "3030001 SIMPLESIGNIN",
+            "5458001 SIMPLESIGNIN",
             "4242001 SIMPLESIGNIN",
-            "3500001 SIMPLESIGNIN",
-            "3260001 SIMPLESIGNIN",
-            "3266001 SIMPLESIGNIN",
-            "1130001 SIMPLESIGNIN",
             "3226001 SIMPLESIGNIN",
+            "4642001 SIMPLESIGNIN",
+            "5792002 SIMPLESIGNIN",
+            "4932001 SIMPLESIGNIN",
             "234001 SIMPLESIGNIN",
-            "1150001 SIMPLESIGNIN",
-            "1390001 SIMPLESIGNIN"
+            "4970001 SIMPLESIGNIN",
+            "5850001 SIMPLESIGNIN",
+            "3500001 SIMPLESIGNIN",
+            "4702001 SIMPLESIGNIN",
+            "4708001 SIMPLESIGNIN",
+            "5744002 SIMPLESIGNIN",
+            "4182001 SIMPLESIGNIN"
           ]
         }
       }
