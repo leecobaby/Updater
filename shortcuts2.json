@@ -496,14 +496,14 @@
     }
   },
   "ele_dou": {
-    "version": "1.1",
-    "update_log": "- 实现 饿了么、支付宝、淘宝端 3 账号任务",
+    "version": "1.2",
+    "update_log": "- 新增 多条资源线路\n- 更新 任务活动数据",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/ele_dou",
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/4783ca708ad546bf87302dfbac52cfad",
+    "update": "https://www.icloud.com/shortcuts/f7fd014d42e3427eadbdda2f3c900af3",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "逛代码页为正常现象，请不要停止他~\nios15第一次运行需要多次授权~",
+    "notice": "逛代码页为正常现象，请不要停止他~\n支持饿了么、支付宝、淘宝端 3 账号任务",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=饿了么-自动领豆&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
@@ -516,7 +516,7 @@
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 1.8日抢现金红包"
+      "more": "🔥 新群开放"
     }
   },
   "cainiao_guo": {
@@ -747,7 +747,7 @@
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/5693f04f6d274e7bb37a1f32537237f9",
-    "notice": "🎉 已支持京东618部分任务，持续更新中...",
+    "notice": "🎉 已支持京东618部分任务，持续更新中...\n部分火爆的同学先手动，等待更新~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-618自动任务&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd2.jpeg",
