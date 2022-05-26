@@ -657,16 +657,16 @@
     }
   },
   "JD_fruit": {
-    "version": "1.5",
-    "update_log": "- 新增 云端助力池，互助模块\n- 修复 多账号运行的一些神奇 bug\n- 修复 通过 AutoBox 无法正常运行的 bug\n- 修复 Alook 获取到的 Cookie 无法识别的 bug",
+    "version": "1.6",
+    "update_log": "- 重构 指令云端架构，逻辑执行器更精简快速，减少网络压力\n- 重构 指令架构，弃用部分无意义功能",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_fruit#版本日志"
     },
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/7e334a0db9c2486385674f9a9b7c8d10",
-    "notice": "🧧 活动大厅有京东年货节专属红包\n任务功能将会逐步完善，通过云端推送",
+    "update": "https://www.icloud.com/shortcuts/6edb30b5eb014e10b5414f1926b8bae5",
+    "notice": "🧧 关注活动大厅推送618京享红包\n任务功能将会逐步完善，通过云端推送",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-东东农场&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd2.jpeg",
@@ -675,12 +675,12 @@
     "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_fruit/",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 年货节专属红包",
+      "hot": "🧧 京享红包将来袭...",
       "faq": "有疑问的请查看",
       "set": "使用前先授权",
       "team": "",
       "other": "",
-      "more": "🧧 1.8日抢现金红包"
+      "more": "🔥 新群开放"
     }
   },
   "JD_travel": {
