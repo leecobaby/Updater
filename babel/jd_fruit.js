@@ -121,6 +121,7 @@ function friendListInitForFarm () {
 // 获取助力池数据
 function getHelpCode () {
   $.callback = 'Func.request'
+  $.modules = 1 // 引入模块
   takeRequest('getHelpCode');
   return
 
@@ -1069,6 +1070,7 @@ function dealReturn (type, data) {
       // 将助力池的助力码添加进助力列表
       $.inviteList = $.inviteList.concat(list)
       $.message = `已从云端助力池获取到3条助力码追加到助力列表。助力列表预览：${JSON.stringify($.inviteList)}`
+      $.modules = 0 // 取消模块
       break;
     default:
       $.error = `未判断的异常${type}`
