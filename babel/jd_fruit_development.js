@@ -124,6 +124,7 @@ function friendListInitForFarm () {
 // 获取助力池数据
 function getHelpCode () {
   $.callback = 'Func.request'
+  $.modules = 1 // 引入模块
   takeRequest('getHelpCode');
   return
 
@@ -248,6 +249,7 @@ function browseAdTaskForFarm () {
   $.callback = ''
   dealReturn('browseAdTaskForFarm', $.data)
   if ($.browseResult.code === '0') {
+    $.data = {}, $.browseResult = {} // 防止此处有换行符出错
     $.wait = 6
     $.next = 1 // 覆盖前面的 0
     $.taskType = 1 // 领奖励
@@ -318,7 +320,8 @@ function doSurplusWater () {
       doSurplusWaterGo()
       break;
     default:
-      $.to = '', $.call.pop(), $.taskStep = 1, $.self.show = null
+      $.message = `taskStep:${$.taskStep}`
+      $.to = ''; $.call.pop(); $.taskStep = 1; $.self.show = null
       document.write(JSON.stringify($))
       break;
   }
@@ -598,7 +601,8 @@ function doSignTask () {
       }
       break;
     default:
-      $.to = '', $.call.pop(), $.taskStep = 1
+      $.to = ''; $.call.pop(); $.taskStep = 1
+      $.message = `taskStep:${$.taskStep}`
       document.write(JSON.stringify($))
       break;
   }
@@ -639,8 +643,7 @@ function gotClockInGift () {
  * 签到 - 限时任务 theme 为关注 venderCoupon 为领券
  */
 function clockInFollowForFarm (type) {
-  // 循环逻辑单独设置 to,call
-  $.to = 'Func.logicHandler';
+  // 循环逻辑单独设置 call
   $.call[$.call.length - 1] == 'clockInFollowForFarm' || $.call.push('clockInFollowForFarm')
 
   // 利用队列取代循环
@@ -648,7 +651,7 @@ function clockInFollowForFarm (type) {
   $.oneItemType = type || $.oneItemType
   if (!$.oneItem) {
     // 循环完成重新设置 to,call
-    $.to = '', $.call.pop()
+    $.call.pop()
     $.message = ` 限时任务已全都完成~`
     document.write(JSON.stringify($))
     return
@@ -1070,6 +1073,7 @@ function dealReturn (type, data) {
       // 将助力池的助力码添加进助力列表
       $.inviteList = $.inviteList.concat(list)
       $.message = `已从云端助力池获取到3条助力码追加到助力列表。助力列表预览：${JSON.stringify($.inviteList)}`
+      $.modules = 0 // 取消模块
       break;
     default:
       $.error = `未判断的异常${type}`
