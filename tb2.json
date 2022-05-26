@@ -1700,7 +1700,7 @@
     ]
   },
   "ele_dou": {
-    "version": "数据最后更新于:5.26.1",
+    "version": "数据最后更新于:5.26.2",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f57BIpL%3Fsm%3D4560b2",
       "alipay": "alipays://platformapi/startapp?appId=2021001110676437&page=pages/my/index",
@@ -1745,6 +1745,8 @@
           "taskUrl": "https://tb.ele.me/wow/alsc/mod/156e0df0c951c793ab121f2e?missioncollectid=36&missionid=占位符1&taskfrom=a2ogi.15063444&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.3",
           "textEnd": "str1",
           "item": [
+            "476001 PAGEVIEW",
+            "3030001 PAGEVIEW",
             "4926001 PAGEVIEW",
             "5500002 PAGEVIEW",
             "3780001 PAGEVIEW",
