@@ -83,7 +83,7 @@ function init () {
   $.taskStep = 1
   // 大牌店铺列表初始化
   $.shopList = [
-    '3Nim1gacyGYMAXmZ3Y2k5VBxaejJ', '46zESrwfq44GweVpStuKbRC41Hte', '2L7HSDRra3SWkaXjMuTu7t12pcD3', 'FMMgZP4rY1Jn8No6ecHX9iXeUMM', 'o1eBs9bj8uSU61u69cU23RRD1CF', 'MS542hXYyzw3kSpiRWc4541HEBq', '32SnogmGSmooYj8fjfVEYfSZQJAh', '238znECxVhPhxMo6MwBtbKymQxJ5', 'iWCMNDBk5LGH6vk3KUMjh4zDqxW', '4Cs3hEQxMxvqJPj71yboqP8bsA6W', 'hntbhJys5n6ruPgxTvnkLi6uKV1', '23ATdy5hbTTCBAb3EGg9jiLePwVt', '2mn15qhUwtay1HC9q6zzgtKQi9hE', '45jeQMDcxfrUJ4WgytKLtEanZ3aG', 'xyDmumXCUwrynUBKF3BWGgNmNJy'
+    '3L4Y8VrXebhVSEvGrgU5fpg161rR', '32Y74aK18EpCbkNKAhKTPEnssWoa', '39dthYhnmeurVR9evds5nfAjb7HG', '3CqSeX5Xk5mkSf3JdxTHXUyv5Pjf', '41Mv3wpavhnUhbQZV8LpHZiAbrhW', '42WibGHTZMqxm86QU8FwEBqaVeyP', 'e5VmJkHwW44wGrrzKbYmNEvjTVY', 'Z2pzsvTpGDBx1Emt22Dr5t6roWW', '2qMukyBHLBF8paz7dFk5mNf8XCEu', 'CPM3KPADJXiKy7D1vQhkx9MLLC4', '3CgyitoYnXUyjpiGLNKzti267sNY'
   ]
   // 丢骰子店铺列表初始化
   $.diceShopList = ['11029076', '10449451', '950884', '740107', '172517', '779870', '10319518', '11631867', '30478', '1000365883', '732696', '11517924', '734316', '587934', '10045379', '1000133563', '11566049', '823590', '10117997', '11459805', '54866', '10193620', '857116', '929059', '11394479', '642850', '803181', '944814', '91207', '156784', '208700', '621174', '10031439', '10149891', '183179', '106633', '1000225308', '733072', '130162', '10115320', '10549423', '782853', '10294175', '953454', '724490', '10269575', '989359', '1000072661', '175147', '836735', '11618770', '10632623', '86155', '57885', '927596', '213793', '11643391', '714081', '11615282', '658000', '10049280', '660862', '210266', '798546', '763029', '210731', '11333097', '665686', '10103614', '731848', '1000093453', '10228557', '125357', '121317', '102094', '10106644', '10134836', '979907', '82092', '1000076326', '33245', '664743', '10203538', '212733', '10395173', '860851', '11280938', '67322', '830062', '11459415', '10310009', '1000081681', '138065', '1000005331', '11436272', '67500', '10213817', '10377129']
@@ -664,8 +664,8 @@ function doShopTask () {
     return
   }
 
-  // 重置抽检碎片 id
-  $.fragmentId = 1
+  // 重置抽奖位置 id
+  $.fragmentId = 0
   // 获取单店铺 appId
   getAppId()
 
@@ -718,6 +718,7 @@ function doOneShopTask () {
   }
 
   // 做过的任务和特殊类型则跳过重新执行 oneTask()
+  // 加购物车任务逻辑未开发，暂跳过
   if ($.oneTask?.status !== 1 || $.oneTask?.taskType === 21 || $.oneTask?.taskType === 28 || $.oneTask?.taskType === 15) {
     document.write(JSON.stringify($))
     return
@@ -1018,22 +1019,22 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`promote_raise`, body);
       break;
     case 'getAppId':
-      body = `functionId=factory_getStaticConfig&appid=signed_wh5&appid=signed_wh5&clientVersion=1.0.0&body={"encryptActivityId":"${$.oneShop}","channelId":1}`
+      body = `functionId=factory_getStaticConfig&appid=wh5&clientVersion=1.0.0&body={"encryptActivityId":"${$.oneShop}","channelId":1}`
       otherUrl = 'https://api.m.jd.com/'
       myRequest = getPostRequest(`factory_getStaticConfig`, body, otherUrl);
       break;
     case 'getShopHomeData':
-      body = `functionId=template_mongo_getHomeData&appid=signed_wh5&clientVersion=1.0.0&body={"taskToken":"","appId":"${$.appId}","channelId":1}`;
+      body = `functionId=template_mongo_getHomeData&appid=wh5&clientVersion=1.0.0&body={"taskToken":"","appId":"${$.appId}","channelId":1}`;
       otherUrl = 'https://api.m.jd.com/'
       myRequest = getPostRequest(`template_mongo_getHomeData`, body, otherUrl);
       break;
     case 'doOneShopTask':
-      body = `functionId=template_mongo_collectScore&appid=signed_wh5&clientVersion=1.0.0&body={"taskToken":"${$.taskToken}","taskId":${$.taskId},"actionType":0,"appId":"${$.appId}","safeStr":"{\\"random\\":\\"\\",\\"sceneid\\":\\"HYJGJSh5\\",\\"log\\":\\"\\"}"}`;
+      body = `functionId=template_mongo_collectScore&appid=signed_wh5&clientVersion=1.0.0&body={"taskToken":"${$.taskToken}","taskId":${$.taskId},"actionType":0,"appId":"${$.appId}","safeStr":"{\\"random\\":\\"\\",\\"sceneid\\":\\"RAGJSYh5\\",\\"log\\":\\"\\"}"}`;
       otherUrl = otherUrl = 'https://api.m.jd.com/client.action'
       myRequest = getPostRequest(`template_mongo_collectScore`, body, otherUrl);
       break;
     case `doShopLottery`:
-      body = `functionId=template_mongo_lottery&appid=signed_wh5&clientVersion=1.0.0&body={"appId":"${$.appId}","fragmentId":${$.fragmentId}}`;
+      body = `functionId=template_mongo_lottery&appid=wh5&clientVersion=1.0.0&body={"appId":"${$.appId}","fragmentId":${$.fragmentId}}`;
       otherUrl = 'https://api.m.jd.com/'
       myRequest = getPostRequest(`template_mongo_lottery`, body, otherUrl);
       break;
