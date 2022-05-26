@@ -154,6 +154,12 @@ function Next (func) {
       dealReturn('clockInFollowForFarm2', $.data)
       document.write(JSON.stringify($))
       break;
+    case 'help_next':
+      // next
+      $.callback = ''
+      dealReturn('helpInvite', $.data)
+      document.write(JSON.stringify($))
+      break;
     default:
       // next
       $.callback = ''
