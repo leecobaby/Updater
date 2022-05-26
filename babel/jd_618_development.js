@@ -1029,7 +1029,7 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`template_mongo_getHomeData`, body, otherUrl);
       break;
     case 'doOneShopTask':
-      body = `functionId=template_mongo_collectScore&appid=signed_wh5&clientVersion=1.0.0&body={"taskToken":"${$.taskToken}","taskId":${$.taskId},"actionType":0,"appId":"${$.appId}","safeStr":"{\\"random\\":\\"\\",\\"sceneid\\":\\"RAGJSYh5\\",\\"log\\":\\"\\"}"}`;
+      body = `functionId=template_mongo_collectScore&appid=wh5&clientVersion=1.0.0&body={"taskToken":"${$.taskToken}","taskId":${$.taskId},"actionType":0,"appId":"${$.appId}","safeStr":"{\\"random\\":\\"\\",\\"sceneid\\":\\"RAGJSYh5\\",\\"log\\":\\"\\"}"}`;
       otherUrl = otherUrl = 'https://api.m.jd.com/client.action'
       myRequest = getPostRequest(`template_mongo_collectScore`, body, otherUrl);
       break;

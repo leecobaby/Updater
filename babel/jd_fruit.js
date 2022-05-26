@@ -101,10 +101,7 @@ function taskInitForFarm () {
   takeRequest('taskInitForFarm');
   return
 
-  // next
-  $.callback = ''
-  dealReturn('taskInitForFarm', $.data)
-  document.write(JSON.stringify($))
+  c
 }
 
 /**
