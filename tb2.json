@@ -393,7 +393,7 @@
     ]
   },
   "Jhs": {
-    "version": "数据最后更新于:5.27.1",
+    "version": "数据最后更新于:5.27.2",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fGKPpGy",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fGKPpGy",
@@ -405,9 +405,9 @@
       "taobaolite": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F"
     },
     "home": {
-      "taobao": "taobao://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?wh_pid=daily-192654&disableNav=YES",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fa%2Fact%2Fju%2Fdailygroup%2F1583%2Fwupr%3Fwh_pid%3Ddaily-192654%26disableNav%3DYES",
-      "taobaolite": "taobaolite://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?wh_pid=daily-192654&disableNav=YES"
+      "taobao": "taobao://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?wh_pid=daily-253613&status_bar_transparent=true&disableNav=YES&sourceType=other",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fa%2Fact%2Fju%2Fdailygroup%2F1583%2Fwupr%3Fwh_pid%3Ddaily-253613%26status_bar_transparent%3Dtrue%26disableNav%3DYES%26sourceType%3Dother",
+      "taobaolite": "taobaolite://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?wh_pid=daily-253613&status_bar_transparent=true&disableNav=YES&sourceType=other"
     },
     "end": {
       "taobao": "taobao://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?ut_sk=1.X7c7EQcMz0gDAGYKcRv9hLW2_21380790_1631361971008.Copy.common&wh_pid=daily-253613",
@@ -427,6 +427,7 @@
           "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&sourceType=other&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&sceneId=107&hd_from_id=100027&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
+            "22256 other_267_922038_22256_0",
             "18660 linked_256_0_18660_0",
             "19109 other_243_513004_19109_1",
             "23913 other_267_909041_23913_0",
@@ -436,19 +437,6 @@
             "25472 other_86_898002_25472_0",
             "29090 other_1_928015_29090_0",
             "27766 other_25_880008_27766_0"
-          ]
-        }
-      },
-      {
-        "test": {
-          "title": "测试",
-          "type": "test",
-          "urlScheme": "HTTPS://",
-          "textEnd": "str2",
-          "item": [
-            "1 m.tb.cn/h.f3T6Bym?1",
-            "1 m.tb.cn/h.fWljUcw?1",
-            "1 s.click.taobao.com/q57Figu?1"
           ]
         }
       }
@@ -1821,7 +1809,7 @@
         "主页": "taobao://pages.tmall.com/wow/z/tmtjb/town/home?disableNav=YES",
         "任务页": "taobao://pages.tmall.com/wow/z/tmtjb/town/tasklist-v2?wh_biz=tm&disableNav=YES"
       },
-      "聚划算章鱼": "taobao://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?wh_pid=daily-192654&disableNav=YES",
+      "聚划算章鱼": "taobao://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?wh_pid=daily-253613&status_bar_transparent=true&disableNav=YES&sourceType=other",
       "活力中心": "taobao://pages.tmall.com/wow/z/hdwk/hdsolution2/game2020?wh_biz=tm&disableNav=YES&disableProgress=YES",
       "淘宝签到": "taobao://pages.tmall.com/wow/z/mit/hbqd/welfare4",
       "天天领红包": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fan%2Ftmall%2Fuser-growth%2Fplay-tmall%3FdisableNav%3DYES",
