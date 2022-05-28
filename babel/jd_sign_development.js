@@ -7,6 +7,9 @@
  * tips: Only for learning and communication, strictly prohibited for commercial use, please delete within 24 hours
  */
 
+// 618 种草街 
+// https://prodev.m.jd.com/mall/active/U18CGRp9tTnAkH1HfHnhBEWrfrr/index.html
+
 
 // 到指令里运行需要注释掉
 // const $ = {}
@@ -138,8 +141,12 @@ function help () {
   document.write(JSON.stringify($))
 }
 
+function do618 (params) {
+
+}
+
 /**
- * 🔥 做年货节抽签
+ * 🔥 做年货节抽签 - 限时
  */
 function doNHSign () {
   // 循环逻辑单独设置 to,call

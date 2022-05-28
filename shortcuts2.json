@@ -176,27 +176,28 @@
     }
   },
   "618cat": {
-    "version": "1.4",
-    "update_log": "- 增加 快速做任务可调时功能",
-    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/618cat",
+    "version": "1.5",
+    "update_log": "",
+    "about": {
+      "faq": "https://github.com/leecobaby/shortcuts/blob/master/TB.FAQ.md#%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96-cookie",
+      "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cxdbxa6",
+      "version_log": "https://github.com/leecobaby/shortcuts/tree/master/618cat#版本日志"
+    },
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/3c467d23294648ca8e0680d0aead41f6",
-    "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
     "notice": "🧧 超级红包每天领，前往活动大厅查看更多~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=天猫618自动养猫&input=text&text=task",
     "image": "https://gitee.com/leecobaby/Updater/raw/master/image/tb_618cat.png",
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
-      "hongbao": "每天领...",
-      "surplus": "可快速完成任务...",
-      "hot": "🧧 抢超级红包...",
+      "hot": "🧧 29日抢超级红包",
       "faq": "",
       "set": "点击查看自动化操作",
       "team": "可随机助力",
       "other": "疑问者可查看常见问题",
-      "more": "🧧 6.16抢现红包"
+      "more": "🔥 新群开放"
     }
   },
   "Hlzx": {
