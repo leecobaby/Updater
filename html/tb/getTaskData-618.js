@@ -81,7 +81,7 @@ function taskBaseData () {
           "main": {
             "title": "领喵币",
             "type": "stars",
-            "urlScheme": "HTTPS://pages.tmall.com/wow/z/hdwk/20210618/singlegame?wh_biz=tm&disableNav=YES&qd_from=zfbbanner&prismFrom=zfb&sceneId=1788&hd_from_id=100116&deliveryId=",
+            "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&spm=a217e.1212.tasklist.0&prismFrom=null&sceneId=3399&sourceType=other&hd_from_id=100155&",
             "textEnd": "str1&implId=str2"
           }
         }
