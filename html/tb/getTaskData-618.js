@@ -78,7 +78,7 @@ function taskBaseData () {
       },
       "task": [
         {
-          "stars": {
+          "main": {
             "title": "领喵币",
             "type": "stars",
             "urlScheme": "HTTPS://pages.tmall.com/wow/z/hdwk/20210618/singlegame?wh_biz=tm&disableNav=YES&qd_from=zfbbanner&prismFrom=zfb&sceneId=1788&hd_from_id=100116&deliveryId=",
