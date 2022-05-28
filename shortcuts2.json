@@ -177,7 +177,7 @@
   },
   "618cat": {
     "version": "1.5",
-    "update_log": "",
+    "update_log": "- 采用 最新的淘宝任务框架\n- 支持 令牌模式，模拟真实任务数据",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/blob/master/TB.FAQ.md#%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96-cookie",
       "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cxdbxa6",
@@ -185,10 +185,10 @@
     },
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/3c467d23294648ca8e0680d0aead41f6",
-    "notice": "🧧 超级红包每天领，前往活动大厅查看更多~",
+    "update": "https://www.icloud.com/shortcuts/68bc00d010aa4fb1afb4a550b20db204",
+    "notice": "⚠️ 第一次运行将需要授权很多次，不要漏掉~🧧 超级红包每天领，前往活动大厅查看更多~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
-    "automation_url": "shortcuts://run-shortcut?name=天猫618自动养猫&input=text&text=task",
+    "automation_url": "shortcuts://run-shortcut?name=天猫618喵运会自动任务&input=text&text=task",
     "image": "https://gitee.com/leecobaby/Updater/raw/master/image/tb_618cat.png",
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
