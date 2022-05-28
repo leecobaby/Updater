@@ -7,7 +7,27 @@ const items = []
 let fromToken = ''
 
 let task = taskBaseData()
-const firstTask = [];
+const firstTask = [
+  {
+    "cloud": {
+      "title": "云端推送",
+      "type": "cloud",
+      "urlScheme": `HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=${fromToken}&spm=a217e.xzrwy.1.1&sceneId=3399&sourceType=other&hd_from_id=100155&deliveryId=`,
+      "textEnd": "str1&implId=str2",
+      "item": [
+        "29239 cloudsail_3_313597500650001_29239_0",
+        "29239 cloudsail_3_313597500650002_29239_0",
+        "29239 cloudsail_3_313597500650003_29239_0",
+        "29240 cloudsail_3_314709002330001_29240_0",
+        "29240 cloudsail_3_314709002330002_29240_0",
+        "29240 cloudsail_3_314709002330003_29240_0",
+        "29240 cloudsail_3_314709002330004_29240_0",
+        "29240 cloudsail_3_314709002330005_29240_0",
+        "29240 cloudsail_3_314709002330006_29240_0"
+      ]
+    }
+  }
+];
 
 taskHandle(data)
 // 后面会对数组对象进行操作，则需要进行深拷贝
@@ -23,7 +43,7 @@ function taskHandle (data) {
         let times = Number(item.progress.needTimes)
         for (let i = 0; i < times; i++) {
           let deliveryId = item.taskParams.deliveryId
-          if (deliveryId == '15901' || deliveryId == '18735' || deliveryId == '23176') continue;
+          if (deliveryId == '28646' || deliveryId == '28228' || deliveryId == '23176') continue;
           let title = item.assets && item.assets.title || 'null'
           let implId = item.taskParams.implId.match(/(.*)_/g) + i
           fromToken = item.taskParams.fromToken
