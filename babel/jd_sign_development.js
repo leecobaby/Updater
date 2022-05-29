@@ -470,7 +470,7 @@ function takeRequest (type) {
         Origin: 'https://prodev.m.jd.com',
         Referer: 'https://prodev.m.jd.com'
       }
-      myRequest = getRequest(url, body, 'POST', headers);
+      myRequest = getRequest(url, null, 'POST', headers);
       break;
     case 'get618ZCTaskList':
       let arr = [];
@@ -692,6 +692,7 @@ function dealReturn (type, data) {
         $.taskList = data.data;
         $.message = `获取任务列表成功`
       } else {
+        $.taskStep = -1
         $.message = `获取任务列表失败`
       }
       break;
