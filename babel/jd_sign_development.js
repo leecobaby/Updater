@@ -141,9 +141,181 @@ function help () {
   document.write(JSON.stringify($))
 }
 
-function do618 (params) {
+/**
+ * 🔥 做 618 种草街 -限时
+ */
+function do618ZC () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler'
+  $.call = ['do618ZC']
 
+  switch ($.taskStep++) {
+    case 1:
+      // 获取活动信息
+      get618ZCInfo()
+      break;
+    case 2:
+      // 查询任务列表
+      if ($.projectId) {
+        get618ZCTaskList();
+      } else {
+        // 跳出任务
+        $.taskStep = -1;
+      }
+      break;
+    case 3:
+      // 当天首登奖励
+      do618ZCReward()
+      break;
+    case 4:
+      // 做浏览内容任务
+      $.self.count = 0
+      do618ZCBrowseTask()
+      break;
+    case 5:
+      // 做任务列表任务
+      do618ZCRecommendTask()
+      break;
+    case 6:
+      // 抽奖
+      do618ZCLottery()
+      break;
+    default:
+      $.to = ''; $.call.pop(); $.taskStep = 1; $.self.data = undefined
+      document.write(JSON.stringify($))
+      break;
+  }
 }
+
+// 获取种草活动页
+function get618ZCInfo () {
+  $.call[$.call.length - 1] == 'get618ZCInfo' || $.call.push('get618ZCInfo')
+
+  $.callback = 'Func.request'
+  takeRequest('get618ZCInfo');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('get618ZCInfo', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 当天首登有奖
+function do618ZCReward () {
+  $.call[$.call.length - 1] == 'do618ZCReward' || $.call.push('do618ZCReward')
+
+  $.callback = 'Func.request'
+  takeRequest('do618ZCReward');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('do618ZCReward', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 查询任务列表
+function get618ZCTaskList () {
+  $.call[$.call.length - 1] == 'get618ZCTaskList' || $.call.push('get618ZCTaskList')
+
+  $.callback = 'Func.request'
+  takeRequest('get618ZCTaskList');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('get618ZCTaskList', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 做浏览任务
+function do618ZCBrowseTask () {
+  $.call[$.call.length - 1] == 'do618ZCBrowseTask' || $.call.push('do618ZCBrowseTask')
+
+
+  if ($.self.count >= 20) {
+    // 循环完成重新设置 call
+    $.call.pop()
+    $.next = 0 // 清空 Next.key
+    $.self.count = 0
+    document.write(JSON.stringify($))
+    return
+  }
+
+  $.contentId = $.Utils.randomInt(10000000, 30000000)
+  $.message = `做浏览内容任务，第${++$.self.count}次/20 等待完成...`
+  $.callback = 'Func.request'
+  takePostRequest('do618ZCBrowseTask');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('do618ZCBrowseTask', $.data)
+  if ($.callbackInfo && $.callbackInfo.code == 0) {
+    // 等待 5s
+    $.wait = 5
+    $.next = 1 // 覆盖前面的 0
+    $.callback = 'Func.request'
+    $.itemId = $.callbackInfo.data?.itemId
+    takePostRequest('qryViewkitCallbackResult')
+    return
+
+    // next next
+    $.callback = ''
+    $.wait = 0
+    dealReturn('qryViewkitCallbackResult', $.data)
+    document.write(JSON.stringify($))
+  } else {
+    $.message = `浏览任务失败：遇到未知错误或ID${$.contentId}内容不存在`
+    document.write(JSON.stringify($))
+  }
+}
+
+// 做推荐任务
+function do618ZCRecommendTask () {
+  $.call[$.call.length - 1] == 'do618ZCRecommendTask' || $.call.push('do618ZCRecommendTask')
+
+  // 利用队列取代循环
+  $.oneActivityInfo = $.taskList.shift()
+  if (!$.oneActivityInfo || $.activityInfoList.status != 0) {
+    // 循环完成重新设置 call
+    $.call.pop()
+    $.next = 0 // 清空 Next.key
+    document.write(JSON.stringify($))
+    return
+  }
+
+  $.itemId = $.oneActivityInfo.itemId
+  $.assignmentId = $.oneActivityInfo.assignmentId
+  $.message = `做任务：${$.oneActivityInfo.title} 等待完成...`
+  $.callback = 'Func.request'
+  takePostRequest('do618ZCRecommendTask');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('do618ZCRecommendTask', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 抽奖
+function do618ZCLottery () {
+  $.call[$.call.length - 1] == 'do618ZCLottery' || $.call.push('do618ZCLottery')
+
+  $.callback = 'Func.request'
+  takePostRequest('do618ZCLottery');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('do618ZCLottery', $.data)
+  document.write(JSON.stringify($))
+}
+
 
 /**
  * 🔥 做年货节抽签 - 限时
@@ -284,41 +456,67 @@ function takeRequest (type) {
       body = ``
       myRequest = getRequest(url, body);
       break;
-    case 'zoo_bdCollectScore':
-      body = getPostBody(type);
-      myRequest = getRequest(`zoo_bdCollectScore`, body);
+    case 'get618ZCInfo':
+      url = "https://prodev.m.jd.com/mall/active/U18CGRp9tTnAkH1HfHnhBEWrfrr/index.html";
+      headers = {
+        ContentType: 'null'
+      }
+      myRequest = getRequest(url, body, 'GET');
       break;
-    case 'qryCompositeMaterials':
-      body = `functionId=qryCompositeMaterials&body={"qryParam":"[{\\"type\\":\\"advertGroup\\",\\"mapTo\\":\\"resultData\\",\\"id\\":\\"05371960\\"}]","activityId":"2s7hhSTbhMgxpGoa9JDnbDzJTaBB","pageId":"","reqSrc":"","applyKey":"jd_star"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`qryCompositeMaterials`, body);
+    case 'do618ZCReward':
+      body = { "projectId": $.projectId, "assignmentId": $.assignmentIdReward, "type": "16" }
+      url = `https://api.m.jd.com/interactive_reward?functionId=interactive_reward&appid=contenth5_common&body=${JSON.stringify(body)}&client=wh5&partner=ace1033463nrjs`;
+      headers = {
+        Origin: 'https://prodev.m.jd.com',
+        Referer: 'https://prodev.m.jd.com'
+      }
+      myRequest = getRequest(url, body, 'POST', headers);
       break;
-    case 'zoo_boxShopLottery':
-      body = `functionId=zoo_boxShopLottery&body={"shopSign":"${$.shopSign}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`zoo_boxShopLottery`, body);
+    case 'get618ZCTaskList':
+      let arr = [];
+      for (const item of $.scanTaskCodes) {
+        arr.push(
+          { "type": "1", "projectId": $.projectId, "assignmentId": item, "doneHide": false }
+        )
+      }
+      url = `https://api.m.jd.com/interactive_info?functionId=interactive_info&appid=contenth5_common&body=${JSON.stringify(arr)}&client=wh5&partner=ace1033463nrjs`;
+      headers = {
+        Origin: 'https://prodev.m.jd.com',
+        Referer: 'https://prodev.m.jd.com'
+      }
+      myRequest = getRequest(url, body, 'POST', headers);
       break;
-    case `zoo_wishShopLottery`:
-      body = `functionId=zoo_wishShopLottery&body={"shopSign":"${$.shopSign}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`zoo_boxShopLottery`, body);
+    case 'do618ZCBrowseTask':
+      body = { "projectId": $.projectId, "assignmentId": $.assignmentIdBrowse, "type": "18", "contentId": $.contentId, "contentType": "ugc" }
+      url = `https://api.m.jd.com/interactive_accept?functionId=interactive_accept&appid=contenth5_common&body=${JSON.stringify(body)}&client=wh5&partner=ace1033463nrjs`;
+      headers = {
+        Origin: 'https://prodev.m.jd.com',
+        Referer: 'https://prodev.m.jd.com'
+      }
+      myRequest = getRequest(url, body, 'POST', headers);
       break;
-    case `zoo_myMap`:
-      body = `functionId=zoo_myMap&body={}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`zoo_myMap`, body);
+    case 'do618ZCRecommendTask':
+      body = { "projectId": $.projectId, "assignmentId": $.assignmentId, "type": "1", "itemId": $.itemId }
+      url = `https://api.m.jd.com/interactive_done?functionId=interactive_done&appid=contenth5_common&body=${JSON.stringify(body)}&client=wh5&partner=ace1033463nrjs`;
+      headers = {
+        Origin: 'https://prodev.m.jd.com',
+        Referer: 'https://prodev.m.jd.com'
+      }
+      myRequest = getRequest(url, body, 'POST', headers);
       break;
-    case 'zoo_getWelfareScore':
-      body = getPostBody(type);
-      myRequest = getRequest(`zoo_getWelfareScore`, body);
+    case 'do618ZCLottery':
+      body = { "projectId": $.projectId, "assignmentId": $.assignmentIdLottery, "type": "17" }
+      url = `https://api.m.jd.com/interactive_done?functionId=interactive_done&appid=contenth5_common&body=${JSON.stringify(body)}&client=wh5&partner=ace1033463nrjs`;
+      headers = {
+        Origin: 'https://prodev.m.jd.com',
+        Referer: 'https://prodev.m.jd.com'
+      }
+      myRequest = getRequest(url, body, 'POST', headers);
       break;
-    case 'jdjrTaskDetail':
-      body = `reqData={"eid":"","sdkToken":"jdd014JYKVE2S6UEEIWPKA4B5ZKBS4N6Y6X5GX2NXL4IYUMHKF3EEVK52RQHBYXRZ67XWQF5N7XB6Y2YKYRTGQW4GV5OFGPDPFP3MZINWG2A01234567"}`;
-      myRequest = getRequest(`listTask`, body);
-      break;
-    case 'jdjrAcceptTask':
-      body = `reqData={"eid":"","sdkToken":"jdd014JYKVE2S6UEEIWPKA4B5ZKBS4N6Y6X5GX2NXL4IYUMHKF3EEVK52RQHBYXRZ67XWQF5N7XB6Y2YKYRTGQW4GV5OFGPDPFP3MZINWG2A01234567","id":"${$.taskId}"}`;
-      myRequest = getRequest(`acceptTask`, body);
-      break;
-    case 'add_car':
-      body = `functionId=funny_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HWJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","actionType":1}&client=wh5&clientVersion=1.0.0&uuid=c67093f5dd58d33fc5305cdc61e46a9741e05c5b&appid=o2_act`;
-      myRequest = getRequest(`funny_collectScore`, body);
+    case `qryViewkitCallbackResult`:
+      url = `https://api.m.jd.com/client.action?functionId=qryViewkitCallbackResult`
+      body = `appid=wh5&area=5_274_49707_49973&body={"dataSource":"babelInteractive"method":"customDoInteractiveAssignmentForBabel","reqParams":"{\"itemId\":\"${$.itemId}\",\"encryptProjectId\":\"${$.projectId}\",\"encryptAssignmentId\":\"${$.assignmentId}\"}"}&build=167283&client=apple&clientVersion=9.1.0`;
+      myRequest = getRequest(url, body);
       break;
     default:
       $.error = `takeRequest 错误${type}`
@@ -475,6 +673,60 @@ function dealReturn (type, data) {
         $.message = '京东年货-抽签: 失败, 明细: ' + data.msg
       }
       break
+    case 'get618ZCInfo':
+      try {
+        $.projectId = data.match(/"projectId":"(.*?)"/)[1];
+        $.assignmentIdBrowse = data.match(/"normalTabColor":"#FFFFFF","assignmentId":"(.*?)","activeTabColor"/)[1];
+        $.assignmentIdLottery = data.match(/"writeColor":"","assignmentId":"(.*?)","defaultYellowGoodsPic"/)[1];
+        $.assignmentIdReward = data.match(/"taskCode":"(.*?)"/)[1];
+        $.scanTaskCodes = String(data.match(/"scanTaskCodes":"(.*?)"/)[1]).split(',');
+        $.message = `京东618-种草街: 成功, 已获取活动信息`
+      } catch (e) {
+        $.projectId = null
+        $.message = "京东618-种草街: 失败, 无法获取活动信息 ⚠️"
+      }
+      $.data = {}
+      break
+    case 'get618ZCTaskList':
+      if (data.code == 0 && data.data) {
+        $.taskList = data.data;
+        $.message = `获取任务列表成功`
+      } else {
+        $.message = `获取任务列表失败`
+      }
+      break;
+    case 'do618ZCRecommendTask':
+      if (data.code == 0 && data.data) {
+        $.message = `完成任务：${data.data.rewardMsg}`
+      } else {
+        $.message = `任务失败~`
+      }
+      break;
+    case 'do618ZCReward':
+      if (data.code == 0) {
+        $.message = `当天首登有奖：${data.message || JSON.stringify(data.data)}`
+      } else {
+        $.message = `当天首登有奖：出错原因${data}`
+      }
+      break;
+    case 'do618ZCBrowseTask':
+      $.callbackInfo = data
+      break;
+    case 'do618ZCLottery':
+      if (data.code == 0 && data.data?.reward) {
+        $.message = `抽奖成功：${data.data?.rewardMsg}`
+      } else {
+        $.call.pop() // 结束抽奖
+        $.message = `抽奖失败：原因${data}`
+      }
+      break;
+    case 'qryViewkitCallbackResult':
+      if (data.code == 0 && data.msg == 'query success!') {
+        $.message = `完成任务：浏览成功`
+      } else {
+        $.message = `任务失败：原因${JSON.stringify(data)}`
+      }
+      break;
     default:
       console.log(`未判断的异常${type} `);
   }
@@ -501,6 +753,11 @@ function Utils () {
         console.log(e);
         return data;
       }
+    },
+    randomInt (min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min)) + min;
     }
   }
 }

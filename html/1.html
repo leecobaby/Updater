@@ -1,118 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
-  <div id="box"></div>
   <script>
-    !function(a){function b(b,c,d){"use strict";function e(a){do{a=a.replace(/\n\n/g,"\n"+M+"\n")}while(a.indexOf("\n\n")>-1);return a}function f(a){B||(B=t.sizeToFill?v.font.split(/\b\d+px\b/i):t.font.split(/\b\d+px\b/i)),v.font=B[0]+a+"px"+B[1]}function g(){isNaN(t.lineHeight)?-1!==t.lineHeight.toString().indexOf("px")?L=parseInt(t.lineHeight):-1!==t.lineHeight.toString().indexOf("%")&&(L=parseInt(t.lineHeight)/100*G):L=G*t.lineHeight}function h(){if(t.sizeToFill){var a=c.trim().split(/\s+/).length,b=0,d=!1!==t.maxFontSizeToFill;do{if(d){if(!(++b<=t.maxFontSizeToFill))break;i(b)}else i(++b)}while(H<F&&I.join(" ").split(/\s+/).length==a);i(--b)}else j();t.justifyLines&&"auto"===t.lineBreak&&m(),q(),p(),o()}function i(a){f(a),L=a,j()}function j(){if(t.allowNewLine)for(var a=c.trim().split("\n"),b=0,d=0;b<a.length-1;b++)d+=a[b].trim().split(/\s+/).length,J.push(d);var e=c.trim().split(/\s+/);k(e),l(e),H=I.length*L}function k(a){var b,c,d,e;a.forEach(function(f,g){if(b="",(c=v.measureText(f).width)>E){for(var h=0;v.measureText(b+f[h]).width<=E&&h<f.length;h++)b+=f[h];d=f.slice(0,h),e=f.slice(h),a.splice(g,1,d,e)}})}function l(a){I=[];for(var b=0,c=0;b<a.length;c++)if(I[c]="","auto"===t.lineBreak){if(v.measureText(I[c]+a[b]).width>E)break;for(;v.measureText(I[c]+a[b]).width<=E&&b<a.length;)if(I[c]+=a[b]+" ",b++,t.allowNewLine)for(var d=0;d<J.length;d++)if(J[d]===b){c++,I[c]="";break}I[c]=I[c].trim()}else I[c]=a[b],b++}function m(){for(var a,b,c,d=0;d<I.length;d++)c=v.measureText(I[d]).width,(!a||c>a)&&(a=c,b=d);var e,f,g,h,i,j=" ";for(d=0;d<I.length;d++)if(d!==b&&!((e=I[d].trim().split(/\s+/).length)<=1)){I[d]=I[d].trim().split(/\s+/).join(j),f=v.measureText(j).width,g=(a-v.measureText(I[d]).width)/f,h=g/(e-1),i="";for(var k=0;k<h;k++)i+=j;I[d]=I[d].trim().split(j).join(i)}}function n(a,b,c){var d=v.measureText(a).width;switch(v.textAlign){case"center":b-=d/2;break;case"right":b-=d}v.beginPath(),v.moveTo(b,c),v.lineTo(b+d,c),v.stroke()}function o(){for(var a=M+" ",b=0;b<I.length;b++)K.y=parseInt(K.y)+L,I[b]!==a&&(v.fillText(I[b],K.x,K.y),t.strokeText&&v.strokeText(I[b],K.x,K.y),"underline"===t.textDecoration.toLocaleLowerCase()&&n(I[b],K.x,K.y))}function p(){v.textAlign=t.textAlign,"center"==t.textAlign?K.x=C/2:"right"==t.textAlign?K.x=C-t.paddingX:K.x=t.paddingX}function q(){"middle"==t.verticalAlign?K.y=(D-H)/2:"bottom"==t.verticalAlign?K.y=D-H-t.paddingY:K.y=t.paddingY}function r(){if("string"!=typeof c)throw new TypeError("The second parameter must be a String.");if(isNaN(G))throw new TypeError('Cannot parse "font".');if(isNaN(L))throw new TypeError('Cannot parse "lineHeight".');if("left"!==t.textAlign.toLocaleLowerCase()&&"center"!==t.textAlign.toLocaleLowerCase()&&"right"!==t.textAlign.toLocaleLowerCase())throw new TypeError('Property "textAlign" must be set to either "left", "center", or "right".');if("top"!==t.verticalAlign.toLocaleLowerCase()&&"middle"!==t.verticalAlign.toLocaleLowerCase()&&"bottom"!==t.verticalAlign.toLocaleLowerCase())throw new TypeError('Property "verticalAlign" must be set to either "top", "middle", or "bottom".');if("boolean"!=typeof t.justifyLines)throw new TypeError('Property "justifyLines" must be a Boolean.');if(isNaN(t.paddingX))throw new TypeError('Property "paddingX" must be a Number.');if(isNaN(t.paddingY))throw new TypeError('Property "paddingY" must be a Number.');if("boolean"!=typeof t.fitParent)throw new TypeError('Property "fitParent" must be a Boolean.');if("auto"!==t.lineBreak.toLocaleLowerCase()&&"word"!==t.lineBreak.toLocaleLowerCase())throw new TypeError('Property "lineBreak" must be set to either "auto" or "word".');if("boolean"!=typeof t.sizeToFill)throw new TypeError('Property "sizeToFill" must be a Boolean.');if("boolean"!=typeof t.strokeText)throw new TypeError('Property "strokeText" must be a Boolean.');if("boolean"!=typeof t.renderHDPI)throw new TypeError('Property "renderHDPI" must be a Boolean.');if("none"!==t.textDecoration.toLocaleLowerCase()&&"underline"!==t.textDecoration.toLocaleLowerCase())throw new TypeError('Property "textDecoration" must be set to either "none" or "underline".')}var s={font:"18px Arial, sans-serif",sizeToFill:!1,maxFontSizeToFill:!1,lineHeight:1,allowNewLine:!0,lineBreak:"auto",textAlign:"left",verticalAlign:"top",justifyLines:!1,paddingX:0,paddingY:0,fitParent:!1,strokeText:!1,renderHDPI:!0,textDecoration:"none"},t={};for(var u in s)t[u]=d.hasOwnProperty(u)?d[u]:s[u];var v=b.getContext("2d");v.font=t.font,v.textBaseline="bottom";var w=1,x="undefined"!=typeof global?global.devicePixelRatio:a.devicePixelRatio;if(t.renderHDPI&&x>1){var y={};for(var u in v)y[u]=v[u];var z=b.width,A=b.height;w=x,b.width=z*w,b.height=A*w,b.style.width=z*w*.5+"px",b.style.height=A*w*.5+"px";for(var u in y)try{v[u]=y[u]}catch(N){}v.scale(w,w)}var B,C=(t.fitParent?b.parentNode.clientWidth:b.width)/w,D=(t.fitParent?b.parentNode.clientHeight:b.height)/w,E=C-2*t.paddingX,F=D-2*t.paddingY,G=t.font.match(/\d+(px|em|%)/g)?+t.font.match(/\d+(px|em|%)/g)[0].match(/\d+/g):18,H=0,I=[],J=[],K={x:0,y:0},L=0,M="​";return c=e(c),f(G),g(),r(),h(),I}"module"in a&&"exports"in module?module.exports=b:a.CanvasTextWrapper=b}(this);
-  </script>
+    const data = `.body.yhd_ut = window._ut, g && (n.ext = JSON.stringify({ prstate: g })), n
+        } function A (e) { window.performance && window.performance.mark && window.performance.mark(e) }
+      }({ "appEnv": { "isJdApp": true, "isYhdApp": false, "isAndroid": false, "isIphone": true, "isApple": false, "isWQUrl": false, "isWxApp": true, "isWxKeplerApp": false, "isMiniUrl": false, "jdVersion": "11.0.2", "isJdStore": false, "isSevenfreshMini": false, "isYhdUrl": false, "is7FreshApp": false, "is7FreshUrl": false, "isGroupBuyUrl": false, "isGroupBuyApp": false, "isUniversalSite": false, "universalSiteName": "", "siteClient": "", "isIpad": false, "isEnvBeta": false, "wxAppName": "jd", "rawWxAppName": "jd", "protocol": "https:", "pageUrl": "https://prodev.m.jd.com/mall/active/U18CGRp9tTnAkH1HfHnhBEWrfrr/index.html?tttparams=0zXI6UNCTeyJncHNfYXJlYSI6IjE1XzEyNzNfMTI3NV81OTMxNiIsInByc3RhdGUiOiIwIiwidW5fYXJlYSI6IjE1XzEyNzNfMTI3NV81MjE3OCIsImRMYXQiOiIiLCJnTGF0IjoiMjguNzU0NTQiLCJnTG5nIjoiMTE4LjYzOTYiLCJsbmciOiIxMTguNjM5OTM0IiwibGF0IjoiMjguNzU0NjI0IiwiZExuZyI6IiIsIm1vZGVsIjoiaVBob25lMTIsMS9J9&sid=c002339dcfe22b629d7de280cc25539w&un_area=15_1273_1275_52178", "query": { "tttparams": "0zXI6UNCTeyJncHNfYXJlYSI6IjE1XzEyNzNfMTI3NV81OTMxNiIsInByc3RhdGUiOiIwIiwidW5fYXJlYSI6IjE1XzEyNzNfMTI3NV81MjE3OCIsImRMYXQiOiIiLCJnTGF0IjoiMjguNzU0NTQiLCJnTG5nIjoiMTE4LjYzOTYiLCJsbmciOiIxMTguNjM5OTM0IiwibGF0IjoiMjguNzU0NjI0IiwiZExuZyI6IiIsIm1vZGVsIjoiaVBob25lMTIsMS9J9", "sid": "c002339dcfe22b629d7de280cc25539w", "un_area": "15_1273_1275_52178" }, "supportAvif": false }, "activityInfo": { "pageId": "3578072", "title": "618种草街", "activityId": "01240130", "encodeActivityId": "U18CGRp9tTnAkH1HfHnhBEWrfrr", "useDiscovery": "0", "inkTarget": "_self", "cartLayer": true, "hasFoot": false, "transParam": "{\"bsessionId\":\"0975a170-522c-4bf5-9d87-195e75b11a64\",\"babelChannel\":\"\",\"actId\":\"01240130\",\"enActId\":\"U18CGRp9tTnAkH1HfHnhBEWrfrr\",\"pageId\":\"3578072\",\"encryptCouponFlag\":\"1\",\"sc\":\"apple\",\"scv\":\"11.0.2\",\"requestChannel\":\"h5\",\"jdAtHomePage\":\"0\",\"utmFlag\":\"0\",\"locType\":\"1\"}", "hasPerData": "0", "biimpr": "01240130_3578072", "item": "0", "cpChannelKey": "H5node", "amdEnable": false, "includeCodeDep": true, "isOpacityTitle": false, "pageUrl": "https://prodev.m.jd.com/mall/active/U18CGRp9tTnAkH1HfHnhBEWrfrr/index.html?tttparams=0zXI6UNCTeyJncHNfYXJlYSI6IjE1XzEyNzNfMTI3NV81OTMxNiIsInByc3RhdGUiOiIwIiwidW5fYXJlYSI6IjE1XzEyNzNfMTI3NV81MjE3OCIsImRMYXQiOiIiLCJnTGF0IjoiMjguNzU0NTQiLCJnTG5nIjoiMTE4LjYzOTYiLCJsbmciOiIxMTguNjM5OTM0IiwibGF0IjoiMjguNzU0NjI0IiwiZExuZyI6IiIsIm1vZGVsIjoiaVBob25lMTIsMS9J9&sid=c002339dcfe22b629d7de280cc25539w&un_area=15_1273_1275_52178", "sharedCustomCodeTTL": 300, "autoLogin": false, "fcImgAdjustmentOn": true, "fcImgWebpOn": true, "enabelIhubBackUpData": true, "autoNextPageDelay": null, "disableAutoFetchNext": false, "isFcSSR": true, "isFcSSRPartial": true, "isFcNameCache": true, "enableViewkitSSR": false, "delayHydrate": false, "delayHydrateTime": 500, "clientPagination": true }, "codeFloors": [{ "template": "customcode", "sourceId": "4da3ede69e31dc527618b5f62ea158d4", "htmlSourceUrl": "babelview/00027732/4da3ede69e31dc527618b5f62ea158d4.repl.html", "queryDefault": null, "hasBindMaterial": 0, "channel": "h5", "materialQryType": "none", "attributeConfig": null, "floorNum": "1_1", "godIds": [], "cmpIds": [], "ssr": 1, "styleId": "00027732", "ofn": "3", "bizId": "23", "materialParams": null, "enc": "801A2F4A8B54D5BAF08D72C8BBE3310CD93FDC67C1BC03C17A9DE12D436CA6187ECDAC7568A5105BD417FA5526EF2886B0A6CACF854A38E2DDAA00065FCCCC68", "advIds": [], "boardParams": { "floorBgc": "https://m.360buyimg.com/babel/jfs/t1/179940/39/23952/165019/6279d81eE9c0c04e2/ad31017ab7db02f7.png", "virtualPoints": "金币", "lotterybtn": "https://m.360buyimg.com/babel/jfs/t1/208366/36/8030/96968/62792dd5E4817108d/1eb680d4e2f50911.png", "modalBackgroundImage": "https://m.360buyimg.com/babel/jfs/t1/91711/38/27460/217292/6278e971E7fb7d0b4/d221ac118bce571d.png", "agid": "06102380", "lotterypressbtn": "https://m.360buyimg.com/babel/jfs/t1/72383/11/18169/96070/62792e05E5a0a57eb/6e20f80acc853400.png", "writeColor": "", "assignmentId": "2RwHphshFyvLrLeCEGx5HktLYHoo", "defaultYellowGoodsPic": "https://m.360buyimg.com/babel/jfs/t1/186268/2/24560/18623/6278ee94Eb1c6aa21/b8f69329678eb9f1.png", "virtualPointsPic": "https://m.360buyimg.com/babel/jfs/t1/214095/31/18595/969/6278ee68E13953c3e/ab36a282fe52e278.png", "defaultGoodsPic": "https://m.360buyimg.com/babel/jfs/t1/222378/26/15537/15784/6278ee89E8c369a0e/c57a81f20faf9cdc.png", "modalButton": "https://m.360buyimg.com/babel/jfs/t1/216534/13/18820/13078/6278e98fE8f11c6cb/74eb84cddf138a79.png", "projectId": "3CQFEgRhFW1D1f4S4YsYannHVKTe" }, "id": 77232050, "moduleId": 77232050, "timestamp": "", "h5FloorFrameState": 0, "__first_screen__": true }, { "template": "customcode", "sourceId": "7e451718a4fb4d2d9110a1d81f488a85", "htmlSourceUrl": "babelview/00029802/7e451718a4fb4d2d9110a1d81f488a85.repl.html", "queryDefault": null, "hasBindMaterial": 0, "channel": "h5", "materialQryType": "none", "attributeConfig": "{\"isSupportFeed\":\"0\",\"isImmersive\":\"0\"}", "floorNum": "1_3", "godIds": [], "cmpIds": [], "ssr": 1, "styleId": "00029802", "ofn": "5", "bizId": "23", "materialParams": null, "enc": "801A2F4A8B54D5BAF08D72C8BBE3310CD93FDC67C1BC03C17A9DE12D436CA61824DE81611B06408AC63352CCE224FC84A80A79B9428708DC92EC61E9C789894F", "advIds": [], "boardParams": { "activeTabImg": "https://m.360buyimg.com/babel/jfs/t1/619/2/17428/32478/62790475Ed5c93e51/94d46462c4073634.png", "normalTabImg": "https://m.360buyimg.com/babel/jfs/t1/206478/11/22032/25097/6279049fE591ad88b/64f10e992c64e682.png", "backgroundColor": "#7429FD", "componentId": "d7705166f5cd45cd8b1614b4ac6c01ff", "configVersion": "99.1.22", "normalTabColor": "#FFFFFF", "assignmentId": "3o94WS2kNba6xukaximuch5AwamM", "activeTabColor": "#FFFFFF", "programId": "3CQFEgRhFW1D1f4S4YsYannHVKTe" }, "id": 77337806, "moduleId": 77337806, "timestamp": "", "h5FloorFrameState": 0, "__first_screen__": true }, { "template": "customcode", "sourceId": "7e1f67b1e5abe9e9cfca8b612d5208b0", "htmlSourceUrl": "babelview/00027975/7e1f67b1e5abe9e9cfca8b612d5208b0.repl.html", "queryDefault": "", "hasBindMaterial": 0, "channel": "h5", "materialQryType": "none", "attributeConfig": null, "floorNum": "1_4", "godIds": [], "cmpIds": [], "ssr": 1, "styleId": "00027975", "ofn": "6", "bizId": "23", "materialParams": { "shareAdvIdVideo": [], "shareAdvIdKOC": [] }, "enc": "801A2F4A8B54D5BAF08D72C8BBE3310CD93FDC67C1BC03C17A9DE12D436CA618A14B7FA8EA485D3363C45897EEC712E0208918B9AFC0E5D628A481FA2B170D03", "advIds": [], "boardParams": { "scanProjectCode": "3CQFEgRhFW1D1f4S4YsYannHVKTe", "feedsTaskIcon": "https://m.360buyimg.com/babel/jfs/t1/31447/5/16318/6321/6278dbdcE26d0500e/809d12ed42ef30d1.png", "assistBtnColor": "#C96300", "scanFloorBgImg": "https://m.360buyimg.com/babel/jfs/t1/207842/20/21993/16704/6278dbecEfd2b4415/c8651bab5431412b.png", "panelBgColor": "#7C5AF2", "componentIdBabel": "d7705166f5cd45cd8b1614b4ac6c01ff", "feedsTaskConfig": true, "shareTaskCode": "2P1pswJFevqykoHDdXYCSRgfkCK8", "panelHeadImg": "https://m.360buyimg.com/babel/jfs/t1/107756/23/28115/41602/6278d464E3a596e76/492f761a6723a2e6.png", "feedsTitle": "逛街赢金币！", "feedsTaskCode": "3o94WS2kNba6xukaximuch5AwamM", "shareTaskConfig": true, "shareTitleJKL": "一起逛种草街赢好礼", "scanTaskCodes": "sbCwvDHD8cxDBAQ6biYvZ918K7o,4VcAhGE9ytCAXo3cUDmwQEpZpKgB,HT4H7h2KNUoyWWBmCkgJRdgg4Dp,3UEafdgT1iiiJuHTmBHGW3apuztR,ShqN6gygDqH8U28FcjrLbj7vfGH", "feedsSubTitle": "逛内容获取金币", "assistText": "点击助力，即可有机会获得活动奖励！", "feedsProjectCode": "3CQFEgRhFW1D1f4S4YsYannHVKTe", "feedsBtnBgImg2": "https://m.360buyimg.com/babel/jfs/t1/223197/39/10633/2719/6278dcbfE4fbdbe65/9c086ca0e5ec8f00.png", "shareImgJKL": "https://m.360buyimg.com/babel/jfs/t1/121906/12/25830/57960/6279161dE05493376/ebb9a536261ac062.jpg", "feedsBtnBgImg0": "https://m.360buyimg.com/babel/jfs/t1/11046/33/16000/3147/6278dcb9E8abfb30e/28500b64ef69db7a.png", "shareTaskIcon": "https://m.360buyimg.com/babel/jfs/t1/10772/1/16751/6321/6278ea75Eee5cea88/048638961ea2ffc5.png", "shareTextColor": "#262626", "shareTitleText": "分享好友助力赢金币", "feedsTextColor": "#262626", "scanTaskConfig": true, "shareTaskHeaderBgImg": "https://m.360buyimg.com/babel/jfs/t1/204232/7/22515/16704/6278dc51Ebee3ca71/6f5528abc3e7b576.png", "scanTextColor": "#262626", "shareContentJKL": "为我助力，一起赢千万京豆好礼", "assistModalBgImg": "https://m.360buyimg.com/babel/jfs/t1/78283/6/18166/217292/6279052bE9266253a/505b72e9466ffcde.png", "feedsFloorBg": "https://m.360buyimg.com/babel/jfs/t1/81922/40/17678/16704/6278dbbaE91e4c2ab/53d65c9a6e3a0abf.png", "feedsRelatedModuleId": "77337806", "basicConfig": true, "shareProjectCode": "3CQFEgRhFW1D1f4S4YsYannHVKTe", "scanBtnBgImg0": "https://m.360buyimg.com/babel/jfs/t1/72108/4/17679/3147/6278dbf9Ec650a574/ba8705c17bfff323.png", "shareDescText": "每1人助力可获得1金币", "scanBtnBgImg2": "https://m.360buyimg.com/babel/jfs/t1/204028/19/22374/2719/6278dc03Eef27157a/43c6746443b0ea82.png" }, "id": 77292065, "moduleId": 77292065, "timestamp": "", "h5FloorFrameState": 0, "__first_screen__": true }, { "template": "customcode", "sourceId": "2df0d432015bd35c3f28f63711c7d62c", "htmlSourceUrl": "babelview/00027740/2df0d432015bd35c3f28f63711c7d62c.repl.html", "queryDefault": null, "hasBindMaterial": 0, "channel": "h5", "materialQryType": "none", "attributeConfig": null, "floorNum": "1_5", "godIds": [], "cmpIds": [], "ssr": 1, "styleId": "00027740", "ofn": "7", "bizId": "23", "materialParams": null, "enc": "801A2F4A8B54D5BAF08D72C8BBE3310CD93FDC67C1BC03C17A9DE12D436CA61841D1BDFF8EA4695DF11A561C53A573E6A72AF1DEEF3515A297ACEDAF453B6946", "advIds": [], "boardParams": { "rewardIcon": "https://m.360buyimg.com/babel/jfs/t1/88861/28/26525/9220/6278dd95E44333edc/eb92358e68b04e9e.png", "rewardName": "金币", "modalBgImg": "https://m.360buyimg.com/babel/jfs/t1/202263/17/22898/217292/6278dd45Ed5c9b4ec/e3f166d810b9a04a.png", "taskCode": "2LcFhpaVNWXgPvMV5kR9BGHoEcW8", "projectCode": "3CQFEgRhFW1D1f4S4YsYannHVKTe", "title": "欢迎来到618种草街！", "btnBgImg": "https://m.360buyimg.com/babel/jfs/t1/137342/35/25574/13078/6278dd6aEaec477cf/e9e9bab792811fad.png" }, "id": 77292066, "moduleId": 77292066, "timestamp": "", "h5FloorFrameState": 0, "__first_screen__": true }], "paginationFlrs": "[[77232048,77232049,77232050,77289508,77337806,77292065,77292066]]", "customcodeMatQryType": { "77232050": "none", "77292065": "none", "77292066": "none", "77337806": "none" }, "isWebpSupport": false });    `;
 
-  <script>
-      let text =
-`# 京东-多合一签到
-
-## 功能说明
-
-- 实现简单的京东零星活动自动签到功能。
-- ⚠️ 注意:使用此快捷指令需要账号的 Cookie，指令为本地运行任务，不会上传 Cookie 在内的任何隐私信息，请确保下载途径的安全性。
-- 后台模式请用桌面小组件方式运行
-- 兼容 ios13-15、ipad、多账号、自动化
-
-TG 频道:https://t.me/xuehuashe
-
-## 版本日志
-
-### 2022-01-14 v1.5
-
-- 采用 最新的京东系任务架构
-- 重构 指令云端架构，逻辑执行器更精简快速，减少网络压力
-- 重构 指令架构，弃用部分无意义功能
-- 新增 年货节抽签任务，其他任务持续推送
-
-https://www.icloud.com/shortcuts/d855d59bf7944bca978c42936f65df24
-
-### 2021-10-31 v1.4
-
-- 兼容 优化 ios15.1 的运行（我任然不建议你升级 15.1,运行时长是原来的 20 倍）
-
-https://www.icloud.com/shortcuts/407764531450467e9f8359a972c6ec43
-
-### 2021-10-18 v1.3
-
-- 实现 自动做任务，后台任务
-- 重构 架构，采用云端更新推送任务
-
-https://www.icloud.com/shortcuts/911166fff124414bb2c07030361ae9ec
-
-### 2021-02-05 v1.2
-
-- 修复 授权登录方式
-- 修复 一些问题
-- 优化 架构
-
-https://www.icloud.com/shortcuts/7700808a249a480895b03f3c5a64ea40
-
-### 2021-2-3 v1.1
-
-- 初步实现 10 种自动签到功能
-- 实现签到日志查看
-- 采用云端任务数据架构自动订阅
-- 采用本地执行任务，保障所有隐私数据
-
-https://www.icloud.com/shortcuts/eab7feef429743d2b16a2857f30accc1
-
-## 免责申明
-
-- 本快捷指令仅用于学习交流使用
-- 切勿用于商业及非法用途
-- 本指令涉及到隐私操作，请到作者发布作品的地址下载，不要轻易下载修改版，发生任何隐私泄露作者对此不负责，请保护好你的隐私。
-`
-      /**
-         * 创建高分辨率画布
-         * @param w     画布宽
-         * @param h     画布高
-         * @param ratio 屏幕分辨率
-         */
-      function createHiDPICanvas(w, h, ratio) {
-
-        const PIXEL_RATIO = (function () {
-          const c = document.createElement("canvas"),
-            ctx = c.getContext("2d"),
-            dpr = window.devicePixelRatio || 1,
-            bsr = ctx['webkitBackingStorePixelRatio'] ||
-              ctx['mozBackingStorePixelRatio'] ||
-              ctx['msBackingStorePixelRatio'] ||
-              ctx['oBackingStorePixelRatio'] ||
-              ctx['backingStorePixelRatio'] || 1;
-
-          return dpr / bsr;
-        })();
-
-        if (!ratio) { ratio = PIXEL_RATIO; }
-        const can = document.createElement("canvas");
-        can.width = w * ratio;
-        can.height = h * ratio;
-        can.style.width = w + "px";
-        can.style.height = h + "px";
-        can.getContext("2d").setTransform(ratio, 0, 0, ratio, 0, 0);
-        return can;
-      }
-
-      const myCanvas = this.createHiDPICanvas(300, 600);
-      let box = document.getElementById("box")
-      box.appendChild(myCanvas)
-
-      CanvasTextWrapper(myCanvas, text, { 
-        font: "12px Arial, sans-serif",
-        paddingX: 10,
-        paddingY: 10,
-        strokeText: false 
-      });
+    console.log(data.match(/"writeColor": "", "assignmentId": "(.*?)", "defaultYellowGoodsPic"/));
   </script>
 </body>
+
 </html>
