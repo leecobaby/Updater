@@ -186,17 +186,17 @@
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/68bc00d010aa4fb1afb4a550b20db204",
-    "notice": "⚠️ 第一次运行将需要授权很多次，不要漏掉~🧧 超级红包每天领，前往活动大厅查看更多~",
+    "notice": "⚠️ 令牌的任务异常为正常情况可以无视它或者取消勾选云端推送\n⚠️ 第一次运行将需要授权很多次，不要漏掉~🧧 超级红包每天领，前往活动大厅查看更多~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=天猫618喵运会自动任务&input=text&text=task",
     "image": "https://gitee.com/leecobaby/Updater/raw/master/image/tb_618cat.png",
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
-      "hot": "🧧 29日抢超级红包",
+      "hot": "🧧 超级红包每天领",
       "faq": "",
       "set": "点击查看自动化操作",
       "team": "可随机助力",
-      "other": "疑问者可查看常见问题",
+      "other": "指令错误的可点击修复",
       "more": "🔥 新群开放"
     }
   },
