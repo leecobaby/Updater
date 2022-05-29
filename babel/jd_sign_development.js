@@ -173,6 +173,7 @@ function do618ZC () {
       break;
     case 5:
       // 做浏览内容任务
+      $.message = 'test'
       $.self.count = 0
       do618ZCBrowseTask()
       break;
