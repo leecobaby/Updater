@@ -173,7 +173,6 @@ function do618ZC () {
       break;
     case 5:
       // 做浏览内容任务
-      $.message = 'test'
       $.self.count = 0
       do618ZCBrowseTask()
       break;
@@ -243,6 +242,7 @@ function do618ZCBrowseTask () {
     $.call.pop()
     $.next = 0 // 清空 Next.key
     $.self.count = 0
+    $.message = `浏览任务已全都完成`
     document.write(JSON.stringify($))
     return
   }
@@ -282,17 +282,18 @@ function do618ZCRecommendTask () {
 
   // 利用队列取代循环
   $.oneActivityInfo = $.taskList.shift();
-  (typeof $.oneActivityInfo.current !== 'undefined')
-    && ($.self.current = $.oneActivityInfo.current);
   if (!$.oneActivityInfo) {
     // 循环完成重新设置 call
     $.call.pop()
     $.next = 0 // 清空 Next.key
-    $.message = `推荐任务都已完成~`
+    $.message = `推荐任务已全都完成~`
     document.write(JSON.stringify($))
     return
   }
 
+  // 获取浏览任务当前完成次数
+  (typeof $.oneActivityInfo.current !== 'undefined')
+    && ($.self.current = $.oneActivityInfo.current);
 
   // 做过的任务则跳过重新执行 浏览任务也跳过
   if ($.oneActivityInfo.status != 0 || !$.oneActivityInfo?.itemId) {
