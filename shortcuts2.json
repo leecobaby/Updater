@@ -176,8 +176,8 @@
     }
   },
   "618cat": {
-    "version": "1.5",
-    "update_log": "- 采用 最新的淘宝任务框架\n- 支持 令牌模式，模拟真实任务数据",
+    "version": "1.6",
+    "update_log": "- 修复部分人指令自运行会运行到芭芭农场的错误\n- 运行任务前最好去往更多选项进行指令修复\n- 是否继续上次任务点击否将会解决很多错误",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/blob/master/TB.FAQ.md#%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96-cookie",
       "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cxdbxa6",
@@ -185,7 +185,7 @@
     },
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/68bc00d010aa4fb1afb4a550b20db204",
+    "update": "https://www.icloud.com/shortcuts/aa4aefb0cc1a45249b338c02f8bccd5a",
     "notice": "⚠️ 令牌的任务异常为正常情况可以无视它或者取消勾选云端推送\n⚠️ 第一次运行将需要授权很多次，不要漏掉~🧧 超级红包每天领，前往活动大厅查看更多~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=天猫618喵运会自动任务&input=text&text=task",
