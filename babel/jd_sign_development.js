@@ -288,6 +288,7 @@ function do618ZCRecommendTask () {
     // 循环完成重新设置 call
     $.call.pop()
     $.next = 0 // 清空 Next.key
+    $.message = `推荐任务都已完成~`
     document.write(JSON.stringify($))
     return
   }
