@@ -465,7 +465,7 @@ function takeRequest (type) {
       break;
     case 'do618ZCReward':
       body = { "projectId": $.projectId, "assignmentId": $.assignmentIdReward, "type": "16" }
-      url = `https://api.m.jd.com/interactive_reward?functionId=interactive_reward&appid=contenth5_common&body=${JSON.stringify(body)}&client=wh5&partner=ace1033463nrjs`;
+      url = `https://api.m.jd.com/interactive_reward?functionId=interactive_reward&appid=contenth5_common&body=${encodeURIComponent(JSON.stringify(body))}&client=wh5&partner=ace1033463nrjs`;
       headers = {
         Origin: 'https://prodev.m.jd.com',
         Referer: 'https://prodev.m.jd.com'
