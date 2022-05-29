@@ -281,7 +281,7 @@ function do618ZCRecommendTask () {
 
   // 利用队列取代循环
   $.oneActivityInfo = $.taskList.shift()
-  if (!$.oneActivityInfo || $.activityInfoList.status != 0) {
+  if (!$.oneActivityInfo || $.oneActivityInfo.status != 0) {
     // 循环完成重新设置 call
     $.call.pop()
     $.next = 0 // 清空 Next.key
