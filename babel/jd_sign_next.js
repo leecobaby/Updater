@@ -88,7 +88,7 @@ function Next (func) {
         $.next = 1 // 覆盖前面的 0
         $.callback = 'Func.request'
         $.itemId = $.callbackInfo.data?.itemId
-        takePostRequest('qryViewkitCallbackResult')
+        takeRequest('qryViewkitCallbackResult')
         return
 
         // next next
