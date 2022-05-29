@@ -443,7 +443,7 @@
     ]
   },
   "618cat": {
-    "version": "数据最后更新于:5.29.1",
+    "version": "数据最后更新于:5.30.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fGKPpGy",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fGKPpGy",
@@ -484,12 +484,18 @@
         "stars": {
           "title": "云端推送",
           "type": "stars",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&sourceType=other&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&sceneId=3399&hd_from_id=100155&deliveryId=",
+          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&sourceType=other&fromToken=WxLO7lWT0B6EdzoPuoJDTEkBHnUqU9UNUz&sceneId=3399&hd_from_id=100155&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
-            "29239 cloudsail_3_313597500650001_29239_0",
-            "29239 cloudsail_3_313597500650002_29239_0",
-            "29239 cloudsail_3_313597500650003_29239_0"
+            "29239 cloudsail_4_315459504320001_29239_0",
+            "29239 cloudsail_4_313597500650002_29239_0",
+            "29239 cloudsail_4_313597500650003_29239_0",
+            "29240 cloudsail_4_314709002330001_29240_0",
+            "29240 cloudsail_4_314709002330002_29240_0",
+            "29240 cloudsail_4_314709002330003_29240_0",
+            "29240 cloudsail_4_314709002330004_29240_0",
+            "29240 cloudsail_4_314709002330005_29240_0",
+            "29240 cloudsail_4_314709002330006_29240_0"
           ]
         }
       },
