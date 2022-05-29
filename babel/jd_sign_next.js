@@ -57,6 +57,57 @@ function Next (func) {
       dealReturn('doInteractiveAssignment', $.data)
       document.write(JSON.stringify($))
       break;
+    case 'get618ZCInfo_next':
+      // next
+      $.callback = ''
+      $.call.pop()
+      dealReturn('get618ZCInfo', $.data)
+      document.write(JSON.stringify($))
+      break;
+    case 'do618ZCReward_next':
+      // next
+      $.callback = ''
+      $.call.pop()
+      dealReturn('do618ZCReward', $.data)
+      document.write(JSON.stringify($))
+      break;
+    case 'get618ZCTaskList_next':
+      // next
+      $.callback = ''
+      $.call.pop()
+      dealReturn('get618ZCTaskList', $.data)
+      document.write(JSON.stringify($))
+      break;
+    case 'do618ZCBrowseTask_next':
+      // next
+      $.callback = ''
+      dealReturn('do618ZCBrowseTask', $.data)
+      if ($.callbackInfo && $.callbackInfo.code == 0) {
+        // 等待 5s
+        $.wait = 5
+        $.next = 1 // 覆盖前面的 0
+        $.callback = 'Func.request'
+        $.itemId = $.callbackInfo.data?.itemId
+        takePostRequest('qryViewkitCallbackResult')
+        return
+
+        // next next
+        $.callback = ''
+        $.wait = 0
+        dealReturn('qryViewkitCallbackResult', $.data)
+        document.write(JSON.stringify($))
+      } else {
+        $.message = `浏览任务失败：遇到未知错误或ID${$.contentId}内容不存在`
+        document.write(JSON.stringify($))
+      }
+      break;
+    case 'do618ZCBrowseTask_next_next':
+      // next next
+      $.callback = ''
+      $.wait = 0
+      dealReturn('qryViewkitCallbackResult', $.data)
+      document.write(JSON.stringify($))
+      break;
     default:
       // next
       $.callback = ''
