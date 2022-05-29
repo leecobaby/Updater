@@ -515,7 +515,7 @@ function takeRequest (type) {
       break;
     case `qryViewkitCallbackResult`:
       url = `https://api.m.jd.com/client.action?functionId=qryViewkitCallbackResult`
-      body = `appid=wh5&area=5_274_49707_49973&body={"dataSource":"babelInteractive"method":"customDoInteractiveAssignmentForBabel","reqParams":"{\"itemId\":\"${$.itemId}\",\"encryptProjectId\":\"${$.projectId}\",\"encryptAssignmentId\":\"${$.assignmentId}\"}"}&build=167283&client=apple&clientVersion=9.1.0`;
+      body = `appid=wh5&area=5_274_49707_49973&body={"dataSource":"babelInteractive"method":"customDoInteractiveAssignmentForBabel","reqParams":"{\"itemId\":\"${$.itemId}\",\"encryptProjectId\":\"${$.projectId}\",\"encryptAssignmentId\":\"${$.assignmentIdBrowse}\"}"}&build=167283&client=apple&clientVersion=9.1.0`;
       myRequest = getRequest(url, body);
       break;
     default:
