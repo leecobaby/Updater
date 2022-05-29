@@ -168,13 +168,13 @@ function do618ZC () {
       do618ZCReward()
       break;
     case 4:
+      // 做推荐任务
+      do618ZCRecommendTask()
+      break;
+    case 5:
       // 做浏览内容任务
       $.self.count = 0
       do618ZCBrowseTask()
-      break;
-    case 5:
-      // 做任务列表任务
-      do618ZCRecommendTask()
       break;
     case 6:
       // 抽奖
@@ -237,7 +237,7 @@ function do618ZCBrowseTask () {
   $.call[$.call.length - 1] == 'do618ZCBrowseTask' || $.call.push('do618ZCBrowseTask')
 
 
-  if ($.self.count >= 20) {
+  if ($.self.count >= 20 || $.self.current >= 20) {
     // 循环完成重新设置 call
     $.call.pop()
     $.next = 0 // 清空 Next.key
@@ -280,11 +280,20 @@ function do618ZCRecommendTask () {
   $.call[$.call.length - 1] == 'do618ZCRecommendTask' || $.call.push('do618ZCRecommendTask')
 
   // 利用队列取代循环
-  $.oneActivityInfo = $.taskList.shift()
-  if (!$.oneActivityInfo || $.oneActivityInfo.status != 0) {
+  $.oneActivityInfo = $.taskList.shift();
+  (typeof $.oneActivityInfo.current !== 'undefined')
+    && ($.self.current = $.oneActivityInfo.current);
+  if (!$.oneActivityInfo) {
     // 循环完成重新设置 call
     $.call.pop()
     $.next = 0 // 清空 Next.key
+    document.write(JSON.stringify($))
+    return
+  }
+
+
+  // 做过的任务则跳过重新执行 浏览任务也跳过
+  if ($.oneActivityInfo.status != 0 || !$.oneActivityInfo?.itemId) {
     document.write(JSON.stringify($))
     return
   }
@@ -473,7 +482,7 @@ function takeRequest (type) {
       myRequest = getRequest(url, null, 'POST', headers);
       break;
     case 'get618ZCTaskList':
-      let arr = [];
+      let arr = [{ "type": "18", "projectId": $.projectId, "assignmentId": $.assignmentIdBrowse, "doneHide": false }];
       for (const item of $.scanTaskCodes) {
         arr.push(
           { "type": "1", "projectId": $.projectId, "assignmentId": item, "doneHide": false }
@@ -718,7 +727,7 @@ function dealReturn (type, data) {
         $.message = `抽奖成功：${data.data?.rewardMsg}`
       } else {
         $.call.pop() // 结束抽奖
-        $.message = `抽奖失败：原因${data}`
+        $.message = `抽奖失败：原因${JSON.stringify(data)}`
       }
       break;
     case 'qryViewkitCallbackResult':
