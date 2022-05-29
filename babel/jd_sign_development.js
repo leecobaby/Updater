@@ -249,7 +249,7 @@ function do618ZCBrowseTask () {
   $.contentId = $.Utils.randomInt(10000000, 30000000)
   $.message = `做浏览内容任务，第${++$.self.count}次/20 等待完成...`
   $.callback = 'Func.request'
-  takePostRequest('do618ZCBrowseTask');
+  takeRequest('do618ZCBrowseTask');
   return
 
   // next
@@ -261,7 +261,7 @@ function do618ZCBrowseTask () {
     $.next = 1 // 覆盖前面的 0
     $.callback = 'Func.request'
     $.itemId = $.callbackInfo.data?.itemId
-    takePostRequest('qryViewkitCallbackResult')
+    takeRequest('qryViewkitCallbackResult')
     return
 
     // next next
@@ -293,7 +293,7 @@ function do618ZCRecommendTask () {
   $.assignmentId = $.oneActivityInfo.assignmentId
   $.message = `做任务：${$.oneActivityInfo.title} 等待完成...`
   $.callback = 'Func.request'
-  takePostRequest('do618ZCRecommendTask');
+  takeRequest('do618ZCRecommendTask');
   return
 
   // next
@@ -307,7 +307,7 @@ function do618ZCLottery () {
   $.call[$.call.length - 1] == 'do618ZCLottery' || $.call.push('do618ZCLottery')
 
   $.callback = 'Func.request'
-  takePostRequest('do618ZCLottery');
+  takeRequest('do618ZCLottery');
   return
 
   // next
@@ -707,7 +707,7 @@ function dealReturn (type, data) {
       if (data.code == 0) {
         $.message = `当天首登有奖：${data.message || JSON.stringify(data.data)}`
       } else {
-        $.message = `当天首登有奖：出错原因${data}`
+        $.message = `当天首登有奖：出错原因${SON.stringify(data)}`
       }
       break;
     case 'do618ZCBrowseTask':
