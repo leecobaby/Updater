@@ -27,12 +27,14 @@ $.Utils = Utils()
 /** 下方放 next 文本，来控制逻辑执行 **/
 
 
-//   form 来源   to 目标   callback 回调   call 调用
+//   from 来源   to 目标   callback 回调   call 调用
 //   当回调有值则执行回调，没有则去往目标，没有目标则去往来源
 
 //   func.xxx -> logicHandler($) -> func.http -> logicHandler($) -> func.xxx
 //   回调完执行 next，视情况来清空 callback
 //   error 为错误信息，会终止当前账号在指令中的运行，直接运行输出log开始下一个账号或结束
+//   $.next = 1 将会层级嵌套
+//   $.next = 0 将重置
 
 
 /**
@@ -115,6 +117,7 @@ function JDSecKilling () {
   dealReturn('JDSecKilling', $.data)
   if ($.taskType) {
     $.callback = 'Func.request'
+    $.next = 1
     takeRequest('JDSecKillingNext')
     // return
     // 这里的逻辑是在 next 里面的，而 next 不是一个函数，所以不能使用 return 来中断
@@ -123,6 +126,7 @@ function JDSecKilling () {
     // next next 
     if (!document.body.innerText) {
       $.callback = ''
+      $.next = 0
       dealReturn('JDSecKillingNext', $.data)
       document.write(JSON.stringify($))
     }

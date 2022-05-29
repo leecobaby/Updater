@@ -13,6 +13,7 @@ function Next (func) {
       dealReturn('JDSecKilling', $.data)
       if ($.taskType) {
         $.callback = 'Func.request'
+        $.next = 1
         takeRequest('JDSecKillingNext')
         // return
         // 这里的逻辑是在 next 里面的，而 next 不是一个函数，所以不能使用 return 来中断
@@ -21,6 +22,7 @@ function Next (func) {
         // next next 
         if (!document.body.innerText) {
           $.callback = ''
+          $.next = 0
           dealReturn('JDSecKillingNext', $.data)
           document.write(JSON.stringify($))
         }
@@ -32,6 +34,7 @@ function Next (func) {
       // next next 
       if (!document.body.innerText) {
         $.callback = ''
+        $.next = 0
         dealReturn('JDSecKillingNext', $.data)
         document.write(JSON.stringify($))
       }
