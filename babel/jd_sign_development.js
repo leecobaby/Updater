@@ -479,34 +479,34 @@ function takeRequest (type) {
           { "type": "1", "projectId": $.projectId, "assignmentId": item, "doneHide": false }
         )
       }
-      url = `https://api.m.jd.com/interactive_info?functionId=interactive_info&appid=contenth5_common&body=${JSON.stringify(arr)}&client=wh5&partner=ace1033463nrjs`;
+      url = `https://api.m.jd.com/interactive_info?functionId=interactive_info&appid=contenth5_common&body=${encodeURIComponent(JSON.stringify(arr))}&client=wh5&partner=ace1033463nrjs`;
       headers = {
         Origin: 'https://prodev.m.jd.com',
         Referer: 'https://prodev.m.jd.com'
       }
-      myRequest = getRequest(url, body, 'POST', headers);
+      myRequest = getRequest(url, null, 'POST', headers);
       break;
     case 'do618ZCBrowseTask':
       body = { "projectId": $.projectId, "assignmentId": $.assignmentIdBrowse, "type": "18", "contentId": $.contentId, "contentType": "ugc" }
-      url = `https://api.m.jd.com/interactive_accept?functionId=interactive_accept&appid=contenth5_common&body=${JSON.stringify(body)}&client=wh5&partner=ace1033463nrjs`;
+      url = `https://api.m.jd.com/interactive_accept?functionId=interactive_accept&appid=contenth5_common&body=${encodeURIComponent(JSON.stringify(body))}&client=wh5&partner=ace1033463nrjs`;
       headers = {
         Origin: 'https://prodev.m.jd.com',
         Referer: 'https://prodev.m.jd.com'
       }
-      myRequest = getRequest(url, body, 'POST', headers);
+      myRequest = getRequest(url, null, 'POST', headers);
       break;
     case 'do618ZCRecommendTask':
       body = { "projectId": $.projectId, "assignmentId": $.assignmentId, "type": "1", "itemId": $.itemId }
-      url = `https://api.m.jd.com/interactive_done?functionId=interactive_done&appid=contenth5_common&body=${JSON.stringify(body)}&client=wh5&partner=ace1033463nrjs`;
+      url = `https://api.m.jd.com/interactive_done?functionId=interactive_done&appid=contenth5_common&body=${encodeURIComponent(JSON.stringify(body))}&client=wh5&partner=ace1033463nrjs`;
       headers = {
         Origin: 'https://prodev.m.jd.com',
         Referer: 'https://prodev.m.jd.com'
       }
-      myRequest = getRequest(url, body, 'POST', headers);
+      myRequest = getRequest(url, null, 'POST', headers);
       break;
     case 'do618ZCLottery':
       body = { "projectId": $.projectId, "assignmentId": $.assignmentIdLottery, "type": "17" }
-      url = `https://api.m.jd.com/interactive_done?functionId=interactive_done&appid=contenth5_common&body=${JSON.stringify(body)}&client=wh5&partner=ace1033463nrjs`;
+      url = `https://api.m.jd.com/interactive_done?functionId=interactive_done&appid=contenth5_common&body=${encodeURIComponent(JSON.stringify(body))}&client=wh5&partner=ace1033463nrjs`;
       headers = {
         Origin: 'https://prodev.m.jd.com',
         Referer: 'https://prodev.m.jd.com'
