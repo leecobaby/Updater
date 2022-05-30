@@ -715,7 +715,7 @@ function dealReturn (type, data) {
       if (data.code == 0 && data.data) {
         $.message = `完成任务：${data.data.rewardMsg}`
       } else {
-        $.message = `任务失败~`
+        $.message = `任务失败：原因${JSON.stringify(data)}`
       }
       break;
     case 'do618ZCReward':
