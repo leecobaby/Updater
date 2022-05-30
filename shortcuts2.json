@@ -577,16 +577,16 @@
     }
   },
   "JD_sign": {
-    "version": "1.5",
-    "update_log": "- 采用 最新的京东系任务架构\n- 重构 指令云端架构，逻辑执行器更精简快速，减少网络压力\n- 重构 指令架构，弃用部分无意义功能\n- 新增 年货节抽签任务，其他任务持续推送",
+    "version": "1.6",
+    "update_log": "- 新增 自动助力功能（暂未开放）\n- 新增 任务账号增加到 5 个\n- 新增 618 种草街任务，其他任务持续更新中\n- 增加 活动大厅快速去往个活动页面数据",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_sign#版本日志"
     },
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/d855d59bf7944bca978c42936f65df24",
-    "notice": "已更换架构，如弹错请去往更新选项-指令修复\n任务失败正常情况，很多任务只会偶尔返场，所以不好删掉",
+    "update": "https://www.icloud.com/shortcuts/8be2cd5acbbb479f9cec84de85401915",
+    "notice": "更新后第一次使用请先修复指令,防止出错\n自动助力暂未开发，开放会另行通知~",
     "video": "",
     "automation_url": "shortcuts://run-shortcut?name=京东-多合一签到&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd.png",
@@ -594,13 +594,13 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/jd.json",
     "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_sign/",
     "tip": {
-      "hongbao": "",
-      "hot": "🧧 京东红包更新",
+      "hot": "🧧 抢京东红包",
       "faq": "有疑问的请查看",
       "set": "",
       "team": "",
+      "help": "提交你的助力码",
       "other": "指令修复在这",
-      "more": "🧧 1.15日抢现金红包"
+      "more": ""
     }
   },
   "JD_zoo": {
