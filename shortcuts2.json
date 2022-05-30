@@ -739,16 +739,16 @@
     }
   },
   "JD_618": {
-    "version": "1.0",
-    "update_log": "",
+    "version": "1.1",
+    "update_log": "- 尝试性修复指令模拟人机互动的数据\n- 新增 京享红包相互助力功能",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_618#版本日志"
     },
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/5693f04f6d274e7bb37a1f32537237f9",
-    "notice": "🎉 已支持京东618部分任务，持续更新中...\n部分火爆的同学先手动，等待更新~",
+    "update": "https://www.icloud.com/shortcuts/e2ccdc6ff7b64b11830afc33236ed3c4",
+    "notice": "⚠️ 应该只有少数账号能正常使用，如果还是火爆就当助力平台吧，已经尽力了。\n🧧 活动大厅有小红包每天可领哦，注意使用有效期。",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-618自动任务&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd2.jpeg",
@@ -757,7 +757,7 @@
     "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_618/",
     "tip": {
       "log": "你的助力码在这",
-      "hot": "京东618红包即将来临...",
+      "hot": "🧧 每天领个小红包",
       "faq": "有疑问的请查看",
       "set": "请先在这授权账号",
       "help": "提交你的助力码",
