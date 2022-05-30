@@ -41,6 +41,8 @@ $.Utils = Utils()
  * 初始化
  */
 function init () {
+
+  $.helpCodeList1 = $.helpCodeObj['活动1助力码'] || []
   // 处理助力码
   if ($.inviteList) {
     $.inviteList = Array.isArray($.inviteList) ? $.inviteList : [$.inviteList]
@@ -48,9 +50,6 @@ function init () {
   } else {
     $.inviteList = []
   }
-
-  // 处理红包码
-  $.rebateCode = []
 
   // 任务流程初始化
   $.taskStep = 1

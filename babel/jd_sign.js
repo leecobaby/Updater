@@ -7,6 +7,9 @@
  * tips: Only for learning and communication, strictly prohibited for commercial use, please delete within 24 hours
  */
 
+// 618 种草街 
+// https://prodev.m.jd.com/mall/active/U18CGRp9tTnAkH1HfHnhBEWrfrr/index.html
+
 
 // 到指令里运行需要注释掉
 // const $ = {}
@@ -24,18 +27,22 @@ $.Utils = Utils()
 /** 下方放 next 文本，来控制逻辑执行 **/
 
 
-//   form 来源   to 目标   callback 回调   call 调用
+//   from 来源   to 目标   callback 回调   call 调用
 //   当回调有值则执行回调，没有则去往目标，没有目标则去往来源
 
 //   func.xxx -> logicHandler($) -> func.http -> logicHandler($) -> func.xxx
 //   回调完执行 next，视情况来清空 callback
 //   error 为错误信息，会终止当前账号在指令中的运行，直接运行输出log开始下一个账号或结束
+//   $.next = 1 将会层级嵌套
+//   $.next = 0 将重置
 
 
 /**
  * 初始化
  */
 function init () {
+
+  $.helpCodeList1 = $.helpCodeObj['活动1助力码'] || []
   // 处理助力码
   if ($.inviteList) {
     $.inviteList = Array.isArray($.inviteList) ? $.inviteList : [$.inviteList]
@@ -43,9 +50,6 @@ function init () {
   } else {
     $.inviteList = []
   }
-
-  // 处理红包码
-  $.rebateCode = []
 
   // 任务流程初始化
   $.taskStep = 1
@@ -84,103 +88,6 @@ function JingDongBean () {
   document.write(JSON.stringify($))
 }
 
-/**
- * 京东超市
- */
-function JingDongStore () {
-  $.callback = 'Func.request'
-  takeRequest('JingDongStore');
-  return
-
-  // next
-  $.callback = ''
-  dealReturn('JingDongStore', $.data)
-  document.write(JSON.stringify($))
-}
-
-/**
- * 京东转盘
- */
-function JingDongTurn () {
-  $.callback = 'Func.request'
-  takeRequest('JingDongTurn');
-  return
-
-  // next
-  $.callback = ''
-  dealReturn('JingDongTurn', $.data)
-  document.write(JSON.stringify($))
-}
-
-/**
- * 京东闪购
- */
-function JDFlashSale () {
-  $.callback = 'Func.request'
-  takeRequest('JDFlashSale');
-  return
-
-  // next
-  $.callback = ''
-  dealReturn('JDFlashSale', $.data)
-  document.write(JSON.stringify($))
-}
-
-/**
- * 京东闪购 - 瓜分京豆
- */
-function FlashSaleDivide () {
-  $.callback = 'Func.request'
-  takeRequest('FlashSaleDivide');
-  return
-
-  // next
-  $.callback = ''
-  dealReturn('FlashSaleDivide', $.data)
-  document.write(JSON.stringify($))
-}
-
-/**
- * 京东现金红包
- */
-function JingDongCash () {
-  $.callback = 'Func.request'
-  takeRequest('JingDongCash');
-  return
-
-  // next
-  $.callback = ''
-  dealReturn('JingDongCash', $.data)
-  document.write(JSON.stringify($))
-}
-
-/**
- * 京东小魔方  暂时不做
- */
-function JDMagicCube () {
-  $.callback = 'Func.request'
-  takeRequest('JDMagicCube');
-  return
-
-  // next
-  $.callback = ''
-  dealReturn('JDMagicCube', $.data)
-  document.write(JSON.stringify($))
-}
-
-/**
- * 京东金贴
- */
-function JingDongSubsidy () {
-  $.callback = 'Func.request'
-  takeRequest('JingDongSubsidy');
-  return
-
-  // next
-  $.callback = ''
-  dealReturn('JingDongSubsidy', $.data)
-  document.write(JSON.stringify($))
-}
 
 /**
  * 京东领现金
@@ -197,23 +104,6 @@ function JingDongGetCash () {
 }
 
 /**
- * 京东摇一摇
- */
-function JingDongShake () {
-  $.callback = 'Func.request'
-  takeRequest('JingDongShake');
-  return
-
-  // next
-  $.callback = ''
-  dealReturn('JingDongShake', $.data)
-  // 在涉及到 next 后面调用其他函数时需要判断网页文本，防止覆盖
-  if (!document.body.innerText) {
-    document.write(JSON.stringify($))
-  }
-}
-
-/**
  * 京东秒杀
  */
 function JDSecKilling () {
@@ -226,6 +116,7 @@ function JDSecKilling () {
   dealReturn('JDSecKilling', $.data)
   if ($.taskType) {
     $.callback = 'Func.request'
+    $.next = 1
     takeRequest('JDSecKillingNext')
     // return
     // 这里的逻辑是在 next 里面的，而 next 不是一个函数，所以不能使用 return 来中断
@@ -234,6 +125,7 @@ function JDSecKilling () {
     // next next 
     if (!document.body.innerText) {
       $.callback = ''
+      $.next = 0
       dealReturn('JDSecKillingNext', $.data)
       document.write(JSON.stringify($))
     }
@@ -245,21 +137,6 @@ function JDSecKilling () {
 
 
 
-
-/**
- * 获取好友列表
- */
-function friendListInitForFarm () {
-  $.callback = 'Func.request'
-  takeRequest('friendListInitForFarm');
-  return
-
-  // next
-  $.callback = ''
-  dealReturn('friendListInitForFarm', $.data)
-  document.write(JSON.stringify($))
-}
-
 /**
  * 好友助力
  */
@@ -268,7 +145,195 @@ function help () {
 }
 
 /**
- * 🔥 做年货节抽签
+ * 🔥 做 618 种草街 -限时
+ */
+function do618ZC () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler'
+  $.call = ['do618ZC']
+
+  switch ($.taskStep++) {
+    case 1:
+      // 获取活动信息
+      get618ZCInfo()
+      break;
+    case 2:
+      // 查询任务列表
+      if ($.projectId) {
+        get618ZCTaskList();
+      } else {
+        // 跳出任务
+        $.taskStep = -1;
+      }
+      break;
+    case 3:
+      // 当天首登奖励
+      do618ZCReward()
+      break;
+    case 4:
+      // 做推荐任务
+      do618ZCRecommendTask()
+      break;
+    case 5:
+      // 做浏览内容任务
+      $.self.count = 0
+      do618ZCBrowseTask()
+      break;
+    case 6:
+      // 抽奖
+      do618ZCLottery()
+      break;
+    default:
+      $.to = ''; $.call.pop(); $.taskStep = 1; $.self.data = undefined
+      document.write(JSON.stringify($))
+      break;
+  }
+}
+
+// 获取种草活动页
+function get618ZCInfo () {
+  $.call[$.call.length - 1] == 'get618ZCInfo' || $.call.push('get618ZCInfo')
+
+  $.callback = 'Func.request'
+  takeRequest('get618ZCInfo');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('get618ZCInfo', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 当天首登有奖
+function do618ZCReward () {
+  $.call[$.call.length - 1] == 'do618ZCReward' || $.call.push('do618ZCReward')
+
+  $.callback = 'Func.request'
+  takeRequest('do618ZCReward');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('do618ZCReward', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 查询任务列表
+function get618ZCTaskList () {
+  $.call[$.call.length - 1] == 'get618ZCTaskList' || $.call.push('get618ZCTaskList')
+
+  $.callback = 'Func.request'
+  takeRequest('get618ZCTaskList');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('get618ZCTaskList', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 做浏览任务
+function do618ZCBrowseTask () {
+  $.call[$.call.length - 1] == 'do618ZCBrowseTask' || $.call.push('do618ZCBrowseTask')
+
+
+  if ($.self.count >= 20 || $.self.current >= 20) {
+    // 循环完成重新设置 call
+    $.call.pop()
+    $.next = 0 // 清空 Next.key
+    $.self.count = 0
+    $.message = `浏览任务已全都完成`
+    document.write(JSON.stringify($))
+    return
+  }
+
+  $.contentId = $.Utils.randomInt(10000000, 30000000)
+  $.message = `做浏览内容任务，第${++$.self.count}次/20 等待完成...`
+  $.callback = 'Func.request'
+  takeRequest('do618ZCBrowseTask');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('do618ZCBrowseTask', $.data)
+  if ($.callbackInfo && $.callbackInfo.code == 0) {
+    // 等待 5s
+    $.wait = 5
+    $.next = 1 // 覆盖前面的 0
+    $.callback = 'Func.request'
+    $.itemId = $.callbackInfo.data?.itemId
+    takeRequest('qryViewkitCallbackResult')
+    return
+
+    // next next
+    $.callback = ''
+    $.wait = 0
+    dealReturn('qryViewkitCallbackResult', $.data)
+    document.write(JSON.stringify($))
+  } else {
+    $.message = `浏览任务失败：遇到未知错误或ID${$.contentId}内容不存在`
+    document.write(JSON.stringify($))
+  }
+}
+
+// 做推荐任务
+function do618ZCRecommendTask () {
+  $.call[$.call.length - 1] == 'do618ZCRecommendTask' || $.call.push('do618ZCRecommendTask')
+
+  // 利用队列取代循环
+  $.oneActivityInfo = $.taskList.shift();
+  if (!$.oneActivityInfo) {
+    // 循环完成重新设置 call
+    $.call.pop()
+    $.next = 0 // 清空 Next.key
+    $.message = `推荐任务已全都完成~`
+    document.write(JSON.stringify($))
+    return
+  }
+
+  // 获取浏览任务当前完成次数
+  (typeof $.oneActivityInfo.current !== 'undefined')
+    && ($.self.current = $.oneActivityInfo.current);
+
+  // 做过的任务则跳过重新执行 浏览任务也跳过
+  if ($.oneActivityInfo.status != 0 || !$.oneActivityInfo?.itemId) {
+    document.write(JSON.stringify($))
+    return
+  }
+
+  $.itemId = $.oneActivityInfo.itemId
+  $.assignmentId = $.oneActivityInfo.assignmentId
+  $.message = `做任务：${$.oneActivityInfo.title} 等待完成...`
+  $.callback = 'Func.request'
+  takeRequest('do618ZCRecommendTask');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('do618ZCRecommendTask', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 抽奖
+function do618ZCLottery () {
+  $.call[$.call.length - 1] == 'do618ZCLottery' || $.call.push('do618ZCLottery')
+
+  $.callback = 'Func.request'
+  takeRequest('do618ZCLottery');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('do618ZCLottery', $.data)
+  document.write(JSON.stringify($))
+}
+
+
+/**
+ * 🔥 做年货节抽签 - 限时
  */
 function doNHSign () {
   // 循环逻辑单独设置 to,call
@@ -366,50 +431,8 @@ function takeRequest (type) {
       body = `functionId=signBeanIndex&appid=ld`
       myRequest = getRequest(url, body);
       break;
-    case 'JingDongStore':
-      url = 'https://api.m.jd.com/api?appid=jdsupermarket&functionId=smtg_sign&clientVersion=8.0.0&client=m&body=%7B%7D'
-      headers = {
-        Origin: `https://jdsupermarket.jd.com`
-      }
-      myRequest = getRequest(url, body, 'GET', headers);
-      break;
-    case 'JingDongTurn':
-      url = 'https://api.m.jd.com/client.action?functionId=babelGetLottery'
-      body = `body=%7B%22enAwardK%22%3A%2295d235f2a09578c6613a1a029b26d12d%22%2C%22riskParam%22%3A%7B%7D%7D&client=wh5`;
-      myRequest = getRequest(url, body);
-      break;
-    case 'JDFlashSale':
-      url = 'https://api.m.jd.com/client.action?functionId=partitionJdSgin'
-      body = `body=%7B%22version%22%3A%22v2%22%7D&client=apple&clientVersion=9.0.8&openudid=1fce88cd05c42fe2b054e846f11bdf33f016d676&sign=6768e2cf625427615dd89649dd367d41&st=1597248593305&sv=121`;
-      myRequest = getRequest(url, body);
-      break;
-    case 'FlashSaleDivide':
-      url = 'https://api.m.jd.com/client.action?functionId=partitionJdShare'
-      body = `body=%7B%22version%22%3A%22v2%22%7D&client=apple&clientVersion=9.0.8&openudid=1fce88cd05c42fe2b054e846f11bdf33f016d676&sign=49baa3b3899b02bbf06cdf41fe191986&st=1597682588351&sv=111`;
-      myRequest = getRequest(url, body);
-      break;
-    case 'JingDongCash':
-      url = 'https://api.m.jd.com/client.action?functionId=ccSignInNew'
-      body = `body=%7B%22pageClickKey%22%3A%22CouponCenter%22%2C%22eid%22%3A%22O5X6JYMZTXIEX4VBCBWEM5PTIZV6HXH7M3AI75EABM5GBZYVQKRGQJ5A2PPO5PSELSRMI72SYF4KTCB4NIU6AZQ3O6C3J7ZVEP3RVDFEBKVN2RER2GTQ%22%2C%22shshshfpb%22%3A%22v1%5C%2FzMYRjEWKgYe%2BUiNwEvaVlrHBQGVwqLx4CsS9PH1s0s0Vs9AWk%2B7vr9KSHh3BQd5NTukznDTZnd75xHzonHnw%3D%3D%22%2C%22childActivityUrl%22%3A%22openapp.jdmobile%253a%252f%252fvirtual%253fparams%253d%257b%255c%2522category%255c%2522%253a%255c%2522jump%255c%2522%252c%255c%2522des%255c%2522%253a%255c%2522couponCenter%255c%2522%257d%22%2C%22monitorSource%22%3A%22cc_sign_ios_index_config%22%7D&client=apple&clientVersion=8.5.0&d_brand=apple&d_model=iPhone8%2C2&openudid=1fce88cd05c42fe2b054e846f11bdf33f016d676&scope=11&screen=1242%2A2208&sign=1cce8f76d53fc6093b45a466e93044da&st=1581084035269&sv=102`;
-      myRequest = getRequest(url, body);
-      break;
-    case 'JDMagicCube':
-      url = `https://api.m.jd.com/client.action?functionId=getNewsInteractionInfo&appid=smfe&body=${encodeURIComponent(`{"sign":2}`)}`
-      myRequest = getRequest(url, body, 'GET');
-      break;
-    case 'JingDongSubsidy':
-      url = 'https://ms.jr.jd.com/gw/generic/uc/h5/m/signIn7'
-      headers = {
-        Referer: "https://active.jd.com/forever/cashback/index"
-      }
-      myRequest = getRequest(url, body, 'GET', headers);
-      break;
     case 'JingDongGetCash':
       url = 'https://api.m.jd.com/client.action?functionId=cash_sign&body=%7B%22remind%22%3A0%2C%22inviteCode%22%3A%22%22%2C%22type%22%3A0%2C%22breakReward%22%3A0%7D&client=apple&clientVersion=9.0.8&openudid=1fce88cd05c42fe2b054e846f11bdf33f016d676&sign=7e2f8bcec13978a691567257af4fdce9&st=1596954745073&sv=111'
-      myRequest = getRequest(url, body, 'GET');
-      break;
-    case 'JingDongShake':
-      url = 'https://api.m.jd.com/client.action?appid=vip_h5&functionId=vvipclub_shaking'
       myRequest = getRequest(url, body, 'GET');
       break;
     case 'JDSecKilling':
@@ -448,41 +471,67 @@ function takeRequest (type) {
       body = ``
       myRequest = getRequest(url, body);
       break;
-    case 'zoo_bdCollectScore':
-      body = getPostBody(type);
-      myRequest = getRequest(`zoo_bdCollectScore`, body);
+    case 'get618ZCInfo':
+      url = "https://prodev.m.jd.com/mall/active/U18CGRp9tTnAkH1HfHnhBEWrfrr/index.html";
+      headers = {
+        ContentType: 'null'
+      }
+      myRequest = getRequest(url, body, 'GET');
       break;
-    case 'qryCompositeMaterials':
-      body = `functionId=qryCompositeMaterials&body={"qryParam":"[{\\"type\\":\\"advertGroup\\",\\"mapTo\\":\\"resultData\\",\\"id\\":\\"05371960\\"}]","activityId":"2s7hhSTbhMgxpGoa9JDnbDzJTaBB","pageId":"","reqSrc":"","applyKey":"jd_star"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`qryCompositeMaterials`, body);
+    case 'do618ZCReward':
+      body = { "projectId": $.projectId, "assignmentId": $.assignmentIdReward, "type": "16" }
+      url = `https://api.m.jd.com/interactive_reward?functionId=interactive_reward&appid=contenth5_common&body=${encodeURIComponent(JSON.stringify(body))}&client=wh5&partner=ace1033463nrjs`;
+      headers = {
+        Origin: 'https://prodev.m.jd.com',
+        Referer: 'https://prodev.m.jd.com'
+      }
+      myRequest = getRequest(url, null, 'POST', headers);
       break;
-    case 'zoo_boxShopLottery':
-      body = `functionId=zoo_boxShopLottery&body={"shopSign":"${$.shopSign}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`zoo_boxShopLottery`, body);
+    case 'get618ZCTaskList':
+      let arr = [{ "type": "18", "projectId": $.projectId, "assignmentId": $.assignmentIdBrowse, "doneHide": false }];
+      for (const item of $.scanTaskCodes) {
+        arr.push(
+          { "type": "1", "projectId": $.projectId, "assignmentId": item, "doneHide": false }
+        )
+      }
+      url = `https://api.m.jd.com/interactive_info?functionId=interactive_info&appid=contenth5_common&body=${encodeURIComponent(JSON.stringify(arr))}&client=wh5&partner=ace1033463nrjs`;
+      headers = {
+        Origin: 'https://prodev.m.jd.com',
+        Referer: 'https://prodev.m.jd.com'
+      }
+      myRequest = getRequest(url, null, 'POST', headers);
       break;
-    case `zoo_wishShopLottery`:
-      body = `functionId=zoo_wishShopLottery&body={"shopSign":"${$.shopSign}"}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`zoo_boxShopLottery`, body);
+    case 'do618ZCBrowseTask':
+      body = { "projectId": $.projectId, "assignmentId": $.assignmentIdBrowse, "type": "18", "contentId": $.contentId, "contentType": "ugc" }
+      url = `https://api.m.jd.com/interactive_accept?functionId=interactive_accept&appid=contenth5_common&body=${encodeURIComponent(JSON.stringify(body))}&client=wh5&partner=ace1033463nrjs`;
+      headers = {
+        Origin: 'https://prodev.m.jd.com',
+        Referer: 'https://prodev.m.jd.com'
+      }
+      myRequest = getRequest(url, null, 'POST', headers);
       break;
-    case `zoo_myMap`:
-      body = `functionId=zoo_myMap&body={}&client=wh5&clientVersion=1.0.0`;
-      myRequest = getRequest(`zoo_myMap`, body);
+    case 'do618ZCRecommendTask':
+      body = { "projectId": $.projectId, "assignmentId": $.assignmentId, "type": "1", "itemId": $.itemId }
+      url = `https://api.m.jd.com/interactive_done?functionId=interactive_done&appid=contenth5_common&body=${encodeURIComponent(JSON.stringify(body))}&client=wh5&partner=ace1033463nrjs`;
+      headers = {
+        Origin: 'https://prodev.m.jd.com',
+        Referer: 'https://prodev.m.jd.com'
+      }
+      myRequest = getRequest(url, null, 'POST', headers);
       break;
-    case 'zoo_getWelfareScore':
-      body = getPostBody(type);
-      myRequest = getRequest(`zoo_getWelfareScore`, body);
+    case 'do618ZCLottery':
+      body = { "projectId": $.projectId, "assignmentId": $.assignmentIdLottery, "type": "17" }
+      url = `https://api.m.jd.com/interactive_done?functionId=interactive_done&appid=contenth5_common&body=${encodeURIComponent(JSON.stringify(body))}&client=wh5&partner=ace1033463nrjs`;
+      headers = {
+        Origin: 'https://prodev.m.jd.com',
+        Referer: 'https://prodev.m.jd.com'
+      }
+      myRequest = getRequest(url, body, 'POST', headers);
       break;
-    case 'jdjrTaskDetail':
-      body = `reqData={"eid":"","sdkToken":"jdd014JYKVE2S6UEEIWPKA4B5ZKBS4N6Y6X5GX2NXL4IYUMHKF3EEVK52RQHBYXRZ67XWQF5N7XB6Y2YKYRTGQW4GV5OFGPDPFP3MZINWG2A01234567"}`;
-      myRequest = getRequest(`listTask`, body);
-      break;
-    case 'jdjrAcceptTask':
-      body = `reqData={"eid":"","sdkToken":"jdd014JYKVE2S6UEEIWPKA4B5ZKBS4N6Y6X5GX2NXL4IYUMHKF3EEVK52RQHBYXRZ67XWQF5N7XB6Y2YKYRTGQW4GV5OFGPDPFP3MZINWG2A01234567","id":"${$.taskId}"}`;
-      myRequest = getRequest(`acceptTask`, body);
-      break;
-    case 'add_car':
-      body = `functionId=funny_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"HWJhPageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","actionType":1}&client=wh5&clientVersion=1.0.0&uuid=c67093f5dd58d33fc5305cdc61e46a9741e05c5b&appid=o2_act`;
-      myRequest = getRequest(`funny_collectScore`, body);
+    case `qryViewkitCallbackResult`:
+      url = `https://api.m.jd.com/client.action?functionId=qryViewkitCallbackResult`
+      body = `appid=wh5&area=5_274_49707_49973&body={"dataSource":"babelInteractive","method":"customDoInteractiveAssignmentForBabel","reqParams":"{\\"itemId\\":\\"${$.itemId}\\",\\"encryptProjectId\\":\\"${$.projectId}\\",\\"encryptAssignmentId\\":\\"${$.assignmentIdBrowse}\\"}"}&build=167283&client=apple&clientVersion=9.1.0`;
+      myRequest = getRequest(url, body);
       break;
     default:
       $.error = `takeRequest 错误${type}`
@@ -578,104 +627,6 @@ function dealReturn (type, data) {
         }
       }
       break;
-    case 'JingDongStore':
-      if (data.data?.success === true && data.data?.bizCode === 0) {
-        const bean = data.data.result.jdBeanCount || 0
-        $.message = `京东商城-超市: 成功, 明细: ${bean || `无`}京豆 🐶`
-      } else {
-        if (!data.data) data.data = {}
-        const tp = data.data.bizCode == 811 ? `已签过` : data.data.bizCode == 300 ? `Cookie失效` : `${data.data.bizMsg || `未知`}`
-        $.message = `京东商城-超市: 失败, 原因: ${tp}${data.data.bizCode == 300 ? `‼️` : ` ⚠️`}`
-      }
-      break;
-    case 'JingDongTurn':
-      if (data.code == 3) {
-        $.message = "京东商城-转盘: 失败, 原因: Cookie失效‼️"
-      } else if (json.match(/(\"T216\"|活动结束)/)) {
-        $.message = "京东商城-转盘: 失败, 原因: 活动结束 ⚠️"
-      } else if (json.match(/\d+京豆/)) {
-        const bean = (data.prizeName && data.prizeName.split(/(\d+)/)[1]) || 0
-        $.message += `京东商城-转盘: 成功, 明细: ${bean || `无`}京豆 🐶`
-      } else if (json.match(/未中奖|擦肩而过/)) {
-        $.message += `京东商城-转盘: 成功, 状态: 未中奖 🐶`
-      } else {
-        if (json.match(/(机会已用完|次数为0)/)) {
-          $.message = "京东商城-转盘: 失败, 原因: 已转过 ⚠️"
-        } else if (json.match(/(T210|密码)/)) {
-          $.message = "京东商城-转盘: 失败, 原因: 无支付密码 ⚠️"
-        } else {
-          $.message = `京东商城-转盘: 失败, 原因: 未知 ⚠️`
-        }
-      }
-      break
-    case 'JDFlashSale':
-      if (data.result?.code == 0) {
-        const bean = data.result.jdBeanNum || 0
-        $.message = "京东商城-闪购: 成功, 明细: " + (bean || "无") + "京豆 🐶"
-      } else {
-        if (json.match(/(已签到|已领取|\"2005\")/)) {
-          $.message = "京东商城-闪购: 失败, 原因: 已签过 ⚠️"
-        } else if (json.match(/不存在|已结束|\"2008\"|\"3001\"/)) {
-          // await FlashSaleDivide(s); //瓜分京豆
-          return
-        } else if (json.match(/(\"code\":\"3\"|\"1003\")/)) {
-          $.message = "京东商城-闪购: 失败, 原因: Cookie失效‼️"
-        } else {
-          const msg = json.match(/\"msg\":\"([\u4e00-\u9fa5].+?)\"/)
-          $.message = `京东商城-闪购: 失败, ${msg ? msg[1] : `原因: 未知`} ⚠️`
-        }
-      }
-      break;
-    case 'FlashSaleDivide':
-      if (data.result?.code == 0) {
-        const bean = data.result.jdBeanNum || 0
-        $.message = "京东闪购-瓜分: 成功, 明细: " + (bean || "无") + "京豆 🐶"
-      } else {
-        if (json.match(/已参与|已领取|\"2006\"/)) {
-          $.message = "京东闪购-瓜分: 失败, 原因: 已瓜分 ⚠️"
-        } else if (json.match(/不存在|已结束|未开始|\"2008\"|\"2012\"/)) {
-          $.message = "京东闪购-瓜分: 失败, 原因: 活动已结束 ⚠️"
-        } else if (json.match(/\"code\":\"1003\"|未获取/)) {
-          $.message = "京东闪购-瓜分: 失败, 原因: Cookie失效‼️"
-        } else {
-          const msg = json.match(/\"msg\":\"([\u4e00-\u9fa5].+?)\"/)
-          $.message = `京东闪购-瓜分: 失败, ${msg ? msg[1] : `原因: 未知`} ⚠️`
-        }
-      }
-      break;
-    case 'JingDongCash':
-      if (data.busiCode == "0") {
-        const Cash = data.result.signResult.signData.amount || 0
-        $.message = `京东现金-红包: 成功, 明细: ${Cash || `无`}红包 🧧`
-      } else {
-        if (json.match(/(\"busiCode\":\"1002\"|完成签到)/)) {
-          $.message = "京东现金-红包: 失败, 原因: 已签过 ⚠️"
-        } else if (json.match(/(不存在|已结束)/)) {
-          $.message = "京东现金-红包: 失败, 原因: 活动已结束 ⚠️"
-        } else if (json.match(/(\"busiCode\":\"3\"|未登录)/)) {
-          $.message = "京东现金-红包: 失败, 原因: Cookie失效‼️"
-        } else {
-          const msg = json.split(/\"msg\":\"([\u4e00-\u9fa5].+?)\"/)[1];
-          $.message = `京东现金-红包: 失败, ${msg || `原因: 未知`} ⚠️`
-        }
-      }
-      break;
-    case 'JingDongSubsidy':
-      if (data.resultData?.data?.thisAmount) {
-        const subsidy = data.resultData.data.thisAmountStr
-        $.message = `京东商城-金贴: 成功, 明细: ${ubsidy || `无`}金贴 💰`
-      } else {
-        // merge.subsidy.fail = 1
-        if (json.match(/已存在|"thisAmount":0/)) {
-          $.message = "京东商城-金贴: 失败, 原因: 无金贴 ⚠️"
-        } else if (json.match(/请先登录/)) {
-          $.message = "京东商城-金贴: 失败, 原因: Cookie失效‼️"
-        } else {
-          const msg = json.split(/\"msg\":\"([\u4e00-\u9fa5].+?)\"/)[1];
-          $.message = `京东商城-金贴: 失败, ${msg || `原因: 未知`} ⚠️`
-        }
-      }
-      break;
     case 'JingDongGetCash':
       if (data.data?.success && data.data?.result) {
         $.message = `京东商城-现金: 成功, 明细: ${data.data?.result?.signCash || `无`}现金 💰`
@@ -689,41 +640,6 @@ function dealReturn (type, data) {
         }
       }
       break;
-    case 'JingDongShake':
-      if (json.match(/prize/)) {
-        if (data.data?.prizeBean) {
-          const bean = data.data?.prizeBean?.count || 0
-          $.message = `京东商城-摇摇: 成功, 明细: ${bean || `无`}京豆 🐶`
-        } else if (data.data?.prizeCoupon) {
-          $.message = `京东商城-摇摇: 获得满${data.data?.prizeCoupon?.quota}减${data.data?.prizeCoupon?.discount}优惠券→ ${data.data?.prizeCoupon?.limitStr}`
-        } else {
-          $.message = `京东商城-摇摇: 成功, 明细: 未知 ⚠️`
-        }
-        if (data.data?.luckyBox?.freeTimes != 0) {
-          $.next = 0 // 调用函数之前重置 next
-          JingDongShake()
-          return
-        }
-      } else {
-        if (json.match(/true/)) {
-          $.message = `京东商城-摇摇: 成功, 明细: 无奖励 🐶`
-          if (data.data?.luckyBox?.freeTimes != 0) {
-            $.next = 0 // 调用函数之前重置 next
-            JingDongShake()
-            return
-          }
-        } else {
-          if (json.match(/(无免费|8000005|9000005)/)) {
-            $.message = "京东商城-摇摇: 失败, 原因: 已摇过 ⚠️"
-          } else if (json.match(/(未登录|101)/)) {
-            $.message = "京东商城-摇摇: 失败, 原因: Cookie失效‼️"
-          } else {
-            $.message += `京东商城-摇摇: 失败, 原因: 未知 ⚠️`
-          }
-        }
-      }
-      $.next = 1 // 覆盖 next
-      break
     case 'JDSecKilling':
       if (data.code == 203 || data.code == 3 || data.code == 101) {
         $.message = `京东秒杀-红包: 失败, 原因: Cookie失效‼️`;
@@ -772,6 +688,61 @@ function dealReturn (type, data) {
         $.message = '京东年货-抽签: 失败, 明细: ' + data.msg
       }
       break
+    case 'get618ZCInfo':
+      try {
+        $.projectId = data.match(/"projectId":"(.*?)"/)[1];
+        $.assignmentIdBrowse = data.match(/"normalTabColor":"#FFFFFF","assignmentId":"(.*?)","activeTabColor"/)[1];
+        $.assignmentIdLottery = data.match(/"writeColor":"","assignmentId":"(.*?)","defaultYellowGoodsPic"/)[1];
+        $.assignmentIdReward = data.match(/"taskCode":"(.*?)"/)[1];
+        $.scanTaskCodes = String(data.match(/"scanTaskCodes":"(.*?)"/)[1]).split(',');
+        $.message = `京东618-种草街: 成功, 已获取活动信息`
+      } catch (e) {
+        $.projectId = null
+        $.message = "京东618-种草街: 失败, 无法获取活动信息 ⚠️"
+      }
+      $.data = {}
+      break
+    case 'get618ZCTaskList':
+      if (data.code == 0 && data.data) {
+        $.taskList = data.data;
+        $.message = `获取任务列表成功`
+      } else {
+        $.taskStep = -1
+        $.message = `获取任务列表失败`
+      }
+      break;
+    case 'do618ZCRecommendTask':
+      if (data.code == 0 && data.data) {
+        $.message = `完成任务：${data.data.rewardMsg}`
+      } else {
+        $.message = `任务失败~`
+      }
+      break;
+    case 'do618ZCReward':
+      if (data.code == 0) {
+        $.message = `当天首登有奖：${data.message || JSON.stringify(data.data)}`
+      } else {
+        $.message = `当天首登有奖：出错原因${SON.stringify(data)}`
+      }
+      break;
+    case 'do618ZCBrowseTask':
+      $.callbackInfo = data
+      break;
+    case 'do618ZCLottery':
+      if (data.code == 0 && data.data?.reward) {
+        $.message = `抽奖成功：${data.data?.rewardMsg}`
+      } else {
+        $.call.pop() // 结束抽奖
+        $.message = `抽奖失败：原因${JSON.stringify(data)}`
+      }
+      break;
+    case 'qryViewkitCallbackResult':
+      if (data.code == 0 && data.msg == 'query success!') {
+        $.message = `完成任务：浏览成功`
+      } else {
+        $.message = `任务失败：原因${JSON.stringify(data)}`
+      }
+      break;
     default:
       console.log(`未判断的异常${type} `);
   }
@@ -798,6 +769,11 @@ function Utils () {
         console.log(e);
         return data;
       }
+    },
+    randomInt (min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min)) + min;
     }
   }
 }
