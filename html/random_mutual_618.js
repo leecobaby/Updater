@@ -8,7 +8,7 @@ const uniqData = _.uniqBy(filterData, v => v.fromUser)
 const sampleData = _.sampleSize(uniqData, 5)
 const urls = sampleData.map(v => v.urls[0].url)
 
-// const item = urls.map(v => '1 ' + v.match(/https:\/\/(.*)/)[1] + '&1');
+// urls.unshift('https://m.tb.cn/h.ffnIm0m')
 
 const task = { urls }
 
