@@ -76,9 +76,9 @@ function taskBaseData () {
     "618cat": {
       "version": "数据最后更新于:5.29.1",
       "pv": {
-        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fGKPpGy",
-        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fGKPpGy",
-        "taobaolite": "taobaolite://m.tb.cn/h.fGKPpGy"
+        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.ftJSz3R",
+        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.ftJSz3R",
+        "taobaolite": "taobaolite://m.tb.cn/h.ftJSz3R"
       },
       "main": {
         "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
