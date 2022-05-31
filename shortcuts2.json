@@ -192,7 +192,7 @@
     "image": "https://gitee.com/leecobaby/Updater/raw/master/image/tb_618cat.png",
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
-      "hot": "🧧 20点抽5元红包",
+      "hot": "🧧 每天领个小红包",
       "faq": "",
       "set": "点击查看自动化操作",
       "team": "可随机助力",
@@ -396,22 +396,22 @@
     }
   },
   "1111ys": {
-    "version": "1.3",
-    "update_log": "-- 新增 更多资源线路\n- 修复 云端资源无法访问问题",
+    "version": "1.4",
+    "update_log": "- 更新 支持攒能量部分任务\n- 支持 助力池互助",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/1111ys",
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/37db740153d449db8d5aecca327fa5e5",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "🔥超级争霸赛做完任务可得无门槛红包~",
+    "notice": "🔥 攒能量任务做完能领几个红包~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=淘宝超级争霸赛自动任务&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
-    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tb_wzzb.jpg",
+    "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tb_hongbao.png",
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 20点抽5元红包",
+      "hot": "🧧 每天领个小红包",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
@@ -594,7 +594,7 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/jd.json",
     "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_sign/",
     "tip": {
-      "hot": "🧧 抢京东红包",
+      "hot": "🧧 31日20点红包雨",
       "faq": "有疑问的请查看",
       "set": "",
       "team": "",
@@ -676,7 +676,7 @@
     "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_fruit/",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 京享红包将来袭...",
+      "hot": "🧧 31日20点红包雨.",
       "faq": "有疑问的请查看",
       "set": "使用前先授权",
       "team": "",
@@ -757,7 +757,7 @@
     "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/jd_618/",
     "tip": {
       "log": "你的助力码在这",
-      "hot": "🧧 每天领个小红包",
+      "hot": "🧧 31日20点红包雨",
       "faq": "有疑问的请查看",
       "set": "请先在这授权账号",
       "help": "提交你的助力码",
