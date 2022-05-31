@@ -405,7 +405,7 @@
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
     "notice": "🔥 攒能量任务做完能领几个红包~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
-    "automation_url": "shortcuts://run-shortcut?name=淘宝超级争霸赛自动任务&input=text&text=task",
+    "automation_url": "shortcuts://run-shortcut?name=淘宝红包攒能量自动任务&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/tb_hongbao.png",
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
