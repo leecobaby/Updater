@@ -585,7 +585,14 @@
     "🤖 京东-多合一签到 支持618种草街": "https://www.icloud.com/shortcuts/d855d59bf7944bca978c42936f65df24",
     "🧧 京享红包每天领": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/JdkiTPG%22%7D",
     "🧧 31日20点红包雨": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/JdkiTPG%22%7D",
-    "领券凑单": {
+    "🏪 在线线报|满减凑单|消灭红包|签到玩法": {
+      "抢购助手": "https://www.icloud.com/shortcuts/64b5f93e1119403da44ac3ddd5ad8bf0",
+      "🔥 全网在线线报": "https://kzurl14.cn/xwG4D",
+      "🔥 满减凑单": "https://kzurl19.cn/xwGvQ",
+      "🔥 签到玩法": "https://kzurl10.cn/xwH2k",
+      "🔥 秒灭红包": "https://kzurl02.cn/xwuLg"
+    },
+    "领券收集": {
       "🎟 Plus 618专线神券": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/Jd8pafH%22%7D",
       "🎟 200-10 全品券": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/JI1iv3k%22%7D",
       "🎟 预售会场 1元抵618": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/Jd1w5q7%22%7D"
