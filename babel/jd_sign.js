@@ -1,7 +1,6 @@
 /**
  * name: 京东签到
  * author: @leeco
- * modified: @NobyDa
  * apply: shortcuts
  * activity: https://bean.m.jd.com/bean/signIndex.action
  * tips: Only for learning and communication, strictly prohibited for commercial use, please delete within 24 hours
@@ -714,26 +713,31 @@ function dealReturn (type, data) {
     case 'do618ZCRecommendTask':
       if (data.code == 0 && data.data) {
         $.message = `完成任务：${data.data.rewardMsg}`
+      } else if (data.code == 0 && data.message) {
+        $.message = `完成任务：${data.message}`
       } else {
         $.message = `任务失败：原因${JSON.stringify(data)}`
       }
       break;
     case 'do618ZCReward':
       if (data.code == 0) {
-        $.message = `当天首登有奖：${data.message || JSON.stringify(data.data)}`
+        $.message = `当天首登有奖：${data.message || JSON.stringify(data)}`
       } else {
-        $.message = `当天首登有奖：出错原因${SON.stringify(data)}`
+        $.message = `当天首登有奖：出错!原因${SON.stringify(data)}`
       }
       break;
     case 'do618ZCBrowseTask':
       $.callbackInfo = data
       break;
     case 'do618ZCLottery':
-      if (data.code == 0 && data.data?.reward) {
+      if (data.code == 0 && data.data?.rewardMsg) {
         $.message = `抽奖成功：${data.data?.rewardMsg}`
+      } else if (data.code == 0 && data.message) {
+        $.call.pop() // 结束抽奖
+        $.message = `抽奖失败：${data.message}`
       } else {
         $.call.pop() // 结束抽奖
-        $.message = `抽奖失败：原因${JSON.stringify(data)}`
+        $.message = `抽奖失败：${JSON.stringify(data)}`
       }
       break;
     case 'qryViewkitCallbackResult':
