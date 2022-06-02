@@ -118,7 +118,7 @@ function taskBaseData () {
           "main": {
             "title": "领喵币",
             "type": "stars",
-            "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&spm=a217e.1212.tasklist.0&prismFrom=null&sceneId=3399&sourceType=other&hd_from_id=100155&",
+            "urlScheme": "HTTPS://t.youku.com/yep/page/m/stghkpyvr1?isNeedBaseImage=1&from=15yuevip&prismChannel=poplayer&adTrace=314694502350001__user_define.browse__21206dac16541452137987458e6f20__I__H__0&adScene=2022618-task-list&sceneId=3399&sourceType=other&hd_from_id=100155&",
             "textEnd": "str1&implId=str2"
           }
         }
