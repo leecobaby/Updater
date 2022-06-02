@@ -45,7 +45,7 @@ const firstTask = [
         "28572 cloudsail_14_316722004310000_28572_0",
       ]
     }
-  }
+  },
   {
     "stars": {
       "title": "去往淘宝",
