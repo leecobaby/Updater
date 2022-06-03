@@ -13,7 +13,7 @@
 
 
 // 到指令里运行需要注释掉
-const $ = {}
+// const $ = {}
 
 // $.inviteList = [];
 // $.pkInviteList = [];
