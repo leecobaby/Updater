@@ -634,7 +634,7 @@ function takeRequest (type) {
       myRequest = getRequest(url, body);
       break;
     case 'get618SuperBrandInfo':
-      url = `https://api.m.jd.com/api?functionId=showSecondFloorSignInfo&appid=ProductZ4Brand&client=wh5&t=${time}&body=${encodeURIComponent(${`{"source":"sign"}`})}`;
+      url = `https://api.m.jd.com/api?functionId=showSecondFloorSignInfo&appid=ProductZ4Brand&client=wh5&t=${time}&body=${encodeURIComponent(`{"source":"sign"}`)}`;
       headers = {
         Origin: 'https://prodev.m.jd.com',
         Referer: 'https://prodev.m.jd.com'
@@ -642,7 +642,7 @@ function takeRequest (type) {
       myRequest = getRequest(url, body, 'POST', headers);
       break;
     case 'get618SuperBrandSign':
-      url = `https://api.m.jd.com/api?functionId=superBrandDoTask&appid=ProductZ4Brand&client=wh5&t=${time}&body=${encodeURIComponent(${`{"source":"sign","activityId":${$.activityId},"encryptProjectId":"${$.encryptProjectId}","encryptAssignmentId":"${$.activitySign1Info.encryptAssignmentId}","assignmentType":5,"itemId":"${$.itemId}","actionType":0}`})}`;
+      url = `https://api.m.jd.com/api?functionId=superBrandDoTask&appid=ProductZ4Brand&client=wh5&t=${time}&body=${encodeURIComponent(`{"source":"sign","activityId":${$.activityId},"encryptProjectId":"${$.encryptProjectId}","encryptAssignmentId":"${$.activitySign1Info.encryptAssignmentId}","assignmentType":5,"itemId":"${$.itemId}","actionType":0}`)}`;
       headers = {
         Origin: 'https://prodev.m.jd.com',
         Referer: 'https://prodev.m.jd.com'
@@ -650,7 +650,7 @@ function takeRequest (type) {
       myRequest = getRequest(url, body, 'POST', headers);
       break;
     case 'do618SuperBrandLottery':
-      url = `https://api.m.jd.com/api?functionId=superBrandTaskLottery&appid=ProductZ4Brand&client=wh5&t=${time}&body=${encodeURIComponent(${`{"source":"sign","activityId":${$.activityId},"encryptProjectId":"${$.encryptProjectId}","encryptAssignmentId":"D2bsHLsAAPxoUhfKtHU3TvMpWrw"}`})}`;
+      url = `https://api.m.jd.com/api?functionId=superBrandTaskLottery&appid=ProductZ4Brand&client=wh5&t=${time}&body=${encodeURIComponent(`{"source":"sign","activityId":${$.activityId},"encryptProjectId":"${$.encryptProjectId}","encryptAssignmentId":"D2bsHLsAAPxoUhfKtHU3TvMpWrw"}`)}`;
       headers = {
         Origin: 'https://prodev.m.jd.com',
         Referer: 'https://prodev.m.jd.com'
