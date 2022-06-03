@@ -9,6 +9,8 @@
 // 618 种草街 
 // https://prodev.m.jd.com/mall/active/U18CGRp9tTnAkH1HfHnhBEWrfrr/index.html
 
+// 618 特物Z
+
 
 // 到指令里运行需要注释掉
 // const $ = {}

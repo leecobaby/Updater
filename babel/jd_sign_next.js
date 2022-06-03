@@ -111,6 +111,27 @@ function Next (func) {
       dealReturn('qryViewkitCallbackResult', $.data)
       document.write(JSON.stringify($))
       break;
+    case 'get618SuperBrandInfo_next':
+      // next
+      $.callback = ''
+      $.call.pop()
+      dealReturn('get618SuperBrandInfo', $.data)
+      document.write(JSON.stringify($))
+      break;
+    case 'get618SuperBrandSign':
+      // next
+      $.callback = ''
+      $.call.pop()
+      dealReturn('get618SuperBrandSign', $.data)
+      document.write(JSON.stringify($))
+      break;
+    case 'do618SuperBrandLottery':
+      // next
+      $.callback = ''
+      $.call.pop()
+      dealReturn('do618SuperBrandLottery', $.data)
+      document.write(JSON.stringify($))
+      break;
     default:
       // next
       $.callback = ''

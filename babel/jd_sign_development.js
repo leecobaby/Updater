@@ -1,7 +1,6 @@
 /**
  * name: 京东签到
  * author: @leeco
- * modified: @NobyDa
  * apply: shortcuts
  * activity: https://bean.m.jd.com/bean/signIndex.action
  * tips: Only for learning and communication, strictly prohibited for commercial use, please delete within 24 hours
@@ -9,6 +8,8 @@
 
 // 618 种草街 
 // https://prodev.m.jd.com/mall/active/U18CGRp9tTnAkH1HfHnhBEWrfrr/index.html
+
+// 618 特物Z
 
 
 // 到指令里运行需要注释掉
@@ -143,6 +144,104 @@ function JDSecKilling () {
 function help () {
   document.write(JSON.stringify($))
 }
+
+/**
+ * 🔥 做 618 特物Z签到 - 限时
+ */
+function do618SuperBrand () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler'
+  $.call = ['do618SuperBrand']
+
+  switch ($.taskStep++) {
+    case 1:
+      // 获取活动信息
+      get618SuperBrandInfo()
+      break;
+    case 2:
+      // 签到
+      if ($.encryptProjectId) {
+        get618SuperBrandSign();
+      } else {
+        // 跳出任务
+        $.taskStep = -1;
+      }
+      break;
+    case 3:
+      // 获取活动信息
+      get618SuperBrandInfo()
+      break;
+    case 4:
+      // 抽奖
+      if ($.self.count >= 300) {
+        do618SuperBrandLottery()
+      } else {
+        // 跳出任务
+        $.taskStep = -1;
+        $.message = `金币不足，暂不抽奖~`
+      }
+      break;
+    default:
+      $.to = ''; $.call.pop(); $.taskStep = 1; $.self.data = undefined
+      document.write(JSON.stringify($))
+      break;
+  }
+}
+
+// 特物Z信息
+function get618SuperBrandInfo () {
+  $.call[$.call.length - 1] == 'get618SuperBrandInfo' || $.call.push('get618SuperBrandInfo')
+
+  $.callback = 'Func.request'
+  takeRequest('get618SuperBrandInfo');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('get618SuperBrandInfo', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 特物Z签到
+function get618SuperBrandSign () {
+  $.call[$.call.length - 1] == 'get618SuperBrandSign' || $.call.push('get618SuperBrandSign')
+
+  if ($.activitySign1Info.ext.sign1.status === 1) {
+    let itemId = $.activitySign1Info.ext.sign1.itemId;
+    $.message = `任务：${$.activitySign1Info.assignmentName},去执行,请稍稍``任务：${$.activitySign1Info.assignmentName},去执行,请稍稍`
+    $.callback = 'Func.request'
+    takeRequest('get618SuperBrandSign');
+    return
+
+    // next
+    $.callback = ''
+    $.call.pop()
+    dealReturn('get618SuperBrandSign', $.data)
+    document.write(JSON.stringify($))
+  } else {
+    $.call.pop()
+    $.message = `今日已签到`
+    document.write(JSON.stringify($))
+  }
+}
+
+// 特物Z抽奖
+function do618SuperBrandLottery () {
+  $.call[$.call.length - 1] == 'do618SuperBrandLottery' || $.call.push('do618SuperBrandLottery')
+
+  $.message = `签到抽奖中...`
+  $.callback = 'Func.request'
+  takeRequest('do618SuperBrandLottery');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('do618SuperBrandLottery', $.data)
+  document.write(JSON.stringify($))
+}
+
 
 /**
  * 🔥 做 618 种草街 -限时
@@ -425,6 +524,7 @@ function takeRequest (type) {
   let { log, random } = $.signList?.shift() || {}
   let body = ``, url = ``;
   let myRequest = ``;
+  let time = Date.now();
   switch (type) {
     case 'JingDongBean':
       url = 'https://api.m.jd.com/client.action'
@@ -533,6 +633,30 @@ function takeRequest (type) {
       body = `appid=wh5&area=5_274_49707_49973&body={"dataSource":"babelInteractive","method":"customDoInteractiveAssignmentForBabel","reqParams":"{\\"itemId\\":\\"${$.itemId}\\",\\"encryptProjectId\\":\\"${$.projectId}\\",\\"encryptAssignmentId\\":\\"${$.assignmentIdBrowse}\\"}"}&build=167283&client=apple&clientVersion=9.1.0`;
       myRequest = getRequest(url, body);
       break;
+    case 'get618SuperBrandInfo':
+      url = `https://api.m.jd.com/api?functionId=showSecondFloorSignInfo&appid=ProductZ4Brand&client=wh5&t=${time}&body=${encodeURIComponent(${`{"source":"sign"}`})}`;
+      headers = {
+        Origin: 'https://prodev.m.jd.com',
+        Referer: 'https://prodev.m.jd.com'
+      }
+      myRequest = getRequest(url, body, 'POST', headers);
+      break;
+    case 'get618SuperBrandSign':
+      url = `https://api.m.jd.com/api?functionId=superBrandDoTask&appid=ProductZ4Brand&client=wh5&t=${time}&body=${encodeURIComponent(${`{"source":"sign","activityId":${$.activityId},"encryptProjectId":"${$.encryptProjectId}","encryptAssignmentId":"${$.activitySign1Info.encryptAssignmentId}","assignmentType":5,"itemId":"${$.itemId}","actionType":0}`})}`;
+      headers = {
+        Origin: 'https://prodev.m.jd.com',
+        Referer: 'https://prodev.m.jd.com'
+      }
+      myRequest = getRequest(url, body, 'POST', headers);
+      break;
+    case 'do618SuperBrandLottery':
+      url = `https://api.m.jd.com/api?functionId=superBrandTaskLottery&appid=ProductZ4Brand&client=wh5&t=${time}&body=${encodeURIComponent(${`{"source":"sign","activityId":${$.activityId},"encryptProjectId":"${$.encryptProjectId}","encryptAssignmentId":"D2bsHLsAAPxoUhfKtHU3TvMpWrw"}`})}`;
+      headers = {
+        Origin: 'https://prodev.m.jd.com',
+        Referer: 'https://prodev.m.jd.com'
+      }
+      myRequest = getRequest(url, body, 'POST', headers);
+      break;
     default:
       $.error = `takeRequest 错误${type}`
       console.log(`错误${type}`);
@@ -576,23 +700,23 @@ function getRequest (url, body = {}, method = 'POST', header = {}) {
 }
 
 // 组织请求 body
-function getPostBody (type) {
-  let taskBody = '';
-  if (type === 'helpInvite') {
-    taskBody = `functionId=funny_collectScore&body=${JSON.stringify({ "taskId": 2, "inviteId": $.inviteId, "actionType": 1, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`
-  } else if (type === 'pkHelp') {
-    taskBody = `functionId=zoo_pk_assistGroup&body=${JSON.stringify({ "confirmFlag": 1, "inviteId": $.pkInviteId, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`;
-  } else if (type === 'zoo_collectProduceScore') {
-    taskBody = `functionId=zoo_collectProduceScore&body=${JSON.stringify({ "ss": getBody() })}&client=wh5&clientVersion=1.0.0`;
-  } else if (type === 'zoo_getWelfareScore') {
-    taskBody = `functionId=zoo_getWelfareScore&body=${JSON.stringify({ "type": 2, "currentScence": $.currentScence, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`;
-  } else if (type === 'add_car') {
-    taskBody = `functionId=funny_collectScore&body=${JSON.stringify({ "taskId": $.taskId, "taskToken": $.taskToken, "actionType": 1, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`
-  } else {
-    taskBody = `functionId=${type}&body=${JSON.stringify({ "taskId": $.oneTask.taskId, "actionType": 1, "taskToken": $.oneActivityInfo.taskToken, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`
-  }
-  return taskBody
-}
+// function getPostBody (type) {
+//   let taskBody = '';
+//   if (type === 'helpInvite') {
+//     taskBody = `functionId=funny_collectScore&body=${JSON.stringify({ "taskId": 2, "inviteId": $.inviteId, "actionType": 1, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`
+//   } else if (type === 'pkHelp') {
+//     taskBody = `functionId=zoo_pk_assistGroup&body=${JSON.stringify({ "confirmFlag": 1, "inviteId": $.pkInviteId, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`;
+//   } else if (type === 'zoo_collectProduceScore') {
+//     taskBody = `functionId=zoo_collectProduceScore&body=${JSON.stringify({ "ss": getBody() })}&client=wh5&clientVersion=1.0.0`;
+//   } else if (type === 'zoo_getWelfareScore') {
+//     taskBody = `functionId=zoo_getWelfareScore&body=${JSON.stringify({ "type": 2, "currentScence": $.currentScence, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`;
+//   } else if (type === 'add_car') {
+//     taskBody = `functionId=funny_collectScore&body=${JSON.stringify({ "taskId": $.taskId, "taskToken": $.taskToken, "actionType": 1, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`
+//   } else {
+//     taskBody = `functionId=${type}&body=${JSON.stringify({ "taskId": $.oneTask.taskId, "actionType": 1, "taskToken": $.oneActivityInfo.taskToken, "ss": getBody() })}&client=wh5&clientVersion=1.0.0`
+//   }
+//   return taskBody
+// }
 
 
 // 处理返回信息
@@ -714,26 +838,31 @@ function dealReturn (type, data) {
     case 'do618ZCRecommendTask':
       if (data.code == 0 && data.data) {
         $.message = `完成任务：${data.data.rewardMsg}`
+      } else if (data.code == 0 && data.message) {
+        $.message = `完成任务：${data.message}`
       } else {
         $.message = `任务失败：原因${JSON.stringify(data)}`
       }
       break;
     case 'do618ZCReward':
       if (data.code == 0) {
-        $.message = `当天首登有奖：${data.message || JSON.stringify(data.data)}`
+        $.message = `当天首登有奖：${data.message || JSON.stringify(data)}`
       } else {
-        $.message = `当天首登有奖：出错原因${SON.stringify(data)}`
+        $.message = `当天首登有奖：出错!原因${SON.stringify(data)}`
       }
       break;
     case 'do618ZCBrowseTask':
       $.callbackInfo = data
       break;
     case 'do618ZCLottery':
-      if (data.code == 0 && data.data?.reward) {
+      if (data.code == 0 && data.data?.rewardMsg) {
         $.message = `抽奖成功：${data.data?.rewardMsg}`
+      } else if (data.code == 0 && data.message) {
+        $.call.pop() // 结束抽奖
+        $.message = `抽奖失败：${data.message}`
       } else {
         $.call.pop() // 结束抽奖
-        $.message = `抽奖失败：原因${JSON.stringify(data)}`
+        $.message = `抽奖失败：${JSON.stringify(data)}`
       }
       break;
     case 'qryViewkitCallbackResult':
@@ -741,6 +870,44 @@ function dealReturn (type, data) {
         $.message = `完成任务：浏览成功`
       } else {
         $.message = `任务失败：原因${JSON.stringify(data)}`
+      }
+      break;
+    case 'get618SuperBrandInfo':
+      if (data.code == 0 && data.data?.result) {
+        let result = data.data.result
+        if (result.activityBaseInfo) {
+          $.activityId = result.activityBaseInfo.activityId
+          $.activityName = result.activityBaseInfo.activityName
+          $.self.count = result.activityUserInfo.userStarNum;
+          $.encryptProjectId = result.activityBaseInfo.encryptProjectId;
+          $.activitySign1Info = result.activitySign1Info
+        }
+        $.message = `京东618-特物Z: 成功, 已获取活动信息\n当前活动：${$.activityName}  ${$.activityId}`
+      } else {
+        $.encryptProjectId = null
+        $.message = "京东618-特物Z: 失败, 无法获取活动信息 ⚠️"
+      }
+      break;
+    case 'get618SuperBrandSign':
+      if (data.code == 0 && data.data?.bizCode == 0) {
+        $.message = `签到成功：${data.data.bizMsg}`
+      } else if (data.code == 0) {
+        $.message = `签到失败：${data.data.bizMsg}`
+      } else {
+        $.message = `发生错误：${JSON.stringify(data)}`
+      }
+      break;
+    case 'do618SuperBrandLottery':
+      if (data.code == 0 && data.data?.bizCode == 'TK000') {
+        if (data.data?.result?.userAwardInfo) {
+          $.message = `抽奖成功：获得${data.data.result.userAwardInfo.awardName || data.data.result.userAwardInfo.beanNum + '京豆'}`
+        } else {
+          $.message = `抽奖抽奖：获得空气`
+        }
+      } else if (data.code == 0) {
+        $.message = `抽奖失败：${data.data.bizMsg}`
+      } else {
+        $.message = `发生错误：${JSON.stringify(data)}`
       }
       break;
     default:
