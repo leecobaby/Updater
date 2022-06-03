@@ -13,7 +13,7 @@
 
 
 // 到指令里运行需要注释掉
-// const $ = {}
+const $ = {}
 
 // $.inviteList = [];
 // $.pkInviteList = [];
@@ -165,6 +165,7 @@ function do618SuperBrand () {
       } else {
         // 跳出任务
         $.taskStep = -1;
+        document.write(JSON.stringify($))
       }
       break;
     case 3:
@@ -179,6 +180,7 @@ function do618SuperBrand () {
         // 跳出任务
         $.taskStep = -1;
         $.message = `金币不足，暂不抽奖~`
+        document.write(JSON.stringify($))
       }
       break;
     default:
@@ -263,6 +265,7 @@ function do618ZC () {
       } else {
         // 跳出任务
         $.taskStep = -1;
+        document.write(JSON.stringify($))
       }
       break;
     case 3:
