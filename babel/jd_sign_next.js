@@ -118,14 +118,14 @@ function Next (func) {
       dealReturn('get618SuperBrandInfo', $.data)
       document.write(JSON.stringify($))
       break;
-    case 'get618SuperBrandSign':
+    case 'get618SuperBrandSign_next':
       // next
       $.callback = ''
       $.call.pop()
       dealReturn('get618SuperBrandSign', $.data)
       document.write(JSON.stringify($))
       break;
-    case 'do618SuperBrandLottery':
+    case 'do618SuperBrandLottery_next':
       // next
       $.callback = ''
       $.call.pop()
