@@ -12,7 +12,7 @@ const firstTask = [
     "cloud": {
       "title": "云端推送",
       "type": "cloud",
-      "urlScheme": `HTTPS://t.youku.com/yep/page/m/stghkpyvr1?isNeedBaseImage=1&from=15yuevip&prismChannel=poplayer&adTrace=314694502350001__user_define.browse__21206dac16541452137987458e6f20__I__H__0&adScene=2022618-task-list&fromToken=${fromToken}&spm=a217e.xzrwy.1.1&sceneId=3399&sourceType=other&hd_from_id=100155&deliveryId=`,
+      "urlScheme": `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.xzrwy.1.1&sceneId=3399&sourceType=other&hd_from_id=100155&deliveryId=`,
       "textEnd": "str1&implId=str2",
       "item": [
         "29598 cloudsail_0_318392501470001_29598_0",

@@ -186,13 +186,13 @@
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/65261e7c8b2c4d16a3cff08d0726d03b",
-    "notice": "⚠️ 令牌的任务异常为正常情况可以无视它或者取消勾选云端推送\n⚠️ 第一次运行将需要授权很多次，不要漏掉~🧧 超级红包每天领，前往活动大厅查看更多~",
+    "notice": "⚠️ 令牌的任务异常为正常情况可以无视它或者取消勾选云端推送\n💡 已更新恢复兼容ipad任务的页面~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=天猫618喵运会自动任务&input=text&text=task",
     "image": "https://gitee.com/leecobaby/Updater/raw/master/image/tb_618cat.png",
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
-      "hot": "🧧 20点抽5元红包",
+      "hot": "🧧 每天领个小红包",
       "faq": "",
       "set": "点击查看自动化操作",
       "team": "可随机助力",
@@ -215,7 +215,7 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 20点抽5元红包",
+      "hot": "🧧 每天领个小红包",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
@@ -243,7 +243,7 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 20点抽5元红包",
+      "hot": "🧧 每天领个小红包",
       "help": "",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
@@ -411,7 +411,7 @@
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 20点抽5元红包",
+      "hot": "🧧 每天领个小红包",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
