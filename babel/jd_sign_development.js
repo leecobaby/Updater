@@ -208,7 +208,7 @@ function get618SuperBrandSign () {
   $.call[$.call.length - 1] == 'get618SuperBrandSign' || $.call.push('get618SuperBrandSign')
 
   if ($.activitySign1Info.ext.sign1.status === 1) {
-    let itemId = $.activitySign1Info.ext.sign1.itemId;
+    $.itemId = $.activitySign1Info.ext.sign1.itemId;
     $.message = `任务：${$.activitySign1Info.assignmentName},去执行,请稍稍``任务：${$.activitySign1Info.assignmentName},去执行,请稍稍`
     $.callback = 'Func.request'
     takeRequest('get618SuperBrandSign');
