@@ -173,7 +173,7 @@ function do618SuperBrand () {
       break;
     case 4:
       // 抽奖
-      if ($.self.count >= 300) {
+      if ($.self.count && ($.self.count >= 300)) {
         do618SuperBrandLottery()
       } else {
         // 跳出任务
