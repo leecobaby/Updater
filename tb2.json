@@ -1712,7 +1712,13 @@
           "activateUrl": "https://h5.ele.me/restapi/biz.svip_scene/svip/engine/xSupply?params[]=%7B%22tagCode%22:%22223166%22,%22extra%22:%7B%22missionDefId%22:占位符1,%22missionCollectionId%22:170,%22missionType%22:%22占位符2%22%7D%7D&bizCode=biz_code_main&longitude=118.639677&latitude=28.754548",
           "taskUrl": "https://tb.ele.me/wow/alsc/mod/156e0df0c951c793ab121f2e?missioncollectid=36&missionid=占位符1&taskfrom=a2ogi.15063444&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.3",
           "textEnd": "str1",
-          "item": ["5808004 PAGEVIEW", "3030001 SIMPLESIGNIN"]
+          "item": [
+            "4988001 PAGEVIEW",
+            "5246001 PAGEVIEW",
+            "3500001 SIMPLESIGNIN",
+            "3030001 SIMPLESIGNIN",
+            "4098001 SIMPLESIGNIN"
+          ]
         }
       }
     ]
