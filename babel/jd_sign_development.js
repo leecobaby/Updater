@@ -148,6 +148,83 @@ function help () {
 /**
  * 🔥 做 618 特物Z签到 - 限时
  */
+function doBean () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler'
+  $.call = ['doJingDongBean']
+
+  switch ($.taskStep++) {
+    case 1:
+      // 签到领豆
+      doBeanSign()
+      break;
+    case 2:
+      // 流量5个商品
+      doBeanBrowseTask()
+      break;
+    case 3:
+      // 领取奖励
+      getBeanBrowseTaskAward()
+      break;
+    case 4:
+      // 获取活动信息
+      getBeanInfo()
+      break;
+    default:
+      $.to = ''; $.call.pop(); $.taskStep = 1; $.self.data = undefined
+      document.write(JSON.stringify($))
+      break;
+  }
+}
+
+function doBeanBrowseTask () {
+  $.call[$.call.length - 1] == 'doBeanBrowseTask' || $.call.push('doBeanBrowseTask')
+
+  $.itemId = $.Utils.randomInt(10000000, 20000000)
+  $.callback = 'Func.request'
+  takeRequest('doBeanBrowseTask');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('doBeanBrowseTask', $.data)
+  document.write(JSON.stringify($))
+}
+
+function getBeanBrowseTaskAward () {
+  $.call[$.call.length - 1] == 'getBeanBrowseTaskAward' || $.call.push('getBeanBrowseTaskAward')
+
+  $.itemId = $.Utils.randomInt(10000000, 20000000)
+  $.callback = 'Func.request'
+  takeRequest('getBeanBrowseTaskAward');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('getBeanBrowseTaskAward', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 获取活动信息
+function getBeanInfo () {
+  $.call[$.call.length - 1] == 'getBeanInfo' || $.call.push('getBeanInfo')
+
+  $.itemId = $.Utils.randomInt(10000000, 20000000)
+  $.callback = 'Func.request'
+  takeRequest('getBeanInfo');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('getBeanInfo', $.data)
+  document.write(JSON.stringify($))
+}
+
+/**
+ * 🔥 做 618 特物Z签到 - 限时
+ */
 function do618SuperBrand () {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
@@ -660,6 +737,16 @@ function takeRequest (type) {
       }
       myRequest = getRequest(url, body, 'POST', headers);
       break;
+    case 'doBeanBrowseTask':
+      url = `https://api.m.jd.com/`;
+      body = `functionId=beanHomeTask&body=${encodeURIComponent(JSON.stringify({ "awardFlag": false, "skuId": `${$.itemId}`, "source": "feeds", "type": '1' }))}&appid=ld&client=apple&area=5_274_49707_49973&build=167283&clientVersion=9.1.0`
+      myRequest = getRequest(url, body);
+      break;
+    case 'getBeanBrowseTaskAward':
+      url = `https://api.m.jd.com/`;
+      body = `functionId=beanHomeTask&body=${encodeURIComponent(JSON.stringify({ "awardFlag": true, "source": "feeds" }))}&appid=ld&client=apple&area=5_274_49707_49973&build=167283&clientVersion=9.1.0`
+      myRequest = getRequest(url, body);
+      break;
     default:
       $.error = `takeRequest 错误${type}`
       console.log(`错误${type}`);
@@ -911,6 +998,25 @@ function dealReturn (type, data) {
         $.message = `抽奖失败：${data.data.bizMsg}`
       } else {
         $.message = `发生错误：${JSON.stringify(data)}`
+      }
+      break;
+    case 'doBeanBrowseTask':
+      if (data.code == 0 && data.data) {
+        $.message = `浏览成功：进度${data.data.taskProgress}/${data.data.taskThreshold}`
+        if (data.data.taskProgress === data.data.taskThreshold) { $.call.pop(); }
+      } else if (data.code == 0 && data.errorCode === 'HT201') {
+        $.call.pop()
+        $.message = `浏览失败：原因${JSON.stringify(data)}`
+      } else {
+        $.call.pop()
+        $.message = `发生错误：原因${JSON.stringify(data)}`
+      }
+      break;
+    case 'getBeanBrowseTaskAward':
+      if (data.data) {
+        $.message = `领奖成功：获得 ${data.data.beanNum} 个京豆`
+      } else {
+        $.message = `领奖失败：原因${data.errorMessage}`
       }
       break;
     default:
