@@ -132,6 +132,65 @@ function Next (func) {
       dealReturn('do618SuperBrandLottery', $.data)
       document.write(JSON.stringify($))
       break;
+    case 'doBeanSign_next':
+      // next
+      $.callback = ''
+      $.call.pop()
+      dealReturn('doBeanSign', $.data)
+      document.write(JSON.stringify($))
+      break;
+    case 'doBeanSign_next':
+      // next
+      $.callback = ''
+      $.call.pop()
+      dealReturn('doBeanSign', $.data)
+      document.write(JSON.stringify($))
+      break;
+    case 'getBeanBrowseTaskAward_next':
+      // next
+      $.callback = ''
+      $.call.pop()
+      dealReturn('getBeanBrowseTaskAward', $.data)
+      document.write(JSON.stringify($))
+      break;
+    case 'getBeanTaskList_next':
+      // next
+      $.callback = ''
+      $.call.pop()
+      dealReturn('getBeanTaskList', $.data)
+      document.write(JSON.stringify($))
+      break;
+    case 'doBeanTask_next':
+      // next
+      if ($.taskType == 9 || $.taskType == 8) {
+        $.wait = $.oneTask.waitDuration || 5
+        $.next = 1
+        $.callback = 'Func.request'
+        takeRequest('doBeanWaitTask', $.data)
+        return
+
+        // next next
+        $.wait = 1
+        $.next = 0 // 清空 Next.key
+        $.callback = ''
+        $.call.pop()
+        dealReturn('doBeanWaitTask', $.data)
+        document.write(JSON.stringify($))
+      } else {
+        $.callback = ''
+        $.call.pop()
+        dealReturn('doBeanTask', $.data)
+        document.write(JSON.stringify($))
+      }
+      break;
+    case 'doBeanTask_next_next':
+      // next next
+      $.wait = 1
+      $.next = 0 // 清空 Next.key
+      $.callback = ''
+      $.call.pop()
+      dealReturn('doBeanWaitTask', $.data)
+      break;
     default:
       // next
       $.callback = ''
