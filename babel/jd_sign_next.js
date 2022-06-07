@@ -180,6 +180,7 @@ function Next (func) {
       $.next = 0 // 清空 Next.key
       $.callback = ''
       dealReturn('doBeanWaitTask', $.data)
+      document.write(JSON.stringify($))
       break;
     default:
       // next
