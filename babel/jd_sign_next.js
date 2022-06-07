@@ -139,13 +139,6 @@ function Next (func) {
       dealReturn('doBeanSign', $.data)
       document.write(JSON.stringify($))
       break;
-    case 'doBeanSign_next':
-      // next
-      $.callback = ''
-      $.call.pop()
-      dealReturn('doBeanSign', $.data)
-      document.write(JSON.stringify($))
-      break;
     case 'getBeanBrowseTaskAward_next':
       // next
       $.callback = ''

@@ -902,6 +902,7 @@ function dealReturn (type, data) {
   let json = $.Utils.stringify(data)
 
   switch (type) {
+    case 'doBeanSign':
     case 'JingDongBean':
       if (data.code === 3) {
         $.message = '京东商城-京豆: 失败, 原因: Cookie失效‼️'
