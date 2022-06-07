@@ -174,6 +174,30 @@ function doBean () {
       // 做列表任务
       doBeanTask()
       break;
+    case 6:
+      // 获取升级京豆任务列表
+      getBeanTaskList()
+      break;
+    case 7:
+      // 做列表任务
+      doBeanTask()
+      break;
+    case 8:
+      // 获取升级京豆任务列表
+      getBeanTaskList()
+      break;
+    case 9:
+      // 做列表任务
+      doBeanTask()
+      break;
+    case 10:
+      // 获取升级京豆任务列表
+      getBeanTaskList()
+      break;
+    case 11:
+      // 做列表任务
+      doBeanTask()
+      break;
     default:
       $.to = ''; $.call.pop(); $.taskStep = 1; $.self.data = undefined
       document.write(JSON.stringify($))

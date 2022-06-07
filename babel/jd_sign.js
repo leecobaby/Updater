@@ -146,6 +146,175 @@ function help () {
 }
 
 /**
+ * 做领京豆页任务
+ */
+function doBean () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler'
+  $.call = ['doBean']
+
+  switch ($.taskStep++) {
+    case 1:
+      // 签到领豆
+      doBeanSign()
+      break;
+    case 2:
+      // 流量5个商品
+      doBeanBrowseTask()
+      break;
+    case 3:
+      // 领取奖励
+      getBeanBrowseTaskAward()
+      break;
+    case 4:
+      // 获取升级京豆任务列表
+      getBeanTaskList()
+      break;
+    case 5:
+      // 做列表任务
+      doBeanTask()
+      break;
+    case 6:
+      // 获取升级京豆任务列表
+      getBeanTaskList()
+      break;
+    case 7:
+      // 做列表任务
+      doBeanTask()
+      break;
+    case 8:
+      // 获取升级京豆任务列表
+      getBeanTaskList()
+      break;
+    case 9:
+      // 做列表任务
+      doBeanTask()
+      break;
+    case 10:
+      // 获取升级京豆任务列表
+      getBeanTaskList()
+      break;
+    case 11:
+      // 做列表任务
+      doBeanTask()
+      break;
+    default:
+      $.to = ''; $.call.pop(); $.taskStep = 1; $.self.data = undefined
+      document.write(JSON.stringify($))
+      break;
+  }
+}
+
+// 签到领豆
+function doBeanSign () {
+  $.call[$.call.length - 1] == 'doBeanSign' || $.call.push('doBeanSign')
+
+  $.callback = 'Func.request'
+  takeRequest('doBeanSign');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('doBeanSign', $.data)
+  document.write(JSON.stringify($))
+}
+
+
+function doBeanBrowseTask () {
+  $.call[$.call.length - 1] == 'doBeanBrowseTask' || $.call.push('doBeanBrowseTask')
+
+  $.itemId = $.Utils.randomInt(10000000, 20000000)
+  $.callback = 'Func.request'
+  takeRequest('doBeanBrowseTask');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('doBeanBrowseTask', $.data)
+  document.write(JSON.stringify($))
+}
+
+function getBeanBrowseTaskAward () {
+  $.call[$.call.length - 1] == 'getBeanBrowseTaskAward' || $.call.push('getBeanBrowseTaskAward')
+
+  $.callback = 'Func.request'
+  takeRequest('getBeanBrowseTaskAward');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('getBeanBrowseTaskAward', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 获取活动信息
+function getBeanTaskList () {
+  $.call[$.call.length - 1] == 'getBeanTaskList' || $.call.push('getBeanTaskList')
+
+  $.message = `获取升级领金豆活动信息中...`
+  $.callback = 'Func.request'
+  takeRequest('getBeanTaskList');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('getBeanTaskList', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 做列表任务
+function doBeanTask () {
+  $.call[$.call.length - 1] == 'doBeanTask' || $.call.push('doBeanTask')
+
+  // 利用队列取代循环
+  $.oneTask = $.taskList.shift()
+  if (!$.oneTask) {
+    // 循环完成重新设置 to,call
+    $.call.pop()
+    $.message = `任务已全都完成~`
+    document.write(JSON.stringify($))
+    return
+  }
+
+  // 做过的任务则跳过重新执行
+  $.taskToken = $.oneTask.subTaskVOS[0] && $.oneTask.subTaskVOS[0].taskToken
+  $.taskType = $.oneTask.taskType
+  if ($.oneTask?.status !== 1 || $.oneTask?.times >= $.oneTask.maxTimes || !$.taskToken) {
+    document.write(JSON.stringify($))
+    return
+  }
+
+  $.message = `做任务：${$.oneTask.taskName}-${$.oneTask.subTaskVOS[0].title} 等待完成...`
+  $.callback = 'Func.request'
+  takeRequest('doBeanTask');
+  return
+
+  // next
+  if ($.taskType == 9 || $.taskType == 8) {
+    $.wait = $.oneTask.waitDuration || 5
+    $.next = 1
+    $.callback = 'Func.request'
+    takeRequest('doBeanWaitTask', $.data)
+    return
+
+    // next next
+    $.wait = 1
+    $.next = 0 // 清空 Next.key
+    $.callback = ''
+    dealReturn('doBeanWaitTask', $.data)
+    document.write(JSON.stringify($))
+  } else {
+    $.callback = ''
+    dealReturn('doBeanTask', $.data)
+    document.write(JSON.stringify($))
+  }
+
+}
+
+/**
  * 🔥 做 618 特物Z签到 - 限时
  */
 function do618SuperBrand () {
@@ -660,6 +829,33 @@ function takeRequest (type) {
       }
       myRequest = getRequest(url, body, 'POST', headers);
       break;
+    case 'doBeanSign':
+      url = 'https://api.m.jd.com/client.action'
+      body = `functionId=signBeanIndex&appid=ld`
+      myRequest = getRequest(url, body);
+      break;
+    case 'doBeanBrowseTask':
+      url = `https://api.m.jd.com/`;
+      body = `functionId=beanHomeTask&body=${encodeURIComponent(JSON.stringify({ "awardFlag": false, "skuId": `${$.itemId}`, "source": "feeds", "type": '1' }))}&appid=ld&client=apple&area=5_274_49707_49973&build=167283&clientVersion=9.1.0`
+      myRequest = getRequest(url, body);
+      break;
+    case 'getBeanBrowseTaskAward':
+      url = `https://api.m.jd.com/`;
+      body = `functionId=beanHomeTask&body=${encodeURIComponent(JSON.stringify({ "awardFlag": true, "source": "feeds" }))}&appid=ld&client=apple&area=5_274_49707_49973&build=167283&clientVersion=9.1.0`
+      myRequest = getRequest(url, body);
+      break;
+    case 'getBeanTaskList':
+      url = `https://api.m.jd.com/client.action?functionId=beanTaskList&body=${encodeURIComponent(JSON.stringify({ "viewChannel": "myjd" }))}&appid=ld&client=apple&area=5_274_49707_49973&build=167283&clientVersion=9.1.0`;
+      myRequest = getRequest(url, body);
+      break;
+    case 'doBeanTask':
+      url = `https://api.m.jd.com/client.action?functionId=beanDoTask&body=${encodeURIComponent(JSON.stringify({ "actionType": 1, "taskToken": `${$.taskToken}` }))}&appid=ld&client=apple&area=5_274_49707_49973&build=167283&clientVersion=9.1.0`;
+      myRequest = getRequest(url, body);
+      break;
+    case 'doBeanWaitTask':
+      url = `https://api.m.jd.com/client.action?functionId=beanDoTask&body=${encodeURIComponent(JSON.stringify({ "actionType": 0, "taskToken": `${$.taskToken}` }))}&appid=ld&client=apple&area=5_274_49707_49973&build=167283&clientVersion=9.1.0`;
+      myRequest = getRequest(url, body);
+      break;
     default:
       $.error = `takeRequest 错误${type}`
       console.log(`错误${type}`);
@@ -728,6 +924,7 @@ function dealReturn (type, data) {
   let json = $.Utils.stringify(data)
 
   switch (type) {
+    case 'doBeanSign':
     case 'JingDongBean':
       if (data.code === 3) {
         $.message = '京东商城-京豆: 失败, 原因: Cookie失效‼️'
@@ -911,6 +1108,47 @@ function dealReturn (type, data) {
         $.message = `抽奖失败：${data.data.bizMsg}`
       } else {
         $.message = `发生错误：${JSON.stringify(data)}`
+      }
+      break;
+    case 'doBeanBrowseTask':
+      if (data.code == 0 && data.data) {
+        $.message = `浏览成功：进度${data.data.taskProgress}/${data.data.taskThreshold}`
+        if (data.data.taskProgress === data.data.taskThreshold) { $.call.pop(); }
+      } else if (data.code == 0 && data.errorCode === 'HT201') {
+        $.call.pop()
+        $.message = `浏览失败：原因${JSON.stringify(data)}`
+      } else {
+        $.call.pop()
+        $.message = `发生错误：原因${JSON.stringify(data)}`
+      }
+      break;
+    case 'getBeanBrowseTaskAward':
+      if (data.data) {
+        $.message = `领奖成功：获得 ${data.data.beanNum} 个京豆`
+      } else {
+        $.message = `领奖失败：原因${data.errorMessage}`
+      }
+      break;
+    case 'getBeanTaskList':
+      if (data.code == 0 && data.data) {
+        $.taskList = data.data.taskInfos
+        $.message = `当前等级：${data.data.curLevel}\n下一级可领取：${data.data.nextLevelBeanNum || 0}京豆`
+      } else {
+        $.message = `获取失败：原因${JSON.stringify(data)}`
+      }
+      break;
+    case 'doBeanTask':
+      if (data.code == 0 && data.data.bizCode === "0") {
+        $.message = `完成任务：获得+${data.data.score}成长值`
+      } else {
+        $.message = `任务失败：原因${JSON.stringify(data)}`
+      }
+      break;
+    case 'doBeanWaitTask':
+      if (data.code == 0 && data.data.bizCode === "0") {
+        $.message = `完成任务：${data.data.bizMsg}`
+      } else {
+        $.message = `任务失败：原因${JSON.stringify(data)}`
       }
       break;
     default:
