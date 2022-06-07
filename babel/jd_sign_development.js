@@ -151,7 +151,7 @@ function help () {
 function doBean () {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
-  $.call = ['doJingDongBean']
+  $.call = ['doBean']
 
   switch ($.taskStep++) {
     case 1:
