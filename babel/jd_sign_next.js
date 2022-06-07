@@ -166,12 +166,10 @@ function Next (func) {
         $.wait = 1
         $.next = 0 // 清空 Next.key
         $.callback = ''
-        $.call.pop()
         dealReturn('doBeanWaitTask', $.data)
         document.write(JSON.stringify($))
       } else {
         $.callback = ''
-        $.call.pop()
         dealReturn('doBeanTask', $.data)
         document.write(JSON.stringify($))
       }
@@ -181,7 +179,6 @@ function Next (func) {
       $.wait = 1
       $.next = 0 // 清空 Next.key
       $.callback = ''
-      $.call.pop()
       dealReturn('doBeanWaitTask', $.data)
       break;
     default:
