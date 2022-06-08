@@ -443,7 +443,7 @@
     ]
   },
   "618cat": {
-    "version": "数据最后更新于:6.6.1",
+    "version": "数据最后更新于:6.8.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.ftJSz3R",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.ftJSz3R",
@@ -487,18 +487,17 @@
           "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=G16N5Pwu51vlrkRzI1RZiMPWSKUWUGUqU2&sceneId=3399&hd_from_id=100155&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
-            "29444 cloudsail_6_317423502130001_29444_0",
-            "29444 cloudsail_6_317423502130002_29444_0",
-            "29444 cloudsail_6_317423502130003_29444_0",
-            "29444 cloudsail_6_317423502130004_29444_0",
-            "29444 cloudsail_6_317423502130005_29444_0",
-            "29602 cloudsail_2_315603000440001_29602_0",
-            "29602 cloudsail_2_315603000440002_29602_0",
-            "29602 cloudsail_2_315603000440003_29602_0",
-            "29602 cloudsail_2_315603000440004_29602_0",
-            "29602 cloudsail_2_315603000440005_29602_0",
-            "29602 cloudsail_2_315603000440006_29602_0",
-            "29602 cloudsail_2_315603000440007_29602_0",
+            "29376 cloudsail_9_320284002840001_29376_0",
+            "29376 cloudsail_9_320284002840002_29376_0",
+            "29376 cloudsail_9_320284002840003_29376_0",
+            "29376 cloudsail_9_320284002840004_29376_0",
+            "29376 cloudsail_9_320284002840005_29376_0",
+            "29600 cloudsail_6_316756500740001_29600_0",
+            "29600 cloudsail_6_316756500740002_29600_0",
+            "29600 cloudsail_6_316756500740003_29600_0",
+            "29599 cloudsail_6_316712502020001_29599_0",
+            "29599 cloudsail_6_316712502020002_29599_0",
+            "29599 cloudsail_6_316712502020003_29599_0",
             "29239 cloudsail_7_319269003870001_29239_0",
             "29239 cloudsail_7_319269003870002_29239_0",
             "29239 cloudsail_7_319269003870003_29239_0"
