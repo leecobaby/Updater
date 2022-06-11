@@ -1335,6 +1335,7 @@ function dealReturn (type, data) {
       }
       break;
     case 'getLzdzCK':
+      $.data = {}
       const setCookie = data['Set-Cookie'] || data['set-cookie'] || ''
       if (setCookie) {
         const newCookieItem = setCookie.match(/(JSESSIONID|LZ_TOKEN_KEY|LZ_TOKEN_VALUE)=(.*?);/ig)
