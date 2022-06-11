@@ -182,6 +182,44 @@ function Next (func) {
       dealReturn('doBeanWaitTask', $.data)
       document.write(JSON.stringify($))
       break;
+    case 'getLzdzCK_next':
+      // next
+      $.callback = ''
+      $.call.pop()
+      // 这里要取消获取 HEAD
+      $.HEAD = false
+      // 注意这里的 $.headerData 其实是 response.header
+      dealReturn('getLzdzCK', $.headerData)
+      document.write(JSON.stringify($))
+      break;
+    case 'getLzdzToken_next':
+      // next
+      $.callback = ''
+      $.call.pop()
+      dealReturn('getLzdzToken', $.data)
+      document.write(JSON.stringify($))
+      break;
+    case 'getLzdzPin_next':
+      // next
+      $.callback = ''
+      $.call.pop()
+      dealReturn('getLzdzPin', $.data)
+      document.write(JSON.stringify($))
+      break;
+    case 'getLzdzInfo_next':
+      // next
+      $.callback = ''
+      $.call.pop()
+      dealReturn('getLzdzInfo', $.data)
+      document.write(JSON.stringify($))
+      break;
+    case 'getLzdzTaskFollowShop_next':
+      // next
+      $.callback = ''
+      $.call.pop()
+      dealReturn('getLzdzTaskFollowShop', $.data)
+      document.write(JSON.stringify($))
+      break;
     default:
       // next
       $.callback = ''

@@ -9,6 +9,19 @@
 </head>
 
 <body>
+  <script>
+    const a = { "Server": "Jdcloud-FE", "Connection": "keep-alive", "Keep-Alive": "timeout=20", "Content-Encoding": "gzip", "Content-Language": "zh-CN", "Vary": "accept-encoding", "Content-Type": "text\/html;charset=UTF-8", "Cache-Control": "no-cache,no-store", "Set-Cookie": "JSESSIONID=8004710CDAEFB511A62B9A77E012017F; Path=\/; HttpOnly, LZ_TOKEN_KEY=lztokenpage770a971e41dc4173a6cf0cb1f7c22fa7; Max-Age=600; Expires=Sat, 11-Jun-2022 05:35:28 GMT; Path=\/, LZ_TOKEN_VALUE=B0oH3vDY2bhHWuKbVaJ+XQ==; Max-Age=600; Expires=Sat, 11-Jun-2022 05:35:28 GMT; Path=\/", "Date": "Sat, 11 Jun 2022 05:25:29 GMT", "Pragma": "no-cache", "Via": "hb1-waf-jfe-20" }
+    const b = a['Set-Cookie'] || a['set-cookie'] || ''
+    console.log(b);
+    const c = b.match(/(JSESSIONID|LZ_TOKEN_KEY|LZ_TOKEN_VALUE)=(.*?);/ig)
+    let t = ';'
+    for (const item of c) {
+      t += item
+    }
+
+    console.log(t);
+    const token = 'AAFipCoNADAb-tlmi6MJcF5t8T2ZoMXzz5v8N4dMauyRzpEO72oWKsp7wT9RK7TgWFcvyqP8oyM'
+  </script>
   <script src="../babel/jd_sign_next.js"></script>
   <script src="../babel/jd_sign_development.js"></script>
 

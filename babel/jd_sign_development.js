@@ -11,6 +11,9 @@
 
 // 618 特物Z
 
+// 618 lzdz
+// https://lzdz1-isv.isvjcloud.com/dingzhi/customized/common/activity/${$.authorNum}?activityId=${$.activityId}&shareUuid=${encodeURIComponent($.authorCode)}&adsource=SD&shareuserid4minipg=${encodeURIComponent($.secretPin)}&shopid=undefined&lng=00.000000&lat=00.000000&sid=&un_area=
+
 
 // 到指令里运行需要注释掉
 // const $ = {}
@@ -61,6 +64,9 @@ function init () {
 
   // 自变量
   $.self = {}
+
+  // 是否获取头部
+  $.HEAD = false
 
   $.message = `本指令作为自动化方案开源分享，并不保证他带来的任何副作用，任何副作用请自行负责，如不同意请停止使用！`
   document.write(JSON.stringify($))
@@ -312,6 +318,144 @@ function doBeanTask () {
     document.write(JSON.stringify($))
   }
 
+}
+
+/**
+ * 做LZDZ任务 - 全利以赴 谁是囤货王
+ * （暂时不知道什么玩意儿）
+ */
+function doLzdz68 () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler'
+  $.call = ['doLzdz68']
+
+  $.activityId = "dzlhkke4cc7da358ff4fa18352ce88";
+  $.authorCode = "0df549e339284e27bca13726bde214db";
+  $.activityShopId = "1000003443";
+
+  switch ($.taskStep++) {
+    case 1:
+      // 获取 LZCK
+      getLzdzCK()
+      break;
+    case 2:
+      // 获取 Token
+      getLzdzToken()
+      break;
+    case 3:
+      // 获取 Pin
+      if ($.LzdzToken) {
+        getLzdzPin()
+      } else {
+        $.taskStep = -1
+        $.message = '无法获取到活动令牌，结束活动任务'
+        document.write(JSON.stringify($))
+      }
+      break;
+    case 4:
+      // 获取活动信息
+      if ($.secretPin) {
+        getLzdzInfo()
+      } else {
+        $.taskStep = -1
+        $.message = '无法获取到Pin码，结束活动任务'
+        document.write(JSON.stringify($))
+      }
+      break;
+    case 5:
+      // 关注店铺
+      if ($.self.data) {
+        getLzdzTaskFollowShop()
+      } else {
+        $.taskStep = -1
+        $.message = '无法获取到活动信息，结束活动任务'
+        document.write(JSON.stringify($))
+      }
+      break;
+    default:
+      $.to = ''; $.call.pop(); $.taskStep = 1; $.self.data = undefined
+      document.write(JSON.stringify($))
+      break;
+  }
+}
+
+// 获取 LZCK
+function getLzdzCK () {
+  $.call[$.call.length - 1] == 'getLzdzCK' || $.call.push('getLzdzCK')
+
+  $.HEAD = true
+  $.callback = 'Func.request'
+  takeRequest('getLzdzCK');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  // 这里要取消获取 HEAD
+  $.HEAD = false
+  // 注意这里的 $.headerData 其实是 response.header
+  dealReturn('getLzdzCK', $.headerData)
+  document.write(JSON.stringify($))
+}
+
+// 获取 Token
+function getLzdzToken () {
+  $.call[$.call.length - 1] == 'getLzdzToken' || $.call.push('getLzdzToken')
+
+  $.callback = 'Func.request'
+  takeRequest('getLzdzToken');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('getLzdzToken', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 获取 Pin
+function getLzdzPin () {
+  $.call[$.call.length - 1] == 'getLzdzPin' || $.call.push('getLzdzPin')
+
+  $.callback = 'Func.request'
+  takeRequest('getLzdzPin');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('getLzdzPin', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 获取活动信息
+function getLzdzInfo () {
+  $.call[$.call.length - 1] == 'getLzdzInfo' || $.call.push('getLzdzInfo')
+
+  $.callback = 'Func.request'
+  takeRequest('getLzdzInfo');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('getLzdzInfo', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 关注店铺
+function getLzdzTaskFollowShop () {
+  $.call[$.call.length - 1] == 'getLzdzTaskFollowShop' || $.call.push('getLzdzTaskFollowShop')
+
+  $.callback = 'Func.request'
+  takeRequest('getLzdzTaskFollowShop');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('getLzdzTaskFollowShop', $.data)
+  document.write(JSON.stringify($))
 }
 
 /**
@@ -856,6 +1000,45 @@ function takeRequest (type) {
       url = `https://api.m.jd.com/client.action?functionId=beanDoTask&body=${encodeURIComponent(JSON.stringify({ "actionType": 0, "taskToken": `${$.taskToken}` }))}&appid=ld&client=apple&area=5_274_49707_49973&build=167283&clientVersion=9.1.0`;
       myRequest = getRequest(url, body);
       break;
+    case 'getLzdzCK':
+      url = `https://lzdz1-isv.isvjcloud.com/dingzhi/customized/common/activity?activityId=${$.activityId}&shareUuid=${encodeURIComponent($.authorCode)}`;
+      myRequest = getRequest(url, body, 'GET');
+      break;
+    case 'getLzdzToken':
+      url = `https://api.m.jd.com/client.action?functionId=isvObfuscator`;
+      body = `body=%7B%22url%22%3A%20%22https%3A//lzkj-isv.isvjcloud.com%22%2C%20%22id%22%3A%20%22%22%7D&uuid=hjudwgohxzVu96krv&client=apple&clientVersion=9.4.0&st=1620476162000&sv=111&sign=f9d1b7e3b943b6a136d54fe4f892af05`
+      myRequest = getRequest(url, body, 'POST');
+      break;
+    case 'getLzdzPin':
+      url = `https://lzdz1-isv.isvjcloud.com/customer/getMyPinghttps://lzdz1-isv.isvjcloud.com/customer/getMyPing`;
+      body = `userId=${$.activityShopId}&token=${$.LzdzToken}&fromType=APP`
+      headers = {
+        Host: 'zdz1-isv.isvjcloud.com',
+        Origin: 'https://lzdz1-isv.isvjcloud.com',
+        Referer: `https://lzdz1-isv.isvjcloud.com/dingzhi/customized/common/activity?activityId=${$.activityId}&shareUuid=${encodeURIComponent($.authorCode)}`,
+      }
+      myRequest = getRequest(url, body, 'POST');
+      break;
+    case 'getLzdzInfo':
+      url = `https://lzdz1-isv.isvjcloud.com/dingzhi/linkgame/activity/content`;
+      body = `activityId=${$.activityId}&pin=${encodeURIComponent($.secretPin)}&pinImg=&nick=${encodeURIComponent($.nickname)}&cjyxPin=&cjhyPin=&shareUuid=${encodeURIComponent($.authorCode)}`
+      headers = {
+        Host: 'zdz1-isv.isvjcloud.com',
+        Origin: 'https://lzdz1-isv.isvjcloud.com',
+        Referer: `https://lzdz1-isv.isvjcloud.com/dingzhi/customized/common/activity?activityId=${$.activityId}&shareUuid=${encodeURIComponent($.authorCode)}`,
+      }
+      myRequest = getRequest(url, body, 'POST');
+      break;
+    case 'getLzdzTaskFollowShop':
+      url = `https://lzdz1-isv.isvjcloud.com/dingzhi/opencard/follow/shop`;
+      body = `activityId=${$.activityId}&pin=${encodeURIComponent($.secretPin)}`
+      headers = {
+        Host: 'zdz1-isv.isvjcloud.com',
+        Origin: 'https://lzdz1-isv.isvjcloud.com',
+        Referer: `https://lzdz1-isv.isvjcloud.com/dingzhi/customized/common/activity?activityId=${$.activityId}&shareUuid=${encodeURIComponent($.authorCode)}`,
+      }
+      myRequest = getRequest(url, body, 'POST');
+      break;
     default:
       $.error = `takeRequest 错误${type}`
       console.log(`错误${type}`);
@@ -920,14 +1103,14 @@ function getRequest (url, body = {}, method = 'POST', header = {}) {
 
 // 处理返回信息
 function dealReturn (type, data) {
-  if (!data) $.error = '接口返回数据为空，检查账号cookie是否过期或错误';
+  if (!data) $.message = '接口返回数据为空!';
   let json = $.Utils.stringify(data)
 
   switch (type) {
     case 'doBeanSign':
     case 'JingDongBean':
       if (data.code === 3) {
-        $.message = '京东商城-京豆: 失败, 原因: Cookie失效‼️'
+        $.error = '京东商城-京豆: 失败, 原因: Cookie失效‼️'
       } else if (json.match(/跳转至拼图/)) {
         $.message = "京东商城-京豆: 失败, 需要拼图验证 ⚠️"
       } else if (json.match(/\"status\":\"?1\"?/)) {
@@ -1149,6 +1332,54 @@ function dealReturn (type, data) {
         $.message = `完成任务：${data.data.bizMsg}`
       } else {
         $.message = `任务失败：原因${JSON.stringify(data)}`
+      }
+      break;
+    case 'getLzdzCK':
+      const setCookie = data['Set-Cookie'] || data['set-cookie'] || ''
+      if (setCookie) {
+        const newCookieItem = setCookie.match(/(JSESSIONID|LZ_TOKEN_KEY|LZ_TOKEN_VALUE)=(.*?);/ig)
+        $.cookie += ';'
+        for (const item of newCookieItem) {
+          $.cookie += item
+        }
+        $.message = `test1 - ${$.cookie}`
+      } else {
+        $.message = `发生错误：原因${JSON.stringify(data)}`
+      }
+      break;
+    case 'getLzdzToken':
+      if (data.code == '0') {
+        $.LzdzToken = data.token;
+        $.message = `test2 - ${$.LzdzToken}`
+      } else {
+        $.message = `发生错误：原因${JSON.stringify(data)}`
+      }
+      break;
+    case 'getLzdzPin':
+      if (data.result && data.data) {
+        $.nickname = data.data.nickname;
+        $.secretPin = data.data.secretPin;
+        $.cookie = `${$.cookie};AUTH_C_USER=${data.data.secretPin}`;
+        $.message = `获取 Pin 码成功`
+      } else {
+        $.message = `获取 Pin 码失败：原因${JSON.stringify(data)}`
+      }
+      break;
+    case 'getLzdzInfo':
+      if (data.result && !data.data?.hasEnd) {
+        $.self.data = true
+        $.message = `获取活动信息成功：${data.data?.activity["name"]}`
+      } else {
+        $.self.data = false
+        $.message = `活动已经结束!`
+      }
+      break;
+    case 'getLzdzTaskFollowShop':
+      if (data.data) {
+        $.addScore = data.data.addScore
+        $.message = `test3 - ${$.addScore}`
+      } else {
+        $.message = `发生错误：原因${JSON.stringify(data)}`
       }
       break;
     default:
