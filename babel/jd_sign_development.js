@@ -1017,7 +1017,7 @@ function takeRequest (type) {
         Origin: 'https://lzdz1-isv.isvjcloud.com',
         Referer: `https://lzdz1-isv.isvjcloud.com/dingzhi/customized/common/activity?activityId=${$.activityId}&shareUuid=${encodeURIComponent($.authorCode)}`,
       }
-      myRequest = getRequest(url, body, 'POST');
+      myRequest = getRequest(url, body, 'POST', headers);
       break;
     case 'getLzdzInfo':
       url = `https://lzdz1-isv.isvjcloud.com/dingzhi/linkgame/activity/content`;
@@ -1027,7 +1027,7 @@ function takeRequest (type) {
         Origin: 'https://lzdz1-isv.isvjcloud.com',
         Referer: `https://lzdz1-isv.isvjcloud.com/dingzhi/customized/common/activity?activityId=${$.activityId}&shareUuid=${encodeURIComponent($.authorCode)}`,
       }
-      myRequest = getRequest(url, body, 'POST');
+      myRequest = getRequest(url, body, 'POST', headers);
       break;
     case 'getLzdzTaskFollowShop':
       url = `https://lzdz1-isv.isvjcloud.com/dingzhi/opencard/follow/shop`;
@@ -1037,7 +1037,7 @@ function takeRequest (type) {
         Origin: 'https://lzdz1-isv.isvjcloud.com',
         Referer: `https://lzdz1-isv.isvjcloud.com/dingzhi/customized/common/activity?activityId=${$.activityId}&shareUuid=${encodeURIComponent($.authorCode)}`,
       }
-      myRequest = getRequest(url, body, 'POST');
+      myRequest = getRequest(url, body, 'POST', headers);
       break;
     default:
       $.error = `takeRequest 错误${type}`
