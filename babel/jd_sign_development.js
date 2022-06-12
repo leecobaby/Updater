@@ -373,12 +373,26 @@ function doLzdz68 () {
       }
       break;
     case 6:
-      // 关注店铺
+      // 一键关注店铺
       if ($.self.data) {
-        getLzdzTaskFollowShop()
+        doLzdzTaskFollowShop()
       } else {
         $.taskStep = -1
         $.message = '无法获取到活动信息，结束活动任务'
+        document.write(JSON.stringify($))
+      }
+      break;
+    case 7:
+      // 获取开卡信息
+      getLzdzOpenCardInfo()
+      break;
+    case 8:
+      // 做开卡任务
+      if ($.taskList) {
+        doLzdzOpenCardTask()
+      } else {
+        $.taskStep = -1
+        $.message = '无法获取到开卡任务，结束活动任务'
         document.write(JSON.stringify($))
       }
       break;
@@ -473,17 +487,66 @@ function getLzdzInfo () {
 }
 
 // 关注店铺
-function getLzdzTaskFollowShop () {
-  $.call[$.call.length - 1] == 'getLzdzTaskFollowShop' || $.call.push('getLzdzTaskFollowShop')
+function doLzdzTaskFollowShop () {
+  $.call[$.call.length - 1] == 'doLzdzTaskFollowShop' || $.call.push('doLzdzTaskFollowShop')
 
   $.callback = 'Func.request'
-  takeRequest('getLzdzTaskFollowShop');
+  takeRequest('doLzdzTaskFollowShop');
   return
 
   // next
   $.callback = ''
   $.call.pop()
-  dealReturn('getLzdzTaskFollowShop', $.data)
+  dealReturn('doLzdzTaskFollowShop', $.data)
+  document.write(JSON.stringify($))
+}
+
+
+// 获取开卡信息
+function getLzdzOpenCardInfo () {
+  $.call[$.call.length - 1] == 'getLzdzOpenCardInfo' || $.call.push('getLzdzOpenCardInfo')
+
+  $.callback = 'Func.request'
+  takeRequest('getLzdzOpenCardInfo');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('getLzdzOpenCardInfo', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 做开卡任务
+function doLzdzOpenCardTask () {
+  $.call[$.call.length - 1] == 'doLzdzOpenCardTask' || $.call.push('doLzdzOpenCardTask')
+
+  // 利用队列取代循环
+  $.oneTask = $.taskList.shift()
+  if (!$.oneTask) {
+    // 循环完成重新设置 to,call
+    $.call.pop()
+    $.message = `任务已全都完成~`
+    document.write(JSON.stringify($))
+    return
+  }
+
+  // 做过的任务则跳过重新执行
+  $.venderId = $.oneTask?.venderId
+  if ($.oneTask?.status == 1) {
+    $.message = `你已经是 ${$.oneTask.name} 会员了`
+    document.write(JSON.stringify($))
+    return
+  }
+
+  $.callback = 'Func.request'
+  takeRequest('doLzdzOpenCardTask');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('doLzdzOpenCardTask', $.data)
   document.write(JSON.stringify($))
 }
 
@@ -1068,9 +1131,19 @@ function takeRequest (type) {
       }
       myRequest = getRequest(url, body, 'POST', headers);
       break;
-    case 'getLzdzTaskFollowShop':
+    case 'doLzdzTaskFollowShop':
       url = `https://lzdz1-isv.isvjcloud.com/dingzhi/opencard/follow/shop`;
       body = `activityId=${$.activityId}&pin=${encodeURIComponent($.secretPin)}`
+      headers = {
+        Host: 'zdz1-isv.isvjcloud.com',
+        Origin: 'https://lzdz1-isv.isvjcloud.com',
+        Referer: `https://lzdz1-isv.isvjcloud.com/dingzhi/customized/common/activity?activityId=${$.activityId}&shareUuid=${encodeURIComponent($.authorCode)}`,
+      }
+      myRequest = getRequest(url, body, 'POST', headers);
+      break;
+    case 'getLzdzOpenCardInfo':
+      url = `https://lzdz1-isv.isvjcloud.com/dingzhi/linkgame/task/opencard/info`;
+      body = `pin=${encodeURIComponent($.secretPin)}&activityId=${$.activityId}`
       headers = {
         Host: 'zdz1-isv.isvjcloud.com',
         Origin: 'https://lzdz1-isv.isvjcloud.com',
@@ -1429,10 +1502,17 @@ function dealReturn (type, data) {
         $.message = `活动已经结束!`
       }
       break;
-    case 'getLzdzTaskFollowShop':
+    case 'doLzdzTaskFollowShop':
       if (data.data) {
-        $.addScore = data.data.addScore
-        $.message = `test3 - ${$.addScore}`
+        $.message = `test4 - ${JSON.stringify(data)}`
+      } else {
+        $.message = `发生错误：原因${JSON.stringify(data)}`
+      }
+      break;
+    case 'getLzdzOpenCardInfo':
+      if (data.data) {
+        $.taskList = data.data.followShopList;
+        $.message = `test5 - ${JSON.stringify($.openCardList)}`
       } else {
         $.message = `发生错误：原因${JSON.stringify(data)}`
       }

@@ -223,11 +223,11 @@ function Next (func) {
       dealReturn('getLzdzInfo', $.data)
       document.write(JSON.stringify($))
       break;
-    case 'getLzdzTaskFollowShop_next':
+    case 'doLzdzTaskFollowShop_next':
       // next
       $.callback = ''
       $.call.pop()
-      dealReturn('getLzdzTaskFollowShop', $.data)
+      dealReturn('doLzdzTaskFollowShop', $.data)
       document.write(JSON.stringify($))
       break;
     default:
