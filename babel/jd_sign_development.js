@@ -1013,7 +1013,7 @@ function takeRequest (type) {
       url = `https://lzdz1-isv.isvjcloud.com/customer/getMyPing`;
       body = `userId=${$.activityShopId}&token=${$.LzdzToken}&fromType=APP`
       headers = {
-        Host: 'zdz1-isv.isvjcloud.com',
+        Host: 'lzdz1-isv.isvjcloud.com',
         Origin: 'https://lzdz1-isv.isvjcloud.com',
         Referer: `https://lzdz1-isv.isvjcloud.com/dingzhi/customized/common/activity?activityId=${$.activityId}&shareUuid=${encodeURIComponent($.authorCode)}`,
       }
