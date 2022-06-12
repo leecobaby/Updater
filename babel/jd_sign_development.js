@@ -1010,7 +1010,7 @@ function takeRequest (type) {
       myRequest = getRequest(url, body, 'POST');
       break;
     case 'getLzdzPin':
-      url = `https://lzdz1-isv.isvjcloud.com/customer/getMyPinghttps://lzdz1-isv.isvjcloud.com/customer/getMyPing`;
+      url = `https://lzdz1-isv.isvjcloud.com/customer/getMyPing`;
       body = `userId=${$.activityShopId}&token=${$.LzdzToken}&fromType=APP`
       headers = {
         Host: 'zdz1-isv.isvjcloud.com',
