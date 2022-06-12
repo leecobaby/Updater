@@ -353,9 +353,9 @@ function doLzdz68 () {
       }
       break;
     case 4:
-      // 获取活动信息
+      // 访问 AD 日志
       if ($.secretPin) {
-        getLzdzInfo()
+        getLzdzLogWithAD()
       } else {
         $.taskStep = -1
         $.message = '无法获取到Pin码，结束活动任务'
@@ -363,6 +363,16 @@ function doLzdz68 () {
       }
       break;
     case 5:
+      // 获取活动信息
+      if ($.self.data) {
+        getLzdzInfo()
+      } else {
+        $.taskStep = -1
+        $.message = '无法获取 AD 日志，结束活动任务'
+        document.write(JSON.stringify($))
+      }
+      break;
+    case 6:
       // 关注店铺
       if ($.self.data) {
         getLzdzTaskFollowShop()
@@ -425,6 +435,25 @@ function getLzdzPin () {
   $.callback = ''
   $.call.pop()
   dealReturn('getLzdzPin', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 访问 AD 日志
+function getLzdzLogWithAD () {
+  $.call[$.call.length - 1] == 'getLzdzLogWithAD' || $.call.push('getLzdzLogWithAD')
+
+  $.HEAD = true
+  $.callback = 'Func.request'
+  takeRequest('getLzdzLogWithAD');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  // 这里要取消获取 HEAD
+  $.HEAD = false
+  // 注意这里的 $.headerData 其实是 response.header
+  dealReturn('getLzdzLogWithAD', $.headerData)
   document.write(JSON.stringify($))
 }
 
@@ -1019,6 +1048,16 @@ function takeRequest (type) {
       }
       myRequest = getRequest(url, body, 'POST', headers);
       break;
+    case 'getLzdzLogWithAD':
+      url = `https://lzdz1-isv.isvjcloud.com/common/accessLogWithAD`;
+      body = `venderId=${$.activityShopId}&code=99&pin=${encodeURIComponent($.secretPin)}&activityId=${$.activityId}&pageUrl=${$.activityUrl}&subType=app&adSource=FLP`
+      headers = {
+        Host: 'lzdz1-isv.isvjcloud.com',
+        Origin: 'https://lzdz1-isv.isvjcloud.com',
+        Referer: `https://lzdz1-isv.isvjcloud.com/dingzhi/customized/common/activity?activityId=${$.activityId}&shareUuid=${encodeURIComponent($.authorCode)}`,
+      }
+      myRequest = getRequest(url, body, 'POST', headers);
+      break;
     case 'getLzdzInfo':
       url = `https://lzdz1-isv.isvjcloud.com/dingzhi/linkgame/activity/content`;
       body = `activityId=${$.activityId}&pin=${encodeURIComponent($.secretPin)}&pinImg=&nick=${encodeURIComponent($.nickname)}&cjyxPin=&cjhyPin=&shareUuid=${encodeURIComponent($.authorCode)}`
@@ -1105,6 +1144,7 @@ function getRequest (url, body = {}, method = 'POST', header = {}) {
 function dealReturn (type, data) {
   if (!data) $.message = '接口返回数据为空!';
   let json = $.Utils.stringify(data)
+  let setCookie = data['Set-Cookie'] || data['set-cookie'] || ''
 
   switch (type) {
     case 'doBeanSign':
@@ -1336,7 +1376,6 @@ function dealReturn (type, data) {
       break;
     case 'getLzdzCK':
       $.data = {}
-      const setCookie = data['Set-Cookie'] || data['set-cookie'] || ''
       if (setCookie) {
         const newCookieItem = setCookie.match(/(JSESSIONID|LZ_TOKEN_KEY|LZ_TOKEN_VALUE)=(.*?);/ig)
         $.cookie += ';'
@@ -1364,6 +1403,21 @@ function dealReturn (type, data) {
         $.message = `获取 Pin 码成功`
       } else {
         $.message = `获取 Pin 码失败：原因${JSON.stringify(data)}`
+      }
+      break;
+    case 'getLzdzLogWithAD':
+      $.data = {}
+      if (setCookie) {
+        const newCookieItem = setCookie.match(/(JSESSIONID|LZ_TOKEN_KEY|LZ_TOKEN_VALUE)=(.*?);/ig)
+        $.cookie += ';'
+        for (const item of newCookieItem) {
+          $.cookie += item
+        }
+        $.message = `test3 - ${$.cookie}`
+        $.self.data = true
+      } else {
+        $.self.data = false
+        $.message = `发生错误：原因${JSON.stringify(data)}`
       }
       break;
     case 'getLzdzInfo':

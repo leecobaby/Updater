@@ -192,6 +192,16 @@ function Next (func) {
       dealReturn('getLzdzCK', $.headerData)
       document.write(JSON.stringify($))
       break;
+    case 'getLzdzLogWithAD_next':
+      // next
+      $.callback = ''
+      $.call.pop()
+      // 这里要取消获取 HEAD
+      $.HEAD = false
+      // 注意这里的 $.headerData 其实是 response.header
+      dealReturn('getLzdzLogWithAD', $.headerData)
+      document.write(JSON.stringify($))
+      break;
     case 'getLzdzToken_next':
       // next
       $.callback = ''
