@@ -77,7 +77,7 @@ function init () {
  * 云端推送提示
  */
 function cloudTip () {
-  $.message = `指令已运行完毕！\n其他功能和任务正在开发中，上线将自动推送到指令中，无需任何操作~`
+  $.error = `指令已运行完毕！\n其他功能和任务正在开发中，上线将自动推送到指令中，无需任何操作~`
   document.write(JSON.stringify($))
 }
 
