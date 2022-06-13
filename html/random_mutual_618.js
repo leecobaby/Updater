@@ -14,8 +14,8 @@ console.log(repeatData);
 // 唯一消息的用户数据
 const uniqueData = _.pickBy(statisticData, v => v.length == 1)
 console.log(uniqueData);
-// 随机选取出 3 个助力 url - 考虑到助力已满情况和无效链接的情况
-const sampleData = _.sampleSize(uniqueData, 3)
+// 随机选取出 5 个助力 url - 考虑到助力已满情况和无效链接的情况
+const sampleData = _.sampleSize(uniqueData, 5)
 console.log(sampleData);
 const list = sampleData.map(v => v[0].text)
 
