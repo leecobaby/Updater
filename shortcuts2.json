@@ -577,16 +577,16 @@
     }
   },
   "JD_sign": {
-    "version": "1.6",
-    "update_log": "- 新增 自动助力功能（暂未开放）\n- 新增 任务账号增加到 5 个\n- 新增 618 种草街任务，其他任务持续更新中\n- 增加 活动大厅快速去往个活动页面数据",
+    "version": "1.7",
+    "update_log": "- 新增 多条云端线路，自动切换可用线路",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_sign#版本日志"
     },
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/8be2cd5acbbb479f9cec84de85401915",
-    "notice": "🧧 今天红包要过期了，别忘了用！\n更新后第一次使用请先修复指令,防止出错\n自动助力暂未开发，开放会另行通知~",
+    "update": "https://www.icloud.com/shortcuts/51d675a5bf6840b7a503a0afaace94f0",
+    "notice": "更新后第一次使用请先修复指令,防止出错\n自动助力暂未开发，开放会另行通知~",
     "video": "",
     "automation_url": "shortcuts://run-shortcut?name=京东-多合一签到&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd.png",
@@ -667,7 +667,7 @@
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/6edb30b5eb014e10b5414f1926b8bae5",
-    "notice": "🧧 今天红包要过期了，别忘了用！\n任务功能将会逐步完善，通过云端推送",
+    "notice": "任务功能将会逐步完善，通过云端推送",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-东东农场&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd2.jpeg",
