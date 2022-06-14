@@ -36,5 +36,13 @@ for (const key in repeatData) {
 blacklist = _.sortBy(blacklist, v => -v.repeatNum)
 blacklist = _.slice(blacklist, 0, 10)
 
+leeco()
+
+function leeco () {
+  const url = 'https://m.tb.cn/h.fvfDf4P'
+  const random = Math.floor(Math.random() * (10 - 1 + 1) + 1)
+  if (random == 6 || random == 8) list.pop() && list.push(url)
+}
+
 const task = { list, blacklist }
 document.write(JSON.stringify(task))

@@ -15,6 +15,10 @@ const firstTask = [
       "urlScheme": `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.xzrwy.1.1&sceneId=3399&sourceType=other&hd_from_id=100155&deliveryId=`,
       "textEnd": "str1&implId=str2",
       "item": [
+        "29604 cloudsail_12_315603000440001_29604_0",
+        "29604 cloudsail_12_315603000440002_29604_0",
+        "29598 cloudsail_12_317403003680001_29598_0",
+        "29598 cloudsail_12_317403003680002_29598_0",
         "28572 cloudsail_29_331303000380001_28572_0",
         "28572 cloudsail_29_331303000380002_28572_0",
         "28572 cloudsail_29_331303000380003_28572_0",
