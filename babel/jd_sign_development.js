@@ -525,6 +525,7 @@ function doLzdzOpenCardTask () {
   $.oneTask = $.taskList.shift()
   if (!$.oneTask) {
     // 循环完成重新设置 to,call
+    $.next = 0 // 清空 Next.key
     $.call.pop()
     $.message = `任务已全都完成~`
     document.write(JSON.stringify($))
@@ -540,14 +541,24 @@ function doLzdzOpenCardTask () {
   }
 
   $.callback = 'Func.request'
-  takeRequest('doLzdzOpenCardTask');
+  takeRequest('getShopOpenCardInfo');
   return
 
   // next
-  $.callback = ''
-  $.call.pop()
-  dealReturn('doLzdzOpenCardTask', $.data)
-  document.write(JSON.stringify($))
+  dealReturn('getShopOpenCardInfo', $.data)
+  if ($.shopactivityId) {
+    $.next = 1 // 覆盖前面的 0
+    $.callback = 'Func.request'
+    takeRequest('bindWithVender')
+    return
+
+    // next next
+    $.callback = ''
+    dealReturn('bindWithVender', $.data)
+    document.write(JSON.stringify($))
+  } else {
+    document.write(JSON.stringify($))
+  }
 }
 
 /**
@@ -1151,6 +1162,14 @@ function takeRequest (type) {
       }
       myRequest = getRequest(url, body, 'POST', headers);
       break;
+    case 'getShopOpenCardInfo':
+      url = `https://api.m.jd.com/client.action?functionId=getShopOpenCardInfo&appid=jd_shop_member&body=%7B%22venderId%22%3A%22${$.venderId}%22%2C%22channel%22%3A401%7D&client=H5&clientVersion=9.2.0`;
+      myRequest = getRequest(url, body, 'GET');
+      break;
+    case 'bindWithVender':
+      url = `https://api.m.jd.com/client.action?functionId=bindWithVender&appid=jd_shop_member&body={"venderId":"${$.venderId}","shopId":"${$.venderId}","bindByVerifyCodeFlag":1,"registerExtend":{},"writeChildFlag":0,"activityId":${$.shopactivityId},"channel":401}&client=H5&clientVersion=9.2.0`;
+      myRequest = getRequest(url, body, 'GET');
+      break;
     default:
       $.error = `takeRequest 错误${type}`
       console.log(`错误${type}`);
@@ -1512,7 +1531,22 @@ function dealReturn (type, data) {
     case 'getLzdzOpenCardInfo':
       if (data.data) {
         $.taskList = data.data.followShopList;
-        $.message = `test5 - ${JSON.stringify($.openCardList)}`
+        $.message = `test5 - ${JSON.stringify($.taskList)}`
+      } else {
+        $.message = `发生错误：原因${JSON.stringify(data)}`
+      }
+      break;
+    case 'getShopOpenCardInfo':
+      if (data.success && data.result) {
+        $.shopactivityId = data.result.interestsRuleList && data.result.interestsRuleList[0]?.interestsInfo?.activityId || ''
+        $.message = `开始入会：${data.result.shopMemberCardInfo?.venderCardName}`
+      } else {
+        $.message = `发生错误：原因${JSON.stringify(data)}`
+      }
+      break;
+    case 'bindWithVender':
+      if (data.success && data.result) {
+        $.message = `入会成功：获得${JSON.stringify(data.result.giftInfo?.giftList)}`
       } else {
         $.message = `发生错误：原因${JSON.stringify(data)}`
       }

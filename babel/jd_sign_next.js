@@ -230,6 +230,36 @@ function Next (func) {
       dealReturn('doLzdzTaskFollowShop', $.data)
       document.write(JSON.stringify($))
       break;
+    case 'getLzdzOpenCardInfo_next':
+      // next
+      $.callback = ''
+      $.call.pop()
+      dealReturn('getLzdzOpenCardInfo', $.data)
+      document.write(JSON.stringify($))
+      break;
+    case 'doLzdzOpenCardTask_next':
+      // next
+      dealReturn('getShopOpenCardInfo', $.data)
+      if ($.shopactivityId) {
+        $.next = 1 // 覆盖前面的 0
+        $.callback = 'Func.request'
+        takeRequest('bindWithVender')
+        return
+
+        // next next
+        $.callback = ''
+        dealReturn('bindWithVender', $.data)
+        document.write(JSON.stringify($))
+      } else {
+        document.write(JSON.stringify($))
+      }
+      break;
+    case 'doLzdzOpenCardTask_next_next':
+      // next next
+      $.callback = ''
+      dealReturn('bindWithVender', $.data)
+      document.write(JSON.stringify($))
+      break;
     default:
       // next
       $.callback = ''
