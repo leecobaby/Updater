@@ -443,7 +443,7 @@
     ]
   },
   "618cat": {
-    "version": "数据最后更新于:6.14.3",
+    "version": "数据最后更新于:6.15.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.ftJSz3R",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.ftJSz3R",
@@ -484,10 +484,22 @@
         "stars": {
           "title": "云端推送",
           "type": "stars",
-          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=Dnjx59rilDgKzB7Bh98OsGbKs9UdU2U8Uj&sceneId=3399&hd_from_id=100155&deliveryId=",
+          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=NdbKM5OTRXR9xp2JfrD0H1xzhrU0UzUrUw&sceneId=3399&hd_from_id=100155&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
-            "29604 cloudsail_12_315603000440001_29604_0",
+            "29447 cloudsail_15_316568002420001_29447_0",
+            "29447 cloudsail_15_316568002420002_29447_0",
+            "29447 cloudsail_15_316568002420003_29447_0",
+            "29447 cloudsail_15_316568002420004_29447_0",
+            "29447 cloudsail_15_316568002420005_29447_0",
+            "29447 cloudsail_15_316568002420006_29447_0",
+            "29447 cloudsail_15_316568002420007_29447_0",
+            "29447 cloudsail_15_316568002420008_29447_0",
+            "29447 cloudsail_15_316568002420009_29447_0",
+            "29447 cloudsail_15_316568002420000_29447_0",
+            "29239 cloudsail_20_331754501620001_29239_0",
+            "29239 cloudsail_20_331754501620002_29239_0",
+            "29239 cloudsail_20_331754501620003_29239_0",
             "29604 cloudsail_12_315603000440002_29604_0",
             "29598 cloudsail_12_317403003680001_29598_0",
             "29598 cloudsail_12_317403003680002_29598_0",
@@ -500,14 +512,7 @@
             "28572 cloudsail_29_331303000380007_28572_0",
             "28572 cloudsail_29_331303000380008_28572_0",
             "28572 cloudsail_29_331303000380009_28572_0",
-            "28572 cloudsail_29_3313030003800010_28572_0",
-            "29602 cloudsail_12_331754501620001_29602_0",
-            "29602 cloudsail_12_331754501620002_29602_0",
-            "29602 cloudsail_12_331754501620003_29602_0",
-            "29602 cloudsail_12_331754501620004_29602_0",
-            "29602 cloudsail_12_331754501620005_29602_0",
-            "29602 cloudsail_12_331754501620006_29602_0",
-            "29602 cloudsail_12_331754501620007_29602_0"
+            "28572 cloudsail_29_331303000380000_28572_0"
           ]
         }
       },
