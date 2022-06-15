@@ -240,7 +240,7 @@ function Next (func) {
     case 'doLzdzOpenCardTask_next':
       // next
       dealReturn('getShopOpenCardInfo', $.data)
-      if ($.shopactivityId) {
+      if ($.self.success) {
         $.next = 1 // 覆盖前面的 0
         $.callback = 'Func.request'
         takeRequest('bindWithVender')

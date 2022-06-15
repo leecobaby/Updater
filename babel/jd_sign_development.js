@@ -527,7 +527,7 @@ function doLzdzOpenCardTask () {
     // 循环完成重新设置 to,call
     $.next = 0 // 清空 Next.key
     $.call.pop()
-    $.message = `任务已全都完成~`
+    $.message = `入会任务已全都完成~`
     document.write(JSON.stringify($))
     return
   }
@@ -546,7 +546,7 @@ function doLzdzOpenCardTask () {
 
   // next
   dealReturn('getShopOpenCardInfo', $.data)
-  if ($.shopactivityId) {
+  if ($.self.success) {
     $.next = 1 // 覆盖前面的 0
     $.callback = 'Func.request'
     takeRequest('bindWithVender')
@@ -1167,7 +1167,16 @@ function takeRequest (type) {
       myRequest = getRequest(url, body, 'GET');
       break;
     case 'bindWithVender':
-      url = `https://api.m.jd.com/client.action?functionId=bindWithVender&appid=jd_shop_member&body={"venderId":"${$.venderId}","shopId":"${$.venderId}","bindByVerifyCodeFlag":1,"registerExtend":{},"writeChildFlag":0,"activityId":${$.shopactivityId},"channel":401}&client=H5&clientVersion=9.2.0`;
+      let obj = {
+        "venderId": `${$.venderId}`,
+        "shopId": `${$.venderId}`,
+        "bindByVerifyCodeFlag": 1,
+        "registerExtend": {},
+        "writeChildFlag": 0,
+        "channel": 401
+      };
+      $.shopactivityId && (obj.activityId = $.shopactivityId);
+      url = `https://api.m.jd.com/client.action?functionId=bindWithVender&appid=jd_shop_member&body=${encodeURIComponent(JSON.stringify(obj))}&client=H5&clientVersion=9.2.0`;
       myRequest = getRequest(url, body, 'GET');
       break;
     default:
@@ -1538,6 +1547,7 @@ function dealReturn (type, data) {
       break;
     case 'getShopOpenCardInfo':
       if (data.success && data.result) {
+        // shopactivityId 存在代表入会有礼
         $.shopactivityId = data.result.interestsRuleList && data.result.interestsRuleList[0]?.interestsInfo?.activityId || ''
         $.message = `开始入会：${data.result.shopMemberCardInfo?.venderCardName}`
       } else {
@@ -1546,8 +1556,10 @@ function dealReturn (type, data) {
       break;
     case 'bindWithVender':
       if (data.success && data.result) {
+        $.self.success = true
         $.message = `入会成功：获得${JSON.stringify(data.result.giftInfo?.giftList)}`
       } else {
+        $.self.success = false
         $.message = `发生错误：原因${JSON.stringify(data)}`
       }
       break;
