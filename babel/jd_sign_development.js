@@ -1169,14 +1169,13 @@ function takeRequest (type) {
     case 'bindWithVender':
       let obj = {
         "venderId": `${$.venderId}`,
-        "shopId": `${$.venderId}`,
         "bindByVerifyCodeFlag": 1,
         "registerExtend": {},
         "writeChildFlag": 0,
-        "channel": 401
+        "channel": 7008
       };
       $.shopactivityId && (obj.activityId = $.shopactivityId);
-      url = `https://api.m.jd.com/client.action?functionId=bindWithVender&appid=jd_shop_member&body=${encodeURIComponent(JSON.stringify(obj))}&client=H5&clientVersion=9.2.0`;
+      url = `https://api.m.jd.com/client.action?functionId=bindWithVender&appid=jd_shop_member&body=${encodeURIComponent(JSON.stringify(obj))}&client=H5&clientVersion=9.2.0&uuid=88888`;
       myRequest = getRequest(url, body, 'GET');
       break;
     default:
@@ -1549,17 +1548,20 @@ function dealReturn (type, data) {
       if (data.success && data.result) {
         // shopactivityId 存在代表入会有礼
         $.shopactivityId = data.result.interestsRuleList && data.result.interestsRuleList[0]?.interestsInfo?.activityId || ''
+        $.self.success = true
         $.message = `开始入会：${data.result.shopMemberCardInfo?.venderCardName}`
       } else {
+        $.self.success = false
         $.message = `发生错误：原因${JSON.stringify(data)}`
       }
       break;
     case 'bindWithVender':
       if (data.success && data.result) {
-        $.self.success = true
-        $.message = `入会成功：获得${JSON.stringify(data.result.giftInfo?.giftList)}`
+        $.message = data.message
+        for (let i of data.result.giftInfo?.giftList) {
+          $.message += `\n获得:${i.discountString}${i.prizeName},${i.secondLineDesc}`
+        }
       } else {
-        $.self.success = false
         $.message = `发生错误：原因${JSON.stringify(data)}`
       }
       break;
