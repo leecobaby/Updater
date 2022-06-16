@@ -186,16 +186,16 @@
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/9767f38956274f78ba853b53983937d2",
-    "notice": "⚠️ 令牌的任务异常为正常情况可以无视它或者取消勾选云端推送\n💡 已更新恢复兼容ipad任务的页面~",
+    "notice": "🔥 喵运会可以分红了！可以配合芭芭农场指令把水果种熟红包叠加使用哦~\n🔥 互助大厅已支持1元抽签互助，活动入口可通过活动大厅前往~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=天猫618喵运会自动任务&input=text&text=task",
     "image": "https://gitee.com/leecobaby/Updater/raw/master/image/tb_618cat.png",
     "url": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/tb.json",
     "tip": {
-      "hot": "🧧 6.15日18:30抽5元红包",
+      "hot": "🔥 加入云派对",
       "faq": "",
       "set": "点击查看自动化操作",
-      "team": "可随机助力",
+      "help": "已支持1元抽签互助",
       "other": "指令错误的可点击修复",
       "more": ""
     }
