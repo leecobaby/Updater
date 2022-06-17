@@ -1641,9 +1641,9 @@
     ]
   },
   "ele_dou": {
-    "version": "数据最后更新于:6.4.2",
+    "version": "数据最后更新于:6.17.1",
     "pv": {
-      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f57BIpL%3Fsm%3D4560b2",
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.ftJSz3R",
       "alipay": "alipays://platformapi/startapp?appId=2021001110676437&page=pages/my/index",
       "eleme": "eleme://userCenter"
     },
@@ -1687,13 +1687,19 @@
           "textEnd": "str1",
           "item": [
             "5246001 PAGEVIEW",
+            "6302001 PAGEVIEW",
             "6068001 PAGEVIEW",
+            "6190001 PAGEVIEW",
+            "6276001 PAGEVIEW",
+            "6236001 PAGEVIEW",
             "476001 PAGEVIEW",
             "4926001 PAGEVIEW",
             "5500002 PAGEVIEW",
             "3780001 PAGEVIEW",
             "5694001 PAGEVIEW",
-            "4988001 PAGEVIEW",
+            "4192001 SIMPLESIGNIN",
+            "4206001 SIMPLESIGNIN",
+            "6240001 SIMPLESIGNIN",
             "4098001 SIMPLESIGNIN",
             "5854002 SIMPLESIGNIN",
             "5458001 SIMPLESIGNIN",
@@ -1720,7 +1726,7 @@
           "activateUrl": "https://h5.ele.me/restapi/biz.svip_scene/svip/engine/xSupply?params[]=%7B%22tagCode%22:%22223166%22,%22extra%22:%7B%22missionDefId%22:占位符1,%22missionCollectionId%22:170,%22missionType%22:%22占位符2%22%7D%7D&bizCode=biz_code_main&longitude=118.639677&latitude=28.754548",
           "taskUrl": "https://tb.ele.me/wow/alsc/mod/156e0df0c951c793ab121f2e?missioncollectid=36&missionid=占位符1&taskfrom=a2ogi.15063444&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.3",
           "textEnd": "str1",
-          "item": ["3500001 SIMPLESIGNIN", "3030001 SIMPLESIGNIN"]
+          "item": ["3500001 SIMPLESIGNIN"]
         }
       }
     ]

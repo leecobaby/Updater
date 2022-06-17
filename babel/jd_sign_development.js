@@ -16,7 +16,7 @@
 
 
 // 到指令里运行需要注释掉
-// const $ = {}
+const $ = {}
 
 // $.inviteList = [];
 // $.pkInviteList = [];
@@ -332,6 +332,8 @@ function doLzdz68 () {
   $.activityId = "dzlhkke4cc7da358ff4fa18352ce88";
   $.authorCode = "0df549e339284e27bca13726bde214db";
   $.activityShopId = "1000003443";
+  $.algo = {}
+  $.algo.appId = '8adfb'
 
   switch ($.taskStep++) {
     case 1:
@@ -545,20 +547,50 @@ function doLzdzOpenCardTask () {
   return
 
   // next
+  $.callback = ''
   dealReturn('getShopOpenCardInfo', $.data)
   if ($.self.success) {
-    $.next = 1 // 覆盖前面的 0
-    $.callback = 'Func.request'
-    takeRequest('bindWithVender')
-    return
-
-    // next next
-    $.callback = ''
-    dealReturn('bindWithVender', $.data)
-    document.write(JSON.stringify($))
+    request_algo()
   } else {
     document.write(JSON.stringify($))
   }
+}
+
+// 获取算法
+function request_algo () {
+  $.call[$.call.length - 1] == 'request_algo' || $.call.push('request_algo')
+
+
+  $.algo.time = Date.now()
+  $.algo.timestamp = new Date($.algo.time).Format("yyyyMMddHHmmssSSS")
+  $.algo.fp = $.Utils.H5ST._getFp($.algo.time)
+  $.callback = 'Func.request'
+  takeRequest('request_algo')
+  return
+
+
+  // next next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('request_algo', $.data)
+  // 进入下一个函数无需输出
+  bindWithVender()
+}
+
+// 开卡
+function bindWithVender () {
+  $.call[$.call.length - 1] == 'bindWithVender' || $.call.push('bindWithVender')
+
+  $.callback = 'Func.request'
+  takeRequest('bindWithVender')
+  return
+
+
+  // next next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('bindWithVender', $.data)
+  document.write(JSON.stringify($))
 }
 
 /**
@@ -1166,16 +1198,34 @@ function takeRequest (type) {
       url = `https://api.m.jd.com/client.action?functionId=getShopOpenCardInfo&appid=jd_shop_member&body=%7B%22venderId%22%3A%22${$.venderId}%22%2C%22channel%22%3A401%7D&client=H5&clientVersion=9.2.0`;
       myRequest = getRequest(url, body, 'GET');
       break;
+    case 'request_algo':
+      body = {
+        'version': '3.0',
+        'fp': $.algo.fp,
+        'appId': $.algo.appId.toString(),
+        'timestamp': $.algo.time,
+        'platform': 'web',
+        'expandParams': ''
+      };
+      headers = {
+        'Host': 'cactus.jd.com',
+        'accept': 'application/json'
+      }
+      url = `https://cactus.jd.com/request_algo?g_ty=ajax`;
+      myRequest = getRequest(url, body, 'GET');
+      break;
     case 'bindWithVender':
-      let obj = {
+      body = {
         "venderId": `${$.venderId}`,
         "bindByVerifyCodeFlag": 1,
         "registerExtend": {},
         "writeChildFlag": 0,
         "channel": 7008
       };
-      $.shopactivityId && (obj.activityId = $.shopactivityId);
-      url = `https://api.m.jd.com/client.action?functionId=bindWithVender&appid=jd_shop_member&body=${encodeURIComponent(JSON.stringify(obj))}&client=H5&clientVersion=9.2.0&uuid=88888`;
+      $.shopactivityId && (body.activityId = $.shopactivityId);
+      $.h5st = $.Utils.H5ST._getH5st(body)
+      url = `https://api.m.jd.com/client.action?functionId=bindWithVender&appid=jd_shop_member&body=${encodeURIComponent(JSON.stringify(body))}&client=H5&clientVersion=9.2.0&uuid=88888&h5st=${$.h5st}`;
+      body = ''
       myRequest = getRequest(url, body, 'GET');
       break;
     default:
@@ -1565,6 +1615,15 @@ function dealReturn (type, data) {
         $.message = `发生错误：原因${JSON.stringify(data)}`
       }
       break;
+    case 'request_algo':
+      if (data.data && data.data.result) {
+        $.algo.tk = data.data.result.tk
+        $.algo.rd = data.data.result.algo.match(/rd='(.*)'/)[1]
+        $.algo.enc = data.data.result.algo.match(/algo\.(.*)\(/)[1]
+      } else {
+        $.message = `发生错误：原因${JSON.stringify(data)}`
+      }
+      break;
     default:
       console.log(`未判断的异常${type} `);
   }
@@ -1596,6 +1655,63 @@ function Utils () {
       min = Math.ceil(min);
       max = Math.floor(max);
       return Math.floor(Math.random() * (max - min)) + min;
+    },
+    H5ST: {
+      _getFp (t) {
+        let e = "0123456789";
+        let a = 13;
+        let i = '';
+        for (; a--;)
+          i += e[Math.random() * e.length | 0];
+        return (i + t).slice(0, 16)
+      },
+      // 此处需要 modules
+      _getH5st (body) {
+        let y = (function _getKey (tk, fp, ts, ai, algo) {
+          let str = `${tk}${fp}${ts}${ai}${$.algo.rd}`;
+          console.log(str);
+          return algo[$.algo.enc](str, tk)
+        })($.algo.tk, $.algo.fp, $.algo.timestamp, $.algo.appId, CryptoJS).toString(CryptoJS.enc.Hex)
+        console.log(y);
+        let s = ''
+        for (let key of Object.keys(body)) {
+          key === 'body'
+            ? (s += `${key}:${CryptoJS.SHA256(body[key]).toString(CryptoJS.enc.Hex)}&`)
+            : (s += `${key}:${body[key]}&`)
+        }
+        s = s.slice(0, -1)
+        console.log(s);
+        s = CryptoJS.HmacSHA256(s, y).toString(CryptoJS.enc.Hex)
+        return encodeURIComponent(`${$.algo.timestamp};${$.algo.fp};${$.algo.appId.toString()};${$.algo.tk};${s};3.0;${$.algo.time.toString()}`)
+      }
+
     }
   }
 }
+
+Date.prototype.Format = function (fmt) {
+  var e,
+    n = this,
+    d = fmt,
+    l = {
+      "M+": n.getMonth() + 1,
+      "d+": n.getDate(),
+      "D+": n.getDate(),
+      "h+": n.getHours(),
+      "H+": n.getHours(),
+      "m+": n.getMinutes(),
+      "s+": n.getSeconds(),
+      "w+": n.getDay(),
+      "q+": Math.floor((n.getMonth() + 3) / 3),
+      "S+": n.getMilliseconds()
+    };
+  /(y+)/i.test(d) && (d = d.replace(RegExp.$1, "".concat(n.getFullYear()).substr(4 - RegExp.$1.length)));
+  for (var k in l) {
+    if (new RegExp("(".concat(k, ")")).test(d)) {
+      var t, a = "S+" === k ? "000" : "00";
+      d = d.replace(RegExp.$1, 1 == RegExp.$1.length ? l[k] : ("".concat(a) + l[k]).substr("".concat(l[k]).length))
+    }
+  }
+  return d;
+}
+
