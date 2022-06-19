@@ -34,4 +34,4 @@ blacklist = _.slice(blacklist, 0, 10)
 
 const task = { list, blacklist }
 
-document.write(task)
+document.write(JSON.stringify(task))
