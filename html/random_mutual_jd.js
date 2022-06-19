@@ -13,7 +13,7 @@ const repeatData = _.pickBy(statisticData, v => v.length > 1)
 const uniqueData = _.pickBy(statisticData, v => v.length == 1)
 // 随机选取出 5 个助力 url - 考虑到助力已满情况和无效链接的情况
 const sampleData = _.sampleSize(uniqueData, 5)
-const list = sampleData.map(v => v.text)
+const list = sampleData.map(v => v[0].text)
 
 // 屏蔽名单
 for (const key in repeatData) {
