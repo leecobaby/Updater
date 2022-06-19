@@ -658,7 +658,7 @@
     }
   },
   "JD_fruit": {
-    "version": "1.6",
+    "version": "1.7",
     "update_log": "- 重构 指令云端架构，逻辑执行器更精简快速，减少网络压力\n- 重构 指令架构，弃用部分无意义功能",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
@@ -666,8 +666,8 @@
     },
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/6edb30b5eb014e10b5414f1926b8bae5",
-    "notice": "任务功能将会逐步完善，通过云端推送",
+    "update": "https://www.icloud.com/shortcuts/4b52167d301c46f2bbfd3a21b5235c2c",
+    "notice": "更新指令后的第一次运行最好进行指令修复解决错误\n任务功能将会逐步完善，通过云端推送",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-东东农场&input=text&text=task",
     "image": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/image/icon-jd2.jpeg",
