@@ -31,12 +31,7 @@ $.Utils = Utils()
  */
 function init () {
   // 处理助力码
-  if ($.inviteList) {
-    $.inviteList = Array.isArray($.inviteList) ? $.inviteList : [$.inviteList]
-    $.inviteList = $.inviteList.filter(v => v !== '')
-  } else {
-    $.inviteList = []
-  }
+  $.helpCodeList1 = $.Utils.handleShortcutHelpCode($.helpCodeObj['活动1助力码'] || [])
 
   // 任务流程初始化 或 次数循环任务初始化
   $.taskStep = 1
@@ -142,7 +137,7 @@ function help () {
   $.to = 'Func.logicHandler'
   $.call = ['help']
 
-  $.inviteId = $.inviteList.shift()
+  $.inviteId = $.helpCodeList1.shift()
   if (!$.setHelp || !$.inviteId || $.selfHelpMax) {
     !$.setHelp && ($.message = '你已关闭助力，就不做助力任务拉~')
     // 循环完成重新设置 to,call
@@ -249,7 +244,7 @@ function browseAdTaskForFarm () {
   $.callback = ''
   dealReturn('browseAdTaskForFarm', $.data)
   if ($.browseResult.code === '0') {
-    $.data = {}, $.browseResult = {} // 防止此处有换行符出错
+    $.data = {}, $.browseResult = {} // 防止此处有标签符号
     $.wait = 6
     $.next = 1 // 覆盖前面的 0
     $.taskType = 1 // 领奖励
@@ -897,7 +892,7 @@ function dealReturn (type, data) {
         if ($.farmInfo.farmUserPro) {
           $.self.overageEnergy = $.farmInfo.farmUserPro.totalEnergy - 100
           $.self.count = parseInt($.self.overageEnergy / 10)
-          $.self.show && ($.message = `【你的好友互助码】:\n${$.farmInfo?.farmUserPro?.shareCode || '助力已满，获取助力码失败'}\n【已兑换水果】${$.farmInfo.farmUserPro?.winTimes}次`)
+          $.self.show && ($.message = `【你的好友互助码】: (活动1助力码)\n1[指令专用]${$.farmInfo?.farmUserPro?.shareCode || '助力已满，获取助力码失败'}\n【已兑换水果】${$.farmInfo.farmUserPro?.winTimes}次`)
         } else {
           $.error = `【数据异常】请手动登录京东app查看是否已选择了水果种植，Cookie是否正确且未过期 ，返回的数据: ${JSON.stringify($.farmInfo)} `
         }
@@ -1063,16 +1058,10 @@ function dealReturn (type, data) {
       break
     case 'getHelpCode':
       $.data = {}
-      // 选出有 助力码 的元素
-      const filterData = _.filter(data.items, v => v.text.match(/^\w{20,}$/g))
-      // 过滤重复的 user id
-      const uniqData = _.uniqBy(filterData, v => v.fromUser)
-      // 随机选取出 3 个助力码 - 考虑到助力已满情况和无效码的情况
-      const sampleData = _.sampleSize(uniqData, 3)
-      const list = sampleData.map(v => v.text)
       // 将助力池的助力码添加进助力列表
-      $.inviteList = $.inviteList.concat(list)
-      $.message = `已从云端助力池获取到3条助力码追加到助力列表。助力列表预览：${JSON.stringify($.inviteList)}`
+      $.helpCodeList1 = $.helpCodeList1.concat($.Utils.getRanHelpCode(data, 3))
+      $.helpCodeList1 = $.Utils.handleHelpCode($.helpCodeList1)
+      $.message = `已从云端助力池获取到3条助力码追加到助力列表。助力列表预览：${JSON.stringify($.helpCodeList1)}`
       $.modules = 0 // 取消模块
       break;
     default:
@@ -1092,6 +1081,30 @@ function Utils () {
       for (let i = 0; i < e; i++)
         n += t.charAt(Math.floor(Math.random() * a));
       return n
+    },
+    formatToArray (p = []) {
+      return Array.isArray(p) ? p : [p]
+    },
+    filterArray (arr = []) {
+      return arr.filter(v => !!v)
+    },
+    handleShortcutHelpCode (p) {
+      return this.filterArray(this.formatToArray(p))
+    },
+    handleHelpCode (arr) {
+      return arr.map(v => String(v).replace(/^\d\[指令专用\]/, ''))
+    },
+    getRanHelpCode (data, time) {
+      // 选出有 助力码 的元素
+      const filterData = _.filter(data.items, v => v.text.match(/^\w{20,}$/g))
+      // 统计所有用户的消息情况
+      const statisticData = _.groupBy(filterData, v => v.fromUser)
+      // 合规的用户数据
+      const uniqueData = _.pickBy(statisticData, v => v.length <= time)
+      // 随机选取出 5 个助力 url - 考虑到助力已满情况和无效链接的情况
+      const sampleData = _.sampleSize(uniqueData, 5)
+      const list = sampleData.map(v => v[0].text)
+      return list
     }
   }
 }
