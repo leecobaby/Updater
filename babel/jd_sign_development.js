@@ -321,6 +321,147 @@ function doBeanTask () {
 }
 
 /**
+ * 做领京豆页任务
+ */
+function doPlantBean () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler'
+  $.call = ['doPlantBean']
+
+  switch ($.taskStep++) {
+    case 1:
+      // 获取种豆得豆信息
+      getPlantBeanInfo()
+      break;
+    case 2:
+      // 定时领取营养液
+      receiveNutrients()
+      break;
+    case 3:
+      // 做主任务
+      doPlantBeanTask()
+      break;
+    case 4:
+      // 获取升级京豆任务列表
+      getBeanTaskList()
+      break;
+    case 5:
+      // 做列表任务
+      doBeanTask()
+      break;
+    case 6:
+      // 获取升级京豆任务列表
+      getBeanTaskList()
+      break;
+    case 7:
+      // 做列表任务
+      doBeanTask()
+      break;
+    case 8:
+      // 获取升级京豆任务列表
+      getBeanTaskList()
+      break;
+    case 9:
+      // 做列表任务
+      doBeanTask()
+      break;
+    case 10:
+      // 获取升级京豆任务列表
+      getBeanTaskList()
+      break;
+    case 11:
+      // 做列表任务
+      doBeanTask()
+      break;
+    default:
+      $.to = ''; $.call.pop(); $.taskStep = 1; $.self.data = undefined
+      document.write(JSON.stringify($))
+      break;
+  }
+}
+
+// 获取种豆得豆信息
+function getPlantBeanInfo () {
+  $.call[$.call.length - 1] == 'getPlantBeanInfo' || $.call.push('getPlantBeanInfo')
+
+
+  $.callback = 'Func.request'
+  takeRequest('getPlantBeanInfo');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('getPlantBeanInfo', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 定时领取营养液
+function receiveNutrients () {
+  $.call[$.call.length - 1] == 'receiveNutrients' || $.call.push('receiveNutrients')
+
+
+  $.callback = 'Func.request'
+  takeRequest('receiveNutrients');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('receiveNutrients', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 做主任务
+function doPlantBeanTask () {
+  $.call[$.call.length - 1] == 'doPlantBeanTask' || $.call.push('doPlantBeanTask')
+
+  // 利用队列取代循环
+  $.oneTask = $.taskList.shift()
+  if (!$.oneTask) {
+    // 循环完成重新设置 to,call
+    $.next = 0 // 清空 Next.key
+    $.call.pop()
+    $.message = `任务已全都完成~`
+    document.write(JSON.stringify($))
+    return
+  }
+
+  // 做过的任务则跳过重新执行
+  if ($.oneTask?.isFinished == 1) {
+    $.message = `${item.taskName} 任务已完成`
+    document.write(JSON.stringify($))
+    return
+  }
+
+  if ([0].includes($.oneTask.taskType)) {
+
+    oneActivityInfo1()
+
+  } else {
+    oneActivityInfo()
+  }
+
+  !document.body.innerText && document.write(JSON.stringify($))
+}
+
+// 做单任务
+function oneActivityInfo () {
+  $.call[$.call.length - 1] == 'oneActivityInfo' || $.call.push('oneActivityInfo')
+
+  $.callback = 'Func.request'
+  takeRequest('oneActivityInfo');
+  return
+
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('oneActivityInfo', $.data)
+  document.write(JSON.stringify($))
+}
+
+/**
  * 做LZDZ任务 - 全利以赴 谁是囤货王
  * （暂时不知道什么玩意儿）
  */
@@ -1228,6 +1369,18 @@ function takeRequest (type) {
       body = ''
       myRequest = getRequest(url, body, 'GET');
       break;
+    case 'getPlantBeanInfo':
+      url = `https://api.m.jd.com/client.action?functionId=plantBeanIndex&body=${encodeURIComponent(JSON.stringify({}))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
+      myRequest = getRequest(url, body);
+      break;
+    case 'receiveNutrients':
+      url = `https://api.m.jd.com/client.action?functionId=receiveNutrients&body=${encodeURIComponent(JSON.stringify({ "roundId": $.currentRoundId, "monitor_refer": "plant_receiveNutrients" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
+      myRequest = getRequest(url, body);
+      break;
+    case 'oneActivityInfo':
+      url = `https://api.m.jd.com/client.action?functionId=receiveNutrientsTask&body=${encodeURIComponent(JSON.stringify({ "awardType": $.oneTask.taskType, "monitor_refer": "receiveNutrientsTask" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
+      myRequest = getRequest(url, body, 'GET');
+      break;
     default:
       $.error = `takeRequest 错误${type}`
       console.log(`错误${type}`);
@@ -1624,6 +1777,29 @@ function dealReturn (type, data) {
         $.message = `发生错误：原因${JSON.stringify(data)}`
       }
       break;
+    case 'getPlantBeanInfo':
+      if (data.errorCode == 'PB101') {
+        $.self.success = false
+        $.message = '活动太火爆了，还是去买买买吧！'
+        return
+      }
+      if (data && data.code === '0' && data.data) {
+        $.helpCode = getParam(data.data.jwordShareInfo?.shareUrl, 'plantUuid')
+        $.roundList = data.data.roundList;
+        $.taskList = data.data.taskList;
+        $.currentRoundId = roundList[num].roundId;//本期的roundId
+        $.lastRoundId = roundList[num - 1].roundId;//上期的roundId
+        $.awardState = roundList[num - 1].awardState;
+        $.message = `你的种豆得豆助力码：\n${$.helpCode}\n`
+        $.message += `【上期时间】${roundList[num - 1].dateDesc.replace('上期 ', '')}\n`;
+        $.message += `【上期成长值】${roundList[num - 1].growth}`;
+      }
+      break;
+    case 'receiveNutrients':
+      if (data) {
+        $.message = JSON.stringify(data)
+      }
+      break;
     default:
       console.log(`未判断的异常${type} `);
   }
@@ -1655,6 +1831,12 @@ function Utils () {
       min = Math.ceil(min);
       max = Math.floor(max);
       return Math.floor(Math.random() * (max - min)) + min;
+    },
+    getParam (url, key) {
+      const reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)", "i")
+      const r = url.match(reg)
+      if (r != null) return decodeURIComponent(r[2]);
+      return null;
     },
     H5ST: {
       _getFp (t) {
