@@ -1197,7 +1197,7 @@
     ]
   },
   "FarmSingle": {
-    "version": "数据最后更新于:6.12.1",
+    "version": "数据最后更新于:6.20.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.ftJSz3R",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.ftJSz3R",
@@ -1275,6 +1275,10 @@
           "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=978&sourceType=other&hd_from_id=100085&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
+            "25724 cloudsail_105_125400501040001_25724_0",
+            "8479 other_553_82028_8479_0",
+            "12359 other_553_911025_12359_0",
+            "25709 cloudsail_105_-540022504_25709_0",
             "9046 other_0_0_9046_0",
             "8015 other_213_0_8015_0",
             "8016 other_0_105008_8016_0",
@@ -1315,7 +1319,7 @@
             "16847 other_235_424002_16847_0",
             "18501 other_449_635005_18501_0",
             "8273 other_449_62009_8273_0",
-            "12768 other_449_62009_8273_1",
+            "8273 other_449_62009_8273_1",
             "12768 other_0_173001_12768_0",
             "7936 cloudsail_462_3901378244_7936_0",
             "8275 other_468_0_8275_0"
