@@ -260,6 +260,25 @@ function Next (func) {
       dealReturn('bindWithVender', $.data)
       document.write(JSON.stringify($))
       break;
+    case 'getPlantBeanInfo_next':
+      // next
+      $.callback = ''
+      $.call.pop()
+      dealReturn('getPlantBeanInfo', $.data)
+      document.write(JSON.stringify($))
+      break;
+    case 'receiveNutrients_next':
+      // next
+      $.callback = ''
+      $.call.pop()
+      dealReturn('receiveNutrients', $.data)
+      document.write(JSON.stringify($))
+    case 'oneActivityInfo_next':
+      // next
+      $.callback = ''
+      $.call.pop()
+      dealReturn('oneActivityInfo', $.data)
+      document.write(JSON.stringify($))
     default:
       // next
       $.callback = ''
