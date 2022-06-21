@@ -16,7 +16,7 @@
 
 
 // 到指令里运行需要注释掉
-// const $ = {}
+const $ = {}
 
 // $.inviteList = [];
 // $.pkInviteList = [];
@@ -334,8 +334,13 @@ function doPlantBean () {
       getPlantBeanInfo()
       break;
     case 2:
-      // 定时领取营养液
-      receiveNutrients()
+      if ($.self.success) {
+        receiveNutrients()
+      } else {
+        $.taskStep = -1
+        $.message = '无法获取到活动信息，结束活动任务'
+        document.write(JSON.stringify($))
+      }
       break;
     case 3:
       // 做主任务
@@ -397,16 +402,17 @@ function doPlantBeanTask () {
 
   // 做过的任务则跳过重新执行
   if ($.oneTask?.isFinished == 1) {
-    $.message = `${item.taskName} 任务已完成`
+    $.message = `${oneTask.taskName} 任务已完成`
     document.write(JSON.stringify($))
     return
   }
 
-  if ([0].includes($.oneTask.taskType)) {
+  // 暂时过滤掉这些任务不做
+  if ([10, 3, 5].includes($.oneTask.taskType)) {
 
-    oneActivityInfo1()
+    // oneActivityInfo1()
 
-  } else {
+  } else if ($.oneTask.dailyTimes == 1) {
     oneActivityInfo()
   }
 
@@ -1752,15 +1758,24 @@ function dealReturn (type, data) {
         return
       }
       if (data && data.code === '0' && data.data) {
-        $.helpCode = getParam(data.data.jwordShareInfo?.shareUrl, 'plantUuid')
+        let num
+        for (let i = 0; i < data.data.roundList?.length; i++) {
+          if (data.data.roundList[i].roundState === "2") {
+            num = i
+            break
+          }
+        }
+
+        $.self.success = true
+        $.helpCode = $.Utils.getParam(data.data.jwordShareInfo?.shareUrl, 'plantUuid')
         $.roundList = data.data.roundList;
         $.taskList = data.data.taskList;
-        $.currentRoundId = roundList[num].roundId;//本期的roundId
-        $.lastRoundId = roundList[num - 1].roundId;//上期的roundId
-        $.awardState = roundList[num - 1].awardState;
+        $.currentRoundId = $.roundList[num].roundId;//本期的roundId
+        $.lastRoundId = $.roundList[num - 1].roundId;//上期的roundId
+        $.awardState = $.roundList[num - 1].awardState;
         $.message = `你的种豆得豆助力码：\n${$.helpCode}\n`
-        $.message += `【上期时间】${roundList[num - 1].dateDesc.replace('上期 ', '')}\n`;
-        $.message += `【上期成长值】${roundList[num - 1].growth}`;
+        $.message += `【上期时间】${$.roundList[num - 1].dateDesc.replace('上期 ', '')}\n`;
+        $.message += `【上期成长值】${$.roundList[num - 1].growth}`;
       }
       break;
     case 'receiveNutrients':
@@ -1768,7 +1783,7 @@ function dealReturn (type, data) {
         $.message = JSON.stringify(data)
       }
       break;
-    case 'receiveNutrients':
+    case 'oneActivityInfo':
       $.message = JSON.stringify(data)
       break;
     default:
