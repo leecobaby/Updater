@@ -1774,7 +1774,7 @@ function dealReturn (type, data) {
         $.lastRoundId = $.roundList[num - 1].roundId;//上期的roundId
         $.awardState = $.roundList[num - 1].awardState;
         $.message = `你的种豆得豆助力码：\n${$.helpCode}\n`
-        $.message += `【上期时间】${$.roundList[num - 1].dateDesc.replace('上期 ', '')}\n`;
+        $.message += `【上期时间】${$.roundList[num - 1].dateDesc}\n`;
         $.message += `【上期成长值】${$.roundList[num - 1].growth}`;
       }
       break;
