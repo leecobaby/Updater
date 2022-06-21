@@ -402,7 +402,7 @@ function doPlantBeanTask () {
 
   // 做过的任务则跳过重新执行
   if ($.oneTask.isFinished == 1) {
-    $.message = `${oneTask.taskName} 任务已完成`
+    $.message = `${oneTask.taskName} 任务已完成，跳过继续下一个任务~`
     document.write(JSON.stringify($))
     return
   }
@@ -1352,7 +1352,7 @@ function takeRequest (type) {
       myRequest = getRequest(url, body);
       break;
     case 'oneActivityInfo':
-      url = `https://api.m.jd.com/client.action?functionId=receiveNutrientsTask&body=${encodeURIComponent(JSON.stringify({ "awardType": $.oneTask.taskType, "monitor_refer": "receiveNutrientsTask", "monitor_source": "plant_app_plant_index", "version": "9.2.4.1" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
+      url = `https://api.m.jd.com/client.action?functionId=receiveNutrientsTask&body=${encodeURIComponent(JSON.stringify({ "awardType": $.oneTask.taskType + '', "monitor_refer": "receiveNutrientsTask", "monitor_source": "plant_app_plant_index", "version": "9.2.4.1" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
       myRequest = getRequest(url, body, 'GET');
       break;
     default:
@@ -1786,7 +1786,11 @@ function dealReturn (type, data) {
       }
       break;
     case 'oneActivityInfo':
-      $.message = JSON.stringify(data)
+      if (data.code == 0 && data.data) {
+        $.message = `任务完成：获得 ${JSON.stringify(data.data.nutrNum)} 营养液`
+      } else {
+        $.message = '任务完成：原因' + JSON.stringify(data)
+      }
       break;
     default:
       console.log(`未判断的异常${type} `);
