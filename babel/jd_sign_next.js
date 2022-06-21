@@ -273,12 +273,14 @@ function Next (func) {
       $.call.pop()
       dealReturn('receiveNutrients', $.data)
       document.write(JSON.stringify($))
+      break;
     case 'oneActivityInfo_next':
       // next
       $.callback = ''
       $.call.pop()
       dealReturn('oneActivityInfo', $.data)
       document.write(JSON.stringify($))
+      break;
     default:
       // next
       $.callback = ''
