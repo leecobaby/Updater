@@ -1344,7 +1344,7 @@ function takeRequest (type) {
       myRequest = getRequest(url, body, 'GET');
       break;
     case 'getPlantBeanInfo':
-      url = `https://api.m.jd.com/client.action?functionId=plantBeanIndex&body=${encodeURIComponent(JSON.stringify({}))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
+      url = `https://api.m.jd.com/client.action?functionId=plantBeanIndex&body=${encodeURIComponent(JSON.stringify({ "monitor_source": "plant_app_plant_index", "monitor_refer": "" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
       myRequest = getRequest(url, body);
       break;
     case 'receiveNutrients':
