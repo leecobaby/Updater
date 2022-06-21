@@ -626,8 +626,18 @@
     }
 
     $.self = {}
+    $.call = []
     dealReturn('getPlantBeanInfo', $.data)
-    document.body.outerHTML = JSON.stringify($)
+    if ($.self.success) {
+      console.log(1);
+      receiveNutrients()
+    } else {
+      $.taskStep = -1
+      $.message = '无法获取到活动信息，结束活动任务'
+      document.body.outerHTML = JSON.stringify($)
+      // document.write(JSON.stringify($))
+    }
+    // document.body.outerHTML = JSON.stringify($)
     // console.log(document.body.outerHTML);
 
   </script>

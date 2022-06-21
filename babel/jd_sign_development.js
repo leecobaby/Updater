@@ -1781,6 +1781,8 @@ function dealReturn (type, data) {
     case 'receiveNutrients':
       if (data) {
         $.message = JSON.stringify(data)
+      } else {
+        $.message = JSON.stringify(data)
       }
       break;
     case 'oneActivityInfo':
