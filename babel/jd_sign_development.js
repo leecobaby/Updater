@@ -1344,7 +1344,7 @@ function takeRequest (type) {
       myRequest = getRequest(url, body, 'GET');
       break;
     case 'getPlantBeanInfo':
-      url = `https://api.m.jd.com/client.action?functionId=plantBeanIndex&body=${encodeURIComponent(JSON.stringify({ "monitor_source": "plant_app_plant_index", "monitor_refer": "" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
+      url = `https://api.m.jd.com/client.action?functionId=plantBeanIndex&body=${encodeURIComponent(JSON.stringify({ "monitor_source": "plant_app_plant_index", "monitor_refer": "", "version": "9.2.4.1" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
       myRequest = getRequest(url, body);
       break;
     case 'receiveNutrients':
@@ -1780,9 +1780,9 @@ function dealReturn (type, data) {
       break;
     case 'receiveNutrients':
       if (data.nutrients) {
-        $.message = `收取成功：获得 ${JSON.stringify(data)} 营养液`
+        $.message = `定时收取：获得 ${JSON.stringify(data)} 营养液`
       } else {
-        $.message = `收取失败：原因` + JSON.stringify(data && data.errorMessage)
+        $.message = `收取失败：原因` + JSON.stringify(data.errorMessage || data)
       }
       break;
     case 'oneActivityInfo':
