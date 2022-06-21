@@ -401,7 +401,7 @@ function doPlantBeanTask () {
   }
 
   // 做过的任务则跳过重新执行
-  if ($.oneTask?.isFinished == 1) {
+  if ($.oneTask.isFinished == 1) {
     $.message = `${oneTask.taskName} 任务已完成`
     document.write(JSON.stringify($))
     return
@@ -1779,10 +1779,10 @@ function dealReturn (type, data) {
       }
       break;
     case 'receiveNutrients':
-      if (data) {
-        $.message = JSON.stringify(data)
+      if (data.nutrients) {
+        $.message = `收取成功：获得 ${JSON.stringify(data)} 营养液`
       } else {
-        $.message = JSON.stringify(data)
+        $.message = `收取失败：原因` + JSON.stringify(data && data.errorMessage)
       }
       break;
     case 'oneActivityInfo':
