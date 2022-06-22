@@ -362,6 +362,9 @@ function doPlantBean () {
       doPlantBeanTask()
       break;
     case 7:
+      getPlantBeanInfo()
+      break;
+    case 8:
       // 收取营养液
       $.message = '开始收取营养液'
       doPlantBeanCollect()
@@ -2073,7 +2076,7 @@ function dealReturn (type, data) {
       break;
     case 'doPlantBeanCollect':
       if (data.code == 0 && data.data) {
-        $.message = '收取成功：获得' + JSON.stringify(data)
+        $.message = `收取成功：成长值为 ${data.data.growth}`
       } else {
         $.message = '发生错误：原因' + JSON.stringify(data)
       }

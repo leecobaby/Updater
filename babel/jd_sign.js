@@ -9,7 +9,13 @@
 // 618 种草街 
 // https://prodev.m.jd.com/mall/active/U18CGRp9tTnAkH1HfHnhBEWrfrr/index.html
 
+// 种草心愿
+// https://3.cn/1-wZ9n5B?_ts=1655875958023&utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share&utm_user=plusmember&gx=RnFmxzMPaDeMndRP7FzU8PGSz1VWvURZLA
+
 // 618 特物Z
+
+// 618 lzdz
+// https://lzdz1-isv.isvjcloud.com/dingzhi/customized/common/activity/${$.authorNum}?activityId=${$.activityId}&shareUuid=${encodeURIComponent($.authorCode)}&adsource=SD&shareuserid4minipg=${encodeURIComponent($.secretPin)}&shopid=undefined&lng=00.000000&lat=00.000000&sid=&un_area=
 
 
 // 到指令里运行需要注释掉
@@ -61,6 +67,9 @@ function init () {
 
   // 自变量
   $.self = {}
+
+  // 是否获取头部
+  $.HEAD = false
 
   $.message = `本指令作为自动化方案开源分享，并不保证他带来的任何副作用，任何副作用请自行负责，如不同意请停止使用！`
   document.write(JSON.stringify($))
@@ -312,6 +321,581 @@ function doBeanTask () {
     document.write(JSON.stringify($))
   }
 
+}
+
+/**
+ * 做种豆得豆任务
+ */
+function doPlantBean () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler'
+  $.call = ['doPlantBean']
+
+  switch ($.taskStep++) {
+    case 1:
+      // 获取种豆得豆信息
+      getPlantBeanInfo()
+      break;
+    case 2:
+      if ($.self.success) {
+        // 获取店铺列表
+        getPlantBeanShopTaskList()
+      } else {
+        $.taskStep = -1
+        $.message = '无法获取到活动信息，结束活动任务'
+        document.write(JSON.stringify($))
+      }
+      break;
+    case 3:
+      // 获取商品列表
+      getPlantBeanProductTaskList()
+      break;
+    case 4:
+      // 获取频道列表
+      getPlantBeanChannelTaskList()
+      break;
+    case 5:
+      receiveNutrients()
+      break;
+    case 6:
+      // 做主任务
+      doPlantBeanTask()
+      break;
+    case 7:
+      getPlantBeanInfo()
+      break;
+    case 8:
+      // 收取营养液
+      $.message = '开始收取营养液'
+      doPlantBeanCollect()
+      break;
+    default:
+      $.to = ''; $.call.pop(); $.taskStep = 1; $.self.data = undefined
+      document.write(JSON.stringify($))
+      break;
+  }
+}
+
+// 获取种豆得豆信息
+function getPlantBeanInfo () {
+  $.call[$.call.length - 1] == 'getPlantBeanInfo' || $.call.push('getPlantBeanInfo')
+
+
+  $.callback = 'Func.request'
+  takeRequest('getPlantBeanInfo');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('getPlantBeanInfo', $.data)
+  document.write(JSON.stringify($))
+}
+// 获取店铺列表
+function getPlantBeanShopTaskList () {
+  $.call[$.call.length - 1] == 'getPlantBeanShopTaskList' || $.call.push('getPlantBeanShopTaskList')
+
+
+  $.callback = 'Func.request'
+  takeRequest('getPlantBeanShopTaskList');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('getPlantBeanShopTaskList', $.data)
+  document.write(JSON.stringify($))
+}
+// 获取商品列表
+function getPlantBeanProductTaskList () {
+  $.call[$.call.length - 1] == 'getPlantBeanProductTaskList' || $.call.push('getPlantBeanProductTaskList')
+
+
+  $.callback = 'Func.request'
+  takeRequest('getPlantBeanProductTaskList');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('getPlantBeanProductTaskList', $.data)
+  document.write(JSON.stringify($))
+}
+// 获取频道列表
+function getPlantBeanChannelTaskList () {
+  $.call[$.call.length - 1] == 'getPlantBeanChannelTaskList' || $.call.push('getPlantBeanChannelTaskList')
+
+
+  $.callback = 'Func.request'
+  takeRequest('getPlantBeanChannelTaskList');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('getPlantBeanChannelTaskList', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 定时领取营养液
+function receiveNutrients () {
+  $.call[$.call.length - 1] == 'receiveNutrients' || $.call.push('receiveNutrients')
+
+
+  $.callback = 'Func.request'
+  takeRequest('receiveNutrients');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('receiveNutrients', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 做主任务
+function doPlantBeanTask () {
+  $.call[$.call.length - 1] == 'doPlantBeanTask' || $.call.push('doPlantBeanTask')
+
+  // 利用队列取代循环
+  $.oneTask = $.taskList.shift()
+  if (!$.oneTask) {
+    // 循环完成重新设置 to,call
+    $.next = 0 // 清空 Next.key
+    $.call.pop()
+    $.message = `任务已全都完成~`
+    document.write(JSON.stringify($))
+    return
+  }
+
+  // 做过的任务则跳过重新执行
+  if ($.oneTask.isFinished == 1) {
+    $.message = `${$.oneTask.taskName} 任务已完成，跳过继续下一个任务~`
+    document.write(JSON.stringify($))
+    return
+  }
+
+  // 暂时过滤掉这些任务不做
+  if ($.oneTask.taskType === 3) {
+    $.self.count = $.oneTask.totalNum - $.oneTask.gainedNum;
+    $.message = `开始做 ${$.oneTask.taskName} 任务`
+    //浏览店铺
+    doPlantBeanBrowseTask()
+  } else if ($.oneTask.taskType === 5) {
+    $.self.count = $.oneTask.totalNum - $.oneTask.gainedNum;
+    $.message = `开始做 ${$.oneTask.taskName} 任务`
+    //挑选商品
+    doPlantBeanProductTask()
+  } else if ($.oneTask.taskType === 10) {
+    $.self.count = $.oneTask.totalNum - $.oneTask.gainedNum;
+    $.message = `开始做 ${$.oneTask.taskName} 任务`
+    //关注频道
+    doPlantBeanChannelTask()
+  } else if ($.oneTask.dailyTimes == 1) {
+    $.message = `开始做 ${$.oneTask.taskName} 任务`
+    doPlantBeanOhterTask()
+  }
+
+  !document.body.innerText && document.write(JSON.stringify($))
+}
+
+// 做浏览任务
+function doPlantBeanBrowseTask () {
+  $.call[$.call.length - 1] == 'doPlantBeanBrowseTask' || $.call.push('doPlantBeanBrowseTask')
+
+  // 利用队列取代循环
+  $.oneShop = $.shopList.shift()
+  if (!$.oneShop || $.self.count <= 0) {
+    $.message = `${$.oneTask.taskName}任务已做完~`
+    $.call.pop()
+    document.write(JSON.stringify($))
+    return
+  }
+
+  if ($.oneShop.taskState !== '2') {
+    document.write(JSON.stringify($))
+    return
+  }
+
+  $.callback = 'Func.request'
+  takeRequest('doPlantBeanBrowseTask');
+  return
+
+
+  // next
+  $.callback = ''
+  dealReturn('doPlantBeanBrowseTask', $.data)
+  document.write(JSON.stringify($))
+}
+
+//挑选商品
+function doPlantBeanProductTask () {
+  $.call[$.call.length - 1] == 'doPlantBeanProductTask' || $.call.push('doPlantBeanProductTask')
+
+  // 利用队列取代循环
+  $.oneProduct = $.productList.shift()
+  if (!$.oneProduct || $.self.count <= 0) {
+    $.message = `${$.oneTask.taskName}任务已做完~`
+    $.call.pop()
+    document.write(JSON.stringify($))
+    return
+  }
+
+  if ($.oneProduct[0].taskState !== '2') {
+    document.write(JSON.stringify($))
+    return
+  }
+
+  $.callback = 'Func.request'
+  takeRequest('doPlantBeanProductTask');
+  return
+
+
+  // next
+  $.callback = ''
+  dealReturn('doPlantBeanProductTask', $.data)
+  document.write(JSON.stringify($))
+}
+
+//关注频道
+function doPlantBeanChannelTask () {
+  $.call[$.call.length - 1] == 'doPlantBeanChannelTask' || $.call.push('doPlantBeanChannelTask')
+
+  // 利用队列取代循环
+  $.oneChannel = $.channelList.shift()
+  if (!$.oneChannel || $.self.count <= 0) {
+    $.message = `${$.oneTask.taskName}任务已做完~`
+    $.call.pop()
+    document.write(JSON.stringify($))
+    return
+  }
+
+  if ($.oneChannel.taskState !== '2') {
+    document.write(JSON.stringify($))
+    return
+  }
+
+  $.callback = 'Func.request'
+  takeRequest('doPlantBeanChannelTask');
+  return
+
+
+  // next
+  $.callback = ''
+  dealReturn('doPlantBeanChannelTask', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 做其他任务
+function doPlantBeanOhterTask () {
+  $.call[$.call.length - 1] == 'doPlantBeanOhterTask' || $.call.push('doPlantBeanOhterTask')
+
+  $.callback = 'Func.request'
+  takeRequest('doPlantBeanOhterTask');
+  return
+
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('doPlantBeanOhterTask', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 收取营养液
+function doPlantBeanCollect () {
+  $.call[$.call.length - 1] == 'doPlantBeanCollect' || $.call.push('doPlantBeanCollect')
+
+  // 利用队列取代循环
+  $.oneTask = $.collectList.shift()
+  if (!$.oneTask) {
+    $.message = `营养液已收取完~`
+    $.call.pop()
+    document.write(JSON.stringify($))
+    return
+  }
+
+  $.callback = 'Func.request'
+  takeRequest('doPlantBeanCollect');
+  return
+
+
+  // next
+  $.callback = ''
+  dealReturn('doPlantBeanCollect', $.data)
+  document.write(JSON.stringify($))
+}
+/**
+ * 做LZDZ任务 - 全利以赴 谁是囤货王
+ * （暂时不知道什么玩意儿）
+ */
+function doLzdz68 () {
+  // 循环逻辑单独设置 to,call
+  $.to = 'Func.logicHandler'
+  $.call = ['doLzdz68']
+
+  $.activityId = "dzlhkke4cc7da358ff4fa18352ce88";
+  $.authorCode = "0df549e339284e27bca13726bde214db";
+  $.activityShopId = "1000003443";
+  $.algo = {}
+  $.algo.appId = '8adfb'
+
+  switch ($.taskStep++) {
+    case 1:
+      // 获取 LZCK
+      getLzdzCK()
+      break;
+    case 2:
+      // 获取 Token
+      getLzdzToken()
+      break;
+    case 3:
+      // 获取 Pin
+      if ($.LzdzToken) {
+        getLzdzPin()
+      } else {
+        $.taskStep = -1
+        $.message = '无法获取到活动令牌，结束活动任务'
+        document.write(JSON.stringify($))
+      }
+      break;
+    case 4:
+      // 访问 AD 日志
+      if ($.secretPin) {
+        getLzdzLogWithAD()
+      } else {
+        $.taskStep = -1
+        $.message = '无法获取到Pin码，结束活动任务'
+        document.write(JSON.stringify($))
+      }
+      break;
+    case 5:
+      // 获取活动信息
+      if ($.self.data) {
+        getLzdzInfo()
+      } else {
+        $.taskStep = -1
+        $.message = '无法获取 AD 日志，结束活动任务'
+        document.write(JSON.stringify($))
+      }
+      break;
+    case 6:
+      // 一键关注店铺
+      if ($.self.data) {
+        doLzdzTaskFollowShop()
+      } else {
+        $.taskStep = -1
+        $.message = '无法获取到活动信息，结束活动任务'
+        document.write(JSON.stringify($))
+      }
+      break;
+    case 7:
+      // 获取开卡信息
+      getLzdzOpenCardInfo()
+      break;
+    case 8:
+      // 做开卡任务
+      if ($.taskList) {
+        doLzdzOpenCardTask()
+      } else {
+        $.taskStep = -1
+        $.message = '无法获取到开卡任务，结束活动任务'
+        document.write(JSON.stringify($))
+      }
+      break;
+    default:
+      $.to = ''; $.call.pop(); $.taskStep = 1; $.self.data = undefined
+      document.write(JSON.stringify($))
+      break;
+  }
+}
+
+// 获取 LZCK
+function getLzdzCK () {
+  $.call[$.call.length - 1] == 'getLzdzCK' || $.call.push('getLzdzCK')
+
+  $.HEAD = true
+  $.callback = 'Func.request'
+  takeRequest('getLzdzCK');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  // 这里要取消获取 HEAD
+  $.HEAD = false
+  // 注意这里的 $.headerData 其实是 response.header
+  dealReturn('getLzdzCK', $.headerData)
+  document.write(JSON.stringify($))
+}
+
+// 获取 Token
+function getLzdzToken () {
+  $.call[$.call.length - 1] == 'getLzdzToken' || $.call.push('getLzdzToken')
+
+  $.callback = 'Func.request'
+  takeRequest('getLzdzToken');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('getLzdzToken', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 获取 Pin
+function getLzdzPin () {
+  $.call[$.call.length - 1] == 'getLzdzPin' || $.call.push('getLzdzPin')
+
+  $.callback = 'Func.request'
+  takeRequest('getLzdzPin');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('getLzdzPin', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 访问 AD 日志
+function getLzdzLogWithAD () {
+  $.call[$.call.length - 1] == 'getLzdzLogWithAD' || $.call.push('getLzdzLogWithAD')
+
+  $.HEAD = true
+  $.callback = 'Func.request'
+  takeRequest('getLzdzLogWithAD');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  // 这里要取消获取 HEAD
+  $.HEAD = false
+  // 注意这里的 $.headerData 其实是 response.header
+  dealReturn('getLzdzLogWithAD', $.headerData)
+  document.write(JSON.stringify($))
+}
+
+// 获取活动信息
+function getLzdzInfo () {
+  $.call[$.call.length - 1] == 'getLzdzInfo' || $.call.push('getLzdzInfo')
+
+  $.callback = 'Func.request'
+  takeRequest('getLzdzInfo');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('getLzdzInfo', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 关注店铺
+function doLzdzTaskFollowShop () {
+  $.call[$.call.length - 1] == 'doLzdzTaskFollowShop' || $.call.push('doLzdzTaskFollowShop')
+
+  $.callback = 'Func.request'
+  takeRequest('doLzdzTaskFollowShop');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('doLzdzTaskFollowShop', $.data)
+  document.write(JSON.stringify($))
+}
+
+
+// 获取开卡信息
+function getLzdzOpenCardInfo () {
+  $.call[$.call.length - 1] == 'getLzdzOpenCardInfo' || $.call.push('getLzdzOpenCardInfo')
+
+  $.callback = 'Func.request'
+  takeRequest('getLzdzOpenCardInfo');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('getLzdzOpenCardInfo', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 做开卡任务
+function doLzdzOpenCardTask () {
+  $.call[$.call.length - 1] == 'doLzdzOpenCardTask' || $.call.push('doLzdzOpenCardTask')
+
+  // 利用队列取代循环
+  $.oneTask = $.taskList.shift()
+  if (!$.oneTask) {
+    // 循环完成重新设置 to,call
+    $.next = 0 // 清空 Next.key
+    $.call.pop()
+    $.message = `入会任务已全都完成~`
+    document.write(JSON.stringify($))
+    return
+  }
+
+  // 做过的任务则跳过重新执行
+  $.venderId = $.oneTask?.venderId
+  if ($.oneTask?.status == 1) {
+    $.message = `你已经是 ${$.oneTask.name} 会员了`
+    document.write(JSON.stringify($))
+    return
+  }
+
+  $.callback = 'Func.request'
+  takeRequest('getShopOpenCardInfo');
+  return
+
+  // next
+  $.callback = ''
+  dealReturn('getShopOpenCardInfo', $.data)
+  if ($.self.success) {
+    request_algo()
+  } else {
+    document.write(JSON.stringify($))
+  }
+}
+
+// 获取算法
+function request_algo () {
+  $.call[$.call.length - 1] == 'request_algo' || $.call.push('request_algo')
+
+
+  $.algo.time = Date.now()
+  $.algo.timestamp = new Date($.algo.time).Format("yyyyMMddHHmmssSSS")
+  $.algo.fp = $.Utils.H5ST._getFp($.algo.time)
+  $.callback = 'Func.request'
+  takeRequest('request_algo')
+  return
+
+
+  // next next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('request_algo', $.data)
+  // 进入下一个函数无需输出
+  bindWithVender()
+}
+
+// 开卡
+function bindWithVender () {
+  $.call[$.call.length - 1] == 'bindWithVender' || $.call.push('bindWithVender')
+
+  $.callback = 'Func.request'
+  takeRequest('bindWithVender')
+  return
+
+
+  // next next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('bindWithVender', $.data)
+  document.write(JSON.stringify($))
 }
 
 /**
@@ -856,6 +1440,139 @@ function takeRequest (type) {
       url = `https://api.m.jd.com/client.action?functionId=beanDoTask&body=${encodeURIComponent(JSON.stringify({ "actionType": 0, "taskToken": `${$.taskToken}` }))}&appid=ld&client=apple&area=5_274_49707_49973&build=167283&clientVersion=9.1.0`;
       myRequest = getRequest(url, body);
       break;
+    case 'getLzdzCK':
+      url = `https://lzdz1-isv.isvjcloud.com/dingzhi/customized/common/activity?activityId=${$.activityId}&shareUuid=${encodeURIComponent($.authorCode)}`;
+      myRequest = getRequest(url, body, 'GET');
+      break;
+    case 'getLzdzToken':
+      url = `https://api.m.jd.com/client.action?functionId=isvObfuscator`;
+      body = `body=%7B%22url%22%3A%20%22https%3A//lzkj-isv.isvjcloud.com%22%2C%20%22id%22%3A%20%22%22%7D&uuid=hjudwgohxzVu96krv&client=apple&clientVersion=9.4.0&st=1620476162000&sv=111&sign=f9d1b7e3b943b6a136d54fe4f892af05`
+      myRequest = getRequest(url, body, 'POST');
+      break;
+    case 'getLzdzPin':
+      url = `https://lzdz1-isv.isvjcloud.com/customer/getMyPing`;
+      body = `userId=${$.activityShopId}&token=${$.LzdzToken}&fromType=APP`
+      headers = {
+        Host: 'lzdz1-isv.isvjcloud.com',
+        Origin: 'https://lzdz1-isv.isvjcloud.com',
+        Referer: `https://lzdz1-isv.isvjcloud.com/dingzhi/customized/common/activity?activityId=${$.activityId}&shareUuid=${encodeURIComponent($.authorCode)}`,
+      }
+      myRequest = getRequest(url, body, 'POST', headers);
+      break;
+    case 'getLzdzLogWithAD':
+      url = `https://lzdz1-isv.isvjcloud.com/common/accessLogWithAD`;
+      body = `venderId=${$.activityShopId}&code=99&pin=${encodeURIComponent($.secretPin)}&activityId=${$.activityId}&pageUrl=${$.activityUrl}&subType=app&adSource=FLP`
+      headers = {
+        Host: 'lzdz1-isv.isvjcloud.com',
+        Origin: 'https://lzdz1-isv.isvjcloud.com',
+        Referer: `https://lzdz1-isv.isvjcloud.com/dingzhi/customized/common/activity?activityId=${$.activityId}&shareUuid=${encodeURIComponent($.authorCode)}`,
+      }
+      myRequest = getRequest(url, body, 'POST', headers);
+      break;
+    case 'getLzdzInfo':
+      url = `https://lzdz1-isv.isvjcloud.com/dingzhi/linkgame/activity/content`;
+      body = `activityId=${$.activityId}&pin=${encodeURIComponent($.secretPin)}&pinImg=&nick=${encodeURIComponent($.nickname)}&cjyxPin=&cjhyPin=&shareUuid=${encodeURIComponent($.authorCode)}`
+      headers = {
+        Host: 'zdz1-isv.isvjcloud.com',
+        Origin: 'https://lzdz1-isv.isvjcloud.com',
+        Referer: `https://lzdz1-isv.isvjcloud.com/dingzhi/customized/common/activity?activityId=${$.activityId}&shareUuid=${encodeURIComponent($.authorCode)}`,
+      }
+      myRequest = getRequest(url, body, 'POST', headers);
+      break;
+    case 'doLzdzTaskFollowShop':
+      url = `https://lzdz1-isv.isvjcloud.com/dingzhi/opencard/follow/shop`;
+      body = `activityId=${$.activityId}&pin=${encodeURIComponent($.secretPin)}`
+      headers = {
+        Host: 'zdz1-isv.isvjcloud.com',
+        Origin: 'https://lzdz1-isv.isvjcloud.com',
+        Referer: `https://lzdz1-isv.isvjcloud.com/dingzhi/customized/common/activity?activityId=${$.activityId}&shareUuid=${encodeURIComponent($.authorCode)}`,
+      }
+      myRequest = getRequest(url, body, 'POST', headers);
+      break;
+    case 'getLzdzOpenCardInfo':
+      url = `https://lzdz1-isv.isvjcloud.com/dingzhi/linkgame/task/opencard/info`;
+      body = `pin=${encodeURIComponent($.secretPin)}&activityId=${$.activityId}`
+      headers = {
+        Host: 'zdz1-isv.isvjcloud.com',
+        Origin: 'https://lzdz1-isv.isvjcloud.com',
+        Referer: `https://lzdz1-isv.isvjcloud.com/dingzhi/customized/common/activity?activityId=${$.activityId}&shareUuid=${encodeURIComponent($.authorCode)}`,
+      }
+      myRequest = getRequest(url, body, 'POST', headers);
+      break;
+    case 'getShopOpenCardInfo':
+      url = `https://api.m.jd.com/client.action?functionId=getShopOpenCardInfo&appid=jd_shop_member&body=%7B%22venderId%22%3A%22${$.venderId}%22%2C%22channel%22%3A401%7D&client=H5&clientVersion=9.2.0`;
+      myRequest = getRequest(url, body, 'GET');
+      break;
+    case 'request_algo':
+      body = {
+        'version': '3.0',
+        'fp': $.algo.fp,
+        'appId': $.algo.appId.toString(),
+        'timestamp': $.algo.time,
+        'platform': 'web',
+        'expandParams': ''
+      };
+      headers = {
+        'Host': 'cactus.jd.com',
+        'accept': 'application/json'
+      }
+      url = `https://cactus.jd.com/request_algo?g_ty=ajax`;
+      myRequest = getRequest(url, body, 'GET');
+      break;
+    case 'bindWithVender':
+      body = {
+        "venderId": `${$.venderId}`,
+        "bindByVerifyCodeFlag": 1,
+        "registerExtend": {},
+        "writeChildFlag": 0,
+        "channel": 7008
+      };
+      $.shopactivityId && (body.activityId = $.shopactivityId);
+      $.h5st = $.Utils.H5ST._getH5st(body)
+      url = `https://api.m.jd.com/client.action?functionId=bindWithVender&appid=jd_shop_member&body=${encodeURIComponent(JSON.stringify(body))}&client=H5&clientVersion=9.2.0&uuid=88888&h5st=${$.h5st}`;
+      body = ''
+      myRequest = getRequest(url, body, 'GET');
+      break;
+    case 'getPlantBeanInfo':
+      url = `https://api.m.jd.com/client.action?functionId=plantBeanIndex&body=${encodeURIComponent(JSON.stringify({ "monitor_source": "plant_app_plant_index", "monitor_refer": "", "version": "9.2.4.1" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
+      myRequest = getRequest(url, body);
+      break;
+    case 'getPlantBeanShopTaskList':
+      url = `https://api.m.jd.com/client.action?functionId=shopTaskList&body=${encodeURIComponent(JSON.stringify({ "monitor_source": "plant_app_plant_index", "monitor_refer": "plant_shopList", "version": "9.2.4.1" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
+      myRequest = getRequest(url, body, 'GET');
+      break;
+    case 'getPlantBeanProductTaskList':
+      url = `https://api.m.jd.com/client.action?functionId=productTaskList&body=${encodeURIComponent(JSON.stringify({ "monitor_source": "plant_app_plant_index", "monitor_refer": "productTaskList", "version": "9.2.4.1" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
+      myRequest = getRequest(url, body, 'GET');
+      break;
+    case 'getPlantBeanChannelTaskList':
+      url = `https://api.m.jd.com/client.action?functionId=plantChannelTaskList&body=${encodeURIComponent(JSON.stringify({ "monitor_source": "plant_app_plant_index", "monitor_refer": "plantChannelTaskList", "version": "9.2.4.1" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
+      myRequest = getRequest(url, body, 'GET');
+      break;
+    case 'receiveNutrients':
+      url = `https://api.m.jd.com/client.action?functionId=receiveNutrients&body=${encodeURIComponent(JSON.stringify({ "roundId": $.currentRoundId, "monitor_refer": "plant_receiveNutrients" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
+      myRequest = getRequest(url, body);
+      break;
+    case 'doPlantBeanOhterTask':
+      url = `https://api.m.jd.com/client.action?functionId=receiveNutrientsTask&body=${encodeURIComponent(JSON.stringify({ "awardType": $.oneTask.taskType + '', "monitor_refer": "receiveNutrientsTask", "monitor_source": "plant_app_plant_index", "version": "9.2.4.1" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
+      myRequest = getRequest(url, body, 'GET');
+      break;
+    case 'doPlantBeanBrowseTask':
+      url = `https://api.m.jd.com/client.action?functionId=shopNutrientsTask&body=${encodeURIComponent(JSON.stringify({ "monitor_refer": "plant_shopNutrientsTask", "shopId": $.oneShop.shopId, "shopTaskId": $.oneShop.shopTaskId, "monitor_source": "plant_app_plant_index", "version": "9.2.4.1" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
+      myRequest = getRequest(url, body, 'GET');
+      break;
+    case 'doPlantBeanProductTask':
+      url = `https://api.m.jd.com/client.action?functionId=productNutrientsTask&body=${encodeURIComponent(JSON.stringify({ "monitor_refer": "plant_productNutrientsTask", "skuId": $.oneProduct[0].skuId, "productTaskId": $.oneProduct[0].productTaskId, "monitor_source": "plant_app_plant_index", "version": "9.2.4.1" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
+      myRequest = getRequest(url, body, 'GET');
+      break;
+    case 'doPlantBeanChannelTask':
+      url = `https://api.m.jd.com/client.action?functionId=plantChannelNutrientsTask&body=${encodeURIComponent(JSON.stringify({ "monitor_refer": "plant_plantChannelNutrientsTask", "channelId": $.oneChannel.channelId, "channelTaskId": $.oneChannel.channelTaskId, "monitor_source": "plant_app_plant_index", "version": "9.2.4.1" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
+      myRequest = getRequest(url, body, 'GET');
+      break;
+    case 'doPlantBeanCollect':
+      url = `https://api.m.jd.com/client.action?functionId=cultureBean&body=${encodeURIComponent(JSON.stringify({ "monitor_refer": "", "roundId": $.currentRoundId, "nutrientsType": $.oneTask.nutrientsType, "monitor_source": "plant_app_plant_index", "version": "9.2.4.1" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
+      myRequest = getRequest(url, body);
+      break;
     default:
       $.error = `takeRequest 错误${type}`
       console.log(`错误${type}`);
@@ -920,14 +1637,15 @@ function getRequest (url, body = {}, method = 'POST', header = {}) {
 
 // 处理返回信息
 function dealReturn (type, data) {
-  if (!data) $.error = '接口返回数据为空，检查账号cookie是否过期或错误';
+  if (!data) $.message = '接口返回数据为空!';
   let json = $.Utils.stringify(data)
+  let setCookie = data['Set-Cookie'] || data['set-cookie'] || ''
 
   switch (type) {
     case 'doBeanSign':
     case 'JingDongBean':
       if (data.code === 3) {
-        $.message = '京东商城-京豆: 失败, 原因: Cookie失效‼️'
+        $.error = '京东商城-京豆: 失败, 原因: Cookie失效‼️'
       } else if (json.match(/跳转至拼图/)) {
         $.message = "京东商城-京豆: 失败, 需要拼图验证 ⚠️"
       } else if (json.match(/\"status\":\"?1\"?/)) {
@@ -1151,9 +1869,222 @@ function dealReturn (type, data) {
         $.message = `任务失败：原因${JSON.stringify(data)}`
       }
       break;
+    case 'getLzdzCK':
+      $.data = {}
+      if (setCookie) {
+        const newCookieItem = setCookie.match(/(JSESSIONID|LZ_TOKEN_KEY|LZ_TOKEN_VALUE)=(.*?);/ig)
+        $.cookie += ';'
+        for (const item of newCookieItem) {
+          $.cookie += item
+        }
+        $.message = `test1 - ${$.cookie}`
+      } else {
+        $.message = `发生错误：原因${JSON.stringify(data)}`
+      }
+      break;
+    case 'getLzdzToken':
+      if (data.code == '0') {
+        $.LzdzToken = data.token;
+        $.message = `test2 - ${$.LzdzToken}`
+      } else {
+        $.message = `发生错误：原因${JSON.stringify(data)}`
+      }
+      break;
+    case 'getLzdzPin':
+      if (data.result && data.data) {
+        $.nickname = data.data.nickname;
+        $.secretPin = data.data.secretPin;
+        $.cookie = `${$.cookie};AUTH_C_USER=${data.data.secretPin}`;
+        $.message = `获取 Pin 码成功`
+      } else {
+        $.message = `获取 Pin 码失败：原因${JSON.stringify(data)}`
+      }
+      break;
+    case 'getLzdzLogWithAD':
+      $.data = {}
+      if (setCookie) {
+        const newCookieItem = setCookie.match(/(JSESSIONID|LZ_TOKEN_KEY|LZ_TOKEN_VALUE)=(.*?);/ig)
+        $.cookie += ';'
+        for (const item of newCookieItem) {
+          $.cookie += item
+        }
+        $.message = `test3 - ${$.cookie}`
+        $.self.data = true
+      } else {
+        $.self.data = false
+        $.message = `发生错误：原因${JSON.stringify(data)}`
+      }
+      break;
+    case 'getLzdzInfo':
+      if (data.result && !data.data?.hasEnd) {
+        $.self.data = true
+        $.message = `获取活动信息成功：${data.data?.activity["name"]}`
+      } else {
+        $.self.data = false
+        $.message = `活动已经结束!`
+      }
+      break;
+    case 'doLzdzTaskFollowShop':
+      if (data.data) {
+        $.message = `test4 - ${JSON.stringify(data)}`
+      } else {
+        $.message = `发生错误：原因${JSON.stringify(data)}`
+      }
+      break;
+    case 'getLzdzOpenCardInfo':
+      if (data.data) {
+        $.taskList = data.data.followShopList;
+        $.message = `test5 - ${JSON.stringify($.taskList)}`
+      } else {
+        $.message = `发生错误：原因${JSON.stringify(data)}`
+      }
+      break;
+    case 'getShopOpenCardInfo':
+      if (data.success && data.result) {
+        // shopactivityId 存在代表入会有礼
+        $.shopactivityId = data.result.interestsRuleList && data.result.interestsRuleList[0]?.interestsInfo?.activityId || ''
+        $.self.success = true
+        $.message = `开始入会：${data.result.shopMemberCardInfo?.venderCardName}`
+      } else {
+        $.self.success = false
+        $.message = `发生错误：原因${JSON.stringify(data)}`
+      }
+      break;
+    case 'bindWithVender':
+      if (data.success && data.result) {
+        $.message = data.message
+        for (let i of data.result.giftInfo?.giftList) {
+          $.message += `\n获得:${i.discountString}${i.prizeName},${i.secondLineDesc}`
+        }
+      } else {
+        $.message = `发生错误：原因${JSON.stringify(data)}`
+      }
+      break;
+    case 'request_algo':
+      if (data.data && data.data.result) {
+        $.algo.tk = data.data.result.tk
+        $.algo.rd = data.data.result.algo.match(/rd='(.*)'/)[1]
+        $.algo.enc = data.data.result.algo.match(/algo\.(.*)\(/)[1]
+      } else {
+        $.message = `发生错误：原因${JSON.stringify(data)}`
+      }
+      break;
+    case 'getPlantBeanInfo':
+      if (data.errorCode == 'PB101') {
+        $.self.success = false
+        $.message = '活动太火爆了，还是去买买买吧！'
+        return
+      }
+      if (data && data.code === '0' && data.data) {
+        let num
+        for (let i = 0; i < data.data.roundList?.length; i++) {
+          if (data.data.roundList[i].roundState === "2") {
+            num = i
+            break
+          }
+        }
+
+        $.self.success = true
+        $.helpCode = $.Utils.getParam(data.data.jwordShareInfo?.shareUrl, 'plantUuid')
+        $.roundList = data.data.roundList;
+        $.taskList = data.data.taskList;
+        $.collectList = $.roundList[num].bubbleInfos
+        $.currentRoundId = $.roundList[num].roundId;//本期的roundId
+        $.lastRoundId = $.roundList[num - 1].roundId;//上期的roundId
+        $.awardState = $.roundList[num - 1].awardState;
+        $.message = `你的种豆得豆助力码：\n${$.helpCode}\n`
+        $.message += `【上期时间】${$.roundList[num - 1].dateDesc}\n`;
+        $.message += `【上期成长值】${$.roundList[num - 1].growth}`;
+      }
+      break;
+    case 'getPlantBeanShopTaskList':
+      if (data.code == 0 && data.data) {
+        $.shopList = $.Utils.formatToArray(data.data.goodShopList).concat($.Utils.formatToArray(data.data.moreShopList))
+      } else {
+        $.shopList = []
+      }
+      break;
+    case 'getPlantBeanProductTaskList':
+      if (data.code == 0 && data.data) {
+        $.productList = $.Utils.formatToArray(data.data.productInfoList)
+      } else {
+        $.productList = []
+      }
+      break;
+    case 'getPlantBeanChannelTaskList':
+      if (data.code == 0 && data.data) {
+        $.channelList = [...$.Utils.formatToArray(data.data.goodChannelList), ...$.Utils.formatToArray(data.data.normalChannelList)]
+      } else {
+        $.channelList = []
+      }
+      break;
+    case 'receiveNutrients':
+      if (data.data?.nutrients) {
+        $.message = `定时收取：${JSON.stringify(data.data.nutrients)}`
+      } else {
+        $.message = `收取失败：原因` + JSON.stringify(data.errorMessage || data)
+      }
+      break;
+    case 'doPlantBeanOhterTask':
+      if (data.code == 0 && data.data) {
+        $.message = `任务完成：获得 ${JSON.stringify(data.data.nutrNum)} 营养液`
+      } else {
+        $.message = '任务完成：原因' + JSON.stringify(data)
+      }
+      break;
+    case 'doPlantBeanBrowseTask':
+      if (data.code == 0 && data.data) {
+        if (data.data.nutrState === '1') {
+          $.self.count--
+          $.message = `浏览完成：进度 ${$.oneTask.totalNum - $.self.count}/${$.oneTask.totalNum}`
+        } else if (data.data.nutrState === '2') {
+          $.message = `浏览完成：但营养液走丢了，继续下一个`
+        } else {
+          $.message = '发生错误：原因' + JSON.stringify(data)
+        }
+      } else {
+        $.message = '发生错误：原因' + JSON.stringify(data)
+      }
+      break;
+    case 'doPlantBeanProductTask':
+      if (data.code == 0 && data.data) {
+        if (data.data.nutrState === '1') {
+          $.self.count--
+          $.message = `关注成功：进度 ${$.oneTask.totalNum - $.self.count}/${$.oneTask.totalNum}`
+        } else if (data.data.nutrState === '2') {
+          $.message = `关注成功：但营养液走丢了，继续下一个`
+        } else {
+          $.message = '发生错误：原因' + JSON.stringify(data)
+        }
+      } else {
+        $.message = '发生错误：原因' + JSON.stringify(data)
+      }
+      break;
+    case 'doPlantBeanChannelTask':
+      if (data.code == 0 && data.data) {
+        if (data.data.nutrState === '1') {
+          $.self.count--
+          $.message = `关注成功：进度 ${$.oneTask.totalNum - $.self.count}/${$.oneTask.totalNum}`
+        } else if (data.data.nutrState === '2') {
+          $.message = `关注成功：但营养液走丢了，继续下一个`
+        } else {
+          $.message = '发生错误：原因' + JSON.stringify(data)
+        }
+      } else {
+        $.message = '发生错误：原因' + JSON.stringify(data)
+      }
+      break;
+    case 'doPlantBeanCollect':
+      if (data.code == 0 && data.data) {
+        $.message = `收取成功：成长值为 ${data.data.growth}`
+      } else {
+        $.message = '发生错误：原因' + JSON.stringify(data)
+      }
+      break;
     default:
       console.log(`未判断的异常${type} `);
   }
+  $.data = {}
 }
 /**
  * 工具类对象 - 写成函数封装形式，是想利用函数申明提前
@@ -1182,6 +2113,75 @@ function Utils () {
       min = Math.ceil(min);
       max = Math.floor(max);
       return Math.floor(Math.random() * (max - min)) + min;
+    },
+    formatToArray (p = []) {
+      return Array.isArray(p) ? p : [p]
+    },
+    filterArray (arr = []) {
+      return arr.filter(v => !!v)
+    },
+    getParam (url, key) {
+      const reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)", "i")
+      const r = url.match(reg)
+      if (r != null) return decodeURIComponent(r[2]);
+      return null;
+    },
+    H5ST: {
+      _getFp (t) {
+        let e = "0123456789";
+        let a = 13;
+        let i = '';
+        for (; a--;)
+          i += e[Math.random() * e.length | 0];
+        return (i + t).slice(0, 16)
+      },
+      // 此处需要 modules
+      _getH5st (body) {
+        let y = (function _getKey (tk, fp, ts, ai, algo) {
+          let str = `${tk}${fp}${ts}${ai}${$.algo.rd}`;
+          console.log(str);
+          return algo[$.algo.enc](str, tk)
+        })($.algo.tk, $.algo.fp, $.algo.timestamp, $.algo.appId, CryptoJS).toString(CryptoJS.enc.Hex)
+        console.log(y);
+        let s = ''
+        for (let key of Object.keys(body)) {
+          key === 'body'
+            ? (s += `${key}:${CryptoJS.SHA256(body[key]).toString(CryptoJS.enc.Hex)}&`)
+            : (s += `${key}:${body[key]}&`)
+        }
+        s = s.slice(0, -1)
+        console.log(s);
+        s = CryptoJS.HmacSHA256(s, y).toString(CryptoJS.enc.Hex)
+        return encodeURIComponent(`${$.algo.timestamp};${$.algo.fp};${$.algo.appId.toString()};${$.algo.tk};${s};3.0;${$.algo.time.toString()}`)
+      }
+
     }
   }
 }
+
+Date.prototype.Format = function (fmt) {
+  var e,
+    n = this,
+    d = fmt,
+    l = {
+      "M+": n.getMonth() + 1,
+      "d+": n.getDate(),
+      "D+": n.getDate(),
+      "h+": n.getHours(),
+      "H+": n.getHours(),
+      "m+": n.getMinutes(),
+      "s+": n.getSeconds(),
+      "w+": n.getDay(),
+      "q+": Math.floor((n.getMonth() + 3) / 3),
+      "S+": n.getMilliseconds()
+    };
+  /(y+)/i.test(d) && (d = d.replace(RegExp.$1, "".concat(n.getFullYear()).substr(4 - RegExp.$1.length)));
+  for (var k in l) {
+    if (new RegExp("(".concat(k, ")")).test(d)) {
+      var t, a = "S+" === k ? "000" : "00";
+      d = d.replace(RegExp.$1, 1 == RegExp.$1.length ? l[k] : ("".concat(a) + l[k]).substr("".concat(l[k]).length))
+    }
+  }
+  return d;
+}
+

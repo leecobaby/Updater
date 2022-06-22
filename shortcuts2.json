@@ -577,7 +577,7 @@
     }
   },
   "JD_sign": {
-    "version": "1.7",
+    "version": "1.8",
     "update_log": "- 新增 多条云端线路，自动切换可用线路",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
@@ -585,7 +585,7 @@
     },
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/51d675a5bf6840b7a503a0afaace94f0",
+    "update": "https://www.icloud.com/shortcuts/d767f08451d04510933aff0e045f721f",
     "notice": "更新后第一次使用请先修复指令,防止出错\n自动助力暂未开发，开放会另行通知~",
     "video": "",
     "automation_url": "shortcuts://run-shortcut?name=京东-多合一签到&input=text&text=task",
