@@ -361,6 +361,11 @@ function doPlantBean () {
       // 做主任务
       doPlantBeanTask()
       break;
+    case 7:
+      // 收取营养液
+      $.message = '开始收取营养液'
+      doPlantBeanCollect()
+      break;
     default:
       $.to = ''; $.call.pop(); $.taskStep = 1; $.self.data = undefined
       document.write(JSON.stringify($))
@@ -594,6 +599,29 @@ function doPlantBeanOhterTask () {
   document.write(JSON.stringify($))
 }
 
+// 收取营养液
+function doPlantBeanCollect () {
+  $.call[$.call.length - 1] == 'doPlantBeanCollect' || $.call.push('doPlantBeanCollect')
+
+  // 利用队列取代循环
+  $.oneTask = $.collectList.shift()
+  if (!$.oneTask) {
+    $.message = `营养液已收取完~`
+    $.call.pop()
+    document.write(JSON.stringify($))
+    return
+  }
+
+  $.callback = 'Func.request'
+  takeRequest('doPlantBeanCollect');
+  return
+
+
+  // next
+  $.callback = ''
+  dealReturn('doPlantBeanCollect', $.data)
+  document.write(JSON.stringify($))
+}
 /**
  * 做LZDZ任务 - 全利以赴 谁是囤货王
  * （暂时不知道什么玩意儿）
@@ -1538,6 +1566,10 @@ function takeRequest (type) {
       url = `https://api.m.jd.com/client.action?functionId=plantChannelNutrientsTask&body=${encodeURIComponent(JSON.stringify({ "monitor_refer": "plant_plantChannelNutrientsTask", "channelId": $.oneChannel.channelId, "channelTaskId": $.oneChannel.channelTaskId, "monitor_source": "plant_app_plant_index", "version": "9.2.4.1" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
       myRequest = getRequest(url, body, 'GET');
       break;
+    case 'doPlantBeanCollect':
+      url = `https://api.m.jd.com/client.action?functionId=cultureBean&body=${encodeURIComponent(JSON.stringify({ "monitor_refer": "", "roundId": $.currentRoundId, "nutrientsType": $.oneTask.nutrientsType, "monitor_source": "plant_app_plant_index", "version": "9.2.4.1" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
+      myRequest = getRequest(url, body);
+      break;
     default:
       $.error = `takeRequest 错误${type}`
       console.log(`错误${type}`);
@@ -1953,6 +1985,7 @@ function dealReturn (type, data) {
         $.helpCode = $.Utils.getParam(data.data.jwordShareInfo?.shareUrl, 'plantUuid')
         $.roundList = data.data.roundList;
         $.taskList = data.data.taskList;
+        $.collectList = $.roundList[num].bubbleInfos
         $.currentRoundId = $.roundList[num].roundId;//本期的roundId
         $.lastRoundId = $.roundList[num - 1].roundId;//上期的roundId
         $.awardState = $.roundList[num - 1].awardState;
@@ -1983,8 +2016,8 @@ function dealReturn (type, data) {
       }
       break;
     case 'receiveNutrients':
-      if (data.nutrients) {
-        $.message = `定时收取：获得 ${JSON.stringify(data)} 营养液`
+      if (data.data?.nutrients) {
+        $.message = `定时收取：${JSON.stringify(data.data.nutrients)}`
       } else {
         $.message = `收取失败：原因` + JSON.stringify(data.errorMessage || data)
       }
@@ -2034,6 +2067,13 @@ function dealReturn (type, data) {
         } else {
           $.message = '发生错误：原因' + JSON.stringify(data)
         }
+      } else {
+        $.message = '发生错误：原因' + JSON.stringify(data)
+      }
+      break;
+    case 'doPlantBeanCollect':
+      if (data.code == 0 && data.data) {
+        $.message = '收取成功：获得' + JSON.stringify(data)
       } else {
         $.message = '发生错误：原因' + JSON.stringify(data)
       }
