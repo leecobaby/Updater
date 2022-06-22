@@ -9,6 +9,9 @@
 // 618 种草街 
 // https://prodev.m.jd.com/mall/active/U18CGRp9tTnAkH1HfHnhBEWrfrr/index.html
 
+// 种草心愿
+// https://3.cn/1-wZ9n5B?_ts=1655875958023&utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share&utm_user=plusmember&gx=RnFmxzMPaDeMndRP7FzU8PGSz1VWvURZLA
+
 // 618 特物Z
 
 // 618 lzdz
@@ -334,19 +337,27 @@ function doPlantBean () {
       getPlantBeanInfo()
       break;
     case 2:
-      // 获取店铺列表
-      getPlantBeanShopTaskList()
-      break;
-    case 3:
       if ($.self.success) {
-        receiveNutrients()
+        // 获取店铺列表
+        getPlantBeanShopTaskList()
       } else {
         $.taskStep = -1
         $.message = '无法获取到活动信息，结束活动任务'
         document.write(JSON.stringify($))
       }
       break;
+    case 3:
+      // 获取商品列表
+      getPlantBeanProductTaskList()
+      break;
     case 4:
+      // 获取频道列表
+      getPlantBeanChannelTaskList()
+      break;
+    case 5:
+      receiveNutrients()
+      break;
+    case 6:
       // 做主任务
       doPlantBeanTask()
       break;
@@ -385,6 +396,36 @@ function getPlantBeanShopTaskList () {
   $.callback = ''
   $.call.pop()
   dealReturn('getPlantBeanShopTaskList', $.data)
+  document.write(JSON.stringify($))
+}
+// 获取商品列表
+function getPlantBeanProductTaskList () {
+  $.call[$.call.length - 1] == 'getPlantBeanProductTaskList' || $.call.push('getPlantBeanProductTaskList')
+
+
+  $.callback = 'Func.request'
+  takeRequest('getPlantBeanProductTaskList');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('getPlantBeanProductTaskList', $.data)
+  document.write(JSON.stringify($))
+}
+// 获取频道列表
+function getPlantBeanChannelTaskList () {
+  $.call[$.call.length - 1] == 'getPlantBeanChannelTaskList' || $.call.push('getPlantBeanChannelTaskList')
+
+
+  $.callback = 'Func.request'
+  takeRequest('getPlantBeanChannelTaskList');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('getPlantBeanChannelTaskList', $.data)
   document.write(JSON.stringify($))
 }
 
@@ -429,13 +470,21 @@ function doPlantBeanTask () {
   // 暂时过滤掉这些任务不做
   if ($.oneTask.taskType === 3) {
     $.self.count = $.oneTask.totalNum - $.oneTask.gainedNum;
+    $.message = `开始做 ${$.oneTask.taskName} 任务`
+    //浏览店铺
     doPlantBeanBrowseTask()
   } else if ($.oneTask.taskType === 5) {
-
+    $.self.count = $.oneTask.totalNum - $.oneTask.gainedNum;
+    $.message = `开始做 ${$.oneTask.taskName} 任务`
+    //挑选商品
+    doPlantBeanProductTask()
   } else if ($.oneTask.taskType === 10) {
-
+    $.self.count = $.oneTask.totalNum - $.oneTask.gainedNum;
+    $.message = `开始做 ${$.oneTask.taskName} 任务`
+    //关注频道
+    doPlantBeanChannelTask()
   } else if ($.oneTask.dailyTimes == 1) {
-    oneActivityInfo()
+    doPlantBeanOhterTask()
   }
 
   !document.body.innerText && document.write(JSON.stringify($))
@@ -460,7 +509,6 @@ function doPlantBeanBrowseTask () {
   }
 
   $.callback = 'Func.request'
-  $.message = `开始做 ${$.oneTask.taskName} 任务`
   takeRequest('doPlantBeanBrowseTask');
   return
 
@@ -471,19 +519,77 @@ function doPlantBeanBrowseTask () {
   document.write(JSON.stringify($))
 }
 
-// 做单任务
-function oneActivityInfo () {
-  $.call[$.call.length - 1] == 'oneActivityInfo' || $.call.push('oneActivityInfo')
+//挑选商品
+function doPlantBeanProductTask () {
+  $.call[$.call.length - 1] == 'doPlantBeanProductTask' || $.call.push('doPlantBeanProductTask')
+
+  // 利用队列取代循环
+  $.oneProduct = $.productList.shift()
+  if (!$.oneProduct || $.self.count <= 0) {
+    $.message = `${$.oneTask.taskName}任务已做完~`
+    $.call.pop()
+    document.write(JSON.stringify($))
+    return
+  }
+
+  if ($.oneProduct[0].taskState !== '2') {
+    document.write(JSON.stringify($))
+    return
+  }
 
   $.callback = 'Func.request'
-  takeRequest('oneActivityInfo');
+  takeRequest('doPlantBeanProductTask');
+  return
+
+
+  // next
+  $.callback = ''
+  dealReturn('doPlantBeanProductTask', $.data)
+  document.write(JSON.stringify($))
+}
+
+//关注频道
+function doPlantBeanChannelTask () {
+  $.call[$.call.length - 1] == 'doPlantBeanChannelTask' || $.call.push('doPlantBeanChannelTask')
+
+  // 利用队列取代循环
+  $.oneChannel = $.channelList.shift()
+  if (!$.oneChannel || $.self.count <= 0) {
+    $.message = `${$.oneTask.taskName}任务已做完~`
+    $.call.pop()
+    document.write(JSON.stringify($))
+    return
+  }
+
+  if ($.oneChannel[0].taskState !== '2') {
+    document.write(JSON.stringify($))
+    return
+  }
+
+  $.callback = 'Func.request'
+  takeRequest('doPlantBeanChannelTask');
+  return
+
+
+  // next
+  $.callback = ''
+  dealReturn('doPlantBeanChannelTask', $.data)
+  document.write(JSON.stringify($))
+}
+
+// 做其他任务
+function doPlantBeanOhterTask () {
+  $.call[$.call.length - 1] == 'doPlantBeanOhterTask' || $.call.push('doPlantBeanOhterTask')
+
+  $.callback = 'Func.request'
+  takeRequest('doPlantBeanOhterTask');
   return
 
 
   // next
   $.callback = ''
   $.call.pop()
-  dealReturn('oneActivityInfo', $.data)
+  dealReturn('doPlantBeanOhterTask', $.data)
   document.write(JSON.stringify($))
 }
 
@@ -1403,16 +1509,32 @@ function takeRequest (type) {
       url = `https://api.m.jd.com/client.action?functionId=shopTaskList&body=${encodeURIComponent(JSON.stringify({ "monitor_source": "plant_app_plant_index", "monitor_refer": "plant_shopList", "version": "9.2.4.1" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
       myRequest = getRequest(url, body, 'GET');
       break;
+    case 'getPlantBeanProductTaskList':
+      url = `https://api.m.jd.com/client.action?functionId=productTaskList&body=${encodeURIComponent(JSON.stringify({ "monitor_source": "plant_app_plant_index", "monitor_refer": "productTaskList", "version": "9.2.4.1" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
+      myRequest = getRequest(url, body, 'GET');
+      break;
+    case 'getPlantBeanChannelTaskList':
+      url = `https://api.m.jd.com/client.action?functionId=plantChannelTaskList&body=${encodeURIComponent(JSON.stringify({ "monitor_source": "plant_app_plant_index", "monitor_refer": "plantChannelTaskList", "version": "9.2.4.1" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
+      myRequest = getRequest(url, body, 'GET');
+      break;
     case 'receiveNutrients':
       url = `https://api.m.jd.com/client.action?functionId=receiveNutrients&body=${encodeURIComponent(JSON.stringify({ "roundId": $.currentRoundId, "monitor_refer": "plant_receiveNutrients" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
       myRequest = getRequest(url, body);
       break;
-    case 'oneActivityInfo':
+    case 'doPlantBeanOhterTask':
       url = `https://api.m.jd.com/client.action?functionId=receiveNutrientsTask&body=${encodeURIComponent(JSON.stringify({ "awardType": $.oneTask.taskType + '', "monitor_refer": "receiveNutrientsTask", "monitor_source": "plant_app_plant_index", "version": "9.2.4.1" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
       myRequest = getRequest(url, body, 'GET');
       break;
     case 'doPlantBeanBrowseTask':
       url = `https://api.m.jd.com/client.action?functionId=shopNutrientsTask&body=${encodeURIComponent(JSON.stringify({ "monitor_refer": "plant_shopNutrientsTask", "shopId": $.oneShop.shopId, "shopTaskId": $.oneShop.shopTaskId, "monitor_source": "plant_app_plant_index", "version": "9.2.4.1" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
+      myRequest = getRequest(url, body, 'GET');
+      break;
+    case 'doPlantBeanProductTask':
+      url = `https://api.m.jd.com/client.action?functionId=productNutrientsTask&body=${encodeURIComponent(JSON.stringify({ "monitor_refer": "plant_productNutrientsTask", "skuId": $.oneProduct[0].skuId, "productTaskId": $.oneProduct[0].productTaskId, "monitor_source": "plant_app_plant_index", "version": "9.2.4.1" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
+      myRequest = getRequest(url, body, 'GET');
+      break;
+    case 'doPlantBeanChannelTask':
+      url = `https://api.m.jd.com/client.action?functionId=plantChannelNutrientsTask&body=${encodeURIComponent(JSON.stringify({ "monitor_refer": "plant_plantChannelNutrientsTask", "channelId": $.oneChannel.channelId, "channelTaskId": $.oneChannel.channelTaskId, "monitor_source": "plant_app_plant_index", "version": "9.2.4.1" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
       myRequest = getRequest(url, body, 'GET');
       break;
     default:
@@ -1845,6 +1967,20 @@ function dealReturn (type, data) {
         $.shopList = []
       }
       break;
+    case 'getPlantBeanProductTaskList':
+      if (data.code == 0 && data.data) {
+        $.productList = $.Utils.formatToArray(data.data.productInfoList)
+      } else {
+        $.productList = []
+      }
+      break;
+    case 'getPlantBeanChannelTaskList':
+      if (data.code == 0 && data.data) {
+        $.channelList = [...$.Utils.formatToArray(data.data.goodChannelList), ...$.Utils.formatToArray(data.data.normalChannelList)]
+      } else {
+        $.channelList = []
+      }
+      break;
     case 'receiveNutrients':
       if (data.nutrients) {
         $.message = `定时收取：获得 ${JSON.stringify(data)} 营养液`
@@ -1852,7 +1988,7 @@ function dealReturn (type, data) {
         $.message = `收取失败：原因` + JSON.stringify(data.errorMessage || data)
       }
       break;
-    case 'oneActivityInfo':
+    case 'doPlantBeanOhterTask':
       if (data.code == 0 && data.data) {
         $.message = `任务完成：获得 ${JSON.stringify(data.data.nutrNum)} 营养液`
       } else {
@@ -1865,7 +2001,35 @@ function dealReturn (type, data) {
           $.message = `浏览完成：进度 ${$.oneTask.totalNum - $.self.count}/${$.oneTask.totalNum}`
           $.self.count--
         } else if (data.data.nutrState === '2') {
-          $.message = `浏览完成：但营养液走丢了，续集浏览`
+          $.message = `浏览完成：但营养液走丢了，继续下一个`
+        } else {
+          $.message = '发生错误：原因' + JSON.stringify(data)
+        }
+      } else {
+        $.message = '发生错误：原因' + JSON.stringify(data)
+      }
+      break;
+    case 'doPlantBeanProductTask':
+      if (data.code == 0 && data.data) {
+        if (data.data.nutrState === '1') {
+          $.message = `关注成功：进度 ${$.oneTask.totalNum - $.self.count}/${$.oneTask.totalNum}`
+          $.self.count--
+        } else if (data.data.nutrState === '2') {
+          $.message = `关注成功：但营养液走丢了，继续下一个`
+        } else {
+          $.message = '发生错误：原因' + JSON.stringify(data)
+        }
+      } else {
+        $.message = '发生错误：原因' + JSON.stringify(data)
+      }
+      break;
+    case 'doPlantBeanChannelTask':
+      if (data.code == 0 && data.data) {
+        if (data.data.nutrState === '1') {
+          $.message = `关注成功：进度 ${$.oneTask.totalNum - $.self.count}/${$.oneTask.totalNum}`
+          $.self.count--
+        } else if (data.data.nutrState === '2') {
+          $.message = `关注成功：但营养液走丢了，继续下一个`
         } else {
           $.message = '发生错误：原因' + JSON.stringify(data)
         }

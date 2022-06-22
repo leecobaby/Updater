@@ -274,11 +274,11 @@ function Next (func) {
       dealReturn('receiveNutrients', $.data)
       document.write(JSON.stringify($))
       break;
-    case 'oneActivityInfo_next':
+    case 'doPlantBeanOhterTask_next':
       // next
       $.callback = ''
       $.call.pop()
-      dealReturn('oneActivityInfo', $.data)
+      dealReturn('doPlantBeanOhterTask', $.data)
       document.write(JSON.stringify($))
       break;
     case 'getPlantBeanShopTaskList_next':
@@ -286,6 +286,20 @@ function Next (func) {
       $.callback = ''
       $.call.pop()
       dealReturn('getPlantBeanShopTaskList', $.data)
+      document.write(JSON.stringify($))
+      break;
+    case 'getPlantBeanProductTaskList_next':
+      // next
+      $.callback = ''
+      $.call.pop()
+      dealReturn('getPlantBeanProductTaskList', $.data)
+      document.write(JSON.stringify($))
+      break;
+    case 'getPlantBeanChannelTaskList_next':
+      // next
+      $.callback = ''
+      $.call.pop()
+      dealReturn('getPlantBeanChannelTaskList', $.data)
       document.write(JSON.stringify($))
       break;
     default:
