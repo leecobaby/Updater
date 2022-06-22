@@ -1,8 +1,8 @@
 {
   "JD_sign": {
     "version": "上次数据更新于:6.20.1",
-    "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/Jwx7S0D%22%7D%0A",
-    "endJump": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/JLb8ehn%22%7D",
+    "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/cI3jwZo%22%7D%0A",
+    "endJump": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/cI3jwZo%22%7D",
     "help": {
       "gitter": "https://gitter.im/api/v1/rooms/62943ea66da03739849793c5/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=100",
       "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/random_mutual_jd.js",
@@ -191,7 +191,7 @@
   },
   "JD_fruit": {
     "version": "上次数据更新于:5.26.3",
-    "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/Jwx7S0D%22%7D",
+    "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/cI3jwZo%22%7D",
     "endJump": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://h5.m.jd.com/babelDiy/Zeus/3KSjXqQabiTuD1cJ28QskrpWoBKT/index.html%22%7D",
     "authUrl": [
       "https://me-api.jd.com/user_new/info/GetJDUserInfoUnion",
@@ -281,7 +281,7 @@
   },
   "JD_travel": {
     "version": "上次数据更新于:10.31.1",
-    "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/JLb8ehn%22%7D",
+    "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/cI3jwZo%22%7D",
     "endJump": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://wbbny.m.jd.com/babelDiy/Zeus/2vVU4E7JLH9gKYfLQ5EVW6eN2P7B/index.html%22%7D",
     "help": {
       "gitter": "https://gitter.im/api/v1/rooms/6171836d6da0373984886132/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=100",
@@ -397,7 +397,7 @@
   },
   "JD_nian": {
     "version": "上次数据更新于:1.20.2",
-    "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/JLb8ehn%22%7D",
+    "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/cI3jwZo%22%7D",
     "endJump": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://wbbny.m.jd.com/babelDiy/Zeus/41AJZXRUJeTqdBK9bPoPgUJiodcU/index.html%22%7D",
     "help": {
       "gitter": "https://gitter.im/api/v1/rooms/6171836d6da0373984886132/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=100",
@@ -489,7 +489,7 @@
   },
   "JD_618": {
     "version": "上次数据更新于:5.26.1",
-    "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/JLb8ehn%22%7D",
+    "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/cI3jwZo%22%7D",
     "endJump": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://wbbny.m.jd.com/babelDiy/Zeus/2fUope8TDN3dUJfNzQswkBLc7uE8/index.html%22%7D",
     "help": {
       "gitter": "https://gitter.im/api/v1/rooms/6171836d6da0373984886132/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=100",
@@ -572,7 +572,11 @@
     }
   },
   "share": {
-    "🤖 抢购助手 - 可快速的将链接用app打开，避免小程序抢购的卡顿": "https://www.icloud.com/shortcuts/95e925b98bb14a759c743600fae67f8b",
+    "🤖 实用指令": {
+      "🤖 抢购助手 - 可快速的将链接用app打开，避免小程序抢购的卡顿": "https://www.icloud.com/shortcuts/95e925b98bb14a759c743600fae67f8b",
+      "🤖 京东-东东农场": "https://www.icloud.com/shortcuts/7e334a0db9c2486385674f9a9b7c8d10",
+      "🤖 京东-多合一签到": "https://www.icloud.com/shortcuts/d855d59bf7944bca978c42936f65df24"
+    },
     "🎯 活动页入口": {
       "618分19亿": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://wbbny.m.jd.com/babelDiy/Zeus/2fUope8TDN3dUJfNzQswkBLc7uE8/index.html%22%7D",
       "618种草街": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://prodev.m.jd.com/mall/active/U18CGRp9tTnAkH1HfHnhBEWrfrr/index.html%22%7D",
@@ -585,10 +589,6 @@
       "Alook": "alook://bean.m.jd.com/bean/signIndex.action",
       "App": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://bean.m.jd.com/bean/signIndex.action%22%7D"
     },
-    "🤖 京东-东东农场": "https://www.icloud.com/shortcuts/7e334a0db9c2486385674f9a9b7c8d10",
-    "🤖 京东-多合一签到 支持618种草街": "https://www.icloud.com/shortcuts/d855d59bf7944bca978c42936f65df24",
-    "🧧 京享红包每天领": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/JdkiTPG%22%7D",
-    "🧧 15日20点红包雨": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/JdkiTPG%22%7D",
     "🏪 在线线报|满减凑单|消灭红包|签到玩法": {
       "抢购助手": "https://www.icloud.com/shortcuts/64b5f93e1119403da44ac3ddd5ad8bf0",
       "🔥 全网在线线报": "https://kzurl14.cn/xwG4D",
@@ -597,9 +597,7 @@
       "🔥 消灭红包": "https://kzurl02.cn/xwuLg"
     },
     "领券收集": {
-      "🎟 Plus 618专线神券": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/Jd8pafH%22%7D",
-      "🎟 200-10 全品券": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/JI1iv3k%22%7D",
-      "🎟 预售会场 1元抵618": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/Jd1w5q7%22%7D"
+      "🎟 200-10 全品券": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/JI1iv3k%22%7D"
     }
   }
 }

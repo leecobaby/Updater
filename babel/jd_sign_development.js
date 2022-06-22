@@ -1865,7 +1865,7 @@ function dealReturn (type, data) {
           $.message = `浏览完成：进度 ${$.oneTask.totalNum - $.self.count}/${$.oneTask.totalNum}`
           $.self.count--
         } else if (data.data.nutrState === '2') {
-          $.message = `浏览完成：但没有抽到奖励，续集浏览`
+          $.message = `浏览完成：但营养液走丢了，续集浏览`
         } else {
           $.message = '发生错误：原因' + JSON.stringify(data)
         }
