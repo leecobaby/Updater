@@ -467,7 +467,6 @@ function doPlantBeanBrowseTask () {
 
   // next
   $.callback = ''
-  $.call.pop()
   dealReturn('doPlantBeanBrowseTask', $.data)
   document.write(JSON.stringify($))
 }
@@ -1862,7 +1861,8 @@ function dealReturn (type, data) {
       break;
     case 'doPlantBeanBrowseTask':
       if (data.code == 0 && data.data && data.data.nutrState === '1') {
-        $.message = `浏览完成：进度 ${$.self.count + $.oneTask.gainedNum}/${$.oneTask.totalNum}`
+        $.message = `浏览完成：进度 ${$.oneTask.totalNum - $.self.count}/${$.oneTask.totalNum}`
+        $.self.count--
       } else {
         $.message = '发生错误：原因' + JSON.stringify(data)
       }

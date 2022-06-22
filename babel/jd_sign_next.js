@@ -288,13 +288,6 @@ function Next (func) {
       dealReturn('getPlantBeanShopTaskList', $.data)
       document.write(JSON.stringify($))
       break;
-    case 'doPlantBeanBrowseTask_next':
-      // next
-      $.callback = ''
-      $.call.pop()
-      dealReturn('doPlantBeanBrowseTask', $.data)
-      document.write(JSON.stringify($))
-      break;
     default:
       // next
       $.callback = ''
