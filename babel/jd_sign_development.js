@@ -321,7 +321,7 @@ function doBeanTask () {
 }
 
 /**
- * 做领京豆页任务
+ * 做种豆得豆任务
  */
 function doPlantBean () {
   // 循环逻辑单独设置 to,call
@@ -1860,9 +1860,15 @@ function dealReturn (type, data) {
       }
       break;
     case 'doPlantBeanBrowseTask':
-      if (data.code == 0 && data.data && data.data.nutrState === '1') {
-        $.message = `浏览完成：进度 ${$.oneTask.totalNum - $.self.count}/${$.oneTask.totalNum}`
-        $.self.count--
+      if (data.code == 0 && data.data) {
+        if (data.data.nutrState === '1') {
+          $.message = `浏览完成：进度 ${$.oneTask.totalNum - $.self.count}/${$.oneTask.totalNum}`
+          $.self.count--
+        } else if (data.data.nutrState === '2') {
+          $.message = `浏览完成：但没有抽到奖励，续集浏览`
+        } else {
+          $.message = '发生错误：原因' + JSON.stringify(data)
+        }
       } else {
         $.message = '发生错误：原因' + JSON.stringify(data)
       }
