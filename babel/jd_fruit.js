@@ -1096,7 +1096,7 @@ function Utils () {
     },
     getRanHelpCode (data, time) {
       // 选出有 助力码 的元素
-      const filterData = _.filter(data.items, v => v.text.match(/^\w{20,}$/g))
+      const filterData = _.filter(data.items, v => v.text.match(/^(\d\[指令专用\])?\w{20,}$/g))
       // 统计所有用户的消息情况
       const statisticData = _.groupBy(filterData, v => v.fromUser)
       // 合规的用户数据
