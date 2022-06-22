@@ -484,6 +484,7 @@ function doPlantBeanTask () {
     //关注频道
     doPlantBeanChannelTask()
   } else if ($.oneTask.dailyTimes == 1) {
+    $.message = `开始做 ${$.oneTask.taskName} 任务`
     doPlantBeanOhterTask()
   }
 
@@ -561,7 +562,7 @@ function doPlantBeanChannelTask () {
     return
   }
 
-  if ($.oneChannel[0].taskState !== '2') {
+  if ($.oneChannel.taskState !== '2') {
     document.write(JSON.stringify($))
     return
   }
@@ -2040,6 +2041,7 @@ function dealReturn (type, data) {
     default:
       console.log(`未判断的异常${type} `);
   }
+  $.data = {}
 }
 /**
  * 工具类对象 - 写成函数封装形式，是想利用函数申明提前
