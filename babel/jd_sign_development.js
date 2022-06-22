@@ -462,7 +462,7 @@ function doPlantBeanTask () {
 
   // 做过的任务则跳过重新执行
   if ($.oneTask.isFinished == 1) {
-    $.message = `${oneTask.taskName} 任务已完成，跳过继续下一个任务~`
+    $.message = `${$.oneTask.taskName} 任务已完成，跳过继续下一个任务~`
     document.write(JSON.stringify($))
     return
   }
@@ -1999,8 +1999,8 @@ function dealReturn (type, data) {
     case 'doPlantBeanBrowseTask':
       if (data.code == 0 && data.data) {
         if (data.data.nutrState === '1') {
-          $.message = `浏览完成：进度 ${$.oneTask.totalNum - $.self.count}/${$.oneTask.totalNum}`
           $.self.count--
+          $.message = `浏览完成：进度 ${$.oneTask.totalNum - $.self.count}/${$.oneTask.totalNum}`
         } else if (data.data.nutrState === '2') {
           $.message = `浏览完成：但营养液走丢了，继续下一个`
         } else {
@@ -2013,8 +2013,8 @@ function dealReturn (type, data) {
     case 'doPlantBeanProductTask':
       if (data.code == 0 && data.data) {
         if (data.data.nutrState === '1') {
-          $.message = `关注成功：进度 ${$.oneTask.totalNum - $.self.count}/${$.oneTask.totalNum}`
           $.self.count--
+          $.message = `关注成功：进度 ${$.oneTask.totalNum - $.self.count}/${$.oneTask.totalNum}`
         } else if (data.data.nutrState === '2') {
           $.message = `关注成功：但营养液走丢了，继续下一个`
         } else {
@@ -2027,8 +2027,8 @@ function dealReturn (type, data) {
     case 'doPlantBeanChannelTask':
       if (data.code == 0 && data.data) {
         if (data.data.nutrState === '1') {
-          $.message = `关注成功：进度 ${$.oneTask.totalNum - $.self.count}/${$.oneTask.totalNum}`
           $.self.count--
+          $.message = `关注成功：进度 ${$.oneTask.totalNum - $.self.count}/${$.oneTask.totalNum}`
         } else if (data.data.nutrState === '2') {
           $.message = `关注成功：但营养液走丢了，继续下一个`
         } else {
