@@ -355,16 +355,25 @@ function doPlantBean () {
       getPlantBeanChannelTaskList()
       break;
     case 5:
-      receiveNutrients()
+      // 获取好友列表
+      getPlantBeanStealFriendList()
       break;
     case 6:
+      // 偷取营养液
+      stealFriendNutrients()
+      break;
+    case 7:
+      // 定时领取营养液
+      receiveNutrients()
+      break;
+    case 8:
       // 做主任务
       doPlantBeanTask()
       break;
-    case 7:
+    case 9:
       getPlantBeanInfo()
       break;
-    case 8:
+    case 10:
       // 收取营养液
       $.message = '开始收取营养液'
       doPlantBeanCollect()
@@ -434,6 +443,21 @@ function getPlantBeanChannelTaskList () {
   $.callback = ''
   $.call.pop()
   dealReturn('getPlantBeanChannelTaskList', $.data)
+  document.write(JSON.stringify($))
+}
+// 获取好友列表
+function getPlantBeanStealFriendList () {
+  $.call[$.call.length - 1] == 'getPlantBeanStealFriendList' || $.call.push('getPlantBeanStealFriendList')
+
+
+  $.callback = 'Func.request'
+  takeRequest('getPlantBeanStealFriendList');
+  return
+
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('getPlantBeanStealFriendList', $.data)
   document.write(JSON.stringify($))
 }
 
@@ -623,6 +647,29 @@ function doPlantBeanCollect () {
   // next
   $.callback = ''
   dealReturn('doPlantBeanCollect', $.data)
+  document.write(JSON.stringify($))
+}
+// 收取营养液
+function stealFriendNutrients () {
+  $.call[$.call.length - 1] == 'stealFriendNutrients' || $.call.push('stealFriendNutrients')
+
+  // 利用队列取代循环
+  $.oneTask = $.stealFriendInfo.friendInfoList.shift()
+  if (!$.oneTask || $.stealFriendInfo.tips) {
+    $.message = `今日偷取好友营养液已达上限~`
+    $.call.pop()
+    document.write(JSON.stringify($))
+    return
+  }
+
+  $.callback = 'Func.request'
+  takeRequest('stealFriendNutrients');
+  return
+
+
+  // next
+  $.callback = ''
+  dealReturn('stealFriendNutrients', $.data)
   document.write(JSON.stringify($))
 }
 /**
@@ -1549,6 +1596,10 @@ function takeRequest (type) {
       url = `https://api.m.jd.com/client.action?functionId=plantChannelTaskList&body=${encodeURIComponent(JSON.stringify({ "monitor_source": "plant_app_plant_index", "monitor_refer": "plantChannelTaskList", "version": "9.2.4.1" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
       myRequest = getRequest(url, body, 'GET');
       break;
+    case 'getPlantBeanStealFriendList':
+      url = `https://api.m.jd.com/client.action?functionId=plantFriendList&body=${encodeURIComponent(JSON.stringify({ "monitor_source": "plant_app_plant_index", "monitor_refer": "plantFriendList", "pageNum": '1', "version": "9.2.4.1" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
+      myRequest = getRequest(url, body, 'GET');
+      break;
     case 'receiveNutrients':
       url = `https://api.m.jd.com/client.action?functionId=receiveNutrients&body=${encodeURIComponent(JSON.stringify({ "roundId": $.currentRoundId, "monitor_refer": "plant_receiveNutrients" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
       myRequest = getRequest(url, body);
@@ -1571,6 +1622,10 @@ function takeRequest (type) {
       break;
     case 'doPlantBeanCollect':
       url = `https://api.m.jd.com/client.action?functionId=cultureBean&body=${encodeURIComponent(JSON.stringify({ "monitor_refer": "", "roundId": $.currentRoundId, "nutrientsType": $.oneTask.nutrientsType, "monitor_source": "plant_app_plant_index", "version": "9.2.4.1" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
+      myRequest = getRequest(url, body);
+      break;
+    case 'stealFriendNutrients':
+      url = `https://api.m.jd.com/client.action?functionId=collectUserNutr&body=${encodeURIComponent(JSON.stringify({ "monitor_refer": "collectUserNutr", "roundId": $.currentRoundId, "paradiseUuid": $.oneTask.paradiseUuid, "monitor_source": "plant_app_plant_index", "version": "9.2.4.1" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
       myRequest = getRequest(url, body);
       break;
     default:
@@ -2018,6 +2073,11 @@ function dealReturn (type, data) {
         $.channelList = []
       }
       break;
+    case 'getPlantBeanStealFriendList':
+      if (data.code == 0 && data.data) {
+        $.stealFriendInfo = data.data
+      }
+      break;
     case 'receiveNutrients':
       if (data.data?.nutrients) {
         $.message = `定时收取：${JSON.stringify(data.data.nutrients)}`
@@ -2077,6 +2137,17 @@ function dealReturn (type, data) {
     case 'doPlantBeanCollect':
       if (data.code == 0 && data.data) {
         $.message = `收取成功：成长值为 ${data.data.growth}`
+      } else {
+        $.message = '发生错误：原因' + JSON.stringify(data)
+      }
+      break;
+    case 'doPlantBeanCollect':
+      if (data.code == 0 && data.data) {
+        if (data.data.collectNutrRewards) {
+          $.message = `偷取成功：从${$.oneTask.plantNickName}获得${data.data.collectNutrRewards}营养液`
+        } else {
+          $.message = `偷取失败：原因` + JSON.stringify(data.data)
+        }
       } else {
         $.message = '发生错误：原因' + JSON.stringify(data)
       }
