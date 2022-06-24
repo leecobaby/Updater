@@ -633,12 +633,14 @@ function doPlantBeanCollect () {
   // 利用队列取代循环
   $.oneTask = $.collectList.shift()
   if (!$.oneTask) {
+    $.wait = 0
     $.message = `营养液已收取完~`
     $.call.pop()
     document.write(JSON.stringify($))
     return
   }
 
+  $.wait = 2
   $.callback = 'Func.request'
   takeRequest('doPlantBeanCollect');
   return
@@ -649,7 +651,7 @@ function doPlantBeanCollect () {
   dealReturn('doPlantBeanCollect', $.data)
   document.write(JSON.stringify($))
 }
-// 收取营养液
+// 偷取营养液
 function stealFriendNutrients () {
   $.call[$.call.length - 1] == 'stealFriendNutrients' || $.call.push('stealFriendNutrients')
 
@@ -2141,7 +2143,7 @@ function dealReturn (type, data) {
         $.message = '发生错误：原因' + JSON.stringify(data)
       }
       break;
-    case 'doPlantBeanCollect':
+    case 'stealFriendNutrients':
       if (data.code == 0 && data.data) {
         if (data.data.collectNutrRewards) {
           $.message = `偷取成功：从${$.oneTask.plantNickName}获得${data.data.collectNutrRewards}营养液`

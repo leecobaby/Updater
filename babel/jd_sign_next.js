@@ -302,6 +302,13 @@ function Next (func) {
       dealReturn('getPlantBeanChannelTaskList', $.data)
       document.write(JSON.stringify($))
       break;
+    case 'getPlantBeanStealFriendList_next':
+      // next
+      $.callback = ''
+      $.call.pop()
+      dealReturn('getPlantBeanStealFriendList', $.data)
+      document.write(JSON.stringify($))
+      break;
     default:
       // next
       $.callback = ''
