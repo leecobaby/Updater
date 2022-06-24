@@ -355,28 +355,37 @@ function doPlantBean () {
       getPlantBeanChannelTaskList()
       break;
     case 5:
+      // 助力
+      dpPlantBeanHelpTask()
+      break;
+    case 6:
       // 获取好友列表
       getPlantBeanStealFriendList()
       break;
-    case 6:
+    case 7:
       // 偷取营养液
+      $.message = '开始偷取好友营养液'
       stealFriendNutrients()
       break;
-    case 7:
+    case 8:
       // 定时领取营养液
       receiveNutrients()
       break;
-    case 8:
+    case 9:
       // 做主任务
       doPlantBeanTask()
       break;
-    case 9:
+    case 10:
       getPlantBeanInfo()
       break;
-    case 10:
+    case 11:
       // 收取营养液
       $.message = '开始收取营养液'
       doPlantBeanCollect()
+      break;
+    case 11:
+      // 领取京豆奖励
+      doGetReward()
       break;
     default:
       $.to = ''; $.call.pop(); $.taskStep = 1; $.self.data = undefined
@@ -651,6 +660,7 @@ function doPlantBeanCollect () {
   dealReturn('doPlantBeanCollect', $.data)
   document.write(JSON.stringify($))
 }
+
 // 偷取营养液
 function stealFriendNutrients () {
   $.call[$.call.length - 1] == 'stealFriendNutrients' || $.call.push('stealFriendNutrients')
@@ -674,6 +684,38 @@ function stealFriendNutrients () {
   dealReturn('stealFriendNutrients', $.data)
   document.write(JSON.stringify($))
 }
+
+// 领取京豆奖励
+function doGetReward () {
+  $.call[$.call.length - 1] == 'doGetReward' || $.call.push('doGetReward')
+
+  if ($.awardState == '5') {
+    $.message = '开始领取京豆奖励'
+    $.callback = 'Func.request'
+    takeRequest('doGetReward');
+    return
+
+    // next
+    $.callback = ''
+    $.call.pop()
+    dealReturn('doGetReward', $.data)
+    document.write(JSON.stringify($))
+  } else if ($.awardState == '6') {
+    $.message = '上期获得：' + $.roundList[0].awardBeans + '京豆'
+  } else {
+    $.message = '当前无京豆奖励可领取~'
+  }
+
+  $.call.pop()
+  document.write(JSON.stringify($))
+}
+
+// 助力
+function dpPlantBeanHelpTask () {
+  $.message = '助力功能暂未实现~'
+  document.write(JSON.stringify($))
+}
+
 /**
  * 做LZDZ任务 - 全利以赴 谁是囤货王
  * （暂时不知道什么玩意儿）
@@ -1630,6 +1672,10 @@ function takeRequest (type) {
       url = `https://api.m.jd.com/client.action?functionId=collectUserNutr&body=${encodeURIComponent(JSON.stringify({ "monitor_refer": "collectUserNutr", "roundId": $.currentRoundId, "paradiseUuid": $.oneTask.paradiseUuid, "monitor_source": "plant_app_plant_index", "version": "9.2.4.1" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
       myRequest = getRequest(url, body);
       break;
+    case 'getReward':
+      url = `https://api.m.jd.com/client.action?functionId=receivedBean&body=${encodeURIComponent(JSON.stringify({ "monitor_refer": "receivedBean", "roundId": $.lastRoundId, "monitor_source": "plant_app_plant_index", "version": "9.2.4.1" }))}&appid=ld&client=apple&area=19_1601_50258_51885&build=167490&clientVersion=9.3.2`;
+      myRequest = getRequest(url, body);
+      break;
     default:
       $.error = `takeRequest 错误${type}`
       console.log(`错误${type}`);
@@ -2150,6 +2196,13 @@ function dealReturn (type, data) {
         } else {
           $.message = `偷取失败：原因` + JSON.stringify(data.data)
         }
+      } else {
+        $.message = '发生错误：原因' + JSON.stringify(data)
+      }
+      break;
+    case 'getReward':
+      if (data.code == 0 && data.data) {
+        $.message = `领取成功：获得 ${data.data.awardBean} 京豆🥔`
       } else {
         $.message = '发生错误：原因' + JSON.stringify(data)
       }
