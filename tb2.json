@@ -1645,7 +1645,7 @@
     ]
   },
   "ele_dou": {
-    "version": "数据最后更新于:6.22.1",
+    "version": "数据最后更新于:6.29.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fFsYZCX",
       "alipay": "alipays://platformapi/startapp?appId=2021001110676437&page=pages/my/index",
@@ -1714,6 +1714,25 @@
           "taskUrl": "https://tb.ele.me/wow/alsc/mod/156e0df0c951c793ab121f2e?missioncollectid=36&missionid=占位符1&taskfrom=a2ogi.15063444&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.3",
           "textEnd": "str1",
           "item": ["3030001 SIMPLESIGNIN"]
+        }
+      },
+      {
+        "eleme": {
+          "title": "做新版吃货豆任务",
+          "type": "other",
+          "activateUrl": "https://h5.ele.me/restapi/biz.svip_scene/svip/engine/xSupply?params%5B%5D=%7B%22tagCode%22:%22223166%22,%22extra%22:%7B%22missionDefId%22:占位符1,%22missionCollectionId%22:36,%22missionType%22:%22占位符2%22%7D%7D&bizCode=biz_code_main&longitude=121.35623168945312&latitude=41.17439270019531&o2o_page_id=xc539zecsy89e96dwzdebha2634lgqf6_1623400808977",
+          "taskUrl": "https://tb.ele.me/wow/alsc/mod/156e0df0c951c793ab121f2e?missioncollectid=36&missionid=占位符1&taskfrom=a2ogi.15063444&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.3",
+          "textEnd": "str1",
+          "item": [
+            "4242001 SIMPLESIGNIN",
+            "234001 SIMPLESIGNIN",
+            "4932001 SIMPLESIGNIN",
+            "4702001 SIMPLESIGNIN",
+            "4192001 SIMPLESIGNIN",
+            "4708001 SIMPLESIGNIN",
+            "6280001 SIMPLESIGNIN",
+            "4206001 SIMPLESIGNIN"
+          ]
         }
       }
     ]
