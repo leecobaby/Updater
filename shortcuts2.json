@@ -504,7 +504,7 @@
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/f7fd014d42e3427eadbdda2f3c900af3",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "逛代码页为正常现象，请不要停止他~\n🔥6.24 免单时刻：买任意 15:30 20:15",
+    "notice": "逛代码页为正常现象，请不要停止他~\n近期吃货豆官方系统升级，会导致做任务不稳定。",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=饿了么-自动领豆&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
