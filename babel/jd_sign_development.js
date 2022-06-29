@@ -1747,7 +1747,7 @@ function dealReturn (type, data) {
   switch (type) {
     case 'doBeanSign':
     case 'JingDongBean':
-      if (data.code === 3) {
+      if (data.code == 3) {
         $.error = '京东商城-京豆: 失败, 原因: Cookie失效‼️'
       } else if (json.match(/跳转至拼图/)) {
         $.message = "京东商城-京豆: 失败, 需要拼图验证 ⚠️"
@@ -1765,7 +1765,7 @@ function dealReturn (type, data) {
       } else {
         if (json.match(/(已签到|新人签到)/)) {
           $.message = "京东商城-京豆: 失败, 原因: 已签过 ⚠️"
-        } else if (data.match(/人数较多|S101/)) {
+        } else if (json.match(/人数较多|S101/)) {
           $.message = "京东商城-京豆: 失败, 签到人数较多 ⚠️"
         } else {
           $.message = "京东商城-京豆: 失败, 原因: 未知 ⚠️"
