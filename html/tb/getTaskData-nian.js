@@ -45,9 +45,9 @@ function getBaseTaskData () {
     "1111": {
       "version": "数据最后更新于:11.9.1",
       "pv": {
-        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fQfRBJO",
-        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fQfRBJO",
-        "taobaolite": "taobaolite://m.tb.cn/h.fQfRBJO"
+        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fFsYZCX",
+        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fFsYZCX",
+        "taobaolite": "taobaolite://m.tb.cn/h.fFsYZCX"
       },
       "main": {
         "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -93,9 +93,9 @@ function getBaseTaskData () {
       "version": "数据最后更新于:12.31.1",
       "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
       "pv": {
-        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fQfRBJO",
-        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fQfRBJO",
-        "taobaolite": "taobaolite://m.tb.cn/h.fQfRBJO"
+        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fFsYZCX",
+        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fFsYZCX",
+        "taobaolite": "taobaolite://m.tb.cn/h.fFsYZCX"
       },
       "main": {
         "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -139,9 +139,9 @@ function getBaseTaskData () {
     "FarmSingle": {
       "version": "数据最后更新于:1.19.1",
       "pv": {
-        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fQfRBJO",
-        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fQfRBJO",
-        "taobaolite": "taobaolite://m.tb.cn/h.fQfRBJO"
+        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fFsYZCX",
+        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fFsYZCX",
+        "taobaolite": "taobaolite://m.tb.cn/h.fFsYZCX"
       },
       "main": {
         "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -196,9 +196,10 @@ function getFirstTaskData () {
         "urlScheme": `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=971&sourceType=other&hd_from_id=100085&deliveryId=`,
         "textEnd": "str1&implId=str2",
         "item": [
-          "25724 cloudsail_105_125400501040001_25724_0",
-          "25709 cloudsail_105_-540022504_25709_0",
-          "7932 linked_274_0_7932_0"
+          "12585 expo_576_123083_12585_0",
+          "18822 cloudsail_576_125400501040001_18822_0",
+          "17734 cloudsail_316_348075504690001_17734_0",
+          "10946 other_563_703018_10946_0"
         ]
       }
     },
