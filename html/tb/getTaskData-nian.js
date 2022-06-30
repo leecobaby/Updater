@@ -6,83 +6,31 @@ const items = []
 // 共用与云端已送的 fromToken
 let fromToken = ''
 
-let task = taskBaseData()
-const firstTask = [
-  {
-    "tmall": {
-      "title": "淘宝集肥料",
-      "type": "other",
-      "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=971&sourceType=other&hd_from_id=100085&deliveryId=",
-      "textEnd": "str1&implId=str2",
-      "item": [
-        "7936 cloudsail_390_125400501040001_7936_0",
-        "18823 cloudsail_373_201921503940001_18823_0",
-        "18822 cloudsail_373_125400501040001_18822_0",
-        "18125 cloudsail_283_142772500400001_18125_35",
-        "11705 cloudsail_284_147490003950001_11705_0",
-        "18822 cloudsail_333_3168730831_18822_0",
-        "17734 cloudsail_73_177558002010001_17734_35"
-      ]
-    }
-  },
-  {
-    "tmall": {
-      "title": "微博集肥料",
-      "type": "other",
-      "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=978&sourceType=other&hd_from_id=100085&deliveryId=",
-      "textEnd": "str1&implId=str2",
-      "item": [
-        "9046 other_0_0_9046_0",
-        "8015 other_213_0_8015_0",
-        "8016 other_0_105008_8016_0",
-        "8950 other_0_98013_8950_0",
-        "8950 other_0_98013_8950_1",
-        "8950 other_0_98013_8950_2",
-        "10386 other_0_100016_10386_0",
-        "10385 other_0_100015_10385_0",
-        "8855 other_0_68018_8855_0"
-      ]
-    }
-  },
-  {
-    "tmall": {
-      "title": "直播间任务",
-      "type": "other",
-      "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=406&sourceType=other&hd_from_id=100004&deliveryId=",
-      "textEnd": "str1&implId=str2",
-      "item": ["2482 other_365_0_2482_0"]
-    }
-  },
-  {
-    "tmall": {
-      "title": "集阳光任务",
-      "type": "other",
-      "urlScheme": "HTTPS://pages.tmall.com/wow/tmallfarm/act/b-browser?wh_biz=tm&spm=farm.newfarm.task.browser&disableNav=YES",
-      "textEnd": "",
-      "item": ["1 0"]
-    }
-  }
-]
+let task = getBaseTaskData()
+const firstTask = getFirstTaskData()
 
-taskHandle(data)
+taskHandle(data, ['15901', '18735', '23176'])
 // 后面会对数组对象进行操作，则需要进行深拷贝
 task[app].task[0].main.item = [...items]
 loopTime == '1' && (task[app].task = task[app].task.concat(firstTask))
 $.task = task
 document.write(JSON.stringify($))
 
-function taskHandle (data) {
+
+
+function taskHandle (data, excludeIds) {
   if (data.ret && data.ret[0] == "SUCCESS::调用成功" && data.data && data.data.model) {
     for (const item of data.data.model) {
       if (item.progress.needTimes !== '0') {
         let times = Number(item.progress.needTimes)
         for (let i = 0; i < times; i++) {
           let deliveryId = item.taskParams.deliveryId
-          if (deliveryId == '15901' || deliveryId == '18735' || deliveryId == '23176') continue;
+          if (excludeIds.includes(deliveryId)) continue;
           let title = item.assets && item.assets.title || 'null'
           let implId = item.taskParams.implId.match(/(.*)_/g) + i
           fromToken = item.taskParams.fromToken
           items.push(`${deliveryId}-${title} fromToken=${fromToken}&deliveryId=${deliveryId}&implId=${implId}`)
+          // 淘金币无法直接做同id的第二个任务
           if (app == 'Taojb') break;
         }
       }
@@ -92,7 +40,7 @@ function taskHandle (data) {
   }
 }
 
-function taskBaseData () {
+function getBaseTaskData () {
   return {
     "1111": {
       "version": "数据最后更新于:11.9.1",
@@ -230,11 +178,57 @@ function taskBaseData () {
           "main": {
             "title": "淘宝集肥料",
             "type": "other",
-            "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&spm=a217e.xzrwy.1.1&sceneId=971&sourceType=other&hd_from_id=100085&",
+            "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&spm=a217e.xzrwy.1.1&sceneId=971&sourceType=other&hd_from_id=100085&",
             "textEnd": "str1&implId=str2"
           }
         }
       ]
     },
   }
+}
+
+function getFirstTaskData () {
+  return [
+    {
+      "tmall": {
+        "title": "云端推送",
+        "type": "other",
+        "urlScheme": `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=971&sourceType=other&hd_from_id=100085&deliveryId=`,
+        "textEnd": "str1&implId=str2",
+        "item": [
+          "25724 cloudsail_105_125400501040001_25724_0",
+          "25709 cloudsail_105_-540022504_25709_0",
+          "7932 linked_274_0_7932_0"
+        ]
+      }
+    },
+    {
+      "tmall": {
+        "title": "微博集肥料",
+        "type": "other",
+        "urlScheme": `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=978&sourceType=other&hd_from_id=100085&deliveryId=`,
+        "textEnd": "str1&implId=str2",
+        "item": [
+          "9046 other_0_0_9046_0",
+          "8015 other_213_0_8015_0",
+          "8016 other_0_105008_8016_0",
+          "8950 other_0_98013_8950_0",
+          "8950 other_0_98013_8950_1",
+          "8950 other_0_98013_8950_2",
+          "10386 other_0_100016_10386_0",
+          "10385 other_0_100015_10385_0",
+          "8855 other_0_68018_8855_0"
+        ]
+      }
+    },
+    {
+      "tmall": {
+        "title": "逛逛支付宝芭芭农场",
+        "type": "other",
+        "urlScheme": `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=2349&sourceType=other&hd_from_id=100004&deliveryId=`,
+        "textEnd": "str1&implId=str2",
+        "item": ["20700 other_468_662005_20700_0"]
+      }
+    },
+  ]
 }
