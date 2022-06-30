@@ -1645,9 +1645,9 @@
     ]
   },
   "ele_dou": {
-    "version": "数据最后更新于:6.29.2",
+    "version": "数据最后更新于:6.30.1",
     "pv": {
-      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fFsYZCX",
+      "taobao": "taobao://huodong.m.taobao.com/act/snipcodeupdate.html?_ariver_appid=8251537&x_object_type=miniapp&x_miniapp_id=8251537",
       "alipay": "alipays://platformapi/startapp?appId=2021001110676437&page=pages/my/index",
       "eleme": "eleme://userCenter"
     },
@@ -1677,7 +1677,7 @@
           "title": "领券",
           "type": "other",
           "activateUrl": "https://tb.ele.me/wow/alsc/mod/d5275789de46503ba0908a9d?e=1&open_type=miniapp&inviterId=74f86c&actId=1&_ltracker_f=hjb_app_grzx&chInfo=ch_app_chsub_Photo5",
-          "taskUrl": "https://m.tb.cn/h.fGoJMMr",
+          "taskUrl": "https://m.tb.cn/h.fDI6AVe",
           "textEnd": "str1",
           "item": ["1 PAGEVIEW"]
         }
@@ -1724,6 +1724,7 @@
           "taskUrl": "https://tb.ele.me/wow/alsc/mod/156e0df0c951c793ab121f2e?missioncollectid=36&missionid=占位符1&taskfrom=a2ogi.15063444&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.3",
           "textEnd": "str1",
           "item": [
+            "4970001 SIMPLESIGNIN",
             "5792002 SIMPLESIGNIN",
             "6240001 SIMPLESIGNIN",
             "4242001 SIMPLESIGNIN",
