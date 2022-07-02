@@ -231,5 +231,19 @@ function getFirstTaskData () {
         "item": ["20700 other_468_662005_20700_0"]
       }
     },
+    {
+      "tmall": {
+        "title": "支付宝任务",
+        "type": "other",
+        "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=972&sourceType=other&hd_from_id=100085&deliveryId=",
+        "textEnd": "str1&implId=str2",
+        "item": [
+          "26573 other_225_842012_26573_0",
+          "8944 other_565_1_8944_0",
+          "8944 other_565_1_8944_1",
+          "8945 other_556_158001_8945_0"
+        ]
+      }
+    }
   ]
 }
