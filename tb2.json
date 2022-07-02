@@ -1741,12 +1741,22 @@
       },
       {
         "eleme": {
-          "title": "做超市便利任务",
+          "title": "做超市便利任务①",
           "type": "other",
           "activateUrl": "https://h5.ele.me/restapi/biz.svip_scene/svip/engine/xSupply?params%5B%5D=%7B%22tagCode%22:%22223166%22,%22extra%22:%7B%22missionDefId%22:占位符1,%22missionCollectionId%22:95,%22missionType%22:%22占位符2%22%7D%7D&bizCode=biz_code_main&longitude=121.35623168945312&latitude=41.17439270019531&o2o_page_id=xc539zecsy89e96dwzdebha2634lgqf6_1623400808977",
           "taskUrl": "https://tb.ele.me/wow/alsc/mod/156e0df0c951c793ab121f2e?missioncollectid=95&missionid=占位符1&taskfrom=page.spm&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.3",
           "textEnd": "str1",
-          "item": ["3062001 PAGEVIEW", "4506001 PAGEVIEW", "6130001 SIMPLESIGNIN"]
+          "item": ["3062001 PAGEVIEW", "4506001 PAGEVIEW"]
+        }
+      },
+      {
+        "eleme": {
+          "title": "做超市便利任务②",
+          "type": "other",
+          "activateUrl": "https://h5.ele.me/restapi/biz.svip_scene/svip/engine/xSupply?params%5B%5D=%7B%22tagCode%22:%22223166%22,%22extra%22:%7B%22missionDefId%22:占位符1,%22missionCollectionId%22:95,%22missionType%22:%22占位符2%22%7D%7D&bizCode=biz_code_main&longitude=121.35623168945312&latitude=41.17439270019531&o2o_page_id=xc539zecsy89e96dwzdebha2634lgqf6_1623400808977",
+          "taskUrl": "https://tb.ele.me/wow/alsc/mod/156e0df0c951c793ab121f2e?missioncollectid=95&missionid=占位符1&taskfrom=a2ogi.15063444&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.3",
+          "textEnd": "str1",
+          "item": ["6130001 PAGEVIEW"]
         }
       }
     ]
