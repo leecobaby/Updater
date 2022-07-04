@@ -3,19 +3,32 @@
 // const data = ``
 // const loopTime = ``
 const $ = {}
+$.Utils = Utils()
 const items = []
 // 共用与云端已送的 fromToken
 let fromToken = ''
-
+// 排除的任务 id
+let excludeIds = ['15901', '18735', '23176']
+// 格式化数据
+let dataArr = $.Utils.formatToArray(data)
 let task = getBaseTaskData()
-const firstTask = getFirstTaskData()
+const onceTask = getOnceTaskData(app)
 
-taskHandle(data, ['15901', '18735', '23176'])
-// 后面会对数组对象进行操作，则需要进行深拷贝
-task[app].task[0].main.item = [...items]
-loopTime == '1' && (task[app].task = task[app].task.concat(firstTask))
+for (let i = 0; i < dataArr.length; i++) {
+  items.length = 0
+  const data = dataArr[i];
+  taskHandle(data, excludeIds)
+  const { title, sceneId, hd_from_id } = getTaskParams(app, i)
+  let tokenTask = getTokenTaskData(app, title, sceneId, hd_from_id)
+  // 后面会对数组对象进行操作，则需要进行深拷贝
+  tokenTask.main.item = [...items]
+  task[app].task[i] = { ...tokenTask }
+}
+
 $.task = task
-document.write(JSON.stringify($))
+loopTime == '1' && (task[app].task = task[app].task.concat(onceTask))
+document.body.outerHTML = JSON.stringify($)
+
 
 
 
@@ -188,66 +201,133 @@ function getBaseTaskData () {
   }
 }
 
-function getFirstTaskData () {
-  return [
-    {
-      "tmall": {
-        "title": "云端推送",
-        "type": "other",
-        "urlScheme": `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=971&sourceType=other&hd_from_id=100085&deliveryId=`,
-        "textEnd": "str1&implId=str2",
-        "item": [
-          "15891 other_565_398011_15891_0",
-          "28898 cloudsail_92_-540022504_28898_0",
-          "18125 cloudsail_578_-311404574_18125_0",
-          "12585 expo_576_123083_12585_0",
-          "18822 cloudsail_576_125400501040001_18822_0",
-          "17734 cloudsail_316_348075504690001_17734_0",
-          "10946 other_563_703018_10946_0"
-        ]
+function getOnceTaskData (app) {
+  const data = {
+    "FarmSingle": [
+      {
+        "tmall": {
+          "title": "云端推送",
+          "type": "other",
+          "urlScheme": `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=971&sourceType=other&hd_from_id=100085&deliveryId=`,
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "15891 other_565_398011_15891_0",
+            "28898 cloudsail_92_-540022504_28898_0",
+            "18125 cloudsail_578_-311404574_18125_0",
+            "12585 expo_576_123083_12585_0",
+            "18822 cloudsail_576_125400501040001_18822_0",
+            "17734 cloudsail_316_348075504690001_17734_0",
+            "10946 other_563_703018_10946_0"
+          ]
+        }
+      },
+      {
+        "tmall": {
+          "title": "微博集肥料",
+          "type": "other",
+          "urlScheme": `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=978&sourceType=other&hd_from_id=100085&deliveryId=`,
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "9046 other_0_0_9046_0",
+            "8015 other_213_0_8015_0",
+            "8016 other_0_105008_8016_0",
+            "8950 other_0_98013_8950_0",
+            "8950 other_0_98013_8950_1",
+            "8950 other_0_98013_8950_2",
+            "10386 other_0_100016_10386_0",
+            "10385 other_0_100015_10385_0",
+            "8855 other_0_68018_8855_0"
+          ]
+        }
+      },
+      {
+        "tmall": {
+          "title": "逛逛支付宝芭芭农场",
+          "type": "other",
+          "urlScheme": `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=2349&sourceType=other&hd_from_id=100004&deliveryId=`,
+          "textEnd": "str1&implId=str2",
+          "item": ["20700 other_468_662005_20700_0"]
+        }
+      },
+      {
+        "tmall": {
+          "title": "支付宝任务",
+          "type": "other",
+          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=972&sourceType=other&hd_from_id=100085&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "26573 other_225_842012_26573_0",
+            "8944 other_565_1_8944_0",
+            "8944 other_565_1_8944_1",
+            "8945 other_556_158001_8945_0"
+          ]
+        }
       }
-    },
-    {
-      "tmall": {
-        "title": "微博集肥料",
+    ]
+  }
+  return data[app]
+}
+
+function getTokenTaskData (app, title, sceneId, hd_from_id) {
+  const data = {
+    "FarmSingle": {
+      "main": {
+        "title": title,
         "type": "other",
-        "urlScheme": `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=978&sourceType=other&hd_from_id=100085&deliveryId=`,
-        "textEnd": "str1&implId=str2",
-        "item": [
-          "9046 other_0_0_9046_0",
-          "8015 other_213_0_8015_0",
-          "8016 other_0_105008_8016_0",
-          "8950 other_0_98013_8950_0",
-          "8950 other_0_98013_8950_1",
-          "8950 other_0_98013_8950_2",
-          "10386 other_0_100016_10386_0",
-          "10385 other_0_100015_10385_0",
-          "8855 other_0_68018_8855_0"
-        ]
-      }
-    },
-    {
-      "tmall": {
-        "title": "逛逛支付宝芭芭农场",
-        "type": "other",
-        "urlScheme": `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=2349&sourceType=other&hd_from_id=100004&deliveryId=`,
-        "textEnd": "str1&implId=str2",
-        "item": ["20700 other_468_662005_20700_0"]
-      }
-    },
-    {
-      "tmall": {
-        "title": "支付宝任务",
-        "type": "other",
-        "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=972&sourceType=other&hd_from_id=100085&deliveryId=",
-        "textEnd": "str1&implId=str2",
-        "item": [
-          "26573 other_225_842012_26573_0",
-          "8944 other_565_1_8944_0",
-          "8944 other_565_1_8944_1",
-          "8945 other_556_158001_8945_0"
-        ]
+        "urlScheme": `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&spm=a217e.xzrwy.1.1&sceneId=${sceneId}&sourceType=other&hd_from_id=${hd_from_id}&`,
+        "textEnd": "str1&implId=str2"
       }
     }
-  ]
+  }
+  return data[app]
+}
+
+function getTaskParams (app, index) {
+  const data = {
+    "FarmSingle": [{ title: '淘宝集肥料', sceneId: 971, hd_from_id: 100085 }, { title: '淘宝集肥料测试', sceneId: 971, hd_from_id: 100085 }]
+  }
+  return data[app][index]
+}
+
+/**
+ * 工具类对象 - 写成函数封装形式，是想利用函数申明提前
+ * @returns object
+ */
+function Utils () {
+  return {
+    randomString (e) {
+      e = e || 32;
+      let t = "abcdef0123456789", a = t.length, n = "";
+      for (let i = 0; i < e; i++)
+        n += t.charAt(Math.floor(Math.random() * a));
+      return n
+    },
+    stringify (data) {
+      try {
+        if (typeof JSON.stringify(data) == "string") {
+          return JSON.stringify(data);
+        }
+      } catch (e) {
+        console.log(e);
+        return data;
+      }
+    },
+    randomInt (min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min)) + min;
+    },
+    formatToArray (p = []) {
+      return Array.isArray(p) ? p : [p]
+    },
+    filterArray (arr = []) {
+      return arr.filter(v => !!v)
+    },
+    getParam (url, key) {
+      const reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)", "i")
+      const r = url.match(reg)
+      if (r != null) return decodeURIComponent(r[2]);
+      return null;
+    }
+  }
 }
