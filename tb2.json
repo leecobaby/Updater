@@ -1197,7 +1197,7 @@
     ]
   },
   "FarmSingle": {
-    "version": "数据最后更新于:7.2.2",
+    "version": "数据最后更新于:7.5.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fFsYZCX",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fFsYZCX",
@@ -1236,21 +1236,6 @@
     "task": [
       {
         "tmall": {
-          "title": "新版任务",
-          "type": "other",
-          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=2488&sourceType=other&hd_from_id=100004&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "21303 linked_119_0_21303_0",
-            "21316 other_462_609011_21316_0",
-            "21252 other_120_614010_21252_0",
-            "20668 other_133_589009_20668_0",
-            "21318 other_449_583009_21318_0"
-          ]
-        }
-      },
-      {
-        "tmall": {
           "title": "淘宝集肥料",
           "type": "other",
           "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=971&sourceType=other&hd_from_id=100085&deliveryId=",
@@ -1269,6 +1254,21 @@
             "12080 other_360_633010_12080_0",
             "17065 other_76_1_17065_0",
             "7932 linked_274_0_7932_0"
+          ]
+        }
+      },
+      {
+        "tmall": {
+          "title": "闲鱼任务",
+          "type": "other",
+          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=2488&sourceType=other&hd_from_id=100004&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "21303 linked_119_0_21303_0",
+            "21316 other_462_609011_21316_0",
+            "21252 other_120_614010_21252_0",
+            "20668 other_133_589009_20668_0",
+            "21318 other_449_583009_21318_0"
           ]
         }
       },
