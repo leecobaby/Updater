@@ -10,7 +10,7 @@ let fromToken = ''
 // 排除的任务 id
 let excludeIds = ['15901', '18735', '23176']
 // 格式化数据
-let dataArr = $.Utils.formatToArray(data)
+let dataArr = $.Utils.formatToArray(data.arr || data)
 let task = getBaseTaskData()
 const onceTask = getOnceTaskData(app)
 
