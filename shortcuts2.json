@@ -224,7 +224,7 @@
     }
   },
   "FarmSingle": {
-    "version": "2.3",
+    "version": "2.4",
     "update_log": "- 新增 多条资源线路\n- 修复 线路获取错误导致指令错误的BUG\n- 更新 任务活动数据",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/blob/master/TB.FAQ.md#%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96-cookie",
@@ -233,7 +233,7 @@
     },
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/f6e53727303642dabfc76e1a7e0f3594",
+    "update": "https://www.icloud.com/shortcuts/18deae3498ba4a26bb741ba661ba80a7",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
     "notice": "指令如果弹错，请多试几次，云端线路维护当中...",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
