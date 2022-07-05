@@ -103,27 +103,27 @@
     "share_content_tip": "请输入已编码的音效文本内容\n我已经自动输入你剪贴板的内容拉\n─=≡Σ(((つ•̀ω•́)つ\n温馨提醒:请尽量分享10秒以内的音效"
   },
   "Taojb": {
-    "version": "3.0",
+    "version": "3.1",
     "update_log": "- 更新 活动数据\n- 修复 因旧活动结束无法继续运行的问题",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Taojb",
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/7ecb481e019f4e8dae7b1bf2facbce20",
+    "update": "https://www.icloud.com/shortcuts/401fec2f073e4d4ca3465a443f894ba2",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/blob/master/TB.FAQ.md#%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96-cookie",
       "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cxdbxa6",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Taojb"
     },
-    "notice": "已支持同时做:旧任务，新任务，双12任务。\n可以通过指令大厅进旧任务页。",
+    "notice": "已支持同时做:旧任务，新任务\n旧任务页已经不能进了，但能做任务....",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=淘金币自动任务&input=text&text=task",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 双12活动中...",
+      "hot": "",
       "faq": "有疑问的请查看",
       "set": "可以调整等待时间",
       "team": "",
-      "more": "🧧 1.8日抢现金红包"
+      "more": ""
     },
     "image": "https://gitcode.net/u012830258/updater/-/raw/master/image/tjb.png",
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json"
@@ -143,13 +143,13 @@
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 双12活动中...",
+      "hot": "",
       "tjb": "请配合食用",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 1.8日抢现金红包"
+      "more": ""
     }
   },
   "Jhs": {
@@ -296,7 +296,7 @@
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 1.8日抢现金红包"
+      "more": ""
     }
   },
   "Zcj": {
@@ -315,12 +315,12 @@
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 双12活动中...",
+      "hot": "",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "help": "",
       "other": "",
-      "more": "🧧 1.8日抢现金红包"
+      "more": ""
     }
   },
   "Taogg": {
@@ -339,12 +339,12 @@
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 双12活动中...",
+      "hot": "",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "help": "",
       "other": "",
-      "more": "🧧 1.8日抢现金红包"
+      "more": ""
     }
   },
   "TaoPoker": {
@@ -392,7 +392,7 @@
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 1.8日抢现金红包"
+      "more": ""
     }
   },
   "1111ys": {
@@ -445,7 +445,7 @@
       "set": "可调整等待时长",
       "help": "助力大厅已开放",
       "other": "有疑问看常见问题",
-      "more": "🧧 1.8日抢现金红包"
+      "more": ""
     }
   },
   "ltao_duck": {
@@ -778,12 +778,12 @@
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/alipay.json",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 双12活动中...",
+      "hot": "",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "help": "",
       "other": "",
-      "more": "🧧 1.8日抢现金红包"
+      "more": ""
     }
   },
   "More": {
