@@ -8,7 +8,7 @@ const items = []
 // 共用与云端已送的 fromToken
 let fromToken = ''
 // 排除的任务 id
-let excludeIds = ['15901', '18735', '23176']
+let excludeIds = ['15901', '18735', '23176', '21317']
 // 格式化数据
 let dataArr = $.Utils.formatToArray(data.arr || data)
 let task = getBaseTaskData()
@@ -202,12 +202,6 @@ function getOnceTaskData (app) {
           "urlScheme": `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=971&sourceType=other&hd_from_id=100085&deliveryId=`,
           "textEnd": "str1&implId=str2",
           "item": [
-            "15891 other_565_398011_15891_0",
-            "28898 cloudsail_92_-540022504_28898_0",
-            "18125 cloudsail_578_-311404574_18125_0",
-            "12585 expo_576_123083_12585_0",
-            "18822 cloudsail_576_125400501040001_18822_0",
-            "17734 cloudsail_316_348075504690001_17734_0",
             "10946 other_563_703018_10946_0"
           ]
         }
