@@ -202,9 +202,9 @@ function getOnceTaskData (app) {
           "urlScheme": `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=971&sourceType=other&hd_from_id=100085&deliveryId=`,
           "textEnd": "str1&implId=str2",
           "item": [
-            "15891 other_565_398011_15891_0",
-            "28898 cloudsail_92_-540022504_28898_0",
-            "18125 cloudsail_578_-311404574_18125_0",
+            "15891 other_568_911025_12359_0",
+            "28898 other_568_82028_8479_0",
+            "18125 other_354_424002_16847_1",
             "12585 expo_576_123083_12585_0",
             "18822 cloudsail_576_125400501040001_18822_0",
             "17734 cloudsail_316_348075504690001_17734_0",
@@ -239,20 +239,6 @@ function getOnceTaskData (app) {
           "textEnd": "str1&implId=str2",
           "item": ["20700 other_468_662005_20700_0"]
         }
-      },
-      {
-        "tmall": {
-          "title": "支付宝任务",
-          "type": "other",
-          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=972&sourceType=other&hd_from_id=100085&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": [
-            "26573 other_225_842012_26573_0",
-            "8944 other_565_1_8944_0",
-            "8944 other_565_1_8944_1",
-            "8945 other_556_158001_8945_0"
-          ]
-        }
       }
     ]
   }
@@ -275,7 +261,11 @@ function getTokenTaskData (app, title, sceneId, hd_from_id) {
 
 function getTaskParams (app, index) {
   const data = {
-    "FarmSingle": [{ title: '淘宝集肥料', sceneId: 971, hd_from_id: 100085 }, { title: '闲鱼任务', sceneId: 2488, hd_from_id: 100085 }]
+    "FarmSingle": [
+      { title: '淘宝集肥料', sceneId: 971, hd_from_id: 100085 },
+      { title: '支付宝任务', sceneId: 972, hd_from_id: 100085 },
+      { title: '闲鱼任务', sceneId: 2488, hd_from_id: 100085 }
+    ]
   }
   return data[app][index]
 }
