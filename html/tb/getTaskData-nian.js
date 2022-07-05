@@ -131,24 +131,7 @@ function getBaseTaskData () {
         "天猫": "tmall",
         "淘宝特价版": "taobaolite"
       },
-      "task": [
-        {
-          "main": {
-            "title": "每日任务(旧)",
-            "type": "energy",
-            "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&spm=a217e.xzrwy.1.1&sceneId=1946&sourceType=other&hd_from_id=100089&",
-            "textEnd": "str2"
-          }
-        },
-        {
-          "main": {
-            "title": "每日任务(新)",
-            "type": "energy",
-            "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&spm=a217e.xzrwy.1.1&sceneId=2141&sourceType=other&hd_from_id=100089&",
-            "textEnd": "str2"
-          }
-        }
-      ]
+      "task": []
     },
     "FarmSingle": {
       "version": "数据最后更新于:1.19.1",
@@ -240,6 +223,51 @@ function getOnceTaskData (app) {
           "item": ["20700 other_468_662005_20700_0"]
         }
       }
+    ],
+    "Taojb": [
+      {
+        "other": {
+          "title": "做其他任务",
+          "type": "other",
+          "urlScheme": `HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=${fromToken}&spm=a217e.xzrwy.1.1&sceneId=2239&sourceType=other&hd_from_id=100089&deliveryId=`,
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "17746 other_101_490008_17746_0",
+            "17749 other_101_455007_17749_0"
+          ]
+        }
+      },
+      {
+        "cloud": {
+          "title": "云端推送",
+          "type": "cloud",
+          "urlScheme": `HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=${fromToken}&spm=a217e.xzrwy.1.1&sceneId=1946&sourceType=other&hd_from_id=100089&deliveryId=`,
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "21275 cloudsail_20_3452898728_21275_0",
+            "17542 cloudsail_120_125400501040001_17542_0",
+            "14556 tpp_195_339581503446_14556_0"
+          ]
+        }
+      },
+      {
+        "shop": {
+          "title": "逛店铺",
+          "type": "shop",
+          "urlScheme": "HTTPS://pages.tmall.com/wow/z/tmtjb/tjbshop/coin_shops_task?wh_biz=tm&disableNav=YES&shopId=316875470&wh_dataservice=false&topIds=627271339615,606672835326,625829607411&spm=a217e.17632374&sourceId=",
+          "textEnd": "str1",
+          "item": [
+            "2027551265 0",
+            "3173651031 0",
+            "767303689 0",
+            "439649406 0",
+            "3081047815 0",
+            "1803764140 0",
+            "3055672510 0",
+            "304639978 0"
+          ]
+        }
+      }
     ]
   }
   return data[app]
@@ -248,6 +276,14 @@ function getOnceTaskData (app) {
 function getTokenTaskData (app, title, sceneId, hd_from_id) {
   const data = {
     "FarmSingle": {
+      "main": {
+        "title": title,
+        "type": "other",
+        "urlScheme": `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&spm=a217e.xzrwy.1.1&sceneId=${sceneId}&sourceType=other&hd_from_id=${hd_from_id}&`,
+        "textEnd": "str2"
+      }
+    },
+    "Taojb": {
       "main": {
         "title": title,
         "type": "other",
@@ -265,6 +301,10 @@ function getTaskParams (app, index) {
       { title: '淘宝集肥料', sceneId: 971, hd_from_id: 100085 },
       { title: '支付宝任务', sceneId: 972, hd_from_id: 100085 },
       { title: '闲鱼任务', sceneId: 2488, hd_from_id: 100085 }
+    ]
+    "Taojb": [
+      { title: '每日任务(旧)', sceneId: 1946, hd_from_id: 100089 },
+      { title: '每日任务(新)', sceneId: 2141, hd_from_id: 100089 }
     ]
   }
   return data[app][index]
