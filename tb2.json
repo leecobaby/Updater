@@ -1,6 +1,6 @@
 {
   "Taojb": {
-    "version": "数据最后更新于:12.31.1",
+    "version": "数据最后更新于:7.5.1",
     "image": "https://gitee.com/leecogit/Updater/raw/master/image/tjb.png",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fFsYZCX",
@@ -36,7 +36,7 @@
         "other": {
           "title": "做其他任务",
           "type": "other",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.xzrwy.1.1&sceneId=2239&sourceType=other&hd_from_id=100089&deliveryId=",
+          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.xzrwy.1.1&sceneId=2239&sourceType=other&hd_from_id=100089&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": ["17746 other_101_490008_17746_0", "17749 other_101_455007_17749_0"]
         }
@@ -45,7 +45,7 @@
         "cloud": {
           "title": "云端推送",
           "type": "cloud",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.xzrwy.1.1&sceneId=1946&sourceType=other&hd_from_id=100089&deliveryId=",
+          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.xzrwy.1.1&sceneId=1946&sourceType=other&hd_from_id=100089&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "21275 cloudsail_20_3452898728_21275_0",
@@ -76,7 +76,7 @@
         "energy": {
           "title": "每日任务(新) - 可能需要令牌模式才有用",
           "type": "energy",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.xzrwy.1.1&sceneId=2141&sourceType=other&hd_from_id=100089&deliveryId=",
+          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.xzrwy.1.1&sceneId=2141&sourceType=other&hd_from_id=100089&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "18748 other_77_1_18748_0",
@@ -90,7 +90,7 @@
         "energy": {
           "title": "每日任务(旧) - 可能需要令牌模式才有用",
           "type": "energy",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.xzrwy.1.1&sceneId=1946&sourceType=other&hd_from_id=100089&deliveryId=",
+          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.xzrwy.1.1&sceneId=1946&sourceType=other&hd_from_id=100089&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "20113 other_18_578016_20113_0",
@@ -185,7 +185,7 @@
         "shop": {
           "title": "逛店铺Ⅰ ⑧次",
           "type": "shop",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&hd_from_id=100079&sceneId=885&deliveryId=",
+          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&hd_from_id=100079&sceneId=885&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "7939 cloudSailAd_0_404595571_7939_0",
@@ -424,7 +424,7 @@
         "stars": {
           "title": "攒星星",
           "type": "stars",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&sourceType=other&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&sceneId=107&hd_from_id=100027&deliveryId=",
+          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&sourceType=other&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&sceneId=107&hd_from_id=100027&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "22256 other_267_922038_22256_0",
@@ -1026,7 +1026,7 @@
         "stars": {
           "title": "做喵糖主任务 - 部分任务异常不用理会",
           "type": "stars",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=2V8W5YPi77BBjX0bUY7giNovs1UdUWUD&spm=a217e.xzrwy.1.1&sceneId=2385&sourceType=other&hd_from_id=100136&deliveryId=",
+          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=2V8W5YPi77BBjX0bUY7giNovs1UdUWUD&spm=a217e.xzrwy.1.1&sceneId=2385&sourceType=other&hd_from_id=100136&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "19960 other_22_0_19960_0",
@@ -1048,7 +1048,7 @@
         "stars": {
           "title": "浏览店铺①",
           "type": "stars",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=2V8W5YPi77BBjX0bUY7giNovs1UdUWUD&spm=a217e.xzrwy.1.1&sceneId=2385&sourceType=other&hd_from_id=100136&deliveryId=",
+          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=2V8W5YPi77BBjX0bUY7giNovs1UdUWUD&spm=a217e.xzrwy.1.1&sceneId=2385&sourceType=other&hd_from_id=100136&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "20166 cloudsail_3_168696504480001_20166_0",
@@ -1068,7 +1068,7 @@
         "stars": {
           "title": "浏览店铺②",
           "type": "stars",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=egLZD9jfOOPPzBWAc8GeHbVMc6UGUgUX&spm=a217e.xzrwy.1.1&sceneId=2385&sourceType=other&hd_from_id=100136&deliveryId=",
+          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=egLZD9jfOOPPzBWAc8GeHbVMc6UGUgUX&spm=a217e.xzrwy.1.1&sceneId=2385&sourceType=other&hd_from_id=100136&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "20167 cloudsail_3_168448002890001_20167_0",
@@ -1088,7 +1088,7 @@
         "stars": {
           "title": "浏览店铺③",
           "type": "stars",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=awLZer9I00Ed6nwafk7Dcla5HkUzUNU7&spm=a217e.xzrwy.1.1&sceneId=2385&sourceType=other&hd_from_id=100136&deliveryId=",
+          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=awLZer9I00Ed6nwafk7Dcla5HkUzUNU7&spm=a217e.xzrwy.1.1&sceneId=2385&sourceType=other&hd_from_id=100136&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "20168 cloudsail_3_169065002350001_20168_0",
@@ -1103,7 +1103,7 @@
         "stars": {
           "title": "浏览店铺④",
           "type": "stars",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=awLZer9I00Ed6nwafk7Dcla5HkUzUNU7&spm=a217e.xzrwy.1.1&sceneId=2385&sourceType=other&hd_from_id=100136&deliveryId=",
+          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=awLZer9I00Ed6nwafk7Dcla5HkUzUNU7&spm=a217e.xzrwy.1.1&sceneId=2385&sourceType=other&hd_from_id=100136&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "20533 cloudsail_0_167495502140001_20533_0",
@@ -1123,7 +1123,7 @@
         "stars": {
           "title": "云端推送",
           "type": "stars",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&spm=a217e.xzrwy.1.1&sceneId=2385&sourceType=other&hd_from_id=100136&",
+          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&spm=a217e.xzrwy.1.1&sceneId=2385&sourceType=other&hd_from_id=100136&",
           "textEnd": "str2",
           "item": [
             "1 fromToken=r2rz1GgTooVkKLb1CAjJcVLAhgUBUPUr&deliveryId=20199&implId=live_3_331825504912_20199_0"
@@ -1164,7 +1164,7 @@
         "steps": {
           "title": "攒步数",
           "type": "steps",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=1148&sourceType=other&hd_from_id=100095&deliveryId=",
+          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=1148&sourceType=other&hd_from_id=100095&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "22446 other_161_664003_22446_0",
@@ -1373,7 +1373,7 @@
         "stars": {
           "title": "得次数",
           "type": "stars",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=957&sourceType=other&hd_from_id=100070&deliveryId=",
+          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=nEVprJNI2RKjxp6ZsLJuA7lS5UNUv&spm=a217e.1212.tasklist.0&sceneId=957&sourceType=other&hd_from_id=100070&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "7778 other_0_0_7778_0",
@@ -1447,7 +1447,7 @@
         "stars": {
           "title": "天猫小黑盒",
           "type": "tmall",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=1396&sourceType=other&hd_from_id=100101&deliveryId=",
+          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=1396&sourceType=other&hd_from_id=100101&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "18480 other_30_475025_18480_0",
@@ -1519,7 +1519,7 @@
         "stars": {
           "title": "日常任务",
           "type": "tmall",
-          "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=1722&sourceType=other&hd_from_id=100115&deliveryId=",
+          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=1722&sourceType=other&hd_from_id=100115&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "22501 other_0_1_22501_0",
