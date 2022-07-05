@@ -187,16 +187,7 @@ function getBaseTaskData () {
         "天猫": "tmall",
         "淘宝特价版": "taobaolite"
       },
-      "task": [
-        {
-          "main": {
-            "title": "淘宝集肥料",
-            "type": "other",
-            "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&spm=a217e.xzrwy.1.1&sceneId=971&sourceType=other&hd_from_id=100085&",
-            "textEnd": "str1&implId=str2"
-          }
-        }
-      ]
+      "task": []
     },
   }
 }
@@ -275,7 +266,7 @@ function getTokenTaskData (app, title, sceneId, hd_from_id) {
         "title": title,
         "type": "other",
         "urlScheme": `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&spm=a217e.xzrwy.1.1&sceneId=${sceneId}&sourceType=other&hd_from_id=${hd_from_id}&`,
-        "textEnd": "str1&implId=str2"
+        "textEnd": "str2"
       }
     }
   }
