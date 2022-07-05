@@ -301,7 +301,7 @@ function getTaskParams (app, index) {
       { title: '淘宝集肥料', sceneId: 971, hd_from_id: 100085 },
       { title: '支付宝任务', sceneId: 972, hd_from_id: 100085 },
       { title: '闲鱼任务', sceneId: 2488, hd_from_id: 100085 }
-    ]
+    ],
     "Taojb": [
       { title: '每日任务(旧)', sceneId: 1946, hd_from_id: 100089 },
       { title: '每日任务(新)', sceneId: 2141, hd_from_id: 100089 }

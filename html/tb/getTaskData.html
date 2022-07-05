@@ -994,10 +994,9 @@
     // 共用与云端已送的 fromToken
     let fromToken = ''
     // 排除的任务 id
-    let excludeIds = ['15901', '18735', '23176']
+    let excludeIds = ['15901', '18735', '23176', '21317']
     // 格式化数据
     let dataArr = $.Utils.formatToArray(data.arr || data)
-
     let task = getBaseTaskData()
     const onceTask = getOnceTaskData(app)
 
@@ -1079,7 +1078,16 @@
           "code": {
             "getCookieData": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/tb/getCookieData.js"
           },
-          "task": [],
+          "task": [
+            {
+              "main": {
+                "title": "做主任务 - 部分任务异常不用理会",
+                "type": "main",
+                "urlScheme": "HTTPS://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES&shop_router_ignore=true&sceneId=2368&hd_from_id=100136&",
+                "textEnd": "str2"
+              }
+            },
+          ],
         },
         "Taojb": {
           "version": "数据最后更新于:12.31.1",
@@ -1109,24 +1117,7 @@
             "天猫": "tmall",
             "淘宝特价版": "taobaolite"
           },
-          "task": [
-            {
-              "main": {
-                "title": "每日任务(旧)",
-                "type": "energy",
-                "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&spm=a217e.xzrwy.1.1&sceneId=1946&sourceType=other&hd_from_id=100089&",
-                "textEnd": "str2"
-              }
-            },
-            {
-              "main": {
-                "title": "每日任务(新)",
-                "type": "energy",
-                "urlScheme": "HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&spm=a217e.xzrwy.1.1&sceneId=2141&sourceType=other&hd_from_id=100089&",
-                "textEnd": "str2"
-              }
-            }
-          ]
+          "task": []
         },
         "FarmSingle": {
           "version": "数据最后更新于:1.19.1",
@@ -1165,8 +1156,7 @@
             "天猫": "tmall",
             "淘宝特价版": "taobaolite"
           },
-          "task": [
-          ]
+          "task": []
         },
       }
     }
@@ -1181,9 +1171,9 @@
               "urlScheme": `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=971&sourceType=other&hd_from_id=100085&deliveryId=`,
               "textEnd": "str1&implId=str2",
               "item": [
-                "15891 other_565_398011_15891_0",
-                "28898 cloudsail_92_-540022504_28898_0",
-                "18125 cloudsail_578_-311404574_18125_0",
+                "12359 other_568_911025_12359_0",
+                "8479 other_568_82028_8479_0",
+                "16847 other_354_424002_16847_1",
                 "12585 expo_576_123083_12585_0",
                 "18822 cloudsail_576_125400501040001_18822_0",
                 "17734 cloudsail_316_348075504690001_17734_0",
@@ -1218,18 +1208,49 @@
               "textEnd": "str1&implId=str2",
               "item": ["20700 other_468_662005_20700_0"]
             }
-          },
+          }
+        ],
+        "Taojb": [
           {
-            "tmall": {
-              "title": "支付宝任务",
+            "other": {
+              "title": "做其他任务",
               "type": "other",
-              "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=972&sourceType=other&hd_from_id=100085&deliveryId=",
+              "urlScheme": `HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=${fromToken}&spm=a217e.xzrwy.1.1&sceneId=2239&sourceType=other&hd_from_id=100089&deliveryId=`,
               "textEnd": "str1&implId=str2",
               "item": [
-                "26573 other_225_842012_26573_0",
-                "8944 other_565_1_8944_0",
-                "8944 other_565_1_8944_1",
-                "8945 other_556_158001_8945_0"
+                "17746 other_101_490008_17746_0",
+                "17749 other_101_455007_17749_0"
+              ]
+            }
+          },
+          {
+            "cloud": {
+              "title": "云端推送",
+              "type": "cloud",
+              "urlScheme": `HTTPS://lancome.m.tmall.com/?shop_id=115862174&shopSourceChannel=tao_ji_mu%3A4117002&adScene=202012-ad-card-wall-1&fromToken=${fromToken}&spm=a217e.xzrwy.1.1&sceneId=1946&sourceType=other&hd_from_id=100089&deliveryId=`,
+              "textEnd": "str1&implId=str2",
+              "item": [
+                "21275 cloudsail_20_3452898728_21275_0",
+                "17542 cloudsail_120_125400501040001_17542_0",
+                "14556 tpp_195_339581503446_14556_0"
+              ]
+            }
+          },
+          {
+            "shop": {
+              "title": "逛店铺",
+              "type": "shop",
+              "urlScheme": "HTTPS://pages.tmall.com/wow/z/tmtjb/tjbshop/coin_shops_task?wh_biz=tm&disableNav=YES&shopId=316875470&wh_dataservice=false&topIds=627271339615,606672835326,625829607411&spm=a217e.17632374&sourceId=",
+              "textEnd": "str1",
+              "item": [
+                "2027551265 0",
+                "3173651031 0",
+                "767303689 0",
+                "439649406 0",
+                "3081047815 0",
+                "1803764140 0",
+                "3055672510 0",
+                "304639978 0"
               ]
             }
           }
@@ -1247,6 +1268,14 @@
             "urlScheme": `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&spm=a217e.xzrwy.1.1&sceneId=${sceneId}&sourceType=other&hd_from_id=${hd_from_id}&`,
             "textEnd": "str2"
           }
+        },
+        "Taojb": {
+          "main": {
+            "title": title,
+            "type": "other",
+            "urlScheme": `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&spm=a217e.xzrwy.1.1&sceneId=${sceneId}&sourceType=other&hd_from_id=${hd_from_id}&`,
+            "textEnd": "str2"
+          }
         }
       }
       return data[app]
@@ -1254,15 +1283,23 @@
 
     function getTaskParams (app, index) {
       const data = {
-        "FarmSingle": [{ title: '淘宝集肥料', sceneId: 971, hd_from_id: 100085 }, { title: '淘宝集肥料测试', sceneId: 971, hd_from_id: 100085 }]
+        "FarmSingle": [
+          { title: '淘宝集肥料', sceneId: 971, hd_from_id: 100085 },
+          { title: '支付宝任务', sceneId: 972, hd_from_id: 100085 },
+          { title: '闲鱼任务', sceneId: 2488, hd_from_id: 100085 }
+        ],
+        "Taojb": [
+          { title: '每日任务(旧)', sceneId: 1946, hd_from_id: 100089 },
+          { title: '每日任务(新)', sceneId: 2141, hd_from_id: 100089 }
+        ]
       }
       return data[app][index]
     }
 
     /**
-   * 工具类对象 - 写成函数封装形式，是想利用函数申明提前
-   * @returns object
-   */
+     * 工具类对象 - 写成函数封装形式，是想利用函数申明提前
+     * @returns object
+     */
     function Utils () {
       return {
         randomString (e) {
