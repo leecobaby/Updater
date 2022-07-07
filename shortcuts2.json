@@ -102,12 +102,12 @@
     "share_content_tip": "请输入已编码的音效文本内容\n我已经自动输入你剪贴板的内容拉\n─=≡Σ(((つ•̀ω•́)つ\n温馨提醒:请尽量分享10秒以内的音效"
   },
   "Taojb": {
-    "version": "3.1",
-    "update_log": "- 更新 活动数据\n- 修复 因旧活动结束无法继续运行的问题",
+    "version": "3.2",
+    "update_log": "- 更新 活动数据\n- 修复 递归运行会运行到淘金币的 bug",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Taojb",
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/401fec2f073e4d4ca3465a443f894ba2",
+    "update": "https://www.icloud.com/shortcuts/8f13c12f79cc4a7b935cd1e637063c81",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/blob/master/TB.FAQ.md#%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96-cookie",
       "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cxdbxa6",
