@@ -122,7 +122,7 @@
       "faq": "有疑问的请查看",
       "set": "可以调整等待时间",
       "team": "",
-      "more": ""
+      "more": "🧧 支付宝红包"
     },
     "image": "https://gitcode.net/u012830258/updater/-/raw/master/image/tjb.png",
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json"
@@ -166,12 +166,12 @@
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 免单活动",
+      "hot": "",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": ""
+      "more": "🧧 支付宝红包"
     }
   },
   "618cat": {
@@ -214,12 +214,12 @@
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 免单活动",
+      "hot": "",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": ""
+      "more": "🧧 支付宝红包"
     }
   },
   "FarmSingle": {
@@ -242,13 +242,13 @@
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 免单活动",
+      "hot": "",
       "help": "",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": ""
+      "more": "🧧 支付宝红包"
     }
   },
   "Qmxb": {
@@ -511,12 +511,12 @@
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🔥 免单活动",
+      "hot": "",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": ""
+      "more": "🧧 支付宝红包"
     }
   },
   "cainiao_guo": {
@@ -593,13 +593,13 @@
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/jd.json",
     "code": "https://gitcode.net/u012830258/updater/-/raw/master/html/jd_sign/",
     "tip": {
-      "hot": "🧧 15日20点红包雨",
+      "hot": "",
       "faq": "有疑问的请查看",
       "set": "",
       "team": "",
       "help": "提交你的助力码",
       "other": "指令修复在这",
-      "more": ""
+      "more": "🧧 支付宝红包"
     }
   },
   "JD_zoo": {
@@ -675,12 +675,12 @@
     "code": "https://gitcode.net/u012830258/updater/-/raw/master/html/jd_fruit/",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 15日20点红包雨",
+      "hot": "",
       "faq": "有疑问的请查看",
       "set": "使用前先授权",
       "team": "",
       "other": "",
-      "more": ""
+      "more": "🧧 支付宝红包"
     }
   },
   "JD_travel": {
@@ -756,12 +756,12 @@
     "code": "https://gitcode.net/u012830258/updater/-/raw/master/html/jd_618/",
     "tip": {
       "log": "你的助力码在这",
-      "hot": "🧧 15日20点红包雨",
+      "hot": "",
       "faq": "有疑问的请查看",
       "set": "请先在这授权账号",
       "help": "提交你的助力码",
       "other": "若一直无法运行请修复指令",
-      "more": ""
+      "more": "🧧 支付宝红包"
     }
   },
   "Alipay_wufu": {
@@ -825,7 +825,8 @@
           "支付宝": "alipays://platformapi/startapp?appId=20000067&url=https%3A%2F%2Fs.click.ele.me%2Ft%3Funion_lens%3DlensId%253AOPT%25401657087648%2540210577ba_096a_181d21ee457_04fb%254001%253BeventPageId%253A20150318020002597%26%26e%3D-s021uyd907PwzH0fP4X7J0VVdm8XOjt7X8Tg0YkqOtNojQnIq4wH1EUFwnvni7FlblFaXL7LxGyvT7ivaZVsdM4FuO4pbSj05WiFojqUmJcHK3I6n0J27rvJVJngVOpA5lYxToeYtasa6k4taGKCfMrDwSg6gCtwhUGiILSmaEdYWzYaHRsZ7BYMSkbLZ4XNHreA1NpPFHRZrvbGioJDf3VzOC4fp6rAK2IGld8XKsOMmpvYBRTdUYgfYT4SfNzSOTh6pckTvk9RchP4GaZWotaPpqOACzfzgvAY12elaoYsLhSpEh4yhv08mJXcrZ3r3eYrBWDFAi80yhSajaFbc5fs7tcQUVm0Z320yY0AOPXyCGKRoH7121dDulNRhv78GLg0byLgRUpxscopZZfxxLtT11goZwqrMHl4dEi0ViNKRYF9B8GhxfsRnWkP1mKnKhppKcwapP5kFg6Lm9%26",
           "饿了么": "eleme://web?url=https%3A%2F%2Fs.click.ele.me%2Ft%3Funion_lens%3DlensId%253AOPT%25401657087648%2540210577ba_096a_181d21ee457_04fb%254001%253BeventPageId%253A20150318020002597%26%26e%3D-s021uyd907PwzH0fP4X7J0VVdm8XOjt7X8Tg0YkqOtNojQnIq4wH1EUFwnvni7FlblFaXL7LxGyvT7ivaZVsdM4FuO4pbSj05WiFojqUmJcHK3I6n0J27rvJVJngVOpA5lYxToeYtasa6k4taGKCfMrDwSg6gCtwhUGiILSmaEdYWzYaHRsZ7BYMSkbLZ4XNHreA1NpPFHRZrvbGioJDf3VzOC4fp6rAK2IGld8XKsOMmpvYBRTdUYgfYT4SfNzSOTh6pckTvk9RchP4GaZWotaPpqOACzfzgvAY12elaoYsLhSpEh4yhv08mJXcrZ3r3eYrBWDFAi80yhSajaFbc5fs7tcQUVm0Z320yY0AOPXyCGKRoH7121dDulNRhv78GLg0byLgRUpxscopZZfxxLtT11goZwqrMHl4dEi0ViNKRYF9B8GhxfsRnWkP1mKnKhppKcwapP5kFg6Lm9%26"
         }
-      }
+      },
+      "🧧 支付宝现金红包": "alipays://platformapi/startapp?appId=20000067&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fc%2Falipay-red-qrcode%2Fshared.html%3Fchannel%3Dsearch_pwd%26shareId%3D2088102986032700%26token%3D11w194707wxbnqkmg21ke2d%26campStr%3DkPPFvOxaCL3f85TiKss2wsBZgIjulHjG%26sign%3Dlj1gjQ8PxzMbaRNG5RKOee%2FhckXIyodWvTJbBTYOleI%3D%26chInfo%3Dsousuoma%26c_stype%3Dsearch_pwd"
     },
     "more2": {
       "👾 加入QQ频道": "https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&inviteCode=17PQr8&from=181074&biz=ka&shareSource=5",
