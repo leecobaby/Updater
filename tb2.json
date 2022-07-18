@@ -1658,7 +1658,7 @@
     ]
   },
   "ele_dou": {
-    "version": "数据最后更新于:7.7.2",
+    "version": "数据最后更新于:7.18.1",
     "pv": {
       "taobao": "taobao://huodong.m.taobao.com/act/snipcodeupdate.html?_ariver_appid=8251537&x_object_type=miniapp&x_miniapp_id=8251537",
       "alipay": "alipays://platformapi/startapp?appId=2021001110676437&page=pages/my/index",
@@ -1705,8 +1705,6 @@
           "item": [
             "4926001 PAGEVIEW",
             "6302001 PAGEVIEW",
-            "6450001 PAGEVIEW",
-            "6298002 PAGEVIEW",
             "6300001 PAGEVIEW",
             "6184001 PAGEVIEW",
             "6242001 PAGEVIEW",
