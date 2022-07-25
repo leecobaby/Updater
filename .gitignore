@@ -1,6 +1,8 @@
 Updater.code-workspace
 .DS_Store
 node_modules
+myself
+
 
 # Editor directories and files
 .idea

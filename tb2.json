@@ -1658,7 +1658,7 @@
     ]
   },
   "ele_dou": {
-    "version": "数据最后更新于:7.18.1",
+    "version": "数据最后更新于:7.25.1",
     "pv": {
       "taobao": "taobao://huodong.m.taobao.com/act/snipcodeupdate.html?_ariver_appid=8251537&x_object_type=miniapp&x_miniapp_id=8251537",
       "alipay": "alipays://platformapi/startapp?appId=2021001110676437&page=pages/my/index",
@@ -1711,43 +1711,7 @@
             "476001 PAGEVIEW",
             "5500002 PAGEVIEW",
             "3780001 PAGEVIEW",
-            "5694001 PAGEVIEW",
-            "5458001 SIMPLESIGNIN",
-            "4642001 SIMPLESIGNIN"
-          ]
-        }
-      },
-      {
-        "eleme": {
-          "title": "浏览任务",
-          "type": "other",
-          "activateUrl": "https://h5.ele.me/restapi/biz.svip_scene/svip/engine/xSupply?params[]=%7B%22tagCode%22:%22223166%22,%22extra%22:%7B%22missionDefId%22:占位符1,%22missionCollectionId%22:170,%22missionType%22:%22占位符2%22%7D%7D&bizCode=biz_code_main&longitude=118.639677&latitude=28.754548",
-          "taskUrl": "https://tb.ele.me/wow/alsc/mod/156e0df0c951c793ab121f2e?missioncollectid=36&missionid=占位符1&taskfrom=a2ogi.15063444&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.3",
-          "textEnd": "str1",
-          "item": ["3030001 SIMPLESIGNIN"]
-        }
-      },
-      {
-        "eleme": {
-          "title": "做新版吃货豆任务",
-          "type": "other",
-          "activateUrl": "https://h5.ele.me/restapi/biz.svip_scene/svip/engine/xSupply?params%5B%5D=%7B%22tagCode%22:%22223166%22,%22extra%22:%7B%22missionDefId%22:占位符1,%22missionCollectionId%22:36,%22missionType%22:%22占位符2%22%7D%7D&bizCode=biz_code_main&longitude=121.35623168945312&latitude=41.17439270019531&o2o_page_id=xc539zecsy89e96dwzdebha2634lgqf6_1623400808977",
-          "taskUrl": "https://tb.ele.me/wow/alsc/mod/156e0df0c951c793ab121f2e?missioncollectid=36&missionid=占位符1&taskfrom=a2ogi.15063444&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.3",
-          "textEnd": "str1",
-          "item": [
-            "6448001 SIMPLESIGNIN",
-            "3500001 SIMPLESIGNIN",
-            "4970001 SIMPLESIGNIN",
-            "5792002 SIMPLESIGNIN",
-            "6240001 SIMPLESIGNIN",
-            "4242001 SIMPLESIGNIN",
-            "234001 SIMPLESIGNIN",
-            "4932001 SIMPLESIGNIN",
-            "4702001 SIMPLESIGNIN",
-            "4192001 SIMPLESIGNIN",
-            "4708001 SIMPLESIGNIN",
-            "6280001 SIMPLESIGNIN",
-            "4206001 SIMPLESIGNIN"
+            "5694001 PAGEVIEW"
           ]
         }
       },
@@ -1769,26 +1733,6 @@
           "taskUrl": "https://tb.ele.me/wow/alsc/mod/156e0df0c951c793ab121f2e?missioncollectid=95&missionid=占位符1&taskfrom=a2ogi.15063444&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.3",
           "textEnd": "str1",
           "item": ["6130001 PAGEVIEW"]
-        }
-      },
-      {
-        "eleme": {
-          "title": "做隐藏任务",
-          "type": "other",
-          "activateUrl": "https://h5.ele.me/restapi/biz.svip_scene/svip/engine/xSupply?params%5B%5D=%7B%22tagCode%22:%22223166%22,%22extra%22:%7B%22missionDefId%22:占位符1,%22missionCollectionId%22:36,%22missionType%22:%22占位符2%22%7D%7D&bizCode=biz_code_main&longitude=121.35623168945312&latitude=41.17439270019531&o2o_page_id=xc539zecsy89e96dwzdebha2634lgqf6_1623400808977",
-          "taskUrl": "https://tb.ele.me/wow/alsc/mod/156e0df0c951c793ab121f2e?missioncollectid=36&missionid=占位符1&taskfrom=a2ogi.15063444&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.3",
-          "textEnd": "str1",
-          "item": [
-            "3030001 SIMPLESIGNIN",
-            "4098001 SIMPLESIGNIN",
-            "1150001 SIMPLESIGNIN",
-            "4182001 SIMPLESIGNIN",
-            "4238001 SIMPLESIGNIN",
-            "4648001 SIMPLESIGNIN",
-            "5792002 SIMPLESIGNIN",
-            "4624002 SIMPLESIGNIN",
-            "5634001 SIMPLESIGNIN"
-          ]
         }
       }
     ]
