@@ -1681,13 +1681,13 @@
     },
     "help": {
       "gitter": "https://gitter.im/api/v1/rooms/6170e0576da03739848855d7/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=100",
-      "code": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/random_mutual_1111.js",
+      "code": "https://gitee.com/leecobaby/Updater/raw/master/html/random_mutual_1111.js",
       "link": "https://gitter.im/leecobaby-shortcuts/1111?utm_source=share-link&utm_medium=link&utm_campaign=share-link",
       "lodash": "https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"
     },
     "code": {
-      "getCookieData": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/ele/getCookieData.js",
-      "getTaskData": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/ele/getTaskData.js"
+      "getCookieData": "https://gitee.com/leecobaby/Updater/raw/master/html/ele/getCookieData.js",
+      "getTaskData": "https://gitee.com/leecobaby/Updater/raw/master/html/ele/getTaskData.js"
     },
     "app": {
       "淘宝": "taobao",
