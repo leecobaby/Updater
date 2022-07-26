@@ -45,7 +45,7 @@ function taskHandle (data) {
           simpleItems.push({
             title: showTitle,
             point: costFoodiePea,
-            url: `https://service-lv90ws2p-1251309300.sh.apigw.tencentcs.com/release/api?activityId=${app}&tk=${tk}&api=mtop.alibaba.svip.langrisser.act&app=ele&data={"callSource":"biz_code_main","latitude":"28.754654","longitude":"118.639297","resId":"223166","extra":"{\\"missionDefId\\":${missionDefId},\\"missionCollectionId\\":${missionCollectionId},\\"missionType\\":\\"SIMPLESIGNIN\\",\\"source\\":\\"mtop\\"}"}`
+            url: `https://service-lv90ws2p-1251309300.sh.apigw.tencentcs.com/release/api?activityId=${app}&tk=${tk}&api=mtop.alibaba.svip.langrisser.act&app=ele&data=${encodeURIComponent(JSON.stringify({ "callSource": "biz_code_main", "latitude": "28.754654", "longitude": "118.639297", "resId": "223166", "extra": `{\"missionDefId\":${missionDefId},\"missionCollectionId\":${missionCollectionId},\"missionType\":\"SIMPLESIGNIN\",\"source\":\"mtop\"}` }))}`
           })
         }
       }
