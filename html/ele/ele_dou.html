@@ -15,15 +15,23 @@
 
     let str1 = ''
     let str2 = ''
+    let str3 = ''
+    let str4 = ''
     let app = ''
 
     activateUrl = activateUrl.replace('占位符1', str1)
     activateUrl = activateUrl.replace('占位符2', str2)
+    activateUrl = activateUrl.replace('占位符3', str3)
+    activateUrl = activateUrl.replace('占位符4', str4)
+
     taskUrl = taskUrl.replace('占位符1', str1)
+    taskUrl = taskUrl.replace('占位符2', str2)
+    taskUrl = taskUrl.replace('占位符3', str3)
+    taskUrl = taskUrl.replace('占位符4', str4)
 
     document.write(JSON.stringify(urlScheme(app)))
 
-    function urlScheme(app) {
+    function urlScheme (app) {
       switch (app) {
         case 'taobao':
           activateUrl = 'taobao://m.taobao.com/tbopen/index.html?h5Url=' + encodeURIComponent(activateUrl)
