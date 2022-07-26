@@ -17,7 +17,7 @@ const couponTask = [
       "activateUrl": "https://tb.ele.me/wow/alsc/mod/d5275789de46503ba0908a9d?e=1&open_type=miniapp&inviterId=74f86c&actId=1&_ltracker_f=hjb_app_grzx&chInfo=ch_app_chsub_Photo5",
       "taskUrl": "https://s.click.ele.me/t?union_lens=lensId%3AOPT%401657087648%40210577ba_096a_181d21ee457_04fb%4001%3BeventPageId%3A20150318020002597&&e=-s021uyd907PwzH0fP4X7J0VVdm8XOjt7X8Tg0YkqOtNojQnIq4wH1EUFwnvni7FlblFaXL7LxGyvT7ivaZVsdM4FuO4pbSj05WiFojqUmJcHK3I6n0J27rvJVJngVOpA5lYxToeYtasa6k4taGKCfMrDwSg6gCtwhUGiILSmaEdYWzYaHRsZ7BYMSkbLZ4XNHreA1NpPFHRZrvbGioJDf3VzOC4fp6rAK2IGld8XKsOMmpvYBRTdUYgfYT4SfNzSOTh6pckTvk9RchP4GaZWotaPpqOACzfzgvAY12elaoYsLhSpEh4yhv08mJXcrZ3r3eYrBWDFAi80yhSajaFbc5fs7tcQUVm0Z320yY0AOPXyCGKRoH7121dDulNRhv78GLg0byLgRUpxscopZZfxxLtT11goZwqrMHl4dEi0ViNKRYF9B8GhxfsRnWkP1mKnKhppKcwapP5kFg6Lm9&",
       "textEnd": "str1",
-      "item": ["1 PAGEVIEW"]
+      "item": ["1 null PAGEVIEW null"]
     }
   }
 ]
