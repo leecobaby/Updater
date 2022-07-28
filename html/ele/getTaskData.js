@@ -24,6 +24,8 @@ const couponTask = [
 
 
 taskHandle(dataArr[0])
+// 追加云端任务
+simpleItems.push(...getSimpleTaskPutData())
 // 后面会对数组对象进行操作，则需要进行深拷贝
 task[app].task[0].main.item = [...items]
 
@@ -120,6 +122,8 @@ function getOnceTaskData (app) {
           "taskUrl": "https://tb.ele.me/wow/alsc/mod/156e0df0c951c793ab121f2e?missionid=占位符1&missioncollectid=占位符2&taskfrom=占位符4&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.3",
           "textEnd": "str1",
           "item": [
+            "6242001 36 PAGEVIEW a2ogi.15063444",
+            "3780001 36 PAGEVIEW a2ogi.15063444",
             "3062001 95 PAGEVIEW page.spm",
             "4506001 95 PAGEVIEW page.spm",
             "6130001 95 PAGEVIEW a2ogi.15063444"
@@ -131,6 +135,30 @@ function getOnceTaskData (app) {
   return data[app]
 }
 
+function getSimpleTaskPutData () {
+  const items = [
+    { 'missionDefId': 4098001, 'missionCollectionId': 36, 'costFoodiePea': 5 },
+    { 'missionDefId': 6280001, 'missionCollectionId': 36, 'costFoodiePea': 5 },
+    { 'missionDefId': 3030001, 'missionCollectionId': 36, 'costFoodiePea': 5 },
+    { 'missionDefId': 1150001, 'missionCollectionId': 36, 'costFoodiePea': 5 },
+    { 'missionDefId': 4182001, 'missionCollectionId': 36, 'costFoodiePea': 5 },
+    { 'missionDefId': 4238001, 'missionCollectionId': 36, 'costFoodiePea': 5 },
+    { 'missionDefId': 4648001, 'missionCollectionId': 36, 'costFoodiePea': 5 },
+    { 'missionDefId': 5792002, 'missionCollectionId': 36, 'costFoodiePea': 5 },
+    { 'missionDefId': 4624002, 'missionCollectionId': 36, 'costFoodiePea': 5 },
+    { 'missionDefId': 5634001, 'missionCollectionId': 36, 'costFoodiePea': 5 },
+  ]
+
+  return items.map(item => {
+    const { costFoodiePea, missionDefId, missionCollectionId } = item
+    return {
+      title: '云端推送 - 隐藏任务',
+      point: costFoodiePea,
+      url: `https://service-lv90ws2p-1251309300.sh.apigw.tencentcs.com/release/api?activityId=${app}&tk=${tk}&api=mtop.alibaba.svip.langrisser.act&app=ele&data=${encodeURIComponent(JSON.stringify({ "callSource": "biz_code_main", "latitude": "28.754654", "longitude": "118.639297", "resId": "223166", "extra": `{\"missionDefId\":${missionDefId},\"missionCollectionId\":${missionCollectionId},\"missionType\":\"SIMPLESIGNIN\",\"source\":\"mtop\"}` }))}`
+    }
+  })
+
+}
 
 /**
  * 工具类对象 - 写成函数封装形式，是想利用函数申明提前

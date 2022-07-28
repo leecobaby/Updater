@@ -34,10 +34,10 @@
       box.innerHTML = '正在打开红包'
     }
 
-
     var timer = setInterval(() => {
       if (ads.length) {
         var url = ads.shift()
+        // location.href = url
         window.open(url, '_self')
         box.innerHTML += '.'
         // window.location.replace(ads)
