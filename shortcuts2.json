@@ -92,7 +92,7 @@
     "api": {
       "get_ring": "http://home.80008800.xyz:90/gitee/",
       "post_ring": "http://home.80008800.xyz:90/gitee/",
-      "download": "https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/master/shortcuts/ring/"
+      "download": "https://gitcode.net/u012830258/updater/-/raw/master/shortcuts/ring/"
     },
     "update_tip": "发现新版本！请到社区或群获取更新~",
     "menu_tip": "☁️共享音效盒子☁️\n- 好咖啡要和朋友一起品尝\n- 好铃音也要和朋友一起分享",
@@ -496,16 +496,16 @@
     }
   },
   "ele_dou": {
-    "version": "1.3",
+    "version": "1.4",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/blob/master/TB.FAQ.md#%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96-cookie",
       "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cxdbxa6",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/ele_dou"
     },
-    "update_log": "- 新增 令牌模式，用来过任务的强校验，令牌模式的使用方法和其他淘宝系指令几乎一样，登录网页版饿了么抓包输入cookie就能开始做任务了。\n- 更新 饿了么指令逻辑架构",
+    "update_log": "- 新增 做每日签到任务\n- 更新 饿了么指令云端线路\n- 更新 优化指令逻辑架构",
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/52b6611636c4402c96fb5c476496167d",
+    "update": "https://www.icloud.com/shortcuts/b90c58fedf034967993b79e57298b69c",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
     "notice": "新增的令牌模式和淘宝系使用方法几乎一样，不懂的可以看视频演示~\n普通模式依然可以做任务~",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",

@@ -2,6 +2,7 @@
 // const tk = `tk`
 // data 形式为 [{},{},...]
 // const data = ``
+let asac
 const $ = {}, items = [], simpleItems = []
 $.Utils = Utils()
 // 格式化数据
@@ -22,8 +23,13 @@ const couponTask = [
   }
 ]
 
-
 taskHandle(dataArr[0])
+// 添加签到任务
+simpleItems.unshift({
+  title: '每日签到',
+  point: 'x',
+  url: `https://service-lv90ws2p-1251309300.sh.apigw.tencentcs.com/release/api?activityId=${app}&tk=${tk}&api=mtop.koubei.interactioncenter.sign.component.recordsignin&app=ele&data=${encodeURIComponent(JSON.stringify({ "bizScene": "svip_sign_scene", "latitude": "28.754654", "asac": asac, "longitude": "118.639297" }))}`
+})
 // 追加云端任务
 simpleItems.push(...getSimpleTaskPutData())
 // 后面会对数组对象进行操作，则需要进行深拷贝
@@ -40,6 +46,7 @@ function taskHandle (data) {
     const tasklist = data.data.data['224166'].data
     for (const item of tasklist) {
       const { missionDefId, missionCollectionId, missionType, pageSpm, receiveStatus, showTitle, costFoodiePea } = item
+      asac = item.asac
       if (receiveStatus === 'TORECEIVE') {
         if (missionType === 'PAGEVIEW') {
           items.push(`${missionDefId} ${missionCollectionId} ${missionType} ${pageSpm}`)
@@ -137,6 +144,7 @@ function getOnceTaskData (app) {
 
 function getSimpleTaskPutData () {
   const items = [
+    { 'missionDefId': 4242001, 'missionCollectionId': 36, 'costFoodiePea': 5 },
     { 'missionDefId': 4098001, 'missionCollectionId': 36, 'costFoodiePea': 5 },
     { 'missionDefId': 6280001, 'missionCollectionId': 36, 'costFoodiePea': 5 },
     { 'missionDefId': 3030001, 'missionCollectionId': 36, 'costFoodiePea': 5 },

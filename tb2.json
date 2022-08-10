@@ -1658,7 +1658,7 @@
     ]
   },
   "ele_dou": {
-    "version": "数据最后更新于:7.28.1",
+    "version": "数据最后更新于:8.10.1",
     "pv": {
       "taobao": "taobao://huodong.m.taobao.com/act/snipcodeupdate.html?_ariver_appid=8251537&x_object_type=miniapp&x_miniapp_id=8251537",
       "alipay": "alipays://platformapi/startapp?appId=2021001110676437&page=pages/my/index",
@@ -1725,6 +1725,7 @@
             "5694001 36 PAGEVIEW a2ogi.15063444",
             "3062001 95 PAGEVIEW page.spm",
             "4506001 95 PAGEVIEW page.spm",
+            "1392002 95 PAGEVIEW page.spm",
             "6130001 95 PAGEVIEW a2ogi.15063444"
           ]
         }
@@ -1736,7 +1737,7 @@
     "pv": "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fm.tb.cn%2Fh.f57BIpL%3Fsm%3D4560b2",
     "endJump": "taobao://page.cainiao.com/mcn/cainiao-score/web/index.html",
     "codeUrl": {
-      "CryptoJS": "https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.js",
+      "CryptoJS": "https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.min.js",
       "cainiao_guo": "https://gitee.com/leecobaby/Updater/raw/master/dist/cainiao_guo.js",
       "cainiao_guo_development": "https://gitee.com/leecobaby/Updater/raw/master/dist/cainiao_guo_development.js",
       "checkCookie": "https://gitee.com/leecobaby/Updater/raw/master/dist/checkCookie.js"
