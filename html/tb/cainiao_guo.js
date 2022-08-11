@@ -383,7 +383,7 @@ function takeRequest (type) {
   let body = ``, myRequest = ``, url = ``, headers = ``
   switch (type) {
     case 'doSimpleTask':
-      url = `https://service-lv90ws2p-1251309300.sh.apigw.tencentcs.com/release/api?activityId=cainiao_guo&tk=${$.tk}`
+      url = `https://service-daubfate-1251309300.gz.apigw.tencentcs.com/release/api?activityId=cainiao_guo&tk=${$.tk}`
       myRequest = getRequest(url);
       break;
     case 'taskInitForFarm':

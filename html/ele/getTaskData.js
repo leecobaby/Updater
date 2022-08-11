@@ -28,7 +28,7 @@ taskHandle(dataArr[0])
 simpleItems.unshift({
   title: '每日签到',
   point: 'x',
-  url: `https://service-lv90ws2p-1251309300.sh.apigw.tencentcs.com/release/api?activityId=${app}&tk=${tk}&api=mtop.koubei.interactioncenter.sign.component.recordsignin&app=ele&data=${encodeURIComponent(JSON.stringify({ "bizScene": "svip_sign_scene", "latitude": "28.754654", "asac": asac, "longitude": "118.639297" }))}`
+  url: `https://service-daubfate-1251309300.gz.apigw.tencentcs.com/release/api?activityId=${app}&tk=${tk}&api=mtop.koubei.interactioncenter.sign.component.recordsignin&app=ele&data=${encodeURIComponent(JSON.stringify({ "bizScene": "svip_sign_scene", "latitude": "28.754654", "asac": asac, "longitude": "118.639297" }))}`
 })
 // 追加云端任务
 simpleItems.push(...getSimpleTaskPutData())
@@ -54,7 +54,7 @@ function taskHandle (data) {
           simpleItems.push({
             title: showTitle,
             point: costFoodiePea,
-            url: `https://service-lv90ws2p-1251309300.sh.apigw.tencentcs.com/release/api?activityId=${app}&tk=${tk}&api=mtop.alibaba.svip.langrisser.act&app=ele&data=${encodeURIComponent(JSON.stringify({ "callSource": "biz_code_main", "latitude": "28.754654", "longitude": "118.639297", "resId": "223166", "extra": `{\"missionDefId\":${missionDefId},\"missionCollectionId\":${missionCollectionId},\"missionType\":\"SIMPLESIGNIN\",\"source\":\"mtop\"}` }))}`
+            url: `https://service-daubfate-1251309300.gz.apigw.tencentcs.com/release/api?activityId=${app}&tk=${tk}&api=mtop.alibaba.svip.langrisser.act&app=ele&data=${encodeURIComponent(JSON.stringify({ "callSource": "biz_code_main", "latitude": "28.754654", "longitude": "118.639297", "resId": "223166", "extra": `{\"missionDefId\":${missionDefId},\"missionCollectionId\":${missionCollectionId},\"missionType\":\"SIMPLESIGNIN\",\"source\":\"mtop\"}` }))}`
           })
         }
       }
@@ -162,7 +162,7 @@ function getSimpleTaskPutData () {
     return {
       title: '云端推送 - 隐藏任务',
       point: costFoodiePea,
-      url: `https://service-lv90ws2p-1251309300.sh.apigw.tencentcs.com/release/api?activityId=${app}&tk=${tk}&api=mtop.alibaba.svip.langrisser.act&app=ele&data=${encodeURIComponent(JSON.stringify({ "callSource": "biz_code_main", "latitude": "28.754654", "longitude": "118.639297", "resId": "223166", "extra": `{\"missionDefId\":${missionDefId},\"missionCollectionId\":${missionCollectionId},\"missionType\":\"SIMPLESIGNIN\",\"source\":\"mtop\"}` }))}`
+      url: `https://service-daubfate-1251309300.gz.apigw.tencentcs.com/release/api?activityId=${app}&tk=${tk}&api=mtop.alibaba.svip.langrisser.act&app=ele&data=${encodeURIComponent(JSON.stringify({ "callSource": "biz_code_main", "latitude": "28.754654", "longitude": "118.639297", "resId": "223166", "extra": `{\"missionDefId\":${missionDefId},\"missionCollectionId\":${missionCollectionId},\"missionType\":\"SIMPLESIGNIN\",\"source\":\"mtop\"}` }))}`
     }
   })
 
