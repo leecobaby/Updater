@@ -144,6 +144,7 @@ function getOnceTaskData (app) {
 
 function getSimpleTaskPutData () {
   const items = [
+    { 'missionDefId': 7064001, 'missionCollectionId': 36, 'costFoodiePea': 5 },
     { 'missionDefId': 4242001, 'missionCollectionId': 36, 'costFoodiePea': 5 },
     { 'missionDefId': 4098001, 'missionCollectionId': 36, 'costFoodiePea': 5 },
     { 'missionDefId': 6280001, 'missionCollectionId': 36, 'costFoodiePea': 5 },
