@@ -28,7 +28,7 @@ taskHandle(dataArr[0])
 simpleItems.unshift({
   title: '每日签到',
   point: 'x',
-  url: `https://service-daubfate-1251309300.gz.apigw.tencentcs.com/release/api?activityId=${app}&tk=${tk}&api=mtop.koubei.interactioncenter.sign.component.recordsignin&app=ele&data=${encodeURIComponent(JSON.stringify({ "bizScene": "svip_sign_scene", "latitude": "28.754654", "asac": asac, "longitude": "118.639297" }))}`
+  url: `https://service-daubfate-1251309300.gz.apigw.tencentcs.com/release/api?activityId=${app}&tk=${tk}&api=mtop.koubei.interactioncenter.sign.component.recordsignin&app=ele&data=${encodeURIComponent(JSON.stringify({ "bizScene": "svip_sign_scene", "latitude": "28.754654", "asac": "2A227051WYEVFLNT5WTFAM", "unionId": "o_PVDuCKkboOwNx_9xFOO2OM8f3c", "longitude": "118.639297" }))}`
 })
 // 追加云端任务
 simpleItems.push(...getSimpleTaskPutData())
