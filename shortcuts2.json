@@ -551,6 +551,34 @@
       "more": ""
     }
   },
+  "goofish_sign": {
+    "version": "1.0",
+    "update_log": "",
+    "about": {
+      "faq": "https://github.com/leecobaby/shortcuts/blob/master/TB.FAQ.md#%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96-cookie",
+      "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cxdbxa6",
+      "version_log": "https://github.com/leecobaby/shortcuts/tree/master/goofish_guo"
+    },
+    "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
+    "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/ff0c227f189a4342be58f060e8e658a6",
+    "notice": "初步实现自动做闲鱼币部分任务，闲鱼端其他任务将逐步更新，请关注社区~",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
+    "automation_url": "shortcuts://run-shortcut?name=闲鱼-闲鱼币自动任务&input=text&text=task",
+    "image": "https://gitcode.net/u012830258/updater/-/raw/master/image/icon-goofish.png",
+    "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json",
+    "code": "https://gitcode.net/u012830258/updater/-/raw/master/html/goofish_sign/",
+    "tip": {
+      "hongbao": "",
+      "hot": "可前往活动入口",
+      "faq": "有疑问的请查看",
+      "set": "",
+      "team": "",
+      "other": "",
+      "more": ""
+    }
+  },
   "AutoBox": {
     "version": "1.3",
     "update_log": "- 增加 计划顶置首页功能\n- 弃用 分享计划功能\n- 修复 ios15 运行的各种 bug\n- 不支持 ios13-14",

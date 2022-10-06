@@ -5,7 +5,7 @@
 const $ = {}
 $.Utils = Utils()
 const items = []
-// 共用与云端已送的 fromToken
+// 共用与云端推送的 fromToken
 let fromToken = ''
 // 排除的任务 id
 let excludeIds = ['15901', '18735', '23176', '21317']
@@ -54,6 +54,7 @@ function taskHandle (data, excludeIds) {
   }
 }
 
+// 获取基础任务数据
 function getBaseTaskData () {
   return {
     "1111": {
@@ -175,6 +176,7 @@ function getBaseTaskData () {
   }
 }
 
+// 获取云端推送的任务数据
 function getOnceTaskData (app) {
   const data = {
     "FarmSingle": [
@@ -273,6 +275,7 @@ function getOnceTaskData (app) {
   return data[app]
 }
 
+// 获取单任务的链接数据
 function getTokenTaskData (app, title, sceneId, hd_from_id) {
   const data = {
     "FarmSingle": {
@@ -295,6 +298,7 @@ function getTokenTaskData (app, title, sceneId, hd_from_id) {
   return data[app]
 }
 
+// 获取单任务相关参数
 function getTaskParams (app, index) {
   const data = {
     "FarmSingle": [
