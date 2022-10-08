@@ -64,9 +64,9 @@ function getBaseTaskData () {
     "goofish_sign": {
       "version": "数据最后更新于:10.1.1",
       "pv": {
-        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.fCvjYxu",
-        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.fCvjYxu",
-        "taobaolite": "taobaolite://m.tb.cn/h.fCvjYxu"
+        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UWS3ip9",
+        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UWS3ip9",
+        "taobaolite": "taobaolite://m.tb.cn/h.UWS3ip9"
       },
       "main": {
         "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -114,6 +114,7 @@ function getOnceTaskData (app) {
           "urlScheme": `HTTPS://pages.tmall.com/wow/z/wt/rax/sheep-wake?disableNav=YES&subSource=xmzx&sceneId=496&token=${token}&deliveryId=`,
           "textEnd": "str1&implId=str2",
           "item": [
+            "25044 other_227_776013_25044_0",
             "31566 other_410_1_31566_0",
             "24377 other_277_1_24377_0",
             "29839 other_357_1_29839_0",
