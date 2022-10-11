@@ -46,6 +46,8 @@ function taskHandle (data) {
     const tasklist = data.data.data['224166'].data
     for (const item of tasklist) {
       const { missionDefId, missionCollectionId, missionType, pageSpm, receiveStatus, showTitle, costFoodiePea } = item
+      // 部分跳转其他 app 的任务没有这个字段
+      missionType = missionType || 'PAGEVIEW'
       asac = item.asac
       if (receiveStatus === 'TORECEIVE') {
         if (missionType === 'PAGEVIEW') {
@@ -129,7 +131,6 @@ function getOnceTaskData (app) {
           "taskUrl": "https://tb.ele.me/wow/alsc/mod/156e0df0c951c793ab121f2e?missionid=占位符1&missioncollectid=占位符2&taskfrom=占位符4&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.3",
           "textEnd": "str1",
           "item": [
-            "6242001 36 PAGEVIEW a2ogi.15063444",
             "3780001 36 PAGEVIEW a2ogi.15063444",
             "3062001 95 PAGEVIEW page.spm",
             "4506001 95 PAGEVIEW page.spm",
@@ -144,18 +145,10 @@ function getOnceTaskData (app) {
 
 function getSimpleTaskPutData () {
   const items = [
-    { 'missionDefId': 7064001, 'missionCollectionId': 36, 'costFoodiePea': 5 },
     { 'missionDefId': 4242001, 'missionCollectionId': 36, 'costFoodiePea': 5 },
-    { 'missionDefId': 4098001, 'missionCollectionId': 36, 'costFoodiePea': 5 },
     { 'missionDefId': 6280001, 'missionCollectionId': 36, 'costFoodiePea': 5 },
-    { 'missionDefId': 3030001, 'missionCollectionId': 36, 'costFoodiePea': 5 },
-    { 'missionDefId': 1150001, 'missionCollectionId': 36, 'costFoodiePea': 5 },
     { 'missionDefId': 4182001, 'missionCollectionId': 36, 'costFoodiePea': 5 },
-    { 'missionDefId': 4238001, 'missionCollectionId': 36, 'costFoodiePea': 5 },
     { 'missionDefId': 4648001, 'missionCollectionId': 36, 'costFoodiePea': 5 },
-    { 'missionDefId': 5792002, 'missionCollectionId': 36, 'costFoodiePea': 5 },
-    { 'missionDefId': 4624002, 'missionCollectionId': 36, 'costFoodiePea': 5 },
-    { 'missionDefId': 5634001, 'missionCollectionId': 36, 'costFoodiePea': 5 },
   ]
 
   return items.map(item => {
