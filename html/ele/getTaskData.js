@@ -45,10 +45,8 @@ function taskHandle (data) {
   if (data.ret && data.ret[0] == "SUCCESS::调用成功" && data.data && data.data.data && data.data.data['224166'] && data.data.data['224166'].data) {
     const tasklist = data.data.data['224166'].data
     for (const item of tasklist) {
-      const { missionDefId, missionCollectionId, missionType, pageSpm, receiveStatus, showTitle, costFoodiePea } = item
-      // 部分跳转其他 app 的任务没有这个字段
-      missionType = missionType || 'PAGEVIEW'
-      asac = item.asac
+      const { missionDefId, missionCollectionId, missionType, pageSpm, receiveStatus, showTitle, costFoodiePea } = item;
+      asac = item.asac;
       if (receiveStatus === 'TORECEIVE') {
         if (missionType === 'PAGEVIEW') {
           items.push(`${missionDefId} ${missionCollectionId} ${missionType} ${pageSpm}`)
