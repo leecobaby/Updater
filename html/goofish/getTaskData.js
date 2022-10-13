@@ -64,9 +64,9 @@ function getBaseTaskData () {
     "goofish_sign": {
       "version": "数据最后更新于:10.1.1",
       "pv": {
-        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UWS3ip9",
-        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UWS3ip9",
-        "taobaolite": "taobaolite://m.tb.cn/h.UWS3ip9"
+        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UW8DpMn",
+        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UW8DpMn",
+        "taobaolite": "taobaolite://m.tb.cn/h.UW8DpMn"
       },
       "main": {
         "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
