@@ -1225,8 +1225,8 @@
       "lodash": "https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"
     },
     "code": {
-      "getCookieData": "https://gitee.com/leecobaby/Updater/raw/master/html/tb/getCookieData-nian.js",
-      "getTaskData": "https://gitee.com/leecobaby/Updater/raw/master/html/tb/getTaskData-nian.js"
+      "getCookieData": "https://gitee.com/leecobaby/Updater/raw/master/html/tb/getCookieData.js",
+      "getTaskData": "https://gitee.com/leecobaby/Updater/raw/master/html/tb/getTaskData.js"
     },
     "app": {
       "淘宝": "taobao",
@@ -1754,7 +1754,14 @@
     },
     "controller": {
       "callList": ["init"],
-      "taskList": [{ "做部分任务": "doSimpleTask" }, { "其他": "cloudTip" }]
+      "taskList": [
+        {
+          "做部分任务": "doSimpleTask"
+        },
+        {
+          "其他": "cloudTip"
+        }
+      ]
     },
     "codeList": ["doSimpleTask_next", "doSimpleTask_next_next"]
   },
