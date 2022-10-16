@@ -689,15 +689,15 @@
     }
   },
   "JD_fruit": {
-    "version": "1.7",
-    "update_log": "- 重构 指令云端架构，逻辑执行器更精简快速，减少网络压力\n- 重构 指令架构，弃用部分无意义功能",
+    "version": "1.8",
+    "update_log": "- 更新 线路判断功能\n- 兼容 ios13-16\n- 优化 浇水任务顺序，解决无法完成浇水任务的问题",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_fruit#版本日志"
     },
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/761d4bcb76734485bfbc95fa8f9a89a7",
+    "update": "https://www.icloud.com/shortcuts/10f5608092a84a95aec1adb37a42da3d",
     "notice": "更新指令后的第一次运行最好进行指令修复解决错误\n任务功能将会逐步完善，通过云端推送",
     "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
     "automation_url": "shortcuts://run-shortcut?name=京东-东东农场&input=text&text=task",
