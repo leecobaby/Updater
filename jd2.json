@@ -564,7 +564,91 @@
         { "领取累计奖励": "promote_getBadgeAward" },
         { "抽奖": "promote_raise" },
         { "每日签到": "promote_sign" },
-        { "⚠️ 火爆的同学请单独运行以下任务 ↓↓↓": "cloudTip" },
+        { "其他任务更新中...": "cloudTip" },
+        { "做店铺礼盒任务 - 测试中": "doShopTask" }
+      ]
+    }
+  },
+  "JD_1111": {
+    "version": "上次数据更新于:10.21.1",
+    "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/jKQldGZ%22%7D",
+    "endJump": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://wbbny.m.jd.com/pb/013349910/3rFiv8Sdkn7BPhk8Pw8xrgMWH6mT/index.html%22%7D",
+    "help": {
+      "gitter": "https://gitter.im/api/v1/rooms/6171836d6da0373984886132/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=100",
+      "code": "https://gitee.com/leecobaby/Updater/raw/master/html/random_mutual_jd.js",
+      "inviteLink": "https://gitter.im/leecobaby-shortcuts/jd_travel?utm_source=share-link&utm_medium=link&utm_campaign=share-link"
+    },
+    "codeUrl": {
+      "modules": "https://gitee.com/leecobaby/Updater/raw/master/dist/modules.js",
+      "checkCookie": "https://gitee.com/leecobaby/Updater/raw/master/dist/checkCookie.js",
+      "JD_1111": "https://gitee.com/leecobaby/Updater/raw/master/dist/jd_1111.js",
+      "JD_1111_next": "https://gitee.com/leecobaby/Updater/raw/master/dist/jd_1111_next.js",
+      "JD_1111_development": "https://gitee.com/leecobaby/Updater/raw/master/dist/jd_1111_development.js"
+    },
+    "authUrl": [
+      "https://me-api.jd.com/user_new/info/GetJDUserInfoUnion",
+      "https://wq.jd.com/user/info/QueryJDUserInfo?sceneval=2",
+      "https://api.m.jd.com/client.action"
+    ],
+    "api": {
+      "isLogin": {
+        "url": "https://me-api.jd.com/user_new/info/GetJDUserInfoUnion",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json,text/plain, */*",
+          "Host": "me-api.jd.com",
+          "Accept-Encoding": "gzip, deflate, br",
+          "Accept-Language": "zh-cn",
+          "Connection": "keep-alive",
+          "User-Agent": "jdapp;iPhone;10.0.6;14.4;c67093f5dd58d33fc5305cdc61e46a9741e05c5b;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
+          "Referer": "https://wqs.jd.com/my/jingdou/my.shtml?sceneval=2"
+        }
+      },
+      "isLogin1": {
+        "url": "https://wq.jd.com/user/info/QueryJDUserInfo?sceneval=2",
+        "method": "POST",
+        "headers": {
+          "Accept": "application/json,text/plain, */*",
+          "Accept-Encoding": "gzip, deflate, br",
+          "Accept-Language": "zh-cn",
+          "Connection": "keep-alive",
+          "Referer": "https://wqs.jd.com/my/jingdou/my.shtml?sceneval=2"
+        }
+      },
+      "api": {
+        "url": "https://api.m.jd.com/client.action"
+      },
+      "gitter": {
+        "url": "https://gitter.im"
+      },
+      "jdjr": {
+        "url": "https://ms.jr.jd.com"
+      }
+    },
+    "uaInfo": {
+      "UA1": {
+        "ua": "jdapp;iPhone;10.0.6;14.4;c67093f5dd58d33fc5305cdc61e46a9741e05c5b;network/4g;model/iPhone12,1;addressid/2377723269;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1"
+      }
+    },
+    "controller": {
+      "callList": [
+        "init",
+        "promote_getHomeData",
+        "promote_getTaskDetail",
+        "promote_pk_getHomeData",
+        "promote_pk_collectPkExpandScore"
+      ],
+      "taskList": [
+        { "提示:做不完任务请多运行几次": "update" },
+        { "获取云端助力码": "getHelpCode" },
+        { "做助力任务": "help" },
+        { "做组队任务": "pkHelp" },
+        { "收金币": "promote_collectAutoScore" },
+        { "做主任务": "doTaskController" },
+        { "领取累计奖励": "promote_getBadgeAward" },
+        { "抽奖": "promote_raise" },
+        { "每日签到": "promote_sign" },
+        { "其他任务更新中...": "cloudTip" },
         { "做店铺礼盒任务 - 测试中": "doShopTask" }
       ]
     }

@@ -122,7 +122,7 @@
       "faq": "有疑问的请查看",
       "set": "可以调整等待时间",
       "team": "",
-      "more": "🧧 支付宝红包"
+      "more": ""
     },
     "image": "https://gitcode.net/u012830258/updater/-/raw/master/image/tjb.png",
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json"
@@ -171,7 +171,7 @@
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 支付宝红包"
+      "more": ""
     }
   },
   "618cat": {
@@ -219,7 +219,7 @@
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 支付宝红包"
+      "more": ""
     }
   },
   "FarmSingle": {
@@ -248,7 +248,7 @@
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 支付宝红包"
+      "more": ""
     }
   },
   "Qmxb": {
@@ -520,7 +520,7 @@
       "set": "点击查看自动化操作",
       "team": "",
       "other": "",
-      "more": "🧧 支付宝红包"
+      "more": ""
     }
   },
   "cainiao_guo": {
@@ -631,7 +631,7 @@
       "team": "",
       "help": "提交你的助力码",
       "other": "指令修复在这",
-      "more": "🧧 支付宝红包"
+      "more": ""
     }
   },
   "JD_zoo": {
@@ -712,7 +712,7 @@
       "set": "使用前先授权",
       "team": "",
       "other": "",
-      "more": "🧧 支付宝红包"
+      "more": ""
     }
   },
   "JD_travel": {
@@ -793,7 +793,34 @@
       "set": "请先在这授权账号",
       "help": "提交你的助力码",
       "other": "若一直无法运行请修复指令",
-      "more": "🧧 支付宝红包"
+      "more": ""
+    }
+  },
+  "JD_1111": {
+    "version": "1.0",
+    "update_log": "- 初步实现自动任务",
+    "about": {
+      "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
+      "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_618#版本日志"
+    },
+    "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "update": "https://www.icloud.com/shortcuts/e2ccdc6ff7b64b11830afc33236ed3c4",
+    "notice": "初步实现自动任务，更多功能后续更新",
+    "video": "https://video.cdnvue.com/uploads/-2216775553683075363/video/cSWee8G",
+    "automation_url": "shortcuts://run-shortcut?name=京东-1111自动任务&input=text&text=task",
+    "image": "https://gitcode.net/u012830258/updater/-/raw/master/image/icon-jd2.jpeg",
+    "scritable": "https://gitcode.net/u012830258/updater/-/raw/master/getJDCookie-sms.js",
+    "url": "https://gitcode.net/u012830258/updater/-/raw/master/jd.json",
+    "code": "https://gitcode.net/u012830258/updater/-/raw/master/html/jd_1111/",
+    "tip": {
+      "log": "你的助力码在这",
+      "hot": "",
+      "faq": "有疑问的请查看",
+      "set": "请先在这授权账号",
+      "help": "提交你的助力码",
+      "other": "若一直无法运行请修复指令",
+      "more": ""
     }
   },
   "Alipay_wufu": {
