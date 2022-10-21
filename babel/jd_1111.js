@@ -577,11 +577,7 @@ function oneActivityInfo() {
   // 这里有链式语法糖，ios13不识别，而 next 里面语法不会被 babel
   $.callback = ''
   dealReturn('promote_collectScore', $.data)
-  if (
-    $.callbackInfo.code === 0 &&
-    $.callbackInfo.data.result &&
-    $.callbackInfo.data.result.taskToken
-  ) {
+  if ($.callbackInfo?.code === 0 && $.callbackInfo?.data?.result?.taskToken) {
     // 等待 8s
     $.wait = 8
     $.next = 1 // 覆盖前面的 0
@@ -602,7 +598,7 @@ function oneActivityInfo() {
     $.success = 1
     $.message = `任务完成`
     document.write(JSON.stringify($))
-  } else if ($.callbackInfo.data.bizCode === -1002) {
+  } else if ($.callbackInfo?.code === -40300) {
     $.error = `oneActivityInfo ${$.oneTask.taskId}/${$.oneTask.taskType} 任务失败，此账号火爆，请手动做任务等待更新~`
     document.write(JSON.stringify($))
   } else {
@@ -1098,7 +1094,7 @@ function takePostRequest(type) {
       myRequest = getPostRequest(`promote_getFeedDetail`, body)
       break
     case 'promote_collectScore':
-      body = `functionId=promote_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","random":"${random}","log":"${log}",actionType":1}&client=m&appid=signed_wh5&clientVersion=1.0.0`
+      body = `functionId=promote_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"RAhomePageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","actionType":1}&client=m&appid=signed_wh5&clientVersion=1.0.0`
       myRequest = getPostRequest(`promote_collectScore`, body)
       break
     case 'promote_getBadgeAward':

@@ -11,110 +11,53 @@
 </head>
 
 <body>
-  <script>
-    const app = `goofish_sign`
-    const tk = `tk`
-    const loopTime = 1
-    const data = {
-      "api": "mtop.taobao.idle.task.queryolivertasklist",
-      "data": {
-        "extend": {},
-        "taskList": [
-          {
-            "implId": "other_54_1_32417_0",
-            "taskBenefitDTO": { "needBenefit": "false" },
-            "rewards": [],
-            "idleTaskStatus": "ACCEPTED",
-            "progressDTO": {
-              "cdTime": "-1",
-              "maxTimes": "1",
-              "period": "54",
-              "times": "0",
-              "needTimes": "1",
-              "reachLimit": "false",
-              "loopTimes": "1"
-            },
-            "trackParams": {
-              "groupId": "13790",
-              "deliveryId": "32417",
-              "sceneId": "496",
-              "idleTaskStatus": "0"
-            },
-            "materialDTO": {
-              "extra": {},
-              "id": "1",
-              "subTitle": "闲鱼币+60 小店经验+200",
-              "acceptBtn": "去完成",
-              "desc": "60",
-              "title": "开启一件抵扣商品",
-              "action": "https://h5.m.goofish.com/app/idleFish-F2e/coin-new-ts/deduction.html",
-              "type": "other",
-              "actionType": "PLAINVISIT",
-              "icon": "https://gw.alicdn.com/imgextra/i4/O1CN01qvAjwN20OlrcPhO6i_!!6000000006840-2-tps-120-120.png",
-              "completeBtn": "已完成",
-              "awardBtn": "领取奖励",
-              "initBtn": "领取任务"
-            },
-            "fromToken": "5pnJPrMUVl8wJYo5U2zUDaduOUDUjUwUrG",
-            "deliveryId": "32417",
-            "sceneId": "496",
-            "groupId": "13790",
-            "idleTaskStatusValue": "0"
-          },
-          {
-            "implId": "other_220_776013_25044_0",
-            "taskBenefitDTO": { "needBenefit": "false" },
-            "rewards": [],
-            "sessionType": "TAOBAO_ACCOUNT",
-            "idleTaskStatus": "ACCEPTED",
-            "progressDTO": {
-              "cdTime": "-1",
-              "maxTimes": "1",
-              "period": "220",
-              "times": "0",
-              "needTimes": "1",
-              "reachLimit": "false",
-              "loopTimes": "1"
-            },
-            "trackParams": {
-              "groupId": "8628",
-              "deliveryId": "25044",
-              "sceneId": "496",
-              "idleTaskStatus": "0"
-            },
-            "materialDTO": {
-              "extra": { "version": "1", "needUpdate": "false", "compType": "custom" },
-              "id": "776013",
-              "subTitle": "闲鱼币+80 小店经验+200",
-              "acceptBtn": "去完成",
-              "weight": "1",
-              "desc": "80",
-              "title": "去天猫拿红包",
-              "action": "https://pages.tmall.com/wow/go/mx-growth/sec-flow/b6f0486728724a58be4ee871731e7885?bc_fl_src=tm2growth_tb_xianyuAPI_20220215&fcLinkId=tmall_9bvaAs177nG9uyXezztQEe&task_type=xianyuAPI&fcTaskType=xianyuBrowse&fcTaskId=129&android_skip_market=true&sceneId=496&deliveryId=25044&implId=other_220_776013_25044_0&token=X8FBZM0X7",
-              "type": "other",
-              "actionType": "VISIT",
-              "icon": "https://gw.alicdn.com/imgextra/i1/O1CN01GRQIfm1WZMW4W3cnQ_!!6000000002802-2-tps-120-120.png",
-              "completeBtn": "已完成",
-              "duration": "5",
-              "awardBtn": "领取奖励",
-              "initBtn": "领取任务"
-            },
-            "fromToken": "XONBe20CdM7px2YRU81fqapIZUPUgUeU0o",
-            "deliveryId": "25044",
-            "sceneId": "496",
-            "groupId": "8628",
-            "idleTaskStatusValue": "0"
-          }
-        ]
-      },
-      "v": "1.0",
-      "ret": ["SUCCESS::调用成功"]
-    }
 
+  <script>
+    const $ = {}
+    $.secretp = "-G2_WFL8jJ2ehXtlbdayCJLb"
+    $.joyytoken = "MDFPUUZKSjAxMQ==.fmdwfHl9YXJ/fXZkcTQNeSt0cgJ4YHUiNH59BWYJY2A4ezR+Ly0gIz8HAnshLARzBiw1PyIlJXkBAj09cmw4e3tjYHc0.dea65701"
 
   </script>
-
-  <script src="./goofish/getTaskData.js"></script>
+  <script src="../babel/jd_getLog.js"></script>
+  <script src="../dist/modules.js"></script>
+  <script>
+    function objToStr2 (jsonMap) {
+      let isFirst = true
+      let res = ""
+      for (let key in jsonMap) {
+        let keyValue = jsonMap[key]
+        if (typeof keyValue == "object") {
+          keyValue = JSON.stringify(keyValue)
+        }
+        if (isFirst) {
+          res += `${key}=${keyValue}`
+          isFirst = false
+        } else {
+          res += `&${key}=${keyValue}`
+        }
+      }
+      return res
+    }
+    console.log(JSON.stringify({
+      "taskId": 3,
+      "taskToken": "P195L6r47PBTNYCtIMjDX0FjRWnqq7zh4JCGD43XxIlD9-",
+      "actionType": 1,
+      ss: JSON.stringify(getSs($.secretp)),
+    }));
+    const body = objToStr2({
+      functionId: "promote_collectScore",
+      body: encodeURIComponent(JSON.stringify({
+        "taskId": 3,
+        "taskToken": "P195L6r47PBTNYCtIMjDX0FjRWnqq7zh4JCGD43XxIlD9-",
+        "actionType": 1,
+        ss: JSON.stringify(getSs($.secretp)),
+      })),
+      client: "m",
+      clientVersion: "1.0.0",
+      appid: "signed_wh5"
+    })
+    console.log(body);
+  </script>
 
 </body>
 
