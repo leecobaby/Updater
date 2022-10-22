@@ -118,7 +118,7 @@
     "automation_url": "shortcuts://run-shortcut?name=淘金币自动任务&input=text&text=task",
     "tip": {
       "hongbao": "",
-      "hot": "",
+      "hot": "🧧 24日抢超级红包...",
       "faq": "有疑问的请查看",
       "set": "可以调整等待时间",
       "team": "",
@@ -142,7 +142,7 @@
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "",
+      "hot": "🧧 24日抢超级红包...",
       "tjb": "请配合食用",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
@@ -166,7 +166,7 @@
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "",
+      "hot": "🧧 24日抢超级红包...",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
@@ -242,7 +242,7 @@
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "",
+      "hot": "🧧 24日抢超级红包...",
       "help": "",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
@@ -266,7 +266,7 @@
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 抢超级红包...",
+      "hot": "🧧 24日抢超级红包...",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
@@ -290,7 +290,7 @@
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 抢超级红包...",
+      "hot": "🧧 24日抢超级红包...",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
@@ -314,7 +314,7 @@
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "",
+      "hot": "🧧 24日抢超级红包...",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "help": "",
@@ -386,7 +386,7 @@
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 抢超级红包...",
+      "hot": "🧧 24日抢超级红包...",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
@@ -395,14 +395,14 @@
     }
   },
   "1111ys": {
-    "version": "1.4",
-    "update_log": "- 更新 支持攒能量部分任务\n- 支持 助力池互助",
+    "version": "1.5",
+    "update_log": "- 更新 支持赞幸运值部分任务\n- 支持 助力池互助\n- 优化 线路判断功能\n- 兼容 ios13-16",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/1111ys",
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/b96e42c71fa146ed82a9de8e394207c4s",
+    "update": "https://www.icloud.com/shortcuts/a3a0270489444ea5a3fc3d34419276c7",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "🔥 攒能量任务做完能领几个红包~",
+    "notice": "🔥 攒幸运值任务做完能领几个红包~",
     "video": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX#TGSqduI2yomWkGxSEErcHVSNnEf",
     "automation_url": "shortcuts://run-shortcut?name=淘宝红包攒能量自动任务&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
@@ -410,7 +410,7 @@
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 6.15日18:30抽5元红包",
+      "hot": "🧧 24日抢超级红包...",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
@@ -439,7 +439,7 @@
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 抢超级红包...",
+      "hot": "🧧 24日抢超级红包...",
       "faq": "有疑问的请查看",
       "set": "可调整等待时长",
       "help": "助力大厅已开放",
@@ -463,7 +463,7 @@
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 抢超级红包...",
+      "hot": "🧧 24日抢超级红包...",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
@@ -487,7 +487,7 @@
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json",
     "tip": {
       "hongbao": "",
-      "hot": "🧧 抢超级红包...",
+      "hot": "🧧 24日抢超级红包...",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
