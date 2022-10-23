@@ -1130,7 +1130,7 @@ function takePostRequest(type) {
       myRequest = getPostRequest(`promote_raise`, body)
       break
     case 'getAppId':
-      body = `functionId=factory_getStaticConfig&appid=signed_wh5&appid=signed_wh5&clientVersion=1.0.0&body={"encryptActivityId":"${$.oneShop}","channelId":1}`
+      body = `functionId=factory_getStaticConfig&appid=wh5&client=wh5&clientVersion=1.0.0&body={"encryptActivityId":"${$.oneShop}","channelId":1}`
       otherUrl = 'https://api.m.jd.com/'
       myRequest = getPostRequest(`factory_getStaticConfig`, body, otherUrl)
       break
