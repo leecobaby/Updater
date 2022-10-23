@@ -1135,7 +1135,7 @@ function takePostRequest(type) {
       myRequest = getPostRequest(`factory_getStaticConfig`, body, otherUrl)
       break
     case 'getShopHomeData':
-      body = `functionId=template_mongo_getHomeData&appid=wh5&client=wh5&clientVersion=1.0.0&body={"taskToken":"","appId":"${$.appId}","actId":"${$.oneShop}",channelId":1}`
+      body = `functionId=template_mongo_getHomeData&appid=wh5&client=wh5&clientVersion=1.0.0&body={"taskToken":"","appId":"${$.appId}","actId":"${$.oneShop}","channelId":1}`
       otherUrl = 'https://api.m.jd.com/'
       myRequest = getPostRequest(`template_mongo_getHomeData`, body, otherUrl)
       break
