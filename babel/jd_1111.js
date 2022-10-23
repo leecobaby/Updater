@@ -15,6 +15,8 @@
 // $.secretpInfo = {};
 // $.innerPkInviteList = [];
 
+$.Utils = Utils()
+
 let JD_API_HOST = `https://api.m.jd.com/client.action?functionId=`
 
 /** 下方放 call 文本，来控制函数执行 **/
@@ -80,21 +82,10 @@ function init() {
   $.taskStep = 1
   // 大牌店铺列表初始化
   $.shopList = [
-    '3Nim1gacyGYMAXmZ3Y2k5VBxaejJ',
-    '46zESrwfq44GweVpStuKbRC41Hte',
-    '2L7HSDRra3SWkaXjMuTu7t12pcD3',
-    'FMMgZP4rY1Jn8No6ecHX9iXeUMM',
-    'o1eBs9bj8uSU61u69cU23RRD1CF',
-    'MS542hXYyzw3kSpiRWc4541HEBq',
-    '32SnogmGSmooYj8fjfVEYfSZQJAh',
-    '238znECxVhPhxMo6MwBtbKymQxJ5',
-    'iWCMNDBk5LGH6vk3KUMjh4zDqxW',
-    '4Cs3hEQxMxvqJPj71yboqP8bsA6W',
-    'hntbhJys5n6ruPgxTvnkLi6uKV1',
-    '23ATdy5hbTTCBAb3EGg9jiLePwVt',
-    '2mn15qhUwtay1HC9q6zzgtKQi9hE',
-    '45jeQMDcxfrUJ4WgytKLtEanZ3aG',
-    'xyDmumXCUwrynUBKF3BWGgNmNJy'
+    'yDZdb6fw5JugKFJVEkPk88Z9kHn',
+    '2fHSe8cnuGhpjGdtonqJhHYy3tdS',
+    '4YF6HKhW6QyecKzvKXP8jw6hLvCv',
+    '46xBcwAAs7SrtRgnxnmFqWu9wGhY'
   ]
   // 丢骰子店铺列表初始化
   $.diceShopList = [
@@ -199,7 +190,7 @@ function init() {
   ]
 
   // 生成随机 UA UUID
-  $.uuid = randomString(40)
+  $.uuid = $.Utils.randomString(40)
   $.UA = `jdapp;iPhone;10.2.0;13.1.2;${$.uuid};M/5.0;network/wifi;ADID/;model/iPhone8,1;addressid/2308460611;appBuild/167853;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 13_1_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1;`
 
   $.message = `本指令作为自动化方案开源分享，并不保证他带来的任何副作用，任何副作用请自行负责，如不同意请停止使用！`
@@ -779,7 +770,7 @@ function doShopTask() {
     return
   }
 
-  // 重置抽检碎片 id
+  // 重置抽签碎片 id
   $.fragmentId = 1
   // 获取单店铺 appId
   getAppId()
@@ -1144,17 +1135,17 @@ function takePostRequest(type) {
       myRequest = getPostRequest(`factory_getStaticConfig`, body, otherUrl)
       break
     case 'getShopHomeData':
-      body = `functionId=template_mongo_getHomeData&appid=signed_wh5&clientVersion=1.0.0&body={"taskToken":"","appId":"${$.appId}","channelId":1}`
+      body = `functionId=template_mongo_getHomeData&appid=wh5&client=wh5&clientVersion=1.0.0&body={"taskToken":"","appId":"${$.appId}","actId":"${$.oneShop}",channelId":1}`
       otherUrl = 'https://api.m.jd.com/'
       myRequest = getPostRequest(`template_mongo_getHomeData`, body, otherUrl)
       break
     case 'doOneShopTask':
-      body = `functionId=template_mongo_collectScore&appid=signed_wh5&clientVersion=1.0.0&body={"taskToken":"${$.taskToken}","taskId":${$.taskId},"actionType":0,"appId":"${$.appId}","safeStr":"{\\"random\\":\\"\\",\\"sceneid\\":\\"HYJGJSh5\\",\\"log\\":\\"\\"}"}`
-      otherUrl = otherUrl = 'https://api.m.jd.com/client.action'
+      body = `functionId=template_mongo_collectScore&appid=wh5&client=wh5&clientVersion=1.0.0&body={"taskToken":"${$.taskToken}","taskId":${$.taskId},"actionType":1,"appId":"${$.appId}","random":"","log":""}`
+      otherUrl = 'https://api.m.jd.com/'
       myRequest = getPostRequest(`template_mongo_collectScore`, body, otherUrl)
       break
     case `doShopLottery`:
-      body = `functionId=template_mongo_lottery&appid=signed_wh5&clientVersion=1.0.0&body={"appId":"${$.appId}","fragmentId":${$.fragmentId}}`
+      body = `functionId=template_mongo_lottery&appid=wh5&client=wh5&clientVersion=1.0.0&body={"appId":"${$.appId}","fragmentId":${$.fragmentId},"random":"","log":""}`
       otherUrl = 'https://api.m.jd.com/'
       myRequest = getPostRequest(`template_mongo_lottery`, body, otherUrl)
       break
@@ -1661,11 +1652,48 @@ function dealReturn(type, data) {
   }
 }
 
-function randomString(e) {
-  e = e || 32
-  let t = 'abcdef0123456789',
-    a = t.length,
-    n = ''
-  for (let i = 0; i < e; i++) n += t.charAt(Math.floor(Math.random() * a))
-  return n
+/**
+ * 工具类对象 - 写成函数封装形式，是想利用函数申明提前
+ * 没有写成类的形式，是因为遵从无状态纯函数的原则
+ * @returns object
+ */
+function Utils() {
+  return {
+    /** 生成随机数 */
+    randomString(e) {
+      e = e || 32
+      let t = 'abcdef0123456789',
+        a = t.length,
+        n = ''
+      for (let i = 0; i < e; i++) n += t.charAt(Math.floor(Math.random() * a))
+      return n
+    },
+    stringify(data) {
+      try {
+        if (typeof JSON.stringify(data) == 'string') {
+          return JSON.stringify(data)
+        }
+      } catch (e) {
+        console.log(e)
+        return data
+      }
+    },
+    randomInt(min, max) {
+      min = Math.ceil(min)
+      max = Math.floor(max)
+      return Math.floor(Math.random() * (max - min)) + min
+    },
+    formatToArray(p = []) {
+      return Array.isArray(p) ? p : [p]
+    },
+    filterArray(arr = []) {
+      return arr.filter((v) => !!v)
+    },
+    getParam(url, key) {
+      const reg = new RegExp('(^|&)' + key + '=([^&]*)(&|$)', 'i')
+      const r = url.match(reg)
+      if (r != null) return decodeURIComponent(r[2])
+      return null
+    }
+  }
 }

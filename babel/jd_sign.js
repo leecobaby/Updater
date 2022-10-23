@@ -2214,6 +2214,7 @@ function dealReturn (type, data) {
 }
 /**
  * 工具类对象 - 写成函数封装形式，是想利用函数申明提前
+ * 没有写成类的形式，是因为遵从无状态纯函数的原则
  * @returns object
  */
 function Utils () {
