@@ -57,7 +57,7 @@ function taskHandle(data, excludeIds) {
 function getBaseTaskData() {
   return {
     1111: {
-      version: '数据最后更新于:11.9.1',
+      version: '数据最后更新于:10.24.1',
       pv: {
         taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.Ue51dpP',
         tmall:
@@ -72,17 +72,19 @@ function getBaseTaskData() {
       },
       home: {
         taobao:
-          'taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fhdwk%2F20211111%2Fpk20211111%3FdisableNav%3DYES',
+          'taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fhdwk%2F2022d11%2Fsinglegame%3Fwh_biz%3Dtm%26sourceType%3Dother%26disableNav%3DYES',
         tmall:
-          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fhdwk%2F20211111%2Fpk20211111%3FdisableNav%3DYES',
-        taobaolite: 'taobaolite://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES'
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fhdwk%2F2022d11%2Fsinglegame%3Fwh_biz%3Dtm%26sourceType%3Dother%26disableNav%3DYES',
+        taobaolite:
+          'taobaolite://pages.tmall.com/wow/z/hdwk/2022d11/singlegame?wh_biz=tm&sourceType=other&disableNav=YES'
       },
       end: {
         taobao:
-          'taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fhdwk%2F20211111%2Fpk20211111%3FdisableNav%3DYES',
+          'taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fhdwk%2F2022d11%2Fsinglegame%3Fwh_biz%3Dtm%26sourceType%3Dother%26disableNav%3DYES',
         tmall:
-          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fhdwk%2F20211111%2Fpk20211111%3FdisableNav%3DYES',
-        taobaolite: 'taobaolite://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES'
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fhdwk%2F2022d11%2Fsinglegame%3Fwh_biz%3Dtm%26sourceType%3Dother%26disableNav%3DYES',
+        taobaolite:
+          'taobaolite://pages.tmall.com/wow/z/hdwk/2022d11/singlegame?wh_biz=tm&sourceType=other&disableNav=YES'
       },
       app: {
         淘宝: 'taobao',
@@ -100,17 +102,7 @@ function getBaseTaskData() {
         getCookieData:
           'https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/tb/getCookieData.js'
       },
-      task: [
-        {
-          main: {
-            title: '做主任务 - 部分任务异常不用理会',
-            type: 'main',
-            urlScheme:
-              'HTTPS://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES&shop_router_ignore=true&sceneId=2368&hd_from_id=100136&',
-            textEnd: 'str2'
-          }
-        }
-      ]
+      task: []
     },
     Taojb: {
       version: '数据最后更新于:12.31.1',
@@ -306,6 +298,23 @@ function getOnceTaskData(app) {
           ]
         }
       }
+    ],
+    1111: [
+      {
+        tmall: {
+          title: '云端推送',
+          type: 'other',
+          urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=4276&sourceType=other&hd_from_id=100165&deliveryId=`,
+          textEnd: 'str1&implId=str2',
+          item: [
+            '35483 cloudsail_23_465634000430001_35483_0',
+            '35483 cloudsail_23_465634000430001_35483_1',
+            '35483 cloudsail_23_465634000430001_35483_2',
+            '35483 cloudsail_23_465634000430001_35483_3',
+            '35483 cloudsail_23_465634000430001_35483_4'
+          ]
+        }
+      }
     ]
   }
   return data[app]
@@ -329,12 +338,20 @@ function getTokenTaskData(app, title, sceneId, hd_from_id) {
         urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&spm=a217e.xzrwy.1.1&sceneId=${sceneId}&sourceType=other&hd_from_id=${hd_from_id}&`,
         textEnd: 'str2'
       }
+    },
+    1111: {
+      main: {
+        title: title,
+        type: 'other',
+        urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&spm=a217e.xzrwy.1.1&sceneId=${sceneId}&sourceType=other&hd_from_id=${hd_from_id}&`,
+        textEnd: 'str2'
+      }
     }
   }
   return data[app]
 }
 
-// 获取单任务相关参数
+// 获取令牌任务相关参数
 function getTaskParams(app, index) {
   const data = {
     FarmSingle: [
@@ -345,7 +362,8 @@ function getTaskParams(app, index) {
     Taojb: [
       { title: '每日任务(旧)', sceneId: 1946, hd_from_id: 100089 },
       { title: '每日任务(新)', sceneId: 2141, hd_from_id: 100089 }
-    ]
+    ],
+    1111: [{ title: '赚喵果', sceneId: 4276, hd_from_id: 100165 }]
   }
   return data[app][index]
 }

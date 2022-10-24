@@ -896,7 +896,7 @@
     ]
   },
   "1111": {
-    "version": "数据最后更新于:11.10.1",
+    "version": "数据最后更新于:10.24.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.Ue51dpP",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.Ue51dpP",
@@ -908,14 +908,14 @@
       "taobaolite": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F"
     },
     "home": {
-      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fhdwk%2F20211111%2Fpk20211111%3FdisableNav%3DYES",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fhdwk%2F20211111%2Fpk20211111%3FdisableNav%3DYES",
-      "taobaolite": "taobaolite://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES"
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fhdwk%2F2022d11%2Fsinglegame%3Fwh_biz%3Dtm%26sourceType%3Dother%26disableNav%3DYES",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fhdwk%2F2022d11%2Fsinglegame%3Fwh_biz%3Dtm%26sourceType%3Dother%26disableNav%3DYES",
+      "taobaolite": "taobaolite://pages.tmall.com/wow/z/hdwk/2022d11/singlegame?wh_biz=tm&sourceType=other&disableNav=YES"
     },
     "end": {
-      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fhdwk%2F20211111%2Fpk20211111%3FdisableNav%3DYES",
-      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fhdwk%2F20211111%2Fpk20211111%3FdisableNav%3DYES",
-      "taobaolite": "taobaolite://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES"
+      "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fhdwk%2F2022d11%2Fsinglegame%3Fwh_biz%3Dtm%26sourceType%3Dother%26disableNav%3DYES",
+      "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fhdwk%2F2022d11%2Fsinglegame%3Fwh_biz%3Dtm%26sourceType%3Dother%26disableNav%3DYES",
+      "taobaolite": "taobaolite://pages.tmall.com/wow/z/hdwk/2022d11/singlegame?wh_biz=tm&sourceType=other&disableNav=YES"
     },
     "app": {
       "淘宝": "taobao",
@@ -937,12 +937,14 @@
         "stars": {
           "title": "做主任务 - 部分任务异常不用理会",
           "type": "stars",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES&shop_router_ignore=true&sceneId=2368&hd_from_id=100136&fromToken=2V8W5YPi77BBjX0bUY7giNovs1UdUWUD&deliveryId=",
+          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=z6j8lx9CWJp05rM6IGkDUwNLUMUOU6UQU0&spm=a217e.1212.tasklist.0&sceneId=4276&sourceType=other&hd_from_id=100165&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
-            "19093 other_29_507006_19093_0",
-            "18721 other_56_509003_18721_0",
-            "19714 cloudsail_24_178372000490001_19714_0"
+            "34662 other_24_0_34662_0",
+            "34751 other_22_0_34751_0",
+            "34690 other_0_1148012_34690_0",
+            "34814 other_23_1154030_34814_0",
+            "34823 other_16_1174006_34823_0"
           ]
         }
       },
@@ -950,18 +952,14 @@
         "stars": {
           "title": "逛店铺① - 云端推送 - 十次",
           "type": "stars",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES&shop_router_ignore=true&sceneId=2368&hd_from_id=100136&fromToken=qMVKbroUwwW6o2vdiq9lcYg9hXhKUPU9&deliveryId=",
+          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=z6j8lx9CWJp05rM6IGkDUwNLUMUOU6UQU0&spm=a217e.1212.tasklist.0&sceneId=4276&sourceType=other&hd_from_id=100165&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
-            "21291 cloudsail_1_184650000850001_21291_0",
-            "21291 cloudsail_1_184650000850001_21291_1",
-            "21291 cloudsail_1_184650000850001_21291_2",
-            "21291 cloudsail_1_184650000850001_21291_3",
-            "21291 cloudsail_1_184650000850001_21291_4",
-            "21291 cloudsail_1_184650000850001_21291_5",
-            "21291 cloudsail_1_184650000850001_21291_6",
-            "21291 cloudsail_1_184650000850001_21291_7",
-            "21291 cloudsail_1_184650000850001_21291_8"
+            "35483 cloudsail_23_465634000430001_35483_0",
+            "35483 cloudsail_23_465634000430001_35483_1",
+            "35483 cloudsail_23_465634000430001_35483_2",
+            "35483 cloudsail_23_465634000430001_35483_3",
+            "35483 cloudsail_23_465634000430001_35483_4"
           ]
         }
       },
@@ -993,15 +991,6 @@
             "1 alipays://platformapi/startapp?appId=68687791&url=%2Fwww%2Findex.html%3Fsource%3Dtb2021d11e",
             "1 taobao://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES&qd_from=zfbsurprise&bc_fl_src=zfb_surprise&async=false&idfa=00000000-0000-0000-0000-000000000000&surge_ssr=true&afcflow=unkown"
           ]
-        }
-      },
-      {
-        "stars": {
-          "title": "超级糖果任务",
-          "type": "stars",
-          "urlScheme": "HTTPS://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES&shop_router_ignore=true&fromToken=DM0N6oRUll9gLDJwf9gVIO9pU9UdU2U8&sceneId=2380&hd_from_id=100136&deliveryId=",
-          "textEnd": "str1&implId=str2",
-          "item": ["18874 other_37_1_18874_0"]
         }
       }
     ],
