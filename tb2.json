@@ -823,7 +823,7 @@
     ]
   },
   "1111ys": {
-    "version": "数据最后更新于:10.24.1",
+    "version": "数据最后更新于:10.25.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.Ue51dpP",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.Ue51dpP",
@@ -858,7 +858,7 @@
     "task": [
       {
         "stars": {
-          "title": "浏览⑩个商品",
+          "title": "预售攒幸运-浏览①⑤个商品",
           "type": "stars",
           "urlScheme": "HTTPS://",
           "textEnd": "str2",
@@ -883,13 +883,45 @@
       },
       {
         "stars": {
-          "title": "浏览店铺",
+          "title": "预售攒幸运-浏览店铺",
           "type": "shop",
           "urlScheme": "HTTPS://",
           "textEnd": "str2",
           "item": [
             "1 s.click.taobao.com/t?e=m%3D2%26s%3DbdQ9auqjN7xw4vFB6t2Z2jAVflQIoZep%2BlE8S0T2%2BEpyINtkUhsv0C0GTSP9R0B1VVgeqm5%2FZfmm6X%2BgQI8d7OlD8PexXQHOLUZXgTD3DEdmfHizoM27dbF9SVOVuuynl8gTWNgRaxIxoIre2flE2%2BWE%2BvqKm5QaXJTDNJEcxfiiZ%2BQMlGz6FQ%3D%3D&sceneId=4259&hd_from_id=100157&deliveryId=35347&implId=other_0_1101017_35347_0&30",
             "1 mo.m.taobao.com/union/path_1664351670572?__t__=1664351975982&ep=XGTeMnTgCKYX&"
+          ]
+        }
+      },
+      {
+        "stars": {
+          "title": "红包攒能量-浏览⑩个商品",
+          "type": "stars",
+          "urlScheme": "HTTPS://",
+          "textEnd": "str2",
+          "item": [
+            "1 s.click.taobao.com/t?e=m%3D2%26s%3DoZGYyQN0atRw4vFB6t2Z2ueEDrYVVa646aU5mWYV2GpyINtkUhsv0ObffJStApnr0XYLjcYdpDym6X%2BgQI8d7OlD8PexXQHOLUZXgTD3DEdmfHizoM27dY%2FUhcH4l7r%2BaG5o8cqfJUC1G6nTqBtFBKxhiREOX5ORqZ3REVx%2Fwrqe%2FIJUp8PDyEeS5JL0qwwqhZa1paPMagZRLBgaW5udaw%3D%3D&union_lens=lensId%3AOPT%401666675297%400_56576_57c70d2b-fbe4-4364-8832-8228c9c7f058%401&",
+            "1 s.click.taobao.com/t?e=m%3D2%26s%3DV3DcK8uq6YFw4vFB6t2Z2ueEDrYVVa646aU5mWYV2GpyINtkUhsv0ObffJStApnr0XYLjcYdpDym6X%2BgQI8d7OlD8PexXQHOLUZXgTD3DEdmfHizoM27dY%2FUhcH4l7r%2BaG5o8cqfJUBVMiPo3eera2kp%2F93ui%2F5pcxmVnFdAOvTSkPeKYIteKUeS5JL0qwwqhZa1paPMagZRLBgaW5udaw%3D%3D&union_lens=lensId%3AOPT%401666675297%400_56576_57c70d2b-fbe4-4364-8832-8228c9c7f058%401&",
+            "1 s.click.taobao.com/t?e=m%3D2%26s%3Dm8wQrYnZMhxw4vFB6t2Z2ueEDrYVVa646aU5mWYV2GpyINtkUhsv0ObffJStApnr0XYLjcYdpDym6X%2BgQI8d7OlD8PexXQHOLUZXgTD3DEdmfHizoM27dY%2FUhcH4l7r%2BaG5o8cqfJUDFNZOWL0oME2zJkLepOpdkCnAKiyqFuRFnI2PUiGoI9keS5JL0qwwqhZa1paPMagZRLBgaW5udaw%3D%3D&union_lens=lensId%3AOPT%401666675297%400_56576_57c70d2b-fbe4-4364-8832-8228c9c7f058%401&",
+            "1 s.click.taobao.com/t?e=m%3D2%26s%3DG8FkP5tRAWJw4vFB6t2Z2ueEDrYVVa646aU5mWYV2GpyINtkUhsv0ObffJStApnr0XYLjcYdpDym6X%2BgQI8d7OlD8PexXQHOLUZXgTD3DEdmfHizoM27dY%2FUhcH4l7r%2BaG5o8cqfJUDa%2F8tx%2B8XS1EjlxzbMN1vavl2ziGDZgcLt0VXSaT0c4EeS5JL0qwwqhZa1paPMagZRLBgaW5udaw%3D%3D&union_lens=lensId%3AOPT%401666675297%400_56576_57c70d2b-fbe4-4364-8832-8228c9c7f058%401&",
+            "1 s.click.taobao.com/t?e=m%3D2%26s%3Dqn9jtjSNR8Vw4vFB6t2Z2ueEDrYVVa64NJKoJjxtY1FyINtkUhsv0ObffJStApnr0XYLjcYdpDym6X%2BgQI8d7OlD8PexXQHOLUZXgTD3DEdmfHizoM27dY%2FUhcH4l7r%2BaG5o8cqfJUDnNdXQR0pbXVBjyfUXpAmIx05slY8sVnpWXU%2Bs5ZHbe54bfKFvqFW1NBxHHwTdMa9rgxNjgmn1Y8Yl7w3%2FA2kb&union_lens=lensId%3AOPT%401666675297%400_56576_57c70d2b-fbe4-4364-8832-8228c9c7f058%401&",
+            "1 s.click.taobao.com/t?e=m%3D2%26s%3DMYjIr%2FubfU1w4vFB6t2Z2ueEDrYVVa64NJKoJjxtY1FyINtkUhsv0ObffJStApnr0XYLjcYdpDym6X%2BgQI8d7OlD8PexXQHOLUZXgTD3DEdmfHizoM27dY%2FUhcH4l7r%2BaG5o8cqfJUCSxnbVks%2BSP14augZAnPVEi541vfg0SbylESDcp89vt0eS5JL0qwwqhZa1paPMagZRLBgaW5udaw%3D%3D&union_lens=lensId%3AOPT%401666675297%400_56576_57c70d2b-fbe4-4364-8832-8228c9c7f058%401&",
+            "1 s.click.taobao.com/t?e=m%3D2%26s%3DUWJfnn1YDJBw4vFB6t2Z2ueEDrYVVa64NJKoJjxtY1FyINtkUhsv0ObffJStApnr0XYLjcYdpDym6X%2BgQI8d7OlD8PexXQHOLUZXgTD3DEdmfHizoM27dY%2FUhcH4l7r%2BaG5o8cqfJUAkLpwxJYW%2F%2BPzrEMGGnj1BJmx9TsgI1swOgVhzOXEfRCleVsCminAmNBxHHwTdMa9rgxNjgmn1Y8Yl7w3%2FA2kb&union_lens=lensId%3AOPT%401666675297%400_56576_57c70d2b-fbe4-4364-8832-8228c9c7f058%401&",
+            "1 s.click.taobao.com/t?e=m%3D2%26s%3Dtwpg6b35w6Vw4vFB6t2Z2ueEDrYVVa64NJKoJjxtY1FyINtkUhsv0ObffJStApnr0XYLjcYdpDym6X%2BgQI8d7OlD8PexXQHOLUZXgTD3DEdmfHizoM27dY%2FUhcH4l7r%2BaG5o8cqfJUAGQh7%2FYZPaV%2FL3YeyZb%2FE6J61h1FJ7DhJZCOtCFULM70eS5JL0qwwqhZa1paPMagZRLBgaW5udaw%3D%3D&union_lens=lensId%3AOPT%401666675297%400_56576_57c70d2b-fbe4-4364-8832-8228c9c7f058%401&",
+            "1 s.click.taobao.com/t?e=m%3D2%26s%3DMr1FxuMxfXBw4vFB6t2Z2ueEDrYVVa64NJKoJjxtY1FyINtkUhsv0ObffJStApnr0XYLjcYdpDym6X%2BgQI8d7OlD8PexXQHOLUZXgTD3DEdmfHizoM27dY%2FUhcH4l7r%2BaG5o8cqfJUA6kaodu6WnKv7AGJJ%2F4IGbzaeyTxc0QgPdkenyL1gt6UeS5JL0qwwqhZa1paPMagZRLBgaW5udaw%3D%3D&union_lens=lensId%3AOPT%401666675297%400_56576_57c70d2b-fbe4-4364-8832-8228c9c7f058%401&",
+            "1 s.click.taobao.com/t?e=m%3D2%26s%3DpDaCheVV9MZw4vFB6t2Z2ueEDrYVVa646aU5mWYV2GpyINtkUhsv0ObffJStApnr0XYLjcYdpDym6X%2BgQI8d7OlD8PexXQHOLUZXgTD3DEdmfHizoM27dY%2FUhcH4l7r%2BaG5o8cqfJUBMcz3re%2BhYBrQt%2FSerO8gb7XggCHFqenECuG%2BetNx4VMedLvy03MMPNBxHHwTdMa9rgxNjgmn1Y8Yl7w3%2FA2kb&union_lens=lensId%3AOPT%401666675297%400_56576_57c70d2b-fbe4-4364-8832-8228c9c7f058%401&",
+            "1 s.click.taobao.com/t?e=m%3D2%26s%3DuNLNEV%2FTxIJw4vFB6t2Z2ueEDrYVVa646aU5mWYV2GpyINtkUhsv0ObffJStApnr2CUndNJbpFum6X%2BgQI8d7OlD8PexXQHOLUZXgTD3DEdmfHizoM27dY%2FUhcH4l7r%2BaG5o8cqfJUAqyhmzUja3NI%2Bx8y3sr5xMBGJ41L6Tu%2Fzmjp5Q3Ps%2FjEeS5JL0qwwqhZa1paPMagZRLBgaW5udaw%3D%3D&union_lens=lensId%3AOPT%401666675288%400_56576_f9683c04-4003-4ad6-a3d8-f2a96c241377%401&"
+          ]
+        }
+      },
+      {
+        "stars": {
+          "title": "红包攒能量-浏览店铺",
+          "type": "shop",
+          "urlScheme": "HTTPS://",
+          "textEnd": "str2",
+          "item": [
+            "1 s.click.taobao.com/t?e=m%3D2%26s%3DFXwOO%2FLBrgBw4vFB6t2Z2jAVflQIoZepb6cA7FSjo2fl7%2Ful9Zt1PwOCp41j2N5akVcrjGDkp8quODER%2FDavVMx5XzEu8W3mmiYaKJCxA7bfIFKmKFtggfVzCj30LSsRXhiz3%2FZFyVi1l20n0Ki7Ti995RSXr%2Fuk&sceneId=4199&hd_from_id=100157&deliveryId=35419&implId=other_0_1103022_35419_30"
           ]
         }
       }

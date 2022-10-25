@@ -395,15 +395,17 @@
     }
   },
   "1111ys": {
-    "version": "1.5",
+    "version": "1.6",
     "update_log": "- 更新 支持赞幸运值部分任务\n- 支持 助力池互助\n- 优化 线路判断功能\n- 兼容 ios13-16",
-    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/1111ys",
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
+    "about": {
+      "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
+      "video": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX",
+      "version_log": "https://github.com/leecobaby/shortcuts/tree/master/1111ys"
+    },
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/a3a0270489444ea5a3fc3d34419276c7",
-    "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "🔥 攒幸运值任务做完能领几个红包~",
-    "video": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX#TGSqduI2yomWkGxSEErcHVSNnEf",
+    "update": "https://www.icloud.com/shortcuts/886ca07fa41d4ab1af99630285318f55",
+    "notice": "🔥 支持预售攒幸运值、红包攒能量两个部分任务\n可前往活动大厅-活动页进入相应活动页面",
     "automation_url": "shortcuts://run-shortcut?name=淘宝红包攒能量自动任务&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
     "image": "https://gitcode.net/u012830258/updater/-/raw/master/image/tb_hongbao.png",
