@@ -928,7 +928,7 @@
     ]
   },
   "1111": {
-    "version": "数据最后更新于:10.24.1",
+    "version": "数据最后更新于:10.26.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.Ue51dpP",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.Ue51dpP",
@@ -996,33 +996,45 @@
         }
       },
       {
-        "stars": {
-          "title": "去往支付宝任务",
-          "type": "stars",
-          "urlScheme": "alipays://platformapi/startapp?appId=68687635&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fc%2F18orxwq9ap1c&ttb=always&titlePenetrate=YES&abv=NO&chInfo=TAOBAO_TASK",
-          "textEnd": "",
-          "item": ["1 1"]
-        }
-      },
-      {
-        "stars": {
-          "title": "去往淘宝任务",
-          "type": "stars",
-          "urlScheme": "taobao://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES&qd_from=zfbbanner&bc_fl_src=zfb_banner&qd_dice=aliPayTaskBanner&async=false&idfa=00000000-0000-0000-0000-000000000000&surge_ssr=true&afcflow=unkown",
-          "textEnd": "",
-          "item": ["1 1"]
-        }
-      },
-      {
-        "stars": {
-          "title": "惊喜宝箱 - 会去往支付宝",
-          "type": "stars",
-          "urlScheme": "",
-          "textEnd": "str2",
+        "tmall": {
+          "title": "逛店铺得惊喜",
+          "type": "other",
+          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=z6j8lx9CWJp05rM6IGkDUwNLUMUOU6UQU0&spm=a217e.1212.tasklist.0&sceneId=4296&sourceType=other&hd_from_id=100165&deliveryId=",
+          "textEnd": "str1&implId=str2",
           "item": [
-            "1 alipays://platformapi/startapp?appId=68687791&url=%2Fwww%2Findex.html%3Fsource%3Dtb2021d11e",
-            "1 taobao://pages.tmall.com/wow/z/hdwk/20211111/pk20211111?disableNav=YES&qd_from=zfbsurprise&bc_fl_src=zfb_surprise&async=false&idfa=00000000-0000-0000-0000-000000000000&surge_ssr=true&afcflow=unkown"
+            "35484 icpmAd_0_382159996946_35484_0",
+            "35484 icpmAd_0_111020545_35484_0",
+            "35484 icpmAd_0_101529349_35484_0",
+            "35484 icpmAd_0_382180953394_35484_0",
+            "35484 icpmAd_0_59915065_35484_0"
           ]
+        }
+      },
+      {
+        "tmall": {
+          "title": "支付宝任务",
+          "type": "other",
+          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=z6j8lx9CWJp05rM6IGkDUwNLUMUOU6UQU0&spm=a217e.1212.tasklist.0&sceneId=4289&sourceType=other&hd_from_id=100165&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": ["34970 other_24_1093043_34970_0"]
+        }
+      },
+      {
+        "tmall": {
+          "title": "开箱任务",
+          "type": "other",
+          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=z6j8lx9CWJp05rM6IGkDUwNLUMUOU6UQU0&spm=a217e.1212.tasklist.0&sceneId=4299&sourceType=other&hd_from_id=100165&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": ["34969 cloudsail_25_467344501160001_34969_0"]
+        }
+      },
+      {
+        "tmall": {
+          "title": "获取快速收喵果道具",
+          "type": "other",
+          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=z6j8lx9CWJp05rM6IGkDUwNLUMUOU6UQU0&spm=a217e.1212.tasklist.0&sceneId=4300&sourceType=other&hd_from_id=100165&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": ["34971 cloudsail_25_451342004910001_34971_0"]
         }
       }
     ],

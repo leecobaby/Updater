@@ -308,6 +308,48 @@ function getOnceTaskData(app) {
           textEnd: 'str1&implId=str2',
           item: ['35483 cloudsail_23_465634000430001_35483_0']
         }
+      },
+      {
+        tmall: {
+          title: '逛店铺得惊喜',
+          type: 'other',
+          urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=4296&sourceType=other&hd_from_id=100165&deliveryId=`,
+          textEnd: 'str1&implId=str2',
+          item: [
+            '35484 icpmAd_0_382159996946_35484_0',
+            '35484 icpmAd_0_111020545_35484_0',
+            '35484 icpmAd_0_101529349_35484_0',
+            '35484 icpmAd_0_382180953394_35484_0',
+            '35484 icpmAd_0_59915065_35484_0'
+          ]
+        }
+      },
+      {
+        tmall: {
+          title: '支付宝任务',
+          type: 'other',
+          urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=4289&sourceType=other&hd_from_id=100165&deliveryId=`,
+          textEnd: 'str1&implId=str2',
+          item: ['34970 other_24_1093043_34970_0']
+        }
+      },
+      {
+        tmall: {
+          title: '开箱任务',
+          type: 'other',
+          urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=4299&sourceType=other&hd_from_id=100165&deliveryId=`,
+          textEnd: 'str1&implId=str2',
+          item: ['34969 cloudsail_25_467344501160001_34969_0']
+        }
+      },
+      {
+        tmall: {
+          title: '获取快速收喵果道具',
+          type: 'other',
+          urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=4300&sourceType=other&hd_from_id=100165&deliveryId=`,
+          textEnd: 'str1&implId=str2',
+          item: ['34971 cloudsail_25_451342004910001_34971_0']
+        }
       }
     ]
   }
