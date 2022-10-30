@@ -49,7 +49,9 @@ function taskHandle(data, excludeIds) {
       }
     }
   } else {
-    $.error = `出错了请检查 Cookie 是否正确且未过期，也可以运行普通模式 ${JSON.stringify(data)}`
+    $.error = `出错了请检查 Cookie 是否正确，如果提示 Session过期，请重新抓取 Cookie，并重新授权。也可以运行普通模式。 ${JSON.stringify(
+      data
+    )}`
   }
 }
 
@@ -59,10 +61,10 @@ function getBaseTaskData() {
     1111: {
       version: '数据最后更新于:10.24.1',
       pv: {
-        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.Ue51dpP',
+        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UVEicmU',
         tmall:
-          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.Ue51dpP',
-        taobaolite: 'taobaolite://m.tb.cn/h.Ue51dpP'
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UVEicmU',
+        taobaolite: 'taobaolite://m.tb.cn/h.UVEicmU'
       },
       main: {
         taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com',
@@ -108,10 +110,10 @@ function getBaseTaskData() {
       version: '数据最后更新于:12.31.1',
       image: 'https://gitee.com/leecogit/Updater/raw/master/image/tjb.png',
       pv: {
-        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.Ue51dpP',
+        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UVEicmU',
         tmall:
-          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.Ue51dpP',
-        taobaolite: 'taobaolite://m.tb.cn/h.Ue51dpP'
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UVEicmU',
+        taobaolite: 'taobaolite://m.tb.cn/h.UVEicmU'
       },
       main: {
         taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com',
@@ -141,10 +143,10 @@ function getBaseTaskData() {
     FarmSingle: {
       version: '数据最后更新于:10.13.1',
       pv: {
-        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.Ue51dpP',
+        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UVEicmU',
         tmall:
-          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.Ue51dpP',
-        taobaolite: 'taobaolite://m.tb.cn/h.Ue51dpP'
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UVEicmU',
+        taobaolite: 'taobaolite://m.tb.cn/h.UVEicmU'
       },
       main: {
         taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com',
