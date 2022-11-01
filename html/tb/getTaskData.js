@@ -8,7 +8,7 @@ const items = []
 // 共用与云端推送的 fromToken
 let fromToken = ''
 // 排除的任务 id
-let excludeIds = ['15901', '18735', '23176', '21317', '34751', '34682']
+let excludeIds = ['15901', '18735', '23176', '21317', '34751', '34682', '36459']
 // 格式化数据
 let dataArr = $.Utils.formatToArray(data.arr || data)
 let task = getBaseTaskData()
@@ -29,12 +29,13 @@ $.task = task
 loopTime == '1' && (task[app].task = task[app].task.concat(onceTask))
 document.body.outerHTML = JSON.stringify($)
 
-function taskHandle(data, excludeIds) {
+function taskHandle (data, excludeIds) {
   if (data.ret && data.ret[0] == 'SUCCESS::调用成功' && data.data && data.data.model) {
     for (const item of data.data.model) {
       if (item.progress.needTimes !== '0') {
-        let times = Number(item.progress.needTimes)
-        for (let i = 0; i < times; i++) {
+        let needTimes = Number(item.progress.needTimes)
+        let times = Number(item.progress.times) || 0
+        for (let i = times; i < needTimes; i++) {
           let deliveryId = item.taskParams.deliveryId
           if (excludeIds.includes(deliveryId)) continue
           let title = (item.assets && item.assets.title) || 'null'
@@ -56,15 +57,15 @@ function taskHandle(data, excludeIds) {
 }
 
 // 获取基础任务数据
-function getBaseTaskData() {
+function getBaseTaskData () {
   return {
     1111: {
       version: '数据最后更新于:10.24.1',
       pv: {
-        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UVEicmU',
+        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UUVQVPq',
         tmall:
-          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UVEicmU',
-        taobaolite: 'taobaolite://m.tb.cn/h.UVEicmU'
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UUVQVPq',
+        taobaolite: 'taobaolite://m.tb.cn/h.UUVQVPq'
       },
       main: {
         taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com',
@@ -110,10 +111,10 @@ function getBaseTaskData() {
       version: '数据最后更新于:12.31.1',
       image: 'https://gitee.com/leecogit/Updater/raw/master/image/tjb.png',
       pv: {
-        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UVEicmU',
+        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UUVQVPq',
         tmall:
-          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UVEicmU',
-        taobaolite: 'taobaolite://m.tb.cn/h.UVEicmU'
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UUVQVPq',
+        taobaolite: 'taobaolite://m.tb.cn/h.UUVQVPq'
       },
       main: {
         taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com',
@@ -143,10 +144,10 @@ function getBaseTaskData() {
     FarmSingle: {
       version: '数据最后更新于:10.13.1',
       pv: {
-        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UVEicmU',
+        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UUVQVPq',
         tmall:
-          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UVEicmU',
-        taobaolite: 'taobaolite://m.tb.cn/h.UVEicmU'
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UUVQVPq',
+        taobaolite: 'taobaolite://m.tb.cn/h.UUVQVPq'
       },
       main: {
         taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com',
@@ -192,7 +193,7 @@ function getBaseTaskData() {
 }
 
 // 获取云端推送的任务数据
-function getOnceTaskData(app) {
+function getOnceTaskData (app) {
   const data = {
     FarmSingle: [
       {
@@ -313,6 +314,22 @@ function getOnceTaskData(app) {
       },
       {
         tmall: {
+          title: '做复活卡任务',
+          type: 'other',
+          urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=4285&sourceType=other&hd_from_id=100165&deliveryId=`,
+          textEnd: 'str1&implId=str2',
+          item: [
+            '34734 other_0_1_34734_0',
+            '35041 other_0_1170004_35041_0',
+            '36376 other_2_1176006_36376_0',
+            '34753 other_30_1_34753_0',
+            '36154 other_6_1176078_36154_0',
+            '36377 other_2_0_36377_0',
+          ]
+        }
+      },
+      {
+        tmall: {
           title: '逛店铺得惊喜',
           type: 'other',
           urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=4296&sourceType=other&hd_from_id=100165&deliveryId=`,
@@ -337,23 +354,14 @@ function getOnceTaskData(app) {
           textEnd: 'str1&implId=str2',
           item: ['34969 cloudsail_25_467344501160001_34969_0']
         }
-      },
-      {
-        tmall: {
-          title: '获取快速收喵果道具',
-          type: 'other',
-          urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=4300&sourceType=other&hd_from_id=100165&deliveryId=`,
-          textEnd: 'str1&implId=str2',
-          item: ['34971 cloudsail_25_451342004910001_34971_0']
-        }
       }
     ]
   }
   return data[app]
 }
 
-// 获取单任务的链接数据
-function getTokenTaskData(app, title, sceneId, hd_from_id) {
+// 获取个人任务数据
+function getTokenTaskData (app, title, sceneId, hd_from_id) {
   const data = {
     FarmSingle: {
       main: {
@@ -384,7 +392,7 @@ function getTokenTaskData(app, title, sceneId, hd_from_id) {
 }
 
 // 获取令牌任务相关参数
-function getTaskParams(app, index) {
+function getTaskParams (app, index) {
   const data = {
     FarmSingle: [
       { title: '淘宝集肥料', sceneId: 971, hd_from_id: 100085 },
@@ -404,9 +412,9 @@ function getTaskParams(app, index) {
  * 工具类对象 - 写成函数封装形式，是想利用函数申明提前
  * @returns object
  */
-function Utils() {
+function Utils () {
   return {
-    randomString(e) {
+    randomString (e) {
       e = e || 32
       let t = 'abcdef0123456789',
         a = t.length,
@@ -414,7 +422,7 @@ function Utils() {
       for (let i = 0; i < e; i++) n += t.charAt(Math.floor(Math.random() * a))
       return n
     },
-    stringify(data) {
+    stringify (data) {
       try {
         if (typeof JSON.stringify(data) == 'string') {
           return JSON.stringify(data)
@@ -424,18 +432,18 @@ function Utils() {
         return data
       }
     },
-    randomInt(min, max) {
+    randomInt (min, max) {
       min = Math.ceil(min)
       max = Math.floor(max)
       return Math.floor(Math.random() * (max - min)) + min
     },
-    formatToArray(p = []) {
+    formatToArray (p = []) {
       return Array.isArray(p) ? p : [p]
     },
-    filterArray(arr = []) {
+    filterArray (arr = []) {
       return arr.filter((v) => !!v)
     },
-    getParam(url, key) {
+    getParam (url, key) {
       const reg = new RegExp('(^|&)' + key + '=([^&]*)(&|$)', 'i')
       const r = url.match(reg)
       if (r != null) return decodeURIComponent(r[2])
