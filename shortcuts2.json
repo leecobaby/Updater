@@ -113,7 +113,7 @@
       "video": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX#KeYQdCQmyo8ua0xGy6Ic7ruCnTe",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Taojb"
     },
-    "notice": "已支持同时做:旧任务，新任务\n旧任务页已经不能进了，但能做任务....",
+    "notice": "已支持同时做:旧任务，新任务\n🧧 一部分红包11.3日到期别忘记用了~",
     "video": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX#TGSqduI2yomWkGxSEErcHVSNnEf",
     "automation_url": "shortcuts://run-shortcut?name=淘金币自动任务&input=text&text=task",
     "tip": {
@@ -234,7 +234,7 @@
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/b908fd540d20472093e78d6b306e2f14",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "指令如果弹错，请多试几次，云端线路维护当中...",
+    "notice": "🧧 一部分红包11.3日到期别忘记用了~",
     "video": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX#TGSqduI2yomWkGxSEErcHVSNnEf",
     "automation_url": "shortcuts://run-shortcut?name=芭芭农场自动集肥料&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
@@ -433,7 +433,7 @@
     },
     "update": "https://www.icloud.com/shortcuts/a28d108b69e3424688e9e1a837b46aeb",
     "faq": "https://github.com/leecobaby/shortcuts/tree/master/TB.FAQ.md",
-    "notice": "🔥 实现喵果总动员部分任务，强烈建议使用令牌模式~\n🔥 双十一来临，活动较多关注活动大厅~",
+    "notice": "🔥 实现喵果总动员部分任务，强烈建议使用令牌模式~\n🧧 一部分红包11.3日到期别忘记用了~",
     "video": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX#TGSqduI2yomWkGxSEErcHVSNnEf",
     "automation_url": "shortcuts://run-shortcut?name=双11喵糖自动任务&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
@@ -620,7 +620,7 @@
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/d767f08451d04510933aff0e045f721f",
-    "notice": "更新后第一次使用请先修复指令,防止出错\n自动助力暂未开发，开放会另行通知~",
+    "notice": "🧧 京享红包只有1-3天有效期，别忘记使用~\n自动助力暂未开发，开放会另行通知~",
     "automation_url": "shortcuts://run-shortcut?name=京东-多合一签到&input=text&text=task",
     "image": "https://gitcode.net/u012830258/updater/-/raw/master/image/icon-jd.png",
     "scritable": "https://gitcode.net/u012830258/updater/-/raw/master/getJDCookie-sms.js",
@@ -701,7 +701,7 @@
     "help": "https://docs.qq.com/doc/DU3hmam9BZHNmTmNS",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/fa6fb0a4afc54ed380093d9c25038a35",
-    "notice": "更新指令后的第一次运行最好进行指令修复解决错误\n任务功能将会逐步完善，通过云端推送",
+    "notice": "🧧 京享红包只有1-3天有效期，别忘记使用~\n任务功能将会逐步完善，通过云端推送",
     "automation_url": "shortcuts://run-shortcut?name=京东-东东农场&input=text&text=task",
     "image": "https://gitcode.net/u012830258/updater/-/raw/master/image/icon-jd2.jpeg",
     "scritable": "https://gitcode.net/u012830258/updater/-/raw/master/getJDCookie-sms.js",
@@ -800,7 +800,7 @@
   },
   "JD_1111": {
     "version": "1.0",
-    "update_log": "- 初步实现自动任务",
+    "update_log": "- 初步实现自动任务\n🧧 京享红包只有1-3天有效期，别忘记使用~",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_618#版本日志",
