@@ -8,7 +8,7 @@ const items = []
 // 共用与云端推送的 fromToken
 let fromToken = ''
 // 排除的任务 id
-let excludeIds = ['15901', '18735', '23176', '21317', '34751', '34682', '36459']
+let excludeIds = ['15901', '18735', '23176', '21317', '34751', '34682', '36459', '34814']
 // 格式化数据
 let dataArr = $.Utils.formatToArray(data.arr || data)
 let task = getBaseTaskData()
@@ -339,7 +339,7 @@ function getOnceTaskData (app) {
       },
       {
         tmall: {
-          title: '支付宝任务',
+          title: '去支付宝任务',
           type: 'other',
           urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=4289&sourceType=other&hd_from_id=100165&deliveryId=`,
           textEnd: 'str1&implId=str2',
@@ -353,6 +353,18 @@ function getOnceTaskData (app) {
           urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=4299&sourceType=other&hd_from_id=100165&deliveryId=`,
           textEnd: 'str1&implId=str2',
           item: ['34969 cloudsail_25_467344501160001_34969_0']
+        }
+      },
+      {
+        tmall: {
+          title: '支付宝内任务',
+          type: 'other',
+          urlScheme: `HTTPS://`,
+          textEnd: 'str2',
+          item: [
+            '1 pages.tmall.com/wow/z/hdwk/2022d11/singlegame?disableNav=YES&qd_from=zfbbanner&bc_fl_src=zfb_banner&slk_gid=gid_er_er%7Cgid_er_evoke_ui_0%7Cgid_er_af_pop%7Cgid_er_sidebar_1&',
+            '1 pages.tmall.com/wow/z/hdwk/2022d11/singlegame?disableNav=YES&qd_from=zfbsurprise&bc_fl_src=zfb_surprise&slk_gid=gid_er_er%7Cgid_er_evoke_ui_0%7Cgid_er_af_pop%7Cgid_er_sidebar_1&'
+          ]
         }
       }
     ]
