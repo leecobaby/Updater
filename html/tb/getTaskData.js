@@ -334,7 +334,10 @@ function getOnceTaskData (app) {
           type: 'other',
           urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=4296&sourceType=other&hd_from_id=100165&deliveryId=`,
           textEnd: 'str1&implId=str2',
-          item: ['35484 icpmAd_0_382159996946_35484_0']
+          item: [
+            '35484 icpmAd_0_382159996946_35484_0',
+            '35561 icpmAd_0_1730_35561_0',
+          ]
         }
       },
       {
