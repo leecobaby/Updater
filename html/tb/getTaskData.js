@@ -33,8 +33,8 @@ function taskHandle (data, excludeIds) {
   if (data.ret && data.ret[0] == 'SUCCESS::调用成功' && data.data && data.data.model) {
     for (const item of data.data.model) {
       if (item.progress.needTimes !== '0') {
-        let needTimes = Number(item.progress.needTimes)
-        let times = Number(item.progress.times) || 0
+        let needTimes = +item.progress.needTimes && +item.progress.maxTimes
+        let times = +item.progress.times || 0
         for (let i = times; i < needTimes; i++) {
           let deliveryId = item.taskParams.deliveryId
           if (excludeIds.includes(deliveryId)) continue
