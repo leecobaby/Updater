@@ -102,26 +102,25 @@
     "share_content_tip": "请输入已编码的音效文本内容\n我已经自动输入你剪贴板的内容拉\n─=≡Σ(((つ•̀ω•́)つ\n温馨提醒:请尽量分享10秒以内的音效"
   },
   "Taojb": {
-    "version": "3.2",
-    "update_log": "- 更新 活动数据\n- 修复 递归运行会运行到淘金币的 bug",
+    "version": "3.3",
+    "update_log": "- 更新 同步喵果指令版本\n- 支持 目前最新的所有功能，默认令牌模式运行\n- 下线 旧任务，如果还有旧任务的同学，请切换普通模式使用\n- 兼容 ios13-16",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Taojb",
     "help": "https://support.qq.com/products/451815",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/8f13c12f79cc4a7b935cd1e637063c81",
+    "update": "https://www.icloud.com/shortcuts/9257278418ab4891a4e2768b69bbda3e",
     "about": {
-      "faq": "https://github.com/leecobaby/shortcuts/blob/master/TB.FAQ.md#%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96-cookie",
+      "faq": "https://support.qq.com/products/451815",
       "video": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX#KeYQdCQmyo8ua0xGy6Ic7ruCnTe",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Taojb"
     },
-    "notice": "已支持同时做:旧任务，新任务\n🧧 一部分红包11.3日到期别忘记用了~",
+    "notice": "支持几个日常任务，暂不支持自动签到~",
     "video": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX#TGSqduI2yomWkGxSEErcHVSNnEf",
     "automation_url": "shortcuts://run-shortcut?name=淘金币自动任务&input=text&text=task",
     "tip": {
-      "hongbao": "",
       "hot": "🧧 超级红包每天领",
       "faq": "有疑问的请查看",
       "set": "可以调整等待时间",
-      "team": "",
+      "help": "暂不开放",
       "more": ""
     },
     "image": "https://gitcode.net/u012830258/updater/-/raw/master/image/tjb.png",
@@ -223,16 +222,16 @@
     }
   },
   "FarmSingle": {
-    "version": "2.5",
-    "update_log": "- 更新 活动任务数据\n- 优化 线路判断功能",
+    "version": "2.6",
+    "update_log": "- 更新 同步喵果指令版本\n- 支持 目前最新的所有功能，默认令牌模式运行",
     "about": {
-      "faq": "https://github.com/leecobaby/shortcuts/blob/master/TB.FAQ.md#%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96-cookie",
+      "faq": "https://support.qq.com/products/451815",
       "video": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX#KeYQdCQmyo8ua0xGy6Ic7ruCnTe",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/FarmSingle"
     },
     "help": "https://support.qq.com/products/451815",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/b908fd540d20472093e78d6b306e2f14",
+    "update": "https://www.icloud.com/shortcuts/7c2e253e826d47f187f1999541b71def",
     "faq": "https://support.qq.com/products/451815",
     "notice": "🧧 一部分红包11.3日到期别忘记用了~",
     "video": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX#TGSqduI2yomWkGxSEErcHVSNnEf",
