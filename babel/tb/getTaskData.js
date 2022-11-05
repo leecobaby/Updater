@@ -415,8 +415,7 @@ function getTaskParams (app, index) {
       { title: '闲鱼任务', sceneId: 2488, hd_from_id: 100085 }
     ],
     Taojb: [
-      { title: '每日任务(旧)', sceneId: 1946, hd_from_id: 100089 },
-      { title: '每日任务(新)', sceneId: 2141, hd_from_id: 100089 }
+      { title: '每日任务', sceneId: 2141, hd_from_id: 100089 }
     ],
     1111: [{ title: '赚喵果', sceneId: 4276, hd_from_id: 100165 }]
   }
