@@ -12,52 +12,64 @@
 
 <body>
 
-  <!-- <script>
-    const $ = {}
-    $.secretp = "-G2_WFL8jJ2ehXtlbdayCJLb"
-    $.joyytoken = "MDFPUUZKSjAxMQ==.fmdwfHl9YXJ/fXZkcTQNeSt0cgJ4YHUiNH59BWYJY2A4ezR+Ly0gIz8HAnshLARzBiw1PyIlJXkBAj09cmw4e3tjYHc0.dea65701"
 
-  </script>
-  <script src="../babel/jd_getLog.js"></script>
-  <script src="../dist/modules.js"></script>
+
   <script>
-    function objToStr2 (jsonMap) {
-      let isFirst = true
-      let res = ""
-      for (let key in jsonMap) {
-        let keyValue = jsonMap[key]
-        if (typeof keyValue == "object") {
-          keyValue = JSON.stringify(keyValue)
-        }
-        if (isFirst) {
-          res += `${key}=${keyValue}`
-          isFirst = false
-        } else {
-          res += `&${key}=${keyValue}`
-        }
-      }
-      return res
-    }
-    console.log(JSON.stringify({
-      "taskId": 3,
-      "taskToken": "P195L6r47PBTNYCtIMjDX0FjRWnqq7zh4JCGD43XxIlD9-",
-      "actionType": 1,
-      ss: JSON.stringify(getSs($.secretp)),
-    }));
-    const body = objToStr2({
-      functionId: "promote_collectScore",
-      body: encodeURIComponent(JSON.stringify({
-        "taskId": 3,
-        "taskToken": "P195L6r47PBTNYCtIMjDX0FjRWnqq7zh4JCGD43XxIlD9-",
-        "actionType": 1,
-        ss: JSON.stringify(getSs($.secretp)),
-      })),
-      client: "m",
-      clientVersion: "1.0.0",
-      appid: "signed_wh5"
-    })
-    console.log(body);
-  </script> -->
+    const activityId = ``
+    const cookieStr = `>> 本文件内容为 https://h5api.m.taobao.com/h5/mtop.taobao.wireless.home.awesome.h5.get/1.0/?jsv=2.6.1&appKey=12574478&t=1667614165198&sign=e847b71d6c64088848db27de7939b947&api=mtop.taobao.wireless.home.awesome.h5.get&v=1.0&ttid=2018%40taobao_h5_1.0.0&preventFallback=true&type=jsonp&dataType=jsonp&callback=mtopjsonp1&data=%7B%22ttid%22%3A%222018%40taobao_h5_1.0.0%22%2C%22containerParams%22%3A%22%7B%5C%22entrance_home_main_h5%5C%22%3A%7B%5C%22baseCacheTime%5C%22%3A%5C%221564455061032%5C%22%2C%5C%22passParams%5C%22%3A%7B%5C%22lastVersion%5C%22%3A%5C%22v5%5C%22%7D%2C%5C%22realBaseCacheTime%5C%22%3A%5C%221564455061032%5C%22%2C%5C%22requestType%5C%22%3A%5C%22coldStart%5C%22%7D%7D%22%7D 的请求抓包详情，供您分析和定位问题。
+
+1. 请求内容 Request:
+
+GET /h5/mtop.taobao.wireless.home.awesome.h5.get/1.0/?jsv=2.6.1&appKey=12574478&t=1667614165198&sign=e847b71d6c64088848db27de7939b947&api=mtop.taobao.wireless.home.awesome.h5.get&v=1.0&ttid=2018%40taobao_h5_1.0.0&preventFallback=true&type=jsonp&dataType=jsonp&callback=mtopjsonp1&data=%7B%22ttid%22%3A%222018%40taobao_h5_1.0.0%22%2C%22containerParams%22%3A%22%7B%5C%22entrance_home_main_h5%5C%22%3A%7B%5C%22baseCacheTime%5C%22%3A%5C%221564455061032%5C%22%2C%5C%22passParams%5C%22%3A%7B%5C%22lastVersion%5C%22%3A%5C%22v5%5C%22%7D%2C%5C%22realBaseCacheTime%5C%22%3A%5C%221564455061032%5C%22%2C%5C%22requestType%5C%22%3A%5C%22coldStart%5C%22%7D%7D%22%7D HTTP/1.1
+Host: h5api.m.taobao.com
+Accept: */*
+Connection: keep-alive
+Cookie: _m_h5_tk=d6763d336e94e07e57f2599a61ac4322_1667500827380; _m_h5_tk_enc=0ff4156aa39cd7da6e3a9204faa1785d; isg=BGJi2RISdd6m3GmCc6jCVAT9uezEs2bNvw6x8qz7jlWAfwL5lEO23ejtrT2D9N5l
+User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 15_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.5 Mobile/15E148 Safari/604.1
+Accept-Language: zh-CN,zh-Hans;q=0.9
+Referer: https://m.taobao.com/
+Accept-Encoding: gzip, deflate, br
+
+
+
+2. 响应内容 Response:
+
+HTTP/1.1 200 OK
+Date: Sat, 05 Nov 2022 02:09:25 GMT
+Content-Type: application/json;charset=UTF-8
+Content-Length: 130
+Connection: keep-alive
+ufe-result: A6
+Set-Cookie: cookie2=21ea19d2ab366b6190c1a0bf5903c4a1;Path=/;Domain=.taobao.com;Max-Age=-1;HttpOnly
+Set-Cookie: _m_h5_tk=1679201345b8c0525d01e0521590c5d8_1667624605409;Path=/;Domain=taobao.com;Max-Age=604800
+Set-Cookie: _m_h5_tk_enc=bb98989ff8a447aa1c5d845e44d592ff;Path=/;Domain=taobao.com;Max-Age=604800
+s_tid: 2147b74016676141654023908e2644
+x-node: a832ccdbb9d35baa9e7bddccfb00e253
+s_ip: 457079564a2b326e596432357943733d
+x-eagleeye-id: 2147b74016676141654023908e2644
+s_v: 4.0.4.6
+Pragma: no-cache
+P3P: CP='CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR'
+s_tag: 285873024335892|134217728^|^^
+Cache-Control: no-cache
+s_group: tao-session
+s_status: STATUS_NOT_EXISTED
+s_ucode: CN:UNSH
+X-Powered-By: m.taobao.com
+Server: Tengine/Aserver
+s-rt: 8
+Timing-Allow-Origin: *
+EagleEye-TraceId: 2147b74016676141654023908e2644
+
+ mtopjsonp1({"api":"mtop.taobao.wireless.home.awesome.h5.get","data":{},"ret":["FAIL_SYS_TOKEN_EXOIRED::令牌过期"],"v":"1.0"})
+
+====
+该记录由 Stream 抓取，仅用于分析和学习，可 AppStore 搜索『抓包』下载，面向开发者永久免费使用。
+
+`
+  </script>
+  <script src="../babel/tb/getCookieData.js"></script>
+
 
 </body>
 
