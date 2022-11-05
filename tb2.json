@@ -924,10 +924,10 @@
       "lodash": "https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"
     },
     "code": {
-      "getCookieData": "https://gitee.com/leecobaby/Updater/raw/master/html/tb/getCookieData.js",
+      "getCookieData": "https://gitee.com/leecobaby/Updater/raw/master/dist/tb/getCookieData.js",
+      "getCookieData1": "https://gitee.com/leecobaby/Updater/raw/master/html/tb/getCookieData.js",
       "getTaskData": "https://gitee.com/leecobaby/Updater/raw/master/html/tb/getTaskData.js",
-      "getTaskData1": "https://gitee.com/leecobaby/Updater/raw/master/html/tb/getTaskData.js",
-      "updateCookie": "https://gitee.com/leecobaby/Updater/raw/master/dist/updateCookie.js"
+      "updateCookie": "https://gitee.com/leecobaby/Updater/raw/master/dist/tb/updateCookie.js"
     },
     "task": [
       {
