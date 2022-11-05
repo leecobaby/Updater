@@ -5,7 +5,7 @@
   //   console.log(args.shortcutParameter)
 })()
 
-let cookie = args.shortcutParameter + '' || ''
+let cookie = (args.shortcutParameter && args.shortcutParameter + '') || args.plainTexts[0] || ''
 console.log(1)
 
 const req = new Request(
