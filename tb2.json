@@ -1704,7 +1704,7 @@
       "🔥 预售攒幸运值活动页": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UUVQVPq"
     },
     "Cookie 获取地址": {
-      "App": "taobao://h5api.m.taobao.com/h5/mtop.cloudsail.ad.get1/1.0/?jsv=2.6.1&appKey=12574478&t=1667494366294&api=mtop.cloudsail.ad.get&v=1.0&timeout=5000",
+      "App": "taobao://h5api.m.taobao.com/h5/",
       "Alook": "Alook://https%3A%2F%2Fmain.m.taobao.com%2Fmytaobao%2Findex.html",
       "Safari": "https://main.m.taobao.com/mytaobao/index.html"
     },
