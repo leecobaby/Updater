@@ -891,7 +891,7 @@
     ]
   },
   "1111": {
-    "version": "数据最后更新于:11.4.1",
+    "version": "数据最后更新于:11.5.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UUVQVPq",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UUVQVPq",
@@ -924,9 +924,8 @@
       "lodash": "https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"
     },
     "code": {
-      "getCookieData": "https://gitee.com/leecobaby/Updater/raw/master/html/tb/getCookieData.js",
-      "getCookieData1": "https://gitee.com/leecobaby/Updater/raw/master/dist/tb/getCookieData.js",
-      "getTaskData": "https://gitee.com/leecobaby/Updater/raw/master/html/tb/getTaskData.js",
+      "getCookieData": "https://gitee.com/leecobaby/Updater/raw/master/dist/tb/getCookieData.js",
+      "getTaskData": "https://gitee.com/leecobaby/Updater/raw/master/dist/tb/getTaskData.js",
       "updateCookie": "https://gitee.com/leecobaby/Updater/raw/master/dist/tb/updateCookie.js"
     },
     "task": [

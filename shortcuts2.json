@@ -421,8 +421,8 @@
     }
   },
   "1111": {
-    "version": "1.7",
-    "update_log": "- 增加 多账号授权存储功能，做任务只能选一个账号\n- 优化 互相助力算法，修复助力错误，排除重复发口令者，一律进入黑名单\n- 更新 云端任务数据，增加两个支付宝里的任务",
+    "version": "1.8",
+    "update_log": "- 修复 因 Scriptable App 造成的 UTF-8 编码错误问题\n- 修复 自动化，AutoBox 会弹出菜单问题，目前自动化只支持运行账号 1\n- 优化 Cookie 获取引导\n- 新增 秒登录获取 Cookie",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/1111",
     "help": "https://support.qq.com/products/451815",
     "github": "https://github.com/leecobaby/shortcuts",
@@ -431,15 +431,14 @@
       "video": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX#KeYQdCQmyo8ua0xGy6Ic7ruCnTe",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/1111#版本日志"
     },
-    "update": "https://www.icloud.com/shortcuts/4736a72a4f634b408bc82deb3760c0fa",
-    "notice": "⚠️ ios14及以上的系统必须安装 Scriptable App\n🧧 一部分红包11.3日到期别忘记用了\n💡 强烈推荐每天使用助力功能，不然很难满级，互助算法已优化~",
+    "update": "https://www.icloud.com/shortcuts/7e82bbbdfa594e1c9377c9cea744318c",
+    "notice": "⚠️ ios14及以上的系统必须安装 Scriptable App\n💡 强烈推荐每天使用助力功能，不然很难满级，互助算法已优化~",
     "automation_url": "shortcuts://run-shortcut?name=双11喵糖自动任务&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
     "image": "https://gitcode.net/u012830258/updater/-/raw/master/image/tb_1111.png",
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json",
     "tip": {
-      "hongbao": "",
-      "hot": "🧧 指令专属红包",
+      "hot": "🧧 超级红包每天领",
       "faq": "有疑问的请查看",
       "set": "👤 请先在这授权账号",
       "help": "🔥 随机互助已更新",
