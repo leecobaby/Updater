@@ -26,7 +26,7 @@
 // $.secretpInfo = {};
 // $.innerPkInviteList = [];
 
-$.Utils = Utils()
+const utils = Utils()
 
 /** 下方放 call 文本，来控制函数执行 **/
 
@@ -62,7 +62,7 @@ function init () {
   $.taskStep = 1
 
   // 生成随机 UA UUID
-  $.uuid = $.Utils.randomString(40)
+  $.uuid = utils.randomString(40)
   $.UA = `jdapp;iPhone;10.2.0;13.1.2;${$.uuid};M/5.0;network/wifi;ADID/;model/iPhone8,1;addressid/2308460611;appBuild/167853;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 13_1_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1;`
 
   // 自变量
@@ -233,7 +233,7 @@ function doBeanSign () {
 function doBeanBrowseTask () {
   $.call[$.call.length - 1] == 'doBeanBrowseTask' || $.call.push('doBeanBrowseTask')
 
-  $.itemId = $.Utils.randomInt(10000000, 20000000)
+  $.itemId = utils.randomInt(10000000, 20000000)
   $.callback = 'Func.request'
   takeRequest('doBeanBrowseTask');
   return
@@ -959,7 +959,7 @@ function request_algo () {
 
   $.algo.time = Date.now()
   $.algo.timestamp = new Date($.algo.time).Format("yyyyMMddHHmmssSSS")
-  $.algo.fp = $.Utils.H5ST._getFp($.algo.time)
+  $.algo.fp = utils.H5ST._getFp($.algo.time)
   $.callback = 'Func.request'
   takeRequest('request_algo')
   return
@@ -1196,7 +1196,7 @@ function do618ZCBrowseTask () {
     return
   }
 
-  $.contentId = $.Utils.randomInt(10000000, 30000000)
+  $.contentId = utils.randomInt(10000000, 30000000)
   $.message = `做浏览内容任务，第${++$.self.count}次/20 等待完成...`
   $.callback = 'Func.request'
   takeRequest('do618ZCBrowseTask');
@@ -1619,7 +1619,7 @@ function takeRequest (type) {
         "channel": 7008
       };
       $.shopactivityId && (body.activityId = $.shopactivityId);
-      $.h5st = $.Utils.H5ST._getH5st(body)
+      $.h5st = utils.H5ST._getH5st(body)
       url = `https://api.m.jd.com/client.action?functionId=bindWithVender&appid=jd_shop_member&body=${encodeURIComponent(JSON.stringify(body))}&client=H5&clientVersion=9.2.0&uuid=88888&h5st=${$.h5st}`;
       body = ''
       myRequest = getRequest(url, body, 'GET');
@@ -1741,7 +1741,7 @@ function getRequest (url, body = {}, method = 'POST', header = {}) {
 // 处理返回信息
 function dealReturn (type, data) {
   if (!data) $.message = '接口返回数据为空!';
-  let json = $.Utils.stringify(data)
+  let json = utils.stringify(data)
   let setCookie = data['Set-Cookie'] || data['set-cookie'] || ''
 
   switch (type) {
@@ -2088,7 +2088,7 @@ function dealReturn (type, data) {
         }
 
         $.self.success = true
-        $.helpCode = $.Utils.getParam(data.data.jwordShareInfo?.shareUrl, 'plantUuid')
+        $.helpCode = utils.getParam(data.data.jwordShareInfo?.shareUrl, 'plantUuid')
         $.roundList = data.data.roundList;
         $.taskList = data.data.taskList;
         $.collectList = $.roundList[num].bubbleInfos
@@ -2102,21 +2102,21 @@ function dealReturn (type, data) {
       break;
     case 'getPlantBeanShopTaskList':
       if (data.code == 0 && data.data) {
-        $.shopList = $.Utils.formatToArray(data.data.goodShopList).concat($.Utils.formatToArray(data.data.moreShopList))
+        $.shopList = utils.formatToArray(data.data.goodShopList).concat(utils.formatToArray(data.data.moreShopList))
       } else {
         $.shopList = []
       }
       break;
     case 'getPlantBeanProductTaskList':
       if (data.code == 0 && data.data) {
-        $.productList = $.Utils.formatToArray(data.data.productInfoList)
+        $.productList = utils.formatToArray(data.data.productInfoList)
       } else {
         $.productList = []
       }
       break;
     case 'getPlantBeanChannelTaskList':
       if (data.code == 0 && data.data) {
-        $.channelList = [...$.Utils.formatToArray(data.data.goodChannelList), ...$.Utils.formatToArray(data.data.normalChannelList)]
+        $.channelList = [...utils.formatToArray(data.data.goodChannelList), ...utils.formatToArray(data.data.normalChannelList)]
       } else {
         $.channelList = []
       }
@@ -2282,33 +2282,65 @@ function Utils () {
         return encodeURIComponent(`${$.algo.timestamp};${$.algo.fp};${$.algo.appId.toString()};${$.algo.tk};${s};3.0;${$.algo.time.toString()}`)
       }
 
+    },
+    // escape html
+    escapeHtml (str) {
+      return str.replace(/[<>&"]/g, (c) => ({
+        '<': '&lt;',
+        '>': '&gt;',
+        '&': '&amp;',
+        '"': '&quot;'
+      }[c]))
+    },
+    // unescape html
+    unescapeHtml (str) {
+      return str.replace(/&(lt|gt|amp|quot);/g, (all, t) => ({
+        'lt': '<',
+        'gt': '>',
+        'amp': '&',
+        'quot': '"'
+      }[t]))
+    },
+    // 将内容转换成数组，并去除空值
+    handleContent (content) {
+      return this.filterArray(this.formatToArray(content))
     }
   }
 }
 
-Date.prototype.Format = function (fmt) {
-  var e,
-    n = this,
-    d = fmt,
-    l = {
-      "M+": n.getMonth() + 1,
-      "d+": n.getDate(),
-      "D+": n.getDate(),
-      "h+": n.getHours(),
-      "H+": n.getHours(),
-      "m+": n.getMinutes(),
-      "s+": n.getSeconds(),
-      "w+": n.getDay(),
-      "q+": Math.floor((n.getMonth() + 3) / 3),
-      "S+": n.getMilliseconds()
-    };
-  /(y+)/i.test(d) && (d = d.replace(RegExp.$1, "".concat(n.getFullYear()).substr(4 - RegExp.$1.length)));
-  for (var k in l) {
-    if (new RegExp("(".concat(k, ")")).test(d)) {
-      var t, a = "S+" === k ? "000" : "00";
-      d = d.replace(RegExp.$1, 1 == RegExp.$1.length ? l[k] : ("".concat(a) + l[k]).substr("".concat(l[k]).length))
-    }
+!(function () {
+  // 重写 doucment.write 方法，防止页面被攻击
+  const _write = document.write.bind(document);
+  document.write = function (content) {
+    _write(utils.escapeHtml(content));
   }
-  return d;
+
+  // 时间格式化
+  Date.prototype.Format = function (fmt) {
+    var e,
+      n = this,
+      d = fmt,
+      l = {
+        "M+": n.getMonth() + 1,
+        "d+": n.getDate(),
+        "D+": n.getDate(),
+        "h+": n.getHours(),
+        "H+": n.getHours(),
+        "m+": n.getMinutes(),
+        "s+": n.getSeconds(),
+        "w+": n.getDay(),
+        "q+": Math.floor((n.getMonth() + 3) / 3),
+        "S+": n.getMilliseconds()
+      };
+    /(y+)/i.test(d) && (d = d.replace(RegExp.$1, "".concat(n.getFullYear()).substr(4 - RegExp.$1.length)));
+    for (var k in l) {
+      if (new RegExp("(".concat(k, ")")).test(d)) {
+        var t, a = "S+" === k ? "000" : "00";
+        d = d.replace(RegExp.$1, 1 == RegExp.$1.length ? l[k] : ("".concat(a) + l[k]).substr("".concat(l[k]).length))
+      }
+    }
+    return d;
+  }
 }
+)();
 

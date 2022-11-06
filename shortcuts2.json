@@ -606,16 +606,16 @@
     }
   },
   "JD_sign": {
-    "version": "1.8",
+    "version": "1.9",
     "update_log": "- 新增 多条云端线路，自动切换可用线路",
     "about": {
-      "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
+      "faq": "https://support.qq.com/products/451815",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_sign#版本日志",
       "tutorials": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX#A002dKWWyoC4w6xaQxRcNp86nKg"
     },
     "help": "https://support.qq.com/products/451815",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/d767f08451d04510933aff0e045f721f",
+    "update": "https://www.icloud.com/shortcuts/bc16213a80914d869d7bf25e09e82571",
     "notice": "🧧 京享红包只有1-3天有效期，别忘记使用~\n自动助力暂未开发，开放会另行通知~",
     "automation_url": "shortcuts://run-shortcut?name=京东-多合一签到&input=text&text=task",
     "image": "https://gitcode.net/u012830258/updater/-/raw/master/image/icon-jd.png",
