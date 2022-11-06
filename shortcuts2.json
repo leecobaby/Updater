@@ -843,12 +843,10 @@
     }
   },
   "More": {
-    "加入QQ讨论群": "https://jq.qq.com/?_wv=1027&k=5FenhoJ",
-    "加入QQ情报群": "https://jq.qq.com/?_wv=1027&k=5RvvpAp",
-    "其他捷径作品": "https://shimo.im/docs/DHcYv8xjcYxvHvQg/",
-    "🧧 现金红包-6.15": "taobao://m.tb.cn/h.fkLMFm2",
-    "🔥 年货节超级红包": "taobao://m.tb.cn/h.4RaMYQr",
-    "饿了么现金红包": "taobao://m.tb.cn/h.4hbqRud"
+    "👾 加入QQ频道": "https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&inviteCode=17PQr8&from=181074&biz=ka&shareSource=5",
+    "👥 加入QQ情报群": "https://jq.qq.com/?_wv=1027&k=QeMPJYf4",
+    "📱 其他捷径作品": "https://github.com/leecobaby/shortcuts",
+    "🧧 天猫双11红包": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.Ue51dpP"
   },
   "jjh": {
     "ok": "yes",
@@ -872,7 +870,7 @@
       "👥 加入QQ讨论④群": "https://jq.qq.com/?_wv=1027&k=MDNbaUKu",
       "👥 加入QQ情报群": "https://jq.qq.com/?_wv=1027&k=QeMPJYf4",
       "📱 其他捷径作品": "https://github.com/leecobaby/shortcuts",
-      "🧧 外卖红包 618": {
+      "🧧 外卖红包 11.11": {
         "美团红包   最高领66元礼包": {
           "已安装app": "imeituan://www.meituan.com/web?lch=cps:waimai:3:a144a9fa40a42c55af00214bb4bb3993971:6232dingdanxialeeco:2:70690&url=https%3A%2F%2Fclick.meituan.com%2Ft%3Ft%3D1%26c%3D1%26p%3DOWMpZ-uzIFOVe6JyOONs3dXuqV0qcAf-r-KCvHdXiNfM3oMXlDSgQ1lHQ7sc1bHIMXeq2XWRYP9S3VMvpbQU5suS6wIbvlY8ysKwoMucfvM-rF8Z3mNwVvDHIKVKMsgutBrr4QPAU-C_JAUQdcIGegPhA5pbiaJPBOlV_2ElhVrcWrcWxBNlqgy-azTgeuR39HLNf98hLOWEGKBDtwCamOqsJP1LLMGBuAOnfqvhqVpmOiuf2Grl8rQIjgXTpd-9hOnDON0X3YxM7kdoJCRmSis2PTLenraGrNz5ViEm8KjiXNM3vBmZ8YSUoNjoiCjP8p8fRrf7uXM2SvjABJxuflK0_ogBMj-5YH-n4hr8dW-If4ulIdQYa6FGfQ0wgLaHtMVPuoy42RYF-BZ7NsaYjbxSYy5duCSxIJLGrdqIVhFHeJkRT5MGDOXn1bf58GE8oUnmCXZ4BU0FwKjAf2QgbwXqgfp8t6YZjfKmXNSomEW1NZJF7XYewE6OFFCl6qGkCGc3dgSAjj1UhCZ0BoljZx6zxMgxRv3oJ0EePeqkyDgekdSBbU-zUSW-C7HiXVEFHoU955N0M8A_hQJv5ScS5lJqqumIL2k4S4VAUucCbmo1UOjRyJ2wpDveI4iwCFTr5RIxT8aoT2fgKQZWBwpD6v3MZ-td3z0E_aU9a2lLsyIweu9PfPngn4JqLbd6BEpLuM0XFzanyV5BRWXa9VtvNO3Qm070mTjozv7xbIo_boM",
           "未安装app": "https://click.meituan.com/t?t=1&c=1&p=OWMpZ-uzIFOVe6JyOONs3dXuqV0qcAf-r-KCvHdXiNfM3oMXlDSgQ1lHQ7sc1bHIMXeq2XWRYP9S3VMvpbQU5suS6wIbvlY8ysKwoMucfvM-rF8Z3mNwVvDHIKVKMsgutBrr4QPAU-C_JAUQdcIGegPhA5pbiaJPBOlV_2ElhVrcWrcWxBNlqgy-azTgeuR39HLNf98hLOWEGKBDtwCamOqsJP1LLMGBuAOnfqvhqVpmOiuf2Grl8rQIjgXTpd-9hOnDON0X3YxM7kdoJCRmSis2PTLenraGrNz5ViEm8KjiXNM3vBmZ8YSUoNjoiCjP8p8fRrf7uXM2SvjABJxuflK0_ogBMj-5YH-n4hr8dW-If4ulIdQYa6FGfQ0wgLaHtMVPuoy42RYF-BZ7NsaYjbxSYy5duCSxIJLGrdqIVhFHeJkRT5MGDOXn1bf58GE8oUnmCXZ4BU0FwKjAf2QgbwXqgfp8t6YZjfKmXNSomEW1NZJF7XYewE6OFFCl6qGkCGc3dgSAjj1UhCZ0BoljZx6zxMgxRv3oJ0EePeqkyDgekdSBbU-zUSW-C7HiXVEFHoU955N0M8A_hQJv5ScS5lJqqumIL2k4S4VAUucCbmo1UOjRyJ2wpDveI4iwCFTr5RIxT8aoT2fgKQZWBwpD6v3MZ-td3z0E_aU9a2lLsyIweu9PfPngn4JqLbd6BEpLuM0XFzanyV5BRWXa9VtvNO3Qm070mTjozv7xbIo_boM"
