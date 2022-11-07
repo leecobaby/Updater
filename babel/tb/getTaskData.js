@@ -398,7 +398,7 @@ function getTokenTaskData (app, title, sceneId, hd_from_id) {
       main: {
         title: title,
         type: 'other',
-        urlScheme: `HTTPS://chaoshi.detail.tmall.com/item.htm?id=562500042314&ut_sk=1.YcrN5b4xVMQDAEOuASmHsqkH_21380790_1667665716041.Copy.1&sourceType=item&price=139&suid=135A951C-1D24-4ED2-B4B6-8CFCCC8093CC&shareUniqueId=18593145563&un=fe3308226073dce48a195baaa22d8f6a&share_crt_v=1&un_site=0&spm=a2159r.13376460.0.0&sp_abtk=gray_1_code_simpleonline&tbSocialPopKey=shareItem&sp_tk=aHhMT2RiS25ta2M%3D&cpp=1&shareurl=true&short_name=h.UUjNyfT&bxsign=scdc770mg3wVX0Y1rHyxTYAEliscQjB6EH3oWt7ayxZUG56xuKIMi0KyIMj3SGv-TT2zSeY1i0_PTgO_FOCXLuzO05K6MkM5We42NFO0VKHdUW10llam2DgukQ_A8vqGFeV&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=z6j8lx9CWJp05rM6IGkDUwNLUMUOU6UQU0&spm=a217e.1212.tasklist.0&sceneId=${sceneId}&sourceType=other&hd_from_id=${hd_from_id}&`,
+        urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&spm=a217e.xzrwy.1.1&sceneId=${sceneId}&sourceType=other&hd_from_id=${hd_from_id}&`,
         textEnd: 'str2'
       }
     }
