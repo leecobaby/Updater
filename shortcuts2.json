@@ -222,8 +222,8 @@
     }
   },
   "FarmSingle": {
-    "version": "2.6",
-    "update_log": "- 更新 同步喵果指令版本\n- 支持 目前最新的所有功能，默认令牌模式运行",
+    "version": "2.8",
+    "update_log": "- 修复 自动化、AutoBox 运行会切换到普通模式的 bug\n- 修复 部分账号 cookie 编码错误问题（强化）",
     "about": {
       "faq": "https://support.qq.com/products/451815",
       "video": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX#KeYQdCQmyo8ua0xGy6Ic7ruCnTe",
@@ -231,16 +231,15 @@
     },
     "help": "https://support.qq.com/products/451815",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/7c2e253e826d47f187f1999541b71def",
+    "update": "https://www.icloud.com/shortcuts/0b27eefd079a4dfe8ab31396544c868a",
     "faq": "https://support.qq.com/products/451815",
-    "notice": "🧧 一部分红包11.3日到期别忘记用了~",
+    "notice": "11.11大促到来，建议把芭芭农场水果中成熟~",
     "video": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX#TGSqduI2yomWkGxSEErcHVSNnEf",
     "automation_url": "shortcuts://run-shortcut?name=芭芭农场自动集肥料&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
     "image": "https://gitcode.net/u012830258/updater/-/raw/master/image/tb_farm.png",
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json",
     "tip": {
-      "hongbao": "",
       "hot": "🧧 20:00抢指令专属红包",
       "help": "",
       "faq": "有疑问的请查看",
@@ -420,8 +419,8 @@
     }
   },
   "1111": {
-    "version": "1.8",
-    "update_log": "- 修复 因 Scriptable App 造成的 UTF-8 编码错误问题\n- 修复 自动化，AutoBox 会弹出菜单问题，目前自动化只支持运行账号 1\n- 优化 Cookie 获取引导\n- 新增 秒登录获取 Cookie",
+    "version": "2.0",
+    "update_log": "- 修复 部分账号 cookie 编码错误问题（强化）\n- 优化 15.0-15.2系统 改为手动输入 cookie\n- 修复 AutoBox，自动化会运行到普通模式去的 bug",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/1111",
     "help": "https://support.qq.com/products/451815",
     "github": "https://github.com/leecobaby/shortcuts",
@@ -430,7 +429,7 @@
       "video": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX#KeYQdCQmyo8ua0xGy6Ic7ruCnTe",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/1111#版本日志"
     },
-    "update": "https://www.icloud.com/shortcuts/7e82bbbdfa594e1c9377c9cea744318c",
+    "update": "https://www.icloud.com/shortcuts/3206a1b0cda242a092222f9d28e4560d",
     "notice": "⚠️ ios14及以上的系统必须安装 Scriptable App\n💡 强烈推荐每天使用助力功能，不然很难满级，互助算法已优化~",
     "automation_url": "shortcuts://run-shortcut?name=双11喵糖自动任务&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
