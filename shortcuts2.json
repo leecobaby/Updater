@@ -222,8 +222,8 @@
     }
   },
   "FarmSingle": {
-    "version": "2.8",
-    "update_log": "- 修复 自动化、AutoBox 运行会切换到普通模式的 bug\n- 修复 部分账号 cookie 编码错误问题（强化）",
+    "version": "3.0",
+    "update_log": "- 修复 ios16 的各种异常和兼容性问题\n- 修复 AutoBox、自动化运行会跳出选择账号的 bug，目前只支持账号 1\n- 修复 普通模式运行的一些错误",
     "about": {
       "faq": "https://support.qq.com/products/451815",
       "video": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX#KeYQdCQmyo8ua0xGy6Ic7ruCnTe",
@@ -241,7 +241,7 @@
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json",
     "tip": {
       "hot": "🧧 20:00抢指令专属红包",
-      "help": "",
+      "help": "暂未开放",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
