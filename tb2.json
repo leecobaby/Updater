@@ -365,7 +365,7 @@
     ]
   },
   "Jhs": {
-    "version": "数据最后更新于:5.27.2",
+    "version": "数据最后更新于:11.13.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UUVQVPq",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UUVQVPq",
@@ -396,11 +396,19 @@
         "stars": {
           "title": "攒星星",
           "type": "stars",
-          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&sourceType=other&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&sceneId=107&hd_from_id=100027&deliveryId=",
+          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&sourceType=other&fromToken=ARMq5DvCKLqlOzGPfxVTVYLFYU1UaUVUj&sceneId=107&hd_from_id=100027&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
+            "29273 other_170_932021_29273_0",
+            "33253 other_75_1166073_33253_0",
+            "24995 other_285_772009_24995_0",
+            "25344 other_285_774024_25344_0",
+            "21280 other_466_77002_21280_0",
+            "29478 other_165_880008_29478_0",
+            "21414 other_466_1168128_21414_0",
+            "21371 other_685_590014_21371_0",
+            "28948 other_196_72017_28948_0",
             "22256 other_267_922038_22256_0",
-            "18660 linked_256_0_18660_0",
             "19109 other_243_513004_19109_1",
             "23913 other_267_909041_23913_0",
             "25914 other_87_508020_25914_0",
@@ -408,7 +416,24 @@
             "17695 other_282_0_17695_0",
             "25472 other_86_898002_25472_0",
             "29090 other_1_928015_29090_0",
-            "27766 other_25_880008_27766_0"
+            "27766 other_25_880008_27766_0",
+            "18660 linked_426_0_18660_0"
+          ]
+        }
+      },
+      {
+        "stars": {
+          "title": "NPC任务",
+          "type": "stars",
+          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&sourceType=other&fromToken=Ld2gwvjT9KjoWBXDcVQQHaDGfzUQUXUBUo&sceneId=3421&hd_from_id=100027&deliveryId=",
+          "textEnd": "str1&implId=str2",
+          "item": [
+            "36460 other_43_1095250_36460_0",
+            "32418 other_196_1118001_32418_0",
+            "29024 other_196_960007_29024_0",
+            "32774 other_104_874005_32774_0",
+            "32774 other_104_874005_32774_1",
+            "32774 other_104_874005_32774_2"
           ]
         }
       }
