@@ -168,7 +168,7 @@ function doBean () {
       doBeanSign()
       break;
     case 2:
-      // 流量5个商品
+      // 浏览5个商品
       doBeanBrowseTask()
       break;
     case 3:
@@ -209,6 +209,7 @@ function doBean () {
       break;
     default:
       $.to = ''; $.call.pop(); $.taskStep = 1; $.self.data = undefined
+      $.taskList = undefined
       document.write(JSON.stringify($))
       break;
   }
@@ -347,25 +348,25 @@ function doPlantBean () {
       }
       break;
     case 3:
-      // 获取商品列表
-      getPlantBeanProductTaskList()
+      // 获取好友列表
+      getPlantBeanStealFriendList()
       break;
     case 4:
-      // 获取频道列表
-      getPlantBeanChannelTaskList()
+      // 偷取营养液
+      $.message = '开始偷取好友营养液'
+      stealFriendNutrients()
       break;
     case 5:
       // 助力
       dpPlantBeanHelpTask()
       break;
     case 6:
-      // 获取好友列表
-      getPlantBeanStealFriendList()
+      // 获取商品列表
+      getPlantBeanProductTaskList()
       break;
     case 7:
-      // 偷取营养液
-      $.message = '开始偷取好友营养液'
-      stealFriendNutrients()
+      // 获取频道列表
+      getPlantBeanChannelTaskList()
       break;
     case 8:
       // 定时领取营养液
@@ -389,6 +390,7 @@ function doPlantBean () {
       break;
     default:
       $.to = ''; $.call.pop(); $.taskStep = 1; $.self.data = undefined
+      $.taskList = undefined; $.roundList = undefined;
       document.write(JSON.stringify($))
       break;
   }
@@ -540,6 +542,7 @@ function doPlantBeanBrowseTask () {
   $.oneShop = $.shopList.shift()
   if (!$.oneShop || $.self.count <= 0) {
     $.message = `${$.oneTask.taskName}任务已做完~`
+    $.shopList = undefined
     $.call.pop()
     document.write(JSON.stringify($))
     return
@@ -569,6 +572,7 @@ function doPlantBeanProductTask () {
   $.oneProduct = $.productList.shift()
   if (!$.oneProduct || $.self.count <= 0) {
     $.message = `${$.oneTask.taskName}任务已做完~`
+    $.productList = undefined
     $.call.pop()
     document.write(JSON.stringify($))
     return
@@ -598,6 +602,7 @@ function doPlantBeanChannelTask () {
   $.oneChannel = $.channelList.shift()
   if (!$.oneChannel || $.self.count <= 0) {
     $.message = `${$.oneTask.taskName}任务已做完~`
+    $.channelList = undefined
     $.call.pop()
     document.write(JSON.stringify($))
     return
@@ -644,6 +649,7 @@ function doPlantBeanCollect () {
   if (!$.oneTask) {
     $.wait = 0
     $.message = `营养液已收取完~`
+    $.collectList = undefined
     $.call.pop()
     document.write(JSON.stringify($))
     return
@@ -669,6 +675,7 @@ function stealFriendNutrients () {
   $.oneTask = $.stealFriendInfo.friendInfoList.shift()
   if (!$.oneTask || $.stealFriendInfo.tips) {
     $.message = `今日偷取好友营养液已达上限~`
+    $.stealFriendInfo = undefined
     $.call.pop()
     document.write(JSON.stringify($))
     return
