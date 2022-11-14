@@ -62,10 +62,10 @@ function getBaseTaskData () {
     1111: {
       version: '数据最后更新于:10.24.1',
       pv: {
-        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UUVQVPq',
+        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UT5Rux4',
         tmall:
-          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UUVQVPq',
-        taobaolite: 'taobaolite://m.tb.cn/h.UUVQVPq'
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UT5Rux4',
+        taobaolite: 'taobaolite://m.tb.cn/h.UT5Rux4'
       },
       main: {
         taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com',
@@ -111,10 +111,10 @@ function getBaseTaskData () {
       version: '数据最后更新于:12.31.1',
       image: 'https://gitee.com/leecogit/Updater/raw/master/image/tjb.png',
       pv: {
-        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UUVQVPq',
+        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UT5Rux4',
         tmall:
-          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UUVQVPq',
-        taobaolite: 'taobaolite://m.tb.cn/h.UUVQVPq'
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UT5Rux4',
+        taobaolite: 'taobaolite://m.tb.cn/h.UT5Rux4'
       },
       main: {
         taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com',
@@ -144,10 +144,10 @@ function getBaseTaskData () {
     FarmSingle: {
       version: '数据最后更新于:10.13.1',
       pv: {
-        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UUVQVPq',
+        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UT5Rux4',
         tmall:
-          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UUVQVPq',
-        taobaolite: 'taobaolite://m.tb.cn/h.UUVQVPq'
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UT5Rux4',
+        taobaolite: 'taobaolite://m.tb.cn/h.UT5Rux4'
       },
       main: {
         taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com',
@@ -188,7 +188,41 @@ function getBaseTaskData () {
         淘宝特价版: 'taobaolite'
       },
       task: []
-    }
+    },
+    Jhs: {
+      "version": "数据最后更新于:11.13.1",
+      "pv": {
+        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UT5Rux4",
+        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UT5Rux4",
+        "taobaolite": "taobaolite://m.tb.cn/h.UT5Rux4"
+      },
+      "main": {
+        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
+        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fwww.tmall.com%2F",
+        "taobaolite": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F"
+      },
+      "home": {
+        "taobao": "taobao://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?wh_pid=daily-253613&status_bar_transparent=true&disableNav=YES&sourceType=other",
+        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fa%2Fact%2Fju%2Fdailygroup%2F1583%2Fwupr%3Fwh_pid%3Ddaily-253613%26status_bar_transparent%3Dtrue%26disableNav%3DYES%26sourceType%3Dother",
+        "taobaolite": "taobaolite://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?wh_pid=daily-253613&status_bar_transparent=true&disableNav=YES&sourceType=other"
+      },
+      "end": {
+        "taobao": "taobao://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?ut_sk=1.X7c7EQcMz0gDAGYKcRv9hLW2_21380790_1631361971008.Copy.common&wh_pid=daily-253613",
+        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fa%2Fact%2Fju%2Fdailygroup%2F1583%2Fwupr%3Fut_sk%3D1.X7c7EQcMz0gDAGYKcRv9hLW2_21380790_1631361971008.Copy.common%26wh_pid%3Ddaily-253613",
+        "taobaolite": "taobaolite://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?ut_sk=1.X7c7EQcMz0gDAGYKcRv9hLW2_21380790_1631361971008.Copy.common&wh_pid=daily-253613"
+      },
+      "app": {
+        "淘宝": "taobao",
+        "天猫": "tmall",
+        "淘宝特价版": "taobaolite"
+      },
+      "code": {
+        "getCookieData": "https://gitee.com/leecobaby/Updater/raw/master/dist/tb/getCookieData.js",
+        "getTaskData": "https://gitee.com/leecobaby/Updater/raw/master/dist/tb/getTaskData.js",
+        "updateCookie": "https://gitee.com/leecobaby/Updater/raw/master/dist/tb/updateCookie.js"
+      },
+      "task": []
+    },
   }
 }
 
