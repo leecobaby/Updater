@@ -2319,23 +2319,15 @@ function Utils () {
   const isScriptable = typeof Script !== 'undefined'
   // 重写 doucment.write 方法，已兼容各种执行场景
   if (isScriptable) {
-    module.__proto__.document = {
+    this.document = {
       write: function (content) {
         console.log('success');
         Script.setShortcutOutput(content);
         Script.complete();
       },
       body: {
-        innerHTML: function (content) {
-          console.log('success');
-          Script.setShortcutOutput(content);
-          Script.complete();
-        },
-        innerText: function (content) {
-          console.log('success');
-          Script.setShortcutOutput(content);
-          Script.complete();
-        }
+        // 因为在 HTML 中，脚本是靠判断 innerText 中是否有内容来判断是否执行完毕的，而在 Scriptable 中， Script.complete() 能直接立马中断脚本执行，所以这里直接返会 false 就可以了
+        innerText: false
       }
 
     }
