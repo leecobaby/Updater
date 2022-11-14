@@ -26,7 +26,6 @@
 // $.secretpInfo = {};
 // $.innerPkInviteList = [];
 
-const isScriptable = typeof Script !== 'undefined'
 const utils = Utils()
 
 /** 下方放 call 文本，来控制函数执行 **/
@@ -2317,17 +2316,33 @@ function Utils () {
 }
 
 !(function () {
-  // 重写 doucment.write 方法，防止页面被攻击
-  const _write = document.write.bind(document);
-  document.write = function (content) {
-    if (isScriptable) {
-      Script.setShortcutOutput(content);
-      Script.complete();
-    } else {
+  const isScriptable = typeof Script !== 'undefined'
+  // 重写 doucment.write 方法，已兼容各种执行场景
+  if (isScriptable) {
+    module.__proto__.document = {
+      write: function (content) {
+        console.log('success');
+        Script.setShortcutOutput(content);
+        Script.complete();
+      },
+      innerHTML: function (content) {
+        console.log('success');
+        Script.setShortcutOutput(content);
+        Script.complete();
+      },
+      innerText: function (content) {
+        console.log('success');
+        Script.setShortcutOutput(content);
+        Script.complete();
+      }
+
+    }
+  } else {
+    const _write = document.write.bind(document);
+    document.write = function (content) {
       _write(utils.escapeHtml(content));
     }
   }
-
   // 时间格式化
   Date.prototype.Format = function (fmt) {
     var e,
