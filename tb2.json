@@ -1704,7 +1704,7 @@
       "🔥 双11超级惊喜站": "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fa%2Fact%2Falimama%2Fdailygroup%2F3155%2Fwupr%3FdisableNav%3DYES%26status_bar_transparent%3Dtrue%26wh_pid%3Ddaily-279717"
     },
     "Cookie 获取地址": {
-      "App": "taobao://h5api.m.taobao.com/h5/",
+      "App": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://main.m.taobao.com/mytaobao/index.html",
       "Alook": "Alook://https%3A%2F%2Fmain.m.taobao.com%2Fmytaobao%2Findex.html",
       "Safari": "https://main.m.taobao.com/mytaobao/index.html"
     },

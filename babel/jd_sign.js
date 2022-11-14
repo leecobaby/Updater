@@ -168,7 +168,7 @@ function doBean () {
       doBeanSign()
       break;
     case 2:
-      // 流量5个商品
+      // 浏览5个商品
       doBeanBrowseTask()
       break;
     case 3:
@@ -209,6 +209,7 @@ function doBean () {
       break;
     default:
       $.to = ''; $.call.pop(); $.taskStep = 1; $.self.data = undefined
+      $.taskList = undefined
       document.write(JSON.stringify($))
       break;
   }
@@ -347,25 +348,25 @@ function doPlantBean () {
       }
       break;
     case 3:
-      // 获取商品列表
-      getPlantBeanProductTaskList()
+      // 获取好友列表
+      getPlantBeanStealFriendList()
       break;
     case 4:
-      // 获取频道列表
-      getPlantBeanChannelTaskList()
+      // 偷取营养液
+      $.message = '开始偷取好友营养液'
+      stealFriendNutrients()
       break;
     case 5:
       // 助力
       dpPlantBeanHelpTask()
       break;
     case 6:
-      // 获取好友列表
-      getPlantBeanStealFriendList()
+      // 获取商品列表
+      getPlantBeanProductTaskList()
       break;
     case 7:
-      // 偷取营养液
-      $.message = '开始偷取好友营养液'
-      stealFriendNutrients()
+      // 获取频道列表
+      getPlantBeanChannelTaskList()
       break;
     case 8:
       // 定时领取营养液
@@ -389,6 +390,7 @@ function doPlantBean () {
       break;
     default:
       $.to = ''; $.call.pop(); $.taskStep = 1; $.self.data = undefined
+      $.taskList = undefined; $.roundList = undefined;
       document.write(JSON.stringify($))
       break;
   }
@@ -540,6 +542,7 @@ function doPlantBeanBrowseTask () {
   $.oneShop = $.shopList.shift()
   if (!$.oneShop || $.self.count <= 0) {
     $.message = `${$.oneTask.taskName}任务已做完~`
+    $.shopList = undefined
     $.call.pop()
     document.write(JSON.stringify($))
     return
@@ -569,6 +572,7 @@ function doPlantBeanProductTask () {
   $.oneProduct = $.productList.shift()
   if (!$.oneProduct || $.self.count <= 0) {
     $.message = `${$.oneTask.taskName}任务已做完~`
+    $.productList = undefined
     $.call.pop()
     document.write(JSON.stringify($))
     return
@@ -598,6 +602,7 @@ function doPlantBeanChannelTask () {
   $.oneChannel = $.channelList.shift()
   if (!$.oneChannel || $.self.count <= 0) {
     $.message = `${$.oneTask.taskName}任务已做完~`
+    $.channelList = undefined
     $.call.pop()
     document.write(JSON.stringify($))
     return
@@ -644,6 +649,7 @@ function doPlantBeanCollect () {
   if (!$.oneTask) {
     $.wait = 0
     $.message = `营养液已收取完~`
+    $.collectList = undefined
     $.call.pop()
     document.write(JSON.stringify($))
     return
@@ -669,6 +675,7 @@ function stealFriendNutrients () {
   $.oneTask = $.stealFriendInfo.friendInfoList.shift()
   if (!$.oneTask || $.stealFriendInfo.tips) {
     $.message = `今日偷取好友营养液已达上限~`
+    $.stealFriendInfo = undefined
     $.call.pop()
     document.write(JSON.stringify($))
     return
@@ -2309,12 +2316,27 @@ function Utils () {
 }
 
 !(function () {
-  // 重写 doucment.write 方法，防止页面被攻击
-  const _write = document.write.bind(document);
-  document.write = function (content) {
-    _write(utils.escapeHtml(content));
-  }
+  const isScriptable = typeof Script !== 'undefined'
+  // 重写 doucment.write 方法，已兼容各种执行场景
+  if (isScriptable) {
+    this.document = {
+      write: function (content) {
+        console.log('success');
+        Script.setShortcutOutput(content);
+        Script.complete();
+      },
+      body: {
+        // 因为在 HTML 中，脚本是靠判断 innerText 中是否有内容来判断是否执行完毕的，而在 Scriptable 中， Script.complete() 能直接立马中断脚本执行，所以这里直接返会 false 就可以了
+        innerText: false
+      }
 
+    }
+  } else {
+    const _write = document.write.bind(document);
+    document.write = function (content) {
+      _write(utils.escapeHtml(content));
+    }
+  }
   // 时间格式化
   Date.prototype.Format = function (fmt) {
     var e,

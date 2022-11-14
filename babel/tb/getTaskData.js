@@ -8,7 +8,7 @@ const items = []
 // 共用与云端推送的 fromToken
 let fromToken = ''
 // 排除的任务 id
-let excludeIds = ['15901', '18735', '23176', '21317', '34751', '34682', '36459', '34814', '34970', '36073']
+let excludeIds = ['15901', '18735', '23176', '21317']
 // 格式化数据
 let dataArr = $.Utils.formatToArray(data.arr || data)
 let task = getBaseTaskData()
@@ -370,7 +370,8 @@ function getOnceTaskData (app) {
           ]
         }
       }
-    ]
+    ],
+    Jhs: []
   }
   return data[app]
 }
@@ -401,6 +402,14 @@ function getTokenTaskData (app, title, sceneId, hd_from_id) {
         urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&spm=a217e.xzrwy.1.1&sceneId=${sceneId}&sourceType=other&hd_from_id=${hd_from_id}&`,
         textEnd: 'str2'
       }
+    },
+    Jhs: {
+      main: {
+        title: title,
+        type: 'other',
+        urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&spm=a217e.xzrwy.1.1&sceneId=${sceneId}&sourceType=other&hd_from_id=${hd_from_id}&`,
+        textEnd: 'str2'
+      }
     }
   }
   return data[app]
@@ -417,7 +426,11 @@ function getTaskParams (app, index) {
     Taojb: [
       { title: '每日任务', sceneId: 2141, hd_from_id: 100089 }
     ],
-    1111: [{ title: '赚喵果', sceneId: 4276, hd_from_id: 100165 }]
+    1111: [{ title: '赚喵果', sceneId: 4276, hd_from_id: 100165 }],
+    Jhs: [
+      { title: '攒星星', sceneId: 107, hd_from_id: 100027 },
+      { title: 'NPC任务', sceneId: 3421, hd_from_id: 100027 }
+    ]
   }
   return data[app][index]
 }
