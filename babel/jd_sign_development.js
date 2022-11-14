@@ -2325,15 +2325,17 @@ function Utils () {
         Script.setShortcutOutput(content);
         Script.complete();
       },
-      innerHTML: function (content) {
-        console.log('success');
-        Script.setShortcutOutput(content);
-        Script.complete();
-      },
-      innerText: function (content) {
-        console.log('success');
-        Script.setShortcutOutput(content);
-        Script.complete();
+      body: {
+        innerHTML: function (content) {
+          console.log('success');
+          Script.setShortcutOutput(content);
+          Script.complete();
+        },
+        innerText: function (content) {
+          console.log('success');
+          Script.setShortcutOutput(content);
+          Script.complete();
+        }
       }
 
     }
