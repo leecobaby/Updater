@@ -26,6 +26,7 @@
 // $.secretpInfo = {};
 // $.innerPkInviteList = [];
 
+const isScriptable = typeof Script !== 'undefined'
 const utils = Utils()
 
 /** 下方放 call 文本，来控制函数执行 **/
@@ -2319,7 +2320,12 @@ function Utils () {
   // 重写 doucment.write 方法，防止页面被攻击
   const _write = document.write.bind(document);
   document.write = function (content) {
-    _write(utils.escapeHtml(content));
+    if (isScriptable) {
+      Script.setShortcutOutput(content);
+      Script.complete();
+    } else {
+      _write(utils.escapeHtml(content));
+    }
   }
 
   // 时间格式化
