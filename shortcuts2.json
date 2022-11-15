@@ -430,7 +430,7 @@
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/1111#版本日志"
     },
     "update": "https://www.icloud.com/shortcuts/3206a1b0cda242a092222f9d28e4560d",
-    "notice": "👋🏻 活动已解锁，请关注其他作品，公众号：Leeco爱分享",
+    "notice": "👋🏻 活动已结束，请关注其他作品，公众号：Leeco爱分享",
     "automation_url": "shortcuts://run-shortcut?name=双11喵糖自动任务&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
     "image": "https://gitcode.net/u012830258/updater/-/raw/master/image/tb_1111.png",
@@ -605,8 +605,8 @@
     }
   },
   "JD_sign": {
-    "version": "1.9",
-    "update_log": "- 新增 多条云端线路，自动切换可用线路",
+    "version": "2.0",
+    "update_log": "- 修复 ios15 及以上系统因快捷指令运行内存限制原因，中途崩溃问题。需要依赖 Scriptable App，ios14 也改为依赖 Scriptable App\n- 优化 运行速度",
     "about": {
       "faq": "https://support.qq.com/products/451815",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_sign#版本日志",
@@ -614,8 +614,8 @@
     },
     "help": "https://support.qq.com/products/451815",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/bc16213a80914d869d7bf25e09e82571",
-    "notice": "🧧 京享红包只有1-3天有效期，别忘记使用~\n自动助力暂未开发，开放会另行通知~",
+    "update": "https://www.icloud.com/shortcuts/5b7b20380969415d9185aeb82050adae",
+    "notice": "请自行选择需要做的任务~\n自动助力暂未开发，开放会另行通知~",
     "automation_url": "shortcuts://run-shortcut?name=京东-多合一签到&input=text&text=task",
     "image": "https://gitcode.net/u012830258/updater/-/raw/master/image/icon-jd.png",
     "scritable": "https://gitcode.net/u012830258/updater/-/raw/master/getJDCookie-sms.js",
@@ -696,7 +696,7 @@
     "help": "https://support.qq.com/products/451815",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/fa6fb0a4afc54ed380093d9c25038a35",
-    "notice": "🧧 京享红包只有1-3天有效期，别忘记使用~\n任务功能将会逐步完善，通过云端推送",
+    "notice": "任务功能将会逐步完善，通过云端推送",
     "automation_url": "shortcuts://run-shortcut?name=京东-东东农场&input=text&text=task",
     "image": "https://gitcode.net/u012830258/updater/-/raw/master/image/icon-jd2.jpeg",
     "scritable": "https://gitcode.net/u012830258/updater/-/raw/master/getJDCookie-sms.js",
@@ -795,7 +795,7 @@
   },
   "JD_1111": {
     "version": "1.0",
-    "update_log": "- 初步实现自动任务\n🧧 京享红包只有1-3天有效期，别忘记使用~",
+    "update_log": "👋🏻 活动已结束，请关注其他作品，公众号：Leeco爱分享",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_618#版本日志",
