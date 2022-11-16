@@ -10,8 +10,6 @@ $.Utils = Utils()
 // 格式化数据
 let dataArr = $.Utils.formatToArray(data.arr || data)
 let task = getBaseTaskData()
-const onceTask = getOnceTaskData(app)
-console.log(onceTask)
 const couponTask = [
   {
     main: {
@@ -44,14 +42,15 @@ simpleItems.unshift({
 // 追加云端任务
 simpleItems.push(...getSimpleTaskPutData())
 // 后面会对数组对象进行操作，则需要进行深拷贝
-task[app].task[0].main.item = [...items]
-
-task[app].task = [].concat(couponTask, task[app].task, onceTask)
-$.task = task
+$.coupon = {
+  couponUrl1:
+    'https://tb.ele.me/wow/alsc/mod/d5275789de46503ba0908a9d?e=1&open_type=miniapp&inviterId=74f86c&actId=1&_ltracker_f=hjb_app_grzx&chInfo=ch_app_chsub_Photo5',
+  couponUrl2: 'https://m.tb.cn/h.Ue8jS7Q',
+}
 $.simpleTask = [...simpleItems]
 document.body.outerHTML = JSON.stringify($)
 
-function taskHandle(data) {
+function taskHandle (data) {
   if (
     data.ret &&
     data.ret[0] == 'SUCCESS::调用成功' &&
@@ -63,33 +62,25 @@ function taskHandle(data) {
     const tasklist = data.data.data['224166'].data
     for (const item of tasklist) {
       const {
-        missionDefId,
-        missionCollectionId,
-        missionType,
-        pageSpm,
-        receiveStatus,
-        showTitle,
-        costFoodiePea
+        missionDefId, missionCollectionId, missionType,
+        pageSpm, receiveStatus, showTitle, costFoodiePea
       } = item
       asac = item.asac
       if (receiveStatus === 'TORECEIVE') {
-        if (missionType === 'PAGEVIEW') {
-          items.push(`${missionDefId} ${missionCollectionId} ${missionType} ${pageSpm}`)
-        } else {
-          simpleItems.push({
-            title: showTitle,
-            point: costFoodiePea,
-            url: `https://service-daubfate-1251309300.gz.apigw.tencentcs.com/release/api?activityId=${app}&tk=${tk}&api=mtop.alibaba.svip.langrisser.act&app=ele&data=${encodeURIComponent(
-              JSON.stringify({
-                callSource: 'biz_code_main',
-                latitude: '28.754654',
-                longitude: '118.639297',
-                resId: '223166',
-                extra: `{\"missionDefId\":${missionDefId},\"missionCollectionId\":${missionCollectionId},\"missionType\":\"SIMPLESIGNIN\",\"source\":\"mtop\"}`
-              })
-            )}`
-          })
-        }
+        simpleItems.push({
+          title: showTitle,
+          point: costFoodiePea,
+          url: `https://service-daubfate-1251309300.gz.apigw.tencentcs.com/release/api?activityId=${app}&tk=${tk}&api=mtop.alibaba.svip.langrisser.act&app=ele&data=${encodeURIComponent(
+            JSON.stringify({
+              callSource: 'biz_code_main',
+              latitude: '28.754654',
+              longitude: '118.639297',
+              resId: '223166',
+              extra: `{\"missionDefId\":${missionDefId},\"missionCollectionId\":${missionCollectionId},\"missionType\":\"${missionType}\",\"source\":\"mtop\"}`
+            })
+          )}`,
+          url2: missionType === 'PAGEVIEW' ? `eleme://web?url=${encodeURIComponent(`https://tb.ele.me/wow/alsc/mod/156e0df0c951c793ab121f2e?missionid=${missionDefId}&missioncollectid=${missionCollectionId}&taskfrom=${pageSpm}&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.3`)}` : null
+        })
       }
     }
   } else {
@@ -97,7 +88,7 @@ function taskHandle(data) {
   }
 }
 
-function getBaseTaskData() {
+function getBaseTaskData () {
   return {
     ele_dou: {
       version: '数据最后更新于:7.25.1',
@@ -159,7 +150,7 @@ function getBaseTaskData() {
   }
 }
 
-function getOnceTaskData(app) {
+function getOnceTaskData (app) {
   const data = {
     ele_dou: [
       {
@@ -184,16 +175,20 @@ function getOnceTaskData(app) {
   return data[app]
 }
 
-function getSimpleTaskPutData() {
+function getSimpleTaskPutData () {
   const items = [
-    { missionDefId: 4242001, missionCollectionId: 36, costFoodiePea: 5 },
-    { missionDefId: 6280001, missionCollectionId: 36, costFoodiePea: 5 },
-    { missionDefId: 4182001, missionCollectionId: 36, costFoodiePea: 5 },
-    { missionDefId: 4648001, missionCollectionId: 36, costFoodiePea: 5 }
+    { missionDefId: 4242001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', pageSpm: '' },
+    { missionDefId: 6280001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', pageSpm: '' },
+    { missionDefId: 4182001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', pageSpm: '' },
+    { missionDefId: 4648001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', pageSpm: '' },
+    { missionDefId: 3780001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'PAGEVIEW', pageSpm: 'a2ogi.15063444' },
+    { missionDefId: 3062001, missionCollectionId: 95, costFoodiePea: 5, missionType: 'PAGEVIEW', pageSpm: 'page.spm' },
+    { missionDefId: 4506001, missionCollectionId: 95, costFoodiePea: 5, missionType: 'PAGEVIEW', pageSpm: 'page.spm' },
+    { missionDefId: 6130001, missionCollectionId: 95, costFoodiePea: 5, missionType: 'PAGEVIEW', pageSpm: 'a2ogi.15063444' },
   ]
 
   return items.map((item) => {
-    const { costFoodiePea, missionDefId, missionCollectionId } = item
+    const { costFoodiePea, missionDefId, missionCollectionId, missionType, pageSpm } = item
     return {
       title: '云端推送 - 隐藏任务',
       point: costFoodiePea,
@@ -205,7 +200,8 @@ function getSimpleTaskPutData() {
           resId: '223166',
           extra: `{\"missionDefId\":${missionDefId},\"missionCollectionId\":${missionCollectionId},\"missionType\":\"SIMPLESIGNIN\",\"source\":\"mtop\"}`
         })
-      )}`
+      )}`,
+      url2: missionType === 'PAGEVIEW' ? `eleme://web?url=${encodeURIComponent(`https://tb.ele.me/wow/alsc/mod/156e0df0c951c793ab121f2e?missionid=${missionDefId}&missioncollectid=${missionCollectionId}&taskfrom=${pageSpm}&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.3`)}` : null
     }
   })
 }
@@ -214,9 +210,9 @@ function getSimpleTaskPutData() {
  * 工具类对象 - 写成函数封装形式，是想利用函数申明提前
  * @returns object
  */
-function Utils() {
+function Utils () {
   return {
-    randomString(e) {
+    randomString (e) {
       e = e || 32
       let t = 'abcdef0123456789',
         a = t.length,
@@ -224,7 +220,7 @@ function Utils() {
       for (let i = 0; i < e; i++) n += t.charAt(Math.floor(Math.random() * a))
       return n
     },
-    stringify(data) {
+    stringify (data) {
       try {
         if (typeof JSON.stringify(data) == 'string') {
           return JSON.stringify(data)
@@ -234,18 +230,18 @@ function Utils() {
         return data
       }
     },
-    randomInt(min, max) {
+    randomInt (min, max) {
       min = Math.ceil(min)
       max = Math.floor(max)
       return Math.floor(Math.random() * (max - min)) + min
     },
-    formatToArray(p = []) {
+    formatToArray (p = []) {
       return Array.isArray(p) ? p : [p]
     },
-    filterArray(arr = []) {
+    filterArray (arr = []) {
       return arr.filter((v) => !!v)
     },
-    getParam(url, key) {
+    getParam (url, key) {
       const reg = new RegExp('(^|&)' + key + '=([^&]*)(&|$)', 'i')
       const r = url.match(reg)
       if (r != null) return decodeURIComponent(r[2])
