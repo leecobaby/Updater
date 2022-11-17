@@ -1160,6 +1160,24 @@ function Utils () {
     // 将内容转换成数组，并去除空值
     handleContent (content) {
       return this.filterArray(this.formatToArray(content))
+    },
+    handleShortcutHelpCode (p) {
+      return this.filterArray(this.formatToArray(p))
+    },
+    handleHelpCode (arr) {
+      return arr.map(v => String(v).replace(/^\d\[指令专用\]/, ''))
+    },
+    getRanHelpCode (data, time) {
+      // 选出有 助力码 的元素
+      const filterData = _.filter(data.items, v => v.text.match(/^(\d\[指令专用\])?\w{20,}$/g))
+      // 统计所有用户的消息情况
+      const statisticData = _.groupBy(filterData, v => v.fromUser)
+      // 合规的用户数据
+      const uniqueData = _.pickBy(statisticData, v => v.length <= time)
+      // 随机选取出 5 个助力 url - 考虑到助力已满情况和无效链接的情况
+      const sampleData = _.sampleSize(uniqueData, 5)
+      const list = sampleData.map(v => v[0].text)
+      return list
     }
   }
 }
