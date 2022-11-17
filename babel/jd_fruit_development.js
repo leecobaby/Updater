@@ -12,7 +12,7 @@
 // 待开发 getAwardInviteFriend getExtraAward turntableFarm
 
 let JD_API_HOST = `https://api.m.jd.com/client.action?functionId=`;
-$.Utils = Utils()
+const utils = Utils()
 
 /** 下方放 call 文本，来控制函数执行 **/
 
@@ -31,13 +31,13 @@ $.Utils = Utils()
  */
 function init () {
   // 处理助力码
-  $.helpCodeList1 = $.Utils.handleShortcutHelpCode($.helpCodeObj['活动1助力码'] || [])
+  $.helpCodeList1 = utils.handleShortcutHelpCode($.helpCodeObj['活动1助力码'] || [])
 
   // 任务流程初始化 或 次数循环任务初始化
   $.taskStep = 1
 
   // 生成随机 UA UUID
-  $.uuid = $.Utils.randomString(40)
+  $.uuid = utils.randomString(40)
   $.UA = `jdapp;iPhone;10.2.0;13.1.2;${$.uuid};M/5.0;network/wifi;ADID/;model/iPhone8,1;addressid/2308460611;appBuild/167853;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 13_1_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1;`
 
   // 自变量
@@ -1059,8 +1059,8 @@ function dealReturn (type, data) {
     case 'getHelpCode':
       $.data = {}
       // 将助力池的助力码添加进助力列表
-      $.helpCodeList1 = $.helpCodeList1.concat($.Utils.getRanHelpCode(data, 3))
-      $.helpCodeList1 = $.Utils.handleHelpCode($.helpCodeList1)
+      $.helpCodeList1 = $.helpCodeList1.concat(utils.getRanHelpCode(data, 3))
+      $.helpCodeList1 = utils.handleHelpCode($.helpCodeList1)
       $.message = `已从云端助力池获取到3条助力码追加到助力列表。助力列表预览：${JSON.stringify($.helpCodeList1)}`
       $.modules = 0 // 取消模块
       break;
@@ -1082,29 +1082,135 @@ function Utils () {
         n += t.charAt(Math.floor(Math.random() * a));
       return n
     },
+    stringify (data) {
+      try {
+        if (typeof JSON.stringify(data) == "string") {
+          return JSON.stringify(data);
+        }
+      } catch (e) {
+        console.log(e);
+        return data;
+      }
+    },
+    randomInt (min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min)) + min;
+    },
     formatToArray (p = []) {
       return Array.isArray(p) ? p : [p]
     },
     filterArray (arr = []) {
       return arr.filter(v => !!v)
     },
-    handleShortcutHelpCode (p) {
-      return this.filterArray(this.formatToArray(p))
+    getParam (url, key) {
+      const reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)", "i")
+      const r = url.match(reg)
+      if (r != null) return decodeURIComponent(r[2]);
+      return null;
     },
-    handleHelpCode (arr) {
-      return arr.map(v => String(v).replace(/^\d\[指令专用\]/, ''))
+    H5ST: {
+      _getFp (t) {
+        let e = "0123456789";
+        let a = 13;
+        let i = '';
+        for (; a--;)
+          i += e[Math.random() * e.length | 0];
+        return (i + t).slice(0, 16)
+      },
+      // 此处需要 modules
+      _getH5st (body) {
+        let y = (function _getKey (tk, fp, ts, ai, algo) {
+          let str = `${tk}${fp}${ts}${ai}${$.algo.rd}`;
+          console.log(str);
+          return algo[$.algo.enc](str, tk)
+        })($.algo.tk, $.algo.fp, $.algo.timestamp, $.algo.appId, CryptoJS).toString(CryptoJS.enc.Hex)
+        console.log(y);
+        let s = ''
+        for (let key of Object.keys(body)) {
+          key === 'body'
+            ? (s += `${key}:${CryptoJS.SHA256(body[key]).toString(CryptoJS.enc.Hex)}&`)
+            : (s += `${key}:${body[key]}&`)
+        }
+        s = s.slice(0, -1)
+        console.log(s);
+        s = CryptoJS.HmacSHA256(s, y).toString(CryptoJS.enc.Hex)
+        return encodeURIComponent(`${$.algo.timestamp};${$.algo.fp};${$.algo.appId.toString()};${$.algo.tk};${s};3.0;${$.algo.time.toString()}`)
+      }
+
     },
-    getRanHelpCode (data, time) {
-      // 选出有 助力码 的元素
-      const filterData = _.filter(data.items, v => v.text.match(/^(\d\[指令专用\])?\w{20,}$/g))
-      // 统计所有用户的消息情况
-      const statisticData = _.groupBy(filterData, v => v.fromUser)
-      // 合规的用户数据
-      const uniqueData = _.pickBy(statisticData, v => v.length <= time)
-      // 随机选取出 5 个助力 url - 考虑到助力已满情况和无效链接的情况
-      const sampleData = _.sampleSize(uniqueData, 5)
-      const list = sampleData.map(v => v[0].text)
-      return list
+    // escape html
+    escapeHtml (str) {
+      return str.replace(/[<>&"]/g, (c) => ({
+        '<': '&lt;',
+        '>': '&gt;',
+        '&': '&amp;',
+        '"': '&quot;'
+      }[c]))
+    },
+    // unescape html
+    unescapeHtml (str) {
+      return str.replace(/&(lt|gt|amp|quot);/g, (all, t) => ({
+        'lt': '<',
+        'gt': '>',
+        'amp': '&',
+        'quot': '"'
+      }[t]))
+    },
+    // 将内容转换成数组，并去除空值
+    handleContent (content) {
+      return this.filterArray(this.formatToArray(content))
     }
   }
 }
+
+!(function () {
+  const isScriptable = typeof Script !== 'undefined'
+  // 重写 doucment.write 方法，已兼容各种执行场景
+  if (isScriptable) {
+    this.document = {
+      write: function (content) {
+        console.log('success');
+        Script.setShortcutOutput(content);
+        Script.complete();
+      },
+      body: {
+        // 因为在 HTML 中，脚本是靠判断 innerText 中是否有内容来判断是否执行完毕的，而在 Scriptable 中， Script.complete() 能直接立马中断脚本执行，所以这里直接返会 false 就可以了
+        innerText: false
+      }
+
+    }
+  } else {
+    const _write = document.write.bind(document);
+    document.write = function (content) {
+      _write(utils.escapeHtml(content));
+    }
+  }
+  // 时间格式化
+  Date.prototype.Format = function (fmt) {
+    var e,
+      n = this,
+      d = fmt,
+      l = {
+        "M+": n.getMonth() + 1,
+        "d+": n.getDate(),
+        "D+": n.getDate(),
+        "h+": n.getHours(),
+        "H+": n.getHours(),
+        "m+": n.getMinutes(),
+        "s+": n.getSeconds(),
+        "w+": n.getDay(),
+        "q+": Math.floor((n.getMonth() + 3) / 3),
+        "S+": n.getMilliseconds()
+      };
+    /(y+)/i.test(d) && (d = d.replace(RegExp.$1, "".concat(n.getFullYear()).substr(4 - RegExp.$1.length)));
+    for (var k in l) {
+      if (new RegExp("(".concat(k, ")")).test(d)) {
+        var t, a = "S+" === k ? "000" : "00";
+        d = d.replace(RegExp.$1, 1 == RegExp.$1.length ? l[k] : ("".concat(a) + l[k]).substr("".concat(l[k]).length))
+      }
+    }
+    return d;
+  }
+}
+)();
