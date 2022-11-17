@@ -1711,7 +1711,8 @@
     "Cookie 获取地址": {
       "App": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://main.m.taobao.com/mytaobao/index.html",
       "Alook": "Alook://https%3A%2F%2Fmain.m.taobao.com%2Fmytaobao%2Findex.html",
-      "Safari": "https://main.m.taobao.com/mytaobao/index.html"
+      "Safari": "https://main.m.taobao.com/mytaobao/index.html",
+      "饿了么抓包地址": "https://h5.ele.me"
     },
     "其他活动": {
       " Apple Stor教育优惠 - 没购买过的基本可以优惠价购机": "https://www.apple.com.cn/cn-k12/store?afid=p239%7C22788&cid=aos-cn-aff-ir",

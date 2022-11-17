@@ -10,19 +10,6 @@ $.Utils = Utils()
 // 格式化数据
 let dataArr = $.Utils.formatToArray(data.arr || data)
 let task = getBaseTaskData()
-const couponTask = [
-  {
-    main: {
-      title: '领券',
-      type: 'other',
-      activateUrl:
-        'https://tb.ele.me/wow/alsc/mod/d5275789de46503ba0908a9d?e=1&open_type=miniapp&inviterId=74f86c&actId=1&_ltracker_f=hjb_app_grzx&chInfo=ch_app_chsub_Photo5',
-      taskUrl: 'https://m.tb.cn/h.Ue8jS7Q',
-      textEnd: 'str1',
-      item: ['1 null PAGEVIEW null']
-    }
-  }
-]
 
 taskHandle(dataArr[0])
 // 添加签到任务
@@ -44,8 +31,8 @@ simpleItems.push(...getSimpleTaskPutData())
 // 后面会对数组对象进行操作，则需要进行深拷贝
 $.coupon = {
   couponUrl1:
-    'https://tb.ele.me/wow/alsc/mod/d5275789de46503ba0908a9d?e=1&open_type=miniapp&inviterId=74f86c&actId=1&_ltracker_f=hjb_app_grzx&chInfo=ch_app_chsub_Photo5',
-  couponUrl2: 'https://m.tb.cn/h.Ue8jS7Q',
+    `eleme://web?url=${encodeURIComponent('https://tb.ele.me/wow/alsc/mod/d5275789de46503ba0908a9d?e=1&open_type=miniapp&inviterId=74f86c&actId=1&_ltracker_f=hjb_app_grzx&chInfo=ch_app_chsub_Photo5')}`,
+  couponUrl2: `eleme://web?url=${encodeURIComponent('https://m.tb.cn/h.Ue8jS7Q')},
 }
 $.simpleTask = [...simpleItems]
 document.body.outerHTML = JSON.stringify($)
@@ -72,27 +59,28 @@ function taskHandle (data) {
           point: costFoodiePea,
           url: missionType === 'PAGEVIEW'
             ? `https://service-daubfate-1251309300.gz.apigw.tencentcs.com/release/api?activityId=${app}&tk=${tk}&api=mtop.tmall.kangaroo.core.service.route.pagerecommendsmallbizdece&app=ele&data=${encodeURIComponent(
-              JSON.stringify({
-                "cookie": "", "device": "phone", "backupParams": "device", "url": `https:\/\/tb.ele.me\/wow\/alsc\/mod\/156e0df0c951c793ab121f2e?missioncollectid=${missionCollectionId}&missionid=${missionDefId}&taskfrom=${pageSpm}&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&miniAppFrom=elmc&latitude=28.754654&longitude=118.639297&spm-pre=a2f6g.14291182.Play.2&spm=a2ogi.bx105771.tasklayer_scantask.0&preloadId=alsc-mod_1668683305384_37B7DQ19BNE1AP`,
-                "location": "[{\"latitude\":28.754654,\"longitude\":118.639297,\"locationType\":\"realTime\"}]"
-              })
-            )}`
+    JSON.stringify({
+      "cookie": "", "device": "phone", "backupParams": "device", "url": `https:\/\/tb.ele.me\/wow\/alsc\/mod\/156e0df0c951c793ab121f2e?missioncollectid=${missionCollectionId}&missionid=${missionDefId}&taskfrom=${pageSpm}&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&miniAppFrom=elmc&latitude=28.754654&longitude=118.639297&spm-pre=a2f6g.14291182.Play.2&spm=a2ogi.bx105771.tasklayer_scantask.0&preloadId=alsc-mod_1668683305384_37B7DQ19BNE1AP`,
+      "location": "[{\"latitude\":28.754654,\"longitude\":118.639297,\"locationType\":\"realTime\"}]"
+    })
+            )
+}`
             : `https://service-daubfate-1251309300.gz.apigw.tencentcs.com/release/api?activityId=${app}&tk=${tk}&api=mtop.alibaba.svip.langrisser.act&app=ele&data=${encodeURIComponent(
-              JSON.stringify({
-                callSource: 'biz_code_main',
-                latitude: '28.754654',
-                longitude: '118.639297',
-                resId: '223166',
-                extra: `{\"missionDefId\":${missionDefId},\"missionCollectionId\":${missionCollectionId},\"missionType\":\"${missionType}\",\"missionXId\":\"${missionXId}\",\"source\":\"mtop\"}`
-              })
+JSON.stringify({
+  callSource: 'biz_code_main',
+  latitude: '28.754654',
+  longitude: '118.639297',
+  resId: '223166',
+  extra: `{\"missionDefId\":${missionDefId},\"missionCollectionId\":${missionCollectionId},\"missionType\":\"${missionType}\",\"missionXId\":\"${missionXId}\",\"source\":\"mtop\"}`
+})
             )}`,
           url2: missionType === 'PAGEVIEW' ? `eleme://web?url=${encodeURIComponent(`https://tb.ele.me/wow/alsc/mod/156e0df0c951c793ab121f2e?missionid=${missionDefId}&missioncollectid=${missionCollectionId}&taskfrom=${pageSpm}&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm-pre=a2f6g.14291182.Play.2&spm=a2ogi.bx105771.tasklayer_scantask.0&preloadId=alsc-mod_1668683305384_37B7DQ19BNE1AP`)}` : undefined
         })
       }
     }
   } else {
-    $.error = `出错了请检查 Cookie 是否正确且未过期，也可以运行普通模式 ${JSON.stringify(data)}`
-  }
+  $.error = `出错了请检查 Cookie 是否正确且未过期，也可以运行普通模式 ${JSON.stringify(data)}`
+}
 }
 
 function getBaseTaskData () {
