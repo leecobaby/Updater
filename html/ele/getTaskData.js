@@ -79,7 +79,7 @@ function taskHandle (data) {
               extra: `{\"missionDefId\":${missionDefId},\"missionCollectionId\":${missionCollectionId},\"missionType\":\"${missionType}\",\"source\":\"mtop\"}`
             })
           )}`,
-          url2: missionType === 'PAGEVIEW' ? `eleme://web?url=${encodeURIComponent(`https://tb.ele.me/wow/alsc/mod/156e0df0c951c793ab121f2e?missionid=${missionDefId}&missioncollectid=${missionCollectionId}&taskfrom=${pageSpm}&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.3`)}` : ''
+          url2: missionType === 'PAGEVIEW' ? `eleme://web?url=${encodeURIComponent(`https://tb.ele.me/wow/alsc/mod/156e0df0c951c793ab121f2e?missionid=${missionDefId}&missioncollectid=${missionCollectionId}&taskfrom=${pageSpm}&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.3`)}` : undefined
         })
       }
     }
