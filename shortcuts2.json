@@ -102,18 +102,17 @@
     "share_content_tip": "请输入已编码的音效文本内容\n我已经自动输入你剪贴板的内容拉\n─=≡Σ(((つ•̀ω•́)つ\n温馨提醒:请尽量分享10秒以内的音效"
   },
   "Taojb": {
-    "version": "3.3",
-    "update_log": "- 更新 同步喵果指令版本\n- 支持 目前最新的所有功能，默认令牌模式运行\n- 下线 旧任务，如果还有旧任务的同学，请切换普通模式使用\n- 兼容 ios13-16",
-    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Taojb",
+    "version": "3.4",
+    "update_log": "- 更新 支持最新的功能和特性",
     "help": "https://support.qq.com/products/451815",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/9257278418ab4891a4e2768b69bbda3e",
+    "update": "https://www.icloud.com/shortcuts/140b3e07b1934ca88211b6e4c1192ffe",
     "about": {
       "faq": "https://support.qq.com/products/451815",
       "video": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX#KeYQdCQmyo8ua0xGy6Ic7ruCnTe",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Taojb"
     },
-    "notice": "支持几个日常任务，暂不支持自动签到~",
+    "notice": "支持几个日常任务，暂不支持自动签到~\n每日签到可以1分购~",
     "video": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX#TGSqduI2yomWkGxSEErcHVSNnEf",
     "automation_url": "shortcuts://run-shortcut?name=淘金币自动任务&input=text&text=task",
     "tip": {
@@ -153,13 +152,16 @@
   "Jhs": {
     "version": "1.8",
     "update_log": "- 更新 指令架构，支持目前所有最新的功能和特性\n- 更新 普通模式任务数据",
-    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Jhs",
+    "about": {
+      "faq": "https://support.qq.com/products/451815",
+      "video": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX#KeYQdCQmyo8ua0xGy6Ic7ruCnTe",
+      "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Jhs"
+    },
     "help": "https://support.qq.com/products/451815",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/c603f9805d36412e93d1e1a2cbc90cb4",
     "faq": "https://support.qq.com/products/451815",
     "notice": "积攒星星可兑换实物~",
-    "video": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX#TGSqduI2yomWkGxSEErcHVSNnEf",
     "automation_url": "shortcuts://run-shortcut?name=聚划算章鱼自动任务&input=text&text=task",
     "image": "https://gitcode.net/u012830258/updater/-/raw/master/image/tb_jhs.png",
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json",
