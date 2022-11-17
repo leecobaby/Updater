@@ -29,11 +29,8 @@ simpleItems.unshift({
 // 追加云端任务
 simpleItems.push(...getSimpleTaskPutData())
 // 后面会对数组对象进行操作，则需要进行深拷贝
-$.coupon = {
-  couponUrl1:
-    `eleme://web?url=${encodeURIComponent('https://tb.ele.me/wow/alsc/mod/d5275789de46503ba0908a9d?e=1&open_type=miniapp&inviterId=74f86c&actId=1&_ltracker_f=hjb_app_grzx&chInfo=ch_app_chsub_Photo5')}`,
-  couponUrl2: `eleme://web?url=${encodeURIComponent('https://m.tb.cn/h.Ue8jS7Q')}`,
-}
+$.couponUrl1 = `eleme://web?url=${encodeURIComponent('https://tb.ele.me/wow/alsc/mod/d5275789de46503ba0908a9d?e=1&open_type=miniapp&inviterId=74f86c&actId=1&_ltracker_f=hjb_app_grzx&chInfo=ch_app_chsub_Photo5')}`
+$.couponUrl2 = `eleme://web?url=${encodeURIComponent('https://m.tb.cn/h.Ue8jS7Q')}`
 $.simpleTask = [...simpleItems]
 document.body.outerHTML = JSON.stringify($)
 
