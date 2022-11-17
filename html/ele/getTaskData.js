@@ -189,20 +189,29 @@ function getSimpleTaskPutData () {
 
   return items.map((item) => {
     const { costFoodiePea, missionDefId, missionCollectionId, missionType, pageSpm } = item
-    return {
-      title: '云端推送 - 隐藏任务',
-      point: costFoodiePea,
-      url: `https://service-daubfate-1251309300.gz.apigw.tencentcs.com/release/api?activityId=${app}&tk=${tk}&api=mtop.alibaba.svip.langrisser.act&app=ele&data=${encodeURIComponent(
-        JSON.stringify({
-          callSource: 'biz_code_main',
-          latitude: '28.754654',
-          longitude: '118.639297',
-          resId: '223166',
-          extra: `{\"missionDefId\":${missionDefId},\"missionCollectionId\":${missionCollectionId},\"missionType\":\"SIMPLESIGNIN\",\"source\":\"mtop\"}`
-        })
-      )}`,
-      url2: missionType === 'PAGEVIEW' ? `eleme://web?url=${encodeURIComponent(`https://tb.ele.me/wow/alsc/mod/156e0df0c951c793ab121f2e?missionid=${missionDefId}&missioncollectid=${missionCollectionId}&taskfrom=${pageSpm}&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.3`)}` : null
+    if (missionType === 'PAGEVIEW') {
+      return {
+        title: '云端推送 - 隐藏任务',
+        point: costFoodiePea,
+        url: `https://h5.ele.me/restapi/biz.svip_scene/svip/engine/xSupply?params%5B%5D=%7B%22tagCode%22:%22223166%22,%22extra%22:%7B%22missionDefId%22:${missionDefId},%22missionCollectionId%22:${missionCollectionId},%22missionType%22:%22${missionType}%22%7D%7D&bizCode=biz_code_main&longitude=121.35623168945312&latitude=41.17439270019531&o2o_page_id=xc539zecsy89e96dwzdebha2634lgqf6_1623400808977`,
+        url2: `eleme://web?url=${encodeURIComponent(`https://tb.ele.me/wow/alsc/mod/156e0df0c951c793ab121f2e?missionid=${missionDefId}&missioncollectid=${missionCollectionId}&taskfrom=${pageSpm}&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.3`)}`
+      }
+    } else {
+      return {
+        title: '云端推送 - 隐藏任务',
+        point: costFoodiePea,
+        url: `https://service-daubfate-1251309300.gz.apigw.tencentcs.com/release/api?activityId=${app}&tk=${tk}&api=mtop.alibaba.svip.langrisser.act&app=ele&data=${encodeURIComponent(
+          JSON.stringify({
+            callSource: 'biz_code_main',
+            latitude: '28.754654',
+            longitude: '118.639297',
+            resId: '223166',
+            extra: `{\"missionDefId\":${missionDefId},\"missionCollectionId\":${missionCollectionId},\"missionType\":\"SIMPLESIGNIN\",\"source\":\"mtop\"}`
+          })
+        )}`,
+      }
     }
+
   })
 }
 
