@@ -62,7 +62,7 @@ function taskHandle (data) {
     const tasklist = data.data.data['224166'].data
     for (const item of tasklist) {
       const {
-        missionDefId, missionCollectionId, missionType,
+        missionDefId, missionCollectionId, missionType, missionXId,
         pageSpm, receiveStatus, showTitle, costFoodiePea
       } = item
       asac = item.asac
@@ -70,15 +70,22 @@ function taskHandle (data) {
         simpleItems.push({
           title: showTitle,
           point: costFoodiePea,
-          url: `https://service-daubfate-1251309300.gz.apigw.tencentcs.com/release/api?activityId=${app}&tk=${tk}&api=mtop.alibaba.svip.langrisser.act&app=ele&data=${encodeURIComponent(
-            JSON.stringify({
-              callSource: 'biz_code_main',
-              latitude: '28.754654',
-              longitude: '118.639297',
-              resId: '223166',
-              extra: `{\"missionDefId\":${missionDefId},\"missionCollectionId\":${missionCollectionId},\"missionType\":\"${missionType}\",\"source\":\"mtop\"}`
-            })
-          )}`,
+          url: missionType === 'PAGEVIEW'
+            ? `https://service-daubfate-1251309300.gz.apigw.tencentcs.com/release/api?activityId=${app}&tk=${tk}&api=mtop.alibaba.svip.langrisser.act&app=ele&data=${encodeURIComponent(
+              JSON.stringify({
+                "cookie": "", "device": "phone", "backupParams": "device", "url": `https:\/\/tb.ele.me\/wow\/alsc\/mod\/156e0df0c951c793ab121f2e?missioncollectid=${missionCollectionId}&missionid=${missionDefId}&taskfrom=${pageSpm}&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&miniAppFrom=elmc&latitude=28.754654&longitude=118.639297&spm-pre=a2f6g.14291182.Play.2&spm=a2ogi.bx105771.tasklayer_scantask.0&preloadId=alsc-mod_1668683305384_37B7DQ19BNE1AP`,
+                "location": "[{\"latitude\":28.754654,\"longitude\":118.639297,\"locationType\":\"realTime\"}]"
+              })
+            )}`
+            : `https://service-daubfate-1251309300.gz.apigw.tencentcs.com/release/api?activityId=${app}&tk=${tk}&api=mtop.alibaba.svip.langrisser.act&app=ele&data=${encodeURIComponent(
+              JSON.stringify({
+                callSource: 'biz_code_main',
+                latitude: '28.754654',
+                longitude: '118.639297',
+                resId: '223166',
+                extra: `{\"missionDefId\":${missionDefId},\"missionCollectionId\":${missionCollectionId},\"missionType\":\"${missionType}\",\"missionXId\":\"${missionXId}\",\"source\":\"mtop\"}`
+              })
+            )}`,
           url2: missionType === 'PAGEVIEW' ? `eleme://web?url=${encodeURIComponent(`https://tb.ele.me/wow/alsc/mod/156e0df0c951c793ab121f2e?missionid=${missionDefId}&missioncollectid=${missionCollectionId}&taskfrom=${pageSpm}&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.3`)}` : undefined
         })
       }
@@ -188,7 +195,7 @@ function getSimpleTaskPutData () {
   ]
 
   return items.map((item) => {
-    const { costFoodiePea, missionDefId, missionCollectionId, missionType, pageSpm } = item
+    const { costFoodiePea, missionDefId, missionCollectionId, missionType, pageSpm, missionXId } = item
     if (missionType === 'PAGEVIEW') {
       return {
         title: '云端推送 - 隐藏任务',
@@ -207,7 +214,7 @@ function getSimpleTaskPutData () {
             latitude: '28.754654',
             longitude: '118.639297',
             resId: '223166',
-            extra: `{\"missionDefId\":${missionDefId},\"missionCollectionId\":${missionCollectionId},\"missionType\":\"SIMPLESIGNIN\",\"source\":\"mtop\"}`
+            extra: `{\"missionDefId\":${missionDefId},\"missionCollectionId\":${missionCollectionId},\"missionType\":\"SIMPLESIGNIN\",\"missionXId\":\"${missionXId}\",\"source\":\"mtop\"}`
           })
         )}`,
       }

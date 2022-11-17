@@ -1561,7 +1561,7 @@
     "code": {
       "getCookieData": "https://gitee.com/leecobaby/Updater/raw/master/html/ele/getCookieData.js",
       "getTaskData": "https://gitee.com/leecobaby/Updater/raw/master/html/ele/getTaskData.js",
-      "getTaskResult": "https://gitee.com/leecobaby/Updater/raw/master/html/ele/getTaskResult.js"
+      "getTaskResult": "https://gitee.com/leecobaby/Updater/raw/master/dist/ele/getTaskResult.js"
     },
     "app": {
       "淘宝": "taobao",
