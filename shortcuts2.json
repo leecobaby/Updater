@@ -151,12 +151,12 @@
     }
   },
   "Jhs": {
-    "version": "1.7",
-    "update_log": "- 新增 更多资源线路\n- 修复 云端资源无法访问问题\n- 更新 活动任务数据",
+    "version": "1.8",
+    "update_log": "- 更新 指令架构，支持目前所有最新的功能和特性\n- 更新 普通模式任务数据",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/Jhs",
     "help": "https://support.qq.com/products/451815",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/13772cac372b484bb2ef7599baa95ed2",
+    "update": "https://www.icloud.com/shortcuts/c603f9805d36412e93d1e1a2cbc90cb4",
     "faq": "https://support.qq.com/products/451815",
     "notice": "积攒星星可兑换实物~",
     "video": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX#TGSqduI2yomWkGxSEErcHVSNnEf",
