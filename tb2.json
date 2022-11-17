@@ -1531,7 +1531,7 @@
     ]
   },
   "ele_dou": {
-    "version": "数据最后更新于:10.11.1",
+    "version": "数据最后更新于:11.17.1",
     "pv": {
       "taobao": "taobao://huodong.m.taobao.com/act/snipcodeupdate.html?_ariver_appid=8251537&x_object_type=miniapp&x_miniapp_id=8251537",
       "alipay": "alipays://platformapi/startapp?appId=2021001110676437&page=pages/my/index",
@@ -1559,8 +1559,8 @@
       "lodash": "https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"
     },
     "code": {
-      "getCookieData": "https://gitee.com/leecobaby/Updater/raw/master/html/ele/getCookieData.js",
-      "getTaskData": "https://gitee.com/leecobaby/Updater/raw/master/html/ele/getTaskData.js",
+      "getCookieData": "https://gitee.com/leecobaby/Updater/raw/master/dist/ele/getCookieData.js",
+      "getTaskData": "https://gitee.com/leecobaby/Updater/raw/master/dist/ele/getTaskData.js",
       "getTaskResult": "https://gitee.com/leecobaby/Updater/raw/master/dist/ele/getTaskResult.js"
     },
     "app": {
