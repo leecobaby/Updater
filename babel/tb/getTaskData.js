@@ -8,7 +8,7 @@ const items = []
 // 共用与云端推送的 fromToken
 let fromToken = ''
 // 排除的任务 id
-let excludeIds = ['15901', '18735', '23176', '21317', '17695', '32774']
+let excludeIds = ['15901', '18735', '23176', '21317', '17695', '32774', '36509']
 // 格式化数据
 let dataArr = $.Utils.formatToArray(data.arr || data)
 let task = getBaseTaskData()
@@ -223,6 +223,50 @@ function getBaseTaskData () {
       },
       "task": []
     },
+    tb_worldcup: {
+      version: '数据最后更新于:10.24.1',
+      pv: {
+        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UT5Rux4',
+        tmall:
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UT5Rux4',
+        taobaolite: 'taobaolite://m.tb.cn/h.UT5Rux4'
+      },
+      main: {
+        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com',
+        tmall: 'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fwww.tmall.com%2F',
+        taobaolite:
+          'taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F'
+      },
+      home: {
+        taobao:
+          'taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fhdwk%2Fgame2020v2%2Fworldcupzw%3FdisableNav%3DYES%26sourceType%3Dother',
+        tmall:
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fhdwk%2Fgame2020v2%2Fworldcupzw%3FdisableNav%3DYES%26sourceType%3Dother',
+        taobaolite:
+          'taobaolite://pages.tmall.com/wow/z/hdwk/game2020v2/worldcupzw?disableNav=YES&sourceType=other'
+      },
+      end: {
+        taobao:
+          'taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fhdwk%2Fgame2020v2%2Fworldcupzw%3FdisableNav%3DYES%26sourceType%3Dother',
+        tmall:
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fhdwk%2Fgame2020v2%2Fworldcupzw%3FdisableNav%3DYES%26sourceType%3Dother',
+        taobaolite:
+          'taobaolite://pages.tmall.com/wow/z/hdwk/game2020v2/worldcupzw?disableNav=YES&sourceType=other'
+      },
+      app: {
+        淘宝: 'taobao',
+        天猫: 'tmall',
+        淘宝特价版: 'taobaolite'
+      },
+      help: {
+        gitter:
+          'https://gitter.im/api/v1/rooms/6170e0576da03739848855d7/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=100',
+        code: 'https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/random_mutual_1111.js',
+        link: 'https://gitter.im/leecobaby-shortcuts/1111?utm_source=share-link&utm_medium=link&utm_campaign=share-link',
+        lodash: 'https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js'
+      },
+      task: []
+    }
   }
 }
 
@@ -405,7 +449,8 @@ function getOnceTaskData (app) {
         }
       }
     ],
-    Jhs: []
+    Jhs: [],
+    tb_worldcup: [],
   }
   return data[app]
 }
@@ -444,6 +489,14 @@ function getTokenTaskData (app, title, sceneId, hd_from_id) {
         urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&spm=a217e.xzrwy.1.1&sceneId=${sceneId}&sourceType=other&hd_from_id=${hd_from_id}&`,
         textEnd: 'str2'
       }
+    },
+    tb_worldcup: {
+      main: {
+        title: title,
+        type: 'other',
+        urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&spm=a217e.xzrwy.1.1&sceneId=${sceneId}&sourceType=other&hd_from_id=${hd_from_id}&`,
+        textEnd: 'str2'
+      }
     }
   }
   return data[app]
@@ -464,6 +517,9 @@ function getTaskParams (app, index) {
     Jhs: [
       { title: '攒星星', sceneId: 107, hd_from_id: 100027 },
       { title: 'NPC任务', sceneId: 3421, hd_from_id: 100027 }
+    ],
+    tb_worldcup: [
+      { title: '每日任务', sceneId: 4428, hd_from_id: 100095 }
     ]
   }
   return data[app][index]

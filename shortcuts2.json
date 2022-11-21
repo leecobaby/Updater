@@ -446,6 +446,32 @@
       "more": ""
     }
   },
+  "tb_worldcup": {
+    "version": "1.0",
+    "update_log": "- 修复 部分账号 cookie 编码错误问题（强化）",
+    "version_log": "https://github.com/leecobaby/shortcuts/tree/master/tb_worldcup",
+    "help": "https://support.qq.com/products/451815",
+    "github": "https://github.com/leecobaby/shortcuts",
+    "about": {
+      "faq": "https://support.qq.com/products/451815",
+      "video": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX#KeYQdCQmyo8ua0xGy6Ic7ruCnTe",
+      "version_log": "https://github.com/leecobaby/shortcuts/tree/master/tb_worldcup#版本日志"
+    },
+    "update": "https://www.icloud.com/shortcuts/3206a1b0cda242a092222f9d28e4560d",
+    "notice": "",
+    "automation_url": "shortcuts://run-shortcut?name=淘宝-世界杯自动任务&input=text&text=task",
+    "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
+    "image": "https://gitcode.net/u012830258/updater/-/raw/master/image/tb_1111.png",
+    "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json",
+    "tip": {
+      "hot": "",
+      "faq": "有疑问的请查看",
+      "set": "👤 请先在这授权账号",
+      "help": "🔥 随机互助已更新",
+      "other": "增加答疑中心",
+      "more": ""
+    }
+  },
   "ltao_duck": {
     "version": "1.2",
     "update_log": "- 增加 多线路模式\n- 更新 任务数据",
