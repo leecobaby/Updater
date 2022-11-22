@@ -1762,8 +1762,7 @@
       "活力中心": "taobao://pages.tmall.com/wow/z/hdwk/hdsolution2/game2020?wh_biz=tm&disableNav=YES&disableProgress=YES",
       "淘宝签到": "taobao://pages.tmall.com/wow/z/mit/hbqd/welfare4",
       "天天领红包": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fan%2Ftmall%2Fuser-growth%2Fplay-tmall%3FdisableNav%3DYES",
-      "饿了么免单活动": "eleme://web?url=https%3A%2F%2Ftb.ele.me%2Fwow%2Falsc%2Fmod%2F218c7270b85a2f992c7a72c4",
-      "🔥 双11超级惊喜站": "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fa%2Fact%2Falimama%2Fdailygroup%2F3155%2Fwupr%3FdisableNav%3DYES%26status_bar_transparent%3Dtrue%26wh_pid%3Ddaily-279717"
+      "饿了么免单活动": "eleme://web?url=https%3A%2F%2Ftb.ele.me%2Fwow%2Falsc%2Fmod%2F218c7270b85a2f992c7a72c4"
     },
     "Cookie 获取地址": {
       "App": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://main.m.taobao.com/mytaobao/index.html",
@@ -1771,10 +1770,11 @@
       "Safari": "https://main.m.taobao.com/mytaobao/index.html",
       "饿了么抓包地址": "https://h5.ele.me"
     },
-    "其他活动": {
+    "🔥 黑五亚马逊大促": {
       " Apple Stor教育优惠 - 没购买过的基本可以优惠价购机": "https://www.apple.com.cn/cn-k12/store?afid=p239%7C22788&cid=aos-cn-aff-ir",
-      "亚马逊中国 - 电子促销": "com.amazon.mobile.shopping.web://www.amazon.cn/?ascsubtag=106689422x1799729106&node=1403206071&tag=topcb1725-23"
+      "亚马逊中国 300元包邮": "com.amazon.mobile.shopping.web://www.amazon.cn/?ascsubtag=106689422x9324959253&node=1403206071&tag=topcb1725-23"
     },
+    "📺 世界杯看4K - 需要4K播放器": "http://39.135.41.243/PLTV/88888888/224/3221226716/index.m3u8?hls",
     "💬 1664大瓶白啤漏洞速抢 12.3": "http://kjkkg1.cn/XbxCs"
   },
   "leeco": true

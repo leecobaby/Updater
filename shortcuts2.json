@@ -448,7 +448,7 @@
   },
   "tb_worldcup": {
     "version": "1.0",
-    "update_log": "- 修复 部分账号 cookie 编码错误问题（强化）",
+    "update_log": "- 支持 淘宝系指令所有最新功能和特性",
     "version_log": "https://github.com/leecobaby/shortcuts/tree/master/tb_worldcup",
     "help": "https://support.qq.com/products/451815",
     "github": "https://github.com/leecobaby/shortcuts",
@@ -457,11 +457,11 @@
       "video": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX#KeYQdCQmyo8ua0xGy6Ic7ruCnTe",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/tb_worldcup#版本日志"
     },
-    "update": "https://www.icloud.com/shortcuts/3206a1b0cda242a092222f9d28e4560d",
-    "notice": "",
+    "update": "https://www.icloud.com/shortcuts/b9218bf1f67c4501be068e18988453e0",
+    "notice": "世界杯活动积分能换点礼品，活动大厅有4K直播源~",
     "automation_url": "shortcuts://run-shortcut?name=淘宝-世界杯自动任务&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
-    "image": "https://gitcode.net/u012830258/updater/-/raw/master/image/tb_1111.png",
+    "image": "https://gitcode.net/u012830258/updater/-/raw/master/image/icon-tb.png",
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json",
     "tip": {
       "hot": "",
