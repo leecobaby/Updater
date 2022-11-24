@@ -3,6 +3,7 @@
 // data 形式为 [{},{},...]
 // const data = ``
 let asac
+let missionXId
 const $ = {},
   items = [],
   simpleItems = []
@@ -36,20 +37,19 @@ document.body.outerHTML = JSON.stringify($)
 
 function taskHandle (data) {
   if (
-    data.ret &&
-    data.ret[0] == 'SUCCESS::调用成功' &&
-    data.data &&
-    data.data.data &&
-    data.data.data['224166'] &&
-    data.data.data['224166'].data
+    data.ret && data.ret[0] == 'SUCCESS::调用成功' && data.data?.data['224166']?.data
   ) {
-    const tasklist = data.data.data['224166'].data
+    let tasklist = data.data.data['224166'].data
+    tasklist.push(...getOhterTaskData())
+    tasklist = unique(tasklist, 'missionDefId')
+
     for (const item of tasklist) {
       const {
-        missionDefId, missionCollectionId, missionType, missionXId,
-        pageSpm, receiveStatus, showTitle, costFoodiePea
+        missionDefId, missionCollectionId, missionType, receiveStatus, showTitle, costFoodiePea
       } = item
       asac = item.asac
+      missionXId = item.missionXId || missionXId
+      pageSpm = item.pageSpm || 'a2ogi.15063444'
       if (receiveStatus === 'TORECEIVE') {
         simpleItems.push({
           title: showTitle,
@@ -147,10 +147,6 @@ function getOnceTaskData (app) {
             'https://tb.ele.me/wow/alsc/mod/156e0df0c951c793ab121f2e?missionid=占位符1&missioncollectid=占位符2&taskfrom=占位符4&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.3',
           textEnd: 'str1',
           item: [
-            '3780001 36 PAGEVIEW a2ogi.15063444',
-            '3062001 95 PAGEVIEW page.spm',
-            '4506001 95 PAGEVIEW page.spm',
-            '6130001 95 PAGEVIEW a2ogi.15063444'
           ]
         }
       }
@@ -160,10 +156,10 @@ function getOnceTaskData (app) {
 }
 
 function getSimpleTaskPutData () {
+
   const items = [
     { missionDefId: 4242001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', pageSpm: '' },
     { missionDefId: 6280001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', pageSpm: '' },
-    { missionDefId: 4182001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', pageSpm: '' },
     { missionDefId: 4648001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', pageSpm: '' },
     { missionDefId: 3780001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'PAGEVIEW', pageSpm: 'a2ogi.15063444' },
     { missionDefId: 3062001, missionCollectionId: 95, costFoodiePea: 5, missionType: 'PAGEVIEW', pageSpm: 'page.spm' },
@@ -198,6 +194,55 @@ function getSimpleTaskPutData () {
     }
 
   })
+}
+
+function getOhterTaskData () {
+  // 储备任务数据 
+  // 8640001 36 15 SIMPLESIGNIN
+  // 234001 36 10 SIMPLESIGNIN
+  // 8240001 36 5 SIMPLESIGNIN
+  // 7256001 36 10 SIMPLESIGNIN
+  // 3500001 36 5 SIMPLESIGNIN
+  // 7402001 36 5 SIMPLESIGNIN
+  // 6492001 36 5 SIMPLESIGNIN
+  // 6692002 36 5 SIMPLESIGNIN
+  // 4206001 36 5 SIMPLESIGNIN
+  // 4182001 36 5 SIMPLESIGNIN
+  // 6240001 36 5 SIMPLESIGNIN
+  // 8602011 36 5 PAGEVIEW
+  // 476001 36 10 PAGEVIEW
+  // 6512004 36 5 PAGEVIEW
+  // 7230001 36 5 PAGEVIEW
+  // 7232001 36 5 PAGEVIEW
+
+  return [
+    { missionDefId: 8640001, missionCollectionId: 36, costFoodiePea: 15, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送 - 隐藏任务' },
+    { missionDefId: 234001, missionCollectionId: 36, costFoodiePea: 10, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送 - 隐藏任务' },
+    { missionDefId: 8240001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送 - 隐藏任务' },
+    { missionDefId: 7256001, missionCollectionId: 36, costFoodiePea: 10, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送 - 隐藏任务' },
+    { missionDefId: 3500001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送 - 隐藏任务' },
+    { missionDefId: 7402001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送 - 隐藏任务' },
+    { missionDefId: 6492001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送 - 隐藏任务' },
+    { missionDefId: 4206001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送 - 隐藏任务' },
+    { missionDefId: 4182001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送 - 隐藏任务' },
+    { missionDefId: 6240001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送 - 隐藏任务' },
+    { missionDefId: 6692002, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送 - 隐藏任务' },
+
+
+
+    { missionDefId: 8758001, missionCollectionId: 36, costFoodiePea: 10, missionType: 'PAGEVIEW', receiveStatus: 'TORECEIVE', showTitle: '云端推送 - 隐藏任务' },
+    { missionDefId: 8602011, missionCollectionId: 36, costFoodiePea: 5, missionType: 'PAGEVIEW', receiveStatus: 'TORECEIVE', showTitle: '云端推送 - 隐藏任务' },
+    { missionDefId: 476001, missionCollectionId: 36, costFoodiePea: 10, missionType: 'PAGEVIEW', receiveStatus: 'TORECEIVE', showTitle: '云端推送 - 隐藏任务' },
+    { missionDefId: 6512004, missionCollectionId: 36, costFoodiePea: 5, missionType: 'PAGEVIEW', receiveStatus: 'TORECEIVE', showTitle: '云端推送 - 隐藏任务' },
+    { missionDefId: 7230001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'PAGEVIEW', receiveStatus: 'TORECEIVE', showTitle: '云端推送 - 隐藏任务' },
+    { missionDefId: 7232001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'PAGEVIEW', receiveStatus: 'TORECEIVE', showTitle: '云端推送 - 隐藏任务' },
+  ]
+}
+
+// 数组里面对象去重
+function unique (arr, key) {
+  const res = new Map()
+  return arr.filter((a) => !res.has(a[key]) && res.set(a[key], 1))
 }
 
 /**
