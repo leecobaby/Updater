@@ -209,11 +209,13 @@ function getOhterTaskData () {
   // 4206001 36 5 SIMPLESIGNIN
   // 4182001 36 5 SIMPLESIGNIN
   // 6240001 36 5 SIMPLESIGNIN
+  // 8242001 36 5 SIMPLESIGNIN
   // 8602011 36 5 PAGEVIEW
   // 476001 36 10 PAGEVIEW
   // 6512004 36 5 PAGEVIEW
   // 7230001 36 5 PAGEVIEW
   // 7232001 36 5 PAGEVIEW
+  // 8544001 36 5 PAGEVIEW
 
   return [
     { missionDefId: 8640001, missionCollectionId: 36, costFoodiePea: 15, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送 - 隐藏任务' },
@@ -227,6 +229,7 @@ function getOhterTaskData () {
     { missionDefId: 4182001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送 - 隐藏任务' },
     { missionDefId: 6240001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送 - 隐藏任务' },
     { missionDefId: 6692002, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送 - 隐藏任务' },
+    { missionDefId: 8242001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送 - 隐藏任务' },
 
 
 
@@ -236,6 +239,7 @@ function getOhterTaskData () {
     { missionDefId: 6512004, missionCollectionId: 36, costFoodiePea: 5, missionType: 'PAGEVIEW', receiveStatus: 'TORECEIVE', showTitle: '云端推送 - 隐藏任务' },
     { missionDefId: 7230001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'PAGEVIEW', receiveStatus: 'TORECEIVE', showTitle: '云端推送 - 隐藏任务' },
     { missionDefId: 7232001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'PAGEVIEW', receiveStatus: 'TORECEIVE', showTitle: '云端推送 - 隐藏任务' },
+    { missionDefId: 8544001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'PAGEVIEW', receiveStatus: 'TORECEIVE', showTitle: '云端推送 - 隐藏任务' },
   ]
 }
 
