@@ -521,7 +521,7 @@
     }
   },
   "ele_dou": {
-    "version": "1.5",
+    "version": "1.6",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/blob/master/TB.FAQ.md#%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96-cookie",
       "video": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX#KeYQdCQmyo8ua0xGy6Ic7ruCnTe",
@@ -532,7 +532,7 @@
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/a7cecd49c4964b359130f8d488ba8db9",
     "faq": "https://support.qq.com/products/451815",
-    "notice": "‼️饿了么如果获取cookie时，页面一直刷新进入了登录页，请用无痕模式~",
+    "notice": "‼️如果提示“被挤爆了”，请去往APP手动做一个任务先~",
     "video": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX#TGSqduI2yomWkGxSEErcHVSNnEf",
     "automation_url": "shortcuts://run-shortcut?name=饿了么-自动领豆&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
