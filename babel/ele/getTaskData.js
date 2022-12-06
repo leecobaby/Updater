@@ -50,7 +50,7 @@ function taskHandle (data) {
       asac = item.asac
       missionXId = item.missionXId || missionXId
       pageSpm = item.pageSpm || 'a2ogi.15063444'
-      if (receiveStatus === 'TORECEIVE') {
+      if (receiveStatus === 'TORECEIVE' && missionType === 'PAGEVIEW') {
         simpleItems.push({
           title: showTitle + ' - ' + missionDefId,
           point: costFoodiePea,
@@ -158,9 +158,6 @@ function getOnceTaskData (app) {
 function getSimpleTaskPutData () {
 
   const items = [
-    { missionDefId: 6280001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', pageSpm: '' },
-    { missionDefId: 4648001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', pageSpm: '' },
-    { missionDefId: 3780001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'PAGEVIEW', pageSpm: 'a2ogi.15063444' },
     { missionDefId: 3062001, missionCollectionId: 95, costFoodiePea: 5, missionType: 'PAGEVIEW', pageSpm: 'page.spm' },
     { missionDefId: 4506001, missionCollectionId: 95, costFoodiePea: 5, missionType: 'PAGEVIEW', pageSpm: 'page.spm' },
     { missionDefId: 6130001, missionCollectionId: 95, costFoodiePea: 5, missionType: 'PAGEVIEW', pageSpm: 'a2ogi.15063444' },
@@ -222,33 +219,10 @@ function getOhterTaskData () {
   // 8544001 36 5 PAGEVIEW
 
   return [
-    { missionDefId: 4970001, missionCollectionId: 36, costFoodiePea: 10, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送' },
-    { missionDefId: 7424001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送' },
-    { missionDefId: 8346002, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送' },
-    { missionDefId: 8640001, missionCollectionId: 36, costFoodiePea: 15, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送' },
-    { missionDefId: 4242001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送' },
-    { missionDefId: 234001, missionCollectionId: 36, costFoodiePea: 10, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送' },
-    { missionDefId: 8240001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送' },
-    { missionDefId: 7256001, missionCollectionId: 36, costFoodiePea: 10, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送' },
-    { missionDefId: 3500001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送' },
-    { missionDefId: 7402001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送' },
-    { missionDefId: 6492001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送' },
-    { missionDefId: 4206001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送' },
-    { missionDefId: 4182001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送' },
-    { missionDefId: 6240001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送' },
-    { missionDefId: 6692002, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送' },
-    { missionDefId: 8242001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送' },
-    { missionDefId: 6700003, missionCollectionId: 170, costFoodiePea: 5, missionType: 'SIMPLESIGNIN', receiveStatus: 'TORECEIVE', showTitle: '云端推送' },
-
 
 
     { missionDefId: 8758001, missionCollectionId: 36, costFoodiePea: 10, missionType: 'PAGEVIEW', receiveStatus: 'TORECEIVE', showTitle: '云端推送' },
     { missionDefId: 8602011, missionCollectionId: 36, costFoodiePea: 5, missionType: 'PAGEVIEW', receiveStatus: 'TORECEIVE', showTitle: '云端推送' },
-    { missionDefId: 476001, missionCollectionId: 36, costFoodiePea: 10, missionType: 'PAGEVIEW', receiveStatus: 'TORECEIVE', showTitle: '云端推送' },
-    { missionDefId: 6512004, missionCollectionId: 36, costFoodiePea: 5, missionType: 'PAGEVIEW', receiveStatus: 'TORECEIVE', showTitle: '云端推送' },
-    { missionDefId: 7230001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'PAGEVIEW', receiveStatus: 'TORECEIVE', showTitle: '云端推送' },
-    { missionDefId: 7232001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'PAGEVIEW', receiveStatus: 'TORECEIVE', showTitle: '云端推送' },
-    { missionDefId: 8544001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'PAGEVIEW', receiveStatus: 'TORECEIVE', showTitle: '云端推送' },
   ]
 }
 
