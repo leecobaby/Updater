@@ -1588,7 +1588,7 @@
     ]
   },
   "ele_dou": {
-    "version": "数据最后更新于:11.18.1",
+    "version": "数据最后更新于:12.6.1",
     "pv": {
       "taobao": "taobao://huodong.m.taobao.com/act/snipcodeupdate.html?_ariver_appid=8251537&x_object_type=miniapp&x_miniapp_id=8251537",
       "alipay": "alipays://platformapi/startapp?appId=2021001110676437&page=pages/my/index",
@@ -1631,7 +1631,7 @@
           "title": "领券",
           "type": "other",
           "activateUrl": "https://tb.ele.me/wow/alsc/mod/d5275789de46503ba0908a9d?e=1&open_type=miniapp&inviterId=74f86c&actId=1&_ltracker_f=hjb_app_grzx&chInfo=ch_app_chsub_Photo5",
-          "taskUrl": "https://m.tb.cn/h.Ue8jS7Q",
+          "taskUrl": "https://m.tb.cn/h.URakFZq",
           "textEnd": "str1",
           "item": ["1 null PAGEVIEW null"]
         }
@@ -1644,15 +1644,15 @@
           "taskUrl": "https://tb.ele.me/wow/alsc/mod/156e0df0c951c793ab121f2e?missionid=占位符1&missioncollectid=占位符2&taskfrom=占位符4&bizscene=svip&taskpageviewasac=2A21119A45TTVAEXP40N7N&spm=a2ogi.chihuo_home_tasklist.tasklayer_scantask.3",
           "textEnd": "str1",
           "item": [
-            "4926001 36 PAGEVIEW a2ogi.15063444",
-            "6302001 36 PAGEVIEW a2ogi.15063444",
-            "6300001 36 PAGEVIEW a2ogi.15063444",
-            "6184001 36 PAGEVIEW a2ogi.15063444",
-            "6242001 36 PAGEVIEW a2ogi.15063444",
+            "7232001 36 PAGEVIEW a2ogi.15063444",
+            "8958001 36 PAGEVIEW a2ogi.15063444",
+            "5694001 36 PAGEVIEW a2ogi.15063444",
+            "6512004 36 PAGEVIEW a2ogi.15063444",
+            "8946001 36 PAGEVIEW a2ogi.15063444",
+            "8652001 36 PAGEVIEW a2ogi.15063444",
             "476001 36 PAGEVIEW a2ogi.15063444",
             "5500002 36 PAGEVIEW a2ogi.15063444",
             "3780001 36 PAGEVIEW a2ogi.15063444",
-            "5694001 36 PAGEVIEW a2ogi.15063444",
             "3062001 95 PAGEVIEW page.spm",
             "4506001 95 PAGEVIEW page.spm",
             "1392002 95 PAGEVIEW page.spm",
