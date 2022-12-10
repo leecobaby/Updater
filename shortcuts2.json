@@ -101,6 +101,11 @@
     "share_body_tip": "请输入你想说的话，不输入也没关系哦~",
     "share_content_tip": "请输入已编码的音效文本内容\n我已经自动输入你剪贴板的内容拉\n─=≡Σ(((つ•̀ω•́)つ\n温馨提醒:请尽量分享10秒以内的音效"
   },
+  "ChatGPT": {
+    "version": "1.0",
+    "pv": "",
+    "apiUrl": "https://service-8g8pqeyw-1251309300.gz.apigw.tencentcs.com/release/chat"
+  },
   "Taojb": {
     "version": "3.4",
     "update_log": "- 更新 支持最新的功能和特性",
