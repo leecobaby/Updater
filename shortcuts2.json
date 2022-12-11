@@ -102,9 +102,10 @@
     "share_content_tip": "请输入已编码的音效文本内容\n我已经自动输入你剪贴板的内容拉\n─=≡Σ(((つ•̀ω•́)つ\n温馨提醒:请尽量分享10秒以内的音效"
   },
   "ChatGPT": {
-    "version": "1.0",
+    "version": "1.1",
     "pv": "",
-    "apiUrl": "https://service-ex5v13k6-1251309300.gz.apigw.tencentcs.com/release/chat"
+    "apiUrl": "https://service-ex5v13k6-1251309300.gz.apigw.tencentcs.com/release/chat",
+    "url": "https://www.icloud.com/shortcuts/77c38c3b37b44b48aba13318baad5f91"
   },
   "Taojb": {
     "version": "3.4",
