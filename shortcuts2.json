@@ -916,16 +916,10 @@
       },
       "🧧 支付宝现金红包": "alipays://platformapi/startapp?appId=20000067&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fc%2Falipay-red-qrcode%2Fshared.html%3Fchannel%3Dsearch_pwd%26shareId%3D2088102986032700%26token%3D11w194707wxbnqkmg21ke2d%26campStr%3DkPPFvOxaCL3f85TiKss2wsBZgIjulHjG%26sign%3Dlj1gjQ8PxzMbaRNG5RKOee%2FhckXIyodWvTJbBTYOleI%3D%26chInfo%3Dsousuoma%26c_stype%3Dsearch_pwd"
     },
-    "more2": {
-      "👾 加入QQ频道": "https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&inviteCode=17PQr8&from=181074&biz=ka&shareSource=5",
-      "加入QQ京东情报群": "https://jq.qq.com/?_wv=1027&k=tx5Mzgh2",
-      "加入QQ淘宝情报群": "https://jq.qq.com/?_wv=1027&k=QzwRdqKQ",
-      "其他捷径作品": "https://shimo.im/docs/DHcYv8xjcYxvHvQg/",
-      "🧧 现金红包-1.15": "taobao://m.tb.cn/h.fkLMFm2",
-      "平台红包": {
-        "饿了么现金红包": "taobao://m.tb.cn/h.4hbqRud",
-        "🧧 支付宝现金红包": "alipays://platformapi/startapp?appId=20000067&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fc%2Falipay-red-qrcode%2Fshared.html%3Fchannel%3Dsearch_pwd%26shareId%3D2088102986032700%26token%3D11w194707wxbnqkmg21ke2d%26campStr%3DkPPFvOxaCL3f85TiKss2wsBZgIjulHjG%26sign%3Dlj1gjQ8PxzMbaRNG5RKOee%2FhckXIyodWvTJbBTYOleI%3D%26chInfo%3Dsousuoma%26c_stype%3Dsearch_pwd"
-      }
+    "more_en": {
+      "Amazon": "com.amazon.mobile.shopping.web://www.amazon.com/?ascsubtag=106689422x9324959253&node=1403206071&tag=topcb1725-23",
+      "GitHub": "https://github.com/leecobaby/shortcuts",
+      "Telegram": "https://t.me/xuehuashe"
     }
   },
   "leeco": true
