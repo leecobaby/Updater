@@ -918,7 +918,7 @@
       "🧧 支付宝现金红包": "alipays://platformapi/startapp?appId=20000067&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fc%2Falipay-red-qrcode%2Fshared.html%3Fchannel%3Dsearch_pwd%26shareId%3D2088102986032700%26token%3D11w194707wxbnqkmg21ke2d%26campStr%3DkPPFvOxaCL3f85TiKss2wsBZgIjulHjG%26sign%3Dlj1gjQ8PxzMbaRNG5RKOee%2FhckXIyodWvTJbBTYOleI%3D%26chInfo%3Dsousuoma%26c_stype%3Dsearch_pwd"
     },
     "more_en": {
-      "Amazon": "com.amazon.mobile.shopping.web://www.amazon.com/?ascsubtag=106689422x9324959253&node=1403206071&tag=topcb1725-23",
+      "Amazon": "com.amazon.mobile.shopping.web://www.amazon.com/gp/prime/pipeline/partner_landing?ascsubtag=106689422x9331011249&primeCampaignId=ASCpromo&tag=topcacom-20",
       "GitHub": "https://github.com/leecobaby/shortcuts",
       "Telegram": "https://t.me/xuehuashe"
     }
