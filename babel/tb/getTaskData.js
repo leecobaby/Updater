@@ -62,10 +62,10 @@ function getBaseTaskData () {
     1111: {
       version: '数据最后更新于:10.24.1',
       pv: {
-        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UT5Rux4',
+        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.URqwFr5',
         tmall:
-          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UT5Rux4',
-        taobaolite: 'taobaolite://m.tb.cn/h.UT5Rux4'
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.URqwFr5',
+        taobaolite: 'taobaolite://m.tb.cn/h.URqwFr5'
       },
       main: {
         taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com',
@@ -111,10 +111,10 @@ function getBaseTaskData () {
       version: '数据最后更新于:12.31.1',
       image: 'https://gitee.com/leecogit/Updater/raw/master/image/tjb.png',
       pv: {
-        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UT5Rux4',
+        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.URqwFr5',
         tmall:
-          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UT5Rux4',
-        taobaolite: 'taobaolite://m.tb.cn/h.UT5Rux4'
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.URqwFr5',
+        taobaolite: 'taobaolite://m.tb.cn/h.URqwFr5'
       },
       main: {
         taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com',
@@ -144,10 +144,10 @@ function getBaseTaskData () {
     FarmSingle: {
       version: '数据最后更新于:10.13.1',
       pv: {
-        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UT5Rux4',
+        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.URqwFr5',
         tmall:
-          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UT5Rux4',
-        taobaolite: 'taobaolite://m.tb.cn/h.UT5Rux4'
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.URqwFr5',
+        taobaolite: 'taobaolite://m.tb.cn/h.URqwFr5'
       },
       main: {
         taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com',
@@ -192,9 +192,9 @@ function getBaseTaskData () {
     Jhs: {
       "version": "数据最后更新于:11.13.1",
       "pv": {
-        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UT5Rux4",
-        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UT5Rux4",
-        "taobaolite": "taobaolite://m.tb.cn/h.UT5Rux4"
+        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.URqwFr5",
+        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.URqwFr5",
+        "taobaolite": "taobaolite://m.tb.cn/h.URqwFr5"
       },
       "main": {
         "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
@@ -226,10 +226,10 @@ function getBaseTaskData () {
     tb_worldcup: {
       version: '数据最后更新于:10.24.1',
       pv: {
-        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UT5Rux4',
+        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.URqwFr5',
         tmall:
-          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UT5Rux4',
-        taobaolite: 'taobaolite://m.tb.cn/h.UT5Rux4'
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.URqwFr5',
+        taobaolite: 'taobaolite://m.tb.cn/h.URqwFr5'
       },
       main: {
         taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com',
