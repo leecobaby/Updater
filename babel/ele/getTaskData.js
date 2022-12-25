@@ -194,35 +194,11 @@ function getSimpleTaskPutData () {
 
 function getOhterTaskData () {
   // 储备任务数据 
-  // 8640001 36 15 SIMPLESIGNIN
-  // 234001 36 10 SIMPLESIGNIN
-  // 8240001 36 5 SIMPLESIGNIN
-  // 7256001 36 10 SIMPLESIGNIN
-  // 3500001 36 5 SIMPLESIGNIN
-  // 7402001 36 5 SIMPLESIGNIN
-  // 6492001 36 5 SIMPLESIGNIN
-  // 6692002 36 5 SIMPLESIGNIN
-  // 4206001 36 5 SIMPLESIGNIN
-  // 4182001 36 5 SIMPLESIGNIN
-  // 6240001 36 5 SIMPLESIGNIN
-  // 8242001 36 5 SIMPLESIGNIN
-  // 6700003 36 5 SIMPLESIGNIN
-  // 8346002 36 5 SIMPLESIGNIN
-  // 7424001 36 5 SIMPLESIGNIN
-  // 4970001 36 10 SIMPLESIGNIN
-  // 4242001 36 5 SIMPLESIGNIN
-  // 8602011 36 5 PAGEVIEW
-  // 476001 36 10 PAGEVIEW
   // 6512004 36 5 PAGEVIEW
-  // 7230001 36 5 PAGEVIEW
-  // 7232001 36 5 PAGEVIEW
-  // 8544001 36 5 PAGEVIEW
-
+  // 9496001 36 5 PAGEVIEW
   return [
-
-
-    { missionDefId: 8758001, missionCollectionId: 36, costFoodiePea: 10, missionType: 'PAGEVIEW', receiveStatus: 'TORECEIVE', showTitle: '云端推送' },
-    { missionDefId: 8602011, missionCollectionId: 36, costFoodiePea: 5, missionType: 'PAGEVIEW', receiveStatus: 'TORECEIVE', showTitle: '云端推送' },
+    { missionDefId: 6512004, missionCollectionId: 36, costFoodiePea: 5, missionType: 'PAGEVIEW', receiveStatus: 'TORECEIVE', showTitle: '云端推送' },
+    { missionDefId: 9496001, missionCollectionId: 36, costFoodiePea: 5, missionType: 'PAGEVIEW', receiveStatus: 'TORECEIVE', showTitle: '云端推送' },
   ]
 }
 
