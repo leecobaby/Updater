@@ -775,8 +775,8 @@
     }
   },
   "JD_nian": {
-    "version": "2.9",
-    "update_log": "- 修复 长时间运行指令会导致堆栈溢出，指令崩溃的致命问题\n- 修复 多账号运行时，日志重复显示的错误\n- 优化 指令数据操作算法，在长时间运行时加快1000%的执行效率\n- 优化 通知显示模式，默认每隔一段时间简略通知，进一步加快执行效率",
+    "version": "3.0",
+    "update_log": "- 更新 2022 年炸年兽活动，支持自动任务\n- 兼容 ios13-16 系统，自动化，AutoBox",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/tree/master/JD.FAQ.md",
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/JD_nian#版本日志",
@@ -785,17 +785,17 @@
     "help": "https://support.qq.com/products/451815",
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/5693f04f6d274e7bb37a1f32537237f9",
-    "notice": "👹 炸年兽指令复活，快点升级吧！\n指令已经进一步优化执行效率，请去往指令设置-通知模式-选模式\n15.2+系统千万不要打开快捷指令app",
+    "notice": "👹 炸年兽自动任务，能做部分任务，肯能只能用几天~",
     "automation_url": "shortcuts://run-shortcut?name=京东-炸年兽&input=text&text=task",
     "image": "https://gitcode.net/u012830258/updater/-/raw/master/image/icon-jd2.jpeg",
     "scritable": "https://gitcode.net/u012830258/updater/-/raw/master/getJDCookie-sms.js",
-    "url": "https://gitcode.net/u012830258/updater/-/raw/master/jd.json",
+    "url": "https://www.icloud.com/shortcuts/d3094a80349c49478b6054e1647fcc4a",
     "code": "https://gitcode.net/u012830258/updater/-/raw/master/html/jd_nian/",
     "tip": {
       "log": "你的助力码在这",
-      "hot": "🧧 京东年货红包(新)",
+      "hot": "🧧 京东年货红包",
       "faq": "有疑问的请查看",
-      "set": "⚠️ 不通知的请先设置!!!",
+      "set": "使用前先授权",
       "help": "提交你的助力码",
       "other": "若一直无法运行请修复指令",
       "more": ""

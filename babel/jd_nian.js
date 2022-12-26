@@ -2,7 +2,7 @@
  * name: 京东-1111
  * author: @leeco
  * apply: shortcuts
- * activity: https://wbbny.m.jd.com/babelDiy/Zeus/2fUope8TDN3dUJfNzQswkBLc7uE8/index.html
+ * activity: https://wbbny.m.jd.com/pb/013975090/S9sfBnz3XbRM76wSxkdecndL888/index.html
  * tips: Only for learning and communication, strictly prohibited for commercial use, please delete within 24 hours
  * 使用修改请说明来源
  */
