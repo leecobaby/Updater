@@ -395,7 +395,7 @@
     ]
   },
   "JD_nian": {
-    "version": "上次数据更新于:1.20.2",
+    "version": "上次数据更新于:12.26.1",
     "pv": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://u.jd.com/FC1glCB%22%7D",
     "endJump": "openapp.jdmobile://virtual?params=%7B%22des%22%3A%22m%22%2C%22category%22%3A%22jump%22%2C%22url%22%3A%22https://wbbny.m.jd.com/babelDiy/Zeus/41AJZXRUJeTqdBK9bPoPgUJiodcU/index.html%22%7D",
     "help": {
@@ -458,31 +458,23 @@
     "controller": {
       "callList": [
         "init",
-        "tigernian_getHomeData",
-        "tigernian_getTaskDetail",
-        "tigernian_pk_getHomeData",
-        "tigernian_pk_collectPkExpandScore"
+        "promote_getHomeData",
+        "promote_getTaskDetail",
+        "promote_pk_getHomeData",
+        "promote_pk_collectPkExpandScore"
       ],
       "taskList": [
-        { "提示:丢骰子任务完善中": "update" },
+        { "提示:大部分任务已无法运行": "update" },
         { "获取云端助力码": "getHelpCode" },
         { "做助力任务": "help" },
         { "做组队任务": "pkHelp" },
-        { "收爆竹": "tigernian_collectAutoScore" },
-        { "每日签到": "tigernian_sign" },
+        { "收金币": "promote_collectAutoScore" },
         { "做主任务": "doTaskController" },
-        { "领取累计奖励": "tigernian_getBadgeAward" },
-        { "打卡升级": "tigernian_raise" },
-        { "↓↓↓如想做以下任务请取消本选项↓↓↓": "cloudTip" },
-        { "做丢骰子任务1-10家 - 火爆也能做": "doDiceTask" },
-        { "做丢骰子任务11-20家 - 火爆也能做": "doDiceTask" },
-        { "做丢骰子任务21-30家 - 火爆也能做": "doDiceTask" },
-        { "做丢骰子任务31-40家 - 火爆也能做": "doDiceTask" },
-        { "做丢骰子任务41-50家 - 火爆也能做": "doDiceTask" },
-        { "做丢骰子任务51-60家 - 火爆也能做": "doDiceTask" },
-        { "做丢骰子任务71-80家 - 火爆也能做": "doDiceTask" },
-        { "做丢骰子任务81-90家 - 火爆也能做": "doDiceTask" },
-        { "做丢骰子任务91-100家 - 火爆也能做": "doDiceTask" }
+        { "领取累计奖励": "promote_getBadgeAward" },
+        { "抽奖": "promote_raise" },
+        { "每日签到": "promote_sign" },
+        { "其他任务更新中...": "cloudTip" },
+        { "做店铺抽奖任务": "doShopTask" }
       ]
     }
   },
