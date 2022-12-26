@@ -15,7 +15,6 @@
 let JD_API_HOST = `https://api.m.jd.com/client.action?functionId=`
 const utils = Utils()
 
-
 /** 下方放 call 文本，来控制函数执行 **/
 
 /** 下方放 next 文本，来控制逻辑执行 **/
@@ -31,7 +30,7 @@ const utils = Utils()
 /**
  * 初始化
  */
-function init () {
+function init() {
   // 处理助力码
   $.helpCodeList1 = utils.handleShortcutHelpCode($.helpCodeObj['活动1助力码'] || [])
   // 处理组队码
@@ -41,10 +40,10 @@ function init () {
   }
   // 处理膨胀码
   $.helpCodeList3 = utils.handleShortcutHelpCode($.helpCodeObj['活动3助力码'] || [])
-  $.helpCodeList3.push('PKASTT0195L6r47PBTNYCtIMjDX0CTdWmYaRzTQjeQOc');
+  $.helpCodeList3.push('PKASTT0195L6r47PBTNYCtIMjDX0CTdWmYaRzTQjeQOc')
 
   // 自变量
-  ; ($.self = {}), ($.self.count = 0), ($.self.count2 = 1)
+  ;($.self = {}), ($.self.count = 0), ($.self.count2 = 1)
   // 任务流程初始化
   $.taskStep = 1
   // 大牌店铺列表初始化
@@ -167,7 +166,7 @@ function init () {
 /**
  * 云端推送提示
  */
-function cloudTip () {
+function cloudTip() {
   $.error = `指令已运行完毕！入会任务和下单任务不负责做哦！\n其他功能和任务正在开发中，上线将自动推送到指令中，无需任何操作~`
   document.write(JSON.stringify($))
 }
@@ -175,64 +174,97 @@ function cloudTip () {
 /**
  * 任务日期提示
  */
-function update () {
+function update() {
   $.message = `本地任务和开发是同步的，开发过程中难免存在bug，如果运行时卡住，请过段时间再试请理解~`
   document.write(JSON.stringify($))
 }
 
 // 获取第一次进活动页奖励 - 并没啥用
-function promote_getMainMsgPopUp () {
+function promote_getMainMsgPopUp() {
   $.callback = 'Func.request'
   takePostRequest('promote_getMainMsgPopUp')
   return
 
+  // next
+  $.callback = ''
+  document.write(JSON.stringify($))
 }
 
 // 获取活动大厅信息
-function promote_getHomeData () {
+function promote_getHomeData() {
   $.callback = 'Func.request'
   takePostRequest('promote_getHomeData')
   return
 
+  // next
+  $.callback = ''
+  dealReturn('promote_getHomeData', $.data)
+  document.write(JSON.stringify($))
 }
 
 // 获取任务列表
-function promote_getTaskDetail () {
+function promote_getTaskDetail() {
   $.call = Array.isArray($.call) ? $.call : [$.call]
   $.call[$.call.length - 1] == 'promote_getTaskDetail' || $.call.push('promote_getTaskDetail')
   $.callback = 'Func.request'
   takePostRequest('promote_getTaskDetail')
   return
 
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('promote_getTaskDetail', $.data)
+  document.write(JSON.stringify($))
 }
 
 // 收金币
-function promote_collectAutoScore () {
+function promote_collectAutoScore() {
   $.callback = 'Func.request'
   takePostRequest('promote_collectAutoScore')
   return
 
+  // next
+  $.callback = ''
+  dealReturn('promote_collectAutoScore', $.data)
+  document.write(JSON.stringify($))
 }
 
 // 每日签到
-function promote_sign () {
+function promote_sign() {
   $.callback = 'Func.request'
   takePostRequest('promote_sign')
   return
 
+  // next
+  $.callback = ''
+  $.next = 1
+  dealReturn('promote_sign', $.data)
+  $.callback = 'Func.request'
+  takePostRequest('promote_getSignHomeData')
+
+  // next next
+  if (!document.body.innerText) {
+    $.callback = ''
+    dealReturn('promote_getSignHomeData', $.data)
+    document.write(JSON.stringify($))
+  }
 }
 
 // 获取助力池数据
-function getHelpCode () {
+function getHelpCode() {
   $.callback = 'Func.request'
   $.modules = 1 // 引入模块
   takePostRequest('getHelpCode')
   return
 
+  // next
+  $.callback = ''
+  dealReturn('getHelpCode', $.data)
+  document.write(JSON.stringify($))
 }
 
 // 好友助力
-function help () {
+function help() {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
   $.call = ['help']
@@ -240,7 +272,7 @@ function help () {
   $.inviteId = $.helpCodeList1.shift()
   if (!$.setHelp || !$.inviteId || $.helpMax) {
     // 循环完成重新设置 to,call
-    ; ($.to = ''), $.call.pop()
+    ;($.to = ''), $.call.pop()
     !$.setHelp && ($.message = `你已关闭助力，就不做助力任务拉~`)
     document.write(JSON.stringify($))
     return
@@ -256,10 +288,14 @@ function help () {
   takePostRequest('help')
   return
 
+  // next
+  $.callback = ''
+  dealReturn('help', $.data)
+  document.write(JSON.stringify($))
 }
 
 // 组队竞猜
-function pkHelp () {
+function pkHelp() {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
   $.call = ['pkHelp']
@@ -267,7 +303,7 @@ function pkHelp () {
   $.pkHelpId = $.helpCodeList2.shift()
   if (!$.setHelp || !$.pkHelpId) {
     // 循环完成重新设置 to,call
-    ; ($.to = ''), $.call.pop()
+    ;($.to = ''), $.call.pop()
     !$.setHelp && ($.message = `你已关闭助力，就不做入队任务拉~`)
     document.write(JSON.stringify($))
     return
@@ -277,17 +313,25 @@ function pkHelp () {
   takePostRequest('promote_pk_joinGroup')
   return
 
+  // next
+  $.callback = ''
+  dealReturn('pkHelp', $.data)
+  document.write(JSON.stringify($))
 }
 
-function promote_pk_getHomeData () {
+function promote_pk_getHomeData() {
   $.callback = 'Func.request'
   takePostRequest('promote_pk_getHomeData')
   return
 
+  // next
+  $.callback = ''
+  dealReturn('promote_pk_getHomeData', $.data)
+  document.write(JSON.stringify($))
 }
 
 // pk膨胀
-function promote_pk_collectPkExpandScore () {
+function promote_pk_collectPkExpandScore() {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
   $.call = ['promote_pk_collectPkExpandScore']
@@ -295,7 +339,7 @@ function promote_pk_collectPkExpandScore () {
     $.pkExpandId = $.helpCodeList3.shift()
     if (!$.pkExpandId) {
       // 循环完成重新设置 to,call
-      ; ($.to = ''), $.call.pop()
+      ;($.to = ''), $.call.pop()
       document.write(JSON.stringify($))
       return
     }
@@ -303,14 +347,18 @@ function promote_pk_collectPkExpandScore () {
     takePostRequest('promote_pk_collectPkExpandScore')
     return
 
+    //next
+    $.callback = ''
+    dealReturn('promote_pk_collectPkExpandScore', $.data)
+    document.write(JSON.stringify($))
   } else {
-    ; ($.to = ''), $.call.pop()
+    ;($.to = ''), $.call.pop()
     document.write(JSON.stringify($))
   }
 }
 
 // 多次做任务控制器
-function doTaskController () {
+function doTaskController() {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
   $.call = ['doTaskController']
@@ -344,14 +392,14 @@ function doTaskController () {
       doTask()
       break
     default:
-      ; ($.to = ''), $.call.pop()
+      ;($.to = ''), $.call.pop()
       document.write(JSON.stringify($))
       break
   }
 }
 
 // 做主任务
-function doTask () {
+function doTask() {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
   $.call[$.call.length - 1] == 'doTask' || $.call.push('doTask')
@@ -399,7 +447,7 @@ function doTask () {
 }
 
 // 领累计任务奖励
-function promote_getBadgeAward () {
+function promote_getBadgeAward() {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
   $.call = ['promote_getBadgeAward']
@@ -409,7 +457,7 @@ function promote_getBadgeAward () {
   $.awardToken = $.oneTask?.awardToken
   if (!$.oneTask) {
     // 循环完成重新设置 to,call
-    ; ($.to = ''), $.call.pop()
+    ;($.to = ''), $.call.pop()
     document.write(JSON.stringify($))
     return
   }
@@ -423,10 +471,14 @@ function promote_getBadgeAward () {
   takePostRequest('promote_getBadgeAward')
   return
 
+  // next
+  $.callback = ''
+  dealReturn('promote_getBadgeAward', $.data)
+  document.write(JSON.stringify($))
 }
 
 // taskType = 0 的任务
-function oneTaskHandle () {
+function oneTaskHandle() {
   // 嵌套调用里面用数组形式 push
   $.call[$.call.length - 1] == 'oneTaskHandle' || $.call.push('oneTaskHandle')
   // $.taskId = $.oneTask.taskId
@@ -436,10 +488,16 @@ function oneTaskHandle () {
   takePostRequest('oneTaskHandle')
   return
 
+  // next
+  $.callback = ''
+  dealReturn('oneTaskHandle', $.data)
+  // 去往 doTask
+  $.call.pop()
+  document.write(JSON.stringify($))
 }
 
 //  处理任务列表单类型任务
-function oneActivityInfo () {
+function oneActivityInfo() {
   // 循环逻辑单独设置 to,call  嵌套调用里面用数组形式 push
   $.to = 'Func.logicHandler'
   $.call[$.call.length - 1] == 'oneActivityInfo' || $.call.push('oneActivityInfo')
@@ -462,19 +520,38 @@ function oneActivityInfo () {
 
   $.taskToken = $.oneActivityInfo.taskToken
   $.callbackInfo = {}
-  $.message = `做任务：${$.oneActivityInfo.skuName ||
+  $.message = `做任务：${
+    $.oneActivityInfo.skuName ||
     $.oneActivityInfo.taskName ||
     $.oneActivityInfo.title ||
     $.oneActivityInfo.shopName
-    } 等待完成...`
+  } 等待完成...`
   $.callback = 'Func.request'
   takePostRequest('promote_collectScore')
   return
 
+  // next
+  // 这里有链式语法糖，ios13不识别，而 next 里面语法不会被 babel
+  $.callback = ''
+  dealReturn('promote_collectScore', $.data)
+  if ($.callbackInfo?.code === 0 && $.callbackInfo?.data?.result?.taskToken) {
+    $.message = `任务完成`
+    document.write(JSON.stringify($))
+  } else if ([1, 2, 3, 5, 26].includes($.oneTask.taskType)) {
+    $.success = 1
+    $.message = `任务完成`
+    document.write(JSON.stringify($))
+  } else if ($.callbackInfo?.code === -40300) {
+    $.error = `oneActivityInfo ${$.oneTask.taskId}/${$.oneTask.taskType} 任务失败，此账号火爆，请手动做任务等待更新~`
+    document.write(JSON.stringify($))
+  } else {
+    $.message = `oneActivityInfo ${$.oneTask.taskId}/${$.oneTask.taskType} 任务失败，未知错误等待修复，尝试继续运行指令~`
+    document.write(JSON.stringify($))
+  }
 }
 
 // 领取奖励
-function callbackResult (type) {
+function callbackResult(type) {
   let { log, random } = $.signList?.shift() || {}
   let url = JD_API_HOST + type + '&client=wh5'
   // riskParam 风险参数暂时为空，后期可能需要补上
@@ -499,7 +576,7 @@ function callbackResult (type) {
 }
 
 // 处理浏览商品任务信息
-function promote_getFeedDetail () {
+function promote_getFeedDetail() {
   // 嵌套调用里面用数组形式 push
   $.to = 'Func.logicHandler'
   $.call.push('promote_getFeedDetail')
@@ -510,10 +587,18 @@ function promote_getFeedDetail () {
   takePostRequest('promote_getFeedDetail')
   return
 
+  // next
+  $.callback = ''
+  dealReturn('promote_getFeedDetail', $.data)
+  $.productList = $.feedDetailInfo.productInfoVos || $.feedDetailInfo.browseShopVo
+  $.needTime = Number($.feedDetailInfo.maxTimes) - Number($.feedDetailInfo.times)
+  $.call.pop()
+  $.next = 0 // 衔接下一个函数前，重置 next 防止获取 next 失败
+  browseProducts()
 }
 
 // 做浏览商品任务
-function browseProducts () {
+function browseProducts() {
   // 循环逻辑单独设置 to,call  嵌套调用里面用数组形式 push
   $.to = 'Func.logicHandler'
   $.call[$.call.length - 1] == 'browseProducts' || $.call.push('browseProducts')
@@ -538,17 +623,21 @@ function browseProducts () {
   takePostRequest('browseProducts')
   return
 
+  // next
+  $.callback = ''
+  dealReturn('browseProducts', $.data)
+  document.write(JSON.stringify($))
 }
 
 // 打卡升级
-function promote_raise () {
+function promote_raise() {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
   $.call = ['promote_raise']
 
   if ($.raiseStatus) {
     // 循环完成重新设置 to,call
-    ; ($.to = ''), $.call.pop()
+    ;($.to = ''), $.call.pop()
     document.write(JSON.stringify($))
     return
   }
@@ -557,18 +646,26 @@ function promote_raise () {
   takePostRequest('promote_raise')
   return
 
+  // next
+  $.callback = ''
+  dealReturn('promote_raise', $.data)
+  document.write(JSON.stringify($))
 }
 
 // 获取京东金融任务列表
-function jdjrTaskDetail () {
+function jdjrTaskDetail() {
   $.callback = 'Func.request'
   takePostRequest('jdjrTaskDetail')
   return
 
+  // next
+  $.callback = ''
+  dealReturn('jdjrTaskDetail', $.data)
+  document.write(JSON.stringify($))
 }
 
 // 做京东金融主任务
-function jdjrDoTask () {
+function jdjrDoTask() {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
   $.call = ['jdjrDoTask']
@@ -578,7 +675,7 @@ function jdjrDoTask () {
   $.missionId = $.oneTask?.missionId
   if (!$.oneTask) {
     // 循环完成重新设置 to,call
-    ; ($.to = ''), $.call.pop()
+    ;($.to = ''), $.call.pop()
     $.wait = 1
     $.message = '浏览任务已全都完成~'
     document.write(JSON.stringify($))
@@ -595,10 +692,22 @@ function jdjrDoTask () {
   takePostRequest('jdjrDoTask')
   return
 
+  // next
+  $.wait = 8
+  $.callback = 'Func.request'
+  takePostRequest('jdjrDoTaskFinish')
+  // return
+
+  // next next
+  if (!document.body.innerText) {
+    $.callback = ''
+    dealReturn('jdjrDoTask', $.data)
+    document.write(JSON.stringify($))
+  }
 }
 
 // 做大牌店铺任务
-function doShopTask () {
+function doShopTask() {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
   $.call = ['doShopTask']
@@ -607,7 +716,7 @@ function doShopTask () {
   $.oneShop = $.shopList.shift()
   if (!$.oneShop) {
     // 循环完成重新设置 to,call
-    ; ($.to = ''), $.call.pop()
+    ;($.to = ''), $.call.pop()
     $.message = `任务已全都完成~`
     document.write(JSON.stringify($))
     return
@@ -620,25 +729,37 @@ function doShopTask () {
 }
 
 // 获取单店铺 appId
-function getAppId () {
+function getAppId() {
   $.call[$.call.length - 1] == 'getAppId' || $.call.push('getAppId')
   $.callback = 'Func.request'
   takePostRequest('getAppId')
   return
 
+  // next
+  $.callback = ''
+  dealReturn('getAppId', $.data)
+  $.call.pop()
+  $.next = 0 // 衔接下一个函数前，重置 next 防止获取 next 失败
+  getShopHomeData()
 }
 
 // 获取店铺任务列表
-function getShopHomeData () {
+function getShopHomeData() {
   $.call[$.call.length - 1] == 'getShopHomeData' || $.call.push('getShopHomeData')
   $.callback = 'Func.request'
   takePostRequest('getShopHomeData')
   return
 
+  // next
+  $.callback = ''
+  dealReturn('getShopHomeData', $.data)
+  $.call.pop()
+  $.next = 0 // 衔接下一个函数前，重置 next 防止获取 next 失败
+  doOneShopTask()
 }
 
 // 做单店铺任务
-function doOneShopTask () {
+function doOneShopTask() {
   $.call[$.call.length - 1] == 'doOneShopTask' || $.call.push('doOneShopTask')
 
   // 利用队列取代循环
@@ -672,10 +793,14 @@ function doOneShopTask () {
   takePostRequest('doOneShopTask')
   return
 
+  // next
+  $.callback = ''
+  dealReturn('doOneShopTask', $.data)
+  document.write(JSON.stringify($))
 }
 
 // 单店铺抽奖
-function doShopLottery () {
+function doShopLottery() {
   $.call[$.call.length - 1] == 'doShopLottery' || $.call.push('doShopLottery')
 
   $.fragmentId++
@@ -683,18 +808,27 @@ function doShopLottery () {
   takePostRequest('doShopLottery')
   return
 
+  // next
+  $.callback = ''
+  // 如果抽奖机会用光，则 pop() 逻辑写在 dealReturn 利于维护
+  dealReturn('doShopLottery', $.data)
+  document.write(JSON.stringify($))
 }
 
 // 沸腾之夜大厅信息
-function getPartyHomeData () {
+function getPartyHomeData() {
   $.callback = 'Func.request'
   takePostRequest('getPartyHomeData')
   return
 
+  // next
+  $.callback = ''
+  dealReturn('getPartyHomeData', $.data)
+  document.write(JSON.stringify($))
 }
 
 // 沸腾之夜助力
-function helpPartyCode () {
+function helpPartyCode() {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
   $.call = ['helpPartyCode']
@@ -702,7 +836,7 @@ function helpPartyCode () {
   $.inviteId = $.partyHelpList.shift()
   if (!$.inviteId || $.partyHelpMax) {
     // 循环完成重新设置 to,call
-    ; ($.to = ''), $.call.pop()
+    ;($.to = ''), $.call.pop()
     document.write(JSON.stringify($))
     return
   }
@@ -712,10 +846,14 @@ function helpPartyCode () {
   takePostRequest('helpPartyCode')
   return
 
+  // next
+  $.callback = ''
+  dealReturn('helpPartyCode', $.data)
+  document.write(JSON.stringify($))
 }
 
 // 做丢骰子任务
-function doDiceTask () {
+function doDiceTask() {
   // 循环逻辑单独设置 to,call
   $.to = 'Func.logicHandler'
   $.call = ['doDiceTask']
@@ -726,7 +864,7 @@ function doDiceTask () {
   // 为了让指令不出现崩溃，拆分店铺任务 10 个一组
   if (!$.oneShop || $.self.count2++ == 10) {
     // 循环完成重新设置 to,call
-    ; ($.to = ''), $.call.pop(), ($.self.count2 = 1)
+    ;($.to = ''), $.call.pop(), ($.self.count2 = 1)
     $.message = `已完成所有丢骰子任务~`
     document.write(JSON.stringify($))
     return
@@ -736,7 +874,7 @@ function doDiceTask () {
 }
 
 // 做丢骰子任务控制器
-function doDiceTaskController () {
+function doDiceTaskController() {
   $.call[$.call.length - 1] == 'doDiceTaskController' || $.call.push('doDiceTaskController')
 
   switch ($.taskStep++) {
@@ -769,35 +907,50 @@ function doDiceTaskController () {
 }
 
 // 获取丢骰子任务 projectId
-function jm_promotion_queryPromotionInfoByShopId () {
+function jm_promotion_queryPromotionInfoByShopId() {
   $.call[$.call.length - 1] == 'jm_promotion_queryPromotionInfoByShopId' ||
     $.call.push('jm_promotion_queryPromotionInfoByShopId')
   $.callback = 'Func.request'
   takePostRequest('jm_promotion_queryPromotionInfoByShopId')
   return
 
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('jm_promotion_queryPromotionInfoByShopId', $.data)
+  document.write(JSON.stringify($))
 }
 
 // 获取单店铺丢骰子任务列表
-function jm_marketing_maininfo () {
+function jm_marketing_maininfo() {
   $.call[$.call.length - 1] == 'jm_marketing_maininfo' || $.call.push('jm_marketing_maininfo')
   $.callback = 'Func.request'
   takePostRequest('jm_marketing_maininfo')
   return
 
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('jm_marketing_maininfo', $.data)
+  document.write(JSON.stringify($))
 }
 
 // 做单店铺每日抽奖
-function jm_hidden_tryDoTask () {
+function jm_hidden_tryDoTask() {
   $.call[$.call.length - 1] == 'jm_hidden_tryDoTask' || $.call.push('jm_hidden_tryDoTask')
   $.callback = 'Func.request'
   takePostRequest('jm_hidden_tryDoTask')
   return
 
+  // next
+  $.callback = ''
+  $.call.pop()
+  dealReturn('jm_hidden_tryDoTask', $.data)
+  document.write(JSON.stringify($))
 }
 
 // 做单店铺丢骰子任务
-function doOneDiceTask () {
+function doOneDiceTask() {
   $.call[$.call.length - 1] == 'doOneDiceTask' || $.call.push('doOneDiceTask')
 
   // 利用队列取代循环
@@ -818,26 +971,44 @@ function doOneDiceTask () {
 }
 
 // 做类型 8 的丢骰子任务
-function doOneDiceTask8 () {
+function doOneDiceTask8() {
   $.call[$.call.length - 1] == 'doOneDiceTask8' || $.call.push('doOneDiceTask8')
   $.callback = 'Func.request'
   $.message = `做任务：${$.oneTask.name}`
   takePostRequest('doOneDiceTask8_1')
   return
 
+  // next
+  dealReturn('doOneDiceTask8', $.data)
+  $.wait = 5
+  takePostRequest('doOneDiceTask8_2')
+  return
+  // ⚠️ 这里能用 return，是因为在新架构中，next 是在一个函数中
+
+  // next next
+  $.callback = ''
+  $.call.pop()
+  $.wait = undefined
+  dealReturn('doOneDiceTask8', $.data)
+  document.write(JSON.stringify($))
 }
 
 // 玩丢筛子
-function doPlayDice () {
+function doPlayDice() {
   $.call[$.call.length - 1] == 'doPlayDice' || $.call.push('doPlayDice')
   $.callback = 'Func.request'
   takePostRequest('doPlayDice')
   return
 
+  // next
+  $.callback = ''
+  // 结束循环写在 dealReturn
+  dealReturn('doPlayDice', $.data)
+  document.write(JSON.stringify($))
 }
 
 // 提交请求信息
-function takePostRequest (type) {
+function takePostRequest(type) {
   let { log, random } = $.signList?.shift() || { log: '', random: '' }
   let body = ``
   let myRequest = ``
@@ -866,7 +1037,7 @@ function takePostRequest (type) {
       myRequest = getPostRequest(`promote_getFeedDetail`, body)
       break
     case 'promote_collectScore':
-      body = `functionId=promote_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","ss":"{\\"extraData\\":{\\"log\\":\\"${log}\\",\\"sceneid\\":\\"RAhomePageh5\\"},\\"secretp\\":\\"${$.secretp}\\",\\"random\\":\\"${random}\\"}","actionType":1}&client=m&appid=signed_wh5&clientVersion=1.0.0`
+      body = `functionId=promote_collectScore&body={"taskId":${$.taskId},"taskToken":"${$.taskToken}","log":"${log}","random":"${random}","actionType":1}&client=m&appid=signed_wh5&clientVersion=1.0.0`
       myRequest = getPostRequest(`promote_collectScore`, body)
       break
     case 'promote_getBadgeAward':
@@ -1008,7 +1179,7 @@ function takePostRequest (type) {
 }
 
 // 获取请求信息
-function getPostRequest (type, body, otherUrl) {
+function getPostRequest(type, body, otherUrl) {
   let url = otherUrl || JD_API_HOST + type
   const request = {}
   if (type === 'jdjrTaskDetail' || type === 'jdjrDoTask') {
@@ -1039,7 +1210,7 @@ function getPostRequest (type, body, otherUrl) {
 }
 
 // 获取其他请求信息
-function getRequest (url, body = {}, method = 'POST', header = {}) {
+function getRequest(url, body = {}, method = 'POST', header = {}) {
   const headers = {
     Accept: `application/json, text/javascript, */*`,
     Origin: header.Origin || `https://h5.m.jd.com`,
@@ -1059,7 +1230,7 @@ function getRequest (url, body = {}, method = 'POST', header = {}) {
 }
 
 // 组织请求 body
-function getPostBody (type) {
+function getPostBody(type) {
   let taskBody = ''
   if (type === 'help') {
     taskBody = `functionId=funny_collectScore&body=${JSON.stringify({
@@ -1103,7 +1274,7 @@ function getPostBody (type) {
 }
 
 // 处理返回信息
-function dealReturn (type, data) {
+function dealReturn(type, data) {
   if (!data) $.error = '接口返回数据为空，检查账号cookie是否过期或错误'
   // 对 15.1 的特殊优化
 
@@ -1221,8 +1392,9 @@ function dealReturn (type, data) {
       break
     case 'promote_sign':
       if (data.code === 0 && data.data?.bizCode === 0) {
-        $.message = `签到成功：获得 ${data.data?.result?.scoreResult?.score
-          } 金币💰，其他奖励 ${JSON.stringify(data.data?.result?.scoreResult)}`
+        $.message = `签到成功：获得 ${
+          data.data?.result?.scoreResult?.score
+        } 金币💰，其他奖励 ${JSON.stringify(data.data?.result?.scoreResult)}`
       } else if (data.data?.bizCode === -6004) {
         $.message = `已经签到过了`
       } else {
@@ -1239,12 +1411,20 @@ function dealReturn (type, data) {
       // data = JSON.parse(data)
       $.data = {}
       // 将助力池的助力码添加进助力列表
-      $.helpCodeList1 = $.helpCodeList1.concat(utils.getRanHelpCode(data, 3))
+      $.helpCodeList1 = $.helpCodeList1.concat(utils.getRanHelpCode(data, 5))
       $.helpCodeList1 = utils.handleHelpCode($.helpCodeList1)
       $.message = `已从云端助力池获取到5条助力码追加到助力列表。助力列表预览：${JSON.stringify(
         $.helpCodeList1
       )}`
       $.modules = 0 // 取消模块
+      // // 选出有 助力码 的元素
+      // const filterData1 = _.filter(data.items, v => v.text.match(/^[\w-]{10,20}$/g))
+      // // 过滤重复的 user id
+      // const uniqData1 = _.uniqBy(filterData1, v => v.fromUser)
+      // // 随机选取出 5 个助力码 - 考虑到助力已满情况和无效码的情况
+      // const sampleData1 = _.sampleSize(uniqData1, 5)
+      // const list1 = sampleData1.map(v => v.text)
+      // $.partyHelpList = $.partyHelpList.concat(list1)
       break
     case 'getAppId':
       if (data.code === 0 && data.data?.bizCode === 0) {
@@ -1422,59 +1602,61 @@ function dealReturn (type, data) {
  * 工具类对象 - 写成函数封装形式，是想利用函数申明提前
  * @returns object
  */
-function Utils () {
+function Utils() {
   return {
-    randomString (e) {
-      e = e || 32;
-      let t = "abcdef0123456789", a = t.length, n = "";
-      for (let i = 0; i < e; i++)
-        n += t.charAt(Math.floor(Math.random() * a));
+    randomString(e) {
+      e = e || 32
+      let t = 'abcdef0123456789',
+        a = t.length,
+        n = ''
+      for (let i = 0; i < e; i++) n += t.charAt(Math.floor(Math.random() * a))
       return n
     },
-    stringify (data) {
+    stringify(data) {
       try {
-        if (typeof JSON.stringify(data) == "string") {
-          return JSON.stringify(data);
+        if (typeof JSON.stringify(data) == 'string') {
+          return JSON.stringify(data)
         }
       } catch (e) {
-        console.log(e);
-        return data;
+        console.log(e)
+        return data
       }
     },
-    randomInt (min, max) {
-      min = Math.ceil(min);
-      max = Math.floor(max);
-      return Math.floor(Math.random() * (max - min)) + min;
+    randomInt(min, max) {
+      min = Math.ceil(min)
+      max = Math.floor(max)
+      return Math.floor(Math.random() * (max - min)) + min
     },
-    formatToArray (p = []) {
+    formatToArray(p = []) {
       return Array.isArray(p) ? p : [p]
     },
-    filterArray (arr = []) {
-      return arr.filter(v => !!v)
+    filterArray(arr = []) {
+      return arr.filter((v) => !!v)
     },
-    getParam (url, key) {
-      const reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)", "i")
+    getParam(url, key) {
+      const reg = new RegExp('(^|&)' + key + '=([^&]*)(&|$)', 'i')
       const r = url.match(reg)
-      if (r != null) return decodeURIComponent(r[2]);
-      return null;
+      if (r != null) return decodeURIComponent(r[2])
+      return null
     },
     H5ST: {
-      _getFp (t) {
-        let e = "0123456789";
-        let a = 13;
-        let i = '';
-        for (; a--;)
-          i += e[Math.random() * e.length | 0];
+      _getFp(t) {
+        let e = '0123456789'
+        let a = 13
+        let i = ''
+        for (; a--; ) i += e[(Math.random() * e.length) | 0]
         return (i + t).slice(0, 16)
       },
       // 此处需要 modules
-      _getH5st (body) {
-        let y = (function _getKey (tk, fp, ts, ai, algo) {
-          let str = `${tk}${fp}${ts}${ai}${$.algo.rd}`;
-          console.log(str);
+      _getH5st(body) {
+        let y = (function _getKey(tk, fp, ts, ai, algo) {
+          let str = `${tk}${fp}${ts}${ai}${$.algo.rd}`
+          console.log(str)
           return algo[$.algo.enc](str, tk)
-        })($.algo.tk, $.algo.fp, $.algo.timestamp, $.algo.appId, CryptoJS).toString(CryptoJS.enc.Hex)
-        console.log(y);
+        })($.algo.tk, $.algo.fp, $.algo.timestamp, $.algo.appId, CryptoJS).toString(
+          CryptoJS.enc.Hex
+        )
+        console.log(y)
         let s = ''
         for (let key of Object.keys(body)) {
           key === 'body'
@@ -1482,55 +1664,65 @@ function Utils () {
             : (s += `${key}:${body[key]}&`)
         }
         s = s.slice(0, -1)
-        console.log(s);
+        console.log(s)
         s = CryptoJS.HmacSHA256(s, y).toString(CryptoJS.enc.Hex)
-        return encodeURIComponent(`${$.algo.timestamp};${$.algo.fp};${$.algo.appId.toString()};${$.algo.tk};${s};3.0;${$.algo.time.toString()}`)
+        return encodeURIComponent(
+          `${$.algo.timestamp};${$.algo.fp};${$.algo.appId.toString()};${
+            $.algo.tk
+          };${s};3.0;${$.algo.time.toString()}`
+        )
       }
-
     },
     // escape html
-    escapeHtml (str) {
-      return str.replace(/[<>&"]/g, (c) => ({
-        '<': '&lt;',
-        '>': '&gt;',
-        '&': '&amp;',
-        '"': '&quot;'
-      }[c]))
+    escapeHtml(str) {
+      return str.replace(
+        /[<>&"]/g,
+        (c) =>
+          ({
+            '<': '&lt;',
+            '>': '&gt;',
+            '&': '&amp;',
+            '"': '&quot;'
+          }[c])
+      )
     },
     // unescape html
-    unescapeHtml (str) {
-      return str.replace(/&(lt|gt|amp|quot);/g, (all, t) => ({
-        'lt': '<',
-        'gt': '>',
-        'amp': '&',
-        'quot': '"'
-      }[t]))
+    unescapeHtml(str) {
+      return str.replace(
+        /&(lt|gt|amp|quot);/g,
+        (all, t) =>
+          ({
+            lt: '<',
+            gt: '>',
+            amp: '&',
+            quot: '"'
+          }[t])
+      )
     },
     // 将内容转换成数组，并去除空值
-    handleContent (content) {
+    handleContent(content) {
       return this.filterArray(this.formatToArray(content))
     },
-    handleShortcutHelpCode (p) {
+    handleShortcutHelpCode(p) {
       return this.filterArray(this.formatToArray(p))
     },
-    handleHelpCode (arr) {
-      return arr.map(v => String(v).replace(/^\d\[指令专用\]/, ''))
+    handleHelpCode(arr) {
+      return arr.map((v) => String(v).replace(/^\d\[指令专用\]/, ''))
     },
-    getRanHelpCode (data, time) {
+    getRanHelpCode(data, time) {
       // 选出有 助力码 的元素
-      const filterData = _.filter(data.items, v => v.text.match(/^(\d\[指令专用\])?\w{20,}$/g))
+      const filterData = _.filter(data.items, (v) => v.text.match(/^(\d\[指令专用\])?\w{20,}$/g))
       // 统计所有用户的消息情况
-      const statisticData = _.groupBy(filterData, v => v.fromUser)
+      const statisticData = _.groupBy(filterData, (v) => v.fromUser)
       // 合规的用户数据
-      const uniqueData = _.pickBy(statisticData, v => v.length <= time)
+      const uniqueData = _.pickBy(statisticData, (v) => v.length <= time)
       // 随机选取出 5 个助力 url - 考虑到助力已满情况和无效链接的情况
       const sampleData = _.sampleSize(uniqueData, 5)
-      const list = sampleData.map(v => v[0].text)
+      const list = sampleData.map((v) => v[0].text)
       return list
     }
   }
 }
-
 
 !(function () {
   const isScriptable = typeof Script !== 'undefined'
@@ -1538,20 +1730,19 @@ function Utils () {
   if (isScriptable) {
     this.document = {
       write: function (content) {
-        console.log('success');
-        Script.setShortcutOutput(content);
-        Script.complete();
+        console.log('success')
+        Script.setShortcutOutput(content)
+        Script.complete()
       },
       body: {
         // 因为在 HTML 中，脚本是靠判断 innerText 中是否有内容来判断是否执行完毕的，而在 Scriptable 中， Script.complete() 能直接立马中断脚本执行，所以这里直接返会 false 就可以了
         innerText: false
       }
-
     }
   } else {
-    const _write = document.write.bind(document);
+    const _write = document.write.bind(document)
     document.write = function (content) {
-      _write(utils.escapeHtml(content));
+      _write(utils.escapeHtml(content))
     }
   }
   // 时间格式化
@@ -1560,25 +1751,29 @@ function Utils () {
       n = this,
       d = fmt,
       l = {
-        "M+": n.getMonth() + 1,
-        "d+": n.getDate(),
-        "D+": n.getDate(),
-        "h+": n.getHours(),
-        "H+": n.getHours(),
-        "m+": n.getMinutes(),
-        "s+": n.getSeconds(),
-        "w+": n.getDay(),
-        "q+": Math.floor((n.getMonth() + 3) / 3),
-        "S+": n.getMilliseconds()
-      };
-    /(y+)/i.test(d) && (d = d.replace(RegExp.$1, "".concat(n.getFullYear()).substr(4 - RegExp.$1.length)));
+        'M+': n.getMonth() + 1,
+        'd+': n.getDate(),
+        'D+': n.getDate(),
+        'h+': n.getHours(),
+        'H+': n.getHours(),
+        'm+': n.getMinutes(),
+        's+': n.getSeconds(),
+        'w+': n.getDay(),
+        'q+': Math.floor((n.getMonth() + 3) / 3),
+        'S+': n.getMilliseconds()
+      }
+    ;/(y+)/i.test(d) &&
+      (d = d.replace(RegExp.$1, ''.concat(n.getFullYear()).substr(4 - RegExp.$1.length)))
     for (var k in l) {
-      if (new RegExp("(".concat(k, ")")).test(d)) {
-        var t, a = "S+" === k ? "000" : "00";
-        d = d.replace(RegExp.$1, 1 == RegExp.$1.length ? l[k] : ("".concat(a) + l[k]).substr("".concat(l[k]).length))
+      if (new RegExp('('.concat(k, ')')).test(d)) {
+        var t,
+          a = 'S+' === k ? '000' : '00'
+        d = d.replace(
+          RegExp.$1,
+          1 == RegExp.$1.length ? l[k] : (''.concat(a) + l[k]).substr(''.concat(l[k]).length)
+        )
       }
     }
-    return d;
+    return d
   }
-}
-)();
+})()
