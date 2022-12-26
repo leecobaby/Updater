@@ -10,10 +10,7 @@
 // 到指令里运行需要注释掉
 // const $ = {}; $.call = 'test'
 
-// $.inviteList = [];
-// $.pkInviteList = [];
 // $.secretpInfo = {};
-// $.innerPkInviteList = [];
 
 let JD_API_HOST = `https://api.m.jd.com/client.action?functionId=`
 const utils = Utils()
@@ -240,7 +237,7 @@ function help () {
   $.to = 'Func.logicHandler'
   $.call = ['help']
 
-  $.inviteId = $.inviteList.shift()
+  $.inviteId = $.helpCodeList1.shift()
   if (!$.setHelp || !$.inviteId || $.helpMax) {
     // 循环完成重新设置 to,call
     ; ($.to = ''), $.call.pop()
