@@ -411,7 +411,7 @@
       "version_log": "https://github.com/leecobaby/shortcuts/tree/master/1111ys"
     },
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/886ca07fa41d4ab1af99630285318f55",
+    "update": "https://www.icloud.com/shortcuts/107e6dd5fba44881a285ac60f4f28ba3",
     "notice": "🔥 支持预售攒幸运值、红包攒能量两个部分任务\n可前往活动大厅-活动页进入相应活动页面",
     "automation_url": "shortcuts://run-shortcut?name=淘宝红包攒能量自动任务&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
