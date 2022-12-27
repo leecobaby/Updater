@@ -1766,7 +1766,8 @@
       "活力中心": "taobao://pages.tmall.com/wow/z/hdwk/hdsolution2/game2020?wh_biz=tm&disableNav=YES&disableProgress=YES",
       "淘宝签到": "taobao://pages.tmall.com/wow/z/mit/hbqd/welfare4",
       "天天领红包": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fan%2Ftmall%2Fuser-growth%2Fplay-tmall%3FdisableNav%3DYES",
-      "饿了么免单活动": "eleme://web?url=https%3A%2F%2Ftb.ele.me%2Fwow%2Falsc%2Fmod%2F218c7270b85a2f992c7a72c4"
+      "饿了么免单活动": "eleme://web?url=https%3A%2F%2Ftb.ele.me%2Fwow%2Falsc%2Fmod%2F218c7270b85a2f992c7a72c4",
+      "红包攒能量": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UjmCE1z"
     },
     "Cookie 获取地址": {
       "App": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://main.m.taobao.com/mytaobao/index.html",
