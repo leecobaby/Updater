@@ -29,7 +29,7 @@ $.task = task
 loopTime == '1' && (task[app].task = task[app].task.concat(onceTask))
 document.body.outerHTML = JSON.stringify($)
 
-function taskHandle (data, excludeIds) {
+function taskHandle(data, excludeIds) {
   if (data.ret && data.ret[0] == 'SUCCESS::调用成功' && data.data && data.data.model) {
     for (const item of data.data.model) {
       if (item.progress.needTimes !== '0') {
@@ -57,15 +57,15 @@ function taskHandle (data, excludeIds) {
 }
 
 // 获取基础任务数据
-function getBaseTaskData () {
+function getBaseTaskData() {
   return {
     1111: {
       version: '数据最后更新于:10.24.1',
       pv: {
-        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.URqwFr5',
+        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UjmCE1z',
         tmall:
-          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.URqwFr5',
-        taobaolite: 'taobaolite://m.tb.cn/h.URqwFr5'
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UjmCE1z',
+        taobaolite: 'taobaolite://m.tb.cn/h.UjmCE1z'
       },
       main: {
         taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com',
@@ -111,10 +111,10 @@ function getBaseTaskData () {
       version: '数据最后更新于:12.31.1',
       image: 'https://gitee.com/leecogit/Updater/raw/master/image/tjb.png',
       pv: {
-        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.URqwFr5',
+        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UjmCE1z',
         tmall:
-          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.URqwFr5',
-        taobaolite: 'taobaolite://m.tb.cn/h.URqwFr5'
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UjmCE1z',
+        taobaolite: 'taobaolite://m.tb.cn/h.UjmCE1z'
       },
       main: {
         taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com',
@@ -144,10 +144,10 @@ function getBaseTaskData () {
     FarmSingle: {
       version: '数据最后更新于:10.13.1',
       pv: {
-        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.URqwFr5',
+        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UjmCE1z',
         tmall:
-          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.URqwFr5',
-        taobaolite: 'taobaolite://m.tb.cn/h.URqwFr5'
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UjmCE1z',
+        taobaolite: 'taobaolite://m.tb.cn/h.UjmCE1z'
       },
       main: {
         taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com',
@@ -190,46 +190,54 @@ function getBaseTaskData () {
       task: []
     },
     Jhs: {
-      "version": "数据最后更新于:11.13.1",
-      "pv": {
-        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.URqwFr5",
-        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.URqwFr5",
-        "taobaolite": "taobaolite://m.tb.cn/h.URqwFr5"
+      version: '数据最后更新于:11.13.1',
+      pv: {
+        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UjmCE1z',
+        tmall:
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UjmCE1z',
+        taobaolite: 'taobaolite://m.tb.cn/h.UjmCE1z'
       },
-      "main": {
-        "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
-        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fwww.tmall.com%2F",
-        "taobaolite": "taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F"
+      main: {
+        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com',
+        tmall: 'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fwww.tmall.com%2F',
+        taobaolite:
+          'taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F'
       },
-      "home": {
-        "taobao": "taobao://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?wh_pid=daily-253613&status_bar_transparent=true&disableNav=YES&sourceType=other",
-        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fa%2Fact%2Fju%2Fdailygroup%2F1583%2Fwupr%3Fwh_pid%3Ddaily-253613%26status_bar_transparent%3Dtrue%26disableNav%3DYES%26sourceType%3Dother",
-        "taobaolite": "taobaolite://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?wh_pid=daily-253613&status_bar_transparent=true&disableNav=YES&sourceType=other"
+      home: {
+        taobao:
+          'taobao://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?wh_pid=daily-253613&status_bar_transparent=true&disableNav=YES&sourceType=other',
+        tmall:
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fa%2Fact%2Fju%2Fdailygroup%2F1583%2Fwupr%3Fwh_pid%3Ddaily-253613%26status_bar_transparent%3Dtrue%26disableNav%3DYES%26sourceType%3Dother',
+        taobaolite:
+          'taobaolite://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?wh_pid=daily-253613&status_bar_transparent=true&disableNav=YES&sourceType=other'
       },
-      "end": {
-        "taobao": "taobao://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?ut_sk=1.X7c7EQcMz0gDAGYKcRv9hLW2_21380790_1631361971008.Copy.common&wh_pid=daily-253613",
-        "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fa%2Fact%2Fju%2Fdailygroup%2F1583%2Fwupr%3Fut_sk%3D1.X7c7EQcMz0gDAGYKcRv9hLW2_21380790_1631361971008.Copy.common%26wh_pid%3Ddaily-253613",
-        "taobaolite": "taobaolite://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?ut_sk=1.X7c7EQcMz0gDAGYKcRv9hLW2_21380790_1631361971008.Copy.common&wh_pid=daily-253613"
+      end: {
+        taobao:
+          'taobao://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?ut_sk=1.X7c7EQcMz0gDAGYKcRv9hLW2_21380790_1631361971008.Copy.common&wh_pid=daily-253613',
+        tmall:
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fa%2Fact%2Fju%2Fdailygroup%2F1583%2Fwupr%3Fut_sk%3D1.X7c7EQcMz0gDAGYKcRv9hLW2_21380790_1631361971008.Copy.common%26wh_pid%3Ddaily-253613',
+        taobaolite:
+          'taobaolite://pages.tmall.com/wow/a/act/ju/dailygroup/1583/wupr?ut_sk=1.X7c7EQcMz0gDAGYKcRv9hLW2_21380790_1631361971008.Copy.common&wh_pid=daily-253613'
       },
-      "app": {
-        "淘宝": "taobao",
-        "天猫": "tmall",
-        "淘宝特价版": "taobaolite"
+      app: {
+        淘宝: 'taobao',
+        天猫: 'tmall',
+        淘宝特价版: 'taobaolite'
       },
-      "code": {
-        "getCookieData": "https://gitee.com/leecobaby/Updater/raw/master/dist/tb/getCookieData.js",
-        "getTaskData": "https://gitee.com/leecobaby/Updater/raw/master/dist/tb/getTaskData.js",
-        "updateCookie": "https://gitee.com/leecobaby/Updater/raw/master/dist/tb/updateCookie.js"
+      code: {
+        getCookieData: 'https://gitee.com/leecobaby/Updater/raw/master/dist/tb/getCookieData.js',
+        getTaskData: 'https://gitee.com/leecobaby/Updater/raw/master/dist/tb/getTaskData.js',
+        updateCookie: 'https://gitee.com/leecobaby/Updater/raw/master/dist/tb/updateCookie.js'
       },
-      "task": []
+      task: []
     },
     tb_worldcup: {
       version: '数据最后更新于:10.24.1',
       pv: {
-        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.URqwFr5',
+        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UjmCE1z',
         tmall:
-          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.URqwFr5',
-        taobaolite: 'taobaolite://m.tb.cn/h.URqwFr5'
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UjmCE1z',
+        taobaolite: 'taobaolite://m.tb.cn/h.UjmCE1z'
       },
       main: {
         taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com',
@@ -271,7 +279,7 @@ function getBaseTaskData () {
 }
 
 // 获取云端推送的任务数据
-function getOnceTaskData (app) {
+function getOnceTaskData(app) {
   const data = {
     FarmSingle: [
       {
@@ -402,7 +410,7 @@ function getOnceTaskData (app) {
             '36376 other_2_1176006_36376_0',
             '34753 other_30_1_34753_0',
             '36154 other_6_1176078_36154_0',
-            '36377 other_2_0_36377_0',
+            '36377 other_2_0_36377_0'
           ]
         }
       },
@@ -412,10 +420,7 @@ function getOnceTaskData (app) {
           type: 'other',
           urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=4296&sourceType=other&hd_from_id=100165&deliveryId=`,
           textEnd: 'str1&implId=str2',
-          item: [
-            '35484 icpmAd_0_382159996946_35484_0',
-            '35561 icpmAd_0_1730_35561_0',
-          ]
+          item: ['35484 icpmAd_0_382159996946_35484_0', '35561 icpmAd_0_1730_35561_0']
         }
       },
       {
@@ -450,13 +455,13 @@ function getOnceTaskData (app) {
       }
     ],
     Jhs: [],
-    tb_worldcup: [],
+    tb_worldcup: []
   }
   return data[app]
 }
 
 // 获取个人任务数据
-function getTokenTaskData (app, title, sceneId, hd_from_id) {
+function getTokenTaskData(app, title, sceneId, hd_from_id) {
   const data = {
     FarmSingle: {
       main: {
@@ -503,24 +508,20 @@ function getTokenTaskData (app, title, sceneId, hd_from_id) {
 }
 
 // 获取令牌任务相关参数
-function getTaskParams (app, index) {
+function getTaskParams(app, index) {
   const data = {
     FarmSingle: [
       { title: '淘宝集肥料', sceneId: 971, hd_from_id: 100085 },
       { title: '支付宝任务', sceneId: 972, hd_from_id: 100085 },
       { title: '闲鱼任务', sceneId: 2488, hd_from_id: 100085 }
     ],
-    Taojb: [
-      { title: '每日任务', sceneId: 2141, hd_from_id: 100089 }
-    ],
+    Taojb: [{ title: '每日任务', sceneId: 2141, hd_from_id: 100089 }],
     1111: [{ title: '赚喵果', sceneId: 4276, hd_from_id: 100165 }],
     Jhs: [
       { title: '攒星星', sceneId: 107, hd_from_id: 100027 },
       { title: 'NPC任务', sceneId: 3421, hd_from_id: 100027 }
     ],
-    tb_worldcup: [
-      { title: '每日任务', sceneId: 4428, hd_from_id: 100095 }
-    ]
+    tb_worldcup: [{ title: '每日任务', sceneId: 4428, hd_from_id: 100095 }]
   }
   return data[app][index]
 }
@@ -529,9 +530,9 @@ function getTaskParams (app, index) {
  * 工具类对象 - 写成函数封装形式，是想利用函数申明提前
  * @returns object
  */
-function Utils () {
+function Utils() {
   return {
-    randomString (e) {
+    randomString(e) {
       e = e || 32
       let t = 'abcdef0123456789',
         a = t.length,
@@ -539,7 +540,7 @@ function Utils () {
       for (let i = 0; i < e; i++) n += t.charAt(Math.floor(Math.random() * a))
       return n
     },
-    stringify (data) {
+    stringify(data) {
       try {
         if (typeof JSON.stringify(data) == 'string') {
           return JSON.stringify(data)
@@ -549,18 +550,18 @@ function Utils () {
         return data
       }
     },
-    randomInt (min, max) {
+    randomInt(min, max) {
       min = Math.ceil(min)
       max = Math.floor(max)
       return Math.floor(Math.random() * (max - min)) + min
     },
-    formatToArray (p = []) {
+    formatToArray(p = []) {
       return Array.isArray(p) ? p : [p]
     },
-    filterArray (arr = []) {
+    filterArray(arr = []) {
       return arr.filter((v) => !!v)
     },
-    getParam (url, key) {
+    getParam(url, key) {
       const reg = new RegExp('(^|&)' + key + '=([^&]*)(&|$)', 'i')
       const r = url.match(reg)
       if (r != null) return decodeURIComponent(r[2])
