@@ -412,7 +412,7 @@
     },
     "github": "https://github.com/leecobaby/shortcuts",
     "update": "https://www.icloud.com/shortcuts/107e6dd5fba44881a285ac60f4f28ba3",
-    "notice": "🔥 支持红包攒能量大部分任务，能换几个红包~",
+    "notice": "🔥 支持红包攒能量大部分任务，能换几个红包~\n⚠️ 如果浏览时间过短，无法完成任务，请前往任务设置，调整等待时长~",
     "automation_url": "shortcuts://run-shortcut?name=淘宝红包攒能量自动任务&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
     "image": "https://gitcode.net/u012830258/updater/-/raw/master/image/tb_hongbao.png",
