@@ -475,12 +475,12 @@
       "gitter": "https://gitter.im/api/v1/rooms/60b8cf616da03739847e0dd6/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=100",
       "code": "https://gitee.com/leecobaby/Updater/raw/master/html/random_mutual_618.js",
       "link": "https://gitter.im/leecobaby-shortcuts/618cat?utm_source=share-link&utm_medium=link&utm_campaign=share-link",
-      "lodash": "https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"
+      "lodash": "https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js",
+      "x-access-token": "$MS+4Qjy16ZPnCxu55gMv0L+5p17xbVmWlr16szR9LlU="
     },
-    "code": {
-      "getCookieData": "https://gitee.com/leecobaby/Updater/raw/master/html/tb/getCookieData-618.js",
-      "getTaskData": "https://gitee.com/leecobaby/Updater/raw/master/html/tb/getTaskData-618.js"
-    },
+    "getCookieData": "https://gitee.com/leecobaby/Updater/raw/master/dist/tb/getCookieData.js",
+    "getTaskData": "https://gitee.com/leecobaby/Updater/raw/master/dist/tb/getTaskData.js",
+    "updateCookie": "https://gitee.com/leecobaby/Updater/raw/master/dist/tb/updateCookie.js",
     "task": [
       {
         "stars": {

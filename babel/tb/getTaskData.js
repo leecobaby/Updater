@@ -150,8 +150,9 @@ function getBaseTaskData() {
         lodash: 'https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js'
       },
       code: {
-        getCookieData:
-          'https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/tb/getCookieData.js'
+        getCookieData: 'https://gitee.com/leecobaby/Updater/raw/master/dist/tb/getCookieData.js',
+        getTaskData: 'https://gitee.com/leecobaby/Updater/raw/master/dist/tb/getTaskData.js',
+        updateCookie: 'https://gitee.com/leecobaby/Updater/raw/master/dist/tb/updateCookie.js'
       },
       task: []
     },
