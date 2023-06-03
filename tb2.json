@@ -478,9 +478,11 @@
       "lodash": "https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js",
       "x-access-token": "$MS+4Qjy16ZPnCxu55gMv0L+5p17xbVmWlr16szR9LlU="
     },
-    "getCookieData": "https://gitee.com/leecobaby/Updater/raw/master/dist/tb/getCookieData.js",
-    "getTaskData": "https://gitee.com/leecobaby/Updater/raw/master/dist/tb/getTaskData.js",
-    "updateCookie": "https://gitee.com/leecobaby/Updater/raw/master/dist/tb/updateCookie.js",
+    "code": {
+      "getCookieData": "https://gitee.com/leecobaby/Updater/raw/master/dist/tb/getCookieData.js",
+      "getTaskData": "https://gitee.com/leecobaby/Updater/raw/master/dist/tb/getTaskData.js",
+      "updateCookie": "https://gitee.com/leecobaby/Updater/raw/master/dist/tb/updateCookie.js"
+    },
     "task": [
       {
         "stars": {
