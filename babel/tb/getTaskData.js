@@ -8,7 +8,7 @@ const items = []
 // 共用与云端推送的 fromToken
 let fromToken = ''
 // 排除的任务 id
-let excludeIds = ['15901', '18735', '23176', '21317', '17695', '32774', '36509', '47035']
+let excludeIds = ['15901', '18735', '23176', '21317', '17695', '32774', '36509', '47035', '46600']
 // 格式化数据
 let dataArr = $.Utils.formatToArray(data.arr || data)
 let task = getBaseTaskData()
