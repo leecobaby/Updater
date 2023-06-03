@@ -183,8 +183,8 @@
     }
   },
   "618cat": {
-    "version": "1.7",
-    "update_log": "- 更新 随机助力的算法，先屏蔽重复发消息用户，再从合规用户中随机助力\n- 优化 部分通知提示",
+    "version": "1.8",
+    "update_log": "- 更新 支持2023天猫618任务",
     "about": {
       "faq": "https://github.com/leecobaby/shortcuts/blob/master/TB.FAQ.md#%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96-cookie",
       "video": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX#KeYQdCQmyo8ua0xGy6Ic7ruCnTe",
@@ -192,17 +192,17 @@
     },
     "help": "https://support.qq.com/products/451815",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/9767f38956274f78ba853b53983937d2",
-    "notice": "🔥 喵运会可以分红了！可以配合芭芭农场指令把水果种熟红包叠加使用哦~\n🔥 互助大厅已支持1元抽签互助，活动入口可通过活动大厅前往~",
+    "update": "https://www.icloud.com/shortcuts/d17c9394908c49ca99e2a3f1725b8c7c",
+    "notice": "🔥 很久不见，再次上线。",
     "video": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX#TGSqduI2yomWkGxSEErcHVSNnEf",
     "automation_url": "shortcuts://run-shortcut?name=天猫618喵运会自动任务&input=text&text=task",
     "image": "https://gitcode.net/u012830258/updater/-/raw/master/image/tb_618cat.png",
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json",
     "tip": {
-      "hot": "🔥 加入云派对",
+      "hot": "🧧 领618红包",
       "faq": "",
       "set": "点击查看自动化操作",
-      "help": "已支持1元抽签互助",
+      "help": "",
       "other": "指令错误的可点击修复",
       "more": ""
     }

@@ -8,7 +8,7 @@ const items = []
 // 共用与云端推送的 fromToken
 let fromToken = ''
 // 排除的任务 id
-let excludeIds = ['15901', '18735', '23176', '21317', '17695', '32774', '36509']
+let excludeIds = ['15901', '18735', '23176', '21317', '17695', '32774', '36509', '47035']
 // 格式化数据
 let dataArr = $.Utils.formatToArray(data.arr || data)
 let task = getBaseTaskData()
@@ -62,10 +62,10 @@ function getBaseTaskData() {
     1111: {
       version: '数据最后更新于:10.24.1',
       pv: {
-        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UkVhBag',
+        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UCTxpwL',
         tmall:
-          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UkVhBag',
-        taobaolite: 'taobaolite://m.tb.cn/h.UkVhBag'
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UCTxpwL',
+        taobaolite: 'taobaolite://m.tb.cn/h.UCTxpwL'
       },
       main: {
         taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com',
@@ -79,7 +79,7 @@ function getBaseTaskData() {
         tmall:
           'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fhdwk%2F2022d11%2Fsinglegame%3Fwh_biz%3Dtm%26sourceType%3Dother%26disableNav%3DYES',
         taobaolite:
-          'taobaolite://pages.tmall.com/wow/z/hdwk/2022d11/singlegame?wh_biz=tm&sourceType=other&disableNav=YES'
+          'taobaolite://pages.tmall.com/wow/z/hdwk/hd2023618/home?&sourceType=other&disableNav=YES'
       },
       end: {
         taobao:
@@ -107,14 +107,62 @@ function getBaseTaskData() {
       },
       task: []
     },
+    '618cat': {
+      version: '数据最后更新于:6.3.1',
+      pv: {
+        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UCTxpwL',
+        tmall:
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UCTxpwL',
+        taobaolite: 'taobaolite://m.tb.cn/h.UCTxpwL'
+      },
+      main: {
+        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com',
+        tmall: 'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fwww.tmall.com%2F',
+        taobaolite:
+          'taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&h5Url=taobaolite%3A%2F%2Fm.ltao.com%2Fhomepage%3F'
+      },
+      home: {
+        taobao:
+          'taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fhdwk%2Fhd2023618%2Fhome%3F%26sourceType%3Dother%26disableNav%3DYES',
+        tmall:
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fhdwk%2Fhd2023618%2Fhome%3F%26sourceType%3Dother%26disableNav%3DYES',
+        taobaolite:
+          'taobaolite://pages.tmall.com/wow/z/hdwk/hd2023618/home?&sourceType=other&disableNav=YES'
+      },
+      end: {
+        taobao:
+          'taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fhdwk%2Fhd2023618%2Fhome%3F%26sourceType%3Dother%26disableNav%3DYES',
+        tmall:
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fhdwk%2Fhd2023618%2Fhome%3F%26sourceType%3Dother%26disableNav%3DYES',
+        taobaolite:
+          'taobaolite://pages.tmall.com/wow/z/hdwk/hd2023618/home?&sourceType=other&disableNav=YES'
+      },
+      app: {
+        淘宝: 'taobao',
+        天猫: 'tmall',
+        淘宝特价版: 'taobaolite'
+      },
+      help: {
+        gitter:
+          'https://gitter.im/api/v1/rooms/6170e0576da03739848855d7/chatMessages?lookups%5B%5D=user&includeThreads=false&limit=100',
+        code: 'https://gitee.com/leecobaby/Updater/raw/master/html/random_mutual_618.js',
+        link: 'https://gitter.im/leecobaby-shortcuts/618cat?utm_source=share-link&utm_medium=link&utm_campaign=share-link',
+        lodash: 'https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js'
+      },
+      code: {
+        getCookieData:
+          'https://leecobaby.coding.net/p/shortcuts/d/Updater/git/raw/coding/html/tb/getCookieData.js'
+      },
+      task: []
+    },
     Taojb: {
       version: '数据最后更新于:12.31.1',
       image: 'https://gitee.com/leecogit/Updater/raw/master/image/tjb.png',
       pv: {
-        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UkVhBag',
+        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UCTxpwL',
         tmall:
-          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UkVhBag',
-        taobaolite: 'taobaolite://m.tb.cn/h.UkVhBag'
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UCTxpwL',
+        taobaolite: 'taobaolite://m.tb.cn/h.UCTxpwL'
       },
       main: {
         taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com',
@@ -144,10 +192,10 @@ function getBaseTaskData() {
     FarmSingle: {
       version: '数据最后更新于:10.13.1',
       pv: {
-        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UkVhBag',
+        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UCTxpwL',
         tmall:
-          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UkVhBag',
-        taobaolite: 'taobaolite://m.tb.cn/h.UkVhBag'
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UCTxpwL',
+        taobaolite: 'taobaolite://m.tb.cn/h.UCTxpwL'
       },
       main: {
         taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com',
@@ -192,10 +240,10 @@ function getBaseTaskData() {
     Jhs: {
       version: '数据最后更新于:11.13.1',
       pv: {
-        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UkVhBag',
+        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UCTxpwL',
         tmall:
-          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UkVhBag',
-        taobaolite: 'taobaolite://m.tb.cn/h.UkVhBag'
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UCTxpwL',
+        taobaolite: 'taobaolite://m.tb.cn/h.UCTxpwL'
       },
       main: {
         taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com',
@@ -234,10 +282,10 @@ function getBaseTaskData() {
     tb_worldcup: {
       version: '数据最后更新于:10.24.1',
       pv: {
-        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UkVhBag',
+        taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UCTxpwL',
         tmall:
-          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UkVhBag',
-        taobaolite: 'taobaolite://m.tb.cn/h.UkVhBag'
+          'tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UCTxpwL',
+        taobaolite: 'taobaolite://m.tb.cn/h.UCTxpwL'
       },
       main: {
         taobao: 'taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com',
@@ -487,6 +535,14 @@ function getTokenTaskData(app, title, sceneId, hd_from_id) {
         textEnd: 'str2'
       }
     },
+    '618cat': {
+      main: {
+        title: title,
+        type: 'other',
+        urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&spm=a217e.xzrwy.1.1&sceneId=${sceneId}&sourceType=other&hd_from_id=${hd_from_id}&`,
+        textEnd: 'str2'
+      }
+    },
     Jhs: {
       main: {
         title: title,
@@ -517,6 +573,7 @@ function getTaskParams(app, index) {
     ],
     Taojb: [{ title: '每日任务', sceneId: 2141, hd_from_id: 100089 }],
     1111: [{ title: '赚喵果', sceneId: 4276, hd_from_id: 100165 }],
+    '618cat': [{ title: '赚喵币', sceneId: 5562, hd_from_id: 100178 }],
     Jhs: [
       { title: '攒星星', sceneId: 107, hd_from_id: 100027 },
       { title: 'NPC任务', sceneId: 3421, hd_from_id: 100027 }
