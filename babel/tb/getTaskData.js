@@ -504,6 +504,17 @@ function getOnceTaskData(app) {
         }
       }
     ],
+    '618cat': [
+      {
+        tmall: {
+          title: '支付宝任务 - 没有请不要选择',
+          type: 'other',
+          urlScheme: `alipays://platformapi/startapp?appId=60000002&source=2023618GYG&chInfo=2023618GYG&autoShowTask=1&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fyuyan%2F180020010001247580%2Fhome.html%3FcaprMode%3Dsync`,
+          textEnd: '',
+          item: ['1 0']
+        }
+      }
+    ],
     Jhs: [],
     tb_worldcup: []
   }
