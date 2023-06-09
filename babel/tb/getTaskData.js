@@ -9,7 +9,7 @@ const items = []
 let fromToken = ''
 // 排除的任务 id
 // prettier-ignore
-let excludeIds = ['15901', '18735', '23176', '21317', '17695', '32774', '36509', '47035', '46600','48270','46809','48921','46751','46805']
+let excludeIds = ['15901', '18735', '23176', '21317', '17695', '32774', '36509', '47035', '46600','48270','46809','48921','46751','46805','46813']
 // 格式化数据
 let dataArr = $.Utils.formatToArray(data.arr || data)
 let task = getBaseTaskData()
