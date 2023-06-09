@@ -9,7 +9,7 @@ const items = []
 let fromToken = ''
 // 排除的任务 id
 // prettier-ignore
-let excludeIds = ['15901', '18735', '23176', '21317', '17695', '32774', '36509', '47035', '46600','48270','46809','48921','46751']
+let excludeIds = ['15901', '18735', '23176', '21317', '17695', '32774', '36509', '47035', '46600','48270','46809','48921','46751','46805']
 // 格式化数据
 let dataArr = $.Utils.formatToArray(data.arr || data)
 let task = getBaseTaskData()
@@ -513,7 +513,8 @@ function getOnceTaskData(app) {
           textEnd: 'str2',
           item: [
             '1 alipays://platformapi/startapp?appId=60000002&source=2023618GYG&chInfo=2023618GYG&autoShowTask=1&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fyuyan%2F180020010001247580%2Fhome.html%3FcaprMode%3Dsync',
-            '1 alipays://platformapi/startapp?appId=66666674&source=618jrzy2023&appClearTop=false&startMultApp=YES'
+            '1 alipays://platformapi/startapp?appId=66666674&source=618jrzy2023&appClearTop=false&startMultApp=YES',
+            '1 alipays://platformapi/startapp?appId=60000002&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fyuyan%2F180020010001247580%2Fexchange.html%3FcaprMode%3Dsync%26source%3D2023618DHRW%26chInfo%3D2023618DHRW%26projectId%3D7500082'
           ]
         }
       }
