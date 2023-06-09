@@ -507,6 +507,20 @@ function getOnceTaskData(app) {
     '618cat': [
       {
         tmall: {
+          title: '云端推送',
+          type: 'other',
+          urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=5562&sourceType=other&hd_from_id=100178&deliveryId=`,
+          textEnd: 'str1&implId=str2',
+          item: [
+            '48353 cloudsail_156_125400501040001_48353_0',
+            '48353 cloudsail_156_125400501040001_48353_1',
+            '48353 cloudsail_156_125400501040001_48353_2',
+            '48353 cloudsail_156_125400501040001_48353_3'
+          ]
+        }
+      },
+      {
+        tmall: {
           title: '支付宝任务 - 没有请不要选择',
           type: 'other',
           urlScheme: ``,
