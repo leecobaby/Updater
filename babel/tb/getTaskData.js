@@ -336,16 +336,9 @@ function getOnceTaskData(app) {
         tmall: {
           title: '云端推送',
           type: 'other',
-          urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=971&sourceType=other&hd_from_id=100085&deliveryId=`,
+          urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=5568&sourceType=other&hd_from_id=100085&deliveryId=`,
           textEnd: 'str1&implId=str2',
-          item: [
-            '12359 other_568_911025_12359_0',
-            '12585 expo_691_123083_12585_0',
-            '31813 cloudsail_691_-540022504_31813_0',
-            '15891 other_678_398011_15891_0',
-            '17734 cloudsail_431_465305002790001_17734_0',
-            '29020 other_5_926037_29020_0'
-          ]
+          item: ['12359 other_568_911025_12359_0', '12585 expo_691_123083_12585_0']
         }
       },
       {
@@ -378,20 +371,14 @@ function getOnceTaskData(app) {
       },
       {
         tmall: {
-          title: '逛逛支付宝芭芭农场',
+          title: '支付宝任务 - 没安装不要选',
           type: 'other',
-          urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=2349&sourceType=other&hd_from_id=100004&deliveryId=`,
-          textEnd: 'str1&implId=str2',
-          item: ['20700 other_468_662005_20700_0']
-        }
-      },
-      {
-        tmall: {
-          title: '逛逛支付宝芭芭农场 ②',
-          type: 'other',
-          urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=3671&sourceType=other&hd_from_id=100159&deliveryId=`,
-          textEnd: 'str1&implId=str2',
-          item: ['20700 other_468_662005_20700_0']
+          urlScheme: `HTTPS://`,
+          textEnd: 'str2',
+          item: [
+            `1 zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=2349&sourceType=other&hd_from_id=100004&deliveryId=20700&implId=other_468_662005_20700_0'`,
+            `2 zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=3671&sourceType=other&hd_from_id=100159&deliveryId=20700&implId=other_468_662005_20700_0`
+          ]
         }
       }
     ],
@@ -598,7 +585,7 @@ function getTokenTaskData(app, title, sceneId, hd_from_id) {
 function getTaskParams(app, index) {
   const data = {
     FarmSingle: [
-      { title: '淘宝集肥料', sceneId: 971, hd_from_id: 100085 },
+      { title: '淘宝集肥料', sceneId: 5568, hd_from_id: 100085 },
       { title: '支付宝任务', sceneId: 972, hd_from_id: 100085 },
       { title: '闲鱼任务', sceneId: 2488, hd_from_id: 100085 }
     ],

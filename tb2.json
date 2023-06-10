@@ -1107,7 +1107,7 @@
     ]
   },
   "FarmSingle": {
-    "version": "数据最后更新于:11.5.1",
+    "version": "数据最后更新于:6.10.1",
     "pv": {
       "taobao": "taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.tb.cn/h.UCTxpwL",
       "tmall": "tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fm.tb.cn%2Fh.UCTxpwL",
@@ -1150,7 +1150,7 @@
         "tmall": {
           "title": "淘宝集肥料",
           "type": "other",
-          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=971&sourceType=other&hd_from_id=100085&deliveryId=",
+          "urlScheme": "HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=r2rz1GgTooK0qw0XurNhR1KTgUBUPUr&spm=a217e.1212.tasklist.0&sceneId=5568&sourceType=other&hd_from_id=100085&deliveryId=",
           "textEnd": "str1&implId=str2",
           "item": [
             "12359 other_568_911025_12359_0",
