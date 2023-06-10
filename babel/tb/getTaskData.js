@@ -9,7 +9,7 @@ const items = []
 let fromToken = ''
 // 排除的任务 id
 // prettier-ignore
-let excludeIds = ['15901', '18735', '23176', '21317', '17695', '32774', '36509', '47035', '46600','48270','46809','48921','46751','46805','46813','45322','14975']
+let excludeIds = ['15901', '18735', '23176', '21317', '17695', '32774', '36509', '47035', '46600','48270','46809','48921','46751','46805','46813','45322','14975','29148','45322']
 // 格式化数据
 let dataArr = $.Utils.formatToArray(data.arr || data)
 let task = getBaseTaskData()
@@ -354,15 +354,6 @@ function getOnceTaskData(app) {
       },
       {
         tmall: {
-          title: '做下单任务 - 不一定有奖励',
-          type: 'other',
-          urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=1143&sourceType=other&hd_from_id=100085&deliveryId=`,
-          textEnd: 'str1&implId=str2',
-          item: ['29660 expo_678_123084_29660_0', '29660 expo_678_123084_29660_1']
-        }
-      },
-      {
-        tmall: {
           title: '微博集肥料',
           type: 'other',
           urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=978&sourceType=other&hd_from_id=100085&deliveryId=`,
@@ -382,13 +373,12 @@ function getOnceTaskData(app) {
       },
       {
         tmall: {
-          title: '支付宝任务 - 没安装不要选',
+          title: '其他任务',
           type: 'other',
           urlScheme: `HTTPS://`,
           textEnd: 'str2',
           item: [
-            `1 zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=2349&sourceType=other&hd_from_id=100004&deliveryId=20700&implId=other_468_662005_20700_0'`,
-            `2 zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=3671&sourceType=other&hd_from_id=100159&deliveryId=20700&implId=other_468_662005_20700_0`
+            `1 zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=5387&sourceType=other&hd_from_id=100004&deliveryId=45308&implId=other_694_424002_45308_0'`
           ]
         }
       }

@@ -231,8 +231,8 @@
     }
   },
   "FarmSingle": {
-    "version": "3.0",
-    "update_log": "- 修复 ios16 的各种异常和兼容性问题\n- 修复 AutoBox、自动化运行会跳出选择账号的 bug，目前只支持账号 1\n- 修复 普通模式运行的一些错误",
+    "version": "3.1",
+    "update_log": "- 更新 最新的任务数据\n- 优化 Cookie 的刷新存储机制",
     "about": {
       "faq": "https://support.qq.com/products/451815",
       "video": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX#KeYQdCQmyo8ua0xGy6Ic7ruCnTe",
@@ -240,9 +240,9 @@
     },
     "help": "https://support.qq.com/products/451815",
     "github": "https://github.com/leecobaby/shortcuts",
-    "update": "https://www.icloud.com/shortcuts/122bc96040bb4b8f996ecd9f1dce4636",
+    "update": "https://www.icloud.com/shortcuts/ab64e2578be4437f9eafa2d662f91dae",
     "faq": "https://support.qq.com/products/451815",
-    "notice": "11.11大促到来，建议把芭芭农场水果中成熟~",
+    "notice": "🔥 618来了，任务数据已更新~",
     "video": "https://szd55vqajl.feishu.cn/docx/DX6gdWJRhoLsRqxriLHcfkDwndX#TGSqduI2yomWkGxSEErcHVSNnEf",
     "automation_url": "shortcuts://run-shortcut?name=芭芭农场自动集肥料&input=text&text=task",
     "autobox": "https://github.com/leecobaby/shortcuts/tree/master/AutoBox",
@@ -250,7 +250,7 @@
     "url": "https://gitcode.net/u012830258/updater/-/raw/master/tb.json",
     "tip": {
       "hot": "🧧 超红每天领",
-      "help": "暂未开放",
+      "help": "",
       "faq": "有疑问的请查看",
       "set": "点击查看自动化操作",
       "team": "",
