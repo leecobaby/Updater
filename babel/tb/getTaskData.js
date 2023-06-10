@@ -9,7 +9,7 @@ const items = []
 let fromToken = ''
 // 排除的任务 id
 // prettier-ignore
-let excludeIds = ['15901', '18735', '23176', '21317', '17695', '32774', '36509', '47035', '46600','48270','46809','48921','46751','46805','46813']
+let excludeIds = ['15901', '18735', '23176', '21317', '17695', '32774', '36509', '47035', '46600','48270','46809','48921','46751','46805','46813','45322','14975']
 // 格式化数据
 let dataArr = $.Utils.formatToArray(data.arr || data)
 let task = getBaseTaskData()
@@ -338,7 +338,18 @@ function getOnceTaskData(app) {
           type: 'other',
           urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=5568&sourceType=other&hd_from_id=100085&deliveryId=`,
           textEnd: 'str1&implId=str2',
-          item: ['12359 other_568_911025_12359_0', '12585 expo_691_123083_12585_0']
+          item: [
+            '45300 other_908_984002_45300_0',
+            '46315 cloudsail_160_125400501040003_46315_0',
+            '46315 cloudsail_160_125400501040003_46315_1',
+            '46315 cloudsail_160_125400501040003_46315_2',
+            '46315 cloudsail_160_125400501040003_46315_3',
+            '46316 cloudsail_160_2979925364959636639_46316_0',
+            '46316 cloudsail_160_2979925364959636639_46316_1',
+            '46316 cloudsail_160_2979925364959636639_46316_2',
+            '46316 cloudsail_160_2979925364959636639_46316_3',
+            '46316 cloudsail_160_2979925364959636639_46316_4'
+          ]
         }
       },
       {
