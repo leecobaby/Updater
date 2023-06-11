@@ -9,7 +9,7 @@ const items = []
 let fromToken = ''
 // 排除的任务 id
 // prettier-ignore
-let excludeIds = ['15901', '18735', '23176', '21317', '17695', '32774', '36509', '47035', '46600','48270','46809','48921','46751','46805','46813','45322','14975','29148','45322']
+let excludeIds = ['15901', '18735', '23176', '21317', '17695', '32774', '36509', '47035', '46600','48270','46809','48921','46751','46805','46808','46813','45322','14975','29148','45322']
 // 格式化数据
 let dataArr = $.Utils.formatToArray(data.arr || data)
 let task = getBaseTaskData()
@@ -500,10 +500,10 @@ function getOnceTaskData(app) {
           urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=5562&sourceType=other&hd_from_id=100178&deliveryId=`,
           textEnd: 'str1&implId=str2',
           item: [
-            '48353 cloudsail_156_125400501040001_48353_0',
-            '48353 cloudsail_156_125400501040001_48353_1',
-            '48353 cloudsail_156_125400501040001_48353_2',
-            '48353 cloudsail_156_125400501040001_48353_3'
+            '49039 cloudsail_161_1173926758795885405_49039_0',
+            '49039 cloudsail_161_1173926758795885405_49039_1',
+            '49039 cloudsail_161_1173926758795885405_49039_2',
+            '49039 cloudsail_161_1173926758795885405_49039_3'
           ]
         }
       },
@@ -516,7 +516,8 @@ function getOnceTaskData(app) {
           item: [
             '1 alipays://platformapi/startapp?appId=60000002&source=2023618GYG&chInfo=2023618GYG&autoShowTask=1&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fyuyan%2F180020010001247580%2Fhome.html%3FcaprMode%3Dsync',
             '1 alipays://platformapi/startapp?appId=66666674&source=618jrzy2023&appClearTop=false&startMultApp=YES',
-            '1 alipays://platformapi/startapp?appId=60000002&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fyuyan%2F180020010001247580%2Fexchange.html%3FcaprMode%3Dsync%26source%3D2023618DHRW%26chInfo%3D2023618DHRW%26projectId%3D7500082&'
+            '1 alipays://platformapi/startapp?appId=60000002&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fyuyan%2F180020010001247580%2Fexchange.html%3FcaprMode%3Dsync%26source%3D2023618DHRW%26chInfo%3D2023618DHRW%26projectId%3D7500082&',
+            '1 alipays://platformapi/startapp?appId=68687805&sceneCode=KF_HZHD&chInfo=ch_taobao&pikshemo=YES&subSceneCode=taobao_membertask_20230618&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fyuyan%2F180020380000000023%2Fpoint-sign-in.html%26sceneCode%3DKF_HZHD%26chInfo%3Dch_taobao20230618%26pikshemo%3DYES%26subSceneCode%3Dtaobao_membertask_20230618&'
           ]
         }
       }
