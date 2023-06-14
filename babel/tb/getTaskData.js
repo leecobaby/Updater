@@ -587,7 +587,7 @@ function getTokenTaskData(app, title, sceneId, hd_from_id) {
 function getTaskParams(app, index) {
   const data = {
     FarmSingle: [
-      { title: '淘宝集肥料①', sceneId: 971, hd_from_id: 100085 },
+      { title: '淘宝集肥料①', sceneId: 5387, hd_from_id: 100085 },
       { title: '淘宝集肥料②', sceneId: 5568, hd_from_id: 100085 },
       { title: '支付宝任务', sceneId: 972, hd_from_id: 100085 },
       { title: '闲鱼任务', sceneId: 2488, hd_from_id: 100085 }
