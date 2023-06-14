@@ -339,6 +339,9 @@ function getOnceTaskData(app) {
           urlScheme: `HTTPS://zhiben.m.tmall.com/?shop_id=531204400&adTrace=310450003070001__shop_home.browse__21206d9816542473682441428ec224__I__L__6&adScene=2022618-card-wall-6&fromToken=${fromToken}&spm=a217e.1212.tasklist.0&sceneId=5568&sourceType=other&hd_from_id=100085&deliveryId=`,
           textEnd: 'str1&implId=str2',
           item: [
+            '45295 other_912_82028_45295_0',
+            '45365 other_74_1_45365_0',
+            '45365 other_74_1_45365_1',
             '45300 other_908_984002_45300_0',
             '46315 cloudsail_160_125400501040003_46315_0',
             '46315 cloudsail_160_125400501040003_46315_1',
