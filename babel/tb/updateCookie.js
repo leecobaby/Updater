@@ -1,7 +1,7 @@
 // Variables used by Scriptable.
 // These must be at the very top of the file. Do not edit.
 // icon-color: purple; icon-glyph: magic;
-!(function init () {
+!(function init() {
   //   console.log(args.shortcutParameter)
 })()
 
@@ -36,7 +36,7 @@ if (_m_h5_tk && _m_h5_tk_enc) {
   console.log(cookie)
 }
 
-function getCookieValue (name) {
+function getCookieValue(name) {
   const cookie = cookies.find((item) => item.name === name)
   return cookie ? cookie.value : ''
 }
